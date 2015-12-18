@@ -88,8 +88,8 @@
 
 .m-rolling-content {
 	padding: 0 16px 0 26px;
-	border-top: 1px solid #FE9236;
-	border-bottom: 1px solid #FE9236;
+	border-top: 1px solid #de5879;
+	border-bottom: 1px solid #de5879;
 	background: #fff;
 	height: 30px;
 	overflow: hidden;
@@ -733,7 +733,7 @@
 }
 
 .m-notice-tab li.f-notice-hover {
-	border-top: 2px solid #FF6700;
+	border-top: 2px solid #cc0033;
 	border-bottom: none;
 	padding-top: 0;
 }
