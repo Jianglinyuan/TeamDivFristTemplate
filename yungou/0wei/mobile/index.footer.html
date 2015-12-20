@@ -9,7 +9,6 @@
 		$g_web_path = _cfg("web_path");
 		$g_web_path = trim($g_web_path,"/");		
 	{wc:php:end}
-	<p class="m-ftA"><a href="{WEB_PATH}/mobile/mobile/">触屏版</a><a href="{wc:$g_web_path}/?PC_SEE=1/" target="_blank">电脑版</a></p>
 	<p class="grayc">客服热线<span class="orange">{wc:fun:_cfg("cell")}</span>{wc:fun:_cfg('web_copyright')}</p>
 	<a id="btnTop" href="javascript:;" class="z-top" style="display:none;"><b class="z-arrow"></b></a>
 </footer>
@@ -76,7 +75,7 @@
 			<a title="购物车" href="{WEB_PATH}/mobile/cart/cartlist/"><i class="{wc:$f_car}">&nbsp;</i>购物车</a>
 		</li>
 		<li class="f_personal">
-			<a title="我的购物" href="{WEB_PATH}/mobile/home/"><i class="{wc:$f_personal}">&nbsp;</i>我的{wc:fun:_cfg('web_name_two')}</a>
+			<a title="我的购物" href="{WEB_PATH}/mobile/user/login/"><i class="{wc:$f_personal}">&nbsp;</i>我的{wc:fun:_cfg('web_name_two')}</a>
 		<li>
 	</ul>
 </div>
