@@ -124,7 +124,7 @@ em {
 }
 .goods-big-pic {
 	padding: 20px 0 10px;
-	background: url(/templates/yg/css/@/images/loading.gif) no-repeat center center
+	background: url(/templates/xiaomi/css/@/images/loading.gif) no-repeat center center
 }
 .goods-big-pic img {
 	width: 520px;
@@ -374,7 +374,7 @@ dl.goods-info-box .goods-info-head dl .goods-info-head-cart .goods-add-cart-btn 
 	vertical-align: -1px
 }
 dl.goods-info-box .goods-info-head dl .goods-info-head-cart .stopCursor {
-	cursor: url(/templates/yg/css/@/images/cur6.cur), pointer
+	cursor: url(/templates/xiaomi/css/@/images/cur6.cur), pointer
 }
 dl.goods-info-box .goods-info-head dl .goods-info-head-cart .goods-add-cart-btn, dl.goods-info-box .goods-info-head dl .goods-info-head-cart .goods-over-btn {
 	width: 235px;
@@ -588,7 +588,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/jd.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/jd.jpg) no-repeat;
 	display: inline-block;
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .jm {
@@ -608,7 +608,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/jumei.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/jumei.jpg) no-repeat;
 	display: inline-block;
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .jm {
@@ -628,7 +628,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/jumei.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/jumei.jpg) no-repeat;
 	display: inline-block;
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .wb {
@@ -648,7 +648,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/wanbiao.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/wanbiao.jpg) no-repeat;
 	display: inline-block;
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .hhz {
@@ -668,7 +668,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/hhz.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/hhz.jpg) no-repeat;
 	display: inline-block;
 }
 
@@ -683,7 +683,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/yxw.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/yxw.jpg) no-repeat;
 	display: inline-block;}
 
 
@@ -698,7 +698,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/tm.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/tm.jpg) no-repeat;
 	display: inline-block;}
 
 
@@ -713,7 +713,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/wph.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/wph.jpg) no-repeat;
 	display: inline-block;}
 
 .goods-detail-desc .xm-goods-side-list .box-bd .qnr{position: relative;
@@ -727,7 +727,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/qnr.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/qnr.jpg) no-repeat;
 	display: inline-block;}
 
 .goods-detail-desc .xm-goods-side-list .box-bd .tn{position: relative;
@@ -741,7 +741,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/tn.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/tn.jpg) no-repeat;
 	display: inline-block;}
 
 .goods-detail-desc .xm-goods-side-list .box-bd .wmw{position: relative;
@@ -755,7 +755,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/wmw.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/wmw.jpg) no-repeat;
 	display: inline-block;}
 
 .goods-detail-desc .xm-goods-side-list .box-bd .ycc{position: relative;
@@ -769,7 +769,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/ycc.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/ycc.jpg) no-repeat;
 	display: inline-block;}
 
 .goods-detail-desc .xm-goods-side-list .box-bd .csc{position: relative;
@@ -783,7 +783,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/csc.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/csc.jpg) no-repeat;
 	display: inline-block;}
 
 .goods-detail-desc .xm-goods-side-list .box-bd .mtw{position: relative;
@@ -797,7 +797,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/mtw.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/mtw.jpg) no-repeat;
 	display: inline-block;}
 
 .goods-detail-desc .xm-goods-side-list .box-bd .dzdp{position: relative;
@@ -811,7 +811,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	top: 0;
 	width: 137px;
 	height: 58px;
-	background: url(/templates/yg/css/@/images/dzdp.jpg) no-repeat;
+	background: url(/templates/xiaomi/css/@/images/dzdp.jpg) no-repeat;
 	display: inline-block;}
 
 
