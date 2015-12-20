@@ -1,0 +1,127 @@
+{wc:templates "index","header"}
+<div class="container breadcrumbs"><a href="{WEB_PATH}">首页</a><span class="sep">/</span>商品搜索</div>
+<div class="container">
+    <div class="xm-line-box filter-box">
+        <div class="box-hd">
+			<h3 class="title">搜索－"{wc:$search}"<span id="spTotalCount" style="font-size: 12px;color: #8c8c8c;"> (共<em class="orange">{wc:$list}</em>件相关商品)</span></h3>
+		</div>
+	</div>
+	{wc:if $shoplist!=null}	
+	<div class="xm-line-box goods-list-box">
+		<div class="box-bd">
+            <div class="goods-list-section">
+                <div class="xm-goods-list-wrap xm-goods-list-wrap-col20">
+                    <ul class="xm-goods-list clearfix">
+					{wc:loop $shoplist $shop}
+                        <li>
+                            <div class="xm-goods-item" id="ulGoodsList">
+                                <div class="item-thumb"><a href="{WEB_PATH}/goods/{wc:$shop['id']}"><img src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" alt="{wc:$shop['title']}"></a></div>
+                                <div class="item-info">
+                                    <h3 class="item-title"><a href="{WEB_PATH}/goods/{wc:$shop['id']}">{wc:$shop['title']}</a></h3>
+                                    <div class="item-price">价值：{wc:$shop['money']}元</div>
+                                    <div class="item-star">
+										<p><span style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],270)}px;"></span></p>
+                                        <ul class="Pro-bar-li">
+											<li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>已参与人次</li>
+											<li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>总需人次</li>
+											<li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>剩余人次</li>
+										</ul>
+                                    </div>
+                                    <div class="item-actions">
+                                        <a class="btn btn-dake btn-small J_addFav" href="javascript:;"><i class="iconfont"></i>立即抢购</a>
+										<a class="btn btn-small btn-primary J_addCart" href="javascript:;"><i class="iconfont"></i>加入购物车</a>
+										<div class="Curbor_id" style="display:none;">{wc:$shop['id']}</div>
+										<div class="Curbor_yunjiage" style="display:none;">{wc:$shop['yunjiage']}</div>
+										<div class="Curbor_shenyu" style="display:none;">{wc:$shop['shenyurenshu']}</div>
+                                    </div>
+									{wc:php:start}$i_googd_bj = null;{wc:php:end}   
+									{wc:if ($this_time - $shop['time']) < 86400}						
+											{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">新品</span></div>';{wc:php:end}					
+									{wc:if:end}
+									{wc:if $shop['pos']!='0' && !isset($i_googd_bj)}						
+										{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">推荐</span></div>';{wc:php:end}	
+									{wc:if:end}
+									{wc:if $shop['renqi']=='1' && !isset($i_googd_bj)}						
+											{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">人气</span></div>';{wc:php:end}				
+									{wc:if:end}					
+									{wc:$i_googd_bj}
+                                </div>
+                            </div>
+                        </li>
+						{wc:loop:end}
+                    </ul>
+                </div>
+				{wc:if $total>$num}
+                <div class="xm-pagenavi">{wc:page:two}</div>
+				{wc:if:end}
+            </div>
+        </div>
+	</div>
+	{wc:else}
+	<div class="xm-box search-title-box">
+        <div class="box-bd"><h3 class="search-title">抱歉，没有找到<em class="orange">"{wc:$search}"</em>相关的商品！您可以返回 <a href="/">首页</a> 浏览其他商品。</h3></div>
+    </div>
+	{wc:if:end}
+</div>
+<script type="text/javascript">
+$(function(){
+	$("#ulGoodsList .item-actions a.J_addCart").click(function(){ 
+		var sw = $("#ulGoodsList .item-actions a.J_addCart").index(this);
+		var src = $("#ulGoodsList .item-thumb a img").eq(sw).attr('src');				
+		var $shadow = $('<img id="cart_dh" style="display:none; border:1px solid #aaa; z-index:99999;" width="200" height="200" src="'+src+'" />').prependTo("body");  			
+		var $img = $("#ulGoodsList .item-thumb").eq(sw);
+		$shadow.css({ 
+			'width' : 200, 
+			'height': 200, 
+			'position' : 'absolute',      
+			"left":$img.offset().left+16, 
+			"top":$img.offset().top+9,
+			'opacity' : 1    
+		}).show();
+		var $cart = $("#btnMyCart");
+		$shadow.animate({   
+			width: 1, 
+			height: 1, 
+			top: $cart.offset().top,    
+			left: $cart.offset().left, 
+			opacity: 0
+		},500,function(){
+			Cartcookie(sw,false);
+		});	
+		
+	});
+	$("#ulGoodsList .item-actions a.J_addFav").click(function(){	
+		var sw = $("#ulGoodsList .item-actions a.J_addFav").index(this);
+
+		Cartcookie(sw,true); 
+	});	
+});
+//存到COOKIE
+function Cartcookie(sw,cook){
+	var shopid = $(".Curbor_id").eq(sw).text(),
+		shenyu = $(".Curbor_yunjiage").eq(sw).text(),
+		money = $(".Curbor_shenyu").eq(sw).text();
+	var Cartlist = $.cookie('Cartlist');
+	if(!Cartlist){
+		var info = {};
+	}else{
+		var info = $.evalJSON(Cartlist);
+	}
+	if(!info[shopid]){
+		var CartTotal=$("#sCartTotal").text();
+			$("#sCartTotal").text(parseInt(CartTotal)+1);
+			$("#btnMyCart em").text(parseInt(CartTotal)+1);
+	}	
+	info[shopid]={};
+	info[shopid]['num']=1;
+	info[shopid]['shenyu']=shenyu;
+	info[shopid]['money']=money;
+	info['MoenyCount']='0.00';
+	$.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});
+	if(cook){
+		window.location.href="{WEB_PATH}/member/cart/cartlist";
+	}
+}  
+
+</script>
+{wc:templates "index","footer"}

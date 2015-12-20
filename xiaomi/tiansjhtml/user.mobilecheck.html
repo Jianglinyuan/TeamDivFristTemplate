@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="">
+<meta name ="keywords" content="品牌,名品折扣,限时,特卖,VIP,尾品" />
+<title>验证手机-{wc:fun:_cfg('web_name_two')} - 全新的互动购物体验方式，品质保障、全国免运费、省钱省力省时间！</title>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/css/base.min.css"/>
+<link type="text/css" rel="stylesheet" href="{G_TEMPLATES_STYLE}/css/App/Css/us.css" />
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/App/Css/Home.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/App/Css/register.css"/>
+<link rel="stylesheet" href="{G_TEMPLATES_STYLE}/css/App/Css/global-min.css">
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/App/Css/header.css"/>
+<!--[if lte IE 6]>
+<script src="/App/Js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+        DD_belatedPNG.fix('div,ul,img,li,p,a,i,span,em,h3,th,td');
+</script>
+<![endif]-->
+</head>
+<body>
+<!--购物车头部-->
+<div class="header_jian_wrap">
+	<div class="header header_jian">
+       您好，欢迎您来到{wc:fun:_cfg('web_name_two')}！ <a  href="{G_WEB_PATH}">首页</a>  <a href="{G_WEB_PATH}/?/login" >登录</a> <a href="{G_WEB_PATH}/?/register" >免费注册</a> <em>|</em> {wc:fun:_cfg("cell")}
+ </div></div>
+<!--购物车头部结束-->
+<div class="login_layout">
+	<div class="login_title">
+		<h2>新用户注册</h2>
+		<ul class="login_process">
+			<li><b>1</b>填写注册信息</li>
+			<li class="login_arrow"></li>
+			<li class="login_processCur"><b>2</b>验证邮箱/验证手机</li>
+			<li class="login_arrow"></li>
+			<li><b>3</b>完成注册</li>
+		</ul>
+		<span>已经是会员？<a id="hylinkLoginPage" class="blue Fb" href="{WEB_PATH}/member/user/login">登录</a></span>
+	</div>
+	<div class="login_Content">
+		<form action="" enctype="application/x-www-form-urlencoded" method="post">
+		<div class="login_CMobile_Complete">
+			<p>{wc:fun:_cfg("web_name")}已向您的手机 <span class="orange">{wc:$enname}</span> 免费发送了一条验证短信，请查看您的手机短信！</p>
+			<dl>
+				<dt style="width:200px">请输入手机短信收到的验证码：</dt>
+				<dd><input id="mobileCode" name="checkcode" class="login_CMobile_Code" type="text"></dd>
+				<dd></dd>
+			</dl>
+			<input type="submit" name="submit" id="btnSubmitRegister" href="javascript:void(0);" class="login_Email_but" value="提交验证" />
+		</div>
+        </form>
+		<div class="login_Explain">
+			<h2>没收到验证短信？</h2>
+			<p>1.请查看手机的垃圾短信，信息有可能被误认为是垃圾信息。</p>
+			<p>2.如果在2分钟后仍未收到验证短信，请点击<button id="retrySend" onclick="javascript:sendmobile();" disabled=1 class="login_SendoutbutClick">重新发送{wc:$time}</button> </p>
+			<p>3.如果手机号码不小心输错了或者想换个号码？请点击 <a id="hylinkRegisterPageA" class="blue Fb" href="{WEB_PATH}/register">重新注册</a></p>
+		</div>
+
+
+	</div>
+</div>
+<script>
+	var i = {wc:$time};
+	var senda=document.getElementById('retrySend');
+	setInterval(function(){if(i>0){
+		senda.innerHTML = '重新发送'+i;i--;}else{senda.innerHTML = '重新发送';senda.disabled=0;}
+	},1000);
+
+	function sendmobile(){
+		window.location.href="{WEB_PATH}/member/user/sendmobile/{wc:$namestr}"
+	}
+</script>
+{wc:templates "index","foot"}

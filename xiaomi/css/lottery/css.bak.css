@@ -1,0 +1,71 @@
+.g-frame-head{
+	margin:0 auto !important;
+}
+
+	#marqueebox1 {
+		height: 115px;
+		overflow: hidden;
+		position: absolute;
+		left: 100px;
+		top: 353px;
+	}
+	.bg111 {
+		background-image: url(bg.JPG);
+		background-repeat: repeat-x;
+		background-color: #FFF;
+		height: 700px;
+                margin:0 auto;
+	}
+	.bg222 {
+		background-image: url(1_03.gif);
+		height: 481px;
+		width: 498px;
+	}
+
+	#lottery {
+		background: url("disc-bg.gif") no-repeat scroll 0 0 transparent;
+		height: 450px;
+		left: 50px;
+		position: absolute;
+		width: 450px;
+	}
+	#lottery .arrow {
+		background: url("arrow.png") no-repeat scroll 0 0 transparent;
+		height: 191px;
+		left: 207px;
+		position: absolute;
+		top: 91px;
+		width: 32px;
+	}
+	#lottery #lot-btn {
+		height: 92px;
+		left: 177px;
+		overflow: hidden;
+		position: absolute;
+		top: 181px;
+		width: 91px;
+	}
+	#lottery #lot-btn span {
+		cursor: pointer;
+		display: block;
+		height: 92px;
+		position: relative;
+		width: 91px;
+	}
+	#lottery .first span {
+		background: url("buttons_01.png") no-repeat scroll 0 0 transparent;
+	}
+	#lottery {
+		text-align: start;
+		font-size: 16px;
+		font-family: Simsun;
+		color: rgb(0, 0, 0);
+	}
+
+.wrap{ width:1000px; margin:0 auto;}
+.part4{ color:#333; text-align:left; background:#fee3c1;height:300px; padding-top:25px; font-size:14px; }
+.activeRegulation{ width:800px; margin-left:50px; display:inline;}
+.activeRegulation dt{ color:#f9560a;font-size:18px;}
+.activeRegulation dd{ position:relative; line-height:24px; padding-left:25px; margin-top:5px; _zoom:1;font-size:14px;}
+.activeRegulation dd.activeDetail{ margin-top:20px;}
+.activeRegulation i{  position:absolute; vertical-align:middle; top:3px; left:0; text-align:center; color:#fff; width:17px; height:17px; line-height:17px; background:url(/statics/uploads/newbie/rItem.png) no-repeat;}

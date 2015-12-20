@@ -1,0 +1,22 @@
+<div class="w-tabs-tab m-user-tab">
+			{wc:if $tab=="uname"}
+            <div class="w-tabs-tab-item w-tabs-tab-item-selected">TA的主页</div>
+			{wc:else}
+			<a href="{WEB_PATH}/uname/{wc:fun:idjia($member['uid'])}" class="w-tabs-tab-item">TA的主页</a>
+			{wc:if:end}
+			{wc:if $tab=="userbuy"}
+			<div class="w-tabs-tab-item w-tabs-tab-item-selected">{wc:fun:_cfg('web_name_two')}记录</div>
+			{wc:else}
+			<a href="{WEB_PATH}/userbuy/{wc:fun:idjia($member['uid'])}" class="w-tabs-tab-item">{wc:fun:_cfg('web_name_two')}记录</a>
+			{wc:if:end}
+			{wc:if $tab=="userraffle"}
+			<div class="w-tabs-tab-item w-tabs-tab-item-selected">中奖记录</div>
+			{wc:else}
+			<a href="{WEB_PATH}/userraffle/{wc:fun:idjia($member['uid'])}" class="w-tabs-tab-item">中奖记录</a>
+			{wc:if:end}
+			<!--{wc:if $tab=="userpost"}
+			<div class="w-tabs-tab-item w-tabs-tab-item-selected">晒单</div>
+			{wc:else}
+			<a href="{WEB_PATH}/userpost/{wc:fun:idjia($member['uid'])}" class="w-tabs-tab-item">晒单</a>
+			{wc:if:end} -->
+</div>

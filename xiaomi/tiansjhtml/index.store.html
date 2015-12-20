@@ -1,0 +1,167 @@
+{wc:templates "index","header"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/store.css"/>
+<div id="content">
+    <div class="coin-layout">
+        <div class="coin-bg J_ModLayout"></div>
+        <div class="coin-wrapper">
+            <div class="main-wrap">
+                <div class="topicitem-mod common-layout">
+                    <div class="limit-banner">
+                        <p>
+                            <img src="{G_TEMPLATES_STYLE}/images/ygxxb.jpg" border="0" alt="">
+                            <a href="#regular" class="ExplainA"></a>
+                        </p>
+                    </div>
+                    <div class="auto-nav">
+                        <ul>
+                            <li id="liczHead" class="fl autoCur">充值排名 </li>
+                            <li id="lixfHead" class="fl">消费排名 </li>
+                            <li id="lifhHead" class="fl">富豪榜排名 </li>
+                        </ul>
+                    </div>
+
+                    <script>
+                        $(function () {
+                            $(".auto-nav li").click(function () {
+                                var id = $(".auto-nav li").index(this);
+                                $(".auto-nav li").removeClass("autoCur").eq(id).addClass("autoCur");
+                                $(".autoCon .showCon").hide().eq(id).show();
+                                $(".autoRule").hide().eq(id).show();
+                            });
+
+
+                            $("li[name='normalItem']").hover(function () {
+                                $(this).addClass("autolistCur");
+                            }, function () {
+                                $(this).removeClass("autolistCur");
+                            });
+                            $("#lixfHead ul li.jinrishop").each(function(i,e){
+                                if(i % 3 == 2 ){
+                                    $(e).addClass("autolist-R");
+                                }
+                            });
+                            $("#liczHead ul li.jinrishop").each(function(i,e){
+                                if(i % 3 == 2 ){
+                                    $(e).addClass("autolist-R");
+                                }
+                            });
+                            $("#lifhHead ul li.jinrishop").each(function(i,e){
+                                if(i % 3 == 2 ){
+                                    $(e).addClass("autolist-R");
+                                }
+                            });
+                        });
+
+                    </script>
+                    <div class="autoCon">
+                        <div id="liczHead" class="showCon" style="display:block;">
+                            <ul>
+                                {wc:php:start}$i=1;{wc:php:end}
+                                {wc:loop $czph $shop}
+                                <li class="autolist autolistEnd jinrishop">         
+                                    <div class="syTimeEnd">{wc:$i}</div>
+                                    <div class="autolistC">
+                                        <p class="name">&nbsp;{wc:fun:get_user_name($shop['uid'],'username')}</p>
+                                        <p class="money">充值金额：<span class="rmb">{wc:$shop['money']}</span>元</p>
+                                    </div>
+                                </li>
+                                {wc:php:start}$i++;{wc:php:end}
+                                {wc:loop:end}
+                            </ul> 
+                        </div>
+
+                        <div id="lixfHead" class="showCon hidden" style="display: none;">
+                            <ul>		
+                                {wc:php:start}$i=1;{wc:php:end}
+                                {wc:loop $xfph $shop}
+                                <li class="autolist autolistEnd jinrishop">         
+                                    <div class="syTimeEnd">{wc:$i}</div>
+                                    <div class="autolistC">
+                                        <p class="name">&nbsp;{wc:fun:get_user_name($shop['uid'],'username')}</p>
+                                        <p class="money">消费金额：<span class="rmb">{wc:$shop['money']}</span>元</p>
+                                    </div>
+                                </li>
+                                {wc:php:start}$i++;{wc:php:end}
+                                {wc:loop:end}
+                            </ul>
+                        </div>
+                        
+                        <div id="lifhHead" class="showCon hidden" style="display: none;">
+                            <ul>
+                                {wc:php:start}$i=1;{wc:php:end}
+                                {wc:loop $fhph $shop}
+                                <li class="autolist autolistEnd jinrishop">         
+                                    <div class="syTimeEnd">{wc:$i}</div>
+                                    <div class="autolistC">
+                                        <p class="name">&nbsp;{wc:fun:get_user_name($shop['uid'],'username')}</p>
+                                        <p class="money">账户余额：<span class="rmb">{wc:$shop['money']}</span>元</p>
+                                    </div>
+                                </li>
+                                {wc:php:start}$i++;{wc:php:end}
+                                {wc:loop:end}
+                            </ul>
+                        </div>
+                        
+                        <div id="lizjHead" class="showCon hidden" style="display: none;">
+                            <ul>		
+
+                            </ul>
+                        </div>
+                        
+                        <div id="smczHead" class="autoRule">
+                            <a name="regular" id="regular"></a>
+                            <p class="dsjx">
+                                充值排行说明</p>
+                            <div class="autoOldC">
+                                <ul>
+                                    <li>1.充值排名按照客户每日充值金额来进行排名。</li>
+                                    <li>2.排名刷新每天凌晨00:00，每日充值金额越多排名越靠前。</li>
+                                    <li>3.排名清零为24小时一周期，至凌晨00:00清零。</li>
+                                    <li>4.每日排名前三的客户可得我公司奖励</li>
+                                    <li>注：</li>
+                                    <li>充值排名到达第一名且金额达到1000元以上我公司将返还当天最后一次充值金额的8%金额到账户余额内</li>
+                                    <li>充值排名到达第二名且金额达到500元以上我公司将返还当天最后一次充值金额的5%金额到账户余额内</li>
+                                    <li>充值排名到达第三名且金额达到200元以上我公司将返还当天最后一次充值金额的2%金额到账户余额内</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="smxfHead" class="autoRule hidden" style="display: none;">
+                            <a name="regular" id="regular"></a>
+                            <p class="dsjx">
+                                消费排行说明</p>
+                            <div class="autoOldC">
+                                <ul>
+                                    <li>1.消费排名按照客户累计消费来进行排名。</li>
+                                    <li>2.排名清零为24小时一周期，至凌晨00:00清零。</li>
+                                    <li>3.每日排名前三的客户可得我公司奖励</li>
+                                    <li>注：</li>
+                                    <li>消费排名到达第一名且金额达到1000元以上我公司将返还消费金额的1%金额到账户余额内</li>
+                                    <li>消费排名到达第二名且金额达到500元以上我公司将返还消费金额的0.5%金额到账户余额内</li>
+                                    <li>消费排名到达第三名且金额达到200元以上我公司将返还消费金额的0.2%金额到账户余额内</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="smfhHead" class="autoRule hidden" style="display: none;">
+                            <a name="regular" id="regular"></a>
+                            <p class="dsjx">
+                               富豪排行说明</p>
+                            <div class="autoOldC">
+                                <ul>
+                                    <li>1.富豪榜按照当天登陆的客户账户余额来进行排名。</li>
+                                    <li>2.排名清零为24小时一周期，至凌晨00:00清零。</li>
+                                    <li>3.每日排名前三的客户可得我公司奖励</li>
+                                    <li>注：</li>
+                                    <li>富豪榜排名到达第一名且金额达到10000元以上我公司将返还账户余额的0.1%金额到账户余额内</li>
+                                    <li>富豪榜排名到达第二名且金额达到5000元以上我公司将返还账户余额的0.05%金额到账户余额内</li>
+                                    <li>富豪榜排名到达第三名且金额达到2000元以上我公司将返还账户余额的0.02%金额到账户余额内</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {wc:templates "index","footer"}
+            

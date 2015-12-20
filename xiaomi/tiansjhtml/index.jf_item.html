@@ -1,0 +1,362 @@
+{wc:templates "index","header"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/GoodsDetail.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/header.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/cloud-zoom.css"/>
+<script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/cloud-zoom.min.js"></script>
+<script type="text/javascript">
+$.fn.CloudZoom.defaults = {
+	zoomWidth: '400',
+	zoomHeight: '310',
+	position: 'right',
+	tint: false,
+	tintOpacity: 0.5,
+	lensOpacity: 0.5,
+	softFocus: false,
+	smoothMove: 7,
+	showTitle: false,
+	titleOpacity: 0.5,
+	adjustX: 0,
+	adjustY: 0
+};
+</script>
+<style type="text/css">
+.zoom-section{clear:both;margin-top:20px;}
+.zoom-small-image{border:2px solid #dedede;float:left;margin-bottom:20px; width:400px; height:400px;}
+.zoom-small-image img{ width:400px; height:400px;}
+.zoom-desc{float:left;width:404px; height:52px;margin-bottom:20px; overflow:hidden;}
+.zoom-desc p{ width:10000px; height:52px; float:left; display:block; position:absolute; top:0; z-index:3; overflow:hidden;}
+.zoom-desc label{ width:50px; height:52px; margin:0 5px 0 0; _margin-right:4px; display:block; float:left; overflow:hidden;}
+.zoom-tiny-image{border:1px solid #CCC;margin:0px; width:48px; height:50px;}
+.zoom-tiny-image:hover{border:1px solid #C00;}
+</style>
+<div class="Current_nav">
+	<a href="{WEB_PATH}">首页&gt;</a><a href="{G_WEB_PATH}/?/jf_goods_list">&nbsp;全额商城</a> <span>&gt;</span>
+	<a href="{WEB_PATH}/jf_goods_list/{wc:$item['cateid']}">
+	{wc:$category['name']}
+	</a><span>&gt;</span>
+	<a href="{WEB_PATH}/jf_goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
+	{wc:$brand['name']}
+	</a> <span>&gt;</span>商品详情
+</div>
+<div class="show_content">
+
+	<!-- 商品信息 -->
+	<div class="Pro_Details">
+		<h1><span >{wc:$item['title']}</span><span style="{wc:$item['title_style']}">{wc:$item['title2']}</span></h1>
+		<div class="Pro_Detleft">
+			<div class="zoom-small-image">
+				<span href="{G_UPLOAD_PATH}/{wc:$item['thumb']}" class = 'cloud-zoom' id='zoom1' rel="adjustX:10, adjustY:-2">
+                <img width="80px" height="80px" src="{G_UPLOAD_PATH}/{wc:$item['thumb']}" /></span>
+			</div>
+
+			<div class="zoom-desc">
+				<div class="jcarousel-prev jcarousel-prev-disabled"></div>
+				<div class="jcarousel-clip" style="height:55px;width:384px;">
+				<p>
+					{wc:loop $item['picarr'] $imgtu}
+					<label href="{G_UPLOAD_PATH}/{wc:$imgtu}" class='cloud-zoom-gallery'  rel="useZoom: 'zoom1', smallImage: '{G_UPLOAD_PATH}/{wc:$imgtu}'">
+					<img class="zoom-tiny-image" src="{G_UPLOAD_PATH}/{wc:$imgtu}" /></label>
+					{wc:loop:end}
+				</p>
+				</div>
+				<div class="jcarousel-next jcarousel-next-disabled"></div>
+			</div>
+			<script>
+				var si=$(".jcarousel-clip label").size();
+				var label=si*55;
+				$(".jcarousel-clip p").css({width:label,left:"0"});
+				if(label>395){
+					$(".jcarousel-prev,.jcarousel-next").show();
+				}else{
+					$(".jcarousel-prev,.jcarousel-next").hide();
+				}
+				$(".jcarousel-prev").click(function(){
+					var le=$(".jcarousel-clip p").css("left");
+					var le2=le.replace(/px/,"");
+					if(le!='0px'){
+						$(".jcarousel-clip p").css({left:le2*1+55});
+					}
+				})
+				$(".jcarousel-next").click(function(){
+					var le=$(".jcarousel-clip p").css("left");
+					var le2=le.replace(/px/,"");
+					var max_next=-(si-7)*55+"px";
+					if(le!=max_next){
+						$(".jcarousel-clip p").css({left:le2*1-55});
+					}
+				})
+			</script>
+
+
+			{wc:if $sid_code}
+			{wc:php:start}
+				$sid_code['q_user'] = unserialize($sid_code['q_user']);
+			{wc:php:end}
+			{wc:if:end}
+		</div>
+		<div class="Pro_Detright">
+			<p class="Det_money">价值：{wc:$item['yunjiage']}</p>
+
+			{wc:templates "index","jf_item_contents"}
+			<!--显示揭晓动画 end-->
+			<div class="Security">
+				<ul>
+					<li><a href="{WEB_PATH}/help/4" target="_blank"><i></i>100%公平公正</a></li>
+					<li><a href="{WEB_PATH}/help/5" target="_blank"><s></s>100%正品保证</a></li>
+					<li><a href="{WEB_PATH}/help/7" target="_blank"><b></b>全国免费配送</a></li>
+				</ul>
+			</div>
+			<div class="Pro_Record">
+				<ul id="ulRecordTab" class="Record_tit">
+					<li class="NewestRec Record_titCur">最新全部购买记录</li>
+					<li class="MytRec">我的购买记录</li>
+				</ul>
+				<div class="Newest_Con hide">
+					<ul>
+						{wc:loop $us $user}
+						<li>
+						<a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank">
+						{wc:if !empty($user['uphoto'])}
+							<img src="{G_UPLOAD_PATH}/{wc:$user['uphoto']}" border="0" alt="" width="20" height="20">
+						{wc:else}
+							<img src="{G_UPLOAD_PATH}/photo/member.jpg" border="0" alt="" width="20" height="20">
+						{wc:if:end}
+						</a>
+						<a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank" class="blue">{wc:$user['username']}</a>
+						{wc:fun:_put_time($user['time'])} 购买了
+						<em class="Fb gray01">{wc:$user['gonumber']}</em>件</li>
+						{wc:loop:end}
+					</ul>
+					<p style=""><a id="btnUserBuyMore" href="javascript:;" class="gray01">查看更多</a></p>
+				</div>
+				<div class="My_Record hide" style="display:none;">
+					{wc:if uidcookie('uid')}
+					<ul>
+						{wc:loop $us2 $user}
+						{wc:if $user['uid']==uidcookie('uid')}
+						<li>{wc:fun:_put_time($user['time'])}  购买了  {wc:$user['gonumber']}  件</li>
+						{wc:if:end}
+						{wc:loop:end}
+					</ul>
+					{wc:else}
+					<div class="My_RecordReg">
+						<b class="gray01">看不到？是不是没登录或是没注册？ 登录后看看</b>
+						<a href="{WEB_PATH}/member/user/login" class="My_Signbut">登录</a><a href="{WEB_PATH}/member/user/register" class="My_Regbut">注册</a>
+					</div>
+					{wc:if:end}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 商品信息导航 -->
+<div class="ProductTabNav">
+	<div id="divProductNav" class="DetailsT_Tit">
+		<div class="DetailsT_TitP">
+			<ul>
+				<li class="Product_DetT DetailsTCur"><span class="DetailsTCur">商品详情</span></li>
+				<li id="liUserBuyAll" class="All_RecordT"><span class="">所有购买记录</span></li>
+				<li class="Single_ConT"><span class="">晒单</span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 商品内容 -->
+<div id="divContent" class="Product_Content">
+	<div class="Product_Con hide" style="display:block;">{wc:$item['content']}</div>
+	<div name="bitem" class="AllRecordCon hide" style="display:none;">
+		{wc:loop $us2 $user}
+		<div class="AllRecW AllReclist"><div class="AllRecL fl">{wc:fun:microt($user['time'])}<i></i></div>
+			<div class="AllRecR fl">
+			<p class="AllRecR_T">
+				<span name="spCodeInfo" class="AllRecR_Over">
+				<a class="Headpic" href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank"><img src="{G_UPLOAD_PATH}/{wc:$user['uphoto']}" border="0" width="20" height="20"></a>
+				<a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank" class="blue">{wc:fun:_strcut($user['username'],6)}</a>
+				购买了<em class="Fb orange">{wc:$user['gonumber']}</em>件
+				</span>
+			</p>
+			</div>
+		</div>
+		{wc:loop:end}
+	</div>
+
+		<!-- 晒单 -->
+	<div id="divPost" class="Single_Content">
+		<iframe id="iframea" src="{WEB_PATH}/go/shaidan/jf_itmeifram/{wc:$itemid}" style="width:978px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+function set_iframe_height(height){
+//	alert(height);
+	$("#iframea").css("height",height);
+	if(this.divPost!='yes'){
+		$("#divPost").hide();this.divPost='yes';
+	}
+}
+
+$(function(){
+	$("#ulRecordTab li").click(function(){
+		var add=$("#ulRecordTab li").index(this);
+		$("#ulRecordTab li").removeClass("Record_titCur").eq(add).addClass("Record_titCur");
+		$(".Pro_Record .hide").hide().eq(add).show();
+	});
+var fouli=$(".DetailsT_TitP ul li");
+	fouli.click(function(){
+		var add=fouli.index(this);
+		if(add ==2){
+			$("#divPost").show();
+		}
+		if(add ==0 || add==1){
+			$("#divPost").hide();
+		}
+
+		fouli.removeClass("DetailsTCur").eq(add).addClass("DetailsTCur");
+		$("#divContent .hide").hide().eq(add).show();
+	});
+	$("#btnUserBuyMore").click(function(){
+		fouli.removeClass("DetailsTCur").eq(1).addClass("DetailsTCur");
+		$("#divContent .hide").hide().eq(1).show();
+		$("html,body").animate({scrollTop:941},1500);
+		$("#divProductNav").addClass("nav-fixed");
+	});
+	$(window).scroll(function(){
+		if($(window).scrollTop()>=941){
+			$("#divProductNav").addClass("nav-fixed");
+		}else if($(window).scrollTop()<941){
+			$("#divProductNav").removeClass("nav-fixed");
+		}
+	});
+})
+var shopinfo={'shopid':{wc:$item['id']},'money':{wc:$item['yunjiage']},'shenyu':{wc:$syrs}};
+
+
+$(function(){
+	function baifenshua(aa,n){
+	n = n || 2;
+	return ( Math.round( aa * Math.pow( 10, n + 2 ) ) / Math.pow( 10, n ) ).toFixed( n ) + '%';
+}
+	var shopnum = $("#num_dig");
+	shopnum.keyup(function(){
+		if(shopnum.val()>parseInt({wc:$syrs})){
+			shopnum.val(parseInt({wc:$syrs}));
+		}
+		var numshop=shopnum.val();
+		if(numshop=={wc:$item['zongrenshu']}){
+			var baifenbi='100%';
+		}else{
+			var showbaifen=numshop/{wc:$item['zongrenshu']};
+			var baifenbi=baifenshua(showbaifen,2);
+		}
+		$("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
+	});
+
+	$("#shopadd").click(function(){
+		var shopnum = $("#num_dig");
+			var resshopnump='';
+			var num = parseInt(shopnum.val());
+			if(num+1 > parseInt({wc:$syrs})){
+				shopnum.val(parseInt({wc:$syrs}));
+				resshopnump = parseInt({wc:$syrs});
+			}else{
+				resshopnump=parseInt(shopnum.val())+1;
+				shopnum.val(resshopnump);
+				if(shopnum.val()>=parseInt({wc:$syrs})){
+					resshopnump=shopinfo['shenyu'];
+					shopnum.val(resshopnump);
+				}
+			}
+			if(resshopnump=={wc:$item['zongrenshu']}){
+				var baifenbi='100%';
+			}else{
+				var showbaifen=resshopnump/{wc:$item['zongrenshu']};
+				var baifenbi=baifenshua(showbaifen,2);
+			}
+			$("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
+	});
+
+
+	$("#shopsub").click(function(){
+		var shopnum = $("#num_dig");
+		var num = parseInt(shopnum.val());
+		if(num<2){
+			shopnum.val(1);
+		}else{
+			shopnum.val(parseInt(shopnum.val())-1);
+		}
+		var shopnums=parseInt(shopnum.val());
+		if(shopnums=={wc:$item['zongrenshu']}){
+				var baifenbi='100%';
+			}else{
+				var showbaifen=shopnums/{wc:$item['zongrenshu']};
+				var baifenbi=baifenshua(showbaifen,2);
+			}
+			$("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
+	});
+});
+
+$(function(){
+$(".Det_Cart").click(function(){
+	//添加到购物车动画
+	var src=$("#zoom1 img").attr('src');
+	var $shadow = $('<img id="cart_dh" style="display: none; border:1px solid #aaa; z-index: 99999;" width="400" height="400" src="'+src+'" />').prependTo("body");
+	var $img = $(".mousetrap").first("img");
+	$shadow.css({
+	   'width' : $img.css('width'),
+	   'height': $img.css('height'),
+	   'position' : 'absolute',
+	   'top' : $img.offset().top,
+	   'left' : $img.offset().left,
+	   'opacity' :1
+	}).show();
+	var $cart =$("#btnMyCart");
+	var numdig=$(".num_dig").val();
+	$shadow.animate({
+		width: 1,
+		height: 1,
+		top: $cart.offset().top,
+		left: $cart.offset().left,
+		opacity: 0
+	},500,function(){
+		Cartcookie(false);
+	});
+});
+	$(".Det_Shopbut").click(function(){
+		Cartcookie(true);
+	});
+});
+
+
+
+function Cartcookie(cook){
+	var shopid=shopinfo['shopid'];
+	var number=parseInt($("#num_dig").val());
+	if(number<=1){number=1;}
+	var Cartlist = $.cookie('Cartlist_jf');
+	if(!Cartlist){
+		var info = {};
+	}else{
+		var info = $.evalJSON(Cartlist);
+		if((typeof info) !== 'object'){
+			var info = {};
+		}
+	}
+	if(!info[shopid]){
+		var CartTotal=$("#sCartTotal").text();
+			$("#sCartTotal").text(parseInt(CartTotal)+1);
+			$("#btnMyCart em").text(parseInt(CartTotal)+1);
+	}
+	info[shopid]={};
+	info[shopid]['num']=number;
+	info[shopid]['shenyu']=shopinfo['shenyu'];
+	info[shopid]['money']=shopinfo['money'];
+	info['MoenyCount']='0.00';
+	$.cookie('Cartlist_jf',$.toJSON(info),{expires:7,path:'/'});
+	if(cook){
+		window.location.href="{WEB_PATH}/member/cart/jf_cartlist/"+new Date().getTime();//+new Date().getTime()
+	}
+}
+</script>
+
+{wc:templates "index","footer"}

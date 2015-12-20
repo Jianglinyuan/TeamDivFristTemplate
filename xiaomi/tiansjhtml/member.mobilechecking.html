@@ -1,0 +1,101 @@
+{wc:templates "index","header"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
+<style>
+.errorMessage {
+    color: #FF6F3D;
+    margin-left: 10px;
+}
+
+.uc-manage {
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    margin: 20px 0 0;
+    z-index: 1000;
+}
+
+.compensate-form {
+    background: none repeat scroll 0 0 #F5F7FA;
+    border: 1px solid #EDEDED;
+    border-radius: 0 5px 5px 5px;
+    margin-top: -1px;
+    padding: 0 20px 20px;
+}
+.compensate-form .input, .compensate-form .input-area {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #EDEDED;
+    border-radius: 5px 5px 5px 5px;
+    color: #434A54;
+}
+.compensate-form .input:focus, .compensate-form .input-area:focus {
+    border-color: #F84858;
+    outline: medium none;
+}
+.compensate-form .input {
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    width: 210px;
+}
+
+.compensate-form .item {
+    padding: 15px 0 0;
+}
+.compensate-form .item label {
+    display: block;
+    margin-bottom: 5px;
+}
+.compensate-form .item label span {
+    color: #F84858;
+}
+</style>
+<div class="container breadcrumbs"><a href="/">首页</a><span class="sep">/</span><span>手机验证</span></div>
+<div class="container">
+    <div class="uc-full-box">
+        <div class="row">
+            {wc:templates "member","left"}
+				<div class="span16">
+					<div class="xm-line-box uc-box">
+						<div class="box-hd">
+							<h3 class="title">手机验证</h3>
+							<div class="more">
+								<div class="subMenu">
+									<a href="javascript:history.go(-1);" class="blue">&lt;&lt; 返回</a>
+								</div>
+							</div>
+						</div>
+						<div class="box-bd">
+							<div class="compensate-content">
+								<div class="tab-container">
+									<div class="tab-content">
+									   <form method="post" action="{wc:WEB_PATH}/member/home/mobilesuccess">
+											<div class="compensate-form uc-manage-address" style="border: 0px solid #FFFFFF;background: none repeat scroll 0 0 #FFFFFF;">
+												<fieldset class="form-section item" style="border:none;">
+													<label for="serviceNumber">第一步输入手机号码：</label>
+													<input  datatype="m" ajaxurl="{wc:WEB_PATH}/member/home/mailchackajax" nullmsg="不能为空" errormsg="您输入的手机号码有误" name="mobile" type="text" class="input" maxlength="11">
+													<span class="errorMessage" id="service_number_msg"></span>
+												</fieldset>
+												<fieldset class="form-section item" style="border:none;">
+													<input type="submit" name="submit" class="btn btn-primary" value="确认手机号码">
+												</fieldset>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+<link href="{G_TEMPLATES_STYLE}/css/style.css" rel="stylesheet" type="text/css" />
+<link href="{G_TEMPLATES_STYLE}/css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/jquery.Validform.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var demo=$(".tab-content").Validform({
+		tiptype:3,
+	});
+})
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+{wc:templates "index","foot"}

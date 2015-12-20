@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>抽奖 - {wc:$webname}触屏版</title>
+    <meta content="app-id=518966501" name="apple-itunes-app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!-- 该标签用于指定是否将网页内容中的手机号码显示为拨号的超链接 -->
+     <link href="{G_TEMPLATES_STYLE}/mobile/images/favicon.ico" rel="apple-touch-icon-precomposed" />
+    <link href="{G_TEMPLATES_MOBILE_CSS}/comm.css" rel="stylesheet" type="text/css" />
+    <script src="{G_TEMPLATES_MOBILE_JS}/jquery190.js" type="text/javascript"></script>
+    <script src="{G_TEMPLATES_MOBILE_JS}/shake/alert.js" type="text/javascript"></script>
+    <style>
+        #lottery .arrow {
+            background: url("{G_TEMPLATES_STYLE}/mobile/images/arrow.png") no-repeat center center transparent;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+        #lottery #lot-btn {
+            width: 83px;
+            height: 83px;
+            overflow: hidden;
+        }
+        #lottery #lot-btn span {
+            cursor: pointer;
+            display: block;
+            height: 83px;
+            width: 172px;
+            background: url("{G_TEMPLATES_STYLE}/mobile/images/buttons_01.png") no-repeat center center transparent;
+        }
+        .wrap {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden; 
+            background: #fee3c1;
+        }
+        .activeRegulation {
+            width: 95%;
+            margin:15px;
+            display: inline;
+        }
+        .fl {
+            float: left;
+        }
+        .activeRegulation dt {
+            color: #f9560a;
+            font-size: 18px;
+        }
+        .activeRegulation dd {
+            position: relative;
+            line-height: 24px;
+            padding-left: 25px;
+            margin-top: 5px;
+            _zoom: 1;
+            font-size: 14px;
+        }
+        .activeRegulation i {
+            position: absolute;
+            vertical-align: middle;
+            top: 3px;
+            left: 0;
+            text-align: center;
+            color: #fff;
+            width: 17px;
+            height: 17px;
+            line-height: 17px;
+            background: url({G_TEMPLATES_STYLE}/mobile/images/rItem.png) no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="h5-1yyg-w310">
+
+<!-- 内页顶部 -->
+
+    <header class="g-header">
+        <div class="head-l">
+            <a href="javascript:;" onclick="location.href='{WEB_PATH}/mobile/mobile'" class="z-HReturn"><s></s><b>返回</b></a>
+        </div>
+        <h2>时来运转</h2>
+        <div class="head-r">
+            <a href="{WEB_PATH}/mobile/user/login" class="z-Member"></a>
+        </div>
+    </header>
+    <div style="margin: auto;background-color: #F02626;">
+        <div id="lottery" style="width:100%;position: relative;text-align: center;">
+            <table border=0" cellspacing="0" cellpadding="0" width="100%" height="350" align="center">
+                <tr><td align="center"><img id="imgs" src="{G_TEMPLATES_STYLE}/mobile/images/disc-rotate.png" class="image"></td></tr>
+            </table>
+            <div class="arrow"></div>
+            <table border=0" cellspacing="0" style="position:absolute;top:0;left:0;" cellpadding="0" width="100%" height="350" align="center">
+                <tr><td align="center"><div class="first" id="lot-btn"><span></span></div></td></tr>
+            </table>
+        </div>
+    </div>
+    <div id="lottery_tips" style="line-height:20px;background-color:#000000;color:#FFFFFF;padding:8px 0">&nbsp;</div>
+    <div style="margin-top:15px"></div>
+    <div class="pProcess pProcess2">
+        <div class="pResults">
+            <div id="marqueebox1" style="height:80px;overflow:hidden">
+                <ul>
+                    {wc:loop $LotteryList $item}
+                    <li>【{wc:fun:userid($item['uid'],'username')}***】：抽中{wc:$item['title']}，获得{wc:$item['desc']}；</li>
+                    {wc:loop:end}
+                    {wc:php:start}
+                    for($i=19;$i>count($LotteryList);$i--){
+                    echo '<li>　</li>';
+                    }
+                    {wc:php:end}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:12px;border-bottom:1px #d0d0d0"></div>
+    <div class="wrap">
+        <dl class="activeRegulation fl">
+            <dt>活动时间和规则：</dt>
+            <dd>
+                <i>1</i>结束时间以网站公告为准（应广大会员要求，活动时间再次延长）
+            </dd>
+            <dd>
+                <i>2</i>活动内容：在活动时间内，所有注册会员完善资料和购买商品均可获得积分，积分可在本页面进行抽奖。每次进行一次抽奖消耗2000积分。
+            </dd>
+            <dd>
+                <i>3</i>活动奖品：抽奖商品及奖励由我公司随机制定，一个月为周期更换产品。
+            </dd>
+            <dd>
+                <i>4</i>活动说明：我公司应广大会员要求，活动时间再次延长，本次活动中奖率100%，得到商品后我公司客户将在第一时间联系中奖会员；
+如逾期24小时后仍无法联系上会员我公司将视为放弃商品获得权将不给予发货。获得虚拟物品的会员我公司将会报物品发到该会员注册资料上所显示的信息上的账户信息。
+            </dd>
+            <dd>
+                <i>5</i>本活动因是我公司庆祝公司上线所推出的活动，我公司将拥有本活动的最终解释权。
+            </dd>
+        </dl>
+    </div>
+<script>
+    var WEB_PATH = "{WEB_PATH}";
+</script>
+<script type="text/javascript" src="{G_TEMPLATES_CSS}/lottery/jQueryRotate.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_CSS}/lottery/jsmobile.js"></script>
+{wc:templates "mobile/index","footer"}
+<script language="javascript" type="text/javascript">
+var Path = new Object();
+Path.Skin="{G_TEMPLATES_STYLE}";
+Path.Webpath = "{WEB_PATH}";
+
+var Base={head:document.getElementsByTagName("head")[0]||document.documentElement,Myload:function(B,A){this.done=false;B.onload=B.onreadystatechange=function(){if(!this.done&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){this.done=true;A();B.onload=B.onreadystatechange=null;if(this.head&&B.parentNode){this.head.removeChild(B)}}}},getScript:function(A,C){var B=function(){};if(C!=undefined){B=C}var D=document.createElement("script");D.setAttribute("language","javascript");D.setAttribute("type","text/javascript");D.setAttribute("src",A);this.head.appendChild(D);this.Myload(D,B)},getStyle:function(A,B){var B=function(){};if(callBack!=undefined){B=callBack}var C=document.createElement("link");C.setAttribute("type","text/css");C.setAttribute("rel","stylesheet");C.setAttribute("href",A);this.head.appendChild(C);this.Myload(C,B)}}
+function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
+Base.getScript('{G_TEMPLATES_MOBILE_JS}/Bottom.js?v='+GetVerNum());
+</script>
+
+
+</body>
+</html>

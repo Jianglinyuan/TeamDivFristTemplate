@@ -1,0 +1,83 @@
+﻿<footer class="footer">
+	<div class="u-ft-nav" id="fLoginInfo">
+	    <span><a href="{WEB_PATH}/mobile/mobile/">首页</a><b></b></span>
+		<span><a href="{WEB_PATH}/mobile/mobile/about">新手指南</a><b></b></span>
+		<span><a href="{WEB_PATH}/mobile/user/login">登录</a><b></b></span>
+		<span><a href="{WEB_PATH}/mobile/user/register">注册</a></span>
+	</div>
+	{wc:php:start}
+		$g_web_path = _cfg("web_path");
+		$g_web_path = trim($g_web_path,"/");		
+	{wc:php:end}
+	<p class="m-ftA"><a href="{WEB_PATH}/mobile/mobile">触屏版</a><a href="{wc:$g_web_path}/?PC_SEE=1" target="_blank">电脑版</a></p>
+	<p class="grayc">客服热线<span class="orange">{wc:fun:_cfg("cell")}</span>{wc:fun:_cfg('web_copyright')}</p>
+	<a id="btnTop" href="javascript:;" class="z-top" style="display:none;"><b class="z-arrow"></b></a>
+</footer>
+
+
+
+{wc:php:start}
+	$f_home = '';
+	$f_whole = '';
+	$f_jiexiao = '';
+	$f_car = '';
+	$f_personal = '';
+
+	if( ROUTE_C == 'home' || ROUTE_C == 'user' ){
+		$f_personal = 'cur';
+	}else if( ROUTE_C == 'mobile' && ROUTE_A == 'init'){
+		$f_home = 'cur';
+	}else if( ROUTE_C == 'mobile' && ROUTE_A == 'glist'){
+		$f_whole = 'cur';
+	}else if( ROUTE_C == 'mobile' && ROUTE_A == 'lottery'){
+		$f_jiexiao = 'cur';
+	}else if( ROUTE_C == 'cart'){
+		$f_car = 'cur';
+	}
+{wc:php:end}
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<style>
+.footerdi .f_home i.cur{
+	background-position: 0 0 !important;
+}
+.footerdi .f_whole i.cur{
+	background-position: 0 -52px !important;
+}
+.footerdi .f_jiexiao i.cur{
+	background-position: 0 -222px !important;
+}
+.footerdi .f_car i.cur{
+	background-position: 0 -105px !important;
+}
+.footerdi .f_personal i.cur{
+	background-position: 0 -152px !important;
+}
+</style>
+<div class="footerdi" style="bottom: 0px;">
+	<ul>
+		<li class="f_home">
+			<a title="首页" href="{WEB_PATH}/mobile/mobile/"><i class="{wc:$f_home}">&nbsp;</i>首页</a>
+		</li>
+		<li class="f_whole">
+			<a title="所有商品" href="{WEB_PATH}/mobile/mobile/glist"><i class="{wc:$f_whole}">&nbsp;</i>所有商品</a>
+		</li>
+		<li class="f_jiexiao">
+			<a title="最新揭晓" href="{WEB_PATH}/mobile/mobile/lottery"><i class="{wc:$f_jiexiao}">&nbsp;</i>最新揭晓</a>
+		</li>
+		<li class="f_car">
+			<a title="购物车" href="{WEB_PATH}/mobile/cart/cartlist"><i class="{wc:$f_car}">&nbsp;</i>购物车</a>
+		</li>
+		<li class="f_personal">
+			<a title="我的购物" href="{WEB_PATH}/mobile/home"><i class="{wc:$f_personal}">&nbsp;</i>我的{wc:fun:_cfg('web_name_two')}</a>
+		<li>
+	</ul>
+</div>
+

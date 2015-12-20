@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>确认商品及支付 - {wc:fun:_cfg("web_name")}</title>
+<meta name="keywords" content="{wc:if isset($keywords)}{wc:$keywords}{wc:else}{wc:fun:_cfg("web_key")}{wc:if:end}" />
+<meta name="description" content="{wc:if isset($description)}{wc:$description}{wc:else}{wc:fun:_cfg("web_des")}{wc:if:end}" />
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/App/Css/Comm.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/@/css/base.min.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/App/Css/MyCart.css"/>
+<script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/jquery.cookie.js"></script>
+<script>
+$(function(){
+	$("#sCart").hover(
+		function(){
+			$("#J_miniCartList,#sCartLoading").show();
+			$("#J_miniCartList p,#J_miniCartList h3").hide();
+			$("#sCart .mycartcur").remove();
+			$("#sCartTotal2").html("");
+			$("#sCartTotalM").html("");
+			$.getJSON("{WEB_PATH}/member/cart/cartheader/="+ new Date().getTime(),function(data){
+				$("#sCart .mycartcur").remove();
+				$("#sCartLoading").before(data.li);
+				$("#sCartTotal2").html(data.num);
+				$("#sCartTotalM").html(data.sum);
+				$("#sCartLoading").hide();
+				$("#J_miniCartList p,#J_miniCartList h3").show();
+			});
+		},
+		function(){
+			$("#J_miniCartList").hide();
+		}
+	);
+	$("#sGotoCart").click(function(){
+		window.location.href="{WEB_PATH}/member/cart/cartlist";
+	});
+})
+function delheader(id){
+	var Cartlist = $.cookie('Cartlist');
+	var info = $.evalJSON(Cartlist);
+	var num=$("#sCartTotal2").html()-1;
+	var sum=$("#sCartTotalM").html();
+	info['MoenyCount'] = sum-info[id]['money']*info[id]['num'];
+
+	delete info[id];
+	//$.cookie('Cartlist','',{path:'/'});
+	$.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});
+	$("#sCartTotalM").html(info['MoenyCount']);
+	$('#sCartTotal2').html(num);
+	$('#sCartTotal').text(num);
+	$('#btnMyCart em').text(num);
+	$("#mycartcur"+id).remove();
+}
+$(function(){
+	$(".welcome").mouseover(function(){
+		$(".user-info-menu").show();
+	});
+	$(".welcome").mouseout(function(){
+		$(".user-info-menu").hide();
+	});
+	$(".h_news").mouseover(function(){
+		$(".h_news_down").show();
+	});
+	$(".h_news").mouseout(function(){
+		$(".h_news_down").hide();
+	});
+});
+$(".g-hotL-list").hover(
+　　function () {
+　　$(this).addClass("g-hotL-hover");
+　　},
+　　function () {
+　　$(this).removeClass("g-hotL-hover");
+　　}
+　　);
+$(function(){
+	$("#txtSearch").focus(function(){
+		$("#txtSearch").css({background:"#FFFFCC"});
+		var va1=$("#txtSearch").val();
+		if(va1=='搜索您需要的商品'){
+			$("#txtSearch").val("");
+		}
+	});
+	$("#txtSearch").blur(function(){
+		$("#txtSearch").css({background:"#FFF"});
+		var va2=$("#txtSearch").val();
+		if(va2==""){
+			$("#txtSearch").val('搜索您需要的商品');
+		}
+	});
+	$("#butSearch").click(function(){
+		window.location.href="{WEB_PATH}/s_tag/"+$("#txtSearch").val();
+	});
+});
+</script>
+</head>
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-nav">
+            <a href="{WEB_PATH}">{wc:fun:_cfg("web_name_two")}网</a>
+            <span class="sep">|</span><a id="btnFavorite" href="javascript:;" title="收藏{wc:fun:_cfg("web_name_two")}">收藏{wc:fun:_cfg("web_name_two")}</a>
+           <span class="sep">|</span><a href="{WEB_PATH}/go/index/touch" target="_blank" title="手机版">手机{wc:fun:_cfg('web_name_two')}</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/help/1" target="_blank" title="网站简介">{wc:fun:_cfg('web_name_two')}简介</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/group_qq" target="_blank" title="QQ群">{wc:fun:_cfg('web_name_two')}QQ群</a>
+        </div>
+        <div class="topbar-info J_userInfo">
+		{wc:if get_user_arr()}
+			<div class="welcome">欢迎您 <b>{wc:fun:get_user_name(get_user_arr(),'username')}<span class="arrow"></span></b><span class="sep">|</span>
+				<div class="user-info-menu" style="display: none;">
+					<ul>
+						<li><a href="{WEB_PATH}/member/home" target="_blank">个人中心</a></li>
+						<li><a href="{WEB_PATH}/member/home/userrecharge">帐户充值</a></li>
+						<li><a href="{WEB_PATH}/member/user/cook_end">退出登录</a></li>
+					</ul>
+					<span class="menu-arrow"></span>
+				</div>
+			</div>
+			<a href="{WEB_PATH}/member/home/userbuylist">我的订单</a><span class="sep">|</span>
+			<a href="{WEB_PATH}/member/home" target="_blank">我的{wc:fun:_cfg("web_name_two")}账户</a>
+		{wc:else}
+			<a href="{WEB_PATH}/login">登录</a><span class="sep">|</span><a href="{WEB_PATH}/register">注册</a>
+		{wc:if:end}
+        </div>
+    </div>
+</div>
+<!-- .site-topbar END -->
+<div class="site-header site-mini-header container">
+    <div class="span4">
+        <div class="site-logo"><a class="logo " href="/" style="background: url({G_UPLOAD_PATH}/{wc:fun:Getlogo()}) no-repeat;; "><i class="iconfont"></i></a></div>
+    </div>
+</div>
+<div class="container">
+	<div class="checkout-box">
+		<form id="form_paysubmit" action="{WEB_PATH}/{ROUTE_M}/{ROUTE_C}/paysubmit" method="post">
+			<div class="checkout-box-ft">
+                 <!-- 商品清单 -->
+                <div id="checkoutGoodsList" class="checkout-goods-box">
+                                    <div class="xm-box">
+                    <div class="box-hd">
+                        <h2 class="title">确认商品及优惠券</h2>
+                    </div>
+                    <div class="box-bd">
+                        <dl class="checkout-goods-list">
+                            <dt class="clearfix">
+                                <span class="col col-1">商品名称</span>
+                                <span class="col col-2">商品价值</span>
+                                <span class="col col-3">购买人次</span>
+                                <span class="col col-4">小计</span>
+                            </dt>
+                            <dd class="item clearfix">
+							{wc:loop $shoplist $shops}
+                                <div class="item">
+                                    <div class="col col-1">
+                                        <div class="g-pic"><img src="{G_UPLOAD_PATH}/{wc:$shops['thumb']}" width="40" height="40"></div>
+                                        <div class="g-info"><a href="{WEB_PATH}/goods/{wc:$shops['id']}" target="_blank">{wc:$shops['title']}</a></div>
+                                    </div>
+                                    <div class="col col-2">{wc:$shops['money']}元</div>
+                                    <div class="col col-3">{wc:$shops['cart_gorenci']}人次</div>
+                                    <div class="col col-4">{wc:$shops['cart_xiaoji']}元</div>
+                                </div>
+							{wc:loop:end}
+                            </dd>
+                        </dl>
+                        <div class="checkout-count clearfix">
+                            <div class="checkout-count-extend xm-add-buy">
+								<ul class="order_list">
+                                {wc:if $fufen_dikou}
+			 <li id="liPayByPoints" class="point_out">
+					<div class="payment_List_Lc">
+					<input type="checkbox" class="input_choice" id="shop_score" name="shop_score" value="1"/>使用福分抵扣现金：您的福分({wc:$member['score']})本次消费最多可抵扣现金
+                    <span class="orange Fb">{wc:$fufen_dikou}.00</span>元)，我要使用
+                    <input type="text" maxlength="8" class="pay_input_text_gray" id="shop_score_num" value="0" money="{wc:$fufen['fufen_yuan']}" name="shop_score_num"/> 福分, 1元 = {wc:$fufen['fufen_yuan']} 福分</div>
+                    <p id="pPointsTip" class="pay_Value" style="display:none;"></p>
+                    <p class="payment_List_Rc"></p>
+             </li>
+             {wc:else}
+              <li id="liPayByPoints" class="point_out point_gray">
+					<div class="payment_List_Lc">
+					<input type="checkbox" class="input_choice" disabled="disabled"/>使用福分抵扣现金：您的福分({wc:$member['score']})本次消费最多可抵扣现金
+                    <span class="orange Fb">{wc:$fufen_dikou}.00</span>元)，我要使用
+                    <input type="text" maxlength="8" class="pay_input_text_gray" name="costPoint"  disabled="disabled"/> 福分</div>
+                    <p id="pPointsTip" class="pay_Value" style="display:none;"></p>
+                    <p class="payment_List_Rc"></p>
+              </li>
+             {wc:if:end}
+							   <li class="point_in" id="liPayByBalance">
+				<div class="payment_List_Lc">
+					<input type="checkbox" name="moneycheckbox" id="MoneyCheckbox" class="input_choice"/>使用账户余额支付，账户余额：
+					<span class="green F18">{wc:$Money}</span>元
+				</div>
+				<p style="" class="pay_Value" id="pBalanceTip">
+				<span>◆</span><em>◆</em>账户余额支付更快捷，
+				<a class="blue" target="_blank" href="{WEB_PATH}/member/home/userrecharge">立即充值</a></p>
+				<p class="payment_List_Rc">余额支付：<span id="pay_money" class="orange F20">0.00</span> 元</p>
+			</li>
+            <!-- 余额支付 end-->
+
+			<li id="liPayByOther" class="point_in point_bank" style="display:list-item;">
+				<div class="item J_addBuy selected payment_List_Lc gary01 Fb">您的账户余额不足，请选择以下方式完成支付<span style="float:right;width: 250px;padding-left: 250px;">网银支付：<span id="pay_bankmoney" class="F20">0.00</span> 元</span></div>
+			</li>
+			</ul>
+                            </div>
+							<div class="pay_bankC" id="divBankList" style="display:block;">
+		<div class="bank_arrow"><span>◆</span></div>
+		{wc:php:start}
+        	$bank1 = $this->db->GetOne("select * from `@#_caches` where `key` = 'pay_bank_type'");
+            $bank2 = $this->db->GetOne("select * from `@#_pay` where `pay_class` = '$bank1[value]'");
+            if($bank1 && $bank2['pay_start'] ==1){
+		{wc:php:end}
+        {wc:if $bank1['value'] == 'tenpay'}
+		<dl class="clearfix payment-box">
+		<dt><strong>银行网银</strong><p>支持以下各银行借记卡及信用卡</p></dt>
+		<dd>
+            <ul class="bank_logo click_img">
+            	<input type="hidden" name="pay_bank" value="tenpay"  />
+                <li><input type="radio" value="CMB" name="account" checked="checked" /><label for="bankType1001"><span class="zh_bank"></span></label></li>
+                <li><input type="radio" value="ICBC" name="account"/><label for="bankType1002"><span class="gh_bank"></span></label></li>
+                <li><input type="radio" value="CCB" name="account" /><label for="bankType1003"><span class="jh_bank"></span></label></li>
+                <li><input type="radio" value="ABC" name="account" /><label for="bankType1005"><span class="nh_bank"></span></label></li>
+                <li><input type="radio" value="SPDB" name="account" /><label for="bankType1004"><span class="pf_bank"></span></label></li>
+
+                <li><input type="radio" value="SDB" name="account" /><label for="bankType1008"><span class="sf_bank"></span></label></li>
+                <li><input type="radio" value="CIB" name="account" /><label for="bankType1009"><span class="xy_bank"></span></label></li>
+                <li><input type="radio" value="BOB" name="account" /><label for="bankType1032"><span class="bj_bank"></span></label></li>
+                <li><input type="radio" value="CEB" name="account" /><label for="bankType1022"><span class="gd_bank"></span></label></li>
+                <li><input type="radio" value="CMBC" name="account" /><label for="bankType1006"><span class="ms_bank"></span></label></li>
+
+                <li><input type="radio" value="CITIC" name="account" /><label for="bankType1021"><span class="zx_bank"></span></label></li>
+                <li><input type="radio" value="GDB" name="account" /><label for="bankType1027"><span class="gf_bank"></span></label></li>
+                <li><input type="radio" value="PAB" name="account" /><label for="bankType1010"><span class="pa_bank"></span></label></li>
+                <li><input type="radio" value="BOC" name="account" /><label for="bankType1052"><span class="zg_bank"></span></label></li>
+                <li><input type="radio" value="COMM" name="account"/><label for="bankType1020"><span class="jt_bank"></span></label></li>
+            </ul>
+		</dd>
+            {wc:if:end}
+            {wc:if $bank1['value'] == 'yeepay'}
+        <dl class="clearfix payment-box">
+		<dt><strong>银行网银</strong><p>支持以下各银行借记卡及信用卡</p></dt>
+		<dd>
+            <ul class="bank_logo yeepay_bank click_img">
+            <input type="hidden" name="pay_bank" value="yeepay"  />
+     		<li><input type="radio" value="ICBC-NET-B2C" name="account" checked="checked" /><img src="{G_TEMPLATES_STYLE}/images/bank/ICBC.png"></li>
+            <li><input type="radio" value="CCB-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/CCB.png"></li>
+            <li><input type="radio" value="ABC-NET-B2C" name="account"  /><img src="{G_TEMPLATES_STYLE}/images/bank/ABC.png"></li>
+         	<li><input type="radio" value="CMBCHINA-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/CMBCHINA.png"></li>
+            <li><input type="radio" value="BOC-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/BOC.png"></li>
+            <li><input type="radio" value="BOCO-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/JIAOTONG.png"></li>
+
+
+            <li><input type="radio" value="CEB-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/CEB.png"></li>
+            <li><input type="radio" value="GDB-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/GDB.png"></li>
+            <li><input type="radio" value="POST-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/PSBC.png"></li>
+            <li><input type="radio" value="CMBC-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/CMBC.png"></li>
+            <li><input type="radio" value="PINGANBANK-NET" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/SZPA.png"></li>
+            <li><input type="radio" value="BCCB-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/BCCB.png"></li>
+            </ul>
+		</dd>
+            {wc:if:end}
+			{wc:php:start}
+				}
+			{wc:php:end}
+		<dl class="clearfix payment-box">
+		<dt><strong>支付平台</strong><p>集成了国内最顶级的网络支付技术</p></dt>
+		<dd>
+		<ul class="payment-list clearfix">
+        	{wc:loop $paylist  $pay}
+			<li>
+            <input checked="checked" type="radio" value="{wc:$pay['pay_id']}" name="account" id="Tenpay">
+            <img style="border:1px solid #eee; padding:1px" height="35px" width="120px" src="{G_UPLOAD_PATH}/{wc:$pay['pay_thumb']}">
+            </li>
+            {wc:loop:end}
+		</ul>
+		</dd>
+	</div>
+                            <div class="checkout-price">
+                                <p class="checkout-total">应付总额：<span><strong>{wc:$MoenyCount}</strong>元</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- 商品清单 END -->
+                <input type="hidden" id="couponType" name="Checkout[couponsType]">
+                <input type="hidden" id="couponValue" name="Checkout[couponsValue]">
+                <div class="checkout-confirm">
+                    <div id="submitAddress"></div>
+						<a href="{WEB_PATH}/member/cart/cartlist" class="btn btn-lineDakeLight btn-back-cart">返回购物车修改订单</a>
+						<input type="hidden" name="submitcode" value="{wc:$submitcode}">
+						<input id="submit_ok" class="btn btn-primary" type="submit" name="submit" value="立即下单">
+                    </div>
+				</div>
+				</form>
+			</div>
+		</div>
+<script>
+$(function(){
+	var info={'money':{wc:$Money},'MoenyCount':{wc:$MoenyCount},"shoplen":{wc:$shoplen}};
+	if(info['money'] >= info['MoenyCount']){
+		$("#divBankList").hide();
+		$("#liPayByOther").hide();
+		$("#MoneyCheckbox").attr("checked",true);
+		$("#MoneyCheckbox").attr("disabled",true);
+		$("#pay_money").text(info['MoenyCount']+'.00');
+	}
+
+	if(info['money']==0){
+			$("#liPayByBalance").addClass("point_gray");
+			$("#MoneyCheckbox").attr("disabled",true);
+	}
+	if(info['money'] < info['MoenyCount']){
+		$("#MoneyCheckbox").attr("checked",true);
+		$("#pay_money").text(info['money']+'.00');
+		$("#pay_bankmoney").text(info['MoenyCount']-info['money']+'.00');
+		$("#MoneyCheckbox").click(function(){
+			if(this.checked){
+				$("#pay_money").text(info['money']+'.00');
+				$("#pay_bankmoney").text(info['MoenyCount']-info['money']+'.00');
+			}else{
+				$("#pay_money").text('0.00');
+				$("#pay_bankmoney").text(info['MoenyCount']+'.00');
+			}
+		});
+	}
+
+
+	$("#submit_ok").click(function(){
+		if(!this.cc){
+			this.cc = 1;
+			return true;
+		}else{
+			return false;
+		}
+		return false;
+	});
+
+	$("#shop_score_num").blur(function(){
+			var fufen = parseInt($(this).val());
+			var money = parseInt($(this).attr("money"));
+			$(this).val(Math.floor(fufen/money)*money);
+	});
+
+
+	//$("input[@type=radio][@checked]").val();
+	$(".click_img li>img").click(function(){
+			$(this).prev().attr("checked",'checked');
+	});
+
+});
+</script>
+<!--footer 开始-->
+{wc:templates "index","foot"}

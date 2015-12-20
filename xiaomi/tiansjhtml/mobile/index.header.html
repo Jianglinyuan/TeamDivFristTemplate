@@ -1,0 +1,128 @@
+<!-- 栏目页面顶部 -->
+
+    <header class="header">
+        <h1 class="fl"><span>{wc:$webname}</span><a href="{WEB_PATH}/mobile/mobile"><img src="{G_WEB_PATH}/data/uploads/banner/logo2.png"/></a></h1>
+         <!-- <h1 class="fl"><span>{wc:$webname}</span><a href="http://www.34qy.com"><img src="http://wei.34qy.com/data/uploads/banner/logo3.png"/></a></h1>-->
+        <div class="fl u-slogan"></div>
+        <div class="fr head-r">
+	<style type="text/css">
+.zRechargebtn{background-position: 0 0;
+  background-color: #f60;
+  width: 60px;
+  height: 32px;
+  line-height: 32px;
+  border: 0px solid #de4900;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px #ff8533 inset;
+  display: inline-block;
+  background: url({G_TEMPLATES_STYLE}/mobile/images/signwap.png) no-repeat;
+  text-decoration: none;
+  outline: medium none;
+  margin: 0;
+  padding: 0;
+  }
+.zSearchbtn{background-position: 0 0;
+  background-color: #f60;
+width: 36px;
+height: 32px;
+border: 1px solid #de4900;
+border-radius: 5px;
+box-shadow: 1px 1px 1px #ff8533 inset;
+display: inline-block;
+  background: url({G_TEMPLATES_STYLE}/mobile/images/searchbtn.png) no-repeat;
+  text-decoration: none;
+  outline: medium none;
+  margin: 0;
+  padding: 0;
+  }
+  .zLottery{
+    background-position: 0 0;
+    background-color: #f60;
+    width: 36px;
+    height: 32px;
+    border: 1px solid #de4900;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #ff8533 inset;
+    display: inline-block;
+    background: url({G_TEMPLATES_STYLE}/mobile/images/lottery.png) no-repeat;
+    text-decoration: none;
+    outline: medium none;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+		   <!-- <a href="{WEB_PATH}/member/home/qiandao/mobile" class="zRechargebtn"></a>-->
+		    <a href="{WEB_PATH}/mobile/user/login" class="zRechargebtn"></a>
+		       <a href="{WEB_PATH}/mobile/user/choujiang" class="zLottery" title="抽奖"></a>
+            <!-- a href="{WEB_PATH}/mobile/user/login" class="zSearchbtn"></a -->
+            <a href="{WEB_PATH}/mobile/user/login" class="z-Member"></a>
+            <a id="btnCart" href="{WEB_PATH}/mobile/cart/cartlist" class="z-shop"></a>
+        </div>
+    </header>
+    <!-- 栏目导航 -->
+  <nav class="g-snav u-nav">
+	    <div class="g-snav-lst"><a href="{WEB_PATH}/mobile/mobile/" {wc:if $key=="首页" }class="nav-crt"{wc:if:end}>首页</a> {wc:if $key=="首页" }<s class="z-arrowh"></s>{wc:if:end}</div>
+
+	    <div class="g-snav-lst"><a href="{WEB_PATH}/mobile/mobile/glist" {wc:if $key=="所有商品" }class="nav-crt"{wc:if:end}>所有商品</a>{wc:if $key=="所有商品" }<s class="z-arrowh"></s>{wc:if:end}</div>
+
+	    <div class="g-snav-lst"><a href="{WEB_PATH}/mobile/mobile/lottery" {wc:if $key=="最新揭晓" }class="nav-crt"{wc:if:end}>最新揭晓</a>{wc:if $key=="最新揭晓" }<s class="z-arrowh"></s>{wc:if:end}</div>
+		
+		<div class="g-snav-lst"><a href="{WEB_PATH}/mobile/mobile/jflist" {wc:if $key=="直购" }class="nav-crt"{wc:if:end}>直购</a>{wc:if $key=="直购" }<s class="z-arrowh"></s>{wc:if:end}</div>
+
+	        <div class="g-snav-lst"><a href="{WEB_PATH}/mobile/mobile/store" {wc:if $key=="排名" }class="nav-crt"{wc:if:end}>排名</a>{wc:if $key=="排名" }<s class="z-arrowh"></s>{wc:if:end}</div>
+        <div class="g-snav-lst"><a href="{WEB_PATH}/mobile/shake" {wc:if $key=="摇一摇" }class="nav-crt"{wc:if:end}>摇红包</a>{wc:if $key=="摇红包" }<s class="z-arrowh"></s>{wc:if:end}</div>
+
+    </nav>
+  <!-- 小导航 -->
+    
+	<section class="navautos">
+	<div class="textnav2">
+    </div>
+
+		<div class="wrapnavautos">
+				<div id="navautos1">
+					<a href="{WEB_PATH}/mobile/autolottery"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava1.png"></a>
+				</div>
+				<div class="textnavword">
+				<p style="text-align:center;font-size: 14px;color:#bbb">限时揭晓</p>
+				
+				</div>
+		</div>
+		<div class="wrapnavautos">
+				<div id="navautos2">
+					<a href="{G_WEB_PATH}/?/mobile/shaidan/"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava2.png"></a>
+				</div>
+				<div class="textnavword">
+				<p style="text-align:center;font-size: 14px;color:#bbb">幸运晒单</p>
+				
+				</div>
+		</div>
+		<div class="wrapnavautos">
+				<div id="navautos3">
+					<a href="{G_WEB_PATH}/?/mobile/mobile/about"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava3.png"></a>
+				</div>
+				<div class="textnavword">
+				<p style="text-align:center;font-size: 14px;color:#bbb;">新手指南</p>
+				
+				</div>
+		</div>
+		<div class="wrapnavautos">
+				<div id="navautos4">
+					<a href="{G_WEB_PATH}/?/mobile/home/userrecharge"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava4.png"></a>
+				</div>
+				<div class="textnavword">
+				<p style="text-align:center;font-size: 14px;color:#bbb">在线充值</p>
+				
+				</div>
+		</div>
+		
+	</section>
+<hr>
+<div class="textnav">  
+</div> <hr/> 
+<!-- JiaThis Button BEGIN -->
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?move=0" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+<!-- UJian Button BEGIN -->
+	<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide"></script>
+<!-- UJian Button END -->

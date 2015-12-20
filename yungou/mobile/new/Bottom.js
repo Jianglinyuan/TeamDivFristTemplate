@@ -1,1 +1,0 @@
-Base.getScript("http://mskin.1yyg.com/weixin/JS/BottomFun.js?v=140917");

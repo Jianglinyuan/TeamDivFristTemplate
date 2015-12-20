@@ -1,0 +1,181 @@
+<div class="site-footer">
+    <div class="container">
+        <div class="footer-service">
+            <ul class="list-service clearfix">
+                <li><a rel="nofollow"  href="javascript:void(0);"> <i class="i1"></i><strong>诚信网站</strong></a></li>
+                <li><a rel="nofollow" href="javascript:;" ><i class="i2"></i><strong>可信网站</strong></a></li>
+                <li><a rel="nofollow" href="javascript:;" ><i class="i3"></i><strong>电子商务诚信网站</strong></a></li>
+                <li><a rel="nofollow" href="http://webscan.360.cn/index/checkwebsite/url/yyg.city91.com" target="_blank" ><i class="i4"></i><strong>360安全检测</strong></a></li>
+                <li><a rel="nofollow" href="{WEB_PATH}/help/4" ><i class="i5"></i><strong>安全购物保障</strong></a></li>
+            </ul>
+        </div>
+        <div class="footer-links clearfix">
+			{wc:getlist sql="select * from `@#_category` where `parentid`='1'" return="category"}
+			{wc:loop $category $help}
+            <dl class="col-links">
+                <dt>{wc:$help['name']}</dt>
+				{wc:getlist sql="select * from `@#_article` where `cateid`='$help[cateid]'" return="article"}
+				{wc:php:start}
+					foreach($article as $art){
+						echo "<dd><a href='".WEB_PATH.'/help/'.$art['id']."' target='_blank'>".$art['title'].'</a></dd>';
+					}
+				{wc:php:end}
+            </dl>
+			{wc:loop:end}
+            {wc:getlist:end}
+			<dl class="col-links">
+               <dt>关注我们</dt>
+					<dd><a href="http://weibo.com" target="_blank">新浪微博</a></dd>
+					<dd><a href="{G_WEB_PATH}/?/group" target="_blank">{wc:fun:_cfg('web_name_two')}社区</a></dd>
+					<!--<dd><a href="{G_WEB_PATH}/?/go/index/" target="_blank">官方微信</a></dd>-->
+            </dl>
+            <div class="col-contact">
+                <p class="phone">{wc:fun:_cfg("cell")}</p>
+                <p>周一至周日 9:00-17:00<br></p>
+				<a rel="nofollow" class="btn btn-primary btn-small" href="http://wpa.qq.com/msgrd?v=3&uin={wc:fun:_cfg("qq")}&site=qq&menu=yes" target="_blank">在线客服</a>
+			</div>
+        </div>
+        <div class="footer-info clearfix">
+            <div class="info-text">
+                <p>{wc:fun:_cfg("web_name_two")}友情链接：
+					<a href="{WEB_PATH}" target="_blank">{wc:fun:_cfg("web_name_two")}</a><span class="sep">|</span>
+					{wc:getlist sql="select * from `@#_link` where `type`='1'" return="category"}
+					{wc:loop $category $link}
+					<a href="{wc:$link['url']}" target="_blank">{wc:$link['name']}</a><span class="sep">|</span>
+					{wc:loop:end}
+					{wc:getlist:end}
+				</p>
+             <p><a href="{WEB_PATH}" target="_blank" title="ibipai.com"></a>{wc:fun:_cfg('web_copyright')}
+</p>
+            </div>
+            <div class="info-sites J_globalList">
+                <div class="global-site-current">公益基金：￥<span id="spanFundTotal">0000000.00<i>元</i></span></div>
+            </div>
+            <!--div class="info-links">
+                <a href="https://ss.knet.cn/verifyseal.dll?sn=e12033011010015771301369&amp;ct=df&amp;pa=461082" target="_blank"><img src="http://s1.mi.com/zt/12052601/cnnicVerifyseal.png" alt="可信网站"></a>
+                <a href="https://search.szfw.org/cert/l/CX20120926001783002010" target="_blank"><img src="http://s1.mi.com/zt/12052601/szfwVerifyseal.gif" alt="诚信网站"></a>
+                <a href="http://www.315online.com.cn/member/315140007.html" target="_blank"><img src="http://s1.mi.com/zt/12052601/save.jpg" alt="网上交易保障中心"></a>
+            </div-->
+        </div>
+    </div>
+</div>
+<!-- .site-footer END -->
+<div class="g-suspension-float" style="display: block;">
+     <div class="m-floatCon">
+         <div class="u-mid">
+             <div class="u-mui-tab">
+                 <ul id="ulRToolList">
+                     <li class="f-both-top"><a id="btnRigTop" href="javascript:;" class="u-menus"></a></li>
+                     <li class="f-cart"><a target="_blank" href="{WEB_PATH}/member/cart/cartlist" class="u-menus" id="btnMyCart"><i></i><em>0</em></a></li>
+                     <li class="f-customer"><a id="btnRigQQ" href="http://wpa.qq.com/msgrd?v=3&uin={wc:fun:_cfg("qq")}&site=qq&menu=yes" target="_blank" class="u-menus"></a></li>
+                     <li class="f-edit"><a href="http://wpa.qq.com/msgrd?v=3&uin={wc:fun:_cfg("qq")}&site=qq&menu=yes" target="_blank" class="u-menus"></a></li>
+                     <li class="f-top"><a href="javascript:;" class="u-menus"></a></li>
+                     <li class="f-both-bottom"><a href="javascript:;" class="u-menus"></a></li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+ </div>
+ <script type="text/javascript">
+$(function() {
+$(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('#divRTool').fadeIn(1000);
+        } else {
+            $('#divRTool').fadeOut(1000);
+        }
+    });
+	})
+</script>
+<script type="text/javascript">
+$(function(){
+	$(".quick_cart").hover(
+		function(){
+			$("#rCartlist,#rCartLoading").show();
+			$("#rCartlist p,#rCartlist h3").hide(); 0
+			$("#rCartlist li").remove();
+			$("#rCartTotal2").html("");
+			$("#rCartTotalM").html("");
+			$.getJSON("{WEB_PATH}/member/cart/cartshop/"+ new Date().getTime(),function(data){
+				$("#rCartlist ul").append(data.li);
+				$("#rCartTotal2").html(data.num);
+				$("#rCartTotalM").html(data.sum);
+				$("#rCartLoading").hide();
+				$("#rCartlist ul,#rCartlist p,#rCartlist h3").show();
+			});
+		},
+		function(){
+			$("#rCartlist,#rCartlist ul,#rCartlist p,#rCartlist h3").hide();
+		}
+	);
+	$("#rGotoCart").click(function(){
+		window.location.href="{WEB_PATH}/member/cart/cartlist";
+	})
+});
+function delshop(id){
+	var Cartlist = $.cookie('Cartlist');
+	var info = $.evalJSON(Cartlist);
+	var num=$("#rCartTotal2").html()-1;
+	var sum=$("#rCartTotalM").html();
+	info['MoenyCount'] = sum-info[id]['money']*info[id]['num'];
+
+	delete info[id];
+	//$.cookie('Cartlist','',{path:'/'});
+	$.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});
+	$("#rCartTotalM").html(info['MoenyCount']);
+	$('#rCartTotal2').html(num);
+	$('#sCartTotal').text(num);
+	$('#btnMyCart em').text(num);
+	$("#shopid"+id).remove();
+}
+$(document).ready(function(){
+	$.get("{WEB_PATH}/member/cart/getnumber/"+ new Date().getTime(),function(data){
+		$("#sCartTotal").text(data);
+		$("#btnMyCart em").text(data);
+	});
+});
+</script>
+<script type="text/javascript">
+$("#divRighTool").show();
+$(function(){
+
+	$("#btnGotoTop").click(function(){
+		$("html,body").animate({scrollTop:0},0);
+	});
+	$("#btnFavorite,#addSiteFavorite").click(function(){
+		var ctrl=(navigator.userAgent.toLowerCase()).indexOf('mac')!=-1?'Command/Cmd': 'CTRL';
+		if(document.all){
+			window.external.addFavorite('{G_WEB_PATH}','{wc:fun:_cfg("web_name")}');
+		}
+		else if(window.sidebar){
+		   window.sidebar.addPanel('{wc:fun:_cfg("web_name")}','{G_WEB_PATH}', "");
+		}else{
+			alert('您可以通过快捷键' + ctrl + ' + D 加入到收藏夹');
+		}
+    });
+	$("#divRighTool a").hover(
+		function(){
+			$(this).addClass("f-Cur-shop");
+		},
+		function(){
+			$(this).removeClass("f-Cur-shop");
+		}
+	)
+});
+	$.ajax({
+		url:"{WEB_PATH}/api/fund/get",
+		success:function(msg){
+			$("#spanFundTotal").text(msg);
+		}
+	});
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?64453be5e0e6d99938d87dad5564a1da";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+</body>
+</html>

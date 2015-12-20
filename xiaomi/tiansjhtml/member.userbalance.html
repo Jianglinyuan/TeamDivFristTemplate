@@ -1,0 +1,64 @@
+{wc:templates "index","header"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
+<div class="container breadcrumbs"><a href="/">首页</a><span class="sep">/</span><span>账户明细</span></div>
+<div class="container">
+    <div class="uc-full-box">
+        <div class="row">
+			{wc:templates "member","left"}
+			<div class="span16">
+				<div class="xm-line-box uc-box">
+					<div class="box-hd">
+						<h3 class="title">账户明细</h3>
+						<!--div class="more">
+							<div class="subMenu">
+								<a href="javascript:;" class="current">已晒单</a>
+								<span class="sep">|</span>
+								<a href="javascript:;" class="">未晒单</a>
+							</div>
+						</div-->
+					</div>
+					<div class="xm-line-box uc-home-box">
+						<div class="box-hd"><h3 class="title">您的账户可用余额</h3></div>
+						<div class="box-bd">
+							<div class="cash-overall clearfix">
+								<div class="balance"><span class="type">可用余额：<b>{wc:fun:uidcookie('money')}</b>元</span></div>
+								<div class="mobile">为了更好的体验，请保证可用余额： <a href="{WEB_PATH}/member/home/userrecharge" title="我要充值">我要充值</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="box-bd topic">
+						<div class="uc-order-list-box">
+							{wc:loop $account $at}
+							<ul class="uc-order-detail-list">
+								<li class="uc-order-detail-item">
+									<table class="order-detail-table">
+										<thead>
+											<tr>
+												<th class="column-info column-t" colspan="3">
+													<div class="column-content"><span class="order-status">为了更好的体验，请保证可用余额</span></div>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="column-detail column-l">
+													<ul class="order-goods-list">
+														<li class="first" style="padding: 0 20px;min-height:0px;">您于 {wc:fun:date("Y-m-d H:i:s",$at['time'])} {wc:$at['content']} {wc:if $at['type'] == 1} 支出￥{wc:$at['money']}元{wc:else} 支出￥{wc:$at['money']}元{wc:if:end}</li>
+													</ul>
+												</td>
+												<td class="column-price"><div class="order-info order-price">帐户剩余<br />{wc:fun:uidcookie('money')}元</div></td>
+											</tr>
+										</tbody>
+									</table>
+								</li>
+							</ul>
+							{wc:loop:end}
+						</div>
+					</div>
+				<div id="divPageNav" class="page_nav" style="margin-top: 0px;">{wc:page:one}</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+{wc:templates "index","foot"}

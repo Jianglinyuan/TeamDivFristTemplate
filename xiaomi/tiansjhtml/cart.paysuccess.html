@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>确认支付 - {wc:fun:_cfg("web_name")}</title>
+<meta name="keywords" content="{wc:if isset($keywords)}{wc:$keywords}{wc:else}{wc:fun:_cfg("web_key")}{wc:if:end}" />
+<meta name="description" content="{wc:if isset($description)}{wc:$description}{wc:else}{wc:fun:_cfg("web_des")}{wc:if:end}" />
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/App/Css/Comm.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/@/css/base.min.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/App/Css/MyCart.css"/>
+<script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/jquery.cookie.js"></script>
+<script>
+$(function(){
+	$("#sCart").hover(
+		function(){
+			$("#J_miniCartList,#sCartLoading").show();
+			$("#J_miniCartList p,#J_miniCartList h3").hide();
+			$("#sCart .mycartcur").remove();
+			$("#sCartTotal2").html("");
+			$("#sCartTotalM").html("");
+			$.getJSON("{WEB_PATH}/member/cart/cartheader/="+ new Date().getTime(),function(data){
+				$("#sCart .mycartcur").remove();
+				$("#sCartLoading").before(data.li);
+				$("#sCartTotal2").html(data.num);
+				$("#sCartTotalM").html(data.sum);
+				$("#sCartLoading").hide();
+				$("#J_miniCartList p,#J_miniCartList h3").show();
+			});
+		},
+		function(){
+			$("#J_miniCartList").hide();
+		}
+	);
+	$("#sGotoCart").click(function(){
+		window.location.href="{WEB_PATH}/member/cart/cartlist";
+	});
+})
+function delheader(id){
+	var Cartlist = $.cookie('Cartlist');
+	var info = $.evalJSON(Cartlist);
+	var num=$("#sCartTotal2").html()-1;
+	var sum=$("#sCartTotalM").html();
+	info['MoenyCount'] = sum-info[id]['money']*info[id]['num'];
+
+	delete info[id];
+	//$.cookie('Cartlist','',{path:'/'});
+	$.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});
+	$("#sCartTotalM").html(info['MoenyCount']);
+	$('#sCartTotal2').html(num);
+	$('#sCartTotal').text(num);
+	$('#btnMyCart em').text(num);
+	$("#mycartcur"+id).remove();
+}
+$(function(){
+	$(".welcome").mouseover(function(){
+		$(".user-info-menu").show();
+	});
+	$(".welcome").mouseout(function(){
+		$(".user-info-menu").hide();
+	});
+	$(".h_news").mouseover(function(){
+		$(".h_news_down").show();
+	});
+	$(".h_news").mouseout(function(){
+		$(".h_news_down").hide();
+	});
+});
+$(".g-hotL-list").hover(
+　　function () {
+　　$(this).addClass("g-hotL-hover");
+　　},
+　　function () {
+　　$(this).removeClass("g-hotL-hover");
+　　}
+　　);
+$(function(){
+	$("#txtSearch").focus(function(){
+		$("#txtSearch").css({background:"#FFFFCC"});
+		var va1=$("#txtSearch").val();
+		if(va1=='搜索您需要的商品'){
+			$("#txtSearch").val("");
+		}
+	});
+	$("#txtSearch").blur(function(){
+		$("#txtSearch").css({background:"#FFF"});
+		var va2=$("#txtSearch").val();
+		if(va2==""){
+			$("#txtSearch").val('搜索您需要的商品');
+		}
+	});
+	$("#butSearch").click(function(){
+		window.location.href="{WEB_PATH}/s_tag/"+$("#txtSearch").val();
+	});
+});
+</script>
+</head>
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-nav">
+            <a href="{WEB_PATH}">{wc:fun:_cfg("web_name_two")}网</a>
+            <span class="sep">|</span><a id="btnFavorite" href="javascript:;" title="收藏{wc:fun:_cfg("web_name_two")}">收藏{wc:fun:_cfg("web_name_two")}</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/go/index/touch" target="_blank" title="手机版">手机{wc:fun:_cfg('web_name_two')}</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/help/1" target="_blank" title="网站简介">{wc:fun:_cfg('web_name_two')}简介</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/group_qq" target="_blank" title="QQ群">{wc:fun:_cfg('web_name_two')}QQ群</a>
+        </div>
+        <div class="topbar-info J_userInfo">
+		{wc:if get_user_arr()}
+			<div class="welcome">欢迎您 <b>{wc:fun:get_user_name(get_user_arr(),'username')}<span class="arrow"></span></b><span class="sep">|</span>
+				<div class="user-info-menu" style="display: none;">
+					<ul>
+						<li><a href="{WEB_PATH}/member/home" target="_blank">个人中心</a></li>
+						<li><a href="{WEB_PATH}/member/home/userrecharge">帐户充值</a></li>
+						<li><a href="{WEB_PATH}/member/user/cook_end">退出登录</a></li>
+					</ul>
+					<span class="menu-arrow"></span>
+				</div>
+			</div>
+			<a href="{WEB_PATH}/member/home/userbuylist">我的订单</a><span class="sep">|</span>
+			<a href="{WEB_PATH}/member/home" target="_blank">我的{wc:fun:_cfg("web_name_two")}账户</a>
+		{wc:else}
+			<a href="{WEB_PATH}/login">登录</a><span class="sep">|</span><a href="{WEB_PATH}/register">注册</a>
+		{wc:if:end}
+        </div>
+    </div>
+</div>
+<!-- .site-topbar END -->
+<div class="site-header site-mini-header container">
+    <div class="span4">
+        <div class="site-logo"><a class="logo " href="/" style="background: url({G_UPLOAD_PATH}/{wc:fun:Getlogo()}) no-repeat;;"><i class="iconfont"></i></a></div>
+    </div>
+</div>
+<div class="container payment-con">
+	<div class="order-info">
+                <div class="msg">
+                    <h3>您的订单已支付成功！请等待系统揭晓咯～</h3>
+                     <p class="post-date">揭晓成功后，请到商品页面查看获得者。</p>
+                </div>
+                <div class="info">
+                    <p>您现在可以<a href="{WEB_PATH}/member/home/userbuylist" class="blue">查看购买记录</a>或<a href="{WEB_PATH}" class="blue">继续购物</a></p>
+                </div>
+                <div class="icon-box">
+                    <i class="iconfont"></i>
+                </div>
+            </div>
+</div>
+<!--footer 开始-->
+{wc:templates "index","foot"}

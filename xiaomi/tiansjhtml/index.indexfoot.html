@@ -1,0 +1,335 @@
+<div class="side-bar">
+        <div class="cate-mod J_CateMod">
+		{wc:if get_user_arr()}
+		    <div class="coin-panel">
+                <div class="tjb-wrapper tjb-login">
+					<div class="my-coin">
+						<p class="lg-1 info J_Coin">
+							<a href="{WEB_PATH}/member/home/userrecharge" target="_blank">{wc:fun:uidcookie('money')}</a>
+						</p>
+						<p class="login-tips">您的当前经验值：<em>{wc:fun:uidcookie('jingyan')}</em></p>
+					</div>
+					<div class="expired-tip">Hi，欢迎来到{wc:fun:_cfg('web_name_two')}！</div>
+					<div class="my-btns"><a class="btn login-btn" href="{WEB_PATH}/single/pleasereg">邀请返现金</a><a class="btn get-btn" href="{WEB_PATH}/member/home/userrecharge" target="_blank">立即充值</a></div>
+				</div>
+				<div class="fold-wrapper login-fold">
+					<p class="lg-1 info">
+						<img src="{G_TEMPLATES_STYLE}/css/App/images/face_home.png"/>
+						<a class="J_FoldCoin" href="{WEB_PATH}/member/home/userrecharge" target="_blank">{wc:fun:uidcookie('money')}</a>
+					</p>
+				</div>
+			</div>
+			{wc:else}
+			<div class="coin-panel">
+				<div class="tjb-wrapper tjb-unlogin">
+					<div class="my-coin"><p class="unlogin-tips">立即登录参与{wc:fun:_cfg('web_name_two')}活动赢取好礼</p></div>
+					<div class="my-btns">
+						<a class="btn unlogin-btn" href="{WEB_PATH}/login">登录抢好礼</a>
+						<a class="btn get-btn" href="{WEB_PATH}/single/pleasereg" target="_blank">邀请返现金</a>
+					</div>
+				</div>
+				<div class="fold-wrapper unlogin-fold"><a class="btn unlogin-btn" href="{WEB_PATH}/login">登录抢好礼</a></div>
+			</div>
+			{wc:if:end}
+			<div class="cate-wrapper">
+		        <h3 class="hot-hd"><a href="{WEB_PATH}/goods_list">全部商品</a></h3>
+		            <div class="hot-bd">
+		                <a class="J_CateItem cate-item " target="_blank" style="background: url(/App/images/dh_1.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/19"><span>女装</span></a>
+		                <a class="J_CateItem cate-item last-item" target="_blank" style="background: url(/App/images/dh_2.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/20"><span>内衣</span></a>
+		                <a class="J_CateItem cate-item " target="_blank" style="background: url(/App/images/dh_3.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/21"><span>家居</span></a>
+		                <a class="J_CateItem cate-item last-item" target="_blank" style="background: url(/App/images/dh_4.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/22"><span>百货</span></a>
+		                <a class="J_CateItem cate-item " target="_blank" style="background: url(/App/images/dh_5.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/23"><span>潮鞋</span></a>
+		                 <a class="J_CateItem cate-item last-item" target="_blank" style="background: url(/App/images/dh_6.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/24"><span>包包</span></a>
+		                <a class="J_CateItem cate-item " target="_blank" style="background: url(/App/images/dh_7.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/25"><span>母婴</span></a>
+		                <a class="J_CateItem cate-item last-item" target="_blank" style="background: url(/App/images/dh_8.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/26"><span>美容</span></a>
+		                <a class="J_CateItem cate-item " target="_blank" style="background: url(/App/images/dh_9.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/27"><span>食品</span></a>
+		                <a class="J_CateItem cate-item last-item" target="_blank" style="background: url(/App/images/dh_10.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/28"><span>电器</span></a>
+		                <a class="J_CateItem cate-item " target="_blank" style="background: url(/App/images/dh_11.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/29"><span>男装</span></a>
+		                <a class="J_CateItem cate-item last-item" target="_blank" style="background: url(/App/images/dh_12.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/30"><span>车品</span></a>
+		                <a class="J_CateItem cate-item " target="_blank" style="background: url(/App/images/dh_13.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/31"><span>运动</span></a>
+		                <a class="J_CateItem cate-item last-item" target="_blank" style="background: url(/App/images/dh_14.png) 0 9px no-repeat;" href="{WEB_PATH}/goods_list/32"><span>饰品</span></a>
+		            </div>
+		            <div class="ft">
+		                <div class="module">    
+							<a class="link" href="#" target="_blank">品牌汇</a>
+							<a class="link" href="#" target="_blank">热销榜</a>
+						</div>
+		            </div>
+		        </div>
+				<div class="banner-wrapper">
+		            <div class="module"><script type="text/javascript">BAIDU_CLB_fillSlot("986311");</script></div>
+		        </div>
+		    </div>
+        </div>
+    </div>
+</div>
+<div class="exchange-box">
+<div class="module">    
+        <div class="layout">
+            <div class="hd">
+                <h3>金币兑换 <span>兑你想要</span></h3>
+            </div>
+            <div class="ex-table clearfix">
+                <ul class="tr1">
+                    <li class="td1"><a href="/index.php/help/4" target="_blank"><img src="{G_TEMPLATES_STYLE}/css/App/images/gongping.png" alt="100%公平公正"/></a></li>
+                    <li class="td2"><a href="/index.php/help/5" target="_blank"><img src="{G_TEMPLATES_STYLE}/css/App/images/zhengping.png" alt="100%正品保证"/></a></li>
+                    <li class="td3"><a href="#" target="_blank"><img src="{G_TEMPLATES_STYLE}/css/App/images/zhaoshang.png" alt="招商中心"/></a></li>
+                </ul>
+                <div class="left">
+                    <ul class="tr2 clearfix">
+                        <li class="td1"><a href="/index.php/help/4" target="_blank"><img src="{G_TEMPLATES_STYLE}/css/App/images/TB1bf10.jpg" alt="100%公平公正"/></a></li>
+                        <li class="td2"><a href="/index.php/help/5" target="_blank"><img src="{G_TEMPLATES_STYLE}/css/App/images/TB1bf100.jpg" alt="100%正品保证"/></a></li>
+                    </ul>
+                    <ul class="tr3 clearfix">
+                        <li class="td1"><a href="https://cert.ebs.gov.cn/40a8deac-ff08-4ae3-a6d8-b24ec490a117" target="_blank"><img src="{G_TEMPLATES_STYLE}/css/App/images/renzheng.png" alt="监督管理局认证"/></a></li>
+                        <li class="td2"><a href="{G_WEB_PATH}/index.php/help/8" target="_blank"><img src="{G_TEMPLATES_STYLE}/css/App/images/mian.png" alt="全国免运费"/></a></li>
+                    </ul>
+                    <ul class="tr4 clearfix">
+                        <li class="td1"><a href="https://cert.ebs.gov.cn/40a8deac-ff08-4ae3-a6d8-b24ec490a117" target="_blank"><img src="{G_TEMPLATES_STYLE}/css/App/images/ebs.gov.jpg" alt="监督管理局认证"/></a></li>
+                        <li class="td2"><a href="/index.php/help/8" target="_blank"><img src="{G_TEMPLATES_STYLE}/css/App/images/mianyunfei.jpg" alt="全国免运费"/></a></li>
+                    </ul>
+                </div>
+                <ul class="right">
+                    <li class="td-ext"><a href="#" target="_blank"><img src="{G_TEMPLATES_STYLE}/css/App/images/TB1bf.jpg" alt="招商中心"/></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tjb-desc">
+    <div class="desc-panel">
+		{wc:getlist sql="select * from `@#_category` where `parentid`='1'" return="category"}
+			{wc:loop $category $help}
+   			<dl class="tjb-guide">
+   				<dt><span>{wc:$help['name']}</span></dt>
+				{wc:getlist sql="select * from `@#_article` where `cateid`='$help[cateid]'" return="article"}
+				{wc:php:start}
+					foreach($article as $art){
+						echo "<dd><b></b><a href='".WEB_PATH.'/help/'.$art['id']."' target='_blank'>".$art['title'].'</a></dd>';
+					}
+				{wc:php:end}				
+   			</dl>   			
+			{wc:loop:end}
+            {wc:getlist:end}
+        <dl class="tjb-ww">
+            <dt>关注官方微信</dt>
+            <dd>
+                <img src="{G_TEMPLATES_STYLE}/css/App/images/getqrcode.jpg" alt="官方微信"/>
+            </dd>
+        </dl>
+    </div>
+</div>
+<script type="text/javascript" src="http://g.tbcdn.cn/tb/tjb/1.0.10/common/package-config.js"></script>
+<script type="text/javascript">
+    ABC.config({
+        pub:'1.0.10',
+        tag: "20140520",
+        debug: false,
+        path: "http://g.tbcdn.cn/tb/tjb/",
+        pageName: "home",
+        charset: "utf-8"
+    });
+    KISSY.use("page/index");
+</script>
+<div class="footer_2014">
+    <style>
+        #server-num {
+            color: #fff;
+            font-size: 11px;
+        }
+        .footer{width:1190px;}
+        .w990 .footer{width:990px;}
+        .footer{position:relative;margin:0 auto;padding:7px 0 9px;border-top:1px solid #ddd}.footer .footer-bd p,.footer .footer-hd p{padding-bottom:8px;overflow:hidden;*zoom:1}.footer .footer-bd a,.footer .footer-hd a{display:inline;float:left;margin:0 4px;white-space:nowrap;color:#6c6c6c}.footer .footer-bd a:hover,.footer .footer-hd a:hover{color:#f40;text-decoration:none}.footer .footer-bd b,.footer .footer-hd b{display:inline;float:left;margin:0 3px;font-weight:400;color:#ddd}.footer .footer-bd em,.footer .footer-bd span,.footer .footer-hd em,.footer .footer-hd span{display:inline;float:left;white-space:nowrap;color:#9c9c9c}.footer .footer-bd em,.footer .footer-hd em{margin-left:30px}.footer .footer-bd span,.footer .footer-hd span{margin:0 4px}.footer .footer-bd span a,.footer .footer-hd span a{float:none}.footer .footer-hd p{margin-bottom:8px;line-height:27px;border-bottom:1px solid #ddd}.footer .foot-ft{display:none}
+    </style>
+<div class="footer">
+    <div class="footer-hd">
+    </div>
+    <div class="footer-bd">
+        <p>
+            <a href="#">关于我们</a>
+            <a href="#">联系客服</a>
+            <a href="#">诚征英才</a>
+            <a href="#">联系我们</a>
+            <a href="#">网站地图</a>
+            <a href="#">法律声明</a>
+            <em>&copy; 版权所有</em>
+        </p>
+        <p>
+            <span>百度信誉档案编号：<a href=""> </a></span>
+            <b>|</b>
+            <span></span>
+            <b>|</b>
+            <span></span>
+        </p>
+    </div>
+</div>
+</div>
+<div id="divRighTool" class="quickBack">
+	<dl class="quick_But">
+		
+		<dd class="quick_cart" style=""><a id="btnMyCart" href="{WEB_PATH}/member/cart/cartlist" target="_blank" class="quick_cartA"><b>购物车</b><s></s><em>1</em></a>
+			<div style="display: none;" id="rCartlist" class="Roll_mycart">
+				<ul style="display: none;"></ul>
+				<div class="quick_goods_loding" id="rCartLoading" style="display: none;"><img border="0" alt="" src="{G_TEMPLATES_STYLE}/images/goods_loading.gif">正在加载......</div>
+				<p id="p1" style="display: none;">共计<span id="rCartTotal2">0</span> 件商品 金额总计：<span class="rmbgray" id="rCartTotalM">0</span></p>
+				<h3 style="display: none;"><input type="button" value="去购物车结算" id="rGotoCart"></h3>
+			</div>
+		</dd>
+		<dd class="quick_Return"><a id="btnGotoTop" href="javascript:;" class="quick_ReturnA"><b>返回顶部</b><s></s></a></dd>
+	</dl>
+</div>
+<div style="width: 965px; height: 550px; left: 469px; top: 0px;" class="ga-overlay" id="ks-component151">
+
+<div class="ga-overlay-content" id="ks-content-ks-component151"><div class="ga-slide" id="J_gaSlide">
+    <div class="tab-content">
+        <div class="tab-pannel" style="display: block;">
+            <span id="J_gaFr1M1" class="ga-f1-m1" style="bottom: 400px;"></span>
+            <span id="J_gaFr1M1S1" class="ga-f1-m1s1" style="opacity: 1;"></span>
+            <span id="J_gaFr1M1S2" class="ga-f1-m1s2" style="opacity: 1;"></span>
+            <span id="J_gaFr1M2" class="ga-f1-m2" style="bottom: 480px;"></span>
+            <span id="J_gaFr1M3" class="ga-f1-m3" style="bottom: 520px;"></span>
+            <span id="J_gaFr1M4" class="ga-f1-m4" style="bottom: 460px;"></span>
+            <span id="J_gaFr1M5" class="ga-f1-m5" style="bottom: 515px;"></span>
+            <span id="J_gaFr1M6" class="ga-f1-m6" style="bottom: 420px;"></span>
+            <span id="J_gaFr1M7" class="ga-f1-m7" style="bottom: 310px;"></span>
+            <span id="J_gaFr1M8" class="ga-f1-m8" style="bottom: 385px;"></span>
+            <span id="J_gaFr1M9" class="ga-f1-m9" style="bottom: 295px;"></span>
+            <span id="J_gaFr1M10" class="ga-f1-m10" style="bottom: 330px;"></span>
+            <span id="J_gaFr1M11" class="ga-f1-m11" style="bottom: 280px;"></span>
+            <span id="J_gaFr1M12" class="ga-f1-m12" style="bottom: 370px;"></span>
+            <span id="J_gaFr1M13" class="ga-f1-m13" style="bottom: 360px;"></span>
+            <span id="J_gaFr1Zuan" class="ga-f1-zuan" style="opacity: 1;"></span>
+            <span id="J_gaFr1Stage" class="ga-f1-stage"></span>
+            <span id="J_gaFr1TextS" class="ga-f1-text-s" style="opacity: 1;"></span>
+            <span id="J_gaFr1Text" class="ga-f1-text" style="bottom: 115px;"></span>
+        </div>
+
+        <div class="tab-pannel hidden" style="display: none;">
+            <span id="J_gaFr2Stage" class="ga-f2-stage"></span>
+            <span id="J_gaFr2Text" class="ga-f2-text" style="bottom: 370px;"></span>
+            <span id="J_gaFr2RoadSign" class="ga-f2-roadsign" style="bottom: 70px;"></span>
+            <span id="J_gaFr2Sun" class="ga-f2-sun rotate" style="opacity: 1;"></span>
+            <span id="J_gaFr2C1" class="ga-f2-c1 move move1" style="opacity: 1;"></span>
+            <span id="J_gaFr2C2" class="ga-f2-c2 move move2" style="opacity: 1;"></span>
+        </div>
+
+        <div class="tab-pannel hidden" style="display: none;">
+            <span id="J_gaFr3Stage" class="ga-f3-stage"></span>
+            <span id="J_gaFr3Text" class="ga-f3-text" style="bottom: 710px;"></span>
+            <span id="J_gaFr3Ic1" class="ga-f3-ic1" style="bottom: 550px;"></span>
+            <span id="J_gaFr3Ic2" class="ga-f3-ic2" style="bottom: 550px;"></span>
+            <span id="J_gaFr3Ic3" class="ga-f3-ic3" style="bottom: 550px;"></span>
+            <span id="J_gaFr3Ic4" class="ga-f3-ic4" style="bottom: 550px;"></span>
+            <span id="J_gaFr3Ic5" class="ga-f3-ic5" style="bottom: 550px;"></span>
+            <span id="J_gaFr3Ic7" class="ga-f3-ic7" style="bottom: 550px;"></span>
+            <span id="J_gaFr3Ic6" class="ga-f3-ic6" style="bottom: 550px;"></span>
+        </div>
+
+        <div class="tab-pannel hidden" style="display: none;">
+            <span id="J_gaFr4Menu" class="ga-f4-menu" style="left: 501.5px; bottom: 550px;"></span>
+            <a id="J_gaFr4Btn" class="ga-f4-btn" rel="nofollow" href="javascript:void(0);" style="left: 404px; opacity: 0;">Go!</a>
+            <img width="321" src="http://gtms03.alicdn.com/tps/i3/TB1WbuYFVXXXXbHXXXXBEc40pXX-321-147.png" id="J_gaFr4Logo" class="ga-f4-logo" style="left: 510.5px; opacity: 0; bottom: 450px; width: 50px;">
+        </div>
+    </div>
+
+    <ul class="tab-nav clearfix">
+        <li class="selected"><a rel="nofollow" href="javascript:void(0);">1</a></li>
+        <li class=""><a rel="nofollow" href="javascript:void(0);">2</a></li>
+        <li><a rel="nofollow" href="javascript:void(0);">3</a></li>
+        <li><a rel="nofollow" href="javascript:void(0);">4</a></li>
+    </ul>
+
+    <a id="J_gaSlidePrev" class="tab-prev hidden" rel="nofollow" href="javascript:void(0)" data-spm-anchor-id="a310p.7395722.0.0" style="display: none;">向前</a>
+    <a id="J_gaSlideNext" class="tab-next" rel="nofollow" href="javascript:void(0)" data-spm-anchor-id="a310p.7395722.0.0">向后</a>
+</div></div></div>
+<script>
+$(function(){
+	$(".quick_cart").hover(
+		function(){			
+			$("#rCartlist,#rCartLoading").show();
+			$("#rCartlist p,#rCartlist h3").hide(); 0
+			$("#rCartlist li").remove();
+			$("#rCartTotal2").html("");
+			$("#rCartTotalM").html("");
+			$.getJSON("{WEB_PATH}/member/cart/cartshop/"+ new Date().getTime(),function(data){
+				$("#rCartlist ul").append(data.li);
+				$("#rCartTotal2").html(data.num);
+				$("#rCartTotalM").html(data.sum);
+				$("#rCartLoading").hide();
+				$("#rCartlist ul,#rCartlist p,#rCartlist h3").show();				
+			});
+		},
+		function(){
+			$("#rCartlist,#rCartlist ul,#rCartlist p,#rCartlist h3").hide();
+		}
+	);
+	$("#rGotoCart").click(function(){
+		window.location.href="{WEB_PATH}/member/cart/cartlist";
+	})
+});
+function delshop(id){
+	var Cartlist = $.cookie('Cartlist');
+	var info = $.evalJSON(Cartlist);
+	var num=$("#rCartTotal2").html()-1;
+	var sum=$("#rCartTotalM").html();
+	info['MoenyCount'] = sum-info[id]['money']*info[id]['num'];
+		
+	delete info[id];
+	//$.cookie('Cartlist','',{path:'/'});
+	$.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});
+	$("#rCartTotalM").html(info['MoenyCount']);
+	$('#rCartTotal2').html(num);
+	$('#sCartTotal').text(num);											
+	$('#btnMyCart em').text(num);
+	$("#shopid"+id).remove();
+}
+$(document).ready(function(){
+	$.get("{WEB_PATH}/member/cart/getnumber/"+ new Date().getTime(),function(data){
+		$("#sCartTotal").text(data);											
+		$("#btnMyCart em").text(data);											
+	});
+});
+</script>
+<script>
+$("#divRighTool").show(); 
+var wids=($(window).width()-1200)/2-70;
+if(wids>0){
+	$("#divRighTool").css("right",wids);
+}else{
+	$("#divRighTool").css("right",10);
+}
+$(function(){
+
+	$("#btnGotoTop").click(function(){
+		$("html,body").animate({scrollTop:0},1500);
+	});
+	$("#btnFavorite,#addSiteFavorite").click(function(){
+		var ctrl=(navigator.userAgent.toLowerCase()).indexOf('mac')!=-1?'Command/Cmd': 'CTRL';
+		if(document.all){
+			window.external.addFavorite('{G_WEB_PATH}','{wc:fun:_cfg("web_name")}');
+		}
+		else if(window.sidebar){
+		   window.sidebar.addPanel('{wc:fun:_cfg("web_name")}','{G_WEB_PATH}', "");
+		}else{ 
+			alert('您可以通过快捷键' + ctrl + ' + D 加入到收藏夹');
+		}
+    });
+	$("#divRighTool a").hover(		
+		function(){
+			$(this).addClass("Current");
+		},
+		function(){
+			$(this).removeClass("Current");
+		}
+	)
+});
+	$.ajax({
+		url:"{WEB_PATH}/api/fund/get",
+		success:function(msg){
+			$("#spanFundTotal").text(msg);
+		}
+	});
+</script>
+
+</body>
+</html>

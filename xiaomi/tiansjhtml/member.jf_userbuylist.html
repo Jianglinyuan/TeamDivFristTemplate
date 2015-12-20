@@ -1,0 +1,43 @@
+{wc:templates "index","header"}
+<div class="main-content clearfix">
+{wc:templates "member","left"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/layout-records.css"/>
+<div class="R-content">
+	<div class="member-t">
+	  <h2>全额购物记录</h2></div>
+	<div id="GoodsList" class="goods_show">
+		<ul class="gtitle">
+			<li>商品图片</li>
+			<li class="gname">商品名称</li>
+			<li class="yg_status">&nbsp;</li>
+			<li class="joinInfo">购买数量</li>
+			<li class="do">&nbsp;</li>
+		</ul>
+		{wc:loop $record $rt}
+        {wc:php:start}
+        	$jiexiao = get_jf_shop_if_jiexiao($rt['shopid']);
+        {wc:php:end}
+		<ul class="goods_list">
+			<li><a title="" target="_blank" class="pic" href="{WEB_PATH}/jf_goods/{wc:$rt['shopid']}"><img src="{G_UPLOAD_PATH}/{wc:fun:jf_yunjl($rt['shopid'])}"></a></li>
+			<li class="gname" style="margin:15px 0 0 0;">
+				<a target="_blank" href="{WEB_PATH}/jf_goods/{wc:$rt['shopid']}" class="blue">{wc:$rt['shopname']}</a>
+				<p class="gray02">购买时间：{wc:fun:microt($rt['time'])}</p>
+			</li>
+			<li class="yg_status" style="margin:23px 0 0 0;"><span class="orange">&nbsp;</span></li>
+			<li class="joinInfo" style="margin:23px 0 0 0;"><p><em>{wc:$rt['gonumber']}</em></p></li>
+			<li class="do" style="margin:23px 0 0 0;">&nbsp;</li>
+		</ul>
+		{wc:loop:end}
+
+        <style>
+			#divPageNav{ padding-top:10px;text-align:right}
+			#divPageNav li a{ padding:5px;}
+		</style>
+		<div id="divPageNav" class="page_nav">
+        	{wc:page:one} <li>共 {wc:$total} 条</li>
+        </div>
+	</div>
+</div>
+
+</div>
+{wc:templates "index","footer"}

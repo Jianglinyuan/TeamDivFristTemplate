@@ -1,0 +1,35 @@
+<div class="Progress-bar">
+				<p title="已完成{wc:fun:percent($item['canyurenshu'],$item['zongrenshu'])}"><span style="width:{wc:fun:width($item['canyurenshu'],$item['zongrenshu'],450)}px; display:;"></span></p>
+				<ul class="Pro-bar-li">
+					<li class="P-bar01"><em>{wc:$item['canyurenshu']}</em>已购买数量</li>
+					<li class="P-bar02"><em id="CodeQuantity"></em></li>
+					<li class="P-bar03"><em id="CodeLift">{wc:$syrs}</em>剩余数量</li>
+				</ul>
+			</div>
+
+			<p class="Pro_Detsingle" style="font-size:14px;">价格：<b style="color:#999;">{wc:$item['yunjiage']}</b></p>
+			<div id="divNumber" class="Pro_number">
+				我要购买
+				<a href="javascript:;" class="num_del num_ban" id="shopsub">-</a>
+				<input style="border:1px solid #CFCFCF" type="text" value="1" maxlength="7" onKeyUp="value=value.replace(/\D/g,'')" class="num_dig" id="num_dig"/>
+				<a href="javascript:;" class="num_add" id="shopadd">+</a>次
+			</div>
+			<div style="display:none;" id="hqid">{wc:$item['id']}</div>
+			<div id="divBuy" class="Det_button">
+            	{wc:if $item['shenyurenshu'] == '0'}
+                <a href="javascript:;" class="Det_Shopbut_exit">已售罄</a>
+                {wc:else}
+				<a href="javascript:;" class="Det_Shopbut">立即购买</a>
+                {wc:if:end}
+			</div>
+
+   <script>
+   	 $(function(){
+		 $("#num_dig").mousemove(function(){
+		  $(this).css("border","1px solid #f60");
+		});
+		 $("#num_dig").mouseout(function(){
+		  $(this).css("border","1px solid #CFCFCF");
+		});
+	});
+   </script>

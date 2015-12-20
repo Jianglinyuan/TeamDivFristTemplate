@@ -1,0 +1,97 @@
+{wc:templates "index","header"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/App/Css/css.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/App/Css/pageDialog.css"/>
+<div class="g-body">
+    <div class="m-user">
+        <div class="g-wrap">
+            <ul class="w-crumbs f-clear">
+                <li class="w-crumbs-item"><a href="http://www.ibipai.com/index.php">首页</a><span class="w-crumbs-split">&gt;</span></li>
+                <li class="w-crumbs-item w-crumbs-active">个人主页</li>
+            </ul>
+    <div class="m-user-info f-clear" id="dvUserInfo">
+        <a class="avatar m-user-faceEdit m-user-faceEdit-160" href="javascript:void(0);"><img width="160" height="160" id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:$member['img']}"></a>
+        <div class="info">
+            <div class="nickname noMycenter" id="nameWrapper">
+                <span class="txt dark" id="spUserName">{wc:fun:get_user_name($member,'username')}</span>
+            </div>
+            <div class="cid">{wc:if $member['qianming']!=null}
+			{wc:$member['qianming']}
+			{wc:else}
+			这家伙很懒，什么都没留下。
+			{wc:if:end}</div>
+			<div class="cid">用户ID：<strong class="dark">{wc:fun:idjia($member['uid'])}</strong></div>
+        </div>
+    </div>
+	<div class="w-tabs w-tabs-main">
+    {wc:templates "us","tab"}
+                <div class="w-tabs-panel m-user-panel">
+                    <div class="w-tabs-panel-item m-user-duobaoRecord">
+                        <div id="dvDuobaoRecord">
+						{wc:if $memberhuode}
+    <table class="w-table m-user-highTable">
+        <thead>
+            <tr>
+                <th class="col1">奖品图片</th>
+                <th class="col2">奖品名称</th>
+                <th class="col3">{wc:fun:_cfg('web_name_two')}状态</th>
+                <th class="col4">揭晓时间</th>
+                <th class="col5">中奖号码</th>
+                <th class="col6">晒单</th>
+            </tr>
+        </thead>
+    </table>
+    <table class="w-table m-user-listTable ">
+	{wc:loop $memberhuode $go}
+        {wc:php:start}
+        	$jiexiao = get_shop_if_jiexiao($go['shopid']);
+    	{wc:php:end}
+        {wc:if $jiexiao}
+        <tbody>
+            <tr>
+                <td class="col1">
+                    <div class="w-goods">
+                        <div class="w-goods-pic">
+                            <a target="_blank" href="{WEB_PATH}/{wc:$url}/{wc:$go['shopid']}}"><img src="{G_UPLOAD_PATH}/{wc:$jiexiao['thumb']}" alt="{wc:$go['shopname']}" width="64" height="48" class=""></a>
+                        </div>
+                    </div>
+                </td>
+                <td class="col2">
+                    <div class="w-goods w-goods-l">
+                        <p class="w-goods-title f-txtabb"><a title="{wc:$go['shopname']}" target="_blank" href="{WEB_PATH}/{wc:$url}/{wc:$go['shopid']}}">(第{wc:$go['shopqishu']}期) {wc:$go['shopname']}</a></p>
+                        <p class="w-goods-price">总价值：{wc:$jiexiao['money']}元</p>
+                    </div>
+                </td>
+				<td class="col3"><span class="txt-impt">已揭晓</span></td>
+                <td class="col4">
+                    <p>{wc:fun:date("Y-m-d H:i:s",$jiexiao['q_end_time'])}</p>
+                </td>
+                <td class="col5">
+					<ul class="codeLayer">
+					<li>{wc:$jiexiao['q_user_code']}</li>
+					</ul>
+				</td>
+                <td class="col6"><a href="{WEB_PATH}/goods/{wc:$go['shopid']}#divPost">查看</a></td>
+            </tr>
+        </tbody>
+		{wc:if:end}
+		{wc:loop:end}
+    </table>
+	{wc:else}
+<table class="w-table m-user-listTable">
+        <tbody>
+            <tr>
+                <td class="blank" colspan="6">
+                    <div class="m-user-blank">该用户还没有获得商品！</div>
+                </td>
+            </tr>
+		</tbody>
+		</table>
+				{wc:if:end}
+				</div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{wc:templates "index","footer"}

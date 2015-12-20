@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+    <title>福分转账 - {wc:$webname}触屏版</title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+
+    <link href="{G_TEMPLATES_MOBILE_CSS}/comm.css?v=130715" rel="stylesheet" type="text/css" />
+    <link href="{G_TEMPLATES_MOBILE_CSS}/member.css?v=130726" rel="stylesheet" type="text/css" />
+    <link href="{G_TEMPLATES_MOBILE_CSS}/invite1.css?v=130726" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/ZeroClipboard.js"></script>
+    <script src="{G_TEMPLATES_MOBILE_JS}/jquery190.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<header class="g-header">
+        <div class="head-l">
+	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
+        </div>
+        <h2>福分转账</h2>
+        <div class="head-r">
+	        <a href="" class="z-Home"></a>
+        </div>
+    </header>
+
+ <div class="R-content">
+	<div class="subMenu">
+		<a id="linkApply" class="current">转帐福分申请</a>
+		
+	</div>
+ 
+	<div id="divSQTX" class="Apply-con">
+	  <form name="form1" action="" method="post">
+		<dl>
+			<dt>帐户福分：</dt>
+			<dd><span id="spanBrokerage" class="orange">{wc:$member[score]}</span> &nbsp;<span class="gray02" style="color:#999999">转帐福分不得大于帐户福分</span></dd>
+		</dl>
+		<dl>
+			<dt>转帐：</dt>
+			<dd><input id="txtAppMoney" type="text" name="money" onKeyUp="value=value.replace(/\D/g,'')" class="inp-money txtAri" value="" maxlength="10" tip="1" /><b>福分</b>&nbsp;<span id="tip1"></span></dd>
+		</dl>
+	
+		<dl>
+			<dt>转入用户：</dt>
+			<dd><input name="txtBankName" type="text" id="txtBankName" class="input-txt" tip="3" /></dd>
+			
+		</dl>
+		
+		
+		<div class="Apply-button">
+			<input type="submit" name="submit1" id="btnSQTX" class="bluebut" title="提交申请" value="提交申请">
+		</div>
+	 </form>
+	</div>
+	
+  
+     
+<style>
+   #divSQTX span{color:#FF6600};
+</style>
+
+</div>
+{wc:templates "mobile/index","footer"}

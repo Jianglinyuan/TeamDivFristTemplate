@@ -1,0 +1,155 @@
+{wc:templates "index","header"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/layout-recharge.css"/>
+<div class="container breadcrumbs"><a href="/">首页</a><span class="sep">/</span><span>账户充值</span></div><link href="{G_TEMPLATES_CSS}/mobile/login.css" rel="stylesheet" type="text/css" /></head>
+<script>
+$(function(){
+	var je=$("#ulMoneyList li");
+	var dx=/\D/;
+	je.click(function(){
+		je.removeClass("selected");
+		je.find("input").removeAttr("checked");
+		var radio=je.index(this);
+			je.eq(radio).find("input").attr('checked','checked');
+			je.eq(radio).addClass("selected");
+		var valx=je.eq(radio).find("input").val();
+		$("#Money").text(valx);
+		$("#hidMoney").val(valx);
+	});
+	var tel=$("#txtOtherMoney").val();
+	$("#txtOtherMoney").keyup(function(){
+		if(dx.test($("#txtOtherMoney").val())){
+			$("#txtOtherMoney").val(tel);
+		}else{
+			tel=$("#txtOtherMoney").val();
+		}
+		$("#Money").text(tel);
+		$("#hidMoney").val(tel);
+	});
+})
+</script>
+
+
+<div class="container">
+    <div class="uc-full-box">
+        <div class="row">
+			{wc:templates "member","left"}
+			<div class="span16">
+				<div class="xm-line-box uc-box">
+					<div class="box-hd">
+                    <form id="toPayForm" name="toPayForm" action="{WEB_PATH}/member/cart/addmoney" method="post" target="_blank">
+<div class="R-content">
+						<h3 class="title">账户充值</h3>
+
+					</div>
+
+					<div class="box-bd">
+					<form id="toPayForm" name="toPayForm" action="{WEB_PATH}/member/cart/addmoney" method="post" target="_blank">
+						<div class="cash-start">
+							<h2 class="title">请您选择充值金额</h2>
+
+							<div class="select">
+								<ul id="ulMoneyList">
+									<li class="selected" style="margin-left:0;"><input  type="radio" id="rd10" name="money" value="10" checked="checked"> <label for="rd10">充值 <strong>￥</strong><b>10</b></label></li>
+
+									<li><input type="radio" name="money" value="50" id="rd50"> <label for="rd50">充值 <strong>￥</strong><b>50</b></label></li>
+									<li><input type="radio" name="money" value="100" id="rd100"> <label for="rd100">充值 <strong>￥</strong><b>100</b></label></li>
+									<li><input type="radio" name="money" value="200" id="rd200"> <label for="rd200">充值 <strong>￥</strong><b>200</b></label></li>
+									<li class="custom"><input type="radio" value="0" name="money" id="rdOther"> <label for="rdOther">其它金额</label><input value="" id="txtOtherMoney" type="text" class="enter" maxlength="7" /></li>
+								</ul>
+							</div>
+
+                            <div class="charge_money_list">
+
+   <style>
+				.yeepay_bank img{ border:1px solid #eee; padding:2px; width:130px; height:35px; float:left; margin-right:20px;}
+				.yeepay_bank input{ float:left;}
+			</style>
+
+		<p class="leix">支付平台支付：</p>
+		<ul class="payment yeepay_click">
+          {wc:loop $paylist  $pay}
+			<li>
+				<input checked="checked" type="radio" value="{wc:$pay['pay_id']}" name="account">
+                <img style="border:1px solid #eee; padding:1px; margin-right:20px;" height="35px" width="100px" src="{G_UPLOAD_PATH}/{wc:$pay['pay_thumb']}">
+
+            </li>
+           {wc:loop:end}
+		</ul>
+		<p class="much">应付金额：<span class="yf"><strong>￥</strong><span id="Money">10</span></span></p>
+		<h6>
+				<input type="hidden" id="hidPayName" name="payName" value="">
+				<input type="hidden" id="hidPayBank" name="payBank" value="0">
+				<input type="hidden" id="hidMoney" name="money" value="10">
+				<input id="submit_ok" class="bluebut imm" type="submit" name="submit" value="立即充值" title="立即充值">
+			</form>
+		</h6>
+
+
+  <section>
+                <div class="registerCon">
+                    <form action="{WEB_PATH}/member/cart/card_addmoney" method="post">
+                        <ul>
+                            <li class="accAndPwd">
+                                <dl><input id="txtAccount" type="text" placeholder="请输入卡号" class="lEmail" name="czknum" maxlength="20"><s class="rs4"></s></dl>
+                                <dl>
+                                    <input type="password" id="txtPassword" class="lPwd" placeholder="请输入卡密" name="password" maxlength="20">
+                                    <s class="rs3"></s>
+                                </dl>
+                            </li>
+                            <li><input type="submit" value=" 确认充值" /></li>
+                    </form>
+
+                    <li class="rSelect" style="width: 80%;"><!-- <a href="FindPassword.html">忘记密码？</a> -->
+                        <a href="http://item.taobao.com" hidefocus="true" target="_blank">1元充值卡购买</a> |
+                        <a href="http://item.taobao.com" hidefocus="true" target="_blank">10元充值卡购买</a>
+
+                        <a href="http://item.taobao.com" hidefocus="true" target="_blank">50元充值卡购买</a>  |
+                        <a href="http://item.taobao.com" hidefocus="true" target="_blank">100元充值卡购买</a>
+
+                        <a href="http://item.taobao.com" hidefocus="true" target="_blank">500元充值卡购买</a></li>
+
+                </div>
+            </section>
+
+
+							<div id="payAltBox" style="display:none;">
+								<div class="prompt_box">
+									<p class="pic"><em></em>请您在新开的页面上完成支付！</p>
+									<p class="ts">付款完成之前，请不要关闭本窗口！<br>完成付款后跟据您的个人情况完成此操作！</p>
+									<ul>
+										<li><a href="{WEB_PATH}/member/home/userbalance" class="look" title="查看充值记录">查看充值记录 </a></li>
+										<li><a href="javascript:gotoClick();" class="look" id="btnReSelect" title="重选支付方式">重选支付方式</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$(function(){
+
+	$("#submit_ok").click(function(){
+		if(!this.cc){
+			this.cc = 1;
+			return true;
+		}else{
+			return false;
+		}
+		return false;
+	});
+
+	$(".yeepay_click li>img").click(function(){
+			$(this).prev().attr("checked",'checked');
+	});
+
+});
+</script>
+</br>
+{wc:templates "index","foot"}

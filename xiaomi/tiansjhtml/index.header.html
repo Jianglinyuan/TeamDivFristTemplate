@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta name=”renderer” content=”webkit” /> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{wc:if isset($title)}{wc:$title}{wc:else}{wc:fun:_cfg("web_name")}{wc:if:end}</title>
+<meta name="keywords" content="{wc:if isset($keywords)}{wc:$keywords}{wc:else}{wc:fun:_cfg("web_key")}{wc:if:end}" />
+<meta name="description" content="{wc:if isset($description)}{wc:$description}{wc:else}{wc:fun:_cfg("web_des")}{wc:if:end}" />
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/@/css/base.min.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/@/css/index.min.css" />
+<link href="{G_TEMPLATES_CSS}/@/css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/ad.js"></script>
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<meta property="qc:admins" content="230600116763141116375" />
+<meta name="baidu-site-verification" content="YoonqcRs9Z" />
+
+</head>
+<body>
+
+<!--div id="indexheadpopup" style="background-color: #fae897;height: 27px;line-height: 27px;border-bottom: 1px solid #d3d6db;text-align: center;color: red;" class="mod_top_notice"><p><span>公告：</span>为打造更具公平、透明的{wc:fun:_cfg('web_name_two')}平台，{wc:fun:_cfg('web_name_two')}特成立各地QQ交流群（可在官网查找本地群），欢迎广大{wc:fun:_cfg('web_name_two')}网友加入。另外，{wc:fun:_cfg('web_name_two')}正在招募各地群主加盟，也可自建群，具体待遇和要求请咨询客服QQ{wc:fun:_cfg("qq")}</p></div-->
+
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-nav">
+            <a href="{WEB_PATH}/single/business">商务合作</a>
+            <span class="sep">|</span><a id="btnFavorite" href="javascript:;" title="收藏{wc:fun:_cfg("web_name_two")}">收藏{wc:fun:_cfg("web_name_two")}</a>
+            <span class="sep">|</span><a href="{G_WEB_PATH}/?/go/index/app" target="_blank" title="手机版">手机{wc:fun:_cfg('web_name_two')}</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/help/1" target="_blank" title="网站简介">{wc:fun:_cfg('web_name_two')}简介</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/group_qq" target="_blank" title="QQ群">{wc:fun:_cfg('web_name_two')}QQ群</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/go/shaidan/"><span class="text">晒单分享</span></a>
+        </div>
+        <div class="topbar-info J_userInfo">
+            {wc:if get_user_arr()}
+                <div class="welcome">欢迎您 <b>{wc:fun:get_user_name(get_user_arr(),'username')}<span class="arrow"></span></b><span class="sep">|</span>
+                    <div class="user-info-menu" style="display: none;">
+                        <ul>
+                            <li><a href="{WEB_PATH}/member/home" target="_blank">个人中心</a></li>
+                            <li><a href="{WEB_PATH}/member/home/userrecharge">帐户充值</a></li>
+                            <li><a href="{WEB_PATH}/member/user/cook_end">退出登录</a></li>
+                        </ul>
+                        <span class="menu-arrow"></span>
+                    </div>
+                </div>
+                <a href="{WEB_PATH}/member/home/userbuylist">我的订单</a><span class="sep">|</span>
+                <a href="{WEB_PATH}/member/home" target="_blank">我的{wc:fun:_cfg("web_name_two")}账户</a>
+            {wc:else}
+                <a href="{WEB_PATH}/login">登录</a><span class="sep">|</span><a href="{WEB_PATH}/register">注册</a>
+            {wc:if:end}
+        </div>
+    </div>
+</div>
+
+<!-- .site-topbar END -->
+{wc:php:start}
+if($this->db){
+    $cmodel=$this->db;
+}else{
+    $cmodel=$mysql_model;
+}
+//他们正在云购
+$go_record = $cmodel->GetList("select `@#_member`.uid,`@#_member`.username,`@#_member`.email,`@#_member`.mobile,`@#_member`.img,`@#_member_go_record`.shopname,`@#_member_go_record`.shopid from `@#_member_go_record`,`@#_member` where `@#_member`.uid = `@#_member_go_record`.uid and `@#_member_go_record`.`status` LIKE '%已付款%'  ORDER BY `@#_member_go_record`.time DESC LIMIT 0,9");
+
+//充值排行
+$charge_list = $cmodel->GetList("select `@#_member`.uid,`@#_member`.username,`@#_member`.email,`@#_member`.mobile,`@#_member`.img,(select sum(`@#_member_addmoney_record`.money) as amount from `@#_member_addmoney_record` where `@#_member`.uid = `@#_member_addmoney_record`.uid) as amount from `@#_member_addmoney_record`,`@#_member` where `@#_member`.uid = `@#_member_addmoney_record`.uid and `@#_member_addmoney_record`.`status` = '已付款'  ORDER BY amount DESC LIMIT 0,9");
+{wc:php:end}
+<div class="site-header container">
+    <div class="site-gd-yg">
+        <div class="u-are">正在{wc:fun:_cfg('web_name_two')}</div>
+        <div class="g-zzyging scroll3">
+            <ul id="UserBuyNewList1" style="margin-top: 0px;">
+                {wc:loop $go_record $gorecord}
+                <li><span class="fl"><a href="{WEB_PATH}/uname/{wc:fun:idjia($gorecord['uid'])}" target="_blank" title="{wc:fun:get_user_name($gorecord)}">{wc:fun:get_user_name($gorecord)}</a></span><p><a target="_blank" href="{WEB_PATH}/goods/{wc:$gorecord['shopid']}" title="{wc:$gorecord['shopname']}" class="u-ongoing">{wc:$gorecord['shopname']}</a></p></li>
+                {wc:loop:end}
+            </ul>
+        </div>        
+        <script>
+            function autoScroll3(obj){
+                    $(obj).find("#UserBuyNewList1").animate({
+                            marginTop : "-30px"
+                    },500,function(){
+                            $(this).css({marginTop : "0px"}).find("li:first").appendTo(this);
+                    });
+            }
+            $(function(){
+                    setInterval('autoScroll3(".scroll3")',3000);
+            });
+        </script>
+    </div>
+    <div class="site-gd-cz">
+        <div class="u-are">充值排行</div>
+        <div class="g-zzyging scroll2">
+            <ul id="UserBuyNewList2" style="margin-top: 0px;">
+                {wc:loop $charge_list $charge}
+                <li><span class="fl"><a href="{WEB_PATH}/uname/{wc:fun:idjia($charge['uid'])}" target="_blank" title="{wc:fun:get_user_name($charge)}">{wc:fun:get_user_name($charge)}</a></span><p><a target="_blank" href="javascript:;" class="u-ongoing">充值总额<font color="red">{wc:$charge['amount']}元</font></a></p></li>
+                {wc:loop:end}
+            </ul>
+        </div>
+        <script>
+            function autoScroll2(obj){
+                    $(obj).find("#UserBuyNewList2").animate({
+                            marginTop : "-30px"
+                    },500,function(){
+                            $(this).css({marginTop : "0px"}).find("li:first").appendTo(this);
+                    });
+            }
+            $(function(){
+                    setInterval('autoScroll2(".scroll2")',3000);
+            });
+        </script>
+    </div>
+    <div class="site-logo"><a class="logo" href="{G_WEB_PATH}/" title="{wc:fun:_cfg('web_name')}" style="background: url({G_UPLOAD_PATH}/{wc:fun:Getlogo()}) no-repeat"><i class="iconfont">&#xe61d;</i></a></div>
+    <div class="header-info">
+        <div class="search-section">
+            <div class="search-form clearfix">
+                <input type="text" id="txtSearch" class="search-text" placeholder="搜索您需要的商品"/>
+                <input type="button" id="butSearch" class="search-btn iconfont" value="&#xe630;"/>
+                <!--[if IE 6]><div class="ie6-fix"></div><![endif]-->
+                <div class="hot-words">
+                    <a href="{WEB_PATH}/goods_list/5/">手机</a><a href="{WEB_PATH}/goods_list/12/">苹果</a>
+                </div>
+            </div>
+        </div>
+        <div class="cart-section">
+            <div class="mini_mycart" id="sCart">
+                <a rel="nofollow" href="{WEB_PATH}/member/cart/cartlist" id="sCartNavi" class="mini-cart"><i class="iconfont">&#xe609;</i>购物车 (<span id="sCartTotal">0</span>)</a>
+                <div class="mini-cart-list" id="J_miniCartList">
+                    <div class="goods_loding" id="sCartLoading" style="display: none;"><img border="0" alt="" src="{G_TEMPLATES_STYLE}/images/goods_loading.gif">数据加载中，请稍后...</div>
+                    <div class="count clearfix"><span class="total">共计 <em id="sCartTotal2">0</em> 件商品<strong>合计：<em id="sCartTotalM">0元</em></strong></span><a href="{WEB_PATH}/member/cart/cartlist" class="btn btn-primary">去购物车结算</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    {wc:php:start}
+        if($this->db){
+                $cmodel=$this->db;
+        }else{
+                $cmodel=$mysql_model;
+        }
+
+        $two_cate_list = $cmodel->GetList("select cateid,parentid,name from `@#_category` where `model` = '1' and `parentid` = '0' order by `order` DESC");
+    {wc:php:end}
+
+    <div class="header-nav clearfix">
+        <div id="J_categoryContainer" class="nav-category">
+            <a class="btn-category-list" href="{WEB_PATH}/goods_list">全部商品分类</a>
+            <div class="nav-category-section" style="display: block;">
+                <ul class="nav-category-list">
+                    {wc:loop $two_cate_list $key $catelist}
+                        {wc:php:start}
+                            $cate2 = $cmodel->GetList("select cateid,parentid,name from `@#_category` where `parentid` = '$catelist[cateid]' order by `order` DESC");
+                            $i=$key+1;
+                        {wc:php:end}
+
+                        <li class="nav-category-item">
+                            <div class="nav-category-content">
+                                <a class="title" href="{WEB_PATH}/goods_list/{wc:$catelist['cateid']}_0_0">{wc:$catelist['name']}</a>
+                                <div class="links">
+
+                                    {wc:php:start}
+
+                                    if(is_array($cate2)){
+                                    foreach($cate2 AS $bval){
+                                    {wc:php:end}
+                                    <a href="{WEB_PATH}/goods_list/{wc:$bval['cateid']}_0_0">{wc:$bval['name']}</a>
+                                    {wc:php:start}
+                                    }}
+                                    {wc:php:end}
+                                </div>
+                            </div>
+                        </li>
+                    {wc:loop:end}
+                </ul>
+            </div>
+        </div>
+        <div class="nav-main">
+            <ul class="nav-main-list J_menuNavMain clearfix">
+            {wc:php:start}
+                if($this->db){
+                        $cmodel=$this->db;
+                }else{
+                        $cmodel=$mysql_model;
+                }
+
+                $nav_list = $cmodel->GetList("SELECT url,name FROM `@#_navigation` where `status`='Y' and type='index' order by `order`");
+            {wc:php:end}
+            {wc:loop $nav_list $key $nav}
+                <li class="nav-main-item"><a href="{WEB_PATH}{wc:$nav['url']}"><span class="text">{wc:$nav['name']}</span></a></li>
+            {wc:loop:end}
+            </ul>
+        </div>
+    </div>
+    <div class="open-buy-info">
+        <div class="number">
+            <a href="{WEB_PATH}/buyrecord" target="_blank">
+            <ul id="ulHTotalBuy">
+                <li class="nobor gray6">累计参与</li>
+                <li class="num" style="display: none;"><cite><em>0</em></cite><i></i></li>
+                <li class="num" style="display: none;"><cite><em>0</em></cite><i></i></li>
+                <li class="num"><cite><em>0</em></cite><i></i></li>
+                <li class="nobor">,</li>
+                <li class="num"><cite><em>0</em></cite><i></i></li>
+                <li class="num"><cite><em>0</em></cite><i></i></li>
+                <li class="num"><cite><em>0</em></cite><i></i></li>
+                <li class="nobor">,</li>
+                <li class="num"><cite><em>0</em></cite><i></i></li>
+                <li class="num"><cite><em>0</em></cite><i></i></li>
+                <li class="num"><cite><em>0</em></cite><i></i></li>
+                <li class="nobor gray6 u-secondary">人次<b><s></s></b></li>
+            </ul>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- .site-header END -->
+ <script language="javascript" type="text/javascript">
+     var Base = { head: document.getElementsByTagName("head")[0] || document.documentElement, Myload: function (B, A) { this.done = false; B.onload = B.onreadystatechange = function () { if (!this.done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) { this.done = true; A(); B.onload = B.onreadystatechange = null; if (this.head && B.parentNode) { this.head.removeChild(B) } } } }, getScript: function (A, C) { var B = function () { }; if (C != undefined) { B = C } var D = document.createElement("script"); D.setAttribute("language", "javascript"); D.setAttribute("type", "text/javascript"); D.setAttribute("src", A); this.head.appendChild(D); this.Myload(D, B) }, getStyle: function (A, CB) { var B = function () { }; if (CB != undefined) { B = CB } var C = document.createElement("link"); C.setAttribute("type", "text/css"); C.setAttribute("rel", "stylesheet"); C.setAttribute("href", A); this.head.appendChild(C); this.Myload(C, B) } }
+     function GetVerNum() { var D = new Date(); return D.getFullYear().toString().substring(2, 4) + '.' + (D.getMonth() + 1) + '.' + D.getDate() + '.' + D.getHours() + '.' + (D.getMinutes() < 10 ? '0' : D.getMinutes().toString().substring(0, 1)) }
+     Base.getScript('{G_TEMPLATES_CSS}/App/js/Bottom.js?v=' + GetVerNum());
+ </script>
+<script>
+$(function(){
+	$("#sCart").hover(
+		function(){
+			$("#J_miniCartList,#sCartLoading").show();
+			$("#J_miniCartList p,#J_miniCartList h3").hide();
+			$("#sCart .mycartcur").remove();
+			$("#sCartTotal2").html("");
+			$("#sCartTotalM").html("");
+			$.getJSON("{WEB_PATH}/member/cart/cartheader/="+ new Date().getTime(),function(data){
+				$("#sCart .mycartcur").remove();
+				$("#sCartLoading").before(data.li);
+				$("#sCartTotal2").html(data.num);
+				$("#sCartTotalM").html(data.sum);
+				$("#sCartLoading").hide();
+				$("#J_miniCartList p,#J_miniCartList h3").show();
+			});
+		},
+		function(){
+			$("#J_miniCartList").hide();
+		}
+	);
+	$("#sGotoCart").click(function(){
+		window.location.href="{WEB_PATH}/member/cart/cartlist";
+	});
+})
+function delheader(id){
+	var Cartlist = $.cookie('Cartlist');
+	var info = $.evalJSON(Cartlist);
+	var num=$("#sCartTotal2").html()-1;
+	var sum=$("#sCartTotalM").html();
+	info['MoenyCount'] = sum-info[id]['money']*info[id]['num'];
+
+	delete info[id];
+	//$.cookie('Cartlist','',{path:'/'});
+	$.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});
+	$("#sCartTotalM").html(info['MoenyCount']);
+	$('#sCartTotal2').html(num);
+	$('#sCartTotal').text(num);
+	$('#btnMyCart em').text(num);
+	$("#mycartcur"+id).remove();
+}
+$(function(){
+	$(".welcome").mouseover(function(){
+		$(".user-info-menu").show();
+	});
+	$(".welcome").mouseout(function(){
+		$(".user-info-menu").hide();
+	});
+	$(".notice-safe-tip").mouseover(function(){
+		$(".uc-tooltip-popup").show();
+	});
+	$(".notice-safe-tip").mouseout(function(){
+		$(".uc-tooltip-popup").hide();
+	});
+	$(".h_news").mouseover(function(){
+		$(".h_news_down").show();
+	});
+	$(".h_news").mouseout(function(){
+		$(".h_news_down").hide();
+	});
+});
+$(function(){
+	$("#txtSearch").focus(function(){
+		$("#txtSearch").css({background:"#FFFFCC"});
+		var va1=$("#txtSearch").val();
+		if(va1=='搜索您需要的商品'){
+			$("#txtSearch").val("");
+		}
+	});
+	$("#txtSearch").blur(function(){
+		$("#txtSearch").css({background:"#FFF"});
+		var va2=$("#txtSearch").val();
+		if(va2==""){
+			$("#txtSearch").val('搜索您需要的商品');
+		}
+	});
+	$("#butSearch").click(function(){
+		window.location.href="{WEB_PATH}/s_tag/"+$("#txtSearch").val();
+	});
+});
+$(".nav-category").mouseover(function(){
+		    $(".nav-category-section").show();
+    })
+	 $(".nav-category").mouseout(function(){
+		    $(".nav-category-section").hide();
+    })
+	 $(".nav-category-section").mouseover(function(){
+		    $(".nav-category-section").show();
+    })
+	 $(".nav-category-section").mouseout(function(){
+		    $(".nav-category-section").hide();
+    })
+</script>
+
