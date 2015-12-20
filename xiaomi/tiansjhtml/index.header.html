@@ -147,7 +147,7 @@ $charge_list = $cmodel->GetList("select `@#_member`.uid,`@#_member`.username,`@#
     <div class="header-nav clearfix">
         <div id="J_categoryContainer" class="nav-category">
             <a class="btn-category-list" href="{WEB_PATH}/goods_list">全部商品分类</a>
-            <div class="nav-category-section" style="display: block;">
+            <div class="nav-category-section " style="display: none;">
                 <ul class="nav-category-list">
                     {wc:loop $two_cate_list $key $catelist}
                         {wc:php:start}
