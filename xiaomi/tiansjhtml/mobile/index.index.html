@@ -37,21 +37,8 @@
 <!-- 内页顶部 -->
 
  
-    <input name="hidStartAt" type="hidden" id="hidStartAt" value="0" />
-   <section id="sliderBox" class="hotimg">
-        <ul class="slides">
-            {wc:getlist sql="select * from `@#_wap` where 1" return="slides"}
-            {wc:php:start}
-            foreach($slides as $key=>$val){
-		       $shopid = ereg_replace('[^0-9]','',$val['link']);		       
-			   //echo $val['color']. WEB_PATH.'/mobile/mobile/item/'.$shopid . G_WEB_PATH.'/data/uploads/'.$val['img'];
-			   echo '<li style="background-color:' . $val['color'] . '"><a href="' . WEB_PATH.'/mobile/mobile/item/'.$shopid .'"><img src="' . G_WEB_PATH.'/data/uploads/'.$val['img'] . '" alt="" width="614px" height="110px" /></a></li>';
-		    }
-            {wc:php:end}
-            {wc:getlist:end}
-        </ul>
-    </section>
-   
+   <input name="hidStartAt" type="hidden" id="hidStartAt" value="0" />
+   <section id="sliderBox" class="hotimg"></section>
     
      <!-- 小导航 -->
     
