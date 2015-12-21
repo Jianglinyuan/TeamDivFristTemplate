@@ -31,7 +31,7 @@ input:-moz-placeholder{color:#ccc;}::-webkit-input-placeholder{color:#ccc;}
 .registerCon li.accAndPwd .fog{line-height: 35px;}
 .registerCon li.accAndPwd .fog img{vertical-align: middle; margin-left: 10px;}
 .registerCon li.accAndPwd s.rs3{top:10px;}
-.registerCon li.rSelect{height:20px;line-height:20px;width:200px;margin:20px auto 0;}
+.registerCon li.rSelect{height:20px;line-height:20px;text-align: center;margin:20px auto 0;}
 .registerCon li.rSelect a{color:#999;}
 .registerCon li.rSelect b{display:inline-block;height:12px;width:1px;background:#ddd;margin:0 20px;position:relative;top:2px;}
 .terms{padding:5px 10px 20px;text-align:left;color:#555;font-size:14px;line-height:22px;display:inline-block;}
