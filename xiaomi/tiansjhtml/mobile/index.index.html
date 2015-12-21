@@ -15,42 +15,18 @@
 	<link href="{G_TEMPLATES_MOBILE_CSS}/index.css" rel="stylesheet" type="text/css" />
 	<script src="{G_TEMPLATES_MOBILE_JS}/jquery190.js" language="javascript" type="text/javascript"></script>
 	<script id="pageJS" data="{G_TEMPLATES_MOBILE_JS}/Index.js" language="javascript" type="text/javascript"></script>
-	<script type="text/javascript" src="{G_TEMPLATES_PC_JS}/jquery.cookie.js"></script>
-		 		 
-		<script> 
-		$(function(){    
-    var KEY = "guide";
-    var s = $.cookie( KEY );
-    if( !s ){//首次访问
-        $.cookie( KEY ,true,{expires:1,path:"/"});//设置标记
-        //进行跳转
-        location.href="{G_WEB_PATH}/guide/guide.html";
-
-    }
-});</script>
 </head>
 <body>
 <div class="h5-yygcms-v1" id="loadingPicBlock">    
+<div class="fl u-slogan"></div>
 
-{wc:templates "mobile/index","headerindex"}
+{wc:templates "/mobile/index","headerindex"}
 
 <!-- 内页顶部 -->
 
- 
     <input name="hidStartAt" type="hidden" id="hidStartAt" value="0" />
-   <section id="sliderBox" class="hotimg">
-        <ul class="slides">
-            {wc:getlist sql="select * from `@#_wap` where 1" return="slides"}
-            {wc:php:start}
-            foreach($slides as $key=>$val){
-		       $shopid = ereg_replace('[^0-9]','',$val['link']);		       
-			   //echo $val['color']. WEB_PATH.'/mobile/mobile/item/'.$shopid . G_WEB_PATH.'/data/uploads/'.$val['img'];
-			   echo '<li style="background-color:' . $val['color'] . '"><a href="' . WEB_PATH.'/mobile/mobile/item/'.$shopid .'"><img src="' . G_WEB_PATH.'/data/uploads/'.$val['img'] . '" alt="" width="614px" height="110px" /></a></li>';
-		    }
-            {wc:php:end}
-            {wc:getlist:end}
-        </ul>
-    </section>
+    <!-- 焦点图 -->
+    <section id="sliderBox" class="hotimg"></section>
    
     
      <!-- 小导航 -->
@@ -58,16 +34,25 @@
 	<section class="navautos">
 	<div class="textnav2">
     </div>
-<div class="wrapnavautos">
-				<div id="navautos1">
-					<a href="{WEB_PATH}/mobile/autolottery/"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava1.png"></a>
+    <div class="wrapnavautos">
+				<div id="navautos4">
+					<a href="{G_WEB_PATH}/?/mobile/home/userrecharge"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava4.png"></a>
 				</div>
 				<div class="textnavword">
-				<p style="text-align:center;font-size: 14px;color:#bbb">限时揭晓</p>
+				<p style="text-align:center;font-size: 14px;color:#bbb">在线充值</p>
+				
+				</div>
+		</div>    
+	<div class="wrapnavautos">
+				<div id="navautos3">
+					<a href="{G_WEB_PATH}/?/mobile/mobile/about"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava3.png"></a>
+				</div>
+				<div class="textnavword">
+				<p style="text-align:center;font-size: 14px;color:#bbb;">新手指南</p>
 				
 				</div>
 		</div>
-		<div class="wrapnavautos">
+	<div class="wrapnavautos">
 				<div id="navautos2">
 					<a href="{G_WEB_PATH}/?/mobile/shaidan/"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava2.png"></a>
 				</div>
@@ -75,52 +60,42 @@
 				<p style="text-align:center;font-size: 14px;color:#bbb">幸运晒单</p>
 				
 				</div>
-		</div>
-			<div class="wrapnavautos">
-				<div id="navautos3">
-					<a href="{G_WEB_PATH}/wx_web/xszn.htm"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava3.png"></a>
+		</div>	
+    <div class="wrapnavautos">
+				<div id="navautos1">
+					<a href="{WEB_PATH}/mobile/autolottery"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava1.png"></a>
 				</div>
 				<div class="textnavword">
-				<p style="text-align:center;font-size: 14px;color:#bbb;">新手指南</p>
+				<p style="text-align:center;font-size: 14px;color:#bbb">限时揭晓</p>
 				
 				</div>
 		</div>
-		<div class="wrapnavautos">
-				<div id="navautos4">
-					<a href="{G_WEB_PATH}/?/mobile/home/userrecharge/"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava4.png"></a>
-				</div>
-				<div class="textnavword">
-				<p style="text-align:center;font-size: 14px;color:#bbb">在线充值</p>
-				
-				</div>
-		</div>
-		
+
 	</section>
 
 <div class="textnav">  
 </div>
-  <!-- 站点公告开始 -->
+ <!-- 站点公告 -->
 <section style="display:none;" id="gonggao">
 <div class="m-tt1">
-<h2 class="fl"><a href="">公告</a></h2>
+<h2 class="fl"><a href="">一元购公告</a></h2>
 <div class="fr u-more">
 <a href="" class="u-rs-m1"><b class="z-arrow"></b></a>
 </div>
 </div>
-<article style="margin: 5px;padding: 15px;color: rgb(199, 0, 0);/*text-indent: 2em;*/line-height: 20px;" class="m-round">
+<article style="margin: 5px;padding: 5px;color: rgb(199, 0, 0);/*text-indent: 2em;*/line-height: 20px;" class="m-round">
 </article>
 </section>
 <script>
-$('#gonggao').show().find('article').html('{wc:fun:_cfg('web_mobile_post')}');
+$('#gonggao').show().find('article').html('1.公告一<br/>2.公告二<br/>3.公告三');
 </script>
- <!-- 站点公告结束 -->
     
     <!-- 最新揭晓 -->
     <section class="g-main">
 	    <div class="m-tt1">
-		    <h2 class="fl"><a href="{WEB_PATH}/mobile/mobile/lottery/">最新揭晓</a></h2>
+		    <h2 class="fl"><a href="{WEB_PATH}/mobile/mobile/lottery">最新揭晓</a></h2>
 		    <div class="fr u-more">
-			    <a href="{WEB_PATH}/mobile/mobile/lottery/" class="u-rs-m1"><b class="z-arrow"></b></a>
+			    <a href="{WEB_PATH}/mobile/mobile/lottery" class="u-rs-m1"><b class="z-arrow"></b></a>
 		    </div>
 	    </div>
 	    <article class="h5-yygcms-w310 m-round m-lott-li" id="divLottery">
@@ -130,10 +105,10 @@ $('#gonggao').show().find('article').html('{wc:fun:_cfg('web_mobile_post')}');
             $qishu['q_user'] = unserialize($qishu['q_user']);
             {wc:php:end}
 			        <li>
-		                <a href="{WEB_PATH}/mobile/mobile/item/{wc:$qishu['id']}/" class="u-lott-pic">
+		                <a href="{WEB_PATH}/mobile/mobile/item/{wc:$qishu['id']}" class="u-lott-pic">
 		                    <img src="{G_TEMPLATES_STYLE}/mobile/images/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$qishu['thumb']}" border="0" alt="" />
 		                </a>
-		                <span>恭喜<a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$qishu['q_uid']}/" class="blue z-user">{wc:fun:get_user_name($qishu['q_uid'])}</a>获得</span>
+		                <span>恭喜<a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$qishu['q_uid']}" class="blue z-user">{wc:fun:get_user_name($qishu['q_uid'])}</a>获得</span>
 			        </li>
 		        
 			   {wc:loop:end}     
@@ -144,10 +119,10 @@ $('#gonggao').show().find('article').html('{wc:fun:_cfg('web_mobile_post')}');
     <!-- 今日限时 -->
     <section class="g-main">
 	    <div class="m-tt1">
-		    <h2 class="fl"><a href="{WEB_PATH}/mobile/autolottery/">今日限时</a></h2>
+		    <h2 class="fl"><a href="{WEB_PATH}/mobile/autolottery">今日限时</a></h2>
 		    <div class="fl z-tips">每天10点、15点、22点准时揭晓</div>
 		    <div class="fr u-more">
-			    <a href="{WEB_PATH}/mobile/autolottery/next/" class="u-rs-m2"><b class="z-arrow"></b>明日限时</a>
+			    <a href="{WEB_PATH}/mobile/autolottery/next" class="u-rs-m2"><b class="z-arrow"></b>明日限时</a>
 		    </div>
 	    </div>
 	    <article id="autoLotteryBox" class="clearfix h5-1yyg-w310 m-round overflow">
@@ -177,15 +152,15 @@ $('#gonggao').show().find('article').html('{wc:fun:_cfg('web_mobile_post')}');
 				<article class="clearfix m-xs-ct m-xs-End">
 					<div class="u-xs-pic">
 						<div class="z-xs-pic">
-						<a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/"><img src="{G_TEMPLATES_IMAGE}/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" border=0 /></a>
+						<a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}"><img src="{G_TEMPLATES_IMAGE}/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" border=0 /></a>
 						</div>
 						<div class="z-xs-time"><b>已结束</b></div>
 					</div>
 					<div class="u-xs-con">
 						<div class="clearfix u-xs-name">
-						<a class="u-xs-name-img" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shop['q_uid']}/">
+						<a class="u-xs-name-img" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shop['q_uid']}">
 					<img name="uImg" border="0" src2="{G_UPLOAD_PATH}/{wc:fun:get_user_key($shop['q_uid'],'img')}"/></a>
-						<div class="u-xs-name-r"><p>恭喜<a name="uName" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shop['q_uid']}/" class="z-user blue">{wc:fun:get_user_name($shop['q_uid'])}</a>获得</p><p>幸运云购码：<em class="orange">{wc:$shop['q_user_code']}</em></p><p>总共云购：<em class="orange">{wc:$user_shop_number[$shop['q_uid']][$shop['id']]}</em>人次</p></div></div><ins class="z-promo">价值:<em class="arial">￥{wc:$shop['money']}</em></ins>
+						<div class="u-xs-name-r"><p>恭喜<a name="uName" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shop['q_uid']}" class="z-user blue">{wc:fun:get_user_name($shop['q_uid'])}</a>获得</p><p>幸运云购码：<em class="orange">{wc:$shop['q_user_code']}</em></p><p>总共云购：<em class="orange">{wc:$user_shop_number[$shop['q_uid']][$shop['id']]}</em>人次</p></div></div><ins class="z-promo">价值:<em class="arial">￥{wc:$shop['money']}</em></ins>
 						<div class="Progress-bar"><p class="u-progress" title="已完成{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%">
 							<span class="pgbar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;">
 							   <span class="pging"></span>
@@ -204,7 +179,7 @@ $('#gonggao').show().find('article').html('{wc:fun:_cfg('web_mobile_post')}');
 			  <article class="clearfix m-xs-ct ">
 			      <div class="u-xs-pic">
 				       <div class="z-xs-pic">
-			             <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/"><img src="{G_TEMPLATES_IMAGE}/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" border=0 /></a>
+			             <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}"><img src="{G_TEMPLATES_IMAGE}/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" border=0 /></a>
 			          </div>			         				 
 					  <div name="timerItem" class="z-xs-time" time="{wc:$sysj}"><em>00</em>时<em>00</em>分<em>00</em>秒<s class="z-aw-tblr"></s>
 				      </div>
@@ -221,7 +196,7 @@ $('#gonggao').show().find('article').html('{wc:fun:_cfg('web_mobile_post')}');
                   
                   
 				  <div class="u-xs-con">
-				      <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/" class="gray6 z-tt">(第{wc:$shop['qishu']}期){wc:$shop['title']}</a>
+				      <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}" class="gray6 z-tt">(第{wc:$shop['qishu']}期){wc:$shop['title']}</a>
 				      <ins class="z-promo">价值:<em class="arial">￥{wc:$shop['money']}</em></ins>
 				      <div class="Progress-bar"><p class="u-progress" title="已完成{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%"><span class="pgbar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"><span class="pging"></span></span></p>
 					    <ul class="Pro-bar-li">
@@ -241,53 +216,13 @@ $('#gonggao').show().find('article').html('{wc:fun:_cfg('web_mobile_post')}');
 	        
 	    </article>
     </section>
-	
-	     <!-- 即将揭晓 -->
-    <section class="g-main">
-	    <div class="m-tt1">
-		    <h2 class="fl"><a href="{WEB_PATH}/mobile/mobile/glist">即将揭晓</a></h2>
-		    <div class="fr u-more">
-			    <a href="{WEB_PATH}/mobile/mobile/glist" class="u-rs-m1"><b class="z-arrow"></b></a>
-		    </div>
-	    </div>
-	    <article class="clearfix h5-1yyg-w310 m-round m-tj-li">
-		    <ul id="ulRecommend">
-		        {wc:loop $shoplist $renqi}
-			        <li id="{wc:$renqi['id']}">
-			            <div class="f_bor_tr">
-			                <div class="m-tj-pic">
-			                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$renqi['id']}" class="u-lott-pic">
-			                        <img src="{G_TEMPLATES_IMAGE}/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$renqi['thumb']}" border=0 alt="" />
-			                    </a>
-			                    <ins class="u-promo">价值:￥{wc:$renqi['money']}</ins>
-			                </div>
-			                <div class="Progress-bar">
-								<p class="u-progress" title="已完成{wc:fun:percent($renqi['canyurenshu'],$renqi['zongrenshu'])}">
-								<span class="pgbar" style="width:{wc:$renqi['canyurenshu']/$renqi['zongrenshu']*100}%;">
-								<span class="pging"></span>
-								</span>
-								</p>
-								<ul class="Pro-bar-li">
-									<li class="P-bar01"><em>{wc:$renqi['canyurenshu']}</em>已参与</li>
-									<li class="P-bar02"><em>{wc:$renqi['zongrenshu']}</em>总需人次</li>
-									<li class="P-bar03"><em>{wc:$renqi['zongrenshu']-$renqi['canyurenshu']}</em>剩余</li>
-								</ul>
-							</div>
-			            </div>
-                    </li>
-                {wc:loop:end}
-		    </ul>
-	    </article>
-    </section>
-	
-	
 
     <!-- 热门推荐 -->
     <section class="g-main">
 	    <div class="m-tt1">
-		    <h2 class="fl"><a href="{WEB_PATH}/mobile/mobile/glist/">热门推荐</a></h2>
+		    <h2 class="fl"><a href="{WEB_PATH}/mobile/mobile/glist">热门推荐</a></h2>
 		    <div class="fr u-more">
-			    <a href="{WEB_PATH}/mobile/mobile/glist/" class="u-rs-m1"><b class="z-arrow"></b></a>
+			    <a href="{WEB_PATH}/mobile/mobile/glist" class="u-rs-m1"><b class="z-arrow"></b></a>
 		    </div>
 	    </div>
 	    <article class="clearfix h5-yygcms-w310 m-round m-tj-li">
@@ -296,14 +231,11 @@ $('#gonggao').show().find('article').html('{wc:fun:_cfg('web_mobile_post')}');
 			        <li id="{wc:$renqi['id']}">
 			            <div class="f_bor_tr">
 			                <div class="m-tj-pic">
-			                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$renqi['id']}/" class="u-lott-pic">
+			                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$renqi['id']}" class="u-lott-pic">
 			                        <img src="{G_TEMPLATES_STYLE}/mobile/images/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$renqi['thumb']}" border=0 alt="" />
 			                    </a>
 			                    <ins class="u-promo">价值:￥{wc:$renqi['money']}</ins>
 			                </div>
-							 <!-- 增加商品标题显示 -->
-<div style="color: #999;overflow:hidden;padding-left: 10px;white-space: nowrap;width: 87%;">{wc:$renqi['title']}</div>
-<!-- 增加商品标题显示  结束--> 
 			                <div class="Progress-bar">
 								<p class="u-progress" title="已完成{wc:fun:percent($renqi['canyurenshu'],$renqi['zongrenshu'])}">
 								<span class="pgbar" style="width:{wc:$renqi['canyurenshu']/$renqi['zongrenshu']*100}%;">

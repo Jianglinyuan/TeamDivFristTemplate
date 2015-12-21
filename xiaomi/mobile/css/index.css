@@ -248,11 +248,10 @@ border-right:none;
 	margin:10px auto;
 }
 .m-tj-li li .m-tj-pic ins {
-	font-size:10px;
+	font-size:12px;
 	color:#999;
 	background:rgba(0, 0, 0, 0.1);
 	border-radius:3px;
-	position:absolute;
 	bottom:0;
 	right:-1px;
 	padding:1px 5px 1px;
