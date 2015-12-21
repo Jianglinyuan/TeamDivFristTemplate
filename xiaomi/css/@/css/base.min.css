@@ -620,7 +620,7 @@ a:hover, a:focus {
 }
 .container {
 	width: 1190px;
-	height: 117px;
+	/*height: 117px;*/
 }
 .span20 {
 	width: 1190px;
@@ -1110,7 +1110,9 @@ a:hover, a:focus {
 	background-repeat: no-repeat;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
-	border-radius: 2px
+	border-radius: 2px;
+	position: absolute;
+	right: 0px;
 }
 .site-header .site-logo .logo i {
 	display: none;
@@ -1270,8 +1272,9 @@ a:hover, a:focus {
 	z-index: 20
 }
 .site-header .header-info .mini-cart-list .count .total {
-	float: left;
-	color: #c3c3c3
+	float: right;
+	color: #c3c3c3;
+	text-align: right;
 }
 .site-header .header-info .mini-cart-list .count .total strong {
 	display: block;
@@ -1282,7 +1285,7 @@ a:hover, a:focus {
 	color: #ff4a00
 }
 .site-header .header-info .mini-cart-list .count .btn {
-	float: right
+	float: left;
 }
 .site-header .header-info .mini-cart-list .loading {
 	margin: 0;
@@ -1308,7 +1311,9 @@ a:hover, a:focus {
 	*border-right: 1px solid #dfdfdf;
 	line-height: 20px;
 	color: #333;
-	background: #fff
+	background: #fff;
+	text-align: right;
+	margin-left: 40px;
 }
 .site-header .header-info .search-form .search-text:focus {
 	outline: 0
@@ -1316,7 +1321,7 @@ a:hover, a:focus {
 .site-header .header-info .search-form .search-btn {
 	position: absolute;
 	top: -1px;
-	right: -1px;
+	left: -1px;
 	*top: 0;
 	*right: 0;
 	width: 40px;
@@ -1339,7 +1344,7 @@ a:hover, a:focus {
 .site-header .header-info .search-form .hot-words {
 	position: absolute;
 	top: 9px;
-	right: 48px;
+	left: 48px;
 	font-size: 12px
 }
 .site-header .header-info .search-form .hot-words a {
@@ -1416,7 +1421,7 @@ a:hover, a:focus {
 	background: #404144
 }
 .site-header .header-nav .nav-main {
-	float: left
+	float: right;
 }
 .site-header .header-nav .nav-main ul {
 	margin: 0;
@@ -1424,8 +1429,8 @@ a:hover, a:focus {
 	list-style-type: none
 }
 .site-header .header-nav .nav-category {
-	position: relative;
-	float: left;
+	/*position: relative;*/
+	float: right;
 	width: 136px;
 	height: 50px;
 	background: #ff4a00
@@ -1450,13 +1455,14 @@ a:hover, a:focus {
 .site-header .header-nav .nav-category-section {
 	display: none;
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 50px;
 	z-index: 11;
 	width: 248px;
 	border: solid #dfdfdf;
 	border-width: 0 0 1px;
-	background: #fff
+	background: #fff;
+	text-align: right;
 }
 .site-header .header-nav .nav-category-list {
 	margin: 0;
@@ -1583,7 +1589,7 @@ a:hover, a:focus {
 	color: #fff
 }
 .site-header .header-nav .nav-main-list .nav-main-item {
-	float: left;
+	float: right;
 	font-size: 18px;
 	line-height: 20px
 }
@@ -1703,7 +1709,7 @@ a:hover, a:focus {
 .site-header .open-buy-info {
 	position: absolute;
 	top: 60px;
-	right: 200px;
+	right: 240px;
 }
 
 /*  加入头部滚动  */
@@ -1809,11 +1815,11 @@ a:hover, a:focus {
 
 /*.site-header .open-buy-info a{display:inline-block;padding-left:20px;height:16px;line-height:16px;background:url(../images/icon-open-buy.png) no-repeat;overflow:hidden;font-size:12px}*/
 .number {
-	width: 380px;
+	/*width: 380px;*/
 	height: 29px;
 	/*margin-left: 115px;*/
 	text-align: center;
-	float: right;
+	/*float: right;*/
 }
 .number p {
 	color: #666;
@@ -1822,12 +1828,12 @@ a:hover, a:focus {
 	float: left;
 }
 .number ul {
-	float: left;
+	/*float: left;*/
 	position: relative;
 }
 .number a {
 	display: block;
-	width: 380px;
+	/*width: 380px;*/
 	height: 29px;
 	cursor: pointer;
 }
@@ -1883,7 +1889,7 @@ a:hover, a:focus {
 .number li.u-secondary {
 	width: 40px;
 	position: relative;
-	text-align: left;
+	text-align: right;
 }
 .number li.u-secondary b {
 	display: block;
@@ -1898,13 +1904,13 @@ a:hover, a:focus {
 	border-style: solid;
 	border-width: 4px 0 4px;
 	border-color: #fff;
-	border-left: 4px solid rgb(102, 102, 102);
+	border-right: 4px solid rgb(102, 102, 102);
 	width: 0;
 	height: 0;
 	font-size: 0;
 	line-height: 0;
 	position: absolute;
-	left: 33px;
+	right: 33px;
 	top: 11px;
 }
 .number li.u-secondary b s {
@@ -1912,15 +1918,14 @@ a:hover, a:focus {
 	_border-style: dashed;
 	border-width: 3px;
 	border-color: transparent;
-	border-left-width: 0;
-	border-left: 3px solid #fff;
+	border-right: 3px solid #fff;
 	width: 0;
 	height: 0;
 	font-size: 0;
 	line-height: 0;
 	position: absolute;
 	top: -3px;
-	left: -5px;
+	right: -5px;
 }
 .site-header .open-buy-info a:hover {
 	background-position: 0 -16px
@@ -5601,4 +5606,7 @@ body.f-width-change .g-special li em {
 }
 .clear {
 	clear: both;
+}
+#sCartLoading {
+	text-align: right;
 }

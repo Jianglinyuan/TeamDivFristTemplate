@@ -1,0 +1,216 @@
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-nav">
+            <!-- <a href="{WEB_PATH}/single/business">商务合作</a>
+            <span class="sep">|</span> -->            
+            <a id="btnFavorite" href="javascript:;" title="收藏{wc:fun:_cfg("web_name_two")}">收藏{wc:fun:_cfg("web_name_two")}</a>
+            <span class="sep">|</span><a href="{G_WEB_PATH}/?/go/index/app" target="_blank" title="手机版">手机{wc:fun:_cfg('web_name_two')}</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/help/1" target="_blank" title="网站简介">{wc:fun:_cfg('web_name_two')}简介</a>
+            <!-- <span class="sep">|</span>
+            <a href="{WEB_PATH}/group_qq" target="_blank" title="QQ群">{wc:fun:_cfg('web_name_two')}QQ群</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/go/shaidan/"><span class="text">晒单分享</span></a> -->
+        </div>
+        <div class="topbar-info J_userInfo">
+        {wc:if get_user_arr()}
+            <a href="{WEB_PATH}/member/home" target="_blank">我的{wc:fun:_cfg("web_name_two")}账户</a><span class="sep">|</span>
+            <a href="{WEB_PATH}/member/home/userbuylist">我的订单</a><span class="sep">|</span>
+            <div class="welcome">欢迎您 <b>{wc:fun:get_user_name(get_user_arr(),'username')}<span class="arrow"></span></b>
+                <div class="user-info-menu" style="display: none;">
+                    <ul>
+                        <li><a href="{WEB_PATH}/member/home" target="_blank">个人中心</a></li>
+                        <li><a href="{WEB_PATH}/member/home/userrecharge">帐户充值</a></li>
+                        <li><a href="{WEB_PATH}/member/user/cook_end">退出登录</a></li>
+                    </ul>
+                    <span class="menu-arrow"></span>
+                </div>
+            </div>
+        {wc:else}
+            <a href="{WEB_PATH}/register">注册</a><span class="sep">|</span><a href="{WEB_PATH}/login">登录</a>
+        {wc:if:end}
+        </div>
+    </div>
+</div>
+<!-- .site-topbar END -->
+{wc:php:start}
+if($this->db){
+    $cmodel=$this->db;
+}else{
+    $cmodel=$mysql_model;
+}
+//他们正在云购
+$go_record = $cmodel->GetList("select `@#_member`.uid,`@#_member`.username,`@#_member`.email,`@#_member`.mobile,`@#_member`.img,`@#_member_go_record`.shopname,`@#_member_go_record`.shopid from `@#_member_go_record`,`@#_member` where `@#_member`.uid = `@#_member_go_record`.uid and `@#_member_go_record`.`status` LIKE '%已付款%'  ORDER BY `@#_member_go_record`.time DESC LIMIT 0,9");
+
+//充值排行
+$charge_list = $cmodel->GetList("select `@#_member`.uid,`@#_member`.username,`@#_member`.email,`@#_member`.mobile,`@#_member`.img,(select sum(`@#_member_addmoney_record`.money) as amount from `@#_member_addmoney_record` where `@#_member`.uid = `@#_member_addmoney_record`.uid) as amount from `@#_member_addmoney_record`,`@#_member` where `@#_member`.uid = `@#_member_addmoney_record`.uid and `@#_member_addmoney_record`.`status` = '已付款'  ORDER BY amount DESC LIMIT 0,9");
+{wc:php:end}
+<div class="site-header container">
+    <div id="header-left">
+<!--         <div class="site-gd-cz">
+            <div class="u-are">充值排行</div>
+            <div class="g-zzyging scroll2">
+                <ul id="UserBuyNewList2" style="margin-top: 0px;">
+                    {wc:loop $charge_list $charge}
+                    <li><span class="fl"><a href="{WEB_PATH}/uname/{wc:fun:idjia($charge['uid'])}" target="_blank" title="{wc:fun:get_user_name($charge)}">{wc:fun:get_user_name($charge)}</a></span><p><a target="_blank" href="javascript:;" class="u-ongoing">充值总额<font color="red">{wc:$charge['amount']}元</font></a></p></li>
+                    {wc:loop:end}
+                </ul>
+            </div>
+            <script>
+                function autoScroll2(obj){
+                        $(obj).find("#UserBuyNewList2").animate({
+                                marginTop : "-30px"
+                        },500,function(){
+                                $(this).css({marginTop : "0px"}).find("li:first").appendTo(this);
+                        });
+                }
+                $(function(){
+                        // setInterval('autoScroll2(".scroll2")',3000);
+                });
+            </script>
+        </div> -->
+        <div class="site-gd-yg">
+            <div class="g-zzyging scroll3">
+                <ul id="UserBuyNewList1" style="margin-top: 0px;">
+                    {wc:loop $go_record $gorecord}
+                    <li><span class="fl"><a href="{WEB_PATH}/uname/{wc:fun:idjia($gorecord['uid'])}" target="_blank" title="{wc:fun:get_user_name($gorecord)}">{wc:fun:get_user_name($gorecord)}</a></span><span id="shop-name"><a target="_blank" href="{WEB_PATH}/goods/{wc:$gorecord['shopid']}" title="{wc:$gorecord['shopname']}" class="u-ongoing">{wc:$gorecord['shopname']}</a></span></li>
+                    {wc:loop:end}
+                </ul>
+            </div>
+            <div class="u-are">正在{wc:fun:_cfg('web_name_two')}</div>
+            <script>
+                function autoScroll3(obj){
+                        $(obj).find("#UserBuyNewList1").animate({
+                                marginTop : "-30px"
+                        },500,function(){
+                                $(this).css({marginTop : "0px"}).find("li:first").appendTo(this);
+                        });
+                }
+                $(function(){
+                        setInterval('autoScroll3(".scroll3")',3000);
+                });
+            </script>
+        </div>
+        <div class="header-info">
+            <div class="search-section">
+                <div class="search-form clearfix">
+                    <input type="text" id="txtSearch" class="search-text" placeholder="搜索您需要的商品"/>
+                    <input type="button" id="butSearch" class="search-btn iconfont" value="&#xe630;"/>
+                    <!--[if IE 6]><div class="ie6-fix"></div><![endif]-->
+                    <div class="hot-words">
+                        <a href="{WEB_PATH}/goods_list/5/">手机</a><a href="{WEB_PATH}/goods_list/12/">苹果</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-section">
+                <div class="mini_mycart" id="sCart">
+                    <a rel="nofollow" href="{WEB_PATH}/member/cart/cartlist" id="sCartNavi" class="mini-cart">
+                    (<span id="sCartTotal">0</span>) 购物车<i class="iconfont">&#xe609;</i></a>
+                    <div class="mini-cart-list" id="J_miniCartList">
+                        <div class="goods_loding" id="sCartLoading" style="display: none;">...数据加载中，请稍后<img border="0" alt="" src="{G_TEMPLATES_STYLE}/images/goods_loading.gif"></div>
+                        <div class="count clearfix"><span class="total">件商品 <em id="sCartTotal2">0</em> 共计<strong><em id="sCartTotalM">0</em> ：合计</strong></span><a href="{WEB_PATH}/member/cart/cartlist" class="btn btn-primary">去购物车结算</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="open-buy-info">
+            <div class="number">
+                <a href="{WEB_PATH}/buyrecord" target="_blank">
+                <ul id="ulHTotalBuy">
+                    <li class="nobor gray6 u-secondary"><b><s></s></b>人次</li>
+                    <li class="num" style="display: none;"><cite><em>0</em></cite><i></i></li>
+                    <li class="num" style="display: none;"><cite><em>0</em></cite><i></i></li>
+                    <li class="num"><cite><em>0</em></cite><i></i></li>
+                    <li class="nobor">,</li>
+                    <li class="num"><cite><em>0</em></cite><i></i></li>
+                    <li class="num"><cite><em>0</em></cite><i></i></li>
+                    <li class="num"><cite><em>0</em></cite><i></i></li>
+                    <li class="nobor">,</li>
+                    <li class="num"><cite><em>0</em></cite><i></i></li>
+                    <li class="num"><cite><em>0</em></cite><i></i></li>
+                    <li class="num"><cite><em>0</em></cite><i></i></li>
+                    <li class="nobor gray6">累计参与</li>
+                        </ul>
+                        <!--ul id="ulHTotalBuy">
+                            <li class="nobor gray6">累计参与</li>
+                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                            <li class="nobor">,</li>
+                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                            <li class="nobor">,</li>
+                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                            <li class="nobor gray6 u-secondary">人次<b><s></s></b></li>
+                        </ul-->
+                        </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-logo"><a class="logo" href="{G_WEB_PATH}/" title="{wc:fun:_cfg('web_name')}" style="background: url({G_UPLOAD_PATH}/{wc:fun:Getlogo()}) no-repeat;"><i class="iconfont">&#xe61d;</i></a></div>
+
+    {wc:php:start}
+        if($this->db){
+                $cmodel=$this->db;
+        }else{
+                $cmodel=$mysql_model;
+        }
+
+        $two_cate_list = $cmodel->GetList("select cateid,parentid,name from `@#_category` where `model` = '1' and `parentid` = '0' order by `order` DESC");
+    {wc:php:end}
+
+    <div class="header-nav clearfix">
+        <div id="J_categoryContainer" class="nav-category">
+            <a class="btn-category-list" href="{WEB_PATH}/goods_list">全部商品分类</a>
+            <div class="nav-category-section" style="display: block;">
+                <ul class="nav-category-list">
+                    {wc:loop $two_cate_list $key $catelist}
+                        {wc:php:start}
+                            $cate2 = $cmodel->GetList("select cateid,parentid,name from `@#_category` where `parentid` = '$catelist[cateid]' order by `order` DESC");
+                            $i=$key+1;
+                        {wc:php:end}
+
+                        <li class="nav-category-item">
+                            <div class="nav-category-content">
+                                <a class="title" href="{WEB_PATH}/goods_list/{wc:$catelist['cateid']}_0_0">{wc:$catelist['name']}</a>
+                                <div class="links">
+
+                                    {wc:php:start}
+
+                                    if(is_array($cate2)){
+                                    foreach($cate2 AS $bval){
+                                    {wc:php:end}
+                                    <a href="{WEB_PATH}/goods_list/{wc:$bval['cateid']}_0_0">{wc:$bval['name']}</a>
+                                    {wc:php:start}
+                                    }}
+                                    {wc:php:end}
+                                </div>
+                            </div>
+                        </li>
+                    {wc:loop:end}
+                </ul>
+            </div>
+        </div>
+        <div class="nav-main">
+            <ul class="nav-main-list J_menuNavMain clearfix">
+                <li class="nav-main-item"><a href="{G_WEB_PATH}/"><span class="text">首页</span></a></li>
+            {wc:php:start}
+                if($this->db){
+                        $cmodel=$this->db;
+                }else{
+                        $cmodel=$mysql_model;
+                }
+
+                $nav_list = $cmodel->GetList("SELECT url,name FROM `@#_navigation` where `status`='Y' and type='index' order by `order`");
+            {wc:php:end}
+            {wc:loop $nav_list $key $nav}
+                <li class="nav-main-item"><a href="{WEB_PATH}{wc:$nav['url']}"><span class="text">{wc:$nav['name']}</span></a></li>
+            {wc:loop:end}
+            </ul>
+        </div>
+    </div>
+    
+</div>
+<!-- .site-header END -->
