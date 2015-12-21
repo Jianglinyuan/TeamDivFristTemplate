@@ -1,10 +1,12 @@
 ﻿<footer class="footer">
-	<div class="u-ft-nav" id="fLoginInfo">
-	    <span><a href="{WEB_PATH}/mobile/mobile/">首页</a><b></b></span>
-		<span><a href="{WEB_PATH}/mobile/mobile/about/">新手指南</a><b></b></span>
-		<span><a href="{WEB_PATH}/mobile/user/login/">登录</a><b></b></span>
+
+<!-- 	<div class="u-ft-nav" id="fLoginInfo">
 		<span><a href="{WEB_PATH}/mobile/user/register/">注册</a></span>
-	</div>
+		<span><a href="{WEB_PATH}/mobile/user/login/">登录</a><b></b></span>
+		<span><a href="{WEB_PATH}/mobile/mobile/about/">新手指南</a><b></b></span>
+		<span><a href="{WEB_PATH}/mobile/mobile/">首页</a><b></b></span>
+	</div> -->
+
 	{wc:php:start}
 		$g_web_path = _cfg("web_path");
 		$g_web_path = trim($g_web_path,"/");		
@@ -63,19 +65,19 @@
 <div class="footerdi" style="bottom: 0px;">
 	<ul>
 		<li class="f_home">
-			<a title="首页" href="{WEB_PATH}/mobile/mobile/"><i class="{wc:$f_home}">&nbsp;</i>首页</a>
+			<a title="我的购物" href="{WEB_PATH}/mobile/user/login/"><i class="{wc:$f_personal}">&nbsp;</i>我的{wc:fun:_cfg('web_name_two')}</a>
 		</li>
 		<li class="f_whole">
-			<a title="所有商品" href="{WEB_PATH}/mobile/mobile/glist/"><i class="{wc:$f_whole}">&nbsp;</i>所有商品</a>
+			<a title="购物车" href="{WEB_PATH}/mobile/cart/cartlist/"><i class="{wc:$f_car}">&nbsp;</i>购物车</a>
 		</li>
 		<li class="f_jiexiao">
 			<a title="最新揭晓" href="{WEB_PATH}/mobile/mobile/lottery/"><i class="{wc:$f_jiexiao}">&nbsp;</i>最新揭晓</a>
 		</li>
 		<li class="f_car">
-			<a title="购物车" href="{WEB_PATH}/mobile/cart/cartlist/"><i class="{wc:$f_car}">&nbsp;</i>购物车</a>
+			<a title="所有商品" href="{WEB_PATH}/mobile/mobile/glist/"><i class="{wc:$f_whole}">&nbsp;</i>所有商品</a>
 		</li>
 		<li class="f_personal">
-			<a title="我的购物" href="{WEB_PATH}/mobile/user/login/"><i class="{wc:$f_personal}">&nbsp;</i>我的{wc:fun:_cfg('web_name_two')}</a>
+			<a title="首页" href="{WEB_PATH}/mobile/mobile/"><i class="{wc:$f_home}">&nbsp;</i>首页</a>
 		<li>
 	</ul>
 </div>
