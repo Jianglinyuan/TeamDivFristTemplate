@@ -1,80 +1,135 @@
 
 
+
+
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>登录 - {wc:$webname}触屏版</title>
+
+    <title>验证身份 - {wc:$webname}触屏版</title>
+
     <meta content="app-id=518966501" name="apple-itunes-app" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+
     <meta content="yes" name="apple-mobile-web-app-capable" />
+
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+
     <meta content="telephone=no" name="format-detection" />
+
     <link href="{G_TEMPLATES_MOBILE_CSS}/comm.css" rel="stylesheet" type="text/css" />
+
 	<link href="{G_TEMPLATES_MOBILE_CSS}/login.css" rel="stylesheet" type="text/css" />
+
 	<script src="{G_TEMPLATES_MOBILE_JS}/jquery190.js" language="javascript" type="text/javascript"></script>
-	<script id="pageJS" data="{G_TEMPLATES_MOBILE_JS}/Login.js" language="javascript" type="text/javascript"></script>
+
+		 <style type="text/css">
+       .registerCon li input.rText{padding-left:10px;}
+
+	 </style>
+
 </head>
+
 <body>
-    <div class="h5-yygcms-v1" id="content">
-        
+
+    <div class="h5-1yyg-v1" id="content">
+
+
+
 <!-- 栏目页面顶部 -->
 
 
-<!-- 内页顶部 -->
-    <header class="g-header">
-        <div class="head-r">
-	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
-        </div>
-        <h2>登录</h2>
-    </header>
 
+
+
+<!-- 内页顶部 -->
+
+
+
+    <header class="g-header">
+
+        <div class="head-r">
+
+	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
+
+        </div>
+
+        <h2>验证身份</h2>
+    </header>
         <section>
 	        <div class="registerCon">
+	            <input type="hidden" id="inpMobile" value="{wc:$name}" />
     	        <ul>
-        	        <li class="accAndPwd">
-            	        <dl><input id="txtAccount" type="text" placeholder="请输入您的手机号码或邮箱" class="lEmail"><s class="rs4"></s></dl>
-                        <dl>
-                            <input type="password" id="txtPassword" class="lPwd" placeholder="密码">
-                            <s class="rs3"></s>
-                        </dl>
-                    </li>
-                    <li><a href="javascript:;" id="btnLogin" class="nextBtn  orgBtn">登 录</a>
-					
-					<input name="hidLoginForward" type="hidden" id="hidLoginForward" value="{WEB_PATH}/mobile/home" /></li>
-            
-					<b></b><a href="{WEB_PATH}/mobile/user/register/" class="nextBtn  orgBtn">新用户注册</a></li>
-		
-				       <li class="rSelect"><a href="{WEB_PATH}/mobile/user/findpassword" style="font-size:14px;color:red;font-weight:bold;">忘记密码？</a>
-                </li>
+
+ <li>手机号码：<input type="text" id="mobileCode" placeholder="请输入手机号码" class="rText"/></s></li>
+        	        <li>
+					<input type="text" id="CkCode" placeholder="手机验证码" class="rText" style="width:150px;float:left;margin-right:5px" />
+					<a href="javascript:;" type="button" id="SendCode" onClick="sendMobCode()" class="nextBtn orgBtn" style="width:100%;float:right;margin-top:5px" >获取验证码</a>
+					</li>
+<li style="clear:left;"></li>
+                    <li><a href="javascript:void(0);" onClick="okSubmit()" id="btnPostCode" style="margin-top:60px" class="nextBtn orgBtn">确认，下一步</a></li>
+
+                    <li style="font-size:12px;">如未收到验证短信，请在120秒后点击重新发送。</li>
+
+
+
                 </ul>
-                
-                <div class="oauth">
-			<a class="wechat" href="{WEB_PATH}/mobile/user/wxlogin">微信登陆</a>
-			{wc:php:start}
-				$conn_cfg = System::load_app_config("connect",'','api');
-			{wc:php:end}
-			{wc:if $conn_cfg['qq']['off']}
-			<a class="qq" href="{WEB_PATH}/api/qqlogin/">QQ登陆</a>
-			{wc:if:end}
-			</div>
-			
-			</div>
+
+	        </div>
+
         </section>
-		
-    
-        
+
+
+
 {wc:templates "mobile/index","footer"}
+
 <script language="javascript" type="text/javascript">
+
   var Path = new Object();
-  Path.Skin="{G_TEMPLATES_STYLE}";  
+  Path.Skin="{G_TEMPLATES_STYLE}";
   Path.Webpath = "{WEB_PATH}";
-  
+
 var Base={head:document.getElementsByTagName("head")[0]||document.documentElement,Myload:function(B,A){this.done=false;B.onload=B.onreadystatechange=function(){if(!this.done&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){this.done=true;A();B.onload=B.onreadystatechange=null;if(this.head&&B.parentNode){this.head.removeChild(B)}}}},getScript:function(A,C){var B=function(){};if(C!=undefined){B=C}var D=document.createElement("script");D.setAttribute("language","javascript");D.setAttribute("type","text/javascript");D.setAttribute("src",A);this.head.appendChild(D);this.Myload(D,B)},getStyle:function(A,B){var B=function(){};if(callBack!=undefined){B=callBack}var C=document.createElement("link");C.setAttribute("type","text/css");C.setAttribute("rel","stylesheet");C.setAttribute("href",A);this.head.appendChild(C);this.Myload(C,B)}}
+
 function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
-Base.getScript('{G_TEMPLATES_MOBILE_JS}/Bottom.js?v='+GetVerNum());
+
+Base.getScript('{G_TEMPLATES_MOBILE_JS}/Bottom.js');
+
+  function okSubmit(){
+         $.get(Gobal.Webpath+"/mobile/ajax/mobileregbind/"+$("#mobileCode").val()+"/"+$("#CkCode").val(),function(data){
+	    if(data.state=="0") { location.href = Gobal.Webpath+"/mobile/home"}else{ alert(data.state);}
+	},"json");
+  }
+
+var tim = 60;
+function sendMobCode(){
+ // $("#SendCode").text("等待 秒后重新获取").addClass("resendBtn grayBtn");
+    $.get(Gobal.Webpath+"/mobile/ajax/sendmobcode/"+$("#mobileCode").val(),function(data){
+	  if(data.state == "ok"){
+	  $("#SendCode").addClass("resendBtn grayBtn");
+	  var t= window.setInterval(function(){
+	    tim--;
+		 if(tim ==0 ){$("#SendCode").text("获取验证码").addClass("nextBtn orgBtn").removeClass("resendBtn grayBtn"); window.clearInterval(t); }else{
+	     $("#SendCode").text("等待"+tim+" 秒后重新获取");}
+	  },1000);
+	  }else{
+	   alert("请在"+data.state+"秒后重新获取");
+	  }
+	},"json");
+}
+
 </script>
 
+
+
     </div>
+
 </body>
+
 </html>
+

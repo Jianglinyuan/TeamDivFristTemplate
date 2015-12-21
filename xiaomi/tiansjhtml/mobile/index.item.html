@@ -20,7 +20,7 @@
 
 <!-- 内页顶部 -->
 
-{wc:templates "mobile/index","top"}
+{wc:templates "mobile/index","header"}
 <!-- 内页顶部 -->
 
     <input name="hidGoodsID" type="hidden" id="hidGoodsID" value="{wc:$itemlist[0]['q_uid']}"/>   <!--上期获奖者id-->
@@ -42,20 +42,21 @@
         {wc:if $item['q_end_time']!='' && $item['q_end_time'] <= time()}
         <div class="pProcess pProcess2">
     	    <div class="pResults">
-        	    <div class="pResultsL" onClick="location.href='{WEB_PATH}/mobile/mobile/userindex/{wc:$item[q_uid]}'">
+        	    <div class="pResultsL" onClick="location.href='{WEB_PATH}/mobile/mobile/userindex/{wc:$item[q_uid]}/'">
             	    <a>
             	        <img src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($item['q_uid'],'img')}">
             	        <span>{wc:fun:get_user_name($item['q_uid'])}</span>
             	    </a>
                     <s></s>
                 </div>
-        	    <div class="pResultsR">
+        	     <div class="pResultsR">
                     <div class="g-snav">
-                        <div class="g-snav-lst">总共{wc:fun:_cfg('web_name_two')}<br><dd><b class="orange">{wc:$gorecode['gonumber']}</b><br>人次</dd></div>
+                      
                         <div class="g-snav-lst">揭晓时间<br><dd class="gray9"><span>{wc:fun:microt($item['q_end_time'])}</span></dd></div>
                         <div class="g-snav-lst">{wc:fun:_cfg('web_name_two')}时间<br><dd class="gray9"><span>{wc:fun:microt($gorecode['time'])}</span></dd></div>
                     </div>
                 </div>
+				    <p>总共{wc:fun:_cfg('web_name_two')}：<b class="orange">{wc:$gorecode_count}人次</b></p>
         	    <p><a href="{WEB_PATH}/mobile/mobile/calResult/{wc:$item['id']}" class="fr">查看计算结果</a>幸运{wc:fun:_cfg('web_name_two')}码：<b class="orange">{wc:$item['q_user_code']}</b></p>
             </div>
         </div>
@@ -142,14 +143,17 @@
         <!-- 参与记录，商品详细，晒单导航 -->
         <div class="joinAndGet">
     	    <dl>
-    	        <a href="{WEB_PATH}/mobile/mobile/buyrecords/{wc:$item['id']}"><b class="fr z-arrow"></b>所有{wc:fun:_cfg('web_name_two')}记录</a>
-				<a href="{WEB_PATH}/mobile/mobile/goodsdesc/{wc:$item['id']}"><b class="fr z-arrow"></b>图文详情<em>（建议WIFI下使用）</em> </a>
+    	        <a href="{WEB_PATH}/mobile/mobile/buyrecords/{wc:$item['id']}/"><b class="fr z-arrow"></b>所有{wc:fun:_cfg('web_name_two')}记录</a>
+				<a href="{WEB_PATH}/mobile/mobile/goodsdesc/{wc:$item['id']}/"><b class="fr z-arrow"></b>图文详情<em>（建议WIFI下使用）</em> </a>
 
-				<a href="{WEB_PATH}/mobile/mobile/goodspost/{wc:$item['sid']}"><b class="fr z-arrow"></b>已有<span class="orange arial">{wc:fun:count($shaidan)}</span>个幸运者晒单<strong class="orange arial">{wc:$sum}</strong>条评论</a>
+				<a href="{WEB_PATH}/mobile/mobile/goodspost/{wc:$item['sid']}/"><b class="fr z-arrow"></b>已有<span class="orange arial">{wc:fun:count($shaidan)}</span>个幸运者晒单<strong class="orange arial">{wc:$sum}</strong>条评论</a>
 
             </dl>
             <!-- 上期获得者 -->
 			{wc:if $item['q_end_time'] =='' and $item['qishu']>1 and $gorecode['q_end_time']<=time()}
+			{wc:php:start}
+				$countall = $this->db->GetOne("select sum(gonumber) as num from `@#_member_go_record` where `uid`= '".$itemlist[0]['q_uid']."' and `shopid` = '".$gorecode['shopid']."' and `shopqishu` = '".$gorecode['shopqishu']."'");
+			{wc:php:end}
 			<ul id="prevPeriod" class="m-round" codeid="{wc:$gorecode['shopid']}" uweb="{wc:$gorecode['uid']}">
         	    <li class="fl"><s></s><img src="{G_TEMPLATES_STYLE}/mobile/images/loading.gif" src2="{G_UPLOAD_PATH}/{wc:fun:get_user_key($itemlist[0]['q_uid'],'img')}"/></li>
                 <li class="fr"><b class="z-arrow"></b></li>
@@ -157,7 +161,7 @@
             	    <dd>
 					<em class="blue">{wc:fun:get_user_name($itemlist[0]['q_uid'])}</em>({wc:fun:get_ip($gorecode['id'],'ipcity')})
 					</dd>
-                    <dd>总共{wc:fun:_cfg('web_name_two')}：<em class="orange arial">{wc:$gorecode['gonumber']}</em>人次</dd>
+                    <dd>总共{wc:fun:_cfg('web_name_two')}：<em class="orange arial">{wc:$countall['num']}</em>人次</dd>
                     <dd>幸运{wc:fun:_cfg('web_name_two')}码：<em class="orange arial">{wc:$gorecode['huode']}</em></dd>
                     <dd>揭晓时间：{wc:fun:microt($itemlist[0]['q_end_time'])}</dd>
                     <dd>{wc:fun:_cfg('web_name_two')}时间：{wc:fun:microt($gorecode['time'])}</dd>
@@ -226,11 +230,11 @@ Base.getScript('{G_TEMPLATES_MOBILE_JS}/Bottom.js');
 <script>
 $(function(){
   $(".blue").click(function(){
-	 window.location.href="{WEB_PATH}/mobile/mobile/userindex/{wc:$itemlist[0]['q_uid']}";
+	 window.location.href="{WEB_PATH}/mobile/mobile/userindex/{wc:$itemlist[0]['q_uid']}/";
   });
 
   $(".orange.arial").click(function(){
-	 window.location.href="{WEB_PATH}/mobile/mobile/dataserver/{wc:$itemlist[0]['id']}";
+	 window.location.href="{WEB_PATH}/mobile/mobile/dataserver/{wc:$itemlist[0]['id']}/";
   });
 
 	// 揭晓倒计时
@@ -246,7 +250,7 @@ $(function(){
 			var time = times - (new Date().getTime());
 			if ( time < 1 ) {
 				clearInterval(timer);
-				tips.css('line-height', '35px').css('color','#F60').html('正在玩命揭晓中……');
+				tips.css('line-height', '35px').css('color','#cc0033').html('正在玩命揭晓中……');
 				minute.parent().remove();
 				second.parent().remove();
 				millisecond.parent().remove();

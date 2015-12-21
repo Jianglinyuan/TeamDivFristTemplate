@@ -25,13 +25,10 @@
 <!-- 内页顶部 -->
 
     <header class="g-header">
-        <div class="head-l">
+        <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
         </div>
         <h2>收货地址</h2>
-        <div class="head-r">
-	        <a href="{WEB_PATH}/mobile/mobile" class="z-Home"></a>
-        </div>
     </header>
 
 <div class="main-content clearfix">
@@ -146,6 +143,14 @@ function dell(id){
             </td>
             <td><div class="Validform_checktip"></div></td>
         </tr>
+         <tr>
+            <td><label>支付宝：</label></td>
+            <td>
+                <input datatype="*" nullmsg="支付宝不能为空" name="zhifubao" type="text" maxlength="20" id="txt_ship_name" class="inputTxt" value="">
+                <em class="red" id="ship_name_valid_msg">*</em>
+            </td>
+            <td><div class="Validform_checktip"></div></td>
+        </tr>
         <tr>
             <td><label>手机号码：</label></td>
             <td>
@@ -176,6 +181,7 @@ function dell(id){
 
             <li><label>邮政编码：</label><span id="yb_{wc:$v['id']}">{wc:$v['youbian']}</span></li>
             <li><label>收货人：</label><span id="shr_{wc:$v['id']}">{wc:$v['shouhuoren']}</span></li>
+             <li><label>支付宝：</label><span id="shr_{wc:$v['id']}">{wc:$v['zhifubao']}</span></li>
             <li><label>手机号码：</label><span id="mob_{wc:$v['id']}">{wc:$v['mobile']}</span></li>
             {wc:if $v['default']=='Y'}
             <li class="orange"><label>&nbsp;</label>默认地址&nbsp;&nbsp;<a class="xiugai" href="javascript:;" id="update{wc:$v['id']}" onClick="update({wc:$v['id']})" title="修改">修改</a></li>
@@ -229,6 +235,14 @@ function dell(id){
             <td><label>收货人：</label></td>
             <td>
                 <input datatype="*" nullmsg="收货人不能为空" name="shouhuoren" type="text" maxlength="20" id="txt_ship_name" class="inputTxt" value="">
+                <em class="red" id="ship_name_valid_msg">*</em>
+            </td>
+            <td><div class="Validform_checktip"></div></td>
+        </tr>
+         <tr>
+            <td><label>支付宝：</label></td>
+            <td>
+                <input datatype="*" nullmsg="支付宝不能为空" name="zhifubao" type="text" maxlength="20" id="txt_ship_name" class="inputTxt" value="">
                 <em class="red" id="ship_name_valid_msg">*</em>
             </td>
             <td><div class="Validform_checktip"></div></td>
@@ -292,6 +306,14 @@ function dell(id){
             <td><label>收货人：</label></td>
             <td>
                 <input id="shr2" datatype="*" nullmsg="收货人不能为空" name="shouhuoren" type="text" maxlength="20" class="inputTxt" value="">
+                <em class="red" id="ship_name_valid_msg">*</em>
+            </td>
+            <td><div class="Validform_checktip"></div></td>
+        </tr>
+        <tr>
+            <td><label>支付宝：</label></td>
+            <td>
+                <input id="shr2" datatype="*" nullmsg="支付宝不能为空" name="zhifubao" type="text" maxlength="20" class="inputTxt" value="">
                 <em class="red" id="ship_name_valid_msg">*</em>
             </td>
             <td><div class="Validform_checktip"></div></td>

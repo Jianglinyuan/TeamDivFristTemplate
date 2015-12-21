@@ -20,13 +20,10 @@
 <!-- 内页顶部 -->
 
     <header class="g-header">
-        <div class="head-l">
+        <div class="head-r">
             <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
         </div>
         <h2>验证身份</h2>
-        <div class="head-r">
-
-        </div>
     </header>
 
         <section>
@@ -44,12 +41,12 @@
 <footer class="footer">
 	<div class="u-ft-nav" id="fLoginInfo">
 	    <span><a href="/">首页</a><b></b></span>
-		<span><a href="/about.html">新手指南</a><b></b></span>
-		<span><a href="/passport/login.html?forward=rego">登录</a><b></b></span>
-		<span><a href="/passport/register.html?forward=rego">注册</a></span>
+		<span><a href="/about.html/">新手指南</a><b></b></span>
+		<span><a href="/passport/login.html?forward=rego/">登录</a><b></b></span>
+		<span><a href="/passport/register.html?forward=rego/">注册</a></span>
 	</div>
-	<p class="m-ftA"><a href="http://m.yygcms.com/">触屏版</a><a href="http://www.yygcms.com/?dev=1" target="_blank">电脑版</a><!--<a href="#" target="_blank">下载客户端</a>--></p>
-	<p class="grayc">客服热线<span class="orange">0755-3630-9834</span>粤ICP备14039967号</p>
+	<p class="m-ftA"><a href="{WEB_PATH}">触屏版</a><a href="{WEB_PATH}/?dev=1" target="_blank">电脑版</a><!--<a href="#" target="_blank">下载客户端</a>--></p>
+	<p class="grayc">客服热线<span class="orange">{wc:fun:_cfg("cell")}</span>{wc:fun:_cfg('web_copyright')}</p>
 	<a id="btnTop" href="javascript:;" class="z-top" style="display:none;"><b class="z-arrow"></b></a>
 </footer>
 <script language="javascript" type="text/javascript">

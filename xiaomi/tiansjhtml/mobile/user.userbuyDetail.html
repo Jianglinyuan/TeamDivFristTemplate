@@ -18,20 +18,17 @@
 <!-- 内页顶部 -->
 
     <header class="g-header">
-        <div class="head-l">
+        <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
         </div>
         <h2>{wc:fun:_cfg('web_name_two')}详情</h2>
-        <div class="head-r">
-	        <a href="{WEB_PATH}/mobile/home" class="z-Member"></a>
-        </div>
     </header>
 
     <section class="clearfix g-Record-ct">
-		<a class="fl z-Limg" href="{WEB_PATH}/mobile/mobile/item/{wc:$itemlist[0]['id']}"><span class="z-Imgbg {wc:$itemlist[0]['class']}"></span><em class="z-Imgtxt">{wc:$itemlist[0]['codeState']}</em><img src="{G_UPLOAD_PATH}/{wc:$itemlist[0]['thumb']}" border=0 /></a>
+		<a class="fl z-Limg" href="{WEB_PATH}/mobile/mobile/item/{wc:$itemlist[0]['id']}/"><span class="z-Imgbg {wc:$itemlist[0]['class']}"></span><em class="z-Imgtxt">{wc:$itemlist[0]['codeState']}</em><img src="{G_UPLOAD_PATH}/{wc:$itemlist[0]['thumb']}" border=0 /></a>
 
-		<div class="u-Rcd-r gray9"><p class="z-Rcd-tt"><a href="{WEB_PATH}/mobile/mobile/item/{wc:$itemlist[0]['id']}" class="gray6">(第{wc:$itemlist[0]['qishu']}期){wc:$itemlist[0]['title']} {wc:$itemlist[0]['title2']} </a></p>
-		{wc:if $itemlist[0]['q_end_time']!=''}
+		<div class="u-Rcd-r gray9"><p class="z-Rcd-tt"><a href="{WEB_PATH}/mobile/mobile/item/{wc:$itemlist[0]['id']}/" class="gray6">(第{wc:$itemlist[0]['qishu']}期){wc:$itemlist[0]['title']} {wc:$itemlist[0]['title2']} </a></p>
+		{wc:if $itemlist[0]['q_end_time']!='' && $itemlist[0]['q_showtime']=='N'}
 
 		<p>获得者：<em class="blue">{wc:fun:get_user_name($itemlist[0]['q_uid'])}</em></p>
 		<p>揭晓时间：<em class="gray6">{wc:fun:microt($itemlist[0]['q_end_time'])}</em></p>
@@ -67,7 +64,7 @@
 <script language="javascript" type="text/javascript">
   var Path = new Object();
   Path.Skin="{G_TEMPLATES_STYLE}";
-  Path.Webpath = "{WEB_PATH}";
+  Path.Webpath = "{WEB_PATH}/";
 
 var Base={head:document.getElementsByTagName("head")[0]||document.documentElement,Myload:function(B,A){this.done=false;B.onload=B.onreadystatechange=function(){if(!this.done&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){this.done=true;A();B.onload=B.onreadystatechange=null;if(this.head&&B.parentNode){this.head.removeChild(B)}}}},getScript:function(A,C){var B=function(){};if(C!=undefined){B=C}var D=document.createElement("script");D.setAttribute("language","javascript");D.setAttribute("type","text/javascript");D.setAttribute("src",A);this.head.appendChild(D);this.Myload(D,B)},getStyle:function(A,B){var B=function(){};if(callBack!=undefined){B=callBack}var C=document.createElement("link");C.setAttribute("type","text/css");C.setAttribute("rel","stylesheet");C.setAttribute("href",A);this.head.appendChild(C);this.Myload(C,B)}}
 function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}

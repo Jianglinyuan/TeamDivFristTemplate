@@ -21,22 +21,19 @@
 
 
  <header class="g-header">
-	<div class="head-l">
+	<div class="head-r">
 		<a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
 	</div>
 	<h2>晒单详细</h2>
-	<div class="head-r">
-		<a href="{WEB_PATH}/mobile/mobile" class="z-Home"></a>
-	</div>
 </header>
 
 <!-- 内页顶部 -->
 
         <section class="clearfix g-share-lucky">        
 			<!-- <s class="z-Reward"></s> -->
-			<a class="fl u-lucky-img" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shaidan['sd_userid']}"><img border="0" alt="" src="{wc:fun:toujpg($shaidan['sd_userid'])}"> </a>
+			<a class="fl u-lucky-img" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shaidan['sd_userid']}/"><img border="0" alt="" src="{wc:fun:toujpg($shaidan['sd_userid'])}"> </a>
 			<div class="u-lucky-r">
-				<p>幸运获得者：<a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shaidan['sd_userid']}" class="z-user blue">{wc:fun:userid($shaidan['sd_userid'],'username')}</a></p>
+				<p>幸运获得者：<a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shaidan['sd_userid']}/" class="z-user blue">{wc:fun:userid($shaidan['sd_userid'],'username')}</a></p>
 				{wc:php:start}
 				$jikxiao = get_shop_if_jiexiao($shaidan['sd_shopid']);	
 				$q_end_time=date("Y-m-d H:i:s",$jikxiao['q_end_time']);
@@ -97,7 +94,7 @@
                 <ul id="replyList">
 					{wc:loop $shaidan_hueifu $sdhf}
 					<li>
-						<a class="fl u-comment-img" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$sdhf['sdhf_userid']}">
+						<a class="fl u-comment-img" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$sdhf['sdhf_userid']}/">
 							{wc:if userid($sdhf['sdhf_userid'],'img')==null}
 							<img src="{G_TEMPLATES_STYLE}/images/prmimg.jpg"  />
 							{wc:else}
@@ -105,7 +102,7 @@
 							{wc:if:end}		
 						</a>
 						<div class="u-comment-r">
-							<p class="z-comment-name"><a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$sdhf['sdhf_userid']}" class="blue">{wc:fun:userid($sdhf['sdhf_userid'],'username')}</a></p>
+							<p class="z-comment-name"><a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$sdhf['sdhf_userid']}/" class="blue">{wc:fun:userid($sdhf['sdhf_userid'],'username')}</a></p>
 							<p class="gray6"><span>{wc:$sdhf['sdhf_content']}</span><b>{wc:fun:date("Y-m-d H:i",$sdhf['sdhf_time'])}</b></p>
 						</div>
 					</li>
@@ -196,9 +193,13 @@ $(function(){
 			"{WEB_PATH}/mobile/shaidan/xianmu",
 			{id:"{wc:$shaidan['sd_id']}"},
 			function(data){
-				$("#emHits em").text(data);
-				$("#emHits").addClass("z-btn-moodgray");
-				$.cookie("xianmu","{wc:$shaidan['sd_id']}", { expires:7,path: '/'});
+				if(data == -1){
+					alert("请登陆之后操作");
+				}else{
+					$("#emHits em").text(data);
+					$("#emHits").addClass("smile-have");
+					$.cookie("xianmu","{wc:$shaidan['sd_id']}", { expires:7,path: '/'});
+					}
 			}
 		);
 	});

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>所有商品 - {wc:$webname}触屏版</title>
+<meta content="app-id=518966501" name="apple-itunes-app" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link href="{G_TEMPLATES_MOBILE_CSS}/comm.css" rel="stylesheet" type="text/css" />
+<link href="{G_TEMPLATES_MOBILE_CSS}/purchase.css" rel="stylesheet" type="text/css" />
+<script src="{G_TEMPLATES_MOBILE_JS}/jquery190.js" language="javascript" type="text/javascript"></script>
+</head>
+<body id="loadingPicBlock" style="zoom: 1;">
+    <section class="pur-page-wrap">
+    {wc:templates "mobile/index","header"}
+
+<article class="purchase-banner-wrap">
+        {wc:if $cate==5}
+		<a href="javascript:;"><img src="{G_TEMPLATES_MOBILE_CSS}/../images/1.jpg" alt=""></a>
+	
+        {wc:elseif $cate==13}
+  
+        <a href="javascript:;"><img src="{G_TEMPLATES_MOBILE_CSS}/../images/2.jpg" alt=""></a>
+     
+        {wc:elseif $cate==6}
+  
+        <a href="javascript:;"><img src="{G_TEMPLATES_MOBILE_CSS}/../images/3.jpg" alt=""></a>
+		{wc:elseif $cate==12}
+   
+        <a href="javascript:;"><img src="{G_TEMPLATES_MOBILE_CSS}/../images/4.jpg" alt=""></a>
+		{wc:elseif $cate==14}
+        <a href="javascript:;"><img src="{G_TEMPLATES_MOBILE_CSS}/../images/5.jpg" alt=""></a>
+
+        {wc:else}
+        <a href="javascript:;"><img src="{G_TEMPLATES_MOBILE_CSS}/../images/purchase-banner-1.jpg" alt=""></a>
+        <a href="javascript:;"><img src="{G_TEMPLATES_MOBILE_CSS}/../images/purchase-banner-2.jpg" alt=""></a>
+        <a href="javascript:;"><img src="{G_TEMPLATES_MOBILE_CSS}/../images/purchase-banner-3.jpg" alt=""></a>
+        {wc:if:end}
+	</article>
+
+      <!--section class="pur-rule-txt">每个商品每位会员参与人次设置上限，揭晓规则不变。</section-->
+        <!--main start-->
+        <section class="purchase-main">
+            <!--商品列表开始-->
+            <section class="purchase-shoping">
+                <ul class="purchase-list clearfix" id="ul_purchaselist"></ul>
+            </section>
+            <!--商品列表结束-->
+        </section>
+        <!--main end-->
+    </section>
+    <input id="urladdress" value="" type="hidden" />
+    <input id="pagenum" value="" type="hidden" />
+    {wc:templates "mobile/index","footer"}
+<script type="text/javascript">
+
+//打开页面加载数据
+window.onload=function(){
+    glist_json("{wc:$cate}/{wc:$num}/{wc:$page}/");
+    //购物车数量
+    $.getJSON('{WEB_PATH}/mobile/ajax/cartnum',function(data){
+        if(data.num){
+            $("#btnCart").append('<em>'+data.num+'</em>');
+        }
+    });
+
+}
+//获取数据
+function glist_json(parm){
+    $("#urladdress").val('');
+    $("#pagenum").val('');
+    $.getJSON('{WEB_PATH}/mobile/mobile/glistajax/'+parm,function(data){
+        $("#divGoodsLoading").css('display','none');
+        if(data[0].sum){
+            var fg=parm.split("/");
+            $("#urladdress").val(fg[0]+'/'+fg[1]);
+            $("#pagenum").val(data[0].page);
+            for(var i=0;i<data.length;i++){
+            var li='<li><div class="product-wrap">';
+                li+='<div id="'+data[i].id+'" class="product-img"><a href="{WEB_PATH}/mobile/mobile/item/'+data[i].id+'/"><img src="{G_UPLOAD_PATH}/'+data[i].thumb+'" width="136" height="136"></a></div>';
+                li+='<div class="product-price clearfix">';
+                li+='<span class="pri">价值&nbsp;:&nbsp;<ins class="p-num">'+data[i].money+'</ins></span></div>';
+                li+='<div class="Pro-bar-wrap"><div class="Progress-bar">';
+                li+='<p class="u-progress" title="'+(data[i].canyurenshu / data[i].zongrenshu)*100+'%"><span class="pgbar" style="width: '+(data[i].canyurenshu / data[i].zongrenshu)*100+'%;"><span class="pging"></span></span></p>';
+                li+='<ul class="Pro-bar-li clearfix">';
+                li+='<li class="P-bar01"><em>'+data[i].canyurenshu+'</em>已参与</li>';
+                li+='<li class="P-bar02"><em>'+data[i].zongrenshu+'</em>总需人次</li>';
+                li+='<li class="P-bar03"><em>'+data[i].shenyurenshu+'</em>剩余</li>';
+                li+='</ul></div>';
+                li+='<div class="buy-wrap clearfix">';
+                li+='<a href="{WEB_PATH}/mobile/mobile/item/'+data[i].id+'/" class="buy-btn">立即1元云购</a>';
+                li+='<a codeid="'+data[i].id+'" href="javascript:;" class="add shopcar-btn">';
+                li+='<img src="{G_TEMPLATES_MOBILE_CSS}/../images/shopcar-btn.png" alt="加入购物车" width="30" height="30"></a></div>';
+                // li+='<span class="flag">限购'+data[i].pieces_num+'人次</span>';
+                li+='</div></li>';
+                $("#ul_purchaselist").append(li);
+            }
+
+            if(data[0].page<=data[0].sum){
+                $("#btnLoadMore").css('display','block');
+                $("#btnLoadMore2").css('display','none');
+                $("#btnLoadMore3").css('display','none');
+            }else if(data[0].page>data[0].sum){
+                $("#btnLoadMore").css('display','none');
+                $("#btnLoadMore2").css('display','none');
+                $("#btnLoadMore3").css('display','block');
+            }
+        }else{
+            $("#btnLoadMore").css('display','none');
+            $("#btnLoadMore2").css('display','block');
+            $("#btnLoadMore3").css('display','none');
+        }
+    });
+}
+$(document).ready(function(){
+    //加载更多
+    $("#btnLoadMore").click(function(){
+        var url=$("#urladdress").val(),
+            page=$("#pagenum").val();
+        glist_json(url+'/'+page);
+    });
+    //返回顶部
+    $(window).scroll(function(){
+        if($(window).scrollTop()>50){
+            $("#btnTop").show();
+        }else{
+            $("#btnTop").hide();
+        }
+    });
+    $("#btnTop").click(function(){
+        $("body").animate({scrollTop:0},10);
+    });
+    //添加到购物车
+    $(document).on("click",'.shopcar-btn',function(){
+        var codeid=$(this).attr('codeid');
+        $.getJSON('{WEB_PATH}/mobile/ajax/addShopCart/'+codeid+'/1',function(data){
+            if(data.code==1){
+                addsuccess('添加失败');
+            }else if(data.code==0){
+                addsuccess('添加成功');
+            }return false;
+        });
+    });
+    function addsuccess(dat){
+        $("#pageDialogBG .Prompt").text("");
+        var w=($(window).width()-255)/2,
+            h=($(window).height()-45)/2;
+        $("#pageDialogBG").css({top:h,left:w,opacity:0.8});
+        $("#pageDialogBG").stop().fadeIn(1000);
+        $("#pageDialogBG .Prompt").append('<s></s>'+dat);
+        $("#pageDialogBG").fadeOut(1000);
+        //购物车数量
+        $.getJSON('{WEB_PATH}/mobile/ajax/cartnum',function(data){
+            $("#btnCart").append('<em>'+data.num+'</em>');
+        });
+    }
+    //跳转页面
+    var gt='.goodsList span,.goodsList h2,.goodsList .Progress-bar';
+    $(document).on('click',gt,function(){
+        var id=$(this).attr('id');
+        if(id){
+            window.location.href="{WEB_PATH}/mobile/mobile/item/"+id;
+        }
+    });
+
+});
+
+</script>
+
+<script language="javascript" type="text/javascript">
+
+  var Path = new Object();
+
+  Path.Skin="{G_TEMPLATES_STYLE}";  
+
+  Path.Webpath = "{WEB_PATH}";
+
+  Path.imgpath = "{G_WEB_PATH}/data";
+
+  
+
+var Base={head:document.getElementsByTagName("head")[0]||document.documentElement,Myload:function(B,A){this.done=false;B.onload=B.onreadystatechange=function(){if(!this.done&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){this.done=true;A();B.onload=B.onreadystatechange=null;if(this.head&&B.parentNode){this.head.removeChild(B)}}}},getScript:function(A,C){var B=function(){};if(C!=undefined){B=C}var D=document.createElement("script");D.setAttribute("language","javascript");D.setAttribute("type","text/javascript");D.setAttribute("src",A);this.head.appendChild(D);this.Myload(D,B)},getStyle:function(A,B){var B=function(){};if(callBack!=undefined){B=callBack}var C=document.createElement("link");C.setAttribute("type","text/css");C.setAttribute("rel","stylesheet");C.setAttribute("href",A);this.head.appendChild(C);this.Myload(C,B)}}
+
+function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
+
+Base.getScript('{G_TEMPLATES_MOBILE_JS}/Bottom.js?v='+GetVerNum());
+
+</script>
+</div>
+</body>
+</html>
+<style>
+#pageDialogBG{-webkit-border-radius:5px; width:255px;height:45px;color:#fff;font-size:16px;text-align:center;line-height:45px;}
+</style>
+<div id="pageDialogBG" class="pageDialogBG">
+<div class="Prompt"></div>
+</div>

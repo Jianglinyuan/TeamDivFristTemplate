@@ -2,80 +2,191 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
-    <title>邀请管理 - {wc:$webname}触屏版</title>
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-    <meta content="telephone=no" name="format-detection" />
+ <title>邀请管理 - {wc:$webname}触屏版</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="apple-mobile-web-app-title" content="一元购">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
 
-    <link href="{G_TEMPLATES_MOBILE_CSS}/comm.css?v=130715" rel="stylesheet" type="text/css" />
-    <link href="{G_TEMPLATES_MOBILE_CSS}/member.css?v=130726" rel="stylesheet" type="text/css" />
-    <link href="{G_TEMPLATES_MOBILE_CSS}/invite.css?v=130726" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/ZeroClipboard.js"></script>
-    <script src="{G_TEMPLATES_MOBILE_JS}/jquery190.js" language="javascript" type="text/javascript"></script>
+
+<meta content="{G_TEMPLATES_STYLE}/mobile/images/touch-icon.png" itemprop="image">
+
+<link rel="apple-touch-icon" href="{G_TEMPLATES_STYLE}/mobile/images/touch-icon.png" /><link href="{G_TEMPLATES_MOBILE_CSS}/comm.css" rel="stylesheet" type="text/css" />
+<link href="{G_TEMPLATES_MOBILE_CSS}/member.css?v=1" rel="stylesheet" type="text/css" />
+<script src="{G_TEMPLATES_MOBILE_JS}/jquery190.js" language="javascript" type="text/javascript"></script>
+<link href="{G_TEMPLATES_MOBILE_CSS}/help.css?v=130726001" rel="stylesheet" type="text/css" />
+ <link href="{G_TEMPLATES_STYLE}/mobile/new/member.css?v=130726" rel="stylesheet" type="text/css" />
+ <link href="{G_TEMPLATES_STYLE}/mobile/new/comm.css?v=130726" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
-<div class="h5-yygcms-v11">
-    
-<!-- 栏目页面顶部 -->
 
+<div class="wrapper m_share">
+	<div class="shareCon">
+		<div class="m_banner"></div>
+		<dl>
+			
 
-<!-- 内页顶部 -->
-
-    <header class="g-header">
-        <div class="head-l">
-	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
+			
+				<dt>邀请好友成功参与云购后，即可获得6%的高额佣金！</dt>
+				<dd><a id="btnShare" href="javascript:;" class="orangeBtn">立即赚钱</a></dd>
+				<dd>邀请好友：<em class="orange">
+						{wc:$involvedtotal}</em>
+				</dd>
+			
+		</dl>
+	</div>
+		
+<div class="m_popUp" id="m_popUp" style="visibility:hidden;">
+    <div class="m_guide">
+        <span></span>
+        <div class="m_how">
+            <h4>怎么赚钱？</h4>
+            <p>1: 点击本页面右上角的三个点的图标</p>
+            <p>2: 选择[发送给朋友]或[分享到朋友圈]</p>
+            <p>3: 经您邀请的好友，成功参与云购后，您可获得好友消费额6%的佣金奖励</p>
         </div>
-        <h2>邀请管理</h2>
-        <div class="head-r">
-	        <a href="{WEB_PATH}/mobile/mobile" class="z-Home"></a>
-        </div>
-    </header>
-
-    <section class="clearfix g-member">
-        <div class="clearfix m-round m-name">
-            <div class="fl f-Himg">
-                <a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$member['uid']}" class="z-Himg">
-                    <img src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($member['uid'],'img')}" border=0/></a>
-                <span class="z-class-icon01 gray02"><s></s>{wc:$member['yungoudj']}</span>
-            </div>
-            <div class="m-name-info"><p class="u-name">
-                <b class="z-name gray01">{wc:fun:get_user_name($member['uid'])}</b><em>({wc:$member['mobile']})</em></p>
-                <ul class="clearfix u-mbr-info"><li>可用福分 <span class="orange">{wc:$member['score']}</span></li>
-                    <li>经验值 <span class="orange">{wc:$member['jingyan']}</span></li>
-                    <li>余额 <span class="orange">￥{wc:$member['money']}</span>
-                        <a href="{WEB_PATH}/mobile/home/userrecharge" class="fr z-Recharge-btn">去充值</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="R-content">
-            <div class="member-t"><h2>邀请好友</h2></div>
-
-            <div id="divInvited" class="success-invitation gray02"  >
-                <p>复制链接邀请好友赚提成！ <a target="_blank" href="" class="blue">详情请电脑端登录进行了解&gt;&gt;</a></p>
-                <span><input id="txtInfo"  style="width:80%;height:20px; " value="1元就能买IPhone 6哦，快去看看吧！ {WEB_PATH}/register/{wc:$uid}" onpaste="return false" type="text"><span id="d_clip_container"><!--button id="d_clip_button" class="">复制</button--></span></span>
-
-            </div>
-
-            <div id="divInviteInfo" class="get-tips gray01" style="">成功邀请 <span class="orange">{wc:$involvedtotal}</span> 位会员注册，已有 <span class="orange">{wc:$involvednum}</span> 位会员参与{wc:fun:_cfg('web_name_two')}</div>
-            <div id="divList" class="list-tab SuccessCon"><ul class="listTitle"><li class="w200">用户名</li><li class="w200">时间</li><li class="w200">邀请编号</li><li class="w200">消费状态</li></ul>
-                {wc:if $involvedtotal!=0}
-                {wc:loop $invifriends $key $val}
-                <ul><li class="w200">  <a href="{WEB_PATH}/uname/{wc:fun:idjia($val['uid'])}" target="_blank" class="blue">{wc:$val['sqlname']}</a></li>
-                    <li class="w200">{wc:fun:date('Y.m.d H:i:s',$val['time'])}</li>
-                    <li class="w200">{wc:fun:idjia($val['uid'])}</li>
-                    <li class="w200">{wc:$records[$val['uid']]}</li>
-                </ul>
-                {wc:loop:end}
-                {wc:else}
-                <div class="tips-con"><i></i>您还未有邀请谁哦</div>
-            </div>
-            {wc:if:end}
-        </div>
-        <div id="divPageNav" class="page_nav"></div>
+    </div>
 </div>
-    </section>
+<div class="helpCon">
+<div class="helpMain m-round">
+<div class="helpInfo">
+<dt>
+<h3 style="color: #fc3571;">如何邀请？</h3>
+</dt>
+<dd class="helpBox">
+　　您可以将该页面或下面的网址链接分享给您的朋友，近在眼前的朋友可以直接扫下面的二维码哦，是不是萌萌哒！
+<br>
+<p style="text-align: center;padding-top:5px;">
+<input type="text" value="{WEB_PATH}/mobile/user/register/{wc:$uid}/" style="color: #fc3571;font-size: 16px;text-align: center;width: 100%;ime-mode: disabled" id="share_url" />
+</p>
+
+
+<p style="text-align: center;padding-top:5px;">
+
+<img src="{G_WEB_PATH}/qzcode.php?url={WEB_PATH}/mobile/user/register/{wc:$uid}/" style="width:280px;" />
+
+
+
+</p>
+
+
+
+
+
+<p style="text-align: center;padding-top:5px;">
+
+
+<!--a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={WEB_PATH}/mobile/user/register/{wc:$uid}/" class="btn">分享到QQ空间</a>
+
+<a href="http://v.t.sina.com.cn/share/share.php?title=1元买苹果？注册就送卡密，这一切都是真的，骗人是小狗！&url={WEB_PATH}/mobile/user/register/{wc:$uid}/" class="btn">分享到新浪微博</a-*-->
+
+<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={WEB_PATH}/mobile/user/register/{wc:$uid}/" class="btn">分享到QQ空间</a>
+<a href="http://v.t.sina.com.cn/share/share.php?title=1元买苹果？注册就送卡密，这一切都是真的，骗人是小狗！&url={WEB_PATH}/mobile/user/register/{wc:$uid}/" class="btn">分享到新浪微博</a>
+</p>
+</dd>
+</div>
+</div>
+</div>
+<div class="helpCon">
+<div class="helpMain m-round">
+<div class="helpInfo">
+<dt>
+<h3 style="color: #fc3571;">活动规则</h3>
+</dt>
+<dd class="helpBox">
+自己不可以邀请自己获取佣金，对于查实的作弊行为，取消邀请佣金的资格并清除您的福分账户。借助网站及其他平台，恶意获取佣金，一经查实，扣除一切佣金，清除福分账户且封号。
+</dd>
+</div>
+</div>
+</div>
+<div class="helpCon">
+<div class="helpMain m-round">
+<div class="helpInfo">
+<dt>
+<h3 style="color: #fc3571;">什么是福分？</h3>
+</dt>
+<dd class="helpBox">
+购物时可直接使用福分抵扣现金进行支付！100福分可抵扣1元。
+</dd>
+</div>
+</div>
+</div>
+<div class="helpCon">
+<div class="helpMain m-round">
+<div class="helpInfo">
+<dt>
+<h3 style="color: #fc3571;">佣金有何用？</h3>
+</dt>
+<dd class="helpBox">
+佣金可以直接充值至余额内，满100元后可以申请提现哦。
+</dd>
+</div>
+</div>
+</div>
+
+
+<div class="m-round m-member-nav">
+<ul>
+	    <li><a href="{WEB_PATH}/mobile/invite/commissions/"><b class="z-arrow"></b>佣金明细</a></li>
+			    <li><a href="{WEB_PATH}/mobile/invite/cashout/"><b class="z-arrow"></b>申请提现</a></li>
+			    <li><a href="{WEB_PATH}/mobile/invite/record/"><b class="z-arrow"></b>提现记录</a></li>
+</ul>
+</div>
+</section>
+<script>
+
+var shareData = {
+title: '一元云购物 - 梦想成真！', // 分享标题
+desc: '1元就能买到苹果iphone6s手机哦！快去看看吧！注册就送2元！', // 分享描述
+link: '{WEB_PATH}/mobile/user/register/{wc:$uid}/', // 分享链接
+imgUrl: '{G_TEMPLATES_STYLE}/mobile/images/touch-icon.png', // 分享图标
+success: function () {},
+cancel: function () {}
+};
+$('#share_url').bind('input propertychange', function(){
+if ("{WEB_PATH}/mobile/user/register/{wc:$uid}/" != $(this).val() ) {
+$(this).val("{WEB_PATH}/mobile/user/register/{wc:$uid}/");
+}
+});
+</script>
+{wc:if $wx}
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" language="javascript" type="text/javascript"></script>
+<script type="text/javascript">
+	wx.config({
+		appId: '{wc:$config['appId']}',
+		timestamp: {wc:$config['timestamp']},
+		nonceStr: '{wc:$config['nonceStr']}',
+		signature: '{wc:$config['signature']}',
+		jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone']
+	});
+	wx.ready(function(){
+		wx.onMenuShareAppMessage(shareData);
+		wx.onMenuShareTimeline(shareData);
+		wx.onMenuShareQQ(shareData);
+		wx.onMenuShareWeibo(shareData);
+		wx.onMenuShareQZone(shareData);
+	});
+</script>
+{wc:if:end}
+<script type="text/javascript">
+$("#btnShare").click(
+    function(e)
+    {
+        e.stopPropagation();
+        e.preventDefault();
+        $("#m_popUp").css("visibility","visible");
+    }
+);
+$("#m_popUp").click(
+    function(e)
+    {
+        if($("#m_popUp").is(":visible")) $("#m_popUp").css("visibility","hidden");
+    }
+);
+</script>
     
 {wc:templates "mobile/index","footer"}
 <script language="javascript" type="text/javascript">
@@ -87,26 +198,7 @@ var Base={head:document.getElementsByTagName("head")[0]||document.documentElemen
 function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
 Base.getScript('{G_TEMPLATES_MOBILE_JS}/Bottom.js');
 </script>
-<script>
-    var clip = null;
-    function copy(id){ return document.getElementById(id); }
-    function initx(){
-        clip = new ZeroClipboard.Client();
-        clip.setHandCursor(true);
-        ZeroClipboard.setMoviePath("{G_TEMPLATES_STYLE}/js/ZeroClipboard.swf");
-        clip.addEventListener('mouseOver',function (client){
-            clip.setText(copy('txtInfo').value );
-        });
-        clip.addEventListener('complete',function(client,text){
-            alert("邀请复制成功");
-        });
-        clip.glue('d_clip_button','d_clip_container');
-    }
-    $(function(){
-        initx();
-    })
 
-</script>
 </div>
 </body>
 </html>
