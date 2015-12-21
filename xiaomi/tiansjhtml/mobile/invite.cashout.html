@@ -22,19 +22,16 @@
 <!-- 内页顶部 -->
 
     <header class="g-header">
-        <div class="head-l">
+        <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
         </div>
         <h2>申请提现</h2>
-        <div class="head-r">
-	        <a href="{WEB_PATH}/mobile/mobile" class="z-Home"></a>
-        </div>
     </header>
 
     <section class="clearfix g-member">
         <div class="clearfix m-round m-name">
             <div class="fl f-Himg">
-                <a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$member['uid']}" class="z-Himg">
+                <a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$member['uid']}/" class="z-Himg">
                     <img src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($member['uid'],'img')}" border=0/></a>
                 <span class="z-class-icon01 gray02"><s></s>{wc:$member['yungoudj']}</span>
             </div>
@@ -43,14 +40,14 @@
                 <ul class="clearfix u-mbr-info"><li>可用福分 <span class="orange">{wc:$member['score']}</span></li>
                     <li>经验值 <span class="orange">{wc:$member['jingyan']}</span></li>
                     <li>余额 <span class="orange">￥{wc:$member['money']}</span>
-                        <a href="{WEB_PATH}/mobile/home/userrecharge" class="fr z-Recharge-btn">去充值</a></li>
+                        <a href="{WEB_PATH}/mobile/home/userrecharge/" class="fr z-Recharge-btn">去充值</a></li>
                 </ul>
             </div>
         </div>
         <div class="R-content">
             <div class="subMenu">
                 <a id="linkApply" class="current">提现申请</a>
-                <a id="linkRecharge">充值到{wc:fun:_cfg('web_name_two')}账户</a>
+                <a id="linkRecharge">充值到账户</a>
             </div>
 
             <div class="total">
@@ -95,7 +92,7 @@
                     </div>
                 </form>
             </div>
-            <div id="divSQCZ" class="Apply-con recharge" style="display:none;">
+            <div id="divSQCZ" class="Apply-con recharge">
                 <form name="form2" action="" method="post">
                     <dl>
                         <dt>当前可充值金额：</dt>
@@ -103,7 +100,7 @@
                     </dl>
                     <dl>
                         <dt>申请充值金额：</dt>
-                        <dd><input id="txtCZMoney" name="txtCZMoney" type="text" onKeyUp="value=value.replace(/\D/g,'')" class="inp-money txtAri" value="" tip="请输入充值金额"/><b>元</b>&nbsp;<span class="gray02" id="tip7">以整数为单位提取</span></dd>
+                        <dd><input id="txtCZMoney" name="txtCZMoney" type="text" onKeyUp="value=value.replace(/\D/g,'')" class="inp-money txtAri" value="" tip="请输入充值金额"/><b>元</b>&nbsp;<span class="gray02" id="tip7">整数为单位提取</span></dd>
                     </dl>
 
                     <div class="Apply-button">
@@ -288,9 +285,9 @@ Base.getScript('{G_TEMPLATES_MOBILE_JS}/Bottom.js');
       $("#txtCZMoney").blur(function(){
           var CZMoney=trim($("#txtCZMoney").val());
           if(CZMoney==''){
-              $("#tip7").html("<font color='#FF6600'>*&nbsp;&nbsp;请输入提现金额</font>");
+              $("#tip7").html("<font color='#cc0033'>*&nbsp;&nbsp;请输入提现金额</font>");
           }else if(CZMoney>{wc:$cashouthdtotal}){
-              $("#tip7").html("<font color='#FF6600'>*&nbsp;&nbsp;输入额超出可提现金额</font>");
+              $("#tip7").html("<font color='#cc0033'>*&nbsp;&nbsp;输入额超出可提现金额</font>");
               $(this).val("");
           }else{
               $("#tip1").html("");
@@ -304,7 +301,7 @@ Base.getScript('{G_TEMPLATES_MOBILE_JS}/Bottom.js');
           var CZMoney=trim($("#txtCZMoney").val());
 
           if(CZMoney==''){
-              $("#tip7").html("<font color='#FF6600'>*&nbsp;&nbsp;请输入充值金额</font>");
+              $("#tip7").html("<font color='#cc0033'>*&nbsp;&nbsp;请输入充值金额</font>");
               return false;
           }else{
               return true;

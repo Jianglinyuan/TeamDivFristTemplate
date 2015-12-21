@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head><title>
@@ -11,20 +9,17 @@
 <script id="pageJS" data="{G_TEMPLATES_MOBILE_JS}/MpostList.js" language="javascript" type="text/javascript"></script></head>
 <body>
 <div class="h5-yygcms-v1" id="loadingPicBlock">
-    
+
 <!-- 栏目页面顶部 -->
 
 
 <!-- 内页顶部 -->
 
     <header class="g-header">
-        <div class="head-l">
-	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
+        <div class="head-r">
+	        <a href="javascript:;" onclick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
         </div>
         <h2>我的晒单</h2>
-        <div class="head-r">
-	        <a href="{WEB_PATH}/mobile/home" class="z-Member"></a>
-        </div>
     </header>
 
     <div class="g-snav m_listNav">
@@ -37,11 +32,12 @@
     </section>
     <section id="divUnPost" class="clearfix g-Single-lst z-minheight" style="display:none;">
         <ul>
+     
         </ul>
     </section>
     <div id="divPostLoad" class="loading"><b></b>正在加载</div>
     <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;">点击加载更多</a>
-    
+
 {wc:templates "mobile/index","footer"}
 <script language="javascript" type="text/javascript">
   var Path = new Object();
@@ -52,7 +48,7 @@ var Base={head:document.getElementsByTagName("head")[0]||document.documentElemen
 function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
 Base.getScript('{G_TEMPLATES_MOBILE_JS}/Bottom.js?v='+GetVerNum());
 </script>
- 
+
 </div>
 </body>
 </html>

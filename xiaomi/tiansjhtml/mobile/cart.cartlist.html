@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +23,7 @@
 <!-- 内页顶部 -->
 
     <header class="g-header">
-        <div class="head-l">
+        <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
         </div>
         <h2>购物车</h2>
@@ -48,11 +46,11 @@
 				   $buyshopmoney+=$Mcartlist[$val['id']]['num'] * $Mcartlist[$val['id']]['money'];
                 {wc:php:end}
 					<li>
-						<a class="fl u-Cart-img" href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}">
+						<a class="fl u-Cart-img" href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/">
 							<img src="{G_TEMPLATES_STYLE}/mobile/images/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$val['thumb']}" border="0" alt=""/>
 						</a>
 						<div class="u-Cart-r">
-							<p class="z-Cart-tt"><a href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}" class="gray6">(第{wc:$val['qishu']}期){wc:$val['title']}</a></p>
+							<p class="z-Cart-tt"><a href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/" class="gray6">(第{wc:$val['qishu']}期){wc:$val['title']}</a></p>
 							<ins class="z-promo gray9">剩余<em class="arial">{wc:$val['zongrenshu']-$val['canyurenshu']}</em>人次</ins>
 							<p class="gray9">总共{wc:fun:_cfg('web_name_two')}：<em class="arial">{wc:$Mcartlist[$val['id']]['num']}</em>人次/<em class="orange arial">￥{wc:$Mcartlist[$val['id']]['money']}</em></p>
 							<p class="f-Cart-Other">

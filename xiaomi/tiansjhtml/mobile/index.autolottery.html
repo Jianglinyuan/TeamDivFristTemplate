@@ -26,7 +26,7 @@
 <!-- 内页顶部 -->
 
     <header class="g-header">
-        <div class="head-l">
+        <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
         </div>
         <h2>限时揭晓</h2>
@@ -35,8 +35,8 @@
 
         <nav class="limit-nav">
 		<ul>
-			<li class="limit-navCur" onClick="location.href='{WEB_PATH}/mobile/autolottery'">今日揭晓</li>
-			<li class="" onClick="location.href='{WEB_PATH}/mobile/autolottery/next'">明日限时</li>
+			<li class="limit-navCur" onClick="location.href='{WEB_PATH}/mobile/autolottery/'">今日揭晓</li>
+			<li class="" onClick="location.href='{WEB_PATH}/mobile/autolottery/next/'">明日限时</li>
 		</ul>
 	</nav>
         <!-- 焦点图 -->
@@ -69,14 +69,14 @@
                     <span class="f-limit-time-date">已揭晓</span>
                 </div>
                 <div class="limt-pic">
-                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}">
+                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/">
                         <img border="0" src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}"
                         />
                     </a>
                 </div>
                 <div class="limit-bd-con">
                     <p class="z-limit-tt">
-                        <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}" class="gray6 z-tt">
+                        <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/" class="gray6 z-tt">
                             (第{wc:$shop['qishu']}期){wc:$shop['title']}
                         </a>
                     </p>
@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <div class="clearfix gray9 limit-user">
-                    <a class="fl z-Limg" href="location.href='{WEB_PATH}/uname/{wc:fun:idjia($shop['q_uid'])}">
+                    <a class="fl z-Limg" href="location.href='{WEB_PATH}/uname/{wc:fun:idjia($shop['q_uid'])}/">
                         <s></s>
                         <img border="0" src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($shop['q_uid'],'img')}">
                     </a>
@@ -128,14 +128,14 @@
                     </span>
                 </div>
                 <div class="limt-pic">
-                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}">
+                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/">
                         <img border="0" src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}"
                         />
                     </a>
                 </div>
                 <div class="limit-bd-con">
                     <p class="z-limit-tt">
-                        <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}" class="gray6 z-tt">
+                        <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/" class="gray6 z-tt">
                             (第{wc:$shop['qishu']}期){wc:$shop['title']}
                         </a>
                     </p>

@@ -19,19 +19,16 @@
 <!-- 内页顶部 -->
 
     <header class="g-header">
-        <div class="head-l">
+        <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
         </div>
         <h2>邀请管理</h2>
-        <div class="head-r">
-	        <a href="{WEB_PATH}/mobile/mobile" class="z-Home"></a>
-        </div>
     </header>
 
     <section class="clearfix g-member">
         <div class="clearfix m-round m-name">
             <div class="fl f-Himg">
-                <a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$member['uid']}" class="z-Himg">
+                <a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$member['uid']}/" class="z-Himg">
                     <img src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($member['uid'],'img')}" border=0/></a>
                 <span class="z-class-icon01 gray02"><s></s>{wc:$member['yungoudj']}</span>
             </div>
@@ -40,16 +37,16 @@
                 <ul class="clearfix u-mbr-info"><li>可用福分 <span class="orange">{wc:$member['score']}</span></li>
                     <li>经验值 <span class="orange">{wc:$member['jingyan']}</span></li>
                     <li>余额 <span class="orange">￥{wc:$member['money']}</span>
-                        <a href="{WEB_PATH}/mobile/home/userrecharge" class="fr z-Recharge-btn">去充值</a></li>
+                        <a href="{WEB_PATH}/mobile/home/userrecharge/" class="fr z-Recharge-btn">去充值</a></li>
                 </ul>
             </div>
         </div>
 	    <div class="m-round m-member-nav">
 		    <ul id="ulFun">
-			    <li><a href="{WEB_PATH}/mobile/invite/friends1"><b class="z-arrow"></b>邀请好友</a></li>
-			    <li><a href="{WEB_PATH}/mobile/invite/commissions"><b class="z-arrow"></b>佣金明细</a></li>
-			    <li><a href="{WEB_PATH}/mobile/invite/cashout"><b class="z-arrow"></b>申请提现</a></li>
-			    <li><a href="{WEB_PATH}/mobile/invite/record"><b class="z-arrow"></b>提现记录</a></li>
+			    <li><a href="{WEB_PATH}/mobile/invite/friends/"><b class="z-arrow"></b>邀请好友</a></li>
+			    <li><a href="{WEB_PATH}/mobile/invite/commissions/"><b class="z-arrow"></b>佣金明细</a></li>
+			    <li><a href="{WEB_PATH}/mobile/invite/cashout/"><b class="z-arrow"></b>申请提现</a></li>
+			    <li><a href="{WEB_PATH}/mobile/invite/record/"><b class="z-arrow"></b>提现记录</a></li>
 		    </ul>
 	    </div>
     </section>
