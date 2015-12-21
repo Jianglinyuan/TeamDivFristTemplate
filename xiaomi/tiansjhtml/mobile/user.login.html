@@ -22,15 +22,11 @@
 
 
 <!-- 内页顶部 -->
-
     <header class="g-header">
-        <div class="head-l">
+        <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
         </div>
         <h2>登录</h2>
-        <div class="head-r">
-	        <a href="{WEB_PATH}/mobile/mobile" class="z-Home"></a>
-        </div>
     </header>
 
         <section>
@@ -46,11 +42,27 @@
                     <li><a href="javascript:;" id="btnLogin" class="nextBtn  orgBtn">登 录</a>
 					
 					<input name="hidLoginForward" type="hidden" id="hidLoginForward" value="{WEB_PATH}/mobile/home" /></li>
-                    <li class="rSelect"><!-- <a href="FindPassword.html">忘记密码？</a> -->
-					<b></b><a href="{WEB_PATH}/mobile/user/register" class="nextBtn  orgBtn">新用户注册</a></li>
+            
+					<b></b><a href="{WEB_PATH}/mobile/user/register/" class="nextBtn  orgBtn">新用户注册</a></li>
+		
+				       <li class="rSelect"><a href="{WEB_PATH}/mobile/user/findpassword" style="font-size:14px;color:red;font-weight:bold;">忘记密码？</a>
+                </li>
                 </ul>
-	        </div>
+                
+                <div class="oauth">
+			<a class="wechat" href="{WEB_PATH}/mobile/user/wxlogin">微信登陆</a>
+			{wc:php:start}
+				$conn_cfg = System::load_app_config("connect",'','api');
+			{wc:php:end}
+			{wc:if $conn_cfg['qq']['off']}
+			<a class="qq" href="{WEB_PATH}/api/qqlogin/">QQ登陆</a>
+			{wc:if:end}
+			</div>
+			
+			</div>
         </section>
+		
+    
         
 {wc:templates "mobile/index","footer"}
 <script language="javascript" type="text/javascript">

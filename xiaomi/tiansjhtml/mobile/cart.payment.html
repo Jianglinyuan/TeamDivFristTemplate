@@ -21,7 +21,7 @@
 <!-- 内页顶部 -->
 
     <header class="g-header">
-        <div class="head-l">
+        <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>返回</b></a>
         </div>
         <h2>结算支付</h2>
@@ -40,7 +40,7 @@
 		 {wc:loop $shoplist $key $val}
 
 			<li>
-			    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}" class="gray6">(第{wc:$val['qishu']}期){wc:$val['title']}  ({wc:$val['title2']})</a>
+			    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/" class="gray6">(第{wc:$val['qishu']}期){wc:$val['title']}  ({wc:$val['title2']})</a>
 			    <span>
 			        <em class="orange arial">{wc:$Mcartlist[$val['id']]['num']}</em>人次
 			    </span>
@@ -52,21 +52,31 @@
 		<p class="g-pay-bline"></p>
     </section>
 
-       <section class="clearfix g-Cart">
+        <section class="clearfix g-Cart">
 	    <article class="clearfix m-round g-pay-ment">
 		    <ul id="ulPayway">
-
-			{wc:if $Money >= $MoenyCount}
-				<li class="gray9 z-pay-ye z-pay-grayC">
+			{wc:if $fufen_dikou >= $MoenyCount}
+			    <li class="gray9 z-pay-ff z-pay-grayC">
+				<i id="spPoints" class="z-pay-ment" sel="0"></i>
+				<span>您可以使用福分付款（您的福分：{wc:$member['score']}）</span>
+				</li>
+			{wc:else}
+			     <li class="gray6 z-pay-ff z-pay-grayC">
+				<span>您的福分不足（您的福分：{wc:$member['score']}）</span>
+				</li>
+			{wc:if:end}
+			
+			{wc:if $Money >= $MoenyCount}			
+				<li class="gray9 z-pay-ye z-pay-grayC"> 
 				<i id="spBalance" class="z-pay-ment" sel="0"></i>
 				<span>您可以使用余额付款（账户余额：{wc:$Money} 元）</span>
 				</li>
 			{wc:else}
 
 			    <li class="gray6 z-pay-ye z-pay-grayC">
-			      <a href="{WEB_PATH}/mobile/home/userrecharge" class="z-pay-Recharge">去充值</a>
+			      <a href="{WEB_PATH}/mobile/home/userrecharge/" class="z-pay-Recharge">去充值</a>
 			      <span>您的余额不足（账户余额：{wc:$Money} 元）</span>
-		      </li>
+		      </li> 
 			{wc:if:end}
 		    </ul>
     </article>

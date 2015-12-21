@@ -61,7 +61,7 @@
 
 //打开页面加载数据
 window.onload=function(){
-	glist_json("list/50");
+	glist_json("list/10");
 	//购物车数量
 	$.getJSON('{WEB_PATH}/mobile/ajax/cartnum',function(data){
 		if(data.num){
@@ -84,7 +84,7 @@ function glist_json(parm){
 			var ul='<ul><li>';
 				ul+='<span id="'+data[i].id+'" class="z-Limg"><img src="{G_UPLOAD_PATH}/'+data[i].thumb+'"></span>';
 				ul+='<div class="goodsListR">';
-				ul+='<h2 id="'+data[i].id+'">'+data[i].title+'</h2>';
+					ul+='<h2 id="'+data[i].id+'" onclick="tz('+data[i].id+')">'+data[i].title+'</h2>';
 				ul+='<div class="pRate">';
 				ul+='<div class="Progress-bar" id="'+data[i].id+'">';				
 				ul+='<p class="u-progress"><span class="pgbar" style="width:'+(data[i].canyurenshu / data[i].zongrenshu)*100+'%;"><span class="pging"></span></span></p>';
@@ -154,7 +154,8 @@ $(document).ready(function(){
 		if(id){			
 			$("#divGoodsLoading").css('display','block');
 			$(".goodsList ul").remove();
-			glist_json(id+'/'+parm);
+			// glist_json(id+'/'+parm);
+			window.location.href="{WEB_PATH}/mobile/mobile/glist_category/"+id+"/10/1/";
 		}else{
 			glist_json("list/"+parm);
 			$(".goodsList ul").remove();
@@ -214,6 +215,12 @@ $(document).ready(function(){
 	});
 
 });
+
+function tz(id){
+	if(id){
+		window.location.href="{LOCAL_PATH}/mobile/mobile/item/"+id;
+	}		
+}
 
 </script>
 
