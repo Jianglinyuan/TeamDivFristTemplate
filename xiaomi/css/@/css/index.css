@@ -560,7 +560,7 @@
 	position: relative;
 	top: 2px;
 	_top: 0;
-	padding-left: 5px;
+	padding-right: 5px;
 }
 .g-title h3 span em {
 	margin: 0 3px;
@@ -603,17 +603,17 @@
 }
 .g-list ul {
 	width: 1189px;
-	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
 	display: inline-block;
 }
 .g-list li {
-	float: left;
+	float: right;
 	width: 211px;
 	height: 281px;
 	padding: 20px 13px 10px;
 	border: 1px solid #ddd;
-	border-left: 0 none;
-	margin-left: -1px;
+	border-right: 0 none;
+	margin-right: -1px;
 	overflow: hidden;
 	position: relative;
 }
@@ -1142,11 +1142,12 @@ dl.m-progress dt b {
 	border-top: 1px solid #ddd;
 }
 .soon-list-con {
-	float: left;
+	float: right;
 	width: 297px;
 	height: 398px;
 	position: relative;
 	z-index: 1;
+	text-align: right;
 }
 .soon-list {
 	width: 267px;
@@ -1236,7 +1237,7 @@ dl.m-progress dt b {
 	width: 266px;
 }
 .soon-list li a.u-now, .soon-list li a.u-cart {
-	float: left;
+	float: right;
 	display: block;
 	height: 35px;
 	line-height: 35px;
@@ -1245,12 +1246,12 @@ dl.m-progress dt b {
 	cursor: pointer;
 }
 .soon-list li a.u-now {
-	float: left;
+	float: right;
 	width: 136px;
 	background: #f60;
 	color: #fff;
 	font-size: 16px;
-	margin: 0 7px 0 31px;
+	margin: 0 31px 0 7px;
 	display: inline;
 }
 .soon-list li a.u-now:hover {
@@ -1380,13 +1381,13 @@ dl.m-progress dt b {
 	padding: 10px 0 10px 13px;
 }
 .singleL dd p {
-	float: left;
+	float: right;
 }
 .singleL dd p.u-head {
 	width: 50px;
 	height: 50px;
 	position: relative;
-	margin-right: 10px;
+	margin-left: 10px;
 }
 .singleL dd p.u-head img {
 	width: 50px;
@@ -1406,6 +1407,7 @@ dl.m-progress dt b {
 	width: 215px;
 	padding-top: 5px;
 	overflow: hidden;
+	text-align: right;
 }
 .singleL dd span {
 	display: block;
@@ -1418,13 +1420,13 @@ dl.m-progress dt b {
 	height: 20px;
 	overflow: hidden;
 	display: block;
-	float: left;
+	float: right;
 	word-break: break-all;
 }
 .singleL dd p em {
 	font-size: 12px;
 	color: #bbb;
-	margin-left: 3px;
+	margin-right: 3px;
 }
 .singleL dd p cite {
 	display: block;

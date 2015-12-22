@@ -37,19 +37,18 @@
         </div>
         <div class="footer-info clearfix">
             <div class="info-text">
-                <p>{wc:fun:_cfg("web_name_two")}友情链接：
-					<a href="{WEB_PATH}" target="_blank">{wc:fun:_cfg("web_name_two")}</a><span class="sep">|</span>
-					{wc:getlist sql="select * from `@#_link` where `type`='1'" return="category"}
+                <p>	{wc:getlist sql="select * from `@#_link` where `type`='1'" return="category"}
 					{wc:loop $category $link}
-					<a href="{wc:$link['url']}" target="_blank">{wc:$link['name']}</a><span class="sep">|</span>
+					<span class="sep">|</span><a href="{wc:$link['url']}" target="_blank">{wc:$link['name']}</a>
 					{wc:loop:end}
 					{wc:getlist:end}
+					<span class="sep">|</span><a href="{WEB_PATH}" target="_blank">{wc:fun:_cfg("web_name_two")}</a>：友情链接{wc:fun:_cfg("web_name_two")}
 				</p>
                 <p><a href="{WEB_PATH}" target="_blank" title="ibipai.com"></a>{wc:fun:_cfg('web_copyright')}
 </p>
             </div>
             <div class="info-sites J_globalList">
-                <div class="global-site-current">公益基金：￥<span id="spanFundTotal">0000000.00<i>元</i></span></div>
+                <div class="global-site-current"><i>元</i><span id="spanFundTotal">0000000.00</span>￥：公益基金</div>
             </div>
             <!--div class="info-links">
                 <a href="https://ss.knet.cn/verifyseal.dll?sn=e12033011010015771301369&amp;ct=df&amp;pa=461082" target="_blank"><img src="http://s1.mi.com/zt/12052601/cnnicVerifyseal.png" alt="可信网站"></a>

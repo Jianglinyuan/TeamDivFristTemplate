@@ -791,7 +791,7 @@ a:hover, a:focus {
 	margin-left: 310px
 }
 .offset4 {
-	margin-left: 248px
+	margin-right: 248px
 }
 .offset3 {
 	margin-left: 186px
@@ -996,7 +996,7 @@ a:hover, a:focus {
 .welcome {
 	height: 36px;
 	line-height: 16px;
-	display: inline;
+	float: right;
 }
 .site-topbar {
 	*position: relative;
@@ -1098,7 +1098,7 @@ a:hover, a:focus {
 	width: 189px;
 	margin-bottom: 10px;
 	display: inline-block;
-	margin-left: 30px;
+	margin-left: 45px;
 }
 .site-header .site-logo .logo {
 	z-index: 5;
@@ -1111,8 +1111,6 @@ a:hover, a:focus {
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
-	position: absolute;
-	right: 0px;
 }
 .site-header .site-logo .logo i {
 	display: none;
@@ -1977,11 +1975,12 @@ a:hover, a:focus {
 	color: #000
 }
 .site-footer .col-links {
-	float: left;
+	float: right;
 	_display: inline;
 	width: 165px;
-	margin: 0 0 0 30px;
-	border-right: 1px solid #dfdfdf
+	margin: 0 30px 0 0;
+	border-left: 1px solid #dfdfdf;
+	text-align: right;
 }
 .site-footer .col-links dt {
 	margin-bottom: 10px;
@@ -2015,9 +2014,10 @@ a:hover, a:focus {
 	color: #000
 }
 .site-footer .info-text {
-	float: left;
+	float: right;
 	width: 710px;
-	margin-bottom: 20px
+	margin-bottom: 20px;
+	text-align: right;
 }
 .site-footer .info-text a {
 	color: #333
@@ -2046,10 +2046,11 @@ a:hover, a:focus {
 }
 .site-footer .info-sites {
 	position: relative;
-	float: right;
+	float: left;
 	width: 240px;
 	font-size: 16px;
-	color: #8c8c8c
+	color: #8c8c8c;
+	text-align: right;
 }
 .site-footer .info-sites .global-site-current {
 	width: 218px;
@@ -2722,10 +2723,10 @@ html {
 	overflow-x: hidden;
 }
 .fl {
-	float: left;
+	float: right;
 }
 .fr {
-	float: right;
+	float: left;
 }
 .orange {
 	color: #f60 !important;
@@ -3115,7 +3116,7 @@ a.u-cart:hover {
 }
 .g-progress dl.m-progress dd span.blue {
 	width: 33%;
-	text-align: right;
+	text-align: left;
 }
 .g-progress dl.m-progress dd span em {
 	display: block;
