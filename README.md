@@ -2,7 +2,7 @@
 # 小米模板-Style
 
 @(Divteam)[Teamplate|Bug修复]
-
+~~是branch，不是brancth，挖鼻 @linyuan~~
 #使用说明
  
 - **修改配置文件** ：修改/data/config/templates.inc.php文件下的代码如下：
