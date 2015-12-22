@@ -6,7 +6,7 @@
 	clear:both;
 }
 .period_Open i,.period_Open s,.Period_ArrowBut,.Security li i,.Security li s,.Security li b,.Det_Cart i,.AllRecL i,.AllRecR_T i,.AllRecRCur .AllRecR_close,.SingleR_TC i,.SingleR_TC s,.Comment_smile span i,.Comment_smile span s {
-	background:url(/templates/yg/images/Detailsbg.png) no-repeat;
+	background:url(/templates/xiaomi/images/Detailsbg.png) no-repeat;
 }
 .show_content {
 	zoom:1;
@@ -105,7 +105,7 @@
 	width:46px;
 	height:16px;
 	display:inline-block;
-	background:url(/templates/yg/images/Announced_8.gif) no-repeat;
+	background:url(/templates/xiaomi/images/Announced_8.gif) no-repeat;
 	vertical-align:-3px;
 	vertical-align:0\9;
 	margin-left:3px;
@@ -158,7 +158,7 @@
 	color:#fff;
 	font-family:"微软雅黑";
 	font-size:26px;
-	background:url(/templates/yg/images/Announced_05.png) no-repeat;
+	background:url(/templates/xiaomi/images/Announced_05.png) no-repeat;
 	width:66px;
 	height:66px;
 	padding:15px;
@@ -366,7 +366,7 @@
 	text-align:right;
 }
 .Announced_Frame {
-	background:url(/templates/yg/images/Announced_2.png);
+	background:url(/templates/xiaomi/images/Announced_2.png);
 }
 .Announced_FrameT,.Announced_FrameTin {
 	width:450px;
@@ -374,17 +374,17 @@
 	margin:0 auto;
 	overflow:hidden;
 	text-align:center;
-	background:url(/templates/yg/images/Announced_1.gif) no-repeat;
+	background:url(/templates/xiaomi/images/Announced_1.gif) no-repeat;
 	font-size:25px;
 	color:#fff;
 	line-height:50px;
 	font-family:微软雅黑,宋体;
 }
 .Announced_FrameTin {
-	background:url(/templates/yg/images/Announced_7.gif) no-repeat;
+	background:url(/templates/xiaomi/images/Announced_7.gif) no-repeat;
 }
 .Announced_FrameCode,.Announced_FrameGet,.Announced_FrameBm {
-	background:url(/templates/yg/images/Announced_1.png) no-repeat;
+	background:url(/templates/xiaomi/images/Announced_1.png) no-repeat;
 }
 .Announced_FrameCode {
 	width:428px;
@@ -423,7 +423,7 @@
 	width:40px;
 	height:55px;
 	position:absolute;
-	background:url(/templates/yg/images/Announced_code.png) no-repeat;
+	background:url(/templates/xiaomi/images/Announced_code.png) no-repeat;
 	top:0;
 	left:0;
 }
@@ -573,7 +573,7 @@
 	height:22px;
 }
 .MaOpen s,.MaOff s,.AllRecR_See s {
-	background:url(/templates/yg/images/Detailsbg.png) no-repeat;
+	background:url(/templates/xiaomi/images/Detailsbg.png) no-repeat;
 }
 .MaOpen {
 	border:1px solid #EDEDED;
@@ -879,7 +879,7 @@
 	width:920px;
 	margin:0 auto;
 	zoom:1;
-	background:url(/templates/yg/images/AllRecord_1.png) 0 repeat-y;
+	background:url(/templates/xiaomi/images/AllRecord_1.png) 0 repeat-y;
 }
 .AllReclist {
 	padding-top:6px;
@@ -1172,7 +1172,7 @@
 	border-top:1px dotted #DDD;
 }
 .class-icon01 s,.class-icon02 s,.class-icon03 s,.class-icon04 s,.class-icon05 s,.class-icon06 s,.class-icon07 s {
-	background:url(/templates/yg/images/new-class-icon.png);
+	background:url(/templates/xiaomi/images/new-class-icon.png);
 }
 .class-icon01,.class-icon02,.class-icon03,.class-icon04,.class-icon05,.class-icon06,.class-icon07 {
 	display:inline-block;
@@ -1263,7 +1263,7 @@
 	width:900px;
 }
 .ygRecord div.RecordOnehundred div.FloatBox {
-	background:url("/templates/yg/images/resultArrow01.png") repeat-y scroll 95px 0 transparent;
+	background:url("/templates/xiaomi/images/resultArrow01.png") repeat-y scroll 95px 0 transparent;
 	border:1px solid #FFB882;
 	border-top:none;
 	border-bottom:none;
@@ -1295,14 +1295,14 @@
 	overflow:hidden;
 	padding-left:26px;
 	line-height:31px;
-	background:url(/templates/yg/images/Announced_3.png) 0 8px no-repeat;
+	background:url(/templates/xiaomi/images/Announced_3.png) 0 8px no-repeat;
 }
 .ygRecord .RecordOnehundred .ResultBox p.num4 {
 	height:87px;
 	overflow:hidden;
 	padding-left:26px;
 	line-height:31px;
-	background:url(/templates/yg/images/Announced_3.png) 0 8px no-repeat;
+	background:url(/templates/xiaomi/images/Announced_3.png) 0 8px no-repeat;
 }
 .ygRecord .RecordOnehundred .ResultBox span.rus {
 	color:#fff;
@@ -1662,7 +1662,7 @@ a.go_Shopping12:hover {
 	color:#CCC;
 }
 .Member_Pop_friend s,.Member_Pop_letter i {
-	background:url(/templates/yg/images/star-icon.png);
+	background:url(/templates/xiaomi/images/star-icon.png);
 }
 .Member_Pop_friend,.Member_Pop_letter,.Member_Pop_Has {
 	height:23px;
@@ -1847,8 +1847,8 @@ margin: 30px auto 10px;
 .ico {
 display: inline-block;
 vertical-align: middle;
-background: url('/templates/yg/images/mix-icon.png') no-repeat;
-_background-image: url('/templates/yg/images/mix-icon_ie6.png');
+background: url('/templates/xiaomi/images/mix-icon.png') no-repeat;
+_background-image: url('/templates/xiaomi/images/mix-icon_ie6.png');
 overflow: hidden;
 }
 .ico-text {
@@ -1931,8 +1931,8 @@ color: #de2042;
 font-size: 14px;
 }
 .m-detail-main-codes .deco, .m-detail-period-title-ft, .m-detail-mainTab-resultList .ball {
-background-image: url('/templates/yg/images/mix-icon.png');
-_background-image: url('/templates/yg/images/mix-icon_ie6.png');
+background-image: url('/templates/xiaomi/images/mix-icon.png');
+_background-image: url('/templates/xiaomi/images/mix-icon_ie6.png');
 background-repeat: no-repeat;
 }
 .m-detail-mainTab-resultList .resultRow a {
