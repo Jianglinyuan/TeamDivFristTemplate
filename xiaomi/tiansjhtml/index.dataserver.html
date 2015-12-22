@@ -12,6 +12,7 @@
 	</a><span class="sep">/</span>揭晓详情
 </div>
 <div class="goods-detail container">
+
     <div class="goods-detail-info row clearfix">
 		<div id="divPeriodList" class="show_Period" style="height:99px;">{wc:if count($itemlist)>32}<div class="period_Open"><a class="gray" href="javascript:void(0);">展开<i></i></a></div>{wc:if:end}{wc:$loopqishu}</div>
         <div class="span14 J_mi_goodsPic_block">
@@ -127,31 +128,28 @@
 </div>
 <div class="row goods-detail-desc">
     <div class="span5">
+	{wc:if $sid_code}
             <div class="xm-box goods-recent">
 				<div class="box-hd">
 					<div class="title"> 上期获得者 </div>
 				</div>
-				<div class="box-bd">
-						{wc:if $sid_code}
 			{wc:php:start}
 				$sid_code['q_user'] = unserialize($sid_code['q_user']);
 			{wc:php:end}
 			{wc:if $sid_code['q_showtime']=='N'}
 						<dl>
-						<dt><a rel="nofollow" href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank"><img width="80" height="80" alt="" src="{G_UPLOAD_PATH}/{wc:$sid_code['q_user']['img']}"></a></dt>
+						<dt style="float: left;margin-right: 5px;"><a rel="nofollow" href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank"><img width="80" height="80" alt="" src="{G_UPLOAD_PATH}/{wc:$sid_code['q_user']['img']}" style="margin-top:5px;border-radius:50%;"></a></dt>
 						<dd class="gray02">
 							<p>恭喜 <a href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank" class="blue">{wc:fun:get_user_name($sid_code['q_uid'])}</a> 获得了本商品</p>
 							{wc:if $sid_go_record['ip']}
-							{wc:fun:get_ip($sid_go_record['id'],'ipcity')}
 							{wc:if:end}
 							<p>揭晓时间：{wc:fun:microt($sid_code['q_end_time'])}</p>
-							<p>幸运拍码：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
+							<p>幸运{wc:fun:_cfg('web_name_two')}码：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
 						</dd>
 					</dl>
 						{wc:if:end}
-			{wc:if:end}
 				</div>
-			</div>
+			{wc:if:end}
             <div class="xm-box goods-alsobuy xm-goods-side-list">
 				<div class="box-hd">
 					<div class="title"> 商品来源 </div>
