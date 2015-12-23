@@ -68,7 +68,7 @@
                      <li class="f-cart"><a target="_blank" href="{WEB_PATH}/member/cart/cartlist" class="u-menus" id="btnMyCart"><i></i><em>0</em></a></li>
                      <li class="f-customer"><a id="btnRigQQ" href="http://wpa.qq.com/msgrd?v=3&uin={wc:fun:_cfg("qq")}&site=qq&menu=yes" target="_blank" class="u-menus"></a></li>
                      <li class="f-edit"><a href="http://wpa.qq.com/msgrd?v=3&uin={wc:fun:_cfg("qq")}&site=qq&menu=yes" target="_blank" class="u-menus"></a></li>
-                     <li class="f-top"><a href="#" class="u-menus"></a></li>
+                     <li class="f-top"><a class="u-menus"></a></li>
                      <li class="f-both-bottom"><a href="javascript:;" class="u-menus"></a></li>
                  </ul>
              </div>
@@ -77,14 +77,20 @@
  </div>
 <script type="text/javascript">
 $(function() {
-$(window).scroll(function () {
+	$(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
             $('#divRTool').fadeIn(1000);
         } else {
             $('#divRTool').fadeOut(1000);
         }
     });
-	})
+
+	$('.f-top .u-menus').click(function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 600);
+	});
+})
 </script>
 <script type="text/javascript">
 $(function(){
