@@ -32,9 +32,9 @@
                     <dt id="goodsName" style="
     text-align: right;
 ">{wc:$item['title']}</dt>
-                    <dd class="goods-info-head-userfaq">
+                    <dd class="goods-info-head-userfaq" style=''>
                         <ul>
-                            <li class="mail"><i>简介</i>{wc:$item['title2']}</li>
+                            <li class="mail" style="text-align:right;">{wc:$item['title2']}<i>简介</i></li>
                         </ul>
                     </dd>
 					<dd class="goods-info-head-colors clearfix">
@@ -47,7 +47,7 @@
                 </dl>
             </dt>
             <dd class="goods-info-head-actlist">
-				<ul>
+				<ul style="float:right;">
 					<li>正规来源保障</li>
 					<li>100%正品</li>
 					<li>闪电发货</li>
@@ -57,30 +57,13 @@
             <dd class="goods-info-foot">
                 <div class="Pro_Record">
 				<ul id="ulRecordTab" class="Record_tit">
-					<li class="NewestRec Record_titCur">最新{wc:fun:_cfg('web_name_two')}记录</li>
-					<li class="MytRec">我的{wc:fun:_cfg('web_name_two')}记录</li>
 					<li class="Explain orange">{wc:fun:_cfg('web_name_two')}是什么？</li>
+					<li class="MytRec">我的{wc:fun:_cfg('web_name_two')}记录</li>
+					<li class="NewestRec Record_titCur">最新{wc:fun:_cfg('web_name_two')}记录</li>
 				</ul>
-				<div class="Newest_Con hide" style="display: block;">
-					<ul>
-						{wc:loop $us $user}
-						<li>
-						<a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank">
-						{wc:if !empty($user['uphoto'])}
-							<img src="{G_UPLOAD_PATH}/{wc:$user['uphoto']}" border="0" alt="" width="20" height="20">
-						{wc:else}
-							<img src="{G_UPLOAD_PATH}/photo/member.jpg" border="0" alt="" width="20" height="20">
-						{wc:if:end}
-						</a>					
-						<a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank" class="blue">{wc:$user['username']}</a>
-						{wc:if $user['ip']}
-						({wc:fun:get_ip($user['id'],'ipcity')}) 
-						{wc:if:end}				
-						{wc:fun:_put_time($user['time'])} {wc:fun:_cfg('web_name_two')}了
-						<em class="Fb gray01">{wc:$user['gonumber']}</em>人次</li>
-						{wc:loop:end}
-					</ul>
-					<p style=""><a id="btnUserBuyMore" href="#divBuyRecord" class="gray01">查看更多</a></p>					
+				<div class="Newest_Con hide" style="display:none;">
+					<p class="MsgIntro">{wc:fun:_cfg("web_name_two")}购是指只需1元就有机会买到想要的商品。即每件商品被平分成若干"等份"出售，每份1元，当一件商品所有"等份"售出后，根据{wc:fun:_cfg('web_name_two')}规则产生一名幸运者，该幸运者即可获得此商品。</p>
+					<p class="MsgIntro1">{wc:fun:_cfg("web_name_two")}以"一元{wc:fun:_cfg('web_name_two')}，{wc:fun:_cfg('web_name_two')}出惊喜"为宗旨，力求打造一个100%公平公正、100%正品保障、寄娱乐与购物一体化的新型购物网站。<a href="{WEB_PATH}/help/1" class="blue" target="_blank">查看详情&gt;&gt;</a></p>
 				</div>
 				<div class="My_Record hide" style="display:none;">
 					{wc:if uidcookie('uid')}
@@ -94,13 +77,33 @@
 					{wc:else}
 					<div class="My_RecordReg">
 						<b class="gray01">看不到？是不是没登录或是没注册？ 登录后看看</b>
-						<a href="{WEB_PATH}/member/user/login" class="My_Signbut">登录</a><a href="{WEB_PATH}/member/user/register" class="My_Regbut">注册</a>
+						<a href="{WEB_PATH}/member/user/register" class="My_Regbut">注册</a>
+						<a href="{WEB_PATH}/member/user/login" class="My_Signbut">登录</a>
 					</div>
 					{wc:if:end}
 				</div>
-				<div class="Newest_Con hide" style="display:none;">
-					<p class="MsgIntro">{wc:fun:_cfg("web_name_two")}购是指只需1元就有机会买到想要的商品。即每件商品被平分成若干"等份"出售，每份1元，当一件商品所有"等份"售出后，根据{wc:fun:_cfg('web_name_two')}规则产生一名幸运者，该幸运者即可获得此商品。</p>
-					<p class="MsgIntro1">{wc:fun:_cfg("web_name_two")}以"一元{wc:fun:_cfg('web_name_two')}，{wc:fun:_cfg('web_name_two')}出惊喜"为宗旨，力求打造一个100%公平公正、100%正品保障、寄娱乐与购物一体化的新型购物网站。<a href="{WEB_PATH}/help/1" class="blue" target="_blank">查看详情&gt;&gt;</a></p>
+								<div class="Newest_Con hide" style="display: block;">
+					<ul style="text-align:right;">
+						{wc:loop $us $user}
+						<li>				
+
+人次
+						<em class="Fb gray01">{wc:$user['gonumber']}</em>了
+												{wc:if $user['ip']}
+						({wc:fun:get_ip($user['id'],'ipcity')}) 
+						{wc:if:end}				
+						 {wc:fun:_cfg('web_name_two')}{wc:fun:_put_time($user['time'])}
+						<a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank" class="blue">{wc:$user['username']}</a>
+						{wc:if !empty($user['uphoto'])}
+							<img src="{G_UPLOAD_PATH}/{wc:$user['uphoto']}" border="0" alt="" width="20" height="20">
+						{wc:else}
+							<img src="{G_UPLOAD_PATH}/photo/member.jpg" border="0" alt="" width="20" height="20">
+						{wc:if:end}
+						</a>	
+						{wc:loop:end}</li>
+						<a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank">
+					</ul>
+					<p style=""><a id="btnUserBuyMore" href="#divBuyRecord" class="gray01">查看更多</a></p>					
 				</div>
 			</div>
             </dd>
@@ -116,14 +119,16 @@
 	<div class="topicitem-mod common-layout">
 <div class="ProductTabNav">
 	<div class="goods-sub-bar " id="divProductNav">
-    <div class="container">
+    <div class="container" style="
+    float: right;
+">
         <div class="row">
             <div class="span5">
                 <dl class="goods-sub-bar-info clearfix">
                     <dt><img src="{G_UPLOAD_PATH}/{wc:$item['thumb']}"></dt>
                     <dd>
                         <strong>{wc:$item['title']}</strong>
-                        <p><em>最低<span class="J_mi_goodsPrice">{wc:$item['yunjiage']}</span>元{wc:fun:_cfg('web_name_two')}</em></p>
+                        <p style="text-align:right;"><em>最低<span class="J_mi_goodsPrice">{wc:$item['yunjiage']}</span>元{wc:fun:_cfg('web_name_two')}</em></p>
                     </dd>
                 </dl>
             </div>
@@ -146,7 +151,7 @@
     <div class="span5">
             <div class="xm-box goods-recent">
 				<div class="box-hd">
-					<div class="title"> 上期获得者 </div>
+					<div class="title" style="text-align:right;"> 上期获得者 </div>
 				</div>
 				<div class="box-bd">
 						{wc:if $sid_code}
@@ -161,8 +166,8 @@
 							{wc:if $sid_go_record['ip']}
 							{wc:fun:get_ip($sid_go_record['id'],'ipcity')}
 							{wc:if:end}
-							<p>揭晓时间：{wc:fun:microt($sid_code['q_end_time'])}</p>
-							<p>幸运拍码：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
+<!-- 							<p>揭晓时间：{wc:fun:microt($sid_code['q_end_time'])}</p>
+ -->							<p>幸运拍码：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
 						</dd>
 					</dl>
 						{wc:if:end}
@@ -185,12 +190,12 @@
             <!-- 商品描述 -->
             <div class="xm-box  goods-detail-box " id="divContent">
                <div class="box-hd">
-                    <ul class="items clearfix J_pro_related_btns">
-                       <li class="current"><a href="#divContent" class="DetailsTCur">商品详情</a></li>
-                       <li><a href="#divBuyRecord" class="">参与记录</a></li>
-
-                       <li><a href="#divPost" class="">商品晒单</a></li>
+                    <ul class="items clearfix J_pro_related_btns" style="float:right;">
                        <li><a href="#divFaq" class="">常见问题</a></li>
+                                              <li><a href="#divBuyRecord" class="">参与记录</a></li>
+                                                                     <li><a href="#divPost" class="">商品晒单</a></li>
+                       <li class="current"><a href="#divContent" class="DetailsTCur">商品详情</a></li>
+
                     </ul>
                </div>
                <div class="box-bd" id="goodsDesc">{wc:$item['content']}</div>
@@ -199,11 +204,11 @@
             <!--S 所有参与记录-->
             <div class="xm-box goods-detail-standard" id="divBuyRecord">
                 <div class="box-hd">
-                    <div class="title">参与记录</div>
+                    <div class="title" style="text-align:right;margin-right: 30px;">参与记录</div>
                 </div>
                 <div class="box-bd">
                     {wc:loop $us2 $user}
-					<div class="AllRecW AllReclist"><div class="AllRecL fl">{wc:fun:microt($user['time'])}<i></i></div>
+					<div class="AllRecW AllReclist">
 						<div class="AllRecR fl">
 							<p class="AllRecR_T">
 								<span name="spCodeInfo" class="AllRecR_Over">
@@ -216,6 +221,7 @@
 								</span>
 							</p>
 						</div>
+						<div class="AllRecL fl">{wc:fun:microt($user['time'])}<i></i></div>
 					</div>
 					{wc:loop:end}
                 </div>
@@ -224,7 +230,7 @@
             <!--S 商品晒单 -->
             <div class="xm-box goods-detail-comment" id="divPost">
                 <div class="box-hd">
-                    <div class="title">商品晒单</div>
+                    <div class="title" style="text-align:right;margin-right: 30px;">商品晒单</div>
                 </div>
                 <div class="box-bd">
 					<iframe id="iframea" src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:878px; border:none;" frameborder="0" scrolling="no"></iframe>
