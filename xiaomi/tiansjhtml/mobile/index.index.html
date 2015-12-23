@@ -95,59 +95,15 @@
 <div class="textnav">  
 </div>
 
- <!--站点公告-->
-<!--section style="display:none;" id="gonggao">
-<div class="m-tt1">
-<h2 class="fl"><a href="">一元购公告</a></h2>
-<div class="fr u-more">
-<a href="" class="u-rs-m1"><b class="z-arrow"></b></a>
-</div>
-</div>
-<article style="margin: 5px;padding: 5px;color: rgb(199, 0, 0);/*text-indent: 2em;*/line-height: 20px; text-align:end;" class="m-round">
-</article>
-</section>
-<script>
-<<<<<<< HEAD
-$('#gonggao').show().find('article').html('1.公告一<br/>2.公告二<br/>3.公告三');
-=======
-$('#gonggao').show().find('article').html('公告一.1<br/>公告二.2<br/>公告三.3');
->>>>>>> master
-</script>
-
-    <!-- 最新揭晓 -->
-    <!--section class="g-main">
-	    <div class="m-tt1">
-		    <h2 class="fl"><a href="{WEB_PATH}/mobile/mobile/lottery">最新揭晓</a></h2>
-		    <div class="fr u-more">
-			    <a href="{WEB_PATH}/mobile/mobile/lottery" class="u-rs-m1"><b class="z-arrow"></b></a>
-		    </div>
-	    </div>
-	    <article class="h5-yygcms-w310 m-round m-lott-li" id="divLottery">
-		    <ul class="clearfix">
-		    {wc:loop $shopqishu $qishu}
-            {wc:php:start}
-            $qishu['q_user'] = unserialize($qishu['q_user']);
-            {wc:php:end}
-			        <li>
-		                <a href="{WEB_PATH}/mobile/mobile/item/{wc:$qishu['id']}" class="u-lott-pic">
-		                    <img src="{G_TEMPLATES_STYLE}/mobile/images/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$qishu['thumb']}" border="0" alt="" />
-		                </a>
-		                <span>恭喜<a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$qishu['q_uid']}" class="blue z-user">{wc:fun:get_user_name($qishu['q_uid'])}</a>获得</span>
-			        </li>
-		        
-			   {wc:loop:end}     
-		        
-		    </ul>
-	    </article>
-    </section>
-    <!-- 今日限时 -->
 <div class="site-header container">
     <div class="site-gd-yg">
         <div class="g-zzyging scroll3">
             <ul id="UserBuyNewList1">
                 {wc:loop $go_record $gorecord}
+
                 <li><span class="fl" style="font-size:12px; color:#fff;">恭喜{wc:fun:get_user_name($gorecord)}获得</span>
                 <p>{wc:$gorecord['shopname']}</p></li>
+
                 {wc:loop:end}
             </ul>
         </div>
@@ -167,11 +123,14 @@ $('#gonggao').show().find('article').html('公告一.1<br/>公告二.2<br/>公�
 </div>
     <section class="g-main">
 	    <div class="m-tt1">
-		    <h2 class="fl"><a href="{WEB_PATH}/mobile/autolottery">بۈگۈنلىك ۋاقىتلىق مەھسۇلات</a></h2>
-		    <div class="fl z-tips">每天10点、15点、22点准时揭晓</div>
-		    <div class="fr u-more">
-			    <a href="{WEB_PATH}/mobile/autolottery/next" class="u-rs-m2"><b class="z-arrow"></b>ئەتىلىك</a>
+
+		    <h2 class="fr" style="margin-right:10px;"><a href="{WEB_PATH}/mobile/autolottery">今日限时</a></h2>
+		    <div class="fr z-tips">每天10点、15点、22点准时揭晓</div>
+		    <div class="fl u-more" style="position: absolute; left: 10px">
+			    <a href="{WEB_PATH}/mobile/autolottery/next" class="u-rs-m2"><b class="z-arrow"></b>明日限时</a>
+
 		    </div>
+
 	    </div>
 	    <article id="autoLotteryBox" class="clearfix h5-1yyg-w310 m-round overflow">
 	        <ul id="divTimerItems" class="slides">
@@ -268,15 +227,15 @@ $('#gonggao').show().find('article').html('公告一.1<br/>公告二.2<br/>公�
     <!-- 热门推荐 -->
     <section class="g-main">
 	    <div class="m-tt1">
-		    <h2 class="fl"><a href="{WEB_PATH}/mobile/mobile/glist">热门推荐</a></h2>
-		    <div class="fr u-more">
+		    <h2 class="fr" style="margin-right:10px;"><a href="{WEB_PATH}/mobile/mobile/glist">热门推荐</a></h2>
+		    <div class="fl u-more" style="left:-40px; position:absolute;">
 			    <a href="{WEB_PATH}/mobile/mobile/glist" class="u-rs-m1"><b class="z-arrow"></b></a>
 		    </div>
 	    </div>
 	    <article class="clearfix h5-yygcms-w310 m-round m-tj-li">
 		    <ul id="ulRecommend">
 		        {wc:loop $shoplistrenqi $renqi}
-			        <li id="{wc:$renqi['id']}">
+			        <li style="float:right;" id="{wc:$renqi['id']}">
 			            <div class="f_bor_tr">
 			                <div class="m-tj-pic">
 			                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$renqi['id']}" class="u-lott-pic">
