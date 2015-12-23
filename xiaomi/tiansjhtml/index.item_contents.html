@@ -1,9 +1,10 @@
 <div class="Progress-bar">
 				<p title="已完成{wc:fun:percent($item['canyurenshu'],$item['zongrenshu'])}"><span style="width:{wc:fun:width($item['canyurenshu'],$item['zongrenshu'],450)}px; display:;"></span></p>
 				<ul class="Pro-bar-li">
-					<li class="P-bar01"><em>{wc:$item['canyurenshu']}</em>已参与人次</li>
+										<li class="P-bar01"><em id="CodeLift">{wc:$syrs}</em>剩余人次</li>
 					<li class="P-bar02"><em id="CodeQuantity">{wc:$item['zongrenshu']}</em>总需人次</li>
-					<li class="P-bar03"><em id="CodeLift">{wc:$syrs}</em>剩余人次</li>
+										<li class="P-bar03"><em>{wc:$item['canyurenshu']}</em>已参与人次</li>
+
 				</ul>
 			</div>
 
@@ -85,19 +86,18 @@
             {wc:if:end}
 			<!-- 限时揭晓end -->
 			<dd class="goods-info-head-intro">
-				<p class="Pro_Detsingle" style="font-size:14px;">最低<b style="color:#999;">{wc:$item['yunjiage']}</b>元{wc:fun:_cfg('web_name_two')}</p>
-				<div id="divNumber" class="Pro_number">
-					我要{wc:fun:_cfg('web_name_two')}
+				<p class="Pro_Detsingle" style="font-size:14px;text-align:right;">最低<b style="color:#999;">{wc:$item['yunjiage']}</b>元{wc:fun:_cfg('web_name_two')}</p>
+				<div id="divNumber" class="Pro_number" style="text-align:right;">
+					人次{wc:fun:_cfg('web_name_two')}
 					<a href="javascript:;" class="num_del num_ban" id="shopsub">-</a>
 					<input style="border:1px solid #CFCFCF" type="text" value="1" maxlength="7" onkeyup="value=value.replace(/\D/g,'')" class="num_dig" id="num_dig"/>
-					<a href="javascript:;" class="num_add" id="shopadd">+</a> 人次
-					<span id="chance" class="gray03"><span style="color:red">建议参与2人次以上，获奖概率更大！</span></span>
+					<a href="javascript:;" class="num_add" id="shopadd">+</a> 我要购买
 				</div>
 				<div style="display:none;" id="hqid">{wc:$item['id']}</div>
 			</dd>
 			<dd class="goods-info-head-cart" id="goodsDetailBtnBox">
-				<div id="divBuy" class="Det_button">
-					<a href="javascript:;" class="btn btn-primary goods-add-cart-btn"><i class="iconfont "></i> 立即{wc:fun:_cfg('web_name_two')}</a>
+				<div id="divBuy" class="Det_button" style="text-align:right;">
 					<a href="javascript:;" class="btn btn-dake goods-collect-btn"><i class="iconfont"></i></a>
+					<a href="javascript:;" class="btn btn-primary goods-add-cart-btn"><i class="iconfont "></i> 立即{wc:fun:_cfg('web_name_two')}</a>
 				</div>
             </dd>
