@@ -28,9 +28,8 @@
 .site-header .site-gd-yg .g-zzyging{width:480px;float:left; margin-left: 0px; height: 30px; overflow: hidden;}
 .site-header .site-gd-yg .g-zzyging ul{}
 .site-header .site-gd-yg .g-zzyging ul li{height: 35px;width: 550px;margin: 1px;padding: 2px;border-top:none;}
-.site-header .site-gd-yg .g-zzyging ul li span.fl{width:70px; margin:3px;padding:2px;height: 30px;top: 0;float:left;text-align:right;}
-.site-header .site-gd-yg .g-zzyging ul li span.fl a{color:#fff;}
-.site-header .site-gd-yg .g-zzyging ul li p,.site-header .site-gd-yg .g-zzyging ul li p a{width: 460px; float: right; margin: 1px; padding:2px; height: 30px;white-space:nowrap; color: #eee;}
+.site-header .site-gd-yg .g-zzyging ul li span.fl{width:70px; margin:3px;padding:0px;height: 30px;top: 0;float:left;text-align:right;}
+.site-header .site-gd-yg .g-zzyging ul li p{width: 460px; float: right; margin: 1px; padding:2px; height: 30px;white-space:nowrap; color: #eee;}
 </style>
 <body>
 <div class="h5-yygcms-v1" id="loadingPicBlock">    
@@ -56,7 +55,7 @@
 				</div>
 				<div class="textnavword">
 
-				<p style="text-align:center;font-size: 14px;color:#bbb">在线充值</p>
+				<p style="text-align:center;font-size: 14px;color:#bbb">پۇل قاچىلاش</p>
 
 				
 				</div>
@@ -67,7 +66,7 @@
 				</div>
 				<div class="textnavword">
 
-				<p style="text-align:center;font-size: 14px;color:#bbb;">新手指南</p>
+				<p style="text-align:center;font-size: 14px;color:#bbb;">كۆرسەتكۈچ</p>
 
 				
 				</div>
@@ -77,7 +76,7 @@
 					<a href="{G_WEB_PATH}/?/mobile/shaidan/"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava2.png"></a>
 				</div>
 				<div class="textnavword">
-				<p style="text-align:center;font-size: 14px;color:#bbb">幸运晒单</p>
+				<p style="text-align:center;font-size: 14px;color:#bbb">تەلەيلىكلەر</p>
 				
 				</div>
 		</div>	
@@ -86,7 +85,7 @@
 					<a href="{WEB_PATH}/mobile/autolottery"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava1.png"></a>
 				</div>
 				<div class="textnavword">
-				<p style="text-align:center;font-size: 14px;color:#bbb">限时揭晓</p>
+				<p style="text-align:center;font-size: 14px;color:#bbb">ۋاقىتلىق جاكارلار</p>
 				
 				</div>
 		</div>
@@ -147,8 +146,8 @@ $('#gonggao').show().find('article').html('公告一.1<br/>公告二.2<br/>公�
         <div class="g-zzyging scroll3">
             <ul id="UserBuyNewList1">
                 {wc:loop $go_record $gorecord}
-                <li><span class="fl"><a href="{WEB_PATH}/uname/{wc:fun:idjia($gorecord['uid'])}" target="_blank" title="{wc:fun:get_user_name($gorecord)}">恭喜{wc:fun:get_user_name($gorecord)}获得</a></span>
-                <p style="font-size:8px; color:#fff;"><a target="_blank" href="{WEB_PATH}/goods/{wc:$gorecord['shopid']}" title="{wc:$gorecord['shopname']}" class="u-ongoing">{wc:$gorecord['shopname']}</a></p></li>
+                <li><span class="fl" style="font-size:12px; color:#fff;">恭喜{wc:fun:get_user_name($gorecord)}获得</span>
+                <p>{wc:$gorecord['shopname']}</p></li>
                 {wc:loop:end}
             </ul>
         </div>
@@ -161,17 +160,17 @@ $('#gonggao').show().find('article').html('公告一.1<br/>公告二.2<br/>公�
                     });
             }
             $(function(){
-                    setInterval('autoScroll3(".scroll3")',3000);
+                    setInterval('autoScroll3(".scroll3")',5000);
             });
         </script>
     </div>
 </div>
     <section class="g-main">
 	    <div class="m-tt1">
-		    <h2 class="fl"><a href="{WEB_PATH}/mobile/autolottery">今日限时</a></h2>
+		    <h2 class="fl"><a href="{WEB_PATH}/mobile/autolottery">بۈگۈنلىك ۋاقىتلىق مەھسۇلات</a></h2>
 		    <div class="fl z-tips">每天10点、15点、22点准时揭晓</div>
 		    <div class="fr u-more">
-			    <a href="{WEB_PATH}/mobile/autolottery/next" class="u-rs-m2"><b class="z-arrow"></b>明日限时</a>
+			    <a href="{WEB_PATH}/mobile/autolottery/next" class="u-rs-m2"><b class="z-arrow"></b>ئەتىلىك</a>
 		    </div>
 	    </div>
 	    <article id="autoLotteryBox" class="clearfix h5-1yyg-w310 m-round overflow">
