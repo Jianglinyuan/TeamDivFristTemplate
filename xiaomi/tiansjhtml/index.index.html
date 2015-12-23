@@ -58,7 +58,7 @@
                         <ul>
                             <li class="g-soon-pic"><a href="{WEB_PATH}/goods/{wc:$renqi['id']}" target="_blank" title="{wc:$renqi['title']}"><img alt="{wc:$renqi['title']}" src="{G_UPLOAD_PATH}/{wc:$renqi['thumb']}"></a></li>
                             <li class="soon-list-name"><a href="{WEB_PATH}/goods/{wc:$renqi['id']}" target="_blank" title="{wc:$renqi['title']}">{wc:$renqi['title']}</a></li>
-                            <li class="gray">价值：￥{wc:$renqi['money']}</li>
+                            <li class="gray">￥{wc:$renqi['money']}：价值</li>
                             <li class="g-progress"><dl class="m-progress"><dt><b style="width:{wc:fun:width($renqi['canyurenshu'],$renqi['zongrenshu'],216)}px;"></b></dt><dd><span class="orange fl"><em>{wc:$renqi['canyurenshu']}</em>已参与</span><span class="gray6 fl"><em>{wc:$renqi['zongrenshu']}</em>总需人次</span><span class="blue fr"><em>{wc:$renqi['zongrenshu']-$renqi['canyurenshu']}</em>剩余</span></dd></dl></li>
                             <li><a href="{WEB_PATH}/goods/{wc:$renqi['id']}" style="margin-right:70px;" class="u-now" target="_blank" title="只要1元，即可购买">立即{wc:fun:_cfg('web_name_two')}</a></li>
                         </ul>

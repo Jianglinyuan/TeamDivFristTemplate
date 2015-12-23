@@ -865,7 +865,8 @@ a:hover, a:focus {
 .xm-line-box .box-hd {
 	position: relative;
 	height: 50px;
-	border-bottom: 1px solid #dfdfdf
+	border-bottom: 1px solid #dfdfdf;
+	padding-right: 10px;
 }
 .xm-line-box .box-hd .title {
 	margin: 0;
@@ -946,7 +947,8 @@ a:hover, a:focus {
 .site-breadcrumb, .breadcrumbs {
 	margin: 10px auto;
 	font-size: 12px;
-	color: #8c8c8c
+	color: #8c8c8c;
+	text-align: right;
 }
 .site-breadcrumb a, .breadcrumbs a {
 	color: #8c8c8c
@@ -1310,7 +1312,8 @@ a:hover, a:focus {
 	line-height: 20px;
 	color: #333;
 	background: #fff;
-	text-align: right;
+	/*text-align: right;*/
+	direction: rtl;
 	margin-left: 40px;
 }
 .site-header .header-info .search-form .search-text:focus {
@@ -4441,7 +4444,7 @@ body.f-width-change .g-special li em {
 .filter-box {
 	margin-bottom: 10px;
 	background-color: #fff;
-	padding: 0 10px;
+	/*padding: 0 10px;*/
 }
 .goods-list-box .box-hd {
 	border-bottom: 0;
@@ -5609,5 +5612,8 @@ body.f-width-change .g-special li em {
 	clear: both;
 }
 #sCartLoading {
+	text-align: right;
+}
+#content {
 	text-align: right;
 }

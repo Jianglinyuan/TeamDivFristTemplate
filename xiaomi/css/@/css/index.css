@@ -1499,7 +1499,7 @@ dl.m-progress dt b {
 	border-top: 1px solid #ddd;
 }
 .singleR li {
-	float: left;
+	float: right;
 	border: 1px solid #ddd;
 	border-top: 0 none;
 	text-align: center;
