@@ -96,52 +96,6 @@
 <div class="textnav">  
 </div>
 
- <!--站点公告-->
-<!--section style="display:none;" id="gonggao">
-<div class="m-tt1">
-<h2 class="fl"><a href="">一元购公告</a></h2>
-<div class="fr u-more">
-<a href="" class="u-rs-m1"><b class="z-arrow"></b></a>
-</div>
-</div>
-<article style="margin: 5px;padding: 5px;color: rgb(199, 0, 0);/*text-indent: 2em;*/line-height: 20px; text-align:end;" class="m-round">
-</article>
-</section>
-<script>
-<<<<<<< HEAD
-$('#gonggao').show().find('article').html('1.公告一<br/>2.公告二<br/>3.公告三');
-=======
-$('#gonggao').show().find('article').html('公告一.1<br/>公告二.2<br/>公告三.3');
->>>>>>> master
-</script>
-
-    <!-- 最新揭晓 -->
-    <!--section class="g-main">
-	    <div class="m-tt1">
-		    <h2 class="fl"><a href="{WEB_PATH}/mobile/mobile/lottery">最新揭晓</a></h2>
-		    <div class="fr u-more">
-			    <a href="{WEB_PATH}/mobile/mobile/lottery" class="u-rs-m1"><b class="z-arrow"></b></a>
-		    </div>
-	    </div>
-	    <article class="h5-yygcms-w310 m-round m-lott-li" id="divLottery">
-		    <ul class="clearfix">
-		    {wc:loop $shopqishu $qishu}
-            {wc:php:start}
-            $qishu['q_user'] = unserialize($qishu['q_user']);
-            {wc:php:end}
-			        <li>
-		                <a href="{WEB_PATH}/mobile/mobile/item/{wc:$qishu['id']}" class="u-lott-pic">
-		                    <img src="{G_TEMPLATES_STYLE}/mobile/images/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$qishu['thumb']}" border="0" alt="" />
-		                </a>
-		                <span>恭喜<a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$qishu['q_uid']}" class="blue z-user">{wc:fun:get_user_name($qishu['q_uid'])}</a>获得</span>
-			        </li>
-		        
-			   {wc:loop:end}     
-		        
-		    </ul>
-	    </article>
-    </section>
-    <!-- 今日限时 -->
 <div class="site-header container">
     <div class="site-gd-yg">
         <div class="g-zzyging scroll3">
