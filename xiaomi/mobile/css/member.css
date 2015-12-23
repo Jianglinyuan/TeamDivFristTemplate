@@ -11,11 +11,11 @@ a.z-Recharge-btn {
 	padding:0 10px;
 	text-align:center;
 	color:#fff;
-	border:1px solid #CA1B38;
+	border:1px solid #c75c5c;
 	display:inline-block;
 	border-radius:3px;
 	box-shadow:0 1px 2px #E7E7E7;
-	background:#CA1B38;
+	background:#c75c5c;
 }
 .z-Limg {
 	width:80px;
@@ -193,14 +193,14 @@ text-align:right;
 	background-position:0 0;
 }
 .g-Recharge li a.z-sel {
-	border:1px solid #CA1B38;
+	border:1px solid #c75c5c;
 	color:#666;
 }
 .g-Recharge li input {
 	color:#959595;
 }
 .g-Recharge li .z-initsel {
-	border:1px solid #CA1B38;
+	border:1px solid #c75c5c;
 }
 .g-Recharge li .z-initsel input {
 	color:#666;
@@ -217,7 +217,7 @@ text-align:right;
 .f-Recharge-btn a.z-Btn {
 	font-size:18px;
 	line-height:34px;
-	background:#CA1B38;
+	background:#c75c5c;
 	border-radius:5px;
 	padding:0 8px;
 	color:#fff;
@@ -278,7 +278,7 @@ text-align:right;
 	line-height:25px;
 	color:#fff;
 	display:inline-block;
-	background:#CA1B38;
+	background:#c75c5c;
 	border-radius:3px;
 	margin-right:5px;
 	box-shadow:1px 1px 1px #D3D3D3;
@@ -345,7 +345,7 @@ text-align:right;
 .m-adrs-lstSel em {
 	display:inline-block;
 	line-height:20px;
-	color:#CA1B38;
+	color:#c75c5c;
 }
 .m-adrs-lstSel .z-arrow {
 	display:block;
@@ -533,7 +533,7 @@ text-align:right;
 	margin:10px;
 }
 .m-address-ct a.z-CloseBtn {
-	color:#CA1B38;
+	color:#c75c5c;
 }
 .m-address-ct li .z-addrs-r {
 	margin-left:24px;
@@ -786,7 +786,7 @@ p.f-addressLH {
 	line-height:25px;
 	color:#fff;
 	display:inline-block;
-	background:#CA1B38;
+	background:#c75c5c;
 	border-radius:5px;
 	margin-right:5px;
 	box-shadow:1px 1px 2px #D3D3D3;
@@ -976,15 +976,15 @@ p.f-addressLH {
 .m-userMoneyNav li a.z-MoneyNav-crt01 {
 	height:39px;
 	background:#fff;
-	border-bottom:2px solid #CA1B38;
+	border-bottom:2px solid #c75c5c;
 }
 .m-userMoneyNav li a.z-MoneyNav-crt02 {
 	height:39px;
 	background:#fff;
-	border-bottom:2px solid #CA1B38;
+	border-bottom:2px solid #c75c5c;
 }
 .m-userMoneyNav li a.z-MoneyNav-crt01 b, .m-userMoneyNav li a.z-MoneyNav-crt02 b {
-	color:#CA1B38;
+	color:#c75c5c;
 }
 .m-userMoneylst li {
 	border-top:1px solid #F4F4F4;

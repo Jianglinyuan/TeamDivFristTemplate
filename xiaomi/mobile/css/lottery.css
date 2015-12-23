@@ -63,10 +63,10 @@ section {
 	padding:0 12px 0 9px;
 	height:23px;
 	line-height:22px;
-	background:#CA1B38;
+	background:#c75c5c;
 	border-radius:3px;
 	color:#fff;
-	border:1px solid #CA1B38;
+	border:1px solid #c75c5c;
 	display:inline-block;
 }
 .revCon li s {
@@ -137,7 +137,7 @@ section {
 	top:35px;
 }
 .revCon ul.rNow {
-	border:2px solid #CA1B38;
+	border:2px solid #c75c5c;
 	overflow:hidden;
 	margin-bottom:1px;
 }
@@ -145,11 +145,11 @@ section {
 border-top:0 none;
 }
 .revCon ul.rFirst {
-	border-top:2px solid #CA1B38!important;
+	border-top:2px solid #c75c5c!important;
 	margin-top:10px;
 }
 .revCon ul.rNow .rNowTitle {
-	background:#CA1B38;
+	background:#c75c5c;
 	color:#fff;
 	font-size:12px;
 	width:90px;
@@ -200,7 +200,7 @@ margin-left:2%;
 .infoResult dl {
 	padding:5px 0;
 	line-height:20px;
-	background:#CA1B38;
+	background:#c75c5c;
 	color:#fff;
 	text-align:center;
 	word-wrap:break-word;
@@ -235,7 +235,7 @@ margin-left:2%;
 	margin-top:-1px;
 }
 .result2 li span:nth-child(3n-1) {
-color:#CA1B38;
+color:#c75c5c;
 position:relative;
 z-index:2;
 }
@@ -246,15 +246,15 @@ z-index:2;
 	width:80px;
 	height:31px;
 	left:154px;
-	border-left:1px solid #CA1B38;
-	border-right:1px solid #CA1B38;
+	border-left:1px solid #c75c5c;
+	border-right:1px solid #c75c5c;
 }
 .result2 li span dd {
 	border-left:1px solid #D7D5D1;
 	color:#666;
 }
 .result2 b {
-	border:solid #CA1B38;
+	border:solid #c75c5c;
 	border-width:1px 1px 0 0;
 	width:3px;
 	height:3px;
@@ -277,7 +277,7 @@ z-index:2;
 }
 .infoCount {
 	width:100%;
-	background:#CA1B38;
+	background:#c75c5c;
 	display:inline-block;
 	border-top:1px solid #bd223c;
 	position:relative;
@@ -335,7 +335,7 @@ z-index:2;
 	padding-left:25px;
 }
 .infoRule p em {
-	background:#CA1B38;
+	background:#c75c5c;
 	width:15px;
 	height:18px;
 	line-height:18px;

@@ -35,7 +35,7 @@ border-right:none;
 }
 .limit-nav .limit-navCur {
 	background:#fff;
-	color:#CA1B38;
+	color:#c75c5c;
 }
 .limit-ct {
 	border-top:1px solid #DDD;
@@ -76,8 +76,8 @@ border-right:none;
 	display:inline-block;
 }
 .limit-ct .flex-control-nav li a.flex-active b {
-	background:#CA1B38;
-	border:1px solid #CA1B38;
+	background:#c75c5c;
+	border:1px solid #c75c5c;
 	color:#fff;
 }
 .limit-ct .flex-control-nav li a.flex-active s {
@@ -85,7 +85,7 @@ border-right:none;
 	height:0;
 	display:block;
 	border:5px solid transparent;
-	border-top-color:#CA1B38;
+	border-top-color:#c75c5c;
 	margin:-1px auto 0 auto;
 }
 .limit-content {
@@ -93,7 +93,7 @@ border-right:none;
 	overflow:hidden;
 }
 .limit-bd {
-	border-top:2px solid #CA1B38;
+	border-top:2px solid #c75c5c;
 }
 .slides div.loading {
 	background-color:#FFF;
@@ -121,7 +121,7 @@ border-right:none;
 	color:#fff;
 	padding:3px 0 5px;
 	display:inline-block;
-	background:#CA1B38;
+	background:#c75c5c;
 	border-radius:0 0 5px 5px;
 }
 .f-limit-time-date b {

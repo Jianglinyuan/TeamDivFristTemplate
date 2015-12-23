@@ -67,7 +67,7 @@ body {
 	margin:5px 0;
 }
 .m-tt1 a {
-	color:#CA1B38;
+	color:#c75c5c;
 }
 .m-tt1 h2 {
 	font-size:14px;
@@ -75,7 +75,7 @@ body {
 	line-height:35px;
 	overflow:hidden;
 	padding:0 0 0 10px;
-	color:#CA1B38;
+	color:#c75c5c;
 }
 .m-tt1 .u-more .z-arrow {
 	width:6px;
@@ -123,7 +123,7 @@ body {
 .m-lott-conduct p {
 	height:34px;
 	overflow:hidden;
-	color:#CA1B38;
+	color:#c75c5c;
 	text-align:left;
 	line-height:34px;
 	background:#FFF49B;
@@ -135,7 +135,7 @@ body {
 	padding:0 130px 0 5px;
 }
 .m-lott-conduct a {
-	color:#CA1B38;
+	color:#c75c5c;
 	display:block;
 }
 .m-lott-conduct .z-lott-time {
@@ -362,8 +362,8 @@ width:34%;
 	display:inline-block;
 }
 .m-ct-time li a.flex-active b {
-	background:#CA1B38;
-	border:1px solid #CA1B38;
+	background:#c75c5c;
+	border:1px solid #c75c5c;
 	color:#fff;
 }
 .m-ct-time li a.flex-active s {
@@ -371,7 +371,7 @@ width:34%;
 	height:0;
 	display:block;
 	border:5px solid transparent;
-	border-top-color:#CA1B38;
+	border-top-color:#c75c5c;
 	margin:-1px auto 0 auto;
 }
 .m-xs-li {
@@ -418,7 +418,7 @@ width:34%;
 	font-size:14px;
 	padding:0 5px;
 	line-height:22px;
-	background:#CA1B38;
+	background:#c75c5c;
 	color:#ffd4b8;
 	text-align:center;
 	border-radius:0 0 3px 3px;

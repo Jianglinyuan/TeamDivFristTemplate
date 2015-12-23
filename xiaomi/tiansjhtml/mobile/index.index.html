@@ -16,6 +16,22 @@
 	<script src="{G_TEMPLATES_MOBILE_JS}/jquery190.js" language="javascript" type="text/javascript"></script>
 	<script id="pageJS" data="{G_TEMPLATES_MOBILE_JS}/Index.js" language="javascript" type="text/javascript"></script>
 </head>
+<style type="text/css">
+	/*  加入头部滚动  */
+.site-header {
+	position: relative;
+	padding-top: 45px;
+	font-size: 9px;
+}
+.site-header .site-gd-yg{position:absolute;top:12px;width:100%;border-bottom: 2px solid #ccc;border-top: 2px solid #ccc;background-color: #c75c5c;}
+.site-header .site-gd-yg .u-are{width:90px;float:left;line-height: 30px;text-align: left;}
+.site-header .site-gd-yg .g-zzyging{width:480px;float:left; margin-left: 0px; height: 30px; overflow: hidden;}
+.site-header .site-gd-yg .g-zzyging ul{}
+.site-header .site-gd-yg .g-zzyging ul li{height: 35px;width: 550px;margin: 1px;padding: 2px;border-top:none;}
+.site-header .site-gd-yg .g-zzyging ul li span.fl{width:70px; margin:3px;padding:2px;height: 30px;top: 0;float:left;text-align:right;}
+.site-header .site-gd-yg .g-zzyging ul li span.fl a{color:#fff;}
+.site-header .site-gd-yg .g-zzyging ul li p,.site-header .site-gd-yg .g-zzyging ul li p a{width: 460px; float: right; margin: 1px; padding:2px; height: 30px;white-space:nowrap; color: #eee;}
+</style>
 <body>
 <div class="h5-yygcms-v1" id="loadingPicBlock">    
 <div class="fl u-slogan"></div>
@@ -72,11 +88,11 @@
 		</div>
 
 	</section>
-
 <div class="textnav">  
 </div>
- <!-- 站点公告 -->
-<section style="display:none;" id="gonggao">
+
+ <!--站点公告-->
+<!--section style="display:none;" id="gonggao">
 <div class="m-tt1">
 <h2 class="fl"><a href="">一元购公告</a></h2>
 <div class="fr u-more">
@@ -89,9 +105,9 @@
 <script>
 $('#gonggao').show().find('article').html('1.公告一<br/>2.公告二<br/>3.公告三');
 </script>
-    
+
     <!-- 最新揭晓 -->
-    <section class="g-main">
+    <!--section class="g-main">
 	    <div class="m-tt1">
 		    <h2 class="fl"><a href="{WEB_PATH}/mobile/mobile/lottery">最新揭晓</a></h2>
 		    <div class="fr u-more">
@@ -117,6 +133,30 @@ $('#gonggao').show().find('article').html('1.公告一<br/>2.公告二<br/>3.公
 	    </article>
     </section>
     <!-- 今日限时 -->
+<div class="site-header container">
+    <div class="site-gd-yg">
+        <div class="g-zzyging scroll3">
+            <ul id="UserBuyNewList1">
+                {wc:loop $go_record $gorecord}
+                <li><span class="fl"><a href="{WEB_PATH}/uname/{wc:fun:idjia($gorecord['uid'])}" target="_blank" title="{wc:fun:get_user_name($gorecord)}">恭喜{wc:fun:get_user_name($gorecord)}获得</a></span>
+                <p style="font-size:8px; color:#fff;"><a target="_blank" href="{WEB_PATH}/goods/{wc:$gorecord['shopid']}" title="{wc:$gorecord['shopname']}" class="u-ongoing">{wc:$gorecord['shopname']}</a></p></li>
+                {wc:loop:end}
+            </ul>
+        </div>
+        <script>
+            function autoScroll3(obj){
+                    $(obj).find("#UserBuyNewList1").animate({
+                            marginTop : "-30px"
+                    },500,function(){
+                            $(this).css({marginTop : "0px"}).find("li:first").appendTo(this);
+                    });
+            }
+            $(function(){
+                    setInterval('autoScroll3(".scroll3")',3000);
+            });
+        </script>
+    </div>
+</div>
     <section class="g-main">
 	    <div class="m-tt1">
 		    <h2 class="fl"><a href="{WEB_PATH}/mobile/autolottery">今日限时</a></h2>

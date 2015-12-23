@@ -45,10 +45,10 @@
 	text-align:center;
 }
 .goodsNav li.current a {
-	color:#CA1B38;
+	color:#c75c5c;
 	height:34px;
 	line-height:34px;
-	border-bottom:2px solid #CA1B38;
+	border-bottom:2px solid #c75c5c;
 }
 .goodsNav li b {
 	height:10px;
@@ -90,10 +90,10 @@
 	left:5px;
 }
 .goodsNav a s.orange {
-	border-top-color:#CA1B38;
+	border-top-color:#c75c5c;
 }
 .goodsNav a em.orange {
-	border-bottom-color:#CA1B38;
+	border-bottom-color:#c75c5c;
 }
 .goodsNav s.arrowUp {
 	border:4px solid transparent;
@@ -173,7 +173,7 @@
 	background-position:-19px -117px;
 }
 .goodsNav lidl dd.sOrange a {
-	color:#CA1B38;
+	color:#c75c5c;
 }
 .goodsNav li dl dd.sOrange b.g1 {
 	background-position:0 0;
@@ -267,7 +267,7 @@
 	position:absolute;
 	right:-47px;
 	top:0;
-	background-color:#CA1B38;
+	background-color:#c75c5c;
 	border-radius:3px;
 }
 .goodsList .goodsListR a.add s {
@@ -293,7 +293,7 @@
 	font-size:10px;
 }
 .goodsList .pLimitedTime {
-	background:#CA1B38;
+	background:#c75c5c;
 }
 .goodsList .pNewProducts {
 	background:#3b0;
@@ -349,7 +349,7 @@
 .pNav ul.slides li.cur a {
 	display:block;
 	padding:0 20px;
-	color:#CA1B38;
+	color:#c75c5c;
 }
 .pNav ul.slides li a.theLeft {
 	padding-left:21px;
@@ -772,7 +772,7 @@
 	text-indent:0;
 	color:#fff;
 	text-align:center;
-	background:#CA1B38;
+	background:#c75c5c;
 	padding:0 18px;
 	height:25px;
 	line-height:25px;
@@ -846,7 +846,7 @@
 .pCountDown {
 	width:278px;
 	margin:20px auto 0;
-	background:#CA1B38;
+	background:#c75c5c;
 	border-radius:5px;
 	padding:7px 15px 7px 7px;
 }
@@ -873,7 +873,7 @@
 	font-size:16px;
 }
 .status1 em {
-	color:#CA1B38;
+	color:#c75c5c;
 }
 .status2 {
 	text-align:center;
@@ -942,7 +942,7 @@
 	display:inline-block;
 	padding:3px 10px;
 	box-shadow:0 1px 2px #c1bfa1;
-	background:#CA1B38;
+	background:#c75c5c;
 	color:#fff;
 	border-radius:20px;
 	position:relative;
@@ -976,7 +976,7 @@
 }
 .pSurplus span {
 	display:inline-block;
-	background:#CA1B38;
+	background:#c75c5c;
 	padding:0 8px;
 	height:18px;
 	line-height:18px;
@@ -991,7 +991,7 @@
 }
 .pSurplus em {
 	font-family:Arial;
-	color:#CA1B38;
+	color:#c75c5c;
 	font-size:16px;
 	margin:0 5px;
 }
@@ -1016,7 +1016,7 @@
 	line-height:42px;
 	padding:0 8px;
 	font-size:16px;
-	color:#CA1B38;
+	color:#c75c5c;
 }
 .pOngoing em {
 	margin:0 3px;
@@ -1028,9 +1028,9 @@
 	line-height:28px;
 	font-size:14px;
 	text-align:center;
-	background:#CA1B38;
+	background:#c75c5c;
 	color:#fff;
 	border-radius:5px;
 	margin-top:5px;
-	border:1px solid #CA1B38;
+	border:1px solid #c75c5c;
 }
