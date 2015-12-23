@@ -1,11 +1,21 @@
+
+@font-face {
+    font-family: "alkatip";
+    src:url('{G_TEMPLATES_MOBILE_CSS}/alkatip.ttf')format('truetype');
+}
+body{
+   font-family: "alkatip";
+   font-size: 12px;
+}
+
 @charset "utf-8";
 	* {
 	margin:0;
 	padding:0;
 }
-body,button,input,select,textarea {
+button,input,select,textarea {
 	font-size:12px;
-	font-family:arial,微软雅黑;
+	font-family: arial;
 }
 :focus {
 	outline:0;
@@ -62,13 +72,10 @@ input,select,textarea {
 ins {
 	text-decoration:none;
 	font-size:12px;
-	font-family:arial;
+	font-family:"alkatip";
 }
 em {
 	font-style:normal;
-}
-.arial {
-	font-family:Arial;
 }
 .F14 {
 	font-size:14px;

@@ -1,6 +1,12 @@
 @charset "utf-8";
+@font-face {
+    font-family: "alkatip";
+    src:url('{G_TEMPLATES_MOBILE_CSS}/alkatip.ttf')format('truetype');
+}
 body {
-	background:#f4f4f4;
+   font-family: "alkatip";
+   font-size: 12px;
+   background:#f4f4f4;
 }
 .h5-yygcms-v1 {
 	background:#f4f4f4;
@@ -434,17 +440,17 @@ width:34%;
 	line-height:22px;
 	max-height:44px;
 	overflow:hidden;
-	font-size:14px;
+	font-size:12px;
 	display:inline-block;
 	margin-top:2px;
 }
 .u-xs-con .z-promo {
 	display:block;
 	line-height:26px;
-	font-size:14px;
+	font-size:12px;
 	color:#A1A1A1;
 	margin-bottom:5px;
-	font-family:寰蒋闆呴粦;
+	font-family:"alkatip";
 }
 .m-xs-End .z-xs-time {
 	background:#999;
@@ -453,7 +459,7 @@ width:34%;
 	color:#fff;
 }
 .m-xs-End .u-xs-name {
-	height:55px;
+	height:70px;
 	margin-top:1px;
 	overflow:hidden;
 	color:#999;
@@ -467,15 +473,14 @@ width:34%;
 }
 .m-xs-End .u-xs-name-img img {
 	width:50px;
-	margin-top:0;
+	margin-top:2px;
 	border-radius:3px;
 }
 .m-xs-End .u-xs-name-r {
-	margin:1px 0 3px 53px;
+	margin:2px 0 3px 53px;
 }
 .m-xs-End .u-xs-name-r .z-user {
 	max-width:70px;
-	overflow:hidden;
 	display:inline-block;
 	white-space:nowrap;
 }
