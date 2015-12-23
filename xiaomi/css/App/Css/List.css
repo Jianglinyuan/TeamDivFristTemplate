@@ -167,6 +167,7 @@ body {
 */	position: relative;
 	width: 265px;
 	margin: 0 9px;
+	text-align: right;
 }
 .share_list_content dt img {
 	width: 270px;

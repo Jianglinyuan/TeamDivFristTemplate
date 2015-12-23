@@ -668,7 +668,7 @@
 	display: inline-block;
 }
 .g-list .f-gx-user span {
-	float: left;
+	float: right;
 	*float: none;
 	*display: inline-block;
 }
@@ -1206,6 +1206,7 @@ dl.m-progress dt b {
 	overflow: hidden;
 	padding-top: 20px;
 	word-break: break-all;
+	text-align: center;
 }
 .soon-list li.soon-list-name a {
 	color: #333;
@@ -1219,6 +1220,7 @@ dl.m-progress dt b {
 	height: 20px;
 	line-height: 20px;
 	font-size: 12px;
+	text-align: center;
 }
 .soon-list li.g-progress {
 	float: left;
