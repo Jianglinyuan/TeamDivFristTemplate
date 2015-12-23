@@ -570,11 +570,12 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-detail-desc .xm-goods-side-list .box-hd .title {
 	margin: 0px;
-	line-height: 55px
+	line-height: 55px;
+	text-align: right;
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .jd {
 	position: relative;
-	padding: 0 10px 0 142px;
+	padding: 0 142px 0 0px;
 	background: #f8eced;
 	line-height: 58px;
 	color: #d25a62;
@@ -584,7 +585,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .jd-ico {
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 0;
 	width: 137px;
 	height: 58px;
@@ -593,7 +594,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .jm {
 	position: relative;
-	padding: 0 10px 0 142px;
+	padding: 0 142px 0 0px;
 	background: #f8eced;
 	line-height: 58px;
 	color: #d25a62;
@@ -604,7 +605,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .jm-ico {
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 0;
 	width: 137px;
 	height: 58px;
@@ -613,7 +614,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .jm {
 	position: relative;
-	padding: 0 10px 0 142px;
+	padding: 0 142px 0 0px;
 	background: #f8eced;
 	line-height: 58px;
 	color: #d25a62;
@@ -624,7 +625,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .jm-ico {
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 0;
 	width: 137px;
 	height: 58px;
@@ -633,7 +634,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .wb {
 	position: relative;
-	padding: 0 10px 0 142px;
+	padding: 0 142px 0 0px;
 	background: #f8eced;
 	line-height: 58px;
 	color: #d25a62;
@@ -644,7 +645,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .wb-ico {
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 0;
 	width: 137px;
 	height: 58px;
@@ -653,7 +654,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .hhz {
 	position: relative;
-	padding: 0 10px 0 142px;
+	padding: 0 142px 0 0px;
 	background: #f8eced;
 	line-height: 58px;
 	color: #d25a62;
@@ -664,7 +665,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-detail-desc .xm-goods-side-list .box-bd .hhz-ico {
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 0;
 	width: 137px;
 	height: 58px;
@@ -1263,7 +1264,9 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-detail-desc .common-question {
 	margin-top: 25px;
-	border: 1px solid #dfdfdf
+	border: 1px solid #dfdfdf;
+	text-align: right;
+
 }
 .goods-detail-desc .common-question .question-hd {
 	height: 50px;
@@ -1274,7 +1277,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 .goods-detail-desc .common-question .question-hd .title_a {
 	width: 130px;
 	text-align: center;
-	float: left
+	float: right;
 }
 .goods-detail-desc .common-question .question-hd .title_b {
 	width: 767px;

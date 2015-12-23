@@ -186,14 +186,14 @@
 	top:-1px;
 }
 .Result_LConduct dt {
-	width:80px;
+	width:79px;
 	height:61px;
 	text-align:center;
 	border:1px solid #FD8;
 	background:#FFFBBB;
 	color:#F60;
 	font-size:14px;
-	float:left;
+	float:right;
 	font-family:微软雅黑,宋体;
 }
 .Result_LConduct dt span {
@@ -206,7 +206,6 @@
 	height:61px;
 	float:left;
 	border:1px solid #E3E3E3;
-	border-left:none;
 }
 .Result_LConduct .Result_LConductBut {
 	padding:9px 10px 8px 10px;
@@ -277,11 +276,11 @@
 }
 .Result_Progress-bar .Pro-bar-li li.P-bar01 {
 	width:35%;
-	text-align:left;
+	text-align:right;
 }
 .Result_Progress-bar .Pro-bar-li li.P-bar02 {
 	width:30%;
-	text-align:center;
+	text-align:right;
 }
 .Result_Progress-bar .Pro-bar-li li.P-bar03 {
 	width:34%;
@@ -515,7 +514,7 @@
 	padding:6px 22px 7px 23px;
 	_padding:8px 22px 5px 23px;
 	background:#d42800;
-	color:#FC0;
+	color:white;
 	border-radius:3px;
 	font-size:12px;
 	line-height:12px;
@@ -537,7 +536,7 @@
 	margin-top:10px;
 }
 .MaCenter p {
-	text-align:left;
+	text-align:right;
 	border-bottom:1px solid #EDEDED;
 	line-height:30px;
 	color:#999;
@@ -553,7 +552,7 @@
 	color:#666;
 }
 .MaCenter dl dt {
-	float:left;
+	float:right;
 	width:188px;
 	text-align:center;
 	line-height:22px;
@@ -1214,8 +1213,9 @@
 	background-position:-106px -1px;
 }
 .ygRecord {
-	width:900px;
+	width:880px;
 	overflow:hidden;
+	text-align: right;
 }
 .ygRecord h3 {
 	background:#F8F8F8;
@@ -1241,6 +1241,7 @@
 	padding:5px 0 5px 20px;
 	line-height:20px;
 	color:#F60;
+	text-align: right;
 }
 .ygRecord ul.Record_content {
 	height:35px;
@@ -1251,7 +1252,7 @@
 .ygRecord div.RecordOnehundred {
 	border-top:0 solid #F60;
 	position:relative;
-	width:900px;
+	width:880px;
 	overflow:hidden;
 }
 .ygRecord div.RecordOnehundred h4 {
@@ -1286,7 +1287,7 @@
 .ygRecord .RecordOnehundred .ResultBox h2 {
 	position:absolute;
 	top:15px;
-	left:30px;
+	right:30px;
 	font-family:微软雅黑,宋体;
 	font-size:18px;
 }
@@ -1300,9 +1301,10 @@
 .ygRecord .RecordOnehundred .ResultBox p.num4 {
 	height:87px;
 	overflow:hidden;
-	padding-left:26px;
+	padding-right:150px;
 	line-height:31px;
-	background:url(/templates/xiaomi/images/Announced_3.png) 0 8px no-repeat;
+	background:url(/templates/xiaomi/images/Announced_3.png) 650px 8px no-repeat;
+	text-align: right;
 }
 .ygRecord .RecordOnehundred .ResultBox span.rus {
 	color:#fff;
@@ -1318,7 +1320,7 @@
 }
 .ygRecord .RecordOnehundred .ResultBox b {
 	margin-top:10px;
-	margin-left:25px;
+	margin-left:400px;
 	padding:5px 25px 5px 25px;
 	border:1px solid #FFF60E;
 	background:#FFF60E;

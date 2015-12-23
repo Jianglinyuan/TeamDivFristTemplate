@@ -51,10 +51,13 @@
            <dl class="goods-info-box ">
             <dt class="goods-info-head">
                 <dl>
-                    <dt id="goodsName">{wc:$item['title']}</dt>
-                    <dd class="goods-info-head-userfaq">
+                    <dt id="goodsName" style='
+    text-align: right;
+'>{wc:$item['title']}</dt>
+                    <dd class="goods-info-head-userfaq" >
                         <ul>
-                            <li class="mail"><i>简介</i>{wc:$item['title2']}</li>
+                            <li class="mail" style='
+    text-align: right;'>{wc:$item['title2']}<i>简介</i></li>
                         </ul>
                     </dd>
 					<dd class="goods-info-head-colors clearfix"></dd>
@@ -63,15 +66,16 @@
 				<dl>
 					<dt><span>第{wc:$itemzx['qishu']}期</span>正在进行</dt>
 					<dd>
+					<div style="float:left;
+				"><a href="{WEB_PATH}/goods/{wc:$itemzx['id']}" target="_blank" class="Result_LConductBut">查看详情</a></div>
 						<div class="Result_Progress-bar">
 							<p><span style="width:{wc:fun:width($itemzx['canyurenshu'],$itemzx['zongrenshu'],208)}px;"></span></p>
 							<ul class="Pro-bar-li">
-								<li class="P-bar01"><em>{wc:$itemzx['canyurenshu']}</em>已参与人次</li>
-								<li class="P-bar02"><em>{wc:$itemzx['zongrenshu']}</em>总需人次</li>
 								<li class="P-bar03"><em>{wc:$itemzx['shenyurenshu']}</em>剩余人次</li>
+								<li class="P-bar02"><em>{wc:$itemzx['zongrenshu']}</em>总需人次</li>
+								<li class="P-bar01"><em>{wc:$itemzx['canyurenshu']}</em>已参与人次</li>
 							</ul>
 						</div>
-						<p><a href="{WEB_PATH}/goods/{wc:$itemzx['id']}" target="_blank" class="Result_LConductBut">查看详情</a></p>
 					</dd>
 				</dl>
 			</div>
@@ -79,7 +83,8 @@
                 </dl>
             </dt>
                 <div class="MaCenter">
-				<p>商品获得者本期总共{wc:fun:_cfg('web_name_two')}了<em class="orange">{wc:$user_shop_number}</em>人次</p>
+				<p style='
+    text-align: right;' >商品获得者本期总共{wc:fun:_cfg('web_name_two')}了<em class="orange">{wc:$user_shop_number}</em>人次</p>
                     <div id="userRnoId" class="MaCenterH"><dl>
                         <dt>{wc:fun:microt($user_shop_time)}
                         <dd>
@@ -169,9 +174,9 @@
 	    <div id="divMidNav" class="DetailsT_Tit">
 	        <div class="DetailsT_TitP">
                 <ul>
-			        <li class="Product_DetT DetailsTCur"><span class="DetailsTCur">计算结果</span></li>
-			        <li class="All_RecordT"><span class="">所有参与记录</span></li>
-					<li class="Single_ConT"><span class="">晒单</span></li>
+			        <li class="GoosTab2 Product_DetT DetailsTCur" style="float:right;"><span class="DetailsTCur">计算结果</span></li>
+			        <li class="GoosTab2 All_RecordT"><span class="">所有参与记录</span></li>
+					<li class="GoosTab2 Single_ConT"><span class="">晒单</span></li>
 		        </ul>
 		    </div>
 	    </div>
@@ -201,7 +206,7 @@
 								<span class="Fb">{wc:$user_shop_fmod}</span>(余数)
 								<span class="Fb"> + 10000001 = <em> {wc:$item['q_user_code']}</em></span>
 							</p>
-							<b>最终结果：{wc:$item['q_user_code']}</b>
+							<b>{wc:$item['q_user_code']}:最终结果</b>
 						</div>
 						<div style="width:100%;height:30px;clear:bolt;"></div>
 				</div>
@@ -244,9 +249,8 @@
 							<span class="Fb">{wc:$shop_fmod}</span>(余数)
 							<span class="Fb"> + 10000001 = <em>{wc:$item['q_user_code']}</em></span>
 						</p>
-						<b>最终结果：{wc:$item['q_user_code']}</b>
+						<b>{wc:$item['q_user_code']}:最终结果</b>
 					</div>
-					<div style="width:100%;height:30px;clear:bolt;"></div>
 				   </div>
 				{wc:if:end}
 

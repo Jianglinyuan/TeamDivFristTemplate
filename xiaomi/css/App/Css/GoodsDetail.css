@@ -964,13 +964,14 @@ div.jqZoomBigPic img {
 	padding:5px 21px 6px 22px;
 	border:1px solid #C42500;
 	background:#C42500;
-	color:#FC0;
+	color:white;
 	border-radius:3px;
 	font-size:12px;
 	line-height:12px;
 	display:inline-block;
 	margin:10px 0 0 14px;
 	font-family:宋体;
+
 }
 .Announced_FrameBm {
 	width:428px;
@@ -1093,10 +1094,10 @@ div.jqZoomBigPic img {
 }
 .DetailsT_TitP ul {
 	height:35px;
-	float:left;
+	float:right;
 	margin-top:-1px;
 	z-index:3;
-	position:absolute;
+	position:relative;
 }
 .DetailsT_TitP li {
 	float:left;
@@ -1105,7 +1106,7 @@ div.jqZoomBigPic img {
 	text-align:center;
 	height:36px;
 	line-height:34px;
-	border-right:1px solid #E4E4E4;
+	border-left:1px solid #E4E4E4;
 	position:relative;
 	cursor:pointer;
 }
