@@ -40,42 +40,42 @@
 		 {wc:loop $shoplist $key $val}
 
 			<li>
-			    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/" class="gray6">(第{wc:$val['qishu']}期){wc:$val['title']}  ({wc:$val['title2']})</a>
-			    <span>
+				<span style="left:-10px;">
 			        <em class="orange arial">{wc:$Mcartlist[$val['id']]['num']}</em>人次
 			    </span>
+			    <a style="margin-left:45px; margin-right:0;" href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/" class="gray6">(第{wc:$val['qishu']}期){wc:$val['title']}  ({wc:$val['title2']})</a>
 			</li>
 		 {wc:loop:end}
 
 		</ul>
-		<p class="g-pay-Total gray9">合计：<span class="orange arial Fb F16">{wc:$MoenyCount}</span> 元</p>
+		<p class="g-pay-Total gray9" style="float:left; margin-left:10px;"><span class="orange arial Fb F16">{wc:$MoenyCount}</span> 元 :合计</p>
 		<p class="g-pay-bline"></p>
     </section>
 
-        <section class="clearfix g-Cart">
+        <section class="clearfix g-Cart" style="text-align:right;">
 	    <article class="clearfix m-round g-pay-ment">
 		    <ul id="ulPayway">
 			{wc:if $fufen_dikou >= $MoenyCount}
 			    <li class="gray9 z-pay-ff z-pay-grayC">
 				<i id="spPoints" class="z-pay-ment" sel="0"></i>
-				<span>您可以使用福分付款（您的福分：{wc:$member['score']}）</span>
+				<span>（您的福分：{wc:$member['score']}）您可以使用福分付款</span>
 				</li>
 			{wc:else}
 			     <li class="gray6 z-pay-ff z-pay-grayC">
-				<span>您的福分不足（您的福分：{wc:$member['score']}）</span>
+				<span>（您的福分：{wc:$member['score']}）您的福分不足</span>
 				</li>
 			{wc:if:end}
 			
 			{wc:if $Money >= $MoenyCount}			
 				<li class="gray9 z-pay-ye z-pay-grayC"> 
-				<i id="spBalance" class="z-pay-ment" sel="0"></i>
-				<span>您可以使用余额付款（账户余额：{wc:$Money} 元）</span>
+				<i id="spBalance" class="z-pay-ment" sel="0" style="float:left;"></i>
+				<span>（账户余额：{wc:$Money} 元）您可以使用余额付款</span>
 				</li>
 			{wc:else}
 
 			    <li class="gray6 z-pay-ye z-pay-grayC">
 			      <a href="{WEB_PATH}/mobile/home/userrecharge/" class="z-pay-Recharge">去充值</a>
-			      <span>您的余额不足（账户余额：{wc:$Money} 元）</span>
+			      <span>（账户余额：{wc:$Money} 元）您的余额不足</span>
 		      </li> 
 			{wc:if:end}
 		    </ul>
@@ -85,12 +85,12 @@
 
 		    <ul>
 
-			    <li class="gray6 z-pay-grayC"><s class="z-arrow"></s>选择支付方式支付</li>
+			    <li class="gray6 z-pay-grayC"><s class="z-arrow" style="float:left;"></s>选择支付方式支付</li>
 		        {wc:loop $paylist $pay}
 
                  <li class="gray9" urm="{wc:$pay['pay_id']}">
 
-                     <i class="z-bank-Round"><s></s></i>{wc:$pay['pay_name']}
+                     <i class="z-bank-Round" style="float:right; margin-top:10px; margin-left: 5px;"><s></s></i>{wc:$pay['pay_name']}
 
                  </li>
 
