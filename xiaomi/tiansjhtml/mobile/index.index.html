@@ -101,8 +101,10 @@
         <div class="g-zzyging scroll3">
             <ul id="UserBuyNewList1">
                 {wc:loop $go_record $gorecord}
-                <li><span class="fl"><a href="{WEB_PATH}/uname/{wc:fun:idjia($gorecord['uid'])}" target="_blank" title="{wc:fun:get_user_name($gorecord)}">恭喜{wc:fun:get_user_name($gorecord)}获得</a></span>
-                <p style="font-size:8px; color:#fff;"><a target="_blank" href="{WEB_PATH}/goods/{wc:$gorecord['shopid']}" title="{wc:$gorecord['shopname']}" class="u-ongoing">{wc:$gorecord['shopname']}</a></p></li>
+                <li>
+                <span style="float:right; position:absolute; right:7px; width:90px;" class="fl"><a href="{WEB_PATH}/uname/{wc:fun:idjia($gorecord['uid'])}" target="_blank" title="{wc:fun:get_user_name($gorecord)}">恭喜{wc:fun:get_user_name($gorecord)}获得</a></span>
+                <p style="margin-left:10px; margin-top:-3px; overflow:hidden; font-size:8px; color:#fff; float:left;"><a target="_blank" href="{WEB_PATH}/goods/{wc:$gorecord['shopid']}" title="{wc:$gorecord['shopname']}" class="u-ongoing">{wc:$gorecord['shopname']}</a></p>
+                </li>
                 {wc:loop:end}
             </ul>
         </div>
@@ -122,11 +124,12 @@
 </div>
     <section class="g-main">
 	    <div class="m-tt1">
-		    <h2 class="fl"><a href="{WEB_PATH}/mobile/autolottery">今日限时</a></h2>
-		    <div class="fl z-tips">每天10点、15点、22点准时揭晓</div>
-		    <div class="fr u-more">
+		    <h2 class="fr" style="margin-right:10px;"><a href="{WEB_PATH}/mobile/autolottery">今日限时</a></h2>
+		    <div class="fr z-tips">每天10点、15点、22点准时揭晓</div>
+		    <div class="fl u-more" style="position: absolute; left: 10px">
 			    <a href="{WEB_PATH}/mobile/autolottery/next" class="u-rs-m2"><b class="z-arrow"></b>明日限时</a>
 		    </div>
+
 	    </div>
 	    <article id="autoLotteryBox" class="clearfix h5-1yyg-w310 m-round overflow">
 	        <ul id="divTimerItems" class="slides">
@@ -223,15 +226,15 @@
     <!-- 热门推荐 -->
     <section class="g-main">
 	    <div class="m-tt1">
-		    <h2 class="fl"><a href="{WEB_PATH}/mobile/mobile/glist">热门推荐</a></h2>
-		    <div class="fr u-more">
+		    <h2 class="fr" style="margin-right:10px;"><a href="{WEB_PATH}/mobile/mobile/glist">热门推荐</a></h2>
+		    <div class="fl u-more" style="left:-40px; position:absolute;">
 			    <a href="{WEB_PATH}/mobile/mobile/glist" class="u-rs-m1"><b class="z-arrow"></b></a>
 		    </div>
 	    </div>
 	    <article class="clearfix h5-yygcms-w310 m-round m-tj-li">
 		    <ul id="ulRecommend">
 		        {wc:loop $shoplistrenqi $renqi}
-			        <li id="{wc:$renqi['id']}">
+			        <li style="float:right;" id="{wc:$renqi['id']}">
 			            <div class="f_bor_tr">
 			                <div class="m-tj-pic">
 			                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$renqi['id']}" class="u-lott-pic">
