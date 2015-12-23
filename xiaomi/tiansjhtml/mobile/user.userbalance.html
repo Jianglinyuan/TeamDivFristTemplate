@@ -26,13 +26,14 @@
     </header>
 
     <section class="clearfix g-member">
-	    <article class="clearfix m-round g-userMoney">
-		    <a href="{WEB_PATH}/mobile/home/userrecharge/" class="z-Recharge-btn">去充值</a>可用余额<span class="orange">{wc:$member['money']}</span>元
+	    <article class="clearfix m-round g-userMoney" style="text-align:end; padding-right:10px;">
+		    <a href="{WEB_PATH}/mobile/home/userrecharge/" class="z-Recharge-btn" style="float: left;">去充值</a>可用余额<span class="orange">{wc:$member['money']}</span>元
 	    </article>
 	    <article class="mt10 m-round">
 		    <ul class="m-userMoneyNav">
-			    <li><a id="btnConsumption" href="javascript:;"><b>消费明细</b>(消费总金额：￥{wc:$xfsum})</a><s></s></li>
-			    <li><a id="btnRecharge" href="javascript:;"><b>充值明细</b>(充值总金额：￥{wc:$czsum})</a></li>
+			    
+			    <li><a id="btnRecharge" href="javascript:;"><b>充值明细</b>(充值总金额：￥{wc:$czsum})</a><s></s></li>
+			    <li><a id="btnConsumption" href="javascript:;"><b>消费明细</b>(消费总金额：￥{wc:$xfsum})</a></li>
 		    </ul>
 		    
 		    <ul id="ulConsumption" class="m-userMoneylst m-Consumption">
