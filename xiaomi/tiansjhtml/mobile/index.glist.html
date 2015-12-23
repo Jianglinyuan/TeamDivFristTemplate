@@ -84,18 +84,18 @@ function glist_json(parm){
 			$("#pagenum").val(data[0].page);
 			for(var i=0;i<data.length;i++){			
 			var ul='<ul><li>';
-				ul+='<span id="'+data[i].id+'" class="z-Limg"><img src="{G_UPLOAD_PATH}/'+data[i].thumb+'"></span>';
-				ul+='<div class="goodsListR">';
+				ul+='<span id="'+data[i].id+'" class="z-Limg" style="float:right;"><img src="{G_UPLOAD_PATH}/'+data[i].thumb+'"></span>';
+				ul+='<div class="goodsListR" style="margin-left:0px;">';
 					ul+='<h2 id="'+data[i].id+'" onclick="tz('+data[i].id+')">'+data[i].title+'</h2>';
-				ul+='<div class="pRate">';
-				ul+='<div class="Progress-bar" id="'+data[i].id+'">';				
+				ul+='<div class="pRate" style="left:45px;">';
+				ul+='<div class="Progress-bar" style="width:225px; "id="'+data[i].id+'">';				
 				ul+='<p class="u-progress"><span class="pgbar" style="width:'+(data[i].canyurenshu / data[i].zongrenshu)*100+'%;"><span class="pging"></span></span></p>';
 				ul+='<ul class="Pro-bar-li">';
 				ul+='<li class="P-bar01"><em>'+data[i].canyurenshu+'</em>已参与</li>';
 				ul+='<li class="P-bar02"><em>'+data[i].zongrenshu+'</em>总需人次</li>';
 				ul+='<li class="P-bar03"><em>'+data[i].shenyurenshu+'</em>剩余</li>';
 				ul+='</ul></div>';
-				ul+='<a class="add " codeid="'+data[i].id+'" href="javascript:;"><s></s></a>';
+				ul+='<a class="add " style="left:-45px; "codeid="'+data[i].id+'" href="javascript:;"><s></s></a>';
 				ul+='</div></div></li></ul>';
 				$("#divGoodsLoading").before(ul);			
 			}
