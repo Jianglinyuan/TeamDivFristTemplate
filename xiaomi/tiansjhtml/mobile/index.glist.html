@@ -27,12 +27,8 @@
 	    <!-- 导航 -->
 	    <div class="goodsNav">
             <ul id="divGoodsNav">
-       	 	    <li order="10" class="current"><a href="javascript:;">即将揭晓<b></b></a></li>
-                <li order="20"><a href="javascript:;">人气<b></b></a></li>
-                <li order="40"><a href="javascript:;">最新<b></b></a></li>
-                <li order="50" type="price"><a href="javascript:;">价格<em></em><s></s><b></b></a></li>
                 <li order="">
-                    <a href="javascript:;">商品分类<s class="arrowUp"></s></a>
+                    <a href="javascript:;">商品分类<s class="arrowUp"></s><b></b></a>
                     <dl style="display:none;width:100%;position:fixed;top:120px;z-index:50;">
 
                         <dd type="0" class="sOrange"><a href="javascript:;">全部</a></dd>
@@ -43,6 +39,10 @@
 						{wc:getlist:end}
 					</dl>
                 </li>
+                <li order="50" type="price"><a href="javascript:;">价格<em></em><s></s><b></b></a></li>
+                <li order="40"><a href="javascript:;">最新<b></b></a></li>
+                <li order="20"><a href="javascript:;">人气<b></b></a></li>
+                <li order="10" class="current"><a href="javascript:;">即将揭晓</a></li>
            </ul>
         </div>
         <!-- 列表 -->
@@ -87,9 +87,9 @@ function glist_json(parm){
 				ul+='<span id="'+data[i].id+'" class="z-Limg" style="float:right;"><img src="{G_UPLOAD_PATH}/'+data[i].thumb+'"></span>';
 				ul+='<div class="goodsListR" style="margin-left:0px;">';
 					ul+='<h2 id="'+data[i].id+'" onclick="tz('+data[i].id+')">'+data[i].title+'</h2>';
-				ul+='<div class="pRate" style="left:45px;">';
-				ul+='<div class="Progress-bar" style="width:225px; "id="'+data[i].id+'">';				
-				ul+='<p class="u-progress"><span class="pgbar" style="width:'+(data[i].canyurenshu / data[i].zongrenshu)*100+'%;"><span class="pging"></span></span></p>';
+				ul+='<div class="pRate" style="left:45px; margin-right:132px">';
+				ul+='<div class="Progress-bar" id="'+data[i].id+'">';				
+				ul+='<p class="u-progress"><span class="pgbar" style="width:'+(data[i].canyurenshu / data[i].zongrenshu)*100 +'%;"><span class="pging"></span></span></p>';
 				ul+='<ul class="Pro-bar-li">';
 				ul+='<li class="P-bar01"><em>'+data[i].canyurenshu+'</em>已参与</li>';
 				ul+='<li class="P-bar02"><em>'+data[i].zongrenshu+'</em>总需人次</li>';
