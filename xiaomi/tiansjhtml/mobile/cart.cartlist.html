@@ -44,19 +44,19 @@
 				   $buyshopmoney+=$Mcartlist[$val['id']]['num'] * $Mcartlist[$val['id']]['money'];
                 {wc:php:end}
 					<li>
-						<a class="fl u-Cart-img" href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/">
+						<a class="fl u-Cart-img" style="float:right;"href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/">
 							<img src="{G_TEMPLATES_STYLE}/mobile/images/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$val['thumb']}" border="0" alt=""/>
 						</a>
-						<div class="u-Cart-r">
-							<p class="z-Cart-tt"><a href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/" class="gray6">(第{wc:$val['qishu']}期){wc:$val['title']}</a></p>
-							<ins class="z-promo gray9">剩余<em class="arial">{wc:$val['zongrenshu']-$val['canyurenshu']}</em>人次</ins>
-							<p class="gray9">总共{wc:fun:_cfg('web_name_two')}：<em class="arial">{wc:$Mcartlist[$val['id']]['num']}</em>人次/<em class="orange arial">￥{wc:$Mcartlist[$val['id']]['money']}</em></p>
+						<div class="u-Cart-r" style="margin-left:10px;">
+							<p class="z-Cart-tt" style="text-align: right;"><a href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/" class="gray6">(第{wc:$val['qishu']}期){wc:$val['title']}</a></p>
+							<ins class="z-promo gray9" style="text-align: right;">剩余<em class="arial">{wc:$val['zongrenshu']-$val['canyurenshu']}</em>人次</ins>
+							<p class="gray9" style="text-align: right;">总共{wc:fun:_cfg('web_name_two')}：<em class="arial">{wc:$Mcartlist[$val['id']]['num']}</em>人次/<em class="orange arial">￥{wc:$Mcartlist[$val['id']]['money']}</em></p>
 							<p class="f-Cart-Other">
-								<a href="javascript:;" class="fr z-del" name="delLink" cid="{wc:$val['id']}"></a>
-								<a href="javascript:;" class="fl z-jian {wc:if $Mcartlist[$val['id']]['num']==1}z-jiandis{wc:if:end}">-</a>
+								<a href="javascript:;" class="fr z-del" name="delLink" cid="{wc:$val['id']}" style="float:left"></a>
 
-								<input id="txtNum{wc:$val['id']}" name="num" type="text" maxlength="7" value="{wc:$Mcartlist[$val['id']]['num']}" class="fl z-amount" price="{wc:$Mcartlist[$val['id']]['money']}" />
-								<a href="javascript:;" class="fl z-jia {wc:if $Mcartlist[$val['id']]['num']==$val['zongrenshu']}z-jiadis{wc:if:end}">+</a>
+								<a style="float:right" href="javascript:;" class="fl z-jia {wc:if $Mcartlist[$val['id']]['num']==$val['zongrenshu']}z-jiadis{wc:if:end}">+</a>
+								<input style="float:right" id="txtNum{wc:$val['id']}" name="num" type="text" maxlength="7" value="{wc:$Mcartlist[$val['id']]['num']}" class="fl z-amount" price="{wc:$Mcartlist[$val['id']]['money']}" />
+								<a href="javascript:;" class="fl z-jian {wc:if $Mcartlist[$val['id']]['num']==1}z-jiandis{wc:if:end}" style="float:right">-</a>
 								<input type="hidden" value="{wc:$Mcartlist[$val['id']]['num']}" />
 								<input type="hidden" value="{wc:$val['zongrenshu']-$val['canyurenshu']}" />
 								<input type="hidden" value="{wc:$val['zongrenshu']}" />
