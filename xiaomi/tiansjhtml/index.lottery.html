@@ -1,6 +1,6 @@
 {wc:templates "index","header"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/Lottery.css"/>
-<div class="container breadcrumbs"><a href="{WEB_PATH}">首页</a><span class="sep">/</span>最新揭晓</div>
+<div class="container breadcrumbs">最新揭晓<span class="sep">/</span><a href="{WEB_PATH}">首页</a></div>
 <div id="content">
 <div class="coin-layout">
     <div class="coin-bg J_ModLayout"></div>
@@ -9,7 +9,7 @@
 	<div class="topicitem-mod common-layout">
 <div class="container">
         <div class="xm-line-box filter-box">
-        <div class="box-hd"><h3 class="title">最新揭晓 <span id="spTotalCount" style="font-size: 12px;color: #8c8c8c;">(到目前为止共揭晓商品<em class="orange">{wc:$total}</em>件)</span></h3></div>
+        <div class="box-hd"><h3 class="title"><span id="spTotalCount" style="font-size: 12px;color: #8c8c8c;">(件<em class="orange">{wc:$total}</em>到目前为止共揭晓商品)</span> 最新揭晓</h3></div>
         <div class="box-bd">
 		<div class="publishBor">
 			<div class="publishCen" id="listDivTitle">
@@ -27,16 +27,16 @@
 							<img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:$qishu['q_user']['img']}" width="50" height="50" border="0"/>
 
 							</a>
-							<p>获得者：<a class="blue Fb" href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" target="_blank">{wc:fun:get_user_name($qishu['q_user'])}</a></p>
-							<p>抢拍：<em class="orange Fb">{wc:fun:get_user_goods_num($qishu['q_uid'],$qishu['id'])}</em>人次</p>
+							<p><a class="blue Fb" href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" target="_blank">{wc:fun:get_user_name($qishu['q_user'])}</a>：获得者</p>
+							<p>人次<em class="orange Fb">{wc:fun:get_user_goods_num($qishu['q_uid'],$qishu['id'])}</em>：抢拍</p>
 						</div>
 						<div class="publishC-tit">
 							<h3><a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" target="_blank" class="gray01">(第{wc:$qishu['qishu']}期){wc:$qishu['title']}</a></h3>
-							<p class="money">商品价值：<span class="rmb">{wc:$qishu['money']}</span>元</p>
-							<p class="Announced-time gray02">揭晓时间：{wc:fun:microt($qishu['q_end_time'],'r')}</p>
+							<p class="money">元<span class="rmb">{wc:$qishu['money']}</span>：商品价值</p>
+							<p class="Announced-time gray02">{wc:fun:microt($qishu['q_end_time'],'r')}：揭晓时间</p>
 						</div>
 						<div class="details">
-							<p class="fl details-Code">幸运拍码：<em class="orange Fb">{wc:$qishu['q_user_code']}</em></p>
+							<p class="fl details-Code"><em class="orange Fb">{wc:$qishu['q_user_code']}</em>：幸运拍码</p>
 							<a class="fl details-A" href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" rel="nofollow" target="_blank">查看详情</a>
 
 						</div>
