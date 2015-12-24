@@ -154,31 +154,31 @@
 }
 .select {
 	width:780px;
-	margin:10px auto 25px;
+	margin:10px auto 30px;
 	display:inline-block;
 }
 .select ul {
 	margin-top:15px;
 }
 .select li {
-	float:left;
+	float:right;
 	background:#fdfdfd;
 	border:#efefef 1px solid;
 	width:110px;
 	height:38px;
-	text-align:left;
 	line-height:38px;
 	color:#666;
 	font-size:12px;
 	font-family:"宋体";
 	font-weight:bold;
-	padding-left:18px;
-	margin-left:17px;
+	padding-left:10px;
+	margin-right:17px;
 	*line-height:35px;
 	_height:30px;
 	_padding-top:8px;
 	_line-height:27px;
 	cursor:pointer;
+	direction: rtl;
 }
 .select li label {
 	cursor:pointer;
@@ -217,15 +217,16 @@
 	line-height:22px;
 	border:#d6d3d6 1px solid;
 	padding:0 3px;
-	margin-left:5px;
+	margin-right:5px;
 	color:#f60;
 	position:relative;
 	top:1px;
 	_top:3px;
 }
 .charge_money_list {
+	float: right;
 	width:770px;
-	padding:13px 0 0 10px;
+	padding:33px 0 0 10px;
 	border-top:#eee 1px solid;
 	position:relative;
 }
@@ -235,15 +236,16 @@
 .charge_money_list ul.payment {
 	clear:both;
 	width:750px;
-	padding:0 10px;
+	padding:0 10px 20px;
 	float:left;
-	border-bottom:1px solid #e6e7e8;
+	/*border-bottom:1px solid #e6e7e8;*/
 }
 .charge_money_list ul.sel li {
 	float:left;
 }
 .charge_money_list ul.payment li {
-	float:left;
+	float:right;
+	margin: 10px 0;	
 }
 .charge_money_list ul.payment li.top {
 	padding-bottom:20px;
@@ -284,7 +286,7 @@
 }
 p.leix {
 	clear:both;
-	float:left;
+	float:right;
 	margin:10px 0;
 	display:block;
 	width:150px;
@@ -336,10 +338,10 @@ p.leix {
 	background:url(../images/bank_logo.png) 8px -462px;
 }
 .charge_money_list p.much {
-	width:770px;
-	float:left;
-	border-bottom:1px solid #e6e7e8;
-	padding:10px 0;
+	width:150px;
+	float:right;
+	/*border-bottom:1px solid #e6e7e8;*/
+	padding:15px 0;
 	color:#666;
 	font-weight:bold;
 }
@@ -355,8 +357,8 @@ p.leix {
 	top:2px;
 }
 .charge_money_list h6 {
-	clear:both;
-	margin-left:68px;
+	width: 100px;
+	float: right;
 	padding:15px 0;
 }
 .charge_money_list .imm {
@@ -366,6 +368,10 @@ p.leix {
 	_padding:6px 19px 2px;
 	font-size:14px;
 	font-weight:bold;
+}
+.charge_money_list .imm:hover {
+	background: #ff4a00;
+	color: #fff;
 }
 .prompt_box {
 	width:340px;
@@ -430,4 +436,12 @@ p.leix {
 #divPageNav {
 	padding-top: 10px;
     float: left;
+}
+#pay-wrapper {
+	width: 250px;
+}
+#recharge-card {
+    border-top: #eee 1px solid;
+    padding-top: 33px;
+    margin-top: 20px;
 }

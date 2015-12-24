@@ -5622,3 +5622,7 @@ body.f-width-change .g-special li em {
 div.uc-info {
 	text-align: right;
 }
+ul.payment li img {
+    width: 104px;
+    height: 49px;
+}

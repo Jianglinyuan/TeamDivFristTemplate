@@ -242,7 +242,8 @@
 	float:left;
 }
 .charge_money_list ul.payment li {
-	float:left;
+	float:right;
+	margin: 10px 0;
 }
 .charge_money_list ul.payment li.top {
 	padding-bottom:20px;
