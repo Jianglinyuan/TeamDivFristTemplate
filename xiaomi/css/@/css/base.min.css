@@ -648,7 +648,7 @@ a:hover, a:focus {
 }
 .span16 {
 	width: 942px;
-	float: left;
+	float: right;
 	_display: inline;
 	min-height: 1px
 }
@@ -719,8 +719,9 @@ a:hover, a:focus {
 	min-height: 1px
 }
 .span4 {
+	text-align: right;
 	width: 248px;
-	float: left;
+	float: right;
 	_display: inline;
 	min-height: 1px
 }
@@ -5618,4 +5619,7 @@ body.f-width-change .g-special li em {
 }
 #content {
 	/*text-align: right;*/
+}
+div.uc-info {
+	text-align: right;
 }
