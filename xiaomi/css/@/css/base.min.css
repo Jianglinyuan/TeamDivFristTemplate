@@ -865,7 +865,9 @@ a:hover, a:focus {
 .xm-line-box .box-hd {
 	position: relative;
 	height: 50px;
-	border-bottom: 1px solid #dfdfdf
+	border-bottom: 1px solid #dfdfdf;
+	padding-right: 10px;
+	text-align: right;
 }
 .xm-line-box .box-hd .title {
 	margin: 0;
@@ -946,7 +948,8 @@ a:hover, a:focus {
 .site-breadcrumb, .breadcrumbs {
 	margin: 10px auto;
 	font-size: 12px;
-	color: #8c8c8c
+	color: #8c8c8c;
+	text-align: right;
 }
 .site-breadcrumb a, .breadcrumbs a {
 	color: #8c8c8c
@@ -1310,7 +1313,8 @@ a:hover, a:focus {
 	line-height: 20px;
 	color: #333;
 	background: #fff;
-	text-align: right;
+	/*text-align: right;*/
+	direction: rtl;
 	margin-left: 40px;
 }
 .site-header .header-info .search-form .search-text:focus {
@@ -3093,9 +3097,10 @@ a.u-cart:hover {
 .g-progress dl.m-progress dt b {
 	display: block;
 	height: 6px;
+	float: right;
 	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#ff934b', endColorStr='#ff6601', gradientType='1');
 	background: -moz-linear-gradient(0deg, #ff934b, #ff6601);
-	background: -webkit-gradient(linear, 0% 0, 100% 0, from(#ff934b), to(#ff6601));
+	background: -webkit-gradient(linear, 100% 0, 0% 0, from(#ff934b), to(#ff6601));
 	background: -ms-linear-gradient(left, #ff934b 0, #ff6601 100%);
 	background: -o-linear-gradient(0deg, #ff934b, #ff6601);
 }
@@ -4441,7 +4446,7 @@ body.f-width-change .g-special li em {
 .filter-box {
 	margin-bottom: 10px;
 	background-color: #fff;
-	padding: 0 10px;
+	/*padding: 0 10px;*/
 }
 .goods-list-box .box-hd {
 	border-bottom: 0;
@@ -5610,4 +5615,7 @@ body.f-width-change .g-special li em {
 }
 #sCartLoading {
 	text-align: right;
+}
+#content {
+	/*text-align: right;*/
 }

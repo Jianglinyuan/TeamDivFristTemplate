@@ -38,7 +38,6 @@
 {wc:templates "/mobile/index","headerindex"}
 
 <!-- 内页顶部 -->
-     
     <input name="hidStartAt" type="hidden" id="hidStartAt" value="0" />
     <!-- 焦点图 -->
     <section id="sliderBox" class="hotimg"></section>
@@ -126,7 +125,8 @@
 
 		    <h2 class="fr" style="margin-right:10px;"><a href="{WEB_PATH}/mobile/autolottery">بۈگۈنلىك ۋاقىتلىق مەھسۇلات</a></h2>
 		    <div class="fl u-more" style="position: absolute; left: 10px">
-			    <a href="{WEB_PATH}/mobile/autolottery/next" class="u-rs-m2"><b class="z-arrow"></b>ئەتىلىك</a>
+
+			    <a href="{WEB_PATH}/mobile/autolottery/next" class="u-rs-m2"><b style="    transform: rotate(-135deg);float: left;"class="z-arrow"></b>ئەتىلىك</a>
 
 		    </div>
 
@@ -156,13 +156,13 @@
 			
 			<li class="m-xs-li" txt="{wc:$shop['time_H']}点" codeid="{wc:$shop['id']}" uweb="{wc:fun:idjia($shop['q_uid'])}">
 				<article class="clearfix m-xs-ct m-xs-End">
-					<div class="u-xs-pic">
+					<div class="u-xs-pic" style="float:right;">
 						<div class="z-xs-pic">
 						<a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}"><img src="{G_TEMPLATES_IMAGE}/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" border=0 /></a>
 						</div>
 						<div class="z-xs-time"><b>ئاخىرلاشتى</b></div>
 					</div>
-					<div class="u-xs-con">
+					<div class="u-xs-con" style="margin-left: 0px; margin-right: 107px; text-align: right;">
 						<div class="clearfix u-xs-name">
 						<a class="u-xs-name-img" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shop['q_uid']}">
 					<img name="uImg" border="0" src2="{G_UPLOAD_PATH}/{wc:fun:get_user_key($shop['q_uid'],'img')}"/></a>
@@ -183,7 +183,7 @@
 			 {wc:else}
 			<li class="m-xs-li" txt="{wc:$shop['time_H']}点" codeid="{wc:$shop['id']}" >
 			  <article class="clearfix m-xs-ct ">
-			      <div class="u-xs-pic">
+			      <div class="u-xs-pic" style="float:right;">
 				       <div class="z-xs-pic">
 			             <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}"><img src="{G_TEMPLATES_IMAGE}/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" border=0 /></a>
 			          </div>			         				 
@@ -195,10 +195,11 @@
                   {wc:php:start}
  
                   {wc:php:end}
- 
-				  <div class="u-xs-con">
-				      <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}" class="gray6 z-tt">{wc:$shop['title']}</a>
+
+				  <div class="u-xs-con" style="margin-left: 0px; margin-right: 107px; text-align: right;">
+				      <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}" class="gray6 z-tt">(第{wc:$shop['qishu']}期){wc:$shop['title']}</a>
 				      <ins class="z-promo"><em class="arial">￥{wc:$shop['money']}</em></ins>
+
 				      <div class="Progress-bar"><p class="u-progress" title="已完成{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%"><span class="pgbar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"><span class="pging"></span></span></p>
 					    <ul class="Pro-bar-li">
 					     <li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>قاتناشقانلار</li>
@@ -223,7 +224,7 @@
 	    <div class="m-tt1">
 		    <h2 class="fr" style="margin-right:10px;"><a href="{WEB_PATH}/mobile/mobile/glist">تەۋسىيە قىلىنغان مەھسۇلاتلار</a></h2>
 		    <div class="fl u-more" style="left:-40px; position:absolute;">
-			    <a href="{WEB_PATH}/mobile/mobile/glist" class="u-rs-m1"><b class="z-arrow"></b></a>
+			    <a href="{WEB_PATH}/mobile/mobile/glist" class="u-rs-m1"><b style="    transform: rotate(-135deg);" class="z-arrow"></b></a>
 		    </div>
 	    </div>
 	    <article class="clearfix h5-yygcms-w310 m-round m-tj-li">

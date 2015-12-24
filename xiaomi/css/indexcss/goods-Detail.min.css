@@ -529,7 +529,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	margin-top: 10px;
 }
 .goods-detail-desc .goods-recent .box-bd dt {
-	float: left;
+	float: right;
 	width: 80px;
 	margin-right: 7px;
 	font-size: 0;
@@ -1352,7 +1352,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	padding: 10px 0
 }
 .goods-sub-bar .goods-sub-bar-info dt {
-	float: left;
+	float: right;
 	width: 40px;
 	height: 40px;
 	margin-right: 10px
@@ -1362,7 +1362,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	height: 40px
 }
 .goods-sub-bar .goods-sub-bar-info dd {
-	float: left;
+	float: right;
 	display: block;
 	width: 180px;
 	white-space: nowrap;
@@ -1386,7 +1386,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-sub-bar .fr .btn {
 	margin-top: 10px;
-	margin-right: 0
+	margin-right: 80px;
 }
 .goods-sub-bar .fr .goods-add-cart-btn .iconfont {
 	vertical-align: -2px
@@ -1417,7 +1417,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	_zoom: 1
 }
 .goods-sub-bar .goods-desc-menu {
-	float: left
+	margin-left: 50px;
 }
 .goods-sub-bar .goods-desc-menu .items li {
 	text-align: center;

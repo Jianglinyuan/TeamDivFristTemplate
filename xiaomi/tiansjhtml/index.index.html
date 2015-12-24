@@ -58,7 +58,7 @@
                         <ul>
                             <li class="g-soon-pic"><a href="{WEB_PATH}/goods/{wc:$renqi['id']}" target="_blank" title="{wc:$renqi['title']}"><img alt="{wc:$renqi['title']}" src="{G_UPLOAD_PATH}/{wc:$renqi['thumb']}"></a></li>
                             <li class="soon-list-name"><a href="{WEB_PATH}/goods/{wc:$renqi['id']}" target="_blank" title="{wc:$renqi['title']}">{wc:$renqi['title']}</a></li>
-                            <li class="gray">价值：￥{wc:$renqi['money']}</li>
+                            <li class="gray">￥{wc:$renqi['money']}</li>
                             <li class="g-progress"><dl class="m-progress"><dt><b style="width:{wc:fun:width($renqi['canyurenshu'],$renqi['zongrenshu'],216)}px;"></b></dt><dd><span class="orange fl"><em>{wc:$renqi['canyurenshu']}</em>已参与</span><span class="gray6 fl"><em>{wc:$renqi['zongrenshu']}</em>总需人次</span><span class="blue fr"><em>{wc:$renqi['zongrenshu']-$renqi['canyurenshu']}</em>剩余</span></dd></dl></li>
                             <li><a href="{WEB_PATH}/goods/{wc:$renqi['id']}" style="margin-right:70px;" class="u-now" target="_blank" title="只要1元，即可购买">立即{wc:fun:_cfg('web_name_two')}</a></li>
                         </ul>
@@ -79,7 +79,7 @@
                         <ul>
                             <li class="g-soon-pic"><a href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank" title="{wc:$shop['title']}"><img alt="{wc:$shop['title']}" src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}"></a></li>
                             <li class="soon-list-name"><a href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank" title="{wc:$shop['title']}">{wc:$shop['title']}</a></li>
-                            <li class="gray">￥{wc:$shop['money']}：价值</li>
+                            <li class="gray">￥{wc:$shop['money']}</li>
                             <li class="g-progress"><dl class="m-progress"><dt><b style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],216)}px;"></b></dt><dd><span class="orange fl"><em>{wc:$shop['canyurenshu']}</em>已参与</span><span class="gray6 fl"><em>{wc:$shop['zongrenshu']}</em>总需人次</span>
                             <span class="blue fr"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>剩余</span></dd></dl></li>
                             <li>
@@ -112,7 +112,7 @@
                         <ul id="ulGoodsList">
                             <li class="g-soon-pic"><a href="{WEB_PATH}/goods/{wc:$g_l['id']}" target="_blank" title="{wc:$g_l['title']}"><img alt="{wc:$g_l['title']}" src="{G_UPLOAD_PATH}/{wc:$g_l['thumb']}"></a></li>
                             <li class="soon-list-name"><a href="{WEB_PATH}/goods/{wc:$g_l['id']}" target="_blank" title="{wc:$g_l['title']}">{wc:$g_l['title']}</a></li>
-                            <li class="gray">￥{wc:$g_l['money']}：价值</li>
+                            <li class="gray">￥{wc:$g_l['money']}</li>
                             <li class="g-progress"><dl class="m-progress"><dt><b style="width:{wc:fun:width($g_l['canyurenshu'],$g_l['zongrenshu'],266)}px"></"></b></dt><dd><span class="orange fl"><em>{wc:$g_l['canyurenshu']}</em>已参与</span><span class="gray6 fl"><em>{wc:$g_l['zongrenshu']}</em>总需人次</span><span class="blue fr"><em>{wc:$g_l['zongrenshu']-$g_l['canyurenshu']}</em>剩余</span></dd></dl></li>
                             <li><a href="{WEB_PATH}/goods/{wc:$g_l['id']}" target="_blank" class="u-now">立即{wc:fun:_cfg('web_name_two')}</a><a href="javascript:;" title="加入到购物车" class="u-cart"><s></s></a></li>
                             <div class="Curbor_id" style="display:none;">{wc:$g_l['id']}</div>
