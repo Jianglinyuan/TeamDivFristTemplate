@@ -860,6 +860,7 @@ a:hover {
 	list-style-type: none
 }
 .uc-order-detail-list li.empty {
+	text-align: right;
 	padding: 10px 20px;
 	border-bottom: 1px solid #dfdfdf
 }

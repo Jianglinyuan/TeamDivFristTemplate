@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
 
-<div class="container breadcrumbs"><a href="/">首页</a><span class="sep">/</span><span>获得的商品</span></div>
+<div class="container breadcrumbs"><span>获得的商品</span><span class="sep">/</span><a href="/">首页</a></div>
 
 <div class="container">
 
@@ -16,7 +16,7 @@
 
 				<div class="xm-line-box uc-box">
 
-					<div class="box-hd"><h3 class="title">您在{wc:fun:_cfg("web_name_two")}网成功获得了 <b id="goodsCount" class="orange">{wc:fun:count($record)}</b> 个商品<a href="#" id="wuliu_select">查询物流</a></h3><div id="divPageNav" class="page_nav">{wc:page:one}</div></div>
+					<div class="box-hd"><h3 class="title"><a href="#" id="wuliu_select">查询物流</a>您在{wc:fun:_cfg("web_name_two")}网成功获得了 <b id="goodsCount" class="orange">{wc:fun:count($record)}</b> 个商品</h3><div id="divPageNav" class="page_nav">{wc:page:one}</div></div>
 
 					{wc:if !member_get_dizhi($uid)}
 
@@ -26,7 +26,7 @@
 
 							<ul class="uc-order-detail-list">
 
-								<li class="uc-order-detail-item empty">您还没有填写收货信息,请填写收货信息！<a href="{WEB_PATH}/member/home/address" style="font-weight:bold; color:#2af">去填写!</a></li>
+								<li class="uc-order-detail-item empty"><a href="{WEB_PATH}/member/home/address" style="font-weight:bold; color:#2af">去填写！</a>您还没有填写收货信息,请填写收货信息！</li>
 
 							</ul>
 
@@ -67,7 +67,7 @@
 												<th class="column-info column-t" colspan="3">
 
 													<div class="column-content">
-
+														{wc:if $recd['company']}{wc:$recd['company_code']}：快递单号<span class="sep">|</span><span>{wc:$recd['company']}：快递公司</span><span class="sep">|</span>{wc:if:end}
 														<span class="order-status">{wc:php:start}
 
 														$status=@explode(",",$recd['status']);
@@ -100,7 +100,7 @@
 
 														}
 
-													{wc:php:end}</span>{wc:if $recd['company']}<span class="sep">|</span><span>快递公司：{wc:$recd['company']}</span><span class="sep">|</span>快递单号：{wc:$recd['company_code']}{wc:if:end}
+													{wc:php:end}</span>
 
 													</div>
 
@@ -114,19 +114,45 @@
 
 											<tr>
 
-												<td class="column-detail column-l">
+												<td class="column-action column-r">
 
-													<ul class="order-goods-list">
+													<div class="order-info order-action">
 
-														<li class="first">
+													{wc:php:start}
 
-															<a target="_blank" class="pic" href="{WEB_PATH}/dataserver/{wc:$recd['shopid']}"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:fun:yunjl($recd['shopid'])}"></a>
+														$status=@explode(",",$recd['status']);
 
-															<a target="_blank" href="{WEB_PATH}/dataserver/{wc:$recd['shopid']}" class="goods-name">您获得了第{wc:$recd['shopqishu']}期：{wc:$recd['shopname']}</a>
+														if($status[2]=='未完成' || $status[2]=='待收货'){
 
-														</li>
+															if($status[1]=='未发货'){
 
-													</ul>
+																echo '<a class="btn btn-primary btn-small">等待操作</a>';
+
+															}
+
+															if($status[1]=='已发货'){
+
+																echo '<a class="btn btn-primary btn-small order_click" oid="'.$recd['id'].'" uid="'.$recd['uid'].'">确认收货</a>';
+
+															}
+
+														}
+
+														if($status[2]=='已完成'){
+
+															echo '<a href="http://wpa.qq.com/msgrd?v=3&uin=1810524351&site=qq&menu=yes" class="btn btn-primary btn-small" oid="'.$recd['id'].'" uid="'.$recd['uid'].'">申请售后</a>';
+
+														}
+
+														if($status[2]=='已作废'){
+
+															echo "已作废";
+
+														}
+
+													{wc:php:end}
+
+													</div>
 
 												</td>
 
@@ -172,45 +198,19 @@
 
 												</td>
 
-												<td class="column-action column-r">
+												<td class="column-detail column-l">
 
-													<div class="order-info order-action">
+													<ul class="order-goods-list">
 
-													{wc:php:start}
+														<li class="first">
 
-														$status=@explode(",",$recd['status']);
+															<a target="_blank" class="pic" href="{WEB_PATH}/dataserver/{wc:$recd['shopid']}"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:fun:yunjl($recd['shopid'])}"></a>
 
-														if($status[2]=='未完成' || $status[2]=='待收货'){
+															<a target="_blank" href="{WEB_PATH}/dataserver/{wc:$recd['shopid']}" class="goods-name">您获得了第{wc:$recd['shopqishu']}期：{wc:$recd['shopname']}</a>
 
-															if($status[1]=='未发货'){
+														</li>
 
-																echo '<a class="btn btn-primary btn-small">等待操作</a>';
-
-															}
-
-															if($status[1]=='已发货'){
-
-																echo '<a class="btn btn-primary btn-small order_click" oid="'.$recd['id'].'" uid="'.$recd['uid'].'">确认收货</a>';
-
-															}
-
-														}
-
-														if($status[2]=='已完成'){
-
-															echo '<a href="http://wpa.qq.com/msgrd?v=3&uin=1810524351&site=qq&menu=yes" class="btn btn-primary btn-small" oid="'.$recd['id'].'" uid="'.$recd['uid'].'">申请售后</a>';
-
-														}
-
-														if($status[2]=='已作废'){
-
-															echo "已作废";
-
-														}
-
-													{wc:php:end}
-
-													</div>
+													</ul>
 
 												</td>
 
@@ -246,7 +246,7 @@
 
 <style>
 
-	#wuliu_select{ padding:5px 8px; width:80px; background-color:#F60;border-radius:2px;font-family: 微软雅黑; color:#fff; font-size:12px; margin-left:30px; }
+	#wuliu_select{ padding:5px 8px; width:80px; background-color:#F60;border-radius:2px;font-family: 微软雅黑; color:#fff; font-size:12px; margin-right:30px; }
 
 	.wuliubtn{ padding:3px 5px;background-color:#2af;border-radius:2px; color:#fff; font-size:12px; }
 
