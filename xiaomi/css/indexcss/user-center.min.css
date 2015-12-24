@@ -234,11 +234,11 @@ a:hover {
 	position: relative;
 	*zoom: 1
 }
-.uc-nav-list li.current a {
-	padding-left: 27px;
-	border-left: 3px solid #ff4a00;
+.uc-nav-list li.current {
+	margin-left: 27px;
+	border-right: 3px solid #ff4a00;
 	color: #333;
-	background-color: #fafafa
+	background-color: #fbf4fa;
 }
 .uc-nav-list li a {
 	display: block;
@@ -897,6 +897,7 @@ a:hover {
 	background: #fafafa
 }
 .uc-order-detail-item .order-detail-table .column-info .column-content {
+	float: right;
 	position: relative;
 	height: 21px;
 	padding: 10px 20px
@@ -977,6 +978,7 @@ a:hover {
 	background: url(http://img03.mifile.cn/webfile/images/2014/cn/uc/arrow.png?2014041302) no-repeat 0 0
 }
 .uc-order-detail-item .order-detail-table .order-goods-list {
+	text-align: right;
 	margin: 0;
 	padding: 0;
 	list-style-type: none
@@ -985,18 +987,21 @@ a:hover {
 	position: relative;
 	min-height: 42px;
 	_height: 42px;
-	padding: 30px 20px 30px 100px;
+	padding: 30px 20px 20px 20px;
 	border-top: 1px solid #dfdfdf
 }
 .uc-order-detail-item .order-detail-table .order-goods-list li.first {
 	border-top: 0
 }
 .uc-order-detail-item .order-detail-table .order-goods-list .goods-thumb {
-	position: absolute;
+/*	position: absolute;
 	top: 20px;
 	left: 20px;
 	width: 60px;
-	height: 60px
+	height: 60px*/
+	float: right;
+	margin-top: -10px;
+	margin-left: 15px;
 }
 .uc-order-detail-item .order-detail-table .order-goods-list .goods-price {
 	display: block

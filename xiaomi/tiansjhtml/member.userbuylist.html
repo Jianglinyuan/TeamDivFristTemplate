@@ -1,6 +1,6 @@
 {wc:templates "index","header"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
-<div class="container breadcrumbs"><a href="/">首页</a><span class="sep">/</span><span>我的订单</span></div>
+<div class="container breadcrumbs"><span>我的订单</span><span class="sep">/</span><a href="/">首页</a></div>
 <div class="container">
     <div class="uc-full-box">
         <div class="row">
@@ -22,26 +22,26 @@
 											<tr>
 												<th class="column-info column-t" colspan="3">
 													<div class="column-content">
-														<span class="order-status">本期已揭晓</span><span class="sep">|</span>获得者：<a href="{WEB_PATH}/uname/{wc:fun:idjia($jiexiao['q_uid'])}" target="_blank">{wc:fun:get_user_name($jiexiao['q_user'])}</a><span class="sep">|</span>揭晓时间：{wc:fun:microt($rt['time'])}
+														{wc:fun:microt($rt['time'])}：揭晓时间<span class="sep">|</span><a href="{WEB_PATH}/uname/{wc:fun:idjia($jiexiao['q_uid'])}" target="_blank">{wc:fun:get_user_name($jiexiao['q_user'])}</a>：获得者<span class="sep">|</span><span class="order-status">本期已揭晓</span>
 													</div>
 												</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
+												<td class="column-action column-r">
+													<div class="order-info order-action"><a href="{WEB_PATH}/member/home/userbuydetail/{wc:$rt['id']}" class="btn btn-primary btn-small" title="揭晓详情">揭晓详情</a></div>
+												</td>
+												<td class="column-price"><div class="order-info order-price">已揭晓</div></td>
 												<td class="column-detail column-l">
 													<ul class="order-goods-list">
-														<li class="first">
+														<li class="first clearfix">
 															<a title="" target="_blank" class="pic" href="{WEB_PATH}/dataserver/{wc:$rt['shopid']}_{wc:$rt['shopqishu']}"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:$jiexiao['thumb']}"></a>
 															<a target="_blank" href="{WEB_PATH}/dataserver/{wc:$rt['shopid']}_{wc:$rt['shopqishu']}" class="goods-name">{wc:$rt['shopname']}</a>
 															<span class="goods-price">您当前购买的是第{wc:$rt['shopqishu']}期，共<em style="color:#ff4a00;">{wc:$rt['gonumber']}</em>人次，小计：{wc:$rt['gonumber']}元</span>
 															<span class="goods-link"></span>
 														</li>
 													</ul>
-												</td>
-												<td class="column-price"><div class="order-info order-price">已揭晓</div></td>
-												<td class="column-action column-r">
-													<div class="order-info order-action"><a href="{WEB_PATH}/member/home/userbuydetail/{wc:$rt['id']}" class="btn btn-primary btn-small" title="揭晓详情">揭晓详情</a></div>
 												</td>
 											</tr>
 										</tbody>
@@ -54,16 +54,20 @@
 											<tr>
 												<th class="column-info column-t" colspan="3">
 													<div class="column-content">
-														<span class="order-status">本期正在进行中</span><span class="sep">|</span>购买时间：{wc:fun:microt($rt['time'])}
+														{wc:fun:microt($rt['time'])}：购买时间<span class="sep">|</span><span class="order-status">本期正在进行中</span>
 													</div>
 												</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
+												<td class="column-action column-r">
+													<div class="order-info order-action"><a href="{WEB_PATH}/member/home/userbuydetail/{wc:$rt['id']}" class="btn btn-primary btn-small" title="查看{wc:fun:_cfg('web_name_two')}码">查看{wc:fun:_cfg('web_name_two')}码</a></div>
+												</td>
+												<td class="column-price"><div class="order-info order-price">正在进行...</div></td>
 												<td class="column-detail column-l">
 													<ul class="order-goods-list">
-														<li class="first">
+														<li class="first clearfix">
 															<a title="" target="_blank" class="pic" href="{WEB_PATH}/goods/{wc:$rt['shopid']}"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:$jiexiao['thumb']}"></a>
 															<a target="_blank" href="{WEB_PATH}/goods/{wc:$rt['shopid']}" class="goods-name">{wc:$rt['shopname']}</a>
 															<span class="goods-price">您当前购买的是第{wc:$rt['shopqishu']}期，共<em style="color:#ff4a00;">{wc:$rt['gonumber']}</em>人次</span>
@@ -71,10 +75,7 @@
 														</li>
 													</ul>
 												</td>
-												<td class="column-price"><div class="order-info order-price">正在进行...</div></td>
-												<td class="column-action column-r">
-													<div class="order-info order-action"><a href="{WEB_PATH}/member/home/userbuydetail/{wc:$rt['id']}" class="btn btn-primary btn-small" title="查看{wc:fun:_cfg('web_name_two')}码">查看{wc:fun:_cfg('web_name_two')}码</a></div>
-												</td>
+												
 											</tr>
 										</tbody>
 									</table>
@@ -85,7 +86,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="divPageNav" class="page_nav" style="margin-top:0px;">{wc:page:one}</div>
+				<div id="divPageNav" class="page_nav clearfix" style="margin-top:0px;">{wc:page:one}</div>
 			</div>
 		</div>
 	</div>
