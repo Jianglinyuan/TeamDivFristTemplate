@@ -887,7 +887,7 @@ a:hover, a:focus {
 .xm-line-box .box-hd .more {
 	position: absolute;
 	top: 20px;
-	right: 0
+	left: 0
 }
 .xm-line-box .box-hd .more .more-link {
 	font-size: 14px;
