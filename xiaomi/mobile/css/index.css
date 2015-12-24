@@ -310,7 +310,7 @@ height:136px;
 }
 }
 .g-main .overflow {
-	height:183px;
+	height:145px;
 	overflow:hidden;
 }
 .g-main .overflow .haveNot {
@@ -433,8 +433,9 @@ width:34%;
 	color:#fff;
 }
 .u-xs-con {
-	margin-left:107px;
-	margin-bottom:15px;
+	margin-left:120px;
+	margin-bottom:5px;
+	margin-top: 10px;
 }
 .u-xs-con .z-tt {
 	line-height:22px;
@@ -442,7 +443,7 @@ width:34%;
 	overflow:hidden;
 	font-size:12px;
 	display:inline-block;
-	margin-top:2px;
+	margin-top:18px;
 }
 .u-xs-con .z-promo {
 	display:block;

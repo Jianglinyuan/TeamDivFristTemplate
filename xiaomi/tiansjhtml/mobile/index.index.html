@@ -85,7 +85,7 @@
 					<a href="{WEB_PATH}/mobile/autolottery"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava1.png"></a>
 				</div>
 				<div class="textnavword">
-				<p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb">ۋاقىتلىق جاكارلار</p>
+				<p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb">ۋاقىتلىق</p>
 				
 				</div>
 		</div>
@@ -124,10 +124,9 @@
     <section class="g-main">
 	    <div class="m-tt1">
 
-		    <h2 class="fr" style="margin-right:10px;"><a href="{WEB_PATH}/mobile/autolottery">今日限时</a></h2>
-		    <div class="fr z-tips">每天10点、15点、22点准时揭晓</div>
+		    <h2 class="fr" style="margin-right:10px;"><a href="{WEB_PATH}/mobile/autolottery">بۈگۈنلىك ۋاقىتلىق مەھسۇلات</a></h2>
 		    <div class="fl u-more" style="position: absolute; left: 10px">
-			    <a href="{WEB_PATH}/mobile/autolottery/next" class="u-rs-m2"><b class="z-arrow"></b>明日限时</a>
+			    <a href="{WEB_PATH}/mobile/autolottery/next" class="u-rs-m2"><b class="z-arrow"></b>ئەتىلىك</a>
 
 		    </div>
 
@@ -139,10 +138,10 @@
 			   $count=count($jinri_shoplist);
 			 {wc:php:end}    
 			  {wc:if $count>1}
-			   <div class="loading"><b></b>正在加载</div>
+			   <div class="loading"><b></b>ئېچىلىۋاتىدۇ...</div>
 			  {wc:else}
 			    {wc:if $count==0}
-				<div id="divNone" class="haveNot z-minheight" style="display:block"><s></s><p>抱歉，今日没有发布限时揭晓商品！</p>
+				<div id="divNone" class="haveNot z-minheight" style="display:block"><s></s><p>.كەچۈرۇڭ ! بۈگۈن ۋاقىتلىق جاكارلىنىدىغان مەھسۇلات يوق</p>
 		      </div>
 				{wc:if:end}
 			  {wc:if:end}
@@ -161,21 +160,21 @@
 						<div class="z-xs-pic">
 						<a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}"><img src="{G_TEMPLATES_IMAGE}/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" border=0 /></a>
 						</div>
-						<div class="z-xs-time"><b>已结束</b></div>
+						<div class="z-xs-time"><b>ئاخىرلاشتى</b></div>
 					</div>
 					<div class="u-xs-con">
 						<div class="clearfix u-xs-name">
 						<a class="u-xs-name-img" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shop['q_uid']}">
 					<img name="uImg" border="0" src2="{G_UPLOAD_PATH}/{wc:fun:get_user_key($shop['q_uid'],'img')}"/></a>
-						<div class="u-xs-name-r"><p>恭喜<a name="uName" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shop['q_uid']}" class="z-user blue">{wc:fun:get_user_name($shop['q_uid'])}</a>获得</p><p>幸运云购码：<em class="orange">{wc:$shop['q_user_code']}</em></p><p>总共云购：<em class="orange">{wc:$user_shop_number[$shop['q_uid']][$shop['id']]}</em>人次</p></div></div><ins class="z-promo">价值:<em class="arial">￥{wc:$shop['money']}</em></ins>
+						<div class="u-xs-name-r"><a name="uName" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shop['q_uid']}" class="z-user blue">{wc:fun:get_user_name($shop['q_uid'])}</a><p>نى تەبرىكلەيمىز</p><p>تەلەيلىك نۇمۇر：<em class="orange">{wc:$shop['q_user_code']}</em></p><p>جەمئىى سېتىۋالغان قېتىم سانى：<em class="orange">{wc:$user_shop_number[$shop['q_uid']][$shop['id']]}</em>قېتىم</p></div></div><em class="arial">￥{wc:$shop['money']}</em>
 						<div class="Progress-bar"><p class="u-progress" title="已完成{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%">
 							<span class="pgbar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;">
 							   <span class="pging"></span>
 							</span></p>
 							<ul class="Pro-bar-li">
-								<li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>已参与</li>
-								<li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>总需人次</li>
-								<li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>剩余</li>
+								<li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>قاتناشقانلار</li>
+								<li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>جەمئىي</li>
+								<li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>قالدۇق</li>
 							</ul>
 						</div>
 					</div>
@@ -188,28 +187,23 @@
 				       <div class="z-xs-pic">
 			             <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}"><img src="{G_TEMPLATES_IMAGE}/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" border=0 /></a>
 			          </div>			         				 
-					  <div name="timerItem" class="z-xs-time" time="{wc:$sysj}"><em>00</em>时<em>00</em>分<em>00</em>秒<s class="z-aw-tblr"></s>
+					  <div name="timerItem" class="z-xs-time" time="{wc:$sysj}"><em>00</em>:<em>00</em>:<em>00</em><s class="z-aw-tblr"></s>
 				      </div>
 				  </div>
                   
                   
                   {wc:php:start}
-               
-                  
+ 
                   {wc:php:end}
-                  
-                  
-                  
-                  
-                  
+ 
 				  <div class="u-xs-con">
-				      <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}" class="gray6 z-tt">(第{wc:$shop['qishu']}期){wc:$shop['title']}</a>
-				      <ins class="z-promo">价值:<em class="arial">￥{wc:$shop['money']}</em></ins>
+				      <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}" class="gray6 z-tt">{wc:$shop['title']}</a>
+				      <ins class="z-promo"><em class="arial">￥{wc:$shop['money']}</em></ins>
 				      <div class="Progress-bar"><p class="u-progress" title="已完成{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%"><span class="pgbar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"><span class="pging"></span></span></p>
 					    <ul class="Pro-bar-li">
-					     <li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>已参与</li>
-						 <li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>总需人次</li>
-						 <li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>剩余</li>
+					     <li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>قاتناشقانلار</li>
+						 <li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>جەمئىي</li>
+						 <li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>قالدۇق</li>
 						</ul>
 					   </div>
 				  </div>
@@ -227,7 +221,7 @@
     <!-- 热门推荐 -->
     <section class="g-main">
 	    <div class="m-tt1">
-		    <h2 class="fr" style="margin-right:10px;"><a href="{WEB_PATH}/mobile/mobile/glist">热门推荐</a></h2>
+		    <h2 class="fr" style="margin-right:10px;"><a href="{WEB_PATH}/mobile/mobile/glist">تەۋسىيە قىلىنغان مەھسۇلاتلار</a></h2>
 		    <div class="fl u-more" style="left:-40px; position:absolute;">
 			    <a href="{WEB_PATH}/mobile/mobile/glist" class="u-rs-m1"><b class="z-arrow"></b></a>
 		    </div>
@@ -241,7 +235,7 @@
 			                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$renqi['id']}" class="u-lott-pic">
 			                        <img src="{G_TEMPLATES_STYLE}/mobile/images/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$renqi['thumb']}" border=0 alt="" />
 			                    </a>
-			                    <ins class="u-promo">价值:￥{wc:$renqi['money']}</ins>
+			                    <ins class="u-promo">￥{wc:$renqi['money']}</ins>
 			                </div>
 			                <div class="Progress-bar">
 								<p class="u-progress" title="已完成{wc:fun:percent($renqi['canyurenshu'],$renqi['zongrenshu'])}">
@@ -250,9 +244,9 @@
 								</span>
 								</p>
 								<ul class="Pro-bar-li">
-									<li class="P-bar01"><em>{wc:$renqi['canyurenshu']}</em>已参与</li>
-									<li class="P-bar02"><em>{wc:$renqi['zongrenshu']}</em>总需人次</li>
-									<li class="P-bar03"><em>{wc:$renqi['zongrenshu']-$renqi['canyurenshu']}</em>剩余</li>
+									<li class="P-bar01"><em>{wc:$renqi['canyurenshu']}</em>قاتناشقانلار</li>
+									<li class="P-bar02"><em>{wc:$renqi['zongrenshu']}</em>جەمئىي</li>
+									<li class="P-bar03"><em>{wc:$renqi['zongrenshu']-$renqi['canyurenshu']}</em>قالدۇق</li>
 								</ul>
 							</div>
 			            </div>

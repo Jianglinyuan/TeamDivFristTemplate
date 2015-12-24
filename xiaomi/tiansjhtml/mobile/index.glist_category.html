@@ -85,14 +85,14 @@ function glist_json(parm){
                 li+='<div class="Pro-bar-wrap"><div class="Progress-bar">';
                 li+='<p class="u-progress" title="'+(data[i].canyurenshu / data[i].zongrenshu)*100+'%"><span class="pgbar" style="width: '+(data[i].canyurenshu / data[i].zongrenshu)*100+'%;"><span class="pging"></span></span></p>';
                 li+='<ul class="Pro-bar-li clearfix">';
-                li+='<li class="P-bar01"><em>'+data[i].canyurenshu+'</em>已参与</li>';
-                li+='<li class="P-bar02"><em>'+data[i].zongrenshu+'</em>总需人次</li>';
-                li+='<li class="P-bar03"><em>'+data[i].shenyurenshu+'</em>剩余</li>';
+                li+='<li class="P-bar01"><em>'+data[i].canyurenshu+'</em>قاتناشقانلار</li>';
+                li+='<li class="P-bar02"><em>'+data[i].zongrenshu+'</em>جەمئىي</li>';
+                li+='<li class="P-bar03"><em>'+data[i].shenyurenshu+'</em>قالدۇق</li>';
                 li+='</ul></div>';
                 li+='<div class="buy-wrap clearfix">';
-                li+='<a href="{WEB_PATH}/mobile/mobile/item/'+data[i].id+'/" class="buy-btn">立即1元云购</a>';
+                li+='<a href="{WEB_PATH}/mobile/mobile/item/'+data[i].id+'/" class="buy-btn">بىر سومغا سېتىۋېلىڭ</a>';
                 li+='<a codeid="'+data[i].id+'" href="javascript:;" class="add shopcar-btn">';
-                li+='<img src="{G_TEMPLATES_MOBILE_CSS}/../images/shopcar-btn.png" alt="加入购物车" width="30" height="30"></a></div>';
+                li+='<img src="{G_TEMPLATES_MOBILE_CSS}/../images/shopcar-btn.png" alt="مال ھارۋىسىغا قوشۇش" width="30" height="30"></a></div>';
                 // li+='<span class="flag">限购'+data[i].pieces_num+'人次</span>';
                 li+='</div></li>';
                 $("#ul_purchaselist").append(li);
@@ -137,9 +137,9 @@ $(document).ready(function(){
         var codeid=$(this).attr('codeid');
         $.getJSON('{WEB_PATH}/mobile/ajax/addShopCart/'+codeid+'/1',function(data){
             if(data.code==1){
-                addsuccess('添加失败');
+                addsuccess('خاتالىق يۈز بەردى');
             }else if(data.code==0){
-                addsuccess('添加成功');
+                addsuccess('مۇۋاپىقىيەتلىك قوشۇلدى');
             }return false;
         });
     });

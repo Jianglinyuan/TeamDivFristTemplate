@@ -16,28 +16,25 @@
 <!-- 内页顶部 -->
 
     <header class="g-header">
+        <h2> پۇل قاچىلاش</h2>
         <div class="head-r">
-	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>قايتىش</b></a>
-        </div>
-        <h2>帐户充值</h2>
-        <div class="head-r">
-	        <a href="{WEB_PATH}/mobile/home/userbalance/" class="z-RCornerBtn"><i></i>帐户明细</a>
+	        <a href="{WEB_PATH}/mobile/home/userbalance/" class="z-RCornerBtn"><i></i>مالىيە تەپسىلاتى</a>
         </div>
     </header>
 
-    <div class="g-Total gray9">您的当前余额：<span class="orange arial">{wc:$member['money']}</span>元</div>
+    <div class="g-Total gray9">سىزنىڭ قالدۇق سوممىڭىز：<span class="orange arial">{wc:$member['money']}</span>يۈئەن</div>
      <section>
                 <div class="registerCon">
                     <form action="{WEB_PATH}/member/cart/card_addmoney" method="post">
                         <ul>
                             <li class="accAndPwd">
-                                <dl><input id="txtAccount" type="text" placeholder="请输入卡号" class="lEmail" name="czknum" maxlength="20"><s class="rs4"></s></dl>
+                                <dl><input id="txtAccount" type="text" placeholder="كارتا نۇمۇرىڭىزنى كىرگۈزۈڭ" class="lEmail" name="czknum" maxlength="20"><s class="rs4"></s></dl>
                                 <dl>
-                                    <input type="password" id="txtPassword" class="lPwd" placeholder="请输入卡密" name="password" maxlength="20">
+                                    <input type="password" id="txtPassword" class="lPwd" placeholder="مەخپى نۇمۇرىڭىزنى كىرگۈزۈڭ" name="password" maxlength="20">
                                     <s class="rs3"></s>
                                 </dl>
                             </li>
-                            <li><input type="submit" value=" 确认充值"/></li>
+                            <li><input type="submit" value="پۇل قاچىلاش"/></li>
                     </form>
                     </ul>
 <br/>
@@ -50,17 +47,17 @@
     <section class="clearfix g-member">
         <div class="g-Recharge">
 	        <ul id="ulOption">
-		        <li money="10"><a href="javascript:;" class="z-sel">10元<s></s></a></li>
-		        <li money="20"><a href="javascript:;">20元<s></s></a></li>
-		        <li money="30"><a href="javascript:;">30元<s></s></a></li>
-		        <li money="100"><a href="javascript:;">100元<s></s></a></li>
-		        <li money="200"><a href="javascript:;">200元<s></s></a></li>
-		        <li><b><input type="text" class="z-init" placeholder="    输入金额" maxlength="8" /><s></s></b></li>
+		        <li money="10"><a href="javascript:;" class="z-sel">يۇئەن10<s></s></a></li>
+		        <li money="20"><a href="javascript:;">20يۇئەن<s></s></a></li>
+		        <li money="30"><a href="javascript:;">50يۇئەن<s></s></a></li>
+		        <li money="100"><a href="javascript:;">100يۇئەن<s></s></a></li>
+		        <li money="200"><a href="javascript:;">200يۇئەن<s></s></a></li>
+		        <li><b><input type="text" class="z-init" placeholder="سوممىسىنى كىرگۈزۈڭ" maxlength="8" /><s></s></b></li>
 	        </ul>
 	    </div>
 	    <article class="clearfix mt10 m-round g-pay-ment g-bank-ct">
 		    <ul id="ulBankList">
-			     <li class="gray6">选择平台充值<em class="orange">10.00</em>元</li>
+			     <li class="gray6">پۇل قاچىلاش بىكىتىنى تاللاڭ<em class="orange">&nbsp;10.00يۈئەن</em></li>
 			{wc:loop $paylist $pay}
 			     <li class="gray9" urm="{wc:$pay['pay_id']}">
 			         <i class="z-bank-Round"><s></s></i>{wc:$pay['pay_name']}<!-- CMBCHINA-WAP -->
@@ -71,7 +68,7 @@
 		    </ul>
 	    </article>
 	    <div class="mt10 f-Recharge-btn">
-		    <a id="btnSubmit" href="javascript:;" class="orgBtn">确认充值</a>
+		    <a id="btnSubmit" href="javascript:;" class="orgBtn">پۇل قاچىلاش</a>
 	    </div>
     </section>
 

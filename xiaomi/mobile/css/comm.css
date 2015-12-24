@@ -334,11 +334,11 @@ a.grayBtn {
 	margin-right:8px;
 }
 .z-bank-Roundsel s {
-	width:12px;
-	height:12px;
-	border-radius:12px;
+	width:16px;
+	height:16px;
+	border-radius:10px;
 	display:inline-block;
-	background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#ff8a00),color-stop(1,#c75c5c));
+	background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#c75c5c),color-stop(1,#c75c5c));
 }
 .header {
 	height:44px;
@@ -633,7 +633,7 @@ a.z-Site {
 	float:left;
 	color:#AEADAD;
 	font-size:10px;
-	font-family:宋体;
+	font-family:alkatip;
 	border:none;
 	margin:0;
 	padding:0;

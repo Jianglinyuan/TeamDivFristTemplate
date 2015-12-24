@@ -149,6 +149,7 @@ box-shadow:none;
 	line-height:30px;
 	padding:5px 10px 0;
 	font-size:14px;
+	text-align: right;
 }
 .g-Recharge ul:after {
 	content:"\0020";

@@ -26,36 +26,36 @@
         <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>قايتىش</b></a>
         </div>
-        <h2>登录</h2>
+        <h2>كىرىش</h2>
     </header>
 
         <section>
 	        <div class="registerCon">
     	        <ul>
         	        <li class="accAndPwd">
-            	        <dl><input id="txtAccount" type="text" placeholder="请输入您的手机号码或邮箱" class="lEmail"><s class="rs4"></s></dl>
+            	        <dl><input id="txtAccount" type="text" placeholder="تېلفون نۇمۇرىڭىزنى ياكى خەت ساندۈقىڭىزنى كىرگۈزۈڭ" class="lEmail"><s class="rs4"></s></dl>
                         <dl>
-                            <input type="password" id="txtPassword" class="lPwd" placeholder="密码">
+                            <input type="password" id="txtPassword" class="lPwd" placeholder="مەخپى نۇمۇرىڭىزنى كىرگۈزۈڭ">
                             <s class="rs3"></s>
                         </dl>
                     </li>
-                    <li><a href="javascript:;" id="btnLogin" class="nextBtn  orgBtn">登 录</a>
+                    <li><a href="javascript:;" id="btnLogin" class="nextBtn  orgBtn">كىرىش</a>
 					
 					<input name="hidLoginForward" type="hidden" id="hidLoginForward" value="{WEB_PATH}/mobile/home" /></li>
             
-					<b></b><a href="{WEB_PATH}/mobile/user/register/" class="nextBtn  orgBtn">新用户注册</a></li>
+					<b></b><a href="{WEB_PATH}/mobile/user/register/" class="nextBtn  orgBtn">يىڭى ئەزا تىزىملىتىش</a></li>
 		
-				       <li class="rSelect"><a href="{WEB_PATH}/mobile/user/findpassword" style="font-size:14px;color:red;font-weight:bold;">忘记密码？</a>
+				       <li class="rSelect"><a href="{WEB_PATH}/mobile/user/findpassword" style="font-size:14px;color:red;font-weight:bold;">مەخپى نۇمۇرنى ئۈنتۈپ قالدىم؟</a>
                 </li>
                 </ul>
                 
                 <div class="oauth">
-			<a class="wechat" href="{WEB_PATH}/mobile/user/wxlogin">微信登陆</a>
+			<a class="wechat" href="{WEB_PATH}/mobile/user/wxlogin">ئۈندىدار بىلەن تىزىملاش</a>
 			{wc:php:start}
 				$conn_cfg = System::load_app_config("connect",'','api');
 			{wc:php:end}
 			{wc:if $conn_cfg['qq']['off']}
-			<a class="qq" href="{WEB_PATH}/api/qqlogin/">QQ登陆</a>
+			<a class="qq" href="{WEB_PATH}/api/qqlogin/">،QQ</a>
 			{wc:if:end}
 			</div>
 			

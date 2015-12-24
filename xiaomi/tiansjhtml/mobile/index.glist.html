@@ -27,15 +27,15 @@
 	    <!-- 导航 -->
 	    <div class="goodsNav">
             <ul id="divGoodsNav">
-       	 	    <li order="10" class="current"><a href="javascript:;">即将揭晓<b></b></a></li>
-                <li order="20"><a href="javascript:;">人气<b></b></a></li>
-                <li order="40"><a href="javascript:;">最新<b></b></a></li>
-                <li order="50" type="price"><a href="javascript:;">价格<em></em><s></s><b></b></a></li>
+       	 	    <li order="10" class="current"><a href="javascript:;">جاكارلار<b></b></a></li>
+                <li order="20"><a href="javascript:;">ئاۋاتلىقى<b></b></a></li>
+                <li order="40"><a href="javascript:;"> ئەڭ يىڭى<b></b></a></li>
+                <li order="50" type="price"><a href="javascript:;">باھاسى<b></b></a></li>
                 <li order="">
-                    <a href="javascript:;">商品分类<s class="arrowUp"></s></a>
+                    <a href="javascript:;">مەھسۇلات تۈرلىرى<s class="arrowUp"></s></a>
                     <dl style="display:none;width:100%;position:fixed;top:120px;z-index:50;">
 
-                        <dd type="0" class="sOrange"><a href="javascript:;">全部</a></dd>
+                        <dd type="0" class="sOrange"><a href="javascript:;">ھەممىسى</a></dd>
 						{wc:getlist sql="select * from `@#_category` where parentid=0 and `model`='1'"}
 						{wc:loop $data $categoryx}
 						<dd><a id="{wc:$categoryx['cateid']}" href="javascript:;">{wc:$categoryx['name']}</a></dd>
@@ -47,12 +47,12 @@
         </div>
         <!-- 列表 -->
         <div class="goodsList">
-            <div id="divGoodsLoading" class="loading" style="display:none;"><b></b>正在加载...</div>
+            <div id="divGoodsLoading" class="loading" style="display:none;"><b></b>...ئېچىلىۋاتىدۇ</div>
 
-            <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;"><font color="#c75c5c">点击加载更多</font></a>
+            <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;"><font color="#c75c5c">...تېخىمۇ كۆپ</font></a>
 
-            <a id="btnLoadMore2" class="loading"  style="display:none;">没有数据</a>
-            <a id="btnLoadMore3" class="loading"  style="display:none;">已经到底了</a>
+            <a id="btnLoadMore2" class="loading"  style="display:none;">تۈگىدى</a>
+            <a id="btnLoadMore3" class="loading"  style="display:none;">تۈگىدى</a>
         </div>
     </section>
 	
@@ -91,9 +91,9 @@ function glist_json(parm){
 				ul+='<div class="Progress-bar" style="width:225px; "id="'+data[i].id+'">';				
 				ul+='<p class="u-progress"><span class="pgbar" style="width:'+(data[i].canyurenshu / data[i].zongrenshu)*100+'%;"><span class="pging"></span></span></p>';
 				ul+='<ul class="Pro-bar-li">';
-				ul+='<li class="P-bar01"><em>'+data[i].canyurenshu+'</em>已参与</li>';
-				ul+='<li class="P-bar02"><em>'+data[i].zongrenshu+'</em>总需人次</li>';
-				ul+='<li class="P-bar03"><em>'+data[i].shenyurenshu+'</em>剩余</li>';
+				ul+='<li class="P-bar01"><em>'+data[i].canyurenshu+'</em>قاتناشقانلار</li>';
+				ul+='<li class="P-bar02"><em>'+data[i].zongrenshu+'</em>جەمئىي</li>';
+				ul+='<li class="P-bar03"><em>'+data[i].shenyurenshu+'</em>قالدۇق</li>';
 				ul+='</ul></div>';
 				ul+='<a class="add " style="left:-45px; "codeid="'+data[i].id+'" href="javascript:;"><s></s></a>';
 				ul+='</div></div></li></ul>';
@@ -187,11 +187,11 @@ $(document).ready(function(){
 	$(document).on("click",'.add',function(){
 		var codeid=$(this).attr('codeid');
 		$.getJSON('{WEB_PATH}/mobile/ajax/addShopCart/'+codeid+'/1',function(data){
-			if(data.code==1){
-				addsuccess('添加失败');
-			}else if(data.code==0){
-				addsuccess('添加成功');				
-			}return false;
+			 if(data.code==1){
+                addsuccess('خاتالىق يۈز بەردى');
+            }else if(data.code==0){
+                addsuccess('مۇۋاپىقىيەتلىك قوشۇلدى');
+            }return false;
 		});
 	});
 	function addsuccess(dat){
