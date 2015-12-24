@@ -1,6 +1,7 @@
 ﻿@charset "utf-8";
 	.last {
 	color:#666;
+	text-align: right;
 }
 .last ul li {
 	background:#fcfcfc;
@@ -79,7 +80,7 @@
 	line-height:28px;
 }
 .recordList ul li.leftTitle {
-	text-align:left;
+	text-align:right;
 }
 .recordList ul li.leftTitle,.recordList ul li.fontAri {
 	font-family:Arial,Helvetica,sans-serif;
@@ -96,7 +97,7 @@
 	width:300px;
 }
 .recordList ul li.regard {
-	text-align:right;
+	text-align:left;
 }
 .buyDetail ul li.leftTitle {
 	width:450px;
@@ -425,4 +426,8 @@ p.leix {
 }
 .prompt_box ul li a {
 	text-decoration:none;
+}
+#divPageNav {
+	padding-top: 10px;
+    float: left;
 }
