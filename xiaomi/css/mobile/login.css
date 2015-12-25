@@ -21,7 +21,7 @@ input:-moz-placeholder{color:#ccc;}::-webkit-input-placeholder{color:#ccc;}
 .registerCon li a.resendBtn{display:block;width:100%;height:33px;line-height:33px;text-align:center;color:#f60;background:#fff;border:1px solid #c2c2c2;
     border-radius:5px;margin-left:0;font-size:16px;box-shadow:1px 1px 2px #e0e0e0;}
 .registerCon li a.grayBtn{background:#ddd;border:1px solid #bbb;color:#818181;}
-.registerCon li.accAndPwd{height:150px;}
+.registerCon li.accAndPwd{height:150px; direction: rtl;}
 .registerCon li.accAndPwd dl{position:relative;}
 .registerCon li.accAndPwd input{width:100%;height:40px;background:#fff;border:1px solid #ddd;color:#ccc;padding:9px 5px 8px 30px;display:inline-block;
     -webkit-box-sizing:border-box;position:relative;font-size:16px;}

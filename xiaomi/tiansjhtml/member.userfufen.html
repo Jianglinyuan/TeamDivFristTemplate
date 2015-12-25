@@ -1,6 +1,6 @@
 {wc:templates "index","header"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
-<div class="container breadcrumbs"><a href="/">首页</a><span class="sep">/</span><span>账户福分</span></div>
+<div class="container breadcrumbs"><span>账户福分</span><span class="sep">/</span><a href="/">首页</a></div>
 <div class="container">
     <div class="uc-full-box">
         <div class="row">
@@ -12,20 +12,20 @@
 <div class="R-content">
 	<div class="last">
 		<ul>
-			<li><h3>可用福分：</h3><b class="orange">{wc:$member['score']}</b>  ( 福分可抵扣,100福分=1元 )</li>
+			<li>( 福分可抵扣,100福分=1元 )  <b class="orange">{wc:$member['score']}</b><h3>：可用福分</h3></li>
 		</ul>
 	</div>
 	<div id="divList0" class="list-tab recordList">
 	<ul class="listTitle">
-		<li class="leftTitle" style="margin:0;width: 200px;overflow: hidden;white-space: nowrap;display: inline;float: left; ">时间</li>
-		<li class="price" style="margin:0;width: 200px;overflow: hidden;white-space: nowrap;display: inline;float: left; ">渠道</li>
-		<li class="regard" style="margin:0;width: 220px;overflow: hidden;white-space: nowrap;display: inline;float: left; ">获得/支出</li>
+		<li class="leftTitle" style="margin:0;width: 200px;overflow: hidden;white-space: nowrap;display: inline;float: right; ">时间</li>
+		<li class="price" style="margin:0;width: 200px;overflow: hidden;white-space: nowrap;display: inline;float: right; ">渠道</li>
+		<li class="regard" style="margin:0;width: 220px;overflow: hidden;white-space: nowrap;display: inline;float: right; ">获得/支出</li>
 	</ul>
 	{wc:loop $account $at}
 	<ul>
-		<li class="leftTitle fontAri" style="margin:0;width: 200px;overflow: hidden;white-space: nowrap;display: inline;float: left; ">{wc:fun:date("Y-m-d H:i:s",$at['time'])}</li>
-		<li class="price" style="margin:0;width: 200px;overflow: hidden;white-space: nowrap;display: inline;float: left; ">{wc:$at['content']}</li>
-		<li class="regard" style="margin:0;width: 200px;overflow: hidden;white-space: nowrap;display: inline;float: left; ">
+		<li class="leftTitle fontAri" style="margin:0;width: 200px;overflow: hidden;white-space: nowrap;display: inline;float: right; ">{wc:fun:date("Y-m-d H:i:s",$at['time'])}</li>
+		<li class="price" style="margin:0;width: 200px;overflow: hidden;white-space: nowrap;display: inline;float: right; ">{wc:$at['content']}</li>
+		<li class="regard" style="margin:0;width: 200px;overflow: hidden;white-space: nowrap;display: inline;float: right; ">
 		{wc:if $at['type']==1}
 			<font color="#0c0">+ {wc:$at['money']}</font>
 		{wc:else}

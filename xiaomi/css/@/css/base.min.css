@@ -648,7 +648,7 @@ a:hover, a:focus {
 }
 .span16 {
 	width: 942px;
-	float: left;
+	float: right;
 	_display: inline;
 	min-height: 1px
 }
@@ -719,8 +719,9 @@ a:hover, a:focus {
 	min-height: 1px
 }
 .span4 {
+	text-align: right;
 	width: 248px;
-	float: left;
+	float: right;
 	_display: inline;
 	min-height: 1px
 }
@@ -866,7 +867,7 @@ a:hover, a:focus {
 	position: relative;
 	height: 50px;
 	border-bottom: 1px solid #dfdfdf;
-	padding-right: 10px;
+	/*padding-right: 10px;*/
 	text-align: right;
 }
 .xm-line-box .box-hd .title {
@@ -886,7 +887,7 @@ a:hover, a:focus {
 .xm-line-box .box-hd .more {
 	position: absolute;
 	top: 20px;
-	right: 0
+	left: 0
 }
 .xm-line-box .box-hd .more .more-link {
 	font-size: 14px;
@@ -4783,31 +4784,30 @@ body.f-width-change .g-special li em {
 	height: 30px;
 }
 .page_nav {
-	width: 270px;
+	width: 922px;
 	float: right;
 	margin-top: -40px;
-	margin-right: 118px;
+	/*margin-right: 118px;*/
 }
 .page_nav ul {
 	float: left;
-	position: relative;
+	/*position: relative;*/
 	overflow: visible;
-	left: 64%;
 	height: 30px;
 	font-family: Arial, "Microsoft Yahei";
 	font-size: 14px;
 	color: #666;
 }
 .page_nav ul li {
-	float: left;
-	height: 30px;
+	float: right;
+	/*height: 30px;*/
 	line-height: 30px;
 }
 .page_nav ul li a {
 	float: left;
 	margin: 0 3px;
-	position: relative;
-	right: 50%;
+	/*position: relative;*/
+	/*right: 50%;*/
 	padding: 0 9px;
 	border: #ebebeb 1px solid;
 	line-height: 27px;
@@ -5618,4 +5618,11 @@ body.f-width-change .g-special li em {
 }
 #content {
 	/*text-align: right;*/
+}
+div.uc-info {
+	text-align: right;
+}
+ul.payment li img {
+    width: 104px;
+    height: 49px;
 }
