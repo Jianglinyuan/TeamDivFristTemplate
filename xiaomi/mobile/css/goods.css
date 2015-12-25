@@ -243,7 +243,7 @@
 	display:block;
 	color:#666;
 	line-height:18px;
-	text-align:left;
+	text-align:right;
 	font-size:14px;
 }
 .goodsList .goodsListR .pRate {
@@ -321,6 +321,7 @@
 	border-right:1px solid #000;
 }
 .pNav div.flex-viewport {
+	float: right;
 	margin:0;
 	height:35px;
 	position:relative;
@@ -330,7 +331,7 @@
 	margin:0;
 }
 .pNav ul.slides li {
-	float:left;
+	float:right;
 	text-align:center;
 	display:inline-block;
 	font-size:14px;
