@@ -1,6 +1,6 @@
 {wc:templates "index","header"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
-<div class="container breadcrumbs"><a href="/">首页</a><span class="sep">/</span><span>提现记录</span></div>
+<div class="container breadcrumbs"><span>提现记录</span><span class="sep">/</span><a href="/">首页</a></div>
 <div class="container">
     <div class="uc-full-box">
         <div class="row">
@@ -17,7 +17,7 @@
 			  <ul class="listTitle"><li class="w150">申请时间</li><li class="w300">银行账户信息</li><li class="w120">提现金额(元)</li><li class="w120">手续费(元)</li><li class="w120">审核状态</li></ul>
 			  {wc:if $recount==1}
 			  {wc:loop $recordarr $val}
-			  <ul><li class="w150">{wc:fun:date('Y-m-d',$val['time'])}</li><li class="w300">{wc:$val['bankname']}&nbsp;&nbsp;{wc:$val['banknumber']}</li><li class="w120">{wc:$val['money']}</li><li class="w120">{wc:$fufen['fufen_yongjintx']}</li><li class="w120">{wc:if $val['auditstatus']==1}审核通过{wc:else}审核未通过{wc:if:end}</li><ul>
+			  <ul class="listTitle"><li class="w150">{wc:fun:date('Y-m-d',$val['time'])}</li><li class="w300">{wc:$val['bankname']}&nbsp;&nbsp;{wc:$val['banknumber']}</li><li class="w120">{wc:$val['money']}</li><li class="w120">{wc:$fufen['fufen_yongjintx']}</li><li class="w120">{wc:if $val['auditstatus']==1}审核通过{wc:else}审核未通过{wc:if:end}</li><ul>
 			  {wc:loop:end}
 			  {wc:else}
 			     <div class="tips-con"><i></i>未有相应提现记录</div>

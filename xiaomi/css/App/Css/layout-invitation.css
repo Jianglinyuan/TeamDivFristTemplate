@@ -87,8 +87,9 @@
 	zoom: 1;
 }
 .total dd {
-	float: left;
-	margin-right: 18px;
+	float: right;
+	margin-left: 18px;
+	text-align: right;
 }
 .total a {
 	float: left;
@@ -163,7 +164,8 @@
 	font-weight: bold;
 }
 .Apply-con {
-	width: 780px;
+	width: 650px;
+	float: right;
 	margin-top: 20px;
 }
 .Apply-con dl {
@@ -177,17 +179,18 @@
 	line-height: 27px;
 	color: #666;
 	margin-right: 5px;
-	float: left;
-	text-align: right;
+	float: right;
+	text-align: left;
 }
 .Apply-con dd {
 	width: 500px;
-	float: left;
+	float: right;
 	line-height: 27px;
+	text-align: right;
 }
 .Apply-con dd b {
 	font-weight: normal;
-	float: left;
+	float: right;
 	margin-right: 5px;
 }
 .Apply-con dd em {
@@ -213,7 +216,7 @@
 	font-size: 14px;
 	vertical-align: middle;
 	display: block;
-	float: left;
+	float: right;
 }
 .txtAri {
 	font-family: Arial, Helvetica, sans-serif;
@@ -225,6 +228,7 @@
 }
 .Apply-con .input-txt {
 	width: 197px;
+	margin-right: 5px;
 }
 .Apply-button {
 	padding-left: 105px;
@@ -257,6 +261,8 @@
 	border-top: #e3e3e3 1px solid;
 }
 .cash ul.listTitle li, .commission ul.listTitle li {
+	float: right;
+	text-align: right;
 	padding: 0;
 }
 .cash li {
@@ -265,9 +271,9 @@
 }
 .cash ul li.w150 {
 	width: 140px;
-	text-align: left;
-	padding-left: 10px;
-	float: left;
+	text-align: right;
+	padding-right: 10px;
+	float: right;
 }
 .cash ul li.w300 {
 	width: 250px;
@@ -281,4 +287,17 @@
 .cash ul li.w120 {
 	width: 120px;
 	float: left;
+}
+.Apply-button input[type=submit] {
+	padding: 5px;
+	color: #fff;
+	background-color: #ff4a00;
+}
+.Apply-button input[type=submit]:hover {
+	background-color: #ec5010;
+}
+.tips-con {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
