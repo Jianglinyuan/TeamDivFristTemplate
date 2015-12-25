@@ -235,10 +235,11 @@ a:hover {
 	*zoom: 1
 }
 .uc-nav-list li.current {
-	margin-left: 27px;
+	/*margin-left: 27px;*/
 	border-right: 3px solid #ff4a00;
 	color: #333;
-	background-color: #fbf4fa;
+	/*background-color: #fbf4fa;*/
+	background: #F3F3F3;
 }
 .uc-nav-list li a {
 	display: block;
