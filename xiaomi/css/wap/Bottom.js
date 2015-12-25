@@ -1,1 +1,1 @@
-Base.getScript("/js/BottomFun.js");
+Base.getScript("BottomFun.js");
