@@ -27,6 +27,7 @@ a.z-Recharge-btn {
 	background:#fff;
 	box-shadow:0 1px 1px #EDEDED;
 	margin-top:3px;
+	float:right;
 }
 .z-Limg img {
 	position:static;
@@ -62,6 +63,7 @@ a.z-Recharge-btn {
 	width:80px;
 	padding:10px 0 5px 0;
 	text-align:center;
+	float:right;
 }
 .m-name .f-Himg span {
 	margin:0 auto;
@@ -71,10 +73,13 @@ a.z-Recharge-btn {
 	width:60px;
 	height:60px;
 	border-radius:4px;
+	padding-left: 10px;
 }
 .m-name-info {
-	margin-left:80px;
+	margin-right:80px;
 	border-left:1px solid #EFEFEF;
+	text-align: right;
+	direction: rtl;
 }
 .u-name .z-name {
 	font-size:16px;
@@ -91,6 +96,7 @@ a.z-Recharge-btn {
 	height:32px;
 	line-height:32px;
 	overflow:hidden;
+	direction: rtl;
 }
 .u-mbr-info {
 	color:#C1C1C1;
@@ -100,7 +106,7 @@ a.z-Recharge-btn {
 	line-height:25px;
 	padding:3px 0;
 	float:left;
-	text-align:left;
+	text-align:right;
 	text-indent:5px;
 	box-shadow:-1px 0 0 #EFEFEF inset;
 }
@@ -116,9 +122,10 @@ border-top:1px solid #EFEFEF;
 box-shadow:none;
 }
 .u-mbr-info li a.z-Recharge-btn {
-	margin-right:5px;
+	margin-left:5px;
 	text-indent:0;
 	line-height:25px;
+	float: left;
 }
 .m-member-nav {
 	overflow:hidden;
@@ -130,6 +137,7 @@ box-shadow:none;
 	max-height:46px;
 	overflow:hidden;
 	margin-top:-1px;
+	text-align: end;
 }
 .m-member-nav a {
 	display:block;
@@ -137,11 +145,12 @@ box-shadow:none;
 	padding:0 10px;
 }
 .m-member-nav a .z-arrow {
-	float:right;
 	width:6px;
 	height:6px;
 	border-width:2px 2px 0 0;
 	margin-top:18px;
+	float: left;
+    transform: rotate(-135deg);
 }
 .g-Total {
 	background:#F4F4F4;
@@ -149,6 +158,7 @@ box-shadow:none;
 	line-height:30px;
 	padding:5px 10px 0;
 	font-size:14px;
+	direction: rtl;
 }
 .g-Recharge ul:after {
 	content:"\0020";
@@ -161,7 +171,7 @@ box-shadow:none;
 }
 .g-Recharge li {
 	width:33%;
-	float:left;
+	float:right;
 	margin-bottom:10px;
 }
 .g-Recharge li:nth-child(3n-1) {
@@ -226,6 +236,7 @@ text-align:right;
 }
 .g-pay-ment li .z-bank-Round {
 	vertical-align:-5px;
+	margin-left: 8px;
 }
 .g-pay-ment li .z-bank-Roundsel {
 	vertical-align:-2px;
@@ -258,11 +269,14 @@ text-align:right;
 	height:6px;
 	border-width:2px 2px 0 0;
 	position:absolute;
-	right:12px;
-	top:57px;
+	left:10px;
+	top:47px;
+	transform:rotate(-135deg);
 }
 .g-goods .u-gds-r {
-	margin-left:90px;
+	margin-left:10px;
+	margin-right:90px;
+	text-align: end;
 }
 .g-goods .u-gds-r .z-gds-tt {
 	line-height:20px;
@@ -757,11 +771,14 @@ p.f-addressLH {
 	height:6px;
 	border-width:2px 2px 0 0;
 	position:absolute;
-	right:12px;
+	left:10px;
 	top:55px;
+	transform: rotate(-135deg);
 }
 .g-Single-lst .u-sgl-r {
-	margin-left:90px;
+	margin-left:10px;
+	margin-right:90px;
+	text-align: end;
 	color:#bbb;
 }
 .g-Single-lst .u-sgl-r .z-sgl-tt {
@@ -798,8 +815,9 @@ p.f-addressLH {
 	background:#F4F4F4;
 }
 .g-Record-ct .u-Rcd-r {
-	margin-left:90px;
-	margin-right:10px;
+	margin-left:10px;
+	margin-right:90px;
+	text-align: end;
 }
 .g-Record-ct .u-Rcd-r .z-Rcd-tt {
 	line-height:20px;
@@ -872,12 +890,13 @@ p.f-addressLH {
 .g-Record-lst li .z-arrow {
 	border-width:2px 2px 0 0;
 	position:absolute;
-	right:10px;
+	left:10px;
 	top:54px;
+	transform:rotate(-135deg);
 }
 .g-Record-lst .u-sgl-r {
-	margin-left:90px;
-	margin-right:10px;
+	margin-left:10px;
+	margin-right:90px;
 }
 .g-Record-lst .u-sgl-r .z-sgl-tt {
 	line-height:20px;
@@ -885,6 +904,7 @@ p.f-addressLH {
 	font-size:14px;
 	overflow:hidden;
 	margin-bottom:5px;
+	text-align: end;
 }
 .g-Record-lst .u-sgl-r p {
 	margin-bottom:3px;
@@ -923,6 +943,8 @@ p.f-addressLH {
 	padding:0 10px;
 	overflow:hidden;
 	margin-top:-1px;
+	direction: rtl;
+	text-align: right;
 }
 .g-bank-ct b.z-arrow, .g-bank-ct s.z-arrow {
 	float:right;
@@ -991,6 +1013,8 @@ p.f-addressLH {
 	padding:0 5px 0 10px;
 	line-height:33px;
 	color:#999;
+	direction: rtl;
+	text-align: right;
 }
 .m-userMoneylst li.m-userMoneylst-tt {
 	border-top:none;

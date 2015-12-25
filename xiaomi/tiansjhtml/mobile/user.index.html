@@ -27,14 +27,14 @@
 
     <section class="clearfix g-member">
 	    <div class="clearfix m-round m-name">
-			<div class="fl f-Himg" style="float:right; margin-right:-8px;">
+			<div class="fl f-Himg">
 				<a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$member['uid']}/" class="z-Himg">
 				<img src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($member['uid'],'img')}" border=0/></a>
 				<span class="z-class-icon01 gray02"><s></s>{wc:$member['yungoudj']}</span>
 			</div>
-			<div class="m-name-info" style="margin-left:0px;"><p class="u-name" style="text-align: right; right:12px; position:relative;">
+			<div class="m-name-info" ><p class="u-name">
 				<em>({wc:$member['mobile']})</em><b class="z-name gray01">{wc:fun:get_user_name($member['uid'])}</b></p>
-				<ul class="clearfix u-mbr-info" style="margin-right: 85px;"><li style="text-align: right;"><span class="orange">{wc:$member['score']}</span> 可用福分 <s></s></li>
+				<ul class="clearfix u-mbr-info"><li style="text-align: right;"><span class="orange">{wc:$member['score']}</span> 可用福分 <s></s></li>
 				<li style="text-align: right;"><span class="orange">{wc:$member['jingyan']}</span> 经验值 </li>
 				<li style="text-align: right;"><span class="orange">￥{wc:$member['money']}</span> 余额 
 				<a style="float: left; margin-left:5px; "href="{WEB_PATH}/mobile/home/userrecharge/" class="fr z-Recharge-btn">去充值</a></li>

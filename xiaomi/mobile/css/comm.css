@@ -319,7 +319,6 @@ a.grayBtn {
 	background:#fff;
 	border-radius:16px;
 	display:inline-block;
-	margin-right:8px;
 	box-shadow:0 1px 1px #ccc inset;
 }
 .z-bank-Roundsel {
@@ -331,7 +330,7 @@ a.grayBtn {
 	border-radius:16px;
 	display:inline-block;
 	text-align:center;
-	margin-right:8px;
+	margin-left:8px;
 }
 .z-bank-Roundsel s {
 	width:12px;

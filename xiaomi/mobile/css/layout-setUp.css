@@ -345,18 +345,20 @@ span.tishi {
 	padding-bottom:32px;
 }
 .addAddress dl {
-	padding:16px 0 0 15px;
+	padding:16px 15px 0 0;
 	color:#333;
 	font-size:14px;
 	font-weight:bold;
+	text-align: right;
 }
 .addAddress table {
 	margin:29px 0 0 35px;
 }
 .addAddress table td {
-	float:left;
+	float:right;
 	padding:2px 0;
-	*padding:1px 0;
+	text-align: right;
+	direction: rtl;
 }
 .addAddress table td label {
 	width:60px;
@@ -368,22 +370,23 @@ span.tishi {
 	line-height:24px;
 }
 .addAddress td select {
-	width:77px;
+	width:66px;
 	margin-right:2px;
-	float:left;
+	float:right;
 	color:#333;
 }
 .addAddress td select.szxq {
 	width:115px;
 }
 .addAddress td input.street {
-	width:200px;
+	width:193px;
+	float: right;
 }
 .addAddress input.street,.addAddress input.inputTxt {
 	width:147px;
 	border:#ddd 1px solid;
 	padding:0 3px;
-	float:left;
+	float:right;
 	color:#333;
 }
 .addAddress input.orangebut,.addAddress input.cancelBtn {
@@ -415,7 +418,9 @@ span.tishi {
 	margin:56px 0 0 140px;
 }
 .pwdCon table {
-	float:left;
+	position: absolute;
+	left:10%;
+	width: 80%;
 }
 .pwdCon table tr.safety td {
 	padding:0;
@@ -423,13 +428,18 @@ span.tishi {
 .pwdCon table td {
 	padding:7px 0;
 	color:#888;
+	direction: rtl;
+	float:right;
 }
 .pwdCon table td label {
 	color:#666;
 	font-size:14px;
+	display: block;
+	width: 84px;
+	margin-top: 7px;
 }
 .pwdCon table td input.pwd {
-	width:177px;
+	width:159px;
 	padding:0 3px;
 	border-top:#d4d4d4 1px solid;
 	border-right:#efefef 1px solid;
