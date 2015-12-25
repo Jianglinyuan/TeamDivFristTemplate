@@ -28,7 +28,7 @@
     <section class="goodsCon pCon">
 	    <!-- 导航 -->
         <div id="divPeriod" class="pNav">
-            <div class="loading"><b></b>正在加载</div>
+            <div class="loading"><b></b>...ئېچىلىۋاتىدۇ</div>
     	    <ul class="slides">
     	       {wc:$loopqishu}
             </ul>
@@ -52,12 +52,12 @@
         	     <div class="pResultsR">
                     <div class="g-snav">
                       
-                        <div class="g-snav-lst">揭晓时间<br><dd class="gray9"><span>{wc:fun:microt($item['q_end_time'])}</span></dd></div>
-                        <div class="g-snav-lst">{wc:fun:_cfg('web_name_two')}时间<br><dd class="gray9"><span>{wc:fun:microt($gorecode['time'])}</span></dd></div>
+                        <div class="g-snav-lst">جاكارلىنىدىغان ۋاقىت<br><dd class="gray9"><span>{wc:fun:microt($item['q_end_time'])}</span></dd></div>
+                        <div class="g-snav-lst">{wc:fun:_cfg('web_name_two')}ۋاقىت<br><dd class="gray9"><span>{wc:fun:microt($gorecode['time'])}</span></dd></div>
                     </div>
                 </div>
-				    <p>总共{wc:fun:_cfg('web_name_two')}：<b class="orange">{wc:$gorecode_count}人次</b></p>
-        	    <p><a href="{WEB_PATH}/mobile/mobile/calResult/{wc:$item['id']}" class="fr">查看计算结果</a>幸运{wc:fun:_cfg('web_name_two')}码：<b class="orange">{wc:$item['q_user_code']}</b></p>
+				    <p>جەمئىى{wc:fun:_cfg('web_name_two')}：<b class="orange">{wc:$gorecode_count}قېتىم سانى</b></p>
+        	    <p><a href="{WEB_PATH}/mobile/mobile/calResult/{wc:$item['id']}" class="fr">نەتىجىسىنى كۆرۈش</a> تەلەيلىك نۇمۇر{wc:fun:_cfg('web_name_two')}：<b class="orange">{wc:$item['q_user_code']}</b></p>
             </div>
         </div>
         {wc:if:end}
@@ -67,7 +67,7 @@
 			<div id="divLotteryTime" class="pProcess clearfix" data-id="{wc:$item['id']}" data-endtime="{wc:fun:ceil($item['q_end_time']-time())}">
 				<div class="pCountdown">
 					<div class="g-snav">
-						<div class="g-snav-lst">揭晓<br>倒计时<s></s></div>
+						<div class="g-snav-lst">جاكارلاش<br>تەتۈر ساناق<s></s></div>
 						<div class="g-snav-lst"><b class="minute">99</b><em>分</em></div>
 						<div class="g-snav-lst"><b class="second">99</b><em>秒</em></div>
 						<div class="g-snav-lst"><b class="millisecond">99</b><em>毫秒</em></div>
@@ -80,7 +80,7 @@
         <div class="pPic pPicBor">
             <div class="pPic2">
     	        <div id="sliderBox" class="pImg">
-                    <div class="loading"><b></b>正在加载</div>
+                    <div class="loading"><b></b>...ئېچىلىۋاتىدۇ</div>
                     <ul class="slides">
 					{wc:loop $item['picarr'] $imgtu}
 					<li><img src="{G_UPLOAD_PATH}/{wc:$imgtu}" /></li>
@@ -89,7 +89,7 @@
                 </div>
             </div>
 			{wc:if $item['q_end_time']=='' && $item['xsjx_time']!=0}
-            <span id="spAutoFlag" class="z-limit-tips">限时揭晓</span>
+            <span id="spAutoFlag" class="z-limit-tips">ۋاقىتلىق جاكارلار</span>
 			 {wc:if:end}
         </div>
 
@@ -100,18 +100,13 @@
                 <b>(第{wc:$item['qishu']}期){wc:$item['title']} <span></span></b>
                 <p class="price">价值：<em class="arial gray">￥{wc:$item['money']}</em></p>
 				{wc:if empty($item['q_end_time'])}
-				<div class="Progress-bar">
-					<p class="u-progress" title="已完成{wc:fun:percent($item['canyurenshu'],$item['zongrenshu'])}">
-						<span class="pgbar" style="width:{wc:$item['canyurenshu']/$item['zongrenshu']*100}%;">
-							<span class="pging"></span>
-						</span>
-					</p>
-					<ul class="Pro-bar-li">
-						<li class="P-bar01"><em>{wc:$item['canyurenshu']}</em>已参与</li>
-						<li class="P-bar02"><em>{wc:$item['zongrenshu']}</em>总需人次</li>
-						<li class="P-bar03"><em>{wc:$item['zongrenshu']-$item['canyurenshu']}</em>剩余</li>
-					</ul>
-				</div>
+				<div class="Progress-bar"><p class="u-progress" title="已完成{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%"><span class="pgbar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"><span class="pging"></span></span></p>
+                    <ul class="Pro-bar-li">
+                         <li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>قاتناشقانلار</li>
+                         <li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>جەمئىي</li>
+                         <li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>قالدۇق</li>
+                    </ul>
+                </div>
 				{wc:if:end}
 			{wc:if $item['q_end_time'] !=''}
 				{wc:if $item['q_end_time'] > time() }
