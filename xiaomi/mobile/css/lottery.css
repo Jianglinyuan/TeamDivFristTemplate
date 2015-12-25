@@ -25,7 +25,7 @@ section {
 	color:#bbb;
 }
 .revCon li.revConL {
-	float:left;
+	float:right;
 	position:relative;
 }
 .revCon li.revConL img {
@@ -87,20 +87,21 @@ section {
 	top:1px;
 }
 .revCon li.revConR {
-	margin-left:90px;
+	margin-right:90px;
 	position:relative;
 }
 .revCon li dd {
 	font-size:14px;
 	line-height:20px;
 	color:#999;
+	text-align: right;
 }
 .revCon li dd img {
-	float:left;
+	float:right;
 	width:40px;
 	height:40px;
 	border-radius:3px;
-	margin-right:5px;
+	margin-left:5px;
 }
 .revCon li dd em {
 	margin-right:2px;
@@ -115,6 +116,7 @@ section {
 .revCon li dt {
 	margin-top:7px;
 	line-height:18px;
+	text-align: right;
 }
 .revCon li dd strong {
 	font-weight:normal;
@@ -133,8 +135,9 @@ section {
 .revCon li.revConR b {
 	border-width:2px 2px 0 0;
 	position:absolute;
-	right:1px;
+	left:1px;
 	top:35px;
+	transform: rotate(-135deg);
 }
 .revCon ul.rNow {
 	border:2px solid #c75c5c;

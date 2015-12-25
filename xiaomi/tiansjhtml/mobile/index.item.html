@@ -135,8 +135,8 @@
 			  <div id="divAutoRTime" class="pSurplus" time="{wc:$sysj}" timealt="{wc:fun:date('Y-m-d-H',$item['xsjx_time'])}"><p><span>限时揭晓</span>剩余时间：<em>00</em>时<em>00</em>分<em>00</em>秒</p></div>
 			  {wc:if:end}
               <div id="btnBuyBox" class="pBtn" codeid="{wc:$item['id']}">
-				<a href="javascript:;" class="fl buyBtn">立即{wc:fun:_cfg('web_name_two')}</a>
-				<a href="javascript:;" class="fr addBtn">加入购物车</a>
+				<a href="javascript:;" class="fr buyBtn">立即{wc:fun:_cfg('web_name_two')}</a>
+				<a href="javascript:;" class="fl addBtn">加入购物车</a>
 			  </div>
 			{wc:if:end}
         </div>
@@ -144,7 +144,7 @@
         <div class="joinAndGet">
     	    <dl>
     	        <a href="{WEB_PATH}/mobile/mobile/buyrecords/{wc:$item['id']}/"><b class="fr z-arrow"></b>所有{wc:fun:_cfg('web_name_two')}记录</a>
-				<a href="{WEB_PATH}/mobile/mobile/goodsdesc/{wc:$item['id']}/"><b class="fr z-arrow"></b>图文详情<em>（建议WIFI下使用）</em> </a>
+				<a href="{WEB_PATH}/mobile/mobile/goodsdesc/{wc:$item['id']}/"><b class="fr z-arrow"></b><em>（建议WIFI下使用）</em>图文详情</a>
 
 				<a href="{WEB_PATH}/mobile/mobile/goodspost/{wc:$item['sid']}/"><b class="fr z-arrow"></b>已有<span class="orange arial">{wc:fun:count($shaidan)}</span>个幸运者晒单<strong class="orange arial">{wc:$sum}</strong>条评论</a>
 
@@ -155,11 +155,12 @@
 				$countall = $this->db->GetOne("select sum(gonumber) as num from `@#_member_go_record` where `uid`= '".$itemlist[0]['q_uid']."' and `shopid` = '".$gorecode['shopid']."' and `shopqishu` = '".$gorecode['shopqishu']."'");
 			{wc:php:end}
 			<ul id="prevPeriod" class="m-round" codeid="{wc:$gorecode['shopid']}" uweb="{wc:$gorecode['uid']}">
-        	    <li class="fl"><s></s><img src="{G_TEMPLATES_STYLE}/mobile/images/loading.gif" src2="{G_UPLOAD_PATH}/{wc:fun:get_user_key($itemlist[0]['q_uid'],'img')}"/></li>
-                <li class="fr"><b class="z-arrow"></b></li>
+        	    <li class="fr"><s></s><img src="{G_TEMPLATES_STYLE}/mobile/images/loading.gif" src2="{G_UPLOAD_PATH}/{wc:fun:get_user_key($itemlist[0]['q_uid'],'img')}"/></li>
+                <li class="fl"><b class="z-arrow"></b></li>
                 <li class="getInfo">
             	    <dd>
-					<em class="blue">{wc:fun:get_user_name($itemlist[0]['q_uid'])}</em>({wc:fun:get_ip($gorecode['id'],'ipcity')})
+					({wc:fun:get_ip($gorecode['id'],'ipcity')})
+                    <em class="blue">{wc:fun:get_user_name($itemlist[0]['q_uid'])}</em>
 					</dd>
                     <dd>总共{wc:fun:_cfg('web_name_two')}：<em class="orange arial">{wc:$countall['num']}</em>人次</dd>
                     <dd>幸运{wc:fun:_cfg('web_name_two')}码：<em class="orange arial">{wc:$gorecode['huode']}</em></dd>

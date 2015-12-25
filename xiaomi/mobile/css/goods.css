@@ -328,9 +328,10 @@
 }
 .pNav div.flex-viewport ul.slides {
 	margin:0;
+	float: right;
 }
 .pNav ul.slides li {
-	float:left;
+	float:right;
 	text-align:center;
 	display:inline-block;
 	font-size:14px;
@@ -465,6 +466,7 @@
 	box-shadow:0 1px 1px #dbdbdb;
 	-webkit-box-sizing:border-box;
 	margin-top:-3px;
+	text-align: right;
 }
 .pDetails:after {
 	content:"\0020";
@@ -476,6 +478,7 @@
 	color:#666;
 	line-height:20px;
 	font-size:16px;
+	direction: rtl;
 }
 .pDetails a span {
 	color:#E80000;
@@ -483,6 +486,7 @@
 .pDetails p.price {
 	margin:8px 0 10px;
 	color:#bbb;
+	direction: rtl;
 }
 .pDetails p.price em {
 	color:#a1a1a1;
@@ -534,11 +538,14 @@
 	border-radius:5px;
 	background:#fff;
 	box-shadow:1px 1px 1px #e7e7e7;
+	text-align: right;
 }
 .joinAndGet dl a b {
 	border-width:2px 2px 0 0;
 	position:relative;
 	top:15px;
+	float: left;
+    transform: rotate(-135deg);
 }
 .joinAndGet dl a em {
 	color:#C0C0C0;
@@ -573,14 +580,16 @@
 	border-radius:5px;
 }
 .joinAndGet li.getInfo {
-	margin-left:80px;
+	margin-right:80px;
 	line-height:18px;
 	font-size:0.5em!important;
+	text-align: right;
 }
 .joinAndGet li b {
 	border-width:2px 2px 0 0;
 	margin-top:40px;
 	text-align:right;
+	transform: rotate(-135deg);
 }
 .joinAndGet ul s {
 	background-repeat:no-repeat;
@@ -588,8 +597,9 @@
 	width:61px;
 	height:61px;
 	position:absolute;
-	left:-2px;
+	right:-2px;
 	top:-2px;
+	transform: rotate(90deg);
 }
 .recordCon {
 	position:relative;
