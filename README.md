@@ -107,7 +107,10 @@ function width($p,$t,$w){
 ####[2015.12.25]首页晒单没批准就显示Bug。
 **修改index.action.php文件的第94行代码为：**
 ```php
-		$shaidan=$this->db->GetList("select * from `@#_shaidan` a left join `@#_member` b on  a.sd_userid=b.uid where grade!='D'  order by `sd_id` DESC LIMIT 3");
+$shaidan=$this->db->GetList("select * from `@#_shaidan` a left join `@#_member` b on  a.sd_userid=b.uid where grade!='D'  order by `sd_id` DESC LIMIT 1");
+```
+```php
+$shaidan2=$this->db->GetList("select * from `@#_shaidan` a left join `@#_member` b on  a.sd_userid=b.uid where grade!='D'  order by `sd_id` DESC LIMIT 1,6");
 ```
 
 ##未完待续-2015.12.25 By Dogod
