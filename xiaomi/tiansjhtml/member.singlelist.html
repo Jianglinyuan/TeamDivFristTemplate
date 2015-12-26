@@ -43,7 +43,10 @@
 												<td class="column-detail column-l">
 													<ul class="order-goods-list">
 														<li class="first">
-															<a href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" target="_blank"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:$sd['sd_thumbs']}"/></a>
+															<a href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" target="_blank"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:$sd['sd_thumbs']}" style="
+    width: 60px;
+    height: 60px;
+" /></a>
 															<a href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" target="_blank" class="goods-name">{wc:$sd['sd_title']}</a>
 														</li>
 													</ul>
@@ -77,17 +80,21 @@
 										</thead>
 										<tbody>
 											<tr>
+																							<td class="column-action column-r">
+													<div class="order-info order-action"><a href="{WEB_PATH}/member/home/singleinsert/{wc:$sd['id']}" class="btn btn-primary btn-small">添加晒单</a></div>
+												</td>
 												<td class="column-detail column-l">
 													<ul class="order-goods-list">
 														<li class="first">
-															<img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:fun:shoplisext($sd['shopid'],'thumb')}"/>
+															<img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:fun:shoplisext($sd['shopid'],'thumb')}" style="
+    width: 60px;
+    height: 60px;
+" />
 															<a href="{WEB_PATH}/goods/{wc:$sd['shopid']}" target="_blank" class="goods-name">{wc:fun:shoplisext($sd['shopid'],'title')}</a>
 														</li>
 													</ul>
 												</td>
-												<td class="column-action column-r">
-													<div class="order-info order-action"><a href="{WEB_PATH}/member/home/singleinsert/{wc:$sd['id']}" class="btn btn-primary btn-small">添加晒单</a></div>
-												</td>
+
 											</tr>
 										</tbody>
 									</table>
