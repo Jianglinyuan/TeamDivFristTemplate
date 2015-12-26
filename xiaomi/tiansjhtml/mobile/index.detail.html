@@ -31,7 +31,7 @@
 
         <section class="clearfix g-share-lucky">        
 			<!-- <s class="z-Reward"></s> -->
-			<a class="fl u-lucky-img" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shaidan['sd_userid']}/"><img border="0" alt="" src="{wc:fun:toujpg($shaidan['sd_userid'])}"> </a>
+			<a class="fr u-lucky-img" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shaidan['sd_userid']}/"><img border="0" alt="" src="{wc:fun:toujpg($shaidan['sd_userid'])}"/> </a>
 			<div class="u-lucky-r">
 				<p>幸运获得者：<a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shaidan['sd_userid']}/" class="z-user blue">{wc:fun:userid($shaidan['sd_userid'],'username')}</a></p>
 				{wc:php:start}
@@ -72,9 +72,9 @@
             <div class="m-share-fixed">
                 <div id="CommentNav"> 
                     <div class="m-share-btn">
-                        <div id="divtest" class="u-btn-w"><a id="emHits" class="z-btn-mood"><s></s>羡慕嫉妒恨(<em>{wc:$shaidan['sd_zhan']}</em>)</a></div>
-                        <div class="u-btn-w"><a id="btnComment" href="javascript:void(0);" class="z-btn-comment"><s></s>我要评论</a></div>
                         <div class="u-btn-w"><a id="btnShare" href="javascript:void(0);" class="z-btn-Share"><s></s>分享</a></div>
+                        <div class="u-btn-w"><a id="btnComment" href="javascript:void(0);" class="z-btn-comment"><s></s>我要评论</a></div>
+                        <div id="divtest" class="u-btn-w"><a id="emHits" class="z-btn-mood"><s></s>羡慕嫉妒恨(<em>{wc:$shaidan['sd_zhan']}</em>)</a></div>
                     </div>
                     <div class="m-comment" style="display:none;">
                         <div class="u-comment ">
