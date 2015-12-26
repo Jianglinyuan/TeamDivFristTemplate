@@ -291,13 +291,13 @@ z-index:2;
 }
 .infoCount2 li {
 	border-top:1px solid #e7798c;
-	padding:5px 0 5px 10px;
+	padding:5px 5px 5px 10px;
 	line-height:18px;
+	text-align: right;
+	direction: rtl;
 }
 .infoCount2 p {
 	display:block;
-	text-indent:-4.5em;
-	padding-left:54px;
 }
 .infoCount em {
 	color:#ffe38e;
@@ -334,8 +334,8 @@ z-index:2;
 }
 .infoRule p {
 	margin:10px 0;
-	text-indent:-2em;
-	padding-left:25px;
+	text-align: right;
+	direction: rtl;
 }
 .infoRule p em {
 	background:#c75c5c;
@@ -347,7 +347,7 @@ z-index:2;
 	border-radius:20px;
 	display:inline-block;
 	color:#fff;
-	margin-right:5px;
+	margin-left:5px;
 	font-size:10px;
 }
 .infoRule b {
