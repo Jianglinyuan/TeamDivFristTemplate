@@ -17,7 +17,7 @@ editurl['imageManager']="{WEB_PATH}/{G_ADMIN_DIR}/ueditor/imagemanager";
 <script>
 //上传文件
 $(function(){
-    $('#sd_file').uploadify({
+    $('#sd_file')[0].uploadify({
     	'auto'     : false,
     	'removeTimeout' : 1,
         'swf'      : '{G_PLUGIN_PATH}/uploadify/uploadify.swf',
@@ -45,8 +45,8 @@ $(function(){
     });
 });
 function sdUpload(){
-		$('#sd_file').uploadify('settings','formData',{'typeCode':document.getElementById('id_file').value});
-		$('#sd_file').uploadify('upload','*')
+		$('#sd_file')[0].uploadify('settings','formData',{'typeCode':document.getElementById('id_file').value});
+		$('#sd_file')[0].uploadify('upload','*')
 	}
 //显示上传的图片
 function SetImgContent(data){
@@ -129,7 +129,7 @@ function SetUploadFile(){
 		<div class="sd_lilie">
 			<span class="sd_span">晒图：</span>
 			<div style="float:left; width:400px;">
-				<input id="sd_file" type="file" name="upimg"/>				
+				<input id="sd_file" type="file" name="upimg"/>
 				<div style="width:710px; float:left;"></div>
 				<input type="hidden" name="imglist" id="id_file" />
 				<input type="button"  class="button" onClick="sdUpload()" value="上传图片" />
