@@ -24,8 +24,8 @@ body {
 }
 .auto-nav {
 	height: 67px;
-	background: #FFD25A;
-	border-bottom: 3px solid #FF4B04;
+	background: #f78e94;
+	border-bottom: 3px solid #e14;
 	width: 1190px;
 	margin: auto;
 }
@@ -48,7 +48,7 @@ body {
 	border-radius: 5px 5px 0 0;
 }
 .auto-nav ul li.autoCur {
-	background: #FF4B04;
+	background: #e14;
 	color: #fff;
 }
 .auto-nav ul li em {

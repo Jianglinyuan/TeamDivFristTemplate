@@ -1132,7 +1132,7 @@ div.jqZoomBigPic img {
 	color:#cc0033;
 	font-weight:bold;
 	line-height:30px;
-	border-top:3px solid #FF6500;
+	border-top:3px solid #DB3752;
 	margin-top:0;
 	background:#fff;
 }
@@ -1735,8 +1735,8 @@ a.go_Shopping12:hover {
 }
 .Progress-bar p span {
 	height:10px;
-	border:1px solid #FF8A00;
-	background:#FF9600;
+	border:1px solid #d43;
+	background:#e57;
 	position:absolute;
 	top:-1px;
 	right:-1px;

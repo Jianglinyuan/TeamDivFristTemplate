@@ -1,13 +1,12 @@
 {wc:templates "index","header"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/goods-Detail.min.css" />
 <div class="container breadcrumbs">
-	<a href="{WEB_PATH}">首页</a><span class="sep">/</span>
-	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}">
-	{wc:$category['name']}
-	</a><span class="sep">/</span>
+	商品详情<span class="sep">/</span>
 	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
-	{wc:$brand['name']}
-	</a><span class="sep">/</span>商品详情
+	{wc:$brand['name']}</a><span class="sep">/</span>
+	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}">
+	{wc:$category['name']}</a><span class="sep">/</span>
+	<a href="{WEB_PATH}">首页</a>
 </div>
 <div class="goods-detail container">
     <div class="goods-detail-info row clearfix">
@@ -273,72 +272,7 @@
 </div>
 </div>
 </div>
-<style>
-.c_meau{ width:211px; height:380px; position:fixed;  left:50%; margin-left:600px; bottom:-380px; display:none;}
-.c_meau .fl{ width:125px;}
-.c_meau .fl h4{ width:100%; height:61px; background:url({G_TEMPLATES_STYLE}/images/c_meau_4.png) no-repeat; color:#81511c; font-size:16px; line-height:22px; text-align:center; padding:8px 0; font-weight:bold;}
-.c_meau .fl_o{ background:#fff; margin:-16px 0; padding:10px 0 0 0;}
-.c_meau .fl_o_o{ color:#7d7d7d; font-size:14px; }
-.c_meau .fl_o_o { padding-bottom:10px; border-bottom:1px solid #e5e5e5; width:108px; text-align:center; margin:auto auto 10px auto;}
-.c_meau .fl_o_o dd{ line-height:14px;}
-.c_meau .fr_o{ margin:90px 0 60px 0;}
-.c_meau .fr_t{ margin-left:8px; cursor:pointer;}
-.c_meau{ height:auto; bottom:-430px; display:block;}
-.c_meau .fl_o_o dd{ line-height:22px;}
-.c_meau .fl_o{ margin:-16px 0 -11px 0;}
-.c_meau .fr_o {margin: 90px 0 168px 0;}
 
-@media screen and (max-device-width: 1366px)
-{
-	.c_meau{ margin-left:470px; z-index:100;}
-}
-</style>
-<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
-<div class="c_meau">
-  <div class="fl">
-    <h4>分享福气<br>福气才有</h4>
-    <div class="fl_o">
-      <dl class="fl_o_o">
-        <dt><script type="text/javascript">
-(function(){
-var p = {
-url:location.href, /*获取URL，可加上来自分享到QQ标识，方便统计*/
-desc:'我在投了1块钱,中了部手机,现在我把这个福气转发给你,希望你也中一个。', /*分享理由(风格应模拟用户对话),支持多分享语随机展现（使用|分隔）*/
-title:'{wc:$item['title']}', /*分享标题(可选)*/
-summary:'{wc:$item['title2']}', /*分享摘要(可选)*/
-pics:'{G_UPLOAD_PATH}/{wc:$item['thumb']}', /*分享图片(可选)*/
-flash: '', /*视频地址(可选)*/
-site:'', /*分享来源(可选) 如：QQ分享*/
-style:'102',
-width:63,
-height:24
-};
-var s = [];
-for(var i in p){
-s.push(i + '=' + encodeURIComponent(p[i]||''));
-}
-document.write(['<a class="qcShareQQDiv" href="http://connect.qq.com/widget/shareqq/index.html?',s.join('&'),'" target="_blank">分享到QQ</a>'].join(''));
-})();
-</script>
-<script src="http://connect.qq.com/widget/loader/loader.js" widget="shareqq" charset="utf-8"></script></dt>
-      </dl>
-      <dl class="fl_o_o">
-        <dt><wb:share-button addition="simple" type="button"></wb:share-button></dt>
-      </dl>
-    </div>
-    <img src="http://7sbxwk.com1.z0.glb.clouddn.com/@/images/c_meau_7.png"> </div>
-  <div class="clear"></div>
-</div>
-<script type="text/javascript">
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $(".c_meau").stop().show().animate({ bottom: '500px' }, 300);
-        }
-        else {
-            $(".c_meau").stop().animate({ bottom: '-430px' }, 300);
-        }
-    });
-</script>
 <script type="text/javascript">
 $(function(){
 	$("#ulRecordTab li").click(function(){
