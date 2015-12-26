@@ -402,7 +402,7 @@ dl.goods-info-box .goods-info-head dl .goods-info-head-cart .goodsDetailInfo {
 	position: absolute;
 	height: 40px;
 	line-height: 40px;
-	border: 1px solid #ff4a00;
+	border: 1px solid #cc0033;
 	color: #6d6d6d;
 	font-size: 12px;
 	top: 20px;
@@ -413,8 +413,8 @@ dl.goods-info-box .goods-info-head dl .goods-info-head-cart .goodsDetailInfo {
 }
 dl.goods-info-box .goods-info-head dl .goods-info-head-cart .goodsDetailInfo:after {
 	content: "";
-	border: 8px solid #ff4a00;
-	border-color: transparent #ff4a00 transparent transparent;
+	border: 8px solid #cc0033;
+	border-color: transparent #cc0033 transparent transparent;
 	border-style: dashed solid dashed  dashed;
 	width: 0px;
 	height: 0px;
@@ -849,7 +849,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	_zoom: 1
 }
 .goods-detail-desc .xm-goods-side-list .box-bd ul li a:hover h2 {
-	color: #ff4a00
+	color: #cc0033
 }
 .goods-detail-desc .goods-detail-box {
 	border: none
@@ -1115,7 +1115,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	color: #333
 }
 .goods-detail-desc .goods-detail-comment .box-bd .com-body .content li .article .art_reply i {
-	color: #ff4a00;
+	color: #cc0033;
 	line-height: 15px;
 	font-style: normal
 }
@@ -1217,7 +1217,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	background-color: #dfdfdf
 }
 .goods-detail-desc .goods-detail-faq .box-bd .faq-list li .answer .stard {
-	background-color: #ff4a00
+	background-color: #cc0033
 }
 .goods-detail-desc .goods-detail-faq .box-bd .faq-list li .author {
 	margin-top: 10px

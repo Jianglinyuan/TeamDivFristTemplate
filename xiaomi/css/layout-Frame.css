@@ -180,7 +180,7 @@ body {
 }
 .button03 {
 	display:inline-block;
-	background:#F60;
+	background:#cc0033;
 	border:1px solid #F95702;
 	color:#fff;
 }
@@ -526,7 +526,7 @@ body {
 	_line-height:25px;
 	border-radius:2px;
 	position:relative;
-	background:#F60;
+	background:#cc0033;
 	color:#fff;
 	margin:0 auto;
 	text-align:left;
@@ -563,7 +563,7 @@ body {
 	color:#ADADAD;
 }
 .sid-service .tel {
-	color:#f60;
+	color:#cc0033;
 	font-size:14px;
 	vertical-align:5px;
 }
@@ -601,7 +601,7 @@ body {
 	color:#43b6ff;
 }
 .subMenu a i {
-	background:#f60;
+	background:#cc0033;
 	color:#fff;
 	position:absolute;
 	top:1px;
@@ -663,7 +663,7 @@ body {
 	color:#666;
 }
 .friend-tab a:hover {
-	color:#f60;
+	color:#cc0033;
 }
 .friend-tab a.fri-cur {
 	background:#fff;
@@ -732,7 +732,7 @@ body {
 }
 .Progress-bar p span {
 	border:1px solid #F55700;
-	background:#F60;
+	background:#cc0033;
 	position:absolute;
 	top:-1px;
 	left:-1px;
@@ -803,7 +803,7 @@ body {
 	text-decoration:none;
 }
 .record-tab a:hover {
-	color:#f60;
+	color:#cc0033;
 	text-decoration:underline;
 }
 .record-time {

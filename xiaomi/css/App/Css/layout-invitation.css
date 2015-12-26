@@ -243,7 +243,7 @@
 	font-size: 14px;
 }
 .Apply-con span.oran {
-	color: #f60;
+	color: #cc0033;
 	overflow: hidden;
 	display: inline-block;
 	height: 25px;
@@ -291,7 +291,7 @@
 .Apply-button input[type=submit] {
 	padding: 5px;
 	color: #fff;
-	background-color: #ff4a00;
+	background-color: #cc0033;
 }
 .Apply-button input[type=submit]:hover {
 	background-color: #ec5010;

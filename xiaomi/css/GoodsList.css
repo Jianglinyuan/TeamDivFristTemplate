@@ -493,7 +493,7 @@ a.go_Shopping:hover {
 	height:36px;
 	line-height:36px;
 	padding-left:15px;
-	border-top:3px solid #F60;
+	border-top:3px solid #cc0033;
 	border-left:1px solid #E4E4E4;
 	border-right:1px solid #E4E4E4;
 }
@@ -553,7 +553,7 @@ a.go_Shopping:hover {
 }
 .list_goodsTj .Roll_Left a.Roll_enabled:hover,.list_goodsTj .Roll_Right a.Roll_enabled:hover {
 	background:#F6F6F6;
-	color:#F60;
+	color:#cc0033;
 }
 .list_goodsTj .Roll_Con {
 	width:880px;
@@ -608,7 +608,7 @@ a.go_Shopping:hover {
 }
 .list_goodsTjCon .name a:hover {
 	text-decoration:underline;
-	color:#f60;
+	color:#cc0033;
 }
 .list_goodsTjCon .money {
 	font-family:宋体;
@@ -626,8 +626,8 @@ a.go_Shopping:hover {
 .go_Shopping12 {
 	padding:5px 16px 6px 16px;
 	_padding:6px 16px 5px 16px;
-	border:1px solid #F60;
-	background:#F60;
+	border:1px solid #cc0033;
+	background:#cc0033;
 	color:#fff;
 	border-radius:3px;
 	font-size:12px;
@@ -773,8 +773,8 @@ a.go_Shopping12:hover {
 	overflow:hidden;
 	padding-left:10px;
 	padding-right:10px;
-	background-color:#F60;
-	border:1px solid #F60;
+	background-color:#cc0033;
+	border:1px solid #cc0033;
 	color:#FFF;
 	text-decoration:none;
 	border-radius:5px;
@@ -793,7 +793,7 @@ a.go_Shopping12:hover {
 	overflow:hidden;
 }
 .pages ul.pageULEx li a:hover {
-	color:#f60;
+	color:#cc0033;
 	text-decoration:none;
 }
 .pages ul.pageULEx li.prev_page a {
@@ -812,7 +812,7 @@ a.go_Shopping12:hover {
 	display:inline-block;
 }
 .pages ul.pageULEx li.prev_page a:hover,.pages li.next_page a:hover {
-	color:#f60;
+	color:#cc0033;
 	overflow:hidden;
 }
 .pages ul.pageULEx li.page_curgray a,.pages ul.pageULEx li.page_curgray a:hover {

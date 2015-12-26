@@ -33,7 +33,7 @@
 	line-height:22px\9;
 	font-size:12px;
 	display:inline-block;
-	background:#F60;
+	background:#cc0033;
 	border:1px solid #F95702;
 	border-radius:2px;
 	color:#fff;
@@ -101,7 +101,7 @@
 }
 .button04 {
 	width:88px;
-	background:#f60;
+	background:#cc0033;
 	border:1px solid #f65802;
 	color:#fff;
 }
@@ -111,7 +111,7 @@
 }
 .button05 {
 	width:88px;
-	background:#F60;
+	background:#cc0033;
 	border:1px solid #f65802;
 	color:#fff;
 }
@@ -147,7 +147,7 @@
 	height:30px;
 	line-height:30px;
 	line-height:30px\9;
-	background:#F60;
+	background:#cc0033;
 	border:1px solid #F95702;
 	color:#fff;
 	font-size:14px;
@@ -168,7 +168,7 @@
 }
 .button08 {
 	width:50px;
-	background:#F60;
+	background:#cc0033;
 	border:1px solid #F95702;
 	color:#fff;
 	cursor:pointer;
@@ -460,7 +460,7 @@ body {
 	height:81px;
 	padding:19px 10px 19px 19px;
 	border:1px solid #E9E9E9;
-	border-top:1px solid #F60;
+	border-top:1px solid #cc0033;
 	background:#fff;
 	box-shadow:0 0 4px 0 rgba(233,233,233,.9);
 	z-index:9;
@@ -794,7 +794,7 @@ body {
 	height:25px;
 	line-height:25px;
 	line-height:27px\9;
-	background:#F60;
+	background:#cc0033;
 	color:#fff;
 	font-size:12px;
 	border-radius:2px;
@@ -896,7 +896,7 @@ body {
 	zoom:1;
 }
 .msg b {
-	color:#F60;
+	color:#cc0033;
 	font-weight:normal;
 	position:relative;
 	padding-left:20px;
@@ -997,7 +997,7 @@ body {
 .Topic-tab {
 	height:25px;
 	margin-bottom:10px;
-	border-bottom:1px solid #f60;
+	border-bottom:1px solid #cc0033;
 	position:relative;
 }
 .Topic-tab ul {
@@ -1028,9 +1028,9 @@ body {
 	color:#666;
 }
 .Topic-tab li.tabcur {
-	border:1px solid #f60;
+	border:1px solid #cc0033;
 	border-bottom:1px solid #fff;
-	color:#f60;
+	color:#cc0033;
 }
 .Topiclist:after {
 	content:"\0020";
@@ -1232,7 +1232,7 @@ body {
 	color:#2af;
 }
 .detail-Con a:hover {
-	color:#f60;
+	color:#cc0033;
 }
 .detail-admin {
 	width:690px;
@@ -1482,7 +1482,7 @@ body {
 	color:#3275A9;
 }
 .Reply_list_more a:hover {
-	color:#F60;
+	color:#cc0033;
 }
 .reply-arrow em,.reply-arrow span {
 	color:#EBEBEB;

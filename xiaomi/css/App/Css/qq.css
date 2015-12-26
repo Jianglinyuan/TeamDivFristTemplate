@@ -221,7 +221,7 @@
 	background:url(../images/arrow_button.png) no-repeat -170px -115px;
 }
 .help-suggestion dl div.wrong {
-	color:#f60;
+	color:#cc0033;
 	background:url(../images/arrow_button.png) no-repeat -170px -74px;
 	padding:0 0 0 20px;
 	width:275px;
@@ -348,7 +348,7 @@
 	text-indent:5px;
 }
 .help_Experience_tab td strong {
-	color:#f60;
+	color:#cc0033;
 }
 .help-main .qqGroup {
 	width:980px;
@@ -483,7 +483,7 @@
 }
 .help-main .qqList p {
 	font-size:18px;
-	color:#f60;
+	color:#cc0033;
 	font-family:"微软雅黑";
 	padding-left:29px;
 }

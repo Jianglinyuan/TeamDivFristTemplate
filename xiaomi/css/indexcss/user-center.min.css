@@ -2,7 +2,7 @@ a {
 	color: #6d6d6d
 }
 a:hover {
-	color: #ff4a00
+	color: #cc0033
 }
 .btn-primary {
 	color: #fff
@@ -236,7 +236,7 @@ a:hover {
 }
 .uc-nav-list li.current {
 	/*margin-left: 27px;*/
-	border-right: 3px solid #ff4a00;
+	border-right: 3px solid #cc0033;
 	color: #333;
 	/*background-color: #fbf4fa;*/
 	background: #F3F3F3;
@@ -247,7 +247,7 @@ a:hover {
 	color: #6d6d6d
 }
 .uc-nav-list li a:hover {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-nav-list li li a {
 	padding-left: 50px
@@ -381,7 +381,7 @@ a:hover {
 	_zoom: 1
 }
 .uc-item-thumb-list .item-share {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-item-thumb-list .btn-lineDake {
 	width: 100px;
@@ -491,7 +491,7 @@ a:hover {
 	margin-top: 20px
 }
 .cash-overall .mobile a {
-	color: #ff4a00
+	color: #cc0033
 }
 .cash-list-switch {
 	padding: 10px 20px;
@@ -505,10 +505,10 @@ a:hover {
 	color: #8c8c8c
 }
 .cash-list-switch .tab-active {
-	color: #ff4a00
+	color: #cc0033
 }
 .cash-list-switch .tab-active:hover {
-	color: #ff4a00
+	color: #cc0033
 }
 .cash-list-switch .separator {
 	margin: 0 10px;
@@ -693,7 +693,7 @@ a:hover {
 	color: #000
 }
 .uc-order-overall-list a:hover {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-overall-list .order-item, .uc-order-overall-list .order-info, .uc-order-overall-list .order-delivery, .uc-order-overall-list .order-pay, .uc-order-overall-list .order-date, .uc-order-overall-list .order-action {
 	float: left;
@@ -744,7 +744,7 @@ a:hover {
 	font-size: 12px
 }
 .uc-order-overall-list .order-action .time {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-overall-list .order-action .btn {
 	display: block;
@@ -848,7 +848,7 @@ a:hover {
 	color: #333
 }
 .uc-order-list-type a.current {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-list-box {
 	margin: 20px 0;
@@ -877,7 +877,7 @@ a:hover {
 	color: #333
 }
 .uc-order-detail-item .order-detail-table a:hover {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-detail-item .order-detail-table th, .uc-order-detail-item .order-detail-table td {
 	padding: 0;
@@ -905,7 +905,7 @@ a:hover {
 	padding: 10px 20px
 }
 .uc-order-detail-item .order-detail-table .column-info .order-status {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-detail-item .order-detail-table .column-info .order-status-shipping {
 	color: #90ce36
@@ -926,7 +926,7 @@ a:hover {
 	top: 10px
 }
 .uc-order-detail-item .order-detail-table .column-info .more .time {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-detail-item .order-detail-table .column-info .delivery-status {
 	position: absolute;
@@ -962,10 +962,10 @@ a:hover {
 	color: #c3c3c3
 }
 .uc-order-detail-item .order-detail-table .column-info .delivery-status .delivery-status-detail li:first-child {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-detail-item .order-detail-table .column-info .delivery-status .delivery-status-detail li:first-child .text {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-detail-item .order-detail-table .column-info .delivery-status .delivery-status-detail .text {
 	color: #333
@@ -1053,7 +1053,7 @@ a:hover {
 .uc-order-detail-box .box-hd .more .time {
 	margin-right: 3px;
 	line-height: 30px;
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-detail-box .box-hd .more .btn {
 	margin-left: 20px;
@@ -1075,7 +1075,7 @@ a:hover {
 	color: #333
 }
 .uc-order-detail-box .order-detail-table a:hover {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-detail-box .order-detail-table th, .uc-order-detail-box .order-detail-table td {
 	padding: 0;
@@ -1218,10 +1218,10 @@ a:hover {
 	color: #c3c3c3
 }
 .uc-order-detail-box .order-detail-table .column-delivery .order-delivery-container .delivery-status .delivery-status-detail li:first-child {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-detail-box .order-detail-table .column-delivery .order-delivery-container .delivery-status .delivery-status-detail li:first-child .text {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-detail-box .order-detail-table .column-delivery .order-delivery-container .delivery-status .delivery-status-detail .text {
 	color: #333
@@ -1264,7 +1264,7 @@ a:hover {
 	*zoom: 1;
 	width: 130px;
 	margin: 0 0 10px;
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-order-detail-box .order-detail-total .total-list dd b {
 	margin-right: 10px;
@@ -1403,8 +1403,8 @@ a:hover {
 }
 .uc-coupon-box .box-hd .icon-coupon-toggled {
 	top: 28px;
-	border-color: #ff4a00 transparent transparent;
-	_border-color: #ff4a00 #fff #fff
+	border-color: #cc0033 transparent transparent;
+	_border-color: #cc0033 #fff #fff
 }
 .uc-coupon-box .box-bd {
 	margin: 0;
@@ -1434,7 +1434,7 @@ a:hover {
 	margin: 0 0 15px
 }
 .uc-coupon-section .children .loading a {
-	color: #ff4a00
+	color: #cc0033
 }
 .uc-coupon-section .children .loading .sep {
 	margin: 0 10px;
@@ -1584,7 +1584,7 @@ a:hover {
 	color: #333
 }
 .xm-address-list .selected {
-	border-color: #ff4a00;
+	border-color: #cc0033;
 	background: #fff;
 	cursor: default
 }
@@ -1622,7 +1622,7 @@ a:hover {
 	display: none;
 	position: absolute;
 	background: #fff;
-	border: 1px solid #ff4a00;
+	border: 1px solid #cc0033;
 	z-index: 1050
 }
 .xm-edit-addr-box .bd {
@@ -1645,7 +1645,7 @@ a:hover {
 	color: #333
 }
 .xm-edit-addr-box .bd .item .input:focus, .xm-edit-addr-box .bd .item .input-area:focus {
-	border-color: #ff4a00;
+	border-color: #cc0033;
 	outline: none
 }
 .xm-edit-addr-box .bd .item .input {
