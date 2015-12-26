@@ -25,11 +25,10 @@
 }
 .site-header .site-gd-yg{position:absolute;top:12px;width:100%;border-bottom: 2px solid #ccc;border-top: 2px solid #ccc;background-color: #c75c5c;}
 .site-header .site-gd-yg .u-are{width:90px;float:left;line-height: 30px;text-align: left;}
-.site-header .site-gd-yg .g-zzyging{width:480px;float:left; margin-left: 0px; height: 30px; overflow: hidden;}
+.site-header .site-gd-yg .g-zzyging{float: right; padding-top: 6px; height: 30px; overflow: hidden;}
 .site-header .site-gd-yg .g-zzyging ul{}
-.site-header .site-gd-yg .g-zzyging ul li{height: 35px;width: 550px;margin: 1px;padding: 2px;border-top:none;}
-.site-header .site-gd-yg .g-zzyging ul li span.fl{width:75px; margin:3px;padding:0px;height: 30px;top: 0;float:left;text-align:right;}
-.site-header .site-gd-yg .g-zzyging ul li p{width: 460px; float: right; margin: 1px; padding:2px; height: 30px;white-space:nowrap; color: #eee;}
+.site-header .site-gd-yg .g-zzyging ul li{height: 35px;margin: 1px;padding: 2px;border-top:none;}
+.site-header .site-gd-yg .g-zzyging ul li p{ float: right; margin: 1px; padding:2px; height: 30px;white-space:nowrap; color: #eee; direction: rtl}
 </style>
 <body>
 <div class="h5-yygcms-v1" id="loadingPicBlock">    
@@ -100,8 +99,8 @@
             <ul id="UserBuyNewList1">
                 {wc:loop $go_record $gorecord}
 
-                <li><span class="fl" style="font-size:12px; color:#fff;">恭喜{wc:fun:get_user_name($gorecord)}获得</span>
-                <p>{wc:$gorecord['shopname']}</p></li>
+                <li>
+                <p><span class="fr" style="direction:rtl; font-size:12px; color:#fff; margin-left:5px;">恭喜{wc:fun:get_user_name($gorecord)}获得：</span>{wc:$gorecord['shopname']}</p></li>
 
                 {wc:loop:end}
             </ul>
@@ -132,7 +131,7 @@
 
 	    </div>
 	    <article id="autoLotteryBox" class="clearfix h5-1yyg-w310 m-round overflow">
-	        <ul id="divTimerItems" class="slides">
+	        <ul id="divTimerItems" class="slides" style="margin-top:10px">
 			
 			 {wc:php:start}
 			   $count=count($jinri_shoplist);
@@ -154,7 +153,7 @@
             {wc:php:end}         
             {wc:if time() > $shop['xsjx_time'] } 
 			
-			<li class="m-xs-li" txt="{wc:$shop['time_H']}点" codeid="{wc:$shop['id']}" uweb="{wc:fun:idjia($shop['q_uid'])}">
+			<li class="" txt="{wc:$shop['time_H']}点" codeid="{wc:$shop['id']}" uweb="{wc:fun:idjia($shop['q_uid'])}">
 				<article class="clearfix m-xs-ct m-xs-End">
 					<div class="u-xs-pic" style="float:right;">
 						<div class="z-xs-pic">
@@ -181,7 +180,7 @@
 				</article>
 			</li>
 			 {wc:else}
-			<li class="m-xs-li" txt="{wc:$shop['time_H']}点" codeid="{wc:$shop['id']}" >
+			<li class="" txt="{wc:$shop['time_H']}点" codeid="{wc:$shop['id']}" >
 			  <article class="clearfix m-xs-ct ">
 			      <div class="u-xs-pic" style="float:right;">
 				       <div class="z-xs-pic">

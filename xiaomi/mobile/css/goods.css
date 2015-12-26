@@ -605,8 +605,8 @@
 	position:relative;
 	margin-top:1px;
 	height:100%;
-	border-left:1px solid #efefef;
-	margin-left:30px;
+	border-right:1px solid #efefef;
+	margin-right:30px;
 }
 .recordCon ul {
 	border-top:1px solid #efefef;
@@ -621,7 +621,7 @@
 }
 .recordCon li.rBg {
 	position:absolute;
-	left:-25px;
+	right:-23px;
 	z-index:15;
 }
 .recordCon li.rBg a {
@@ -643,7 +643,9 @@
 	top:0;
 }
 .recordCon li.rInfo {
-	margin-left:25px;
+	margin-right: 25px;
+    text-align: right;
+    direction: rtl;
 }
 .recordCon a {
 	color:#2af;
