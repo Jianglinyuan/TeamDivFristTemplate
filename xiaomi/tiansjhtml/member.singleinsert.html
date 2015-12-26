@@ -29,7 +29,7 @@ $(function(){
         'swf'      : '{G_PLUGIN_PATH}/uploadify/uploadify.swf',
         'uploader' : '{WEB_PATH}/member/home/singphotoup',
         'method'   : 'post',
-		'buttonText' : '选择图片',
+		'buttonText' : '',
 		'buttonImage': '{G_PLUGIN_PATH}/uploadify/select.png',
 		'width': 120,
 		'height': 30,
@@ -83,18 +83,28 @@ function SetUploadFile(){
 }
 </script>
 <style>
-.R-content .sd_lilie{display:block; width:780px; margin:10px 0 10px 0; float:left;}
+.R-content .sd_lilie{display:block;  margin:10px 0 10px 0; float:left;}
 .R-content .sd_lilie .sd_span{font-size:14px; float:left; display:block;width:70px;}
 #sd_text{border:1px solid #ccc; width:450px; height:30px; padding:0 0 0 5px;}
 #sd_textarea{width:500px; height:150px; border:1px solid #ccc; resize:none; padding:5px;}
 #sd_file{ float:left;}
 #fileQueue{display: block; margin: 30px 0 0 0;}
-#fileQueue div{ margin:5px 0 0 0;}
+#fileQueue div{ 
+position: relative;
+float: left;
+}
 #sd_submit{padding:5px 10px; float:right; border-right:1px solid #666; border-bottom:1px solid #666;}
 .button{ margin:5px 0 0 0; float:left;padding:3px 7px; float:left; border-right:1px solid #666; border-bottom:1px solid #666;}
 .fileWarp{ width:710px;  float:left;}
 .fileWarp ul li{ float:left;  margin-right:10px;}
 .fileWarp ul li a{ display:block; height:25px; width:100px; text-align:center; background-color:#eee; color:#cc0033;line-height:25px;}
+#SWFUpload_0{
+	left: 70px;
+}
+.cancel{
+	float: left;
+}
+
 </style>
 <div class="R-content">
 	<div class="subMenux" style="height:50px;line-height:50px;">
@@ -136,7 +146,7 @@ function SetUploadFile(){
 			<span class="sd_span">晒图：</span>
 			<div style="float:left; width:400px;">
 				<input id="sd_file" type="file" name="upimg"/>
-				<div style="width:710px; float:left;"></div>
+				<div style="width:400px; float:left;"></div>
 				<input type="hidden" name="imglist" id="id_file" />
 				<input type="button"  class="button" onClick="sdUpload()" value="确定上传" />
 				<div class="fileWarp"><div id="fileQueue"></div><ul></ul></div>

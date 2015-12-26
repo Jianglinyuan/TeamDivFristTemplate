@@ -203,7 +203,7 @@
 	border:#bebebe 1px solid;
 }
 .select li.selected {
-	border:#ff7010 1px solid;
+	border:#e25 1px solid;
 }
 .select li.custom {
 	width:170px;
@@ -347,7 +347,7 @@ p.leix {
 }
 .charge_money_list p.much span {
 	font-size:12px;
-	color:#f40;
+	color:#e25;
 	font-weight:bold;
 }
 .charge_money_list p.much span#Money {
