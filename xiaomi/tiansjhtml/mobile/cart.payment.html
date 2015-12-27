@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>结算支付 - {wc:$webname}触屏版</title>
+    <title>ھىساپلاش</title>
     <meta content="app-id=518966501" name="apple-itunes-app" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -24,7 +24,7 @@
         <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>قايتىش</b></a>
         </div>
-        <h2>结算支付</h2>
+        <h2>ھىساپلاش</h2>
         <div class="head-r">
 
         </div>
@@ -41,14 +41,14 @@
 
 			<li>
 				<span style="left:-10px;">
-			        <em class="orange arial">{wc:$Mcartlist[$val['id']]['num']}</em>人次
+			        <em class="orange arial">{wc:$Mcartlist[$val['id']]['num']}</em>سان
 			    </span>
 			    <a style="margin-left:45px; margin-right:0;" href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/" class="gray6">(第{wc:$val['qishu']}期){wc:$val['title']}  ({wc:$val['title2']})</a>
 			</li>
 		 {wc:loop:end}
 
 		</ul>
-		<p class="g-pay-Total gray9" style="float:left; margin-left:10px;"><span class="orange arial Fb F16">{wc:$MoenyCount}</span> 元 :合计</p>
+		<p class="g-pay-Total gray9" style="float:left; margin-left:10px;"><span class="orange arial Fb F16">{wc:$MoenyCount}</span>  يۈئەن :جەمئىى سومما</p>
 		<p class="g-pay-bline"></p>
     </section>
 
@@ -58,24 +58,24 @@
 			{wc:if $fufen_dikou >= $MoenyCount}
 			    <li class="gray9 z-pay-ff z-pay-grayC">
 				<i id="spPoints" class="z-pay-ment" sel="0"></i>
-				<span>（您的福分：{wc:$member['score']}）您可以使用福分付款</span>
+				<span>（بەخت سوممىڭىز：{wc:$member['score']}）بەخت سوممىڭىز بىلەن پۇل تۆلىسىڭىز بولىدۇ</span>
 				</li>
 			{wc:else}
 			     <li class="gray6 z-pay-ff z-pay-grayC">
-				<span>（您的福分：{wc:$member['score']}）您的福分不足</span>
+				<span>（بەخت سوممىڭىز：{wc:$member['score']}）بەخت سوممىڭىز يىتىشمىدى</span>
 				</li>
 			{wc:if:end}
 			
 			{wc:if $Money >= $MoenyCount}			
 				<li class="gray9 z-pay-ye z-pay-grayC"> 
 				<i id="spBalance" class="z-pay-ment" sel="0" style="float:left;"></i>
-				<span>（账户余额：{wc:$Money} 元）您可以使用余额付款</span>
+				<span>（قالدۇق سوممىڭىز：{wc:$Money} يۈئەن）قالدۇق سوممىڭىز بىلەن پۇل تۆلىسىڭىز بولىدۇ</span>
 				</li>
 			{wc:else}
 
 			    <li class="gray6 z-pay-ye z-pay-grayC">
-			      <a href="{WEB_PATH}/mobile/home/userrecharge/" class="z-pay-Recharge">去充值</a>
-			      <span>（账户余额：{wc:$Money} 元）您的余额不足</span>
+			      <a href="{WEB_PATH}/mobile/home/userrecharge/" class="z-pay-Recharge">پۇل قاچىلاش</a>
+			      <span>（قالدۇق سوممىڭىز：{wc:$Money} يۈئەن）قالدۇق سوممىڭىز يىتىشمىدى</span>
 		      </li> 
 			{wc:if:end}
 		    </ul>
@@ -85,7 +85,7 @@
 
 		    <ul>
 
-			    <li class="gray6 z-pay-grayC"><s class="z-arrow" style="float:left;"></s>选择支付方式支付</li>
+			    <li class="gray6 z-pay-grayC"><s class="z-arrow" style="float:left;"></s>پۇل تاپشۇرۇش ئۇسۇلىنى تاللاڭ</li>
 		        {wc:loop $paylist $pay}
 
                  <li class="gray9" urm="{wc:$pay['pay_id']}">
@@ -104,7 +104,7 @@
 
 	    <div class="g-Total-bt">
 
-		    <a id="btnPay" href="javascript:;" class="orgBtn">确认支付</a>
+		    <a id="btnPay" href="javascript:;" class="orgBtn">پۇل تاپشۇرۇش</a>
 
 	    </div>
 

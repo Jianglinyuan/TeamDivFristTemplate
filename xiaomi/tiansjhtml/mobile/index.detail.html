@@ -33,16 +33,16 @@
 			<!-- <s class="z-Reward"></s> -->
 			<a class="fl u-lucky-img" href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shaidan['sd_userid']}/"><img border="0" alt="" src="{wc:fun:toujpg($shaidan['sd_userid'])}"> </a>
 			<div class="u-lucky-r">
-				<p>幸运获得者：<a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shaidan['sd_userid']}/" class="z-user blue">{wc:fun:userid($shaidan['sd_userid'],'username')}</a></p>
+				<p>تەلەيلىك ئېرىشكۈچى：<a href="{WEB_PATH}/mobile/mobile/userindex/{wc:$shaidan['sd_userid']}/" class="z-user blue">{wc:fun:userid($shaidan['sd_userid'],'username')}</a></p>
 				{wc:php:start}
 				$jikxiao = get_shop_if_jiexiao($shaidan['sd_shopid']);	
 				$q_end_time=date("Y-m-d H:i:s",$jikxiao['q_end_time']);
 				{wc:php:end}
 				{wc:if $jikxiao['q_uid']}
-				<p>幸运{wc:fun:_cfg('web_name_two')}码：<em class="orange">{wc:$jikxiao['q_user_code']}</em></p>
+				<p>تەلەيلىك نۇمۇر：<em class="orange">{wc:$jikxiao['q_user_code']}</em></p>
 				{wc:if:end}
-				<p>本期{wc:fun:_cfg('web_name_two')}：<em class="orange">{wc:fun:get_user_goods_num($shaidan['sd_userid'],$shaidan['sd_shopid'])}</em>人次</p>
-				<p>揭晓时间：<em class="arial">{wc:$q_end_time}</em></p> 
+				<p>بۇ ساندىكى سېتىلىش：<em class="orange">{wc:fun:get_user_goods_num($shaidan['sd_userid'],$shaidan['sd_shopid'])}</em>قېتىم سان</p>
+				<p>جاكارلىنىش ۋاقتى：<em class="arial">{wc:$q_end_time}</em></p> 
 				
 			</div>                
         </section>
@@ -65,24 +65,24 @@
 				<a class="fl u-goods-img" href="javascript:void(0)"><img border="0" alt="" src="http://wei.34qy.com/GoodsPic/Pic-200-200/20130528150540192.jpg"></a>
 				<div class="u-goods-r">
 					<p class="z-goods-tt"><a href="javascript:void(0)" class="gray6">(第78期)羽博（Yaoboo）YB-637 移动电源</a></p>
-					<p>价值：<em class="arial">￥178.00</em></p>
+					<p>：<em class="arial">￥178.00</em></p>
 				</div>
 				<a href="/lottery/detail-17474.html" class="u-rs-m1"><b class="z-arrow"></b></a>
 			</aside> -->
             <div class="m-share-fixed">
                 <div id="CommentNav"> 
                     <div class="m-share-btn">
-                        <div id="divtest" class="u-btn-w"><a id="emHits" class="z-btn-mood"><s></s>羡慕嫉妒恨(<em>{wc:$shaidan['sd_zhan']}</em>)</a></div>
-                        <div class="u-btn-w"><a id="btnComment" href="javascript:void(0);" class="z-btn-comment"><s></s>我要评论</a></div>
-                        <div class="u-btn-w"><a id="btnShare" href="javascript:void(0);" class="z-btn-Share"><s></s>分享</a></div>
+                        <div id="divtest" class="u-btn-w"><a id="emHits" class="z-btn-mood"><s></s>پىچەت(<em>{wc:$shaidan['sd_zhan']}</em>)</a></div>
+                        <div class="u-btn-w"><a id="btnComment" href="javascript:void(0);" class="z-btn-comment"><s></s> سۆز قىلىمەن</a></div>
+                        <div class="u-btn-w"><a id="btnShare" href="javascript:void(0);" class="z-btn-Share"><s></s>بەھىرلەش</a></div>
                     </div>
                     <div class="m-comment" style="display:none;">
                         <div class="u-comment ">
                             <textarea name="comment" id="comment" rows="3" class="z-comment-txt" ></textarea>
                         </div>
                         <div class="u-Btn">
-                            <div class="u-Btn-li"><a id="btnCancel" href="javascript:;" class="z-CloseBtn">取 消</a></div>
-                            <div class="u-Btn-li"><a id="btnPublish" href="javascript:;" class="z-DefineBtn">发表评论</a></div>
+                            <div class="u-Btn-li"><a id="btnCancel" href="javascript:;" class="z-CloseBtn">بىكار قىلىش</a></div>
+                            <div class="u-Btn-li"><a id="btnPublish" href="javascript:;" class="z-DefineBtn">تاماملاش</a></div>
                         </div>
                     </div>
                     <div class="m-shareT-round"></div>
@@ -90,7 +90,7 @@
                 <div id="fillDiv" style="display:none;"></div>
             </div>        
             <article class="m-share-comment m-round">
-                <h3>共<span id="ReplyCount"  class="z-user orange">{wc:$shaidan['sd_ping']}</span>条评论</h3>
+                <h3>جامئىى<span id="ReplyCount"  class="z-user orange">{wc:$shaidan['sd_ping']}</span>دانە سۆز بار</h3>
                 <ul id="replyList">
 					{wc:loop $shaidan_hueifu $sdhf}
 					<li>
@@ -142,7 +142,7 @@ $(function(){
 		if('{wc:$member}'){
 			$(".m-comment").show();
 		}else{
-			addsuccess('请登录!');
+			addsuccess('كىرىش!');
 		}		
 	});
 	//取消发表
@@ -153,19 +153,19 @@ $(function(){
 	$("#btnPublish").click(function(){
 		var c=$("#comment").val();
 		if(!c){
-			addsuccess('不能为空!');
+			addsuccess('مەزمۇن يوق!');
 		}else if(c.length<3){
-			addsuccess('字符不能少于3个!');
+			addsuccess('3 دىن ئاز خەت بولسا بولمايدۇ!');
 		}else{
 			$.post(
 				"{WEB_PATH}/mobile/shaidan/plajax",
 				{count:c,sd_id:"{wc:$shaidan['sd_id']}"},
 				function(data){
 					if(data==1){
-						addsuccess('回复成功');
+						addsuccess('قالدۇرۇش مۇھاپىقىيەتلىك');
 						//window.location.reload(); 
 					}else{
-						addsuccess('回复失败!');
+						addsuccess('قالدۇرۇش مەغلۇپ بولدى');
 					}
 					$(".m-comment").hide();
 				}
@@ -194,7 +194,7 @@ $(function(){
 			{id:"{wc:$shaidan['sd_id']}"},
 			function(data){
 				if(data == -1){
-					alert("请登陆之后操作");
+					alert("تىزىملىتىپ كىرىپ مەشھۇلات قىلىڭ");
 				}else{
 					$("#emHits em").text(data);
 					$("#emHits").addClass("smile-have");
@@ -231,10 +231,10 @@ $(function(){
 <div class="Prompt"></div>
 </div>
 <div id="pageDialog" class="pageDialog" style="width:300px; height:100px; position: fixed; display: none;">
-	<div class="clearfix m-round f-share-tips"><div class="f-share-tit">请选择以下方式分享</div>
+	<div class="clearfix m-round f-share-tips"><div class="f-share-tit">تۆۋەندىكى ئۇسۇللار ئارقىلىق بەھىرلەڭ</div>
 	<a id="btnMsgCancel" href="javascript:void(0)" class="f-share-Close"></a>
 	<ul id="shareType" class="f-share-li">
-		<li><a href="javascript:void(0);"><b class="z-sina"><s></s></b><em>新浪微博</em></a></li>
+		<li><a href="javascript:void(0);"><b class="z-sina"><s></s></b><em>بلوگى Sina</em></a></li>
 		<li><a href="javascript:void(0);"><b class="z-qq"><s></s></b><em>腾讯微博</em></a></li>
 		<li><a href="javascript:void(0);"><b class="z-qzone"><s></s></b><em>QQ空间</em></a></li>
 	</ul>

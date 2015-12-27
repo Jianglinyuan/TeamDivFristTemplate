@@ -28,7 +28,7 @@ input:-moz-placeholder {
 	position: relative;
 	font-size: 14px;
 	color: #999;
-	text-align: right;
+	text-align: left;
 	line-height: 22px;
 }
 .registerCon li input {
@@ -43,7 +43,6 @@ input:-moz-placeholder {
 	-webkit-box-sizing: border-box;
 	position: relative;
 	font-size: 16px;
-	font-family: alkatip;
 }
 .registerCon li input.rText {
 	padding-left: 30px;
@@ -146,8 +145,7 @@ input:-moz-placeholder {
 	display: inline-block;
 	-webkit-box-sizing: border-box;
 	position: relative;
-	font-size: 12px;
-	font-family: alkatip;
+	font-size: 16px;
 	direction: rtl;
 }
 .registerCon li.accAndPwd input.lEmail {

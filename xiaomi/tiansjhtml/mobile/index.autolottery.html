@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>限时 - {wc:$webname}触屏版</title>
+    <title>ۋاقىتلىق مەھسۇلاتلار</title>
     <meta content="app-id=518966501" name="apple-itunes-app" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
@@ -66,7 +66,7 @@
 	     <li class="m-xs-li" txt="{wc:$shop['time_H']}点">
             <div class="m-round limit-bd limit-End">
                 <div class="f-limit-time">
-                    <span class="f-limit-time-date">已揭晓</span>
+                    <span class="f-limit-time-date">جاكارلاندى</span>
                 </div>
                 <div class="limt-pic">
                     <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/">
@@ -77,14 +77,14 @@
                 <div class="limit-bd-con">
                     <p class="z-limit-tt">
                         <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/" class="gray6 z-tt">
-                            (第{wc:$shop['qishu']}期){wc:$shop['title']}
+                            (第s{wc:$shop['qishu']}期){wc:$shop['title']}
                         </a>
                     </p>
                     <p class="z-promo">
-                        价值:<em class="gray9">￥{wc:$shop['money']}</em>
+                        :<em class="gray9">￥{wc:$shop['money']}</em>
                     </p>
                     <div class="Progress-bar">
-                        <p class="u-progress" title="已完成{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%">
+                        <p class="u-progress" title="s{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%">
                             <span class="pgbar" style="width:width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;">
                                 <span class="pging">
                                 </span>
@@ -109,12 +109,12 @@
                         <img border="0" src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($shop['q_uid'],'img')}">
                     </a>
                     <p>
-                        恭喜<span class="z-user blue" onClick="location.href='{WEB_PATH}/uname/{wc:fun:idjia($shop['q_uid'])}'">{wc:fun:get_user_name($shop['q_uid'])}</span>获得
+                        <span class="z-user blue" onClick="location.href='{WEB_PATH}/uname/{wc:fun:idjia($shop['q_uid'])}'">{wc:fun:get_user_name($shop['q_uid'])}</span> نىڭ ئىرىىشكەنلىكىنى تەبىركلەيمىز
                     </p>
-                    <p class="m-limit-Code">幸运{wc:fun:_cfg('web_name_two')}码：<em class="orange">{wc:$shop['q_user_code']}</em>
+                    <p class="m-limit-Code">تەلەيلىك نۇمۇر：<em class="orange">{wc:$shop['q_user_code']}</em>
                     </p>
                     <p>
-                        {wc:fun:_cfg('web_name_two')}人次：{wc:$user_shop_number[$shop['q_uid']][$shop['id']]}
+                        {wc:fun:_cfg('web_name_two')} قېتىم سان：{wc:$user_shop_number[$shop['q_uid']][$shop['id']]}
                     </p>
                 </div>
             </div>
@@ -124,7 +124,7 @@
             <div class="m-round limit-bd ">
                 <div name="timerItem" class="f-limit-time" time="{wc:$sysj}">
                     <span class="f-limit-time-date">
-                        <b>剩余时间</b><em>00</em>时<em>00</em>分<em>00</em>秒
+                        <b>قالغان ۋاقىت</b><em>00</em>:<em>00</em>:<em>00</em>
                     </span>
                 </div>
                 <div class="limt-pic">
@@ -139,7 +139,7 @@
                             (第{wc:$shop['qishu']}期){wc:$shop['title']}
                         </a>
                     </p>
-                    <p class="z-promo">价值:<em class="gray9">￥{wc:$shop['money']}</em>
+                    <p class="z-promo">:<em class="gray9">￥{wc:$shop['money']}</em>
                     </p>
                     <div class="Progress-bar">
                         <p class="u-progress" title="已完成{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%">
@@ -162,15 +162,15 @@
 				   {wc:if $shop['canyurenshu']==$shop['zongrenshu']}
                     <div class="u-Btn-li">
                         <a class="grayBtn">
-                            下手慢了！！ 被抢光啦！！
+                            كىيىن قاپسىز، مەھسۇلات تۈگەپ كەتتى
                         </a>
                     </div>
 					{wc:else}
 					<div class="u-Btn-li">
-						<a href="javascript:;" class="z-ShoppingBtn" id="{wc:$shop['id']}">立即{wc:fun:_cfg('web_name_two')}</a>
+						<a href="javascript:;" class="z-ShoppingBtn" id="{wc:$shop['id']}">سېتىۋېلىش</a>
 					</div>
 					<div class="u-Btn-li">
-						<a href="javascript:void(0);" class="z-cartBtn" id="{wc:$shop['id']}">加入购物车</a>
+						<a href="javascript:void(0);" class="z-cartBtn" id="{wc:$shop['id']}">مال ھارۋسىغا سېلىش</a>
 					</div>
 					{wc:if:end}
                 </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>购物车 - {wc:$webname}触屏版</title>
+    <title>مال ھارۋام</title>
     <meta content="app-id=518966501" name="apple-itunes-app" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
     <meta content="yes" name="apple-mobile-web-app-capable" />
@@ -48,9 +48,9 @@
 							<img src="{G_TEMPLATES_STYLE}/mobile/images/loading.gif" src2="{G_UPLOAD_PATH}/{wc:$val['thumb']}" border="0" alt=""/>
 						</a>
 						<div class="u-Cart-r" style="margin-left:10px;">
-							<p class="z-Cart-tt" style="text-align: right;"><a href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/" class="gray6">(第{wc:$val['qishu']}期){wc:$val['title']}</a></p>
-							<ins class="z-promo gray9" style="text-align: right;">剩余<em class="arial">{wc:$val['zongrenshu']-$val['canyurenshu']}</em>人次</ins>
-							<p class="gray9" style="text-align: right;">总共{wc:fun:_cfg('web_name_two')}：<em class="arial">{wc:$Mcartlist[$val['id']]['num']}</em>人次/<em class="orange arial">￥{wc:$Mcartlist[$val['id']]['money']}</em></p>
+							<p class="z-Cart-tt" style="text-align: right;"><a href="{WEB_PATH}/mobile/mobile/item/{wc:$val['id']}/" class="gray6">({wc:$val['qishu']}چى سان){wc:$val['title']}</a></p>
+							<ins class="z-promo gray9" style="text-align: right;"> قالدۇق<em class="arial">{wc:$val['zongrenshu']-$val['canyurenshu']}</em>人次</ins>
+							<p class="gray9" style="text-align: right;">جەمئىى سېتىۋېلىش：<em class="arial">{wc:$Mcartlist[$val['id']]['num']}</em>人次/<em class="orange arial">￥{wc:$Mcartlist[$val['id']]['money']}</em></p>
 							<p class="f-Cart-Other">
 								<a href="javascript:;" class="fr z-del" name="delLink" cid="{wc:$val['id']}" style="float:left"></a>
 
@@ -68,10 +68,10 @@
 	            </ul>
 	        </article>
 
-	    <div id="divBtmMoney" class="g-Total-bt"><p>总共{wc:fun:_cfg('web_name_two')}
-			<span class="orange arial z-user">{wc:$num}</span>个商品  合计金额：
-			<span class="orange arial">{wc:$buyshopmoney}.00</span> 元</p>
-			<a href="javascript:;" class="orgBtn">结 算</a>
+	    <div id="divBtmMoney" class="g-Total-bt"><p>جەمئىى سېتىۋېلىش
+			<span class="orange arial z-user">{wc:$num}</span>دانە مەھسۇلات  جەمئىى سومما：
+			<span class="orange arial">{wc:$buyshopmoney}.00</span>  يۈئەن</p>
+			<a href="javascript:;" class="orgBtn">ھىساپلاش</a>
 		</div>
 	{wc:if:end}
 	    <div id="divNone" class="haveNot z-minheight" style="display:none"><s></s><p>!كەچۈرۈڭ ، سزنىڭ مال ھارۋىڭىزدا مەھسۇلات يوق ئىكەن</p>
