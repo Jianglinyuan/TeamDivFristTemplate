@@ -21,40 +21,40 @@ $(function() {
         var o = function() {
             return "/" + j.FIdx + "/" + j.EIdx + "/" + j.isCount
         };
-		 
+
         var p = function() {
             d.show();
-            GetJPData(Gobal.Webpath, "ajax", "getLotteryList"+o(),
-            function(s) {			 
-                if (s.code == 0) {
-                    if (j.isCount == 1) {
-                        a = s.count						
+            GetJPData(Gobal.Webpath, "ajax", "getLotteryList" + o(),
+                function(s) {
+                    if (s.code == 0) {
+                        if (j.isCount == 1) {
+                            a = s.count
+                        }
+                        var r = s.listItems;
+                        var t = r.length;
+                        for (var q = 0; q < t; q++) {
+                            var v = '<ul id="' + r[q].id + '"><li class="revConL">' + (r[q].codeType == 1 ? '<span class="z-limit-tips">限时揭晓</span>' : "") + '<img  src="' + Gobal.imgpath + '/uploads/' + r[q].thumb + '"></li><li class="revConR"><dl><dd><img name="uImg" uweb="' + r[q].q_uid + '" src="' + Gobal.imgpath + '/uploads/' + r[q].userphoto + '"></dd><dd><span>获得者<strong>：</strong><a name="uName" uweb="' + r[q].q_uid + '" class="rUserName blue">' + r[q].q_user + '</a></span>本期微购<strong>：</strong><em class="orange arial">' + r[q].gonumber + '</em>人次</dd></dl><dt>幸运微购码：<em class="orange arial">' + r[q].q_user_code + '</em><br/>揭晓时间：<em class="c9 arial">' + r[q].q_end_time + '</em></dt><b class="fr z-arrow"></b></li></ul>';
+                            var u = $(v);
+                            u.click(function() {
+                                location.href = Gobal.Webpath + "/mobile/mobile/item/" + $(this).attr("id")
+                            }).find('img[name="uImg"]').click(function(w) {
+                                location.href = Gobal.Webpath + "/mobile/mobile/userindex/" + $(this).attr("uweb");
+                                c(w)
+                            });
+                            u.find('a[name="uName"]').click(function(w) {
+                                location.href = Gobal.Webpath + "/mobile/mobile/userindex/" + $(this).attr("uweb");
+                                c(w)
+                            });
+                            d.before(u)
+                        }
+                        if (j.EIdx < a) {
+                            m = false;
+                            l.show()
+                        }
+                        loadImgFun()
                     }
-                    var r = s.listItems;
-                    var t = r.length;
-                    for (var q = 0; q < t; q++) {
-                        var v = '<ul id="' + r[q].id + '"><li class="revConL">' + (r[q].codeType == 1 ? '<span class="z-limit-tips">限时揭晓</span>': "") + '<img src="' + Gobal.LoadPic + '" src2="'+Gobal.imgpath+'/uploads/' + r[q].thumb + '"></li><li class="revConR"><dl><dd><img name="uImg" uweb="' + r[q].q_uid + '" src="'+Gobal.imgpath+'/uploads/' + r[q].userphoto + '"></dd><dd><span>获得者<strong>：</strong><a name="uName" uweb="' + r[q].q_uid + '" class="rUserName blue">' + r[q].q_user + '</a></span>本期微购<strong>：</strong><em class="orange arial">' + r[q].gonumber + '</em>人次</dd></dl><dt>幸运微购码：<em class="orange arial">' + r[q].q_user_code + '</em><br/>揭晓时间：<em class="c9 arial">' + r[q].q_end_time + '</em></dt><b class="fr z-arrow"></b></li></ul>';
-                        var u = $(v);
-                        u.click(function() {
-                            location.href = Gobal.Webpath+"/mobile/mobile/item/" + $(this).attr("id")
-                        }).find('img[name="uImg"]').click(function(w) {
-                            location.href = Gobal.Webpath+"/mobile/mobile/userindex/" + $(this).attr("uweb");
-                            c(w)
-                        });
-                        u.find('a[name="uName"]').click(function(w) {
-                            location.href = Gobal.Webpath+"/mobile/mobile/userindex/" + $(this).attr("uweb");
-                            c(w)
-                        });
-                        d.before(u)
-                    }
-                    if (j.EIdx < a) {
-                        m = false;
-                        l.show()
-                    }
-                    loadImgFun()
-                }
-                d.hide()
-            })
+                    d.hide()
+                })
         };
         this.getInitPage = function() {
             p()
@@ -78,15 +78,15 @@ $(function() {
     var n = false;
     var g = 0;
     var i = $("#divLottery");
-	
+
     var k = function() {
         GetJPData(Gobal.Webpath, "ajax", "GetStartRaffleAllList/" + g,
-        function(p) {
-            if (p.errorCode == 0) {
-                o(p)
-            }
-            setTimeout(k, 5000)
-        });
+            function(p) {
+                if (p.errorCode == 0) {
+                    o(p)
+                }
+                setTimeout(k, 5000)
+            });
         var o = function(q) {
             g = q.maxSeconds;
             var p = function(t) {
@@ -108,10 +108,10 @@ $(function() {
                 p(q.listItems)
             } else {
                 Base.getScript(Gobal.Skin + "/mobile/js/LotteryTimeFun.js",
-                function() {
-                    n = true;
-                    p(q.listItems)
-                })
+                    function() {
+                        n = true;
+                        p(q.listItems)
+                    })
             }
         }
     };
