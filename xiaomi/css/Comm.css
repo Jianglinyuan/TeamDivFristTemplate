@@ -32,7 +32,7 @@ a {
 	text-decoration:none;
 }
 a:hover {
-	color:#f60;
+	color:#cc0033;
 }
 a:active {
 	star:expression(this.onFocus=this.blur());
@@ -95,7 +95,7 @@ i,em {
 	color:#bbb;
 }
 .Current_nav a:hover {
-	color:#f60;
+	color:#cc0033;
 }
 .red {
 	color:#f00;
@@ -105,7 +105,7 @@ a.red:hover {
 	color:#f00;
 }
 .orange {
-	color:#f60;
+	color:#cc0033;
 }
 .blue {
 	color:#2af;
@@ -171,7 +171,7 @@ input[type=button]::-moz-focus-inner {
 	color:#fff;
 }
 .orangebut {
-	background:#f60;
+	background:#cc0033;
 	border:1px solid #f65802;
 	color:#fff;
 }
@@ -404,7 +404,7 @@ input[type=button]::-moz-focus-inner {
 	overflow:hidden;
 	display:inline-block;
 	background-position:0 -238px;
-	background-color:#F60;
+	background-color:#cc0033;
 	position:absolute;
 	top:0;
 	right:0;
@@ -430,7 +430,7 @@ input[type=button]::-moz-focus-inner {
 }
 .Roll_mycart li.Roll_CartMore a:hover {
 	background:#e8e8e8;
-	color:#f60;
+	color:#cc0033;
 }
 .Roll_mycart li.Roll_CartMore a i {
 	font-weight:bold;
@@ -446,7 +446,7 @@ input[type=button]::-moz-focus-inner {
 	padding-right:8px;
 }
 .Roll_mycart p span {
-	color:#f60;
+	color:#cc0033;
 }
 .Roll_mycart h3 {
 	height:26px;
@@ -463,7 +463,7 @@ input[type=button]::-moz-focus-inner {
 	cursor:pointer;
 	font-family:微软雅黑;
 	font-size:14px;
-	background:#f60;
+	background:#cc0033;
 	border-radius:3px;
 	float:right;
 	padding:2px 0 5px;
@@ -533,7 +533,7 @@ input[type=button]::-moz-focus-inner {
 	color:#666;
 }
 .head_top .collect a:hover {
-	color:#f60;
+	color:#cc0033;
 }
 .head_top .Ht-qqicon {
 	float:left;
@@ -557,7 +557,7 @@ input[type=button]::-moz-focus-inner {
 	padding-left:15px;
 }
 .gray_info a:hover,.Ht-qqicon a:hover {
-	color:#f60;
+	color:#cc0033;
 }
 .login_info .h_1yyg {
 	margin-top:0;
@@ -755,17 +755,17 @@ input[type=button]::-moz-focus-inner {
 .login_info .h_inv a,.login_info .h_inv a:visited {
 	background-position:0 -141px;
 	padding-left:17px;
-	color:#f60;
+	color:#cc0033;
 }
 .login_info .h_inv a:hover {
 	background-position:0 -159px;
-	color:#f60;
+	color:#cc0033;
 }
 .login_info .h_1yyg a,.login_info .h_1yyg a:visited,.login_info .h_news a,.login_info .h_news a:visited,.login_info .h_inv a,.login_info .h_inv a:visited,.login_info .h_help a,.h_help .h_1yyg a:visited,.login_info .h_Mobile a,.login_info .h_Mobile a:visited {
 	color:#666;
 }
 .login_info .h_1yyg a:hover,.login_info .h_news a:hover,.login_info .h_inv a:hover,.login_info .h_help a:hover,.login_info .h_Mobile a:hover {
-	color:#f60;
+	color:#cc0033;
 }
 .login_info .h_tel {
 	height:15px;
@@ -778,7 +778,7 @@ input[type=button]::-moz-focus-inner {
 .login_info .h_tel b {
 	width:138px;
 	display:block;
-	color:#f60;
+	color:#cc0033;
 	line-height:20px;
 	margin-top:-3px;
 	font-family:Arial;
@@ -924,7 +924,7 @@ input[type=button]::-moz-focus-inner {
 	color:#999;
 }
 .head_search .keySearch a:hover {
-	color:#f60;
+	color:#cc0033;
 }
 .head_nav ul.nav_list li.home-back {
 	width:86px;
@@ -974,12 +974,12 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	height:35px;
 	position:relative;
 	z-index:20;
-	background:#f60;
+	background:#cc0033;
 }
 .head_nav .nav_center {
 	width:980px;
 	height:33px;
-	background:#F60;
+	background:#cc0033;
 	margin:0 auto;
 	position:relative;
 	z-index:1;
@@ -988,7 +988,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	float:left;
 	width:780px;
 	height:35px;
-	background:#F60;
+	background:#cc0033;
 	margin:0;
 	overflow:hidden;
 }
@@ -1006,7 +1006,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	font-size:14px;
 	font-family:微软雅黑,宋体;
 	color:#fff;
-	border:1px solid #F60;
+	border:1px solid #cc0033;
 }
 .head_nav .nav_list li a:hover {
 	background:#FF4800;
@@ -1128,7 +1128,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	display:inline-block;
 }
 .nav_class li a:hover {
-	color:#f60;
+	color:#cc0033;
 }
 .mycart_list {
 	width:250px;
@@ -1192,11 +1192,11 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	background:none;
 }
 .head_nav .nav_center .mycart_list dl dd.title a:hover {
-	color:#f60;
+	color:#cc0033;
 	text-decoration:underline;
 }
 .mycart_list dl dd.title span {
-	color:#f60;
+	color:#cc0033;
 	line-height:20px;
 }
 .mycart_list dl dd.del {
@@ -1213,7 +1213,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	background:none;
 }
 .mycart_list dl dd.del a:hover {
-	color:#f60;
+	color:#cc0033;
 	text-decoration:underline;
 }
 .mycart_list p {
@@ -1222,7 +1222,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	color:#999;
 }
 .mycart_list p span {
-	color:#f60;
+	color:#cc0033;
 }
 .mycart_list h3 {
 	height:30px;
@@ -1238,7 +1238,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	cursor:pointer;
 	font-family:微软雅黑;
 	font-size:14px;
-	background:#f60;
+	background:#cc0033;
 	border-radius:3px;
 	float:right;
 	padding:3px 0 5px;
@@ -1400,7 +1400,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	color:#9F9F9F;
 }
 .footservice a:hover,.footer a:hover {
-	color:#f60;
+	color:#cc0033;
 	text-decoration:underline;
 }
 .service_date {
@@ -1415,7 +1415,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	padding:5px 0 0 15px;
 	height:43px;
 	text-align:left;
-	background:#F60;
+	background:#cc0033;
 	border-radius:2px;
 	display:block;
 	float:left;

@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,6 +10,61 @@
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/App/Css/MyCart.css"/>
 <script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/jquery.cookie.js"></script>
+</head>
+<body>
+<div class="site-topbar">
+    <div class="container">
+        <div class="topbar-nav">
+            <a href="{WEB_PATH}">{wc:fun:_cfg("web_name_two")}网</a>
+            <span class="sep">|</span><a id="btnFavorite" href="javascript:;" title="收藏{wc:fun:_cfg("web_name_two")}">收藏{wc:fun:_cfg("web_name_two")}</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/go/index/touch" target="_blank" title="手机版">手机{wc:fun:_cfg('web_name_two')}</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/help/1" target="_blank" title="网站简介">{wc:fun:_cfg('web_name_two')}简介</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/group_qq" target="_blank" title="QQ群">{wc:fun:_cfg('web_name_two')}QQ群</a>
+        </div>
+        <div class="topbar-info J_userInfo">
+		{wc:if get_user_arr()}
+			<div class="welcome">欢迎您 <b>{wc:fun:get_user_name(get_user_arr(),'username')}<span class="arrow"></span></b><span class="sep">|</span>
+				<div class="user-info-menu" style="display: none;">
+					<ul>
+						<li><a href="{WEB_PATH}/member/home" target="_blank">个人中心</a></li>
+						<li><a href="{WEB_PATH}/member/home/userrecharge">帐户充值</a></li>
+						<li><a href="{WEB_PATH}/member/user/cook_end">退出登录</a></li>
+					</ul>
+					<span class="menu-arrow"></span>
+				</div>
+			</div>
+			<a href="{WEB_PATH}/member/home/userbuylist">我的订单</a><span class="sep">|</span>
+			<a href="{WEB_PATH}/member/home" target="_blank">我的{wc:fun:_cfg("web_name_two")}账户</a>
+		{wc:else}
+			<a href="{WEB_PATH}/login">登录</a><span class="sep">|</span><a href="{WEB_PATH}/register">注册</a>
+		{wc:if:end}
+        </div>
+    </div>
+</div>
+ --><!-- .site-topbar END -->
+<!-- <div class="site-header site-mini-header container">
+    <div class="span4">
+        <div class="site-logo"><a class="logo " href="/" style="background: url({G_UPLOAD_PATH}/{wc:fun:Getlogo()}) no-repeat;;"><i class="iconfont"></i></a></div>
+    </div>
+</div> -->
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/App/Css/MyCart.css"/>
+{wc:templates "index","pagehead"}
+
+<div class="container payment-con">
+	<div class="order-info">
+                <div class="msg">
+                    <h3>您的订单已支付成功！请等待系统揭晓咯～</h3>
+                     <p class="post-date">揭晓成功后，请到商品页面查看获得者。</p>
+                </div>
+                <div class="info">
+                    <p>您现在可以<a href="{WEB_PATH}/member/home/userbuylist" class="blue">查看购买记录</a>或<a href="{WEB_PATH}" class="blue">继续购物</a></p>
+                </div>
+                <div class="icon-box">
+                    <i class="iconfont"></i>
+                </div>
+            </div>
+</div>
+
 <script>
 $(function(){
 	$("#sCart").hover(
@@ -94,56 +149,6 @@ $(function(){
 	});
 });
 </script>
-</head>
-<body>
-<div class="site-topbar">
-    <div class="container">
-        <div class="topbar-nav">
-            <a href="{WEB_PATH}">{wc:fun:_cfg("web_name_two")}网</a>
-            <span class="sep">|</span><a id="btnFavorite" href="javascript:;" title="收藏{wc:fun:_cfg("web_name_two")}">收藏{wc:fun:_cfg("web_name_two")}</a>
-            <span class="sep">|</span><a href="{WEB_PATH}/go/index/touch" target="_blank" title="手机版">手机{wc:fun:_cfg('web_name_two')}</a>
-            <span class="sep">|</span><a href="{WEB_PATH}/help/1" target="_blank" title="网站简介">{wc:fun:_cfg('web_name_two')}简介</a>
-            <span class="sep">|</span><a href="{WEB_PATH}/group_qq" target="_blank" title="QQ群">{wc:fun:_cfg('web_name_two')}QQ群</a>
-        </div>
-        <div class="topbar-info J_userInfo">
-		{wc:if get_user_arr()}
-			<div class="welcome">欢迎您 <b>{wc:fun:get_user_name(get_user_arr(),'username')}<span class="arrow"></span></b><span class="sep">|</span>
-				<div class="user-info-menu" style="display: none;">
-					<ul>
-						<li><a href="{WEB_PATH}/member/home" target="_blank">个人中心</a></li>
-						<li><a href="{WEB_PATH}/member/home/userrecharge">帐户充值</a></li>
-						<li><a href="{WEB_PATH}/member/user/cook_end">退出登录</a></li>
-					</ul>
-					<span class="menu-arrow"></span>
-				</div>
-			</div>
-			<a href="{WEB_PATH}/member/home/userbuylist">我的订单</a><span class="sep">|</span>
-			<a href="{WEB_PATH}/member/home" target="_blank">我的{wc:fun:_cfg("web_name_two")}账户</a>
-		{wc:else}
-			<a href="{WEB_PATH}/login">登录</a><span class="sep">|</span><a href="{WEB_PATH}/register">注册</a>
-		{wc:if:end}
-        </div>
-    </div>
-</div>
-<!-- .site-topbar END -->
-<div class="site-header site-mini-header container">
-    <div class="span4">
-        <div class="site-logo"><a class="logo " href="/" style="background: url({G_UPLOAD_PATH}/{wc:fun:Getlogo()}) no-repeat;;"><i class="iconfont"></i></a></div>
-    </div>
-</div>
-<div class="container payment-con">
-	<div class="order-info">
-                <div class="msg">
-                    <h3>您的订单已支付成功！请等待系统揭晓咯～</h3>
-                     <p class="post-date">揭晓成功后，请到商品页面查看获得者。</p>
-                </div>
-                <div class="info">
-                    <p>您现在可以<a href="{WEB_PATH}/member/home/userbuylist" class="blue">查看购买记录</a>或<a href="{WEB_PATH}" class="blue">继续购物</a></p>
-                </div>
-                <div class="icon-box">
-                    <i class="iconfont"></i>
-                </div>
-            </div>
-</div>
+
 <!--footer 开始-->
 {wc:templates "index","foot"}

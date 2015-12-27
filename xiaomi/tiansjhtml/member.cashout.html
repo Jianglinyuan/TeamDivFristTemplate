@@ -84,7 +84,7 @@
 
 
 <style>
-   #divSQTX span{color:#FF6600};
+   #divSQTX span{color:#cc0033; margin-right: 5px;};
 </style>
 <script>
 $(function(){
@@ -251,9 +251,9 @@ $(function(){
   $("#txtCZMoney").blur(function(){
        var CZMoney=trim($("#txtCZMoney").val());
 	   if(CZMoney==''){
-	      $("#tip7").html("<font color='#FF6600'>*&nbsp;&nbsp;请输入提现金额</font>");
+	      $("#tip7").html("<font color='#cc0033'>*&nbsp;&nbsp;请输入提现金额</font>");
 	   }else if(CZMoney>{wc:$cashouthdtotal}){
-	      $("#tip7").html("<font color='#FF6600'>*&nbsp;&nbsp;输入额超出可提现金额</font>");
+	      $("#tip7").html("<font color='#cc0033'>*&nbsp;&nbsp;输入额超出可提现金额</font>");
 		  $(this).val("");
 	   }else{
 	       $("#tip1").html("");
@@ -267,7 +267,7 @@ $(function(){
 	    var CZMoney=trim($("#txtCZMoney").val());
 
 	   if(CZMoney==''){
-		    $("#tip7").html("<font color='#FF6600'>*&nbsp;&nbsp;请输入充值金额</font>");
+		    $("#tip7").html("<font color='#cc0033'>*&nbsp;&nbsp;请输入充值金额</font>");
 			return false;
 		}else{
 		    return true;

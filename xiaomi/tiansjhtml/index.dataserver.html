@@ -3,13 +3,14 @@
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/LotteryDetail.css"/>
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/GoodsDetail.css"/>
 <div class="container breadcrumbs">
-	<a href="{WEB_PATH}">首页</a><span class="sep">/</span>
+	揭晓详情<span class="sep">/</span>
+	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
+	{wc:$brand['name']}
+	</a><span class="sep">/</span>
 	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}">
 	{wc:$category['name']}
 	</a><span class="sep">/</span>
-	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
-	{wc:$brand['name']}
-	</a><span class="sep">/</span>揭晓详情
+	<a href="{WEB_PATH}">首页</a>
 </div>
 <div class="goods-detail container">
 

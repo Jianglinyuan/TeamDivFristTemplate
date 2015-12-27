@@ -33,14 +33,13 @@
                 <li order="30"><a href="javascript:;">يىڭى<b></b></a></li>
                 <li order="20" type="price"><a href="javascript:;">باھاسى<b></b></a></li>
                 <li order="10">
-                    <a href="javascript:;">تۈرلەر<s class="arrowUp"></s></a>
-
+                    <a href="javascript:;">تۈرلەر<s class="arrowUp"></s><b></b></a>
                     <dl style="display:none;width:100%;position:fixed;top:120px;z-index:50;">
 
                         <dd type="0" class="sOrange"><a href="javascript:;">ھەممىسى</a></dd>
 						{wc:getlist sql="select * from `@#_category` where parentid=0 and `model`='1'"}
 						{wc:loop $data $categoryx}
-						<dd><a id="{wc:$categoryx['cateid']}" href="javascript:;">{wc:$categoryx['name']}</a></dd>
+						<dd><a style="text-align: center;"id="{wc:$categoryx['cateid']}" href="javascript:;">{wc:$categoryx['name']}</a></dd>
 						{wc:loop:end}
 						{wc:getlist:end}
 					</dl>
@@ -138,7 +137,7 @@ $(document).ready(function(){
 	var dl=$("#divGoodsNav dl"),
 		last=$("#divGoodsNav li:last"),
 		first=$("#divGoodsNav dd:first");
-	$("#divGoodsNav li:last a:first").click(function(){		
+	$("#divGoodsNav li:first a:first").click(function(){		
 		if(dl.css("display")=='none'){
 			dl.show();
 			last.addClass("gSort");

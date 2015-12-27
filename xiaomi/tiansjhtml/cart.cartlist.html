@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,93 +10,10 @@
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/CartList.css"/>
 <script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/jquery.cookie.js"></script>
-<script>
-$(function(){
-	$("#sCart").hover(
-		function(){
-			$("#J_miniCartList,#sCartLoading").show();
-			$("#J_miniCartList p,#J_miniCartList h3").hide();
-			$("#sCart .mycartcur").remove();
-			$("#sCartTotal2").html("");
-			$("#sCartTotalM").html("");
-			$.getJSON("{WEB_PATH}/member/cart/cartheader/="+ new Date().getTime(),function(data){
-				$("#sCart .mycartcur").remove();
-				$("#sCartLoading").before(data.li);
-				$("#sCartTotal2").html(data.num);
-				$("#sCartTotalM").html(data.sum);
-				$("#sCartLoading").hide();
-				$("#J_miniCartList p,#J_miniCartList h3").show();
-			});
-		},
-		function(){
-			$("#J_miniCartList").hide();
-		}
-	);
-	$("#sGotoCart").click(function(){
-		window.location.href="{WEB_PATH}/member/cart/cartlist";
-	});
-})
-function delheader(id){
-	var Cartlist = $.cookie('Cartlist');
-	var info = $.evalJSON(Cartlist);
-	var num=$("#sCartTotal2").html()-1;
-	var sum=$("#sCartTotalM").html();
-	info['MoenyCount'] = sum-info[id]['money']*info[id]['num'];
 
-	delete info[id];
-	//$.cookie('Cartlist','',{path:'/'});
-	$.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});
-	$("#sCartTotalM").html(info['MoenyCount']);
-	$('#sCartTotal2').html(num);
-	$('#sCartTotal').text(num);
-	$('#btnMyCart em').text(num);
-	$("#mycartcur"+id).remove();
-}
-$(function(){
-	$(".welcome").mouseover(function(){
-		$(".user-info-menu").show();
-	});
-	$(".welcome").mouseout(function(){
-		$(".user-info-menu").hide();
-	});
-	$(".h_news").mouseover(function(){
-		$(".h_news_down").show();
-	});
-	$(".h_news").mouseout(function(){
-		$(".h_news_down").hide();
-	});
-});
-$(".g-hotL-list").hover(
-　　function () {
-　　$(this).addClass("g-hotL-hover");
-　　},
-　　function () {
-　　$(this).removeClass("g-hotL-hover");
-　　}
-　　);
-$(function(){
-	$("#txtSearch").focus(function(){
-		$("#txtSearch").css({background:"#FFFFCC"});
-		var va1=$("#txtSearch").val();
-		if(va1=='搜索您需要的商品'){
-			$("#txtSearch").val("");
-		}
-	});
-	$("#txtSearch").blur(function(){
-		$("#txtSearch").css({background:"#FFF"});
-		var va2=$("#txtSearch").val();
-		if(va2==""){
-			$("#txtSearch").val('搜索您需要的商品');
-		}
-	});
-	$("#butSearch").click(function(){
-		window.location.href="{WEB_PATH}/s_tag/"+$("#txtSearch").val();
-	});
-});
-</script>
 </head>
-<body>
-<div class="site-topbar">
+<body> -->
+<!-- <div class="site-topbar">
     <div class="container">
         <div class="topbar-nav">
             <a href="{WEB_PATH}">{wc:fun:_cfg("web_name_two")}网</a>
@@ -125,12 +42,15 @@ $(function(){
         </div>
     </div>
 </div>
-<!-- .site-topbar END -->
 <div class="site-header site-mini-header container">
     <div class="span4">
         <div class="site-logo"><a class="logo " href="/" style="background: url({G_UPLOAD_PATH}/{wc:fun:Getlogo()}) no-repeat;"><i class="iconfont"></i></a></div>
     </div>
 </div>
+ --><!-- .site-topbar END -->
+
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/CartList.css"/>
+{wc:templates "index","pagehead"}
 <div class="container">
         <!--S cart-->
     <div id="shopCartBox">
@@ -273,6 +193,90 @@ numbersub.click(function(){
 			UpdataMoney(shopid,number,zindex);
 });
 
+</script>
+<script>
+$(function(){
+	$("#sCart").hover(
+		function(){
+			$("#J_miniCartList,#sCartLoading").show();
+			$("#J_miniCartList p,#J_miniCartList h3").hide();
+			$("#sCart .mycartcur").remove();
+			$("#sCartTotal2").html("");
+			$("#sCartTotalM").html("");
+			$.getJSON("{WEB_PATH}/member/cart/cartheader/="+ new Date().getTime(),function(data){
+				$("#sCart .mycartcur").remove();
+				$("#sCartLoading").before(data.li);
+				$("#sCartTotal2").html(data.num);
+				$("#sCartTotalM").html(data.sum);
+				$("#sCartLoading").hide();
+				$("#J_miniCartList p,#J_miniCartList h3").show();
+			});
+		},
+		function(){
+			$("#J_miniCartList").hide();
+		}
+	);
+	$("#sGotoCart").click(function(){
+		window.location.href="{WEB_PATH}/member/cart/cartlist";
+	});
+})
+function delheader(id){
+	var Cartlist = $.cookie('Cartlist');
+	var info = $.evalJSON(Cartlist);
+	var num=$("#sCartTotal2").html()-1;
+	var sum=$("#sCartTotalM").html();
+	info['MoenyCount'] = sum-info[id]['money']*info[id]['num'];
+
+	delete info[id];
+	//$.cookie('Cartlist','',{path:'/'});
+	$.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});
+	$("#sCartTotalM").html(info['MoenyCount']);
+	$('#sCartTotal2').html(num);
+	$('#sCartTotal').text(num);
+	$('#btnMyCart em').text(num);
+	$("#mycartcur"+id).remove();
+}
+$(function(){
+	$(".welcome").mouseover(function(){
+		$(".user-info-menu").show();
+	});
+	$(".welcome").mouseout(function(){
+		$(".user-info-menu").hide();
+	});
+	$(".h_news").mouseover(function(){
+		$(".h_news_down").show();
+	});
+	$(".h_news").mouseout(function(){
+		$(".h_news_down").hide();
+	});
+});
+$(".g-hotL-list").hover(
+　　function () {
+　　$(this).addClass("g-hotL-hover");
+　　},
+　　function () {
+　　$(this).removeClass("g-hotL-hover");
+　　}
+　　);
+$(function(){
+	$("#txtSearch").focus(function(){
+		$("#txtSearch").css({background:"#FFFFCC"});
+		var va1=$("#txtSearch").val();
+		if(va1=='搜索您需要的商品'){
+			$("#txtSearch").val("");
+		}
+	});
+	$("#txtSearch").blur(function(){
+		$("#txtSearch").css({background:"#FFF"});
+		var va2=$("#txtSearch").val();
+		if(va2==""){
+			$("#txtSearch").val('搜索您需要的商品');
+		}
+	});
+	$("#butSearch").click(function(){
+		window.location.href="{WEB_PATH}/s_tag/"+$("#txtSearch").val();
+	});
+});
 </script>
 <!--footer 开始-->
 {wc:templates "index","foot"}

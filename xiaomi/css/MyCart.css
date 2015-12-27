@@ -659,7 +659,7 @@ a.form_ReturnBut {
 	margin-left:15px;
 }
 .wait_listCon ul.buyFail li a:hover {
-	color:#f60;
+	color:#cc0033;
 }
 .fast .fast_list li.look_buy {
 	width:111px;
@@ -754,7 +754,7 @@ a.form_ReturnBut {
 }
 .payment_ts h3 {
 	font-size:14px;
-	color:#f60;
+	color:#cc0033;
 	font-weight:bold;
 }
 .payment_ts h3 s {
@@ -795,13 +795,13 @@ a.pay_tipsbut {
 	_line-height:24px;
 }
 .pay_tipsbut {
-	background:#f60;
+	background:#cc0033;
 	color:#fff;
 	font-size:12px;
 	padding:0 15px;
 	margin-right:5px;
 }
 .pay_tipsbut:hover {
-	background:#F60;
+	background:#cc0033;
 	color:#fff;
 }

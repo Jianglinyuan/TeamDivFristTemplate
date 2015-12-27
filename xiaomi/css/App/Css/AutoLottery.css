@@ -24,8 +24,8 @@ body {
 }
 .auto-nav {
 	height: 67px;
-	background: #FFD25A;
-	border-bottom: 3px solid #FF4B04;
+	background: #f78e94;
+	border-bottom: 3px solid #e14;
 	width: 1190px;
 	margin: auto;
 }
@@ -48,7 +48,7 @@ body {
 	border-radius: 5px 5px 0 0;
 }
 .auto-nav ul li.autoCur {
-	background: #FF4B04;
+	background: #e14;
 	color: #fff;
 }
 .auto-nav ul li em {
@@ -193,7 +193,7 @@ body {
 }
 .showCon .name a:hover {
 	text-decoration: underline;
-	color: #f60;
+	color: #cc0033;
 }
 .showCon .money {
 	padding: 0 0 9px 0;
@@ -307,7 +307,7 @@ body {
 .Progress-bar p span {
 	height: 4px;
 	border: 1px solid #F55700;
-	background: #F60;
+	background: #cc0033;
 	position: absolute;
 	top: -1px;
 	left: -1px;
@@ -333,7 +333,7 @@ body {
 	padding: 3px 0 5px 0;
 }
 .Progress-bar .Pro-bar-li li.P-bar01 em {
-	color: #F60;
+	color: #cc0033;
 }
 .Progress-bar .Pro-bar-li li.P-bar02 em {
 	color: #777;
@@ -355,7 +355,7 @@ body {
 	text-align: right;
 }
 .autoOld p.dsjx, .autoRule p.dsjx {
-	color: #f60;
+	color: #cc0033;
 	font-size: 22px;
 	height: 49px;
 	line-height: 49px;
@@ -365,7 +365,7 @@ body {
 }
 .autoOld .autoOldMore {
 	float: left;
-	color: #f60;
+	color: #cc0033;
 	font-size: 22px;
 	height: 49px;
 	line-height: 49px;
@@ -380,7 +380,7 @@ body {
 	color: #CDA85D;
 }
 .autoOld .autoOldMore a:hover {
-	color: #f60;
+	color: #cc0033;
 }
 .autoNotice, .autoOld {
 	margin-top: 15px;
@@ -460,7 +460,7 @@ body {
 	color: #414141;
 }
 .autoOld li.pInfo dt.title a:hover {
-	color: #f60;
+	color: #cc0033;
 }
 .autoOld li.pInfo dd {
 	float: left;
@@ -488,7 +488,7 @@ body {
 .autoOld li.uInfo {
 	width: 214px;
 	height: 53px;
-	border-bottom: #f60 2px solid;
+	border-bottom: #cc0033 2px solid;
 	background: #fffae6;
 	font-size: 12px;
 	padding: 10px 0 8px 0;

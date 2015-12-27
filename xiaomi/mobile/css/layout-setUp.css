@@ -341,8 +341,8 @@ span.tishi {
 	margin-top:12px;
 	background:#f9f9f9;
 	border:#ddd 1px solid;
-	width:315px;
 	padding-bottom:32px;
+	height: 250px;
 }
 .addAddress dl {
 	padding:16px 15px 0 0;
@@ -352,25 +352,36 @@ span.tishi {
 	text-align: right;
 }
 .addAddress table {
-	margin:29px 0 0 35px;
+	width: 100%;
+	padding-right: 15px;
 }
 .addAddress table td {
 	float:right;
 	padding:2px 0;
 	text-align: right;
 	direction: rtl;
+	width:70%;
 }
+
+.addAddress table tr td:first-child {
+	float:right;
+	padding:2px 0;
+	text-align: right;
+	direction: rtl;
+	width:28%;
+}
+
 .addAddress table td label {
-	width:60px;
-	float:left;
+	float:right;
 	color:#666;
+	padding-top: 8px;
 }
 .addAddress td select,.addAddress input.street,.addAddress input.inputTxt,.addAddress td em,.addAddress td font {
 	height:24px;
 	line-height:24px;
 }
 .addAddress td select {
-	width:66px;
+	width:30%;
 	margin-right:2px;
 	float:right;
 	color:#333;
@@ -379,11 +390,11 @@ span.tishi {
 	width:115px;
 }
 .addAddress td input.street {
-	width:193px;
+	width:89.5%;
 	float: right;
 }
 .addAddress input.street,.addAddress input.inputTxt {
-	width:147px;
+	width:89.5%;
 	border:#ddd 1px solid;
 	padding:0 3px;
 	float:right;

@@ -1,22 +1,22 @@
 {wc:templates "index","header"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
-<div class="container breadcrumbs"><a href="/">首页</a><span class="sep">/</span><span>邀请好友</span></div>
+<div class="container breadcrumbs"><span>邀请好友</span><span class="sep">/</span><a href="/">首页</a></div>
 <div class="container">
     <div class="uc-full-box">
         <div class="row">
 			{wc:templates "member","left"}
 			<div class="span16">
 				<div class="xm-line-box uc-box">
-					<div class="box-hd"><h3 class="title">账户明细</h3></div>
+					<div class="box-hd"><h3 class="title">邀请好友</h3></div>
 					<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/layout-records.css"/>
 					<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/layout-invitation.css"/>
 					<script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/ZeroClipboard.js"></script>
 					<div id="divInvited" class="success-invitation gray02"  >
-			        <p>复制链接邀请好友拿四重大礼！ <a target="_blank" href="{WEB_PATH}/single/pleasereg" class="blue">详情&gt;&gt;</a></p>
+			        <p style="text-align: right;"><a target="_blank" href="{WEB_PATH}/single/pleasereg" class="blue">&lt;&lt;详情</a> 复制链接邀请好友拿四重大礼！</p>
 			        <span><b></b><input id="txtInfo"  style="width:500px;height:20px; " disabled="disabled" value="1元就能买IPhone6哦，快去看看吧！ {WEB_PATH}/register/{wc:$uid}" onpaste="return false" type="text"></span>
-					<div class="d_clip_copy"></div>
+					<!-- <div class="d_clip_copy"></div> -->
 						<div id="d_clip_container" style="position:relative;">
-						<div id="d_clip_button" class="bluebut" style="text-align:center;margin-top:24px">复制</div>
+						<div id="d_clip_button" class="bluebut" style="text-align:center;">复制</div>
 						</div>
 					</div>
 					<div id="divInviteInfo" class="get-tips gray01" style="">成功邀请 <span class="orange">{wc:$involvedtotal}</span> 位会员注册，已有 <span class="orange">{wc:$involvednum}</span> 位会员参与{wc:fun:_cfg('web_name_two')}</div>
@@ -66,7 +66,7 @@
 
  <style type="text/css">
 #d_clip_container,.my_clip_button,.d_clip_copy{margin:0;width:65px; height:22px;   text-align:center;}
-#d_clip_container{top:-45px;left:508px;}
+#d_clip_container{float: right;}
 #fe_text{resize:none;margin-bottom:10px;}
 .my_clip_button {position:absolute; border:1px solid #999; background-color:#1ba3fa; cursor:default; font-size:9pt; }
 .my_clip_button.hover { background-color:#1ba3fa; }

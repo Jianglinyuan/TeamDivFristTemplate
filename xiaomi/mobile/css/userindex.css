@@ -16,12 +16,13 @@
 .mBanner li.mUserHead {
 	width:48px;
 	height:48px!important;
-	margin-right:8px;
+	margin-left:8px;
 	border-radius:3px;
 	border:3px solid #fff;
 	box-shadow:1px 1px 2px #330511;
 	background:#fff;
 	overflow:hidden;
+	float:right;
 }
 .mBanner li.mUserHead img {
 	width:48px;
@@ -29,12 +30,13 @@
 	border-radius:2px;
 }
 .mBanner li.mUserInfo {
-	margin-left:60px;
+	margin-right:60px;
 	position:relative;
-	top:-55px;
-	color:#fefefe;
+	color:#c9324b;
 	font-size:12px;
 	line-height:18px;
+	text-align: right;
+    direction: rtl;
 }
 .mBanner li p {
 	font-size:16px;
@@ -99,7 +101,7 @@
 	clear:both;
 }
 .mBuyRecord li.mBuyRecordL {
-	float:left;
+	float:right;
 	width:80px;
 }
 .mBuyRecord li img {
@@ -110,10 +112,11 @@
 }
 .mBuyRecord li.mBuyRecordR {
 	position:relative;
-	margin-left:90px;
+	margin-right:90px;
 	color:#666;
 	line-height:18px;
-	text-align:left;
+	text-align:right;
+	direction: rtl;
 }
 .mBuyRecord li.mBuyRecordR a {
 	color:#666;

@@ -1,1 +1,1 @@
-Base.getScript("/templates/yg/css/App/js/BottomFun.js");
+Base.getScript("/templates/xiaomi/css/App/js/BottomFun.js");

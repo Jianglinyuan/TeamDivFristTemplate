@@ -1,53 +1,3 @@
-#移动端 Bug 或其他问题汇总（12月23日更新）
-
-
-###总体
----
-* ~~在后台更改SEO相关信息~~
-
-###首页
----
-* ~~header中返回按钮位置偏移（本页是否需要返回按钮？）~~
-* 幸运晒单滚动条显示BUG
-
-###所商品页面
----
-* ~~返回按钮位置偏移~~
-* 登陆后footer显示不正确
-
-###最新揭晓页面
----
-* ~~返回按钮位置偏移~~
-
-###购物车页面
----
-* ~~暂无~~
-
-###登陆页面
----
-* ~~登陆前：忘记密码按钮位置偏移~~
-* 微信登陆及QQ登陆失效
-* 进入QQ登陆页面后无法返回首页（或登陆页面）
-* 移动端手机注册提示系统短消息配置不正确
-
-###限时揭晓页面
----
-* ~~暂无~~
-
-###幸运晒单页面
----
-* ~~整体格式混乱，需重新排版~~
-
-###新手指南页面
----
-* ~~无返回按钮~~
-* ~~底部导航栏显示不正确~~
-
-###在线充值
----
-* ~~暂无~~
- 
-
 @(Divteam)[Teamplate|Bug修复]
 ~~是branch，不是brancth，挖鼻 @linyuan~~
 #使用说明
@@ -107,7 +57,10 @@ function width($p,$t,$w){
 ####[2015.12.25]首页晒单没批准就显示Bug。
 **修改index.action.php文件的第94行代码为：**
 ```php
-		$shaidan=$this->db->GetList("select * from `@#_shaidan` a left join `@#_member` b on  a.sd_userid=b.uid where grade!='D'  order by `sd_id` DESC LIMIT 3");
+$shaidan=$this->db->GetList("select * from `@#_shaidan` a left join `@#_member` b on  a.sd_userid=b.uid where grade!='D'  order by `sd_id` DESC LIMIT 1");
+```
+```php
+$shaidan_two=$this->db->GetList("select * from `@#_shaidan` a left join `@#_member` b on  a.sd_userid=b.uid where grade!='D'  order by `sd_id` DESC LIMIT 1,6");
 ```
 
 ##未完待续-2015.12.25 By Dogod
