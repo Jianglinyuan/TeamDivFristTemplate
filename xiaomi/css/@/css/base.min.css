@@ -105,7 +105,7 @@ table {
 }
 body {
 	margin: 0;
-	font: 14px/1.5 arial, "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+	font: 13px/1.5 arial, "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
 	color: #8c8c8c;
 	background-color: #fff
 }
@@ -707,7 +707,7 @@ a:hover, a:focus {
 	min-height: 1px
 }
 .span6 {
-	width: 372px;
+	/*width: 372px;*/
 	float: left;
 	_display: inline;
 	min-height: 1px

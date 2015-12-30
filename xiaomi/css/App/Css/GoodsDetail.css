@@ -549,7 +549,7 @@ div.jqZoomBigPic img {
 .Pro_Record .Record_tit li {
 	float:left;
 	background:#F3F3F3;
-	border-right:1px solid #E3E3E3;
+	/*border-right:1px solid #E3E3E3;*/
 	border-bottom:1px solid #E3E3E3;
 	text-align:center;
 	height:32px;
@@ -596,7 +596,7 @@ div.jqZoomBigPic img {
 }
 .Pro_Record .Newest_Con p {
 	height:31px;
-	line-height:31px;
+	/*line-height:31px;*/
 	text-align:center;
 	color:#666;
 }
@@ -2108,4 +2108,7 @@ a.go_Shopping12:hover {
 	background-position: -90px 0;
 	background: url(http://res.fenqile.com/res/img/detail/detail.png?v=20141031) no-repeat;
 	display: inline-block;
+}
+.img-list .img-selected {
+	border: 1px solid #c03;
 }
