@@ -39,7 +39,7 @@
 					<div class="img-list">
 						{wc:loop $item['picarr'] $imgtu}
 						<div class="img-cell">
-							<div class="arrow" style="display:none"><i class="arrow-up1"></i><i class="arrow-up2"></i></div>
+							<div class="goods-arrow" style="display:none"><i class="arrow-up1"></i><i class="arrow-up2"></i></div>
 							<img class="zoom-tiny-image" src="{G_UPLOAD_PATH}/{wc:$imgtu}" />
 						</div>
 						{wc:loop:end}
@@ -48,14 +48,14 @@
 				<script type="text/javascript">
 					$(function() {
 						$('.img-list img:first').addClass('img-selected');
-						$('.arrow:first').addClass('show-arrow').show();
+						$('.goods-arrow:first').addClass('show-arrow').show();
 
 						$('.small-imgs').on('hover', 'img', function() {
 							$('.img-selected').removeClass('img-selected');
 							$('.show-arrow').hide().removeClass('show-arrow');
 							$('.w-gallery-fullsize img').attr('src', $(this).attr('src'));
 							$(this).addClass('img-selected');
-							$(this).prev('.arrow').addClass('show-arrow').show();
+							$(this).prev('.goods-arrow').addClass('show-arrow').show();
 						})
 					});
 				</script>
@@ -203,10 +203,10 @@
                 <div class="fr"><a href="javascript:;" class="btn btn-primary goods-add-cart-btn" id="goodsSubBarAddCartBtn"><i class="iconfont"></i>立即{wc:fun:_cfg('web_name_two')}</a></div>
                 <div class="goods-desc-menu" id="">
                     <ul class="items clearfix J_pro_related_btns">
-                       <li><a href="#divContent" class="DetailsTCur">商品详情</a></li>
-                       <li><a href="#divBuyRecord" class="">参与记录</a></li>
-                       <li><a href="#divPost" class="">商品晒单</a></li>
-                       <li><a href="#divFaq" class="">常见问题</a></li>
+                       <li><a href="#divMidNav" class="DetailsTCur">商品详情</a></li>
+                       <li><a href="#divMidNav" class="">参与记录</a></li>
+                       <li><a href="#divMidNav" class="">商品晒单</a></li>
+                       <!-- <li><a href="#divFaq" class="">常见问题</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -214,9 +214,9 @@
     </div>
 </div>
 </div>
-<div class="row goods-detail-desc">
-    <div class="span5">
 
+	<div class="row goods-detail-desc">
+	    <div class="span5">
             <div class="xm-box goods-alsobuy xm-goods-side-list">
 				<div class="box-hd">
 					<div class="title"> 商品来源 </div>
@@ -228,23 +228,24 @@
 					<div class="hhz"><span class="hhz-ico"></span>纸尿裤、奶粉等商品</div>
 				</div>
 			</div>
-			</div>
-	<div class="span15">
+		</div>
+
+		<div class="span15">
             <!-- 商品描述 -->
-            <div class="xm-box  goods-detail-box " id="divContent">
+            <!-- <div class="xm-box  goods-detail-box " id="divContent">
                <div class="box-hd">
-					<ul class="items clearfix J_pro_related_btns" style="float:right;">
+					<ul class="items clearfix J_pro_related_btns" style="float:right;"> -->
 					    <!-- <li><a href="#divFaq" class="">常见问题</a></li> -->
-					    <li><a href="#divBuyRecord" class="">参与记录</a></li>
+					    <!-- <li><a href="#divBuyRecord" class="">参与记录</a></li>
 					    <li><a href="#divPost" class="">商品晒单</a></li>
 					    <li class="current"><a href="#divContent" class="DetailsTCur">商品详情</a></li>
 					</ul>
                </div>
                <div class="box-bd" id="goodsDesc">{wc:$item['content']}</div>
-            </div>
+            </div> -->
             <!-- 商品描述 END-->
             <!--S 所有参与记录-->
-            <div class="xm-box goods-detail-standard" id="divBuyRecord">
+            <!-- <div class="xm-box goods-detail-standard" id="divBuyRecord">
                 <div class="box-hd">
                     <div class="title" style="text-align:right;margin-right: 30px;">参与记录</div>
                 </div>
@@ -267,17 +268,18 @@
 					</div>
 					{wc:loop:end}
                 </div>
-            </div>
+            </div> -->
             <!--E 所有参与记录-->
             <!--S 商品晒单 -->
-            <div class="xm-box goods-detail-comment" id="divPost">
+            <!-- <div class="xm-box goods-detail-comment" id="divPost">
                 <div class="box-hd">
                     <div class="title" style="text-align:right;margin-right: 30px;">商品晒单</div>
                 </div>
                 <div class="box-bd">
 					<iframe id="iframea" src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:878px; border:none;" frameborder="0" scrolling="no"></iframe>
                 </div>
-            </div>
+            </div> -->
+
             <!-- 常见问题 -->
 <!--             <div class="common-question" id="divFaq">
                 <div class="question-hd clearfix">
@@ -313,6 +315,37 @@
                 </div>
             </div> -->
             <!-- 常见问题 END-->
+
+
+           <div class="xm-box goods-detail-box">
+			    <div id="calculate" class="ProductTabNav">
+			        <div id="divMidNav" class="DetailsT_Tit">
+			            <div class="DetailsT_TitP">
+			                <ul>
+			                    <li class="GoosTab2 Product_DetT DetailsTCur" style="float:right;"><span class="DetailsTCur">商品详情</span></li>
+			                    <li class="GoosTab2 All_RecordT"><span class="">参与记录</span></li>
+			                    <li class="GoosTab2 Single_ConT"><span class="">商品晒单</span></li>
+			                </ul>
+			            </div>
+			        </div>
+			    </div>
+			    <div id="divCalResult" class="Product_Content">
+			        <div class="ygRecord" name="div_tab">
+			           <div id="goodsDesc">{wc:$item['content']}</div>
+			        </div>
+			        <!-- 购买记录20条 -->
+			        <div name="div_tab" id="bitem" class="AllRecordCon">
+			            <iframe id="iframea_bitem" g_src="{WEB_PATH}/go/goods/go_record_ifram/{wc:$itemid}/20" style="width:878px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
+			        </div>
+			        <!-- /购买记录20条 -->
+			        <!-- 晒单 -->
+			        <div name="div_tab" id="divPost" class="Single_Content">
+			            <iframe id="iframea_divPost" g_src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:878px; border:none;" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+			        </div>
+			        <!-- 晒单 -->
+			    </div>
+			</div>
+ 
         </div>
 </div>
 </div>
@@ -346,7 +379,7 @@ $(function(){
 	function baifenshua(aa,n){
 	n = n || 2;
 	return ( Math.round( aa * Math.pow( 10, n + 2 ) ) / Math.pow( 10, n ) ).toFixed( n ) + '%';
-}
+	}
 	var shopnum = $("#num_dig");
 	shopnum.keyup(function(){
 		if(shopnum.val()>{wc:$syrs}){
@@ -451,7 +484,9 @@ $(".btn-dake").click(function(){
 	});	
 });
 
-
+function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
 
 function Cartcookie(cook){
 	var shopid=shopinfo['shopid'];
@@ -481,6 +516,52 @@ function Cartcookie(cook){
 		window.location.href="{WEB_PATH}/member/cart/cartlist/"+new Date().getTime();//+new Date().getTime()
 	}
 }  
+
+function set_iframe_height(fid,did,height){
+	$("#"+fid).css("height",height);
+}
+
+$(function(){
+var fouli=$(".DetailsT_TitP ul li");
+var divCalResult =  $("div[name='div_tab']");
+	fouli.click(function(){
+		var index=fouli.index(this);
+		fouli.removeClass("DetailsTCur").eq(index).addClass("DetailsTCur");
+		var iframe = divCalResult.hide().eq(index).find("iframe");
+			if (typeof(iframe.attr("g_src")) != "undefined") {
+			  	 iframe.attr("src",iframe.attr("g_src"));
+				 iframe.removeAttr("g_src");
+			}
+
+		divCalResult.hide().eq(index).show();
+	});
+
+	$(".Announced_But").click(function(){
+		var next_li = $(".DetailsT_TitP ul>li");
+		var index = $(this).index()
+		next_li.eq(index).click();
+	});
+
+
+	$(window).scroll(function(){
+		if($(window).scrollTop()>=941){
+			$("#divMidNav").addClass("nav-fixed");
+		}else if($(window).scrollTop()<941){
+			$("#divMidNav").removeClass("nav-fixed");
+		}
+	});
+});
+function divOpen(){
+var height=$("#userRnoId").css("height");
+	if(height=="90px"){
+		$("#userRnoId").css("height","auto");
+	}else{
+		$("#userRnoId").css("height",90);
+	};
+}
+$(function(){
+	$("#divOpen").click(divOpen);
+});
 </script> 
 </div>
 </div>
