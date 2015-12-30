@@ -34,14 +34,6 @@
                     <!-- <img src="{G_UPLOAD_PATH}/{wc:$item['thumb']}" /> -->
                     <img src="{G_UPLOAD_PATH}/{wc:$item['picarr'][0]}" />
                 </div>
-                <!-- <i class="ico ico-arrow ico-arrow-red ico-arrow-red-up" data-pro="arrow"></i>
-                <div class="w-gallery-thumbnail">
-                    <ul class="w-gallery-thumbnail-list">
-                        <li data-pro="thumbnail">
-                            <img width="64" height="48" src="http://res.126.net/p/dbqb/one/139/139/baabbfaa4e8689488280c30336c79cb3.jpg" src-big="http://res.126.net/p/dbqb/one/139/139/17ea56aace676cd89a8833be5a88eb30.jpg" onerror="this.src='http://mimg.127.net/p/yy/lib/img/products/detail_s.jpg'" />
-                        </li>
-                    </ul>
-                </div> -->
 
 				<div class="small-imgs">
 					<div class="img-list">
@@ -71,7 +63,7 @@
             </div>
         </div>
 
-		<div class="span6 goods-info-rightbox">
+		<div class="goods-info-midbox">
            <dl class="goods-info-box ">
             <dt class="goods-info-head">
                 <dl>
@@ -241,13 +233,12 @@
             <!-- 商品描述 -->
             <div class="xm-box  goods-detail-box " id="divContent">
                <div class="box-hd">
-                    <ul class="items clearfix J_pro_related_btns" style="float:right;">
-                       <li><a href="#divFaq" class="">常见问题</a></li>
-                                              <li><a href="#divBuyRecord" class="">参与记录</a></li>
-                                                                     <li><a href="#divPost" class="">商品晒单</a></li>
-                       <li class="current"><a href="#divContent" class="DetailsTCur">商品详情</a></li>
-
-                    </ul>
+					<ul class="items clearfix J_pro_related_btns" style="float:right;">
+					    <!-- <li><a href="#divFaq" class="">常见问题</a></li> -->
+					    <li><a href="#divBuyRecord" class="">参与记录</a></li>
+					    <li><a href="#divPost" class="">商品晒单</a></li>
+					    <li class="current"><a href="#divContent" class="DetailsTCur">商品详情</a></li>
+					</ul>
                </div>
                <div class="box-bd" id="goodsDesc">{wc:$item['content']}</div>
             </div>
@@ -288,7 +279,7 @@
                 </div>
             </div>
             <!-- 常见问题 -->
-            <div class="common-question" id="divFaq">
+<!--             <div class="common-question" id="divFaq">
                 <div class="question-hd clearfix">
                     <div class="title_a">常见问题</div>
                 </div>
@@ -320,7 +311,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <!-- 常见问题 END-->
         </div>
 </div>

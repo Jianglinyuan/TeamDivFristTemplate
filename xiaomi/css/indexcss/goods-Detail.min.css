@@ -148,7 +148,7 @@ em {
 	border-color: #c3c3c3
 }
 dl.goods-info-box {
-	border-left: 1px solid #ededed;
+	/*border-left: 1px solid #ededed;*/
 	width: 430px;
 	padding-left: 25px
 }
@@ -1872,4 +1872,12 @@ img.zoom-tiny-image {
 .w-gallery-fullsize img {
     width: 410px;
     height: 410px;
+}
+.goods-info-midbox {
+	float: left;
+    _display: inline;
+    min-height: 1px;
+}
+.span14.J_mi_goodsPic_block {
+	border-right: 1px solid #ededed;
 }
