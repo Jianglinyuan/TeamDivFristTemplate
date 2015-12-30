@@ -31,7 +31,8 @@
         <div class="g-main-l m-detail-show">
             <div class="w-gallery" id="pro-view-3">
                 <div class="w-gallery-fullsize" data-pro="fullsize">
-                    <img width="410" height="380" src="{G_UPLOAD_PATH}/{wc:$item['thumb']}" />
+                    <!-- <img src="{G_UPLOAD_PATH}/{wc:$item['thumb']}" /> -->
+                    <img src="{G_UPLOAD_PATH}/{wc:$item['picarr'][0]}" />
                 </div>
                 <!-- <i class="ico ico-arrow ico-arrow-red ico-arrow-red-up" data-pro="arrow"></i>
                 <div class="w-gallery-thumbnail">
@@ -45,16 +46,24 @@
 				<div class="small-imgs">
 					<div class="img-list">
 						{wc:loop $item['picarr'] $imgtu}
-						<img class="zoom-tiny-image" src="{G_UPLOAD_PATH}/{wc:$imgtu}" />
+						<div class="img-cell">
+							<div class="arrow" style="display:none"><i class="arrow-up1"></i><i class="arrow-up2"></i></div>
+							<img class="zoom-tiny-image" src="{G_UPLOAD_PATH}/{wc:$imgtu}" />
+						</div>
 						{wc:loop:end}
 					</div>
 				</div>
 				<script type="text/javascript">
 					$(function() {
+						$('.img-list img:first').addClass('img-selected');
+						$('.arrow:first').addClass('show-arrow').show();
+
 						$('.small-imgs').on('hover', 'img', function() {
 							$('.img-selected').removeClass('img-selected');
+							$('.show-arrow').hide().removeClass('show-arrow');
 							$('.w-gallery-fullsize img').attr('src', $(this).attr('src'));
 							$(this).addClass('img-selected');
+							$(this).prev('.arrow').addClass('show-arrow').show();
 						})
 					});
 				</script>
@@ -112,18 +121,16 @@
 					</ul>
 					{wc:else}
 					<div class="My_RecordReg">
-						<b class="gray01">看不到？是不是没登录或是没注册？ 登录后看看</b>
+						<b class="gray01">看不到？注册或登录后看看</b>
 						<a href="{WEB_PATH}/member/user/register" class="My_Regbut">注册</a>
 						<a href="{WEB_PATH}/member/user/login" class="My_Signbut">登录</a>
 					</div>
 					{wc:if:end}
 				</div>
-								<div class="Newest_Con hide" style="display: block;">
+					<div class="Newest_Con hide" style="display: block;">
 					<ul style="text-align:right;">
 						{wc:loop $us $user}
-						<li>				
-
-人次
+						<li>人次
 						<em class="Fb gray01">{wc:$user['gonumber']}</em>了
 												{wc:if $user['ip']}
 						({wc:fun:get_ip($user['id'],'ipcity')}) 

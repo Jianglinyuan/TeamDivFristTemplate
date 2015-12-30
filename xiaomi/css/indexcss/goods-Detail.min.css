@@ -1851,7 +1851,15 @@ dl.goods-info-box .goods-info-foot a:hover {
 img.zoom-tiny-image {
     width: 74px;
     border: 1px solid transparent;
+    position: absolute;
+    bottom: 0;
+}
+.img-cell {
     margin: 3px;
+    width: 76px;
+    display: inline-block;
+    height: 98px;
+    position: relative;
 }
 .img-list {
 	width: 100%;
