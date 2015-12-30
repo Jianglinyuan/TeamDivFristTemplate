@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>{wc:$webname}</title>
+    <title>بىر سوم</title>
     <meta content="app-id=518966501" name="apple-itunes-app" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
     <meta content="yes" name="apple-mobile-web-app-capable" />
@@ -100,7 +100,7 @@
                 {wc:loop $go_record $gorecord}
 
                 <li>
-                <p><span class="fr" style="direction:rtl; font-size:12px; color:#fff; margin-left:5px;">恭喜{wc:fun:get_user_name($gorecord)}获得：</span>{wc:$gorecord['shopname']}</p></li>
+                <p><span class="fr" style="direction:rtl; font-size:12px; color:#fff; margin-left:5px;">{wc:fun:get_user_name($gorecord)} نى تەبرىكلەيمىز !!!</span>{wc:$gorecord['shopname']}</p></li>
 
                 {wc:loop:end}
             </ul>
@@ -153,7 +153,7 @@
             {wc:php:end}         
             {wc:if time() > $shop['xsjx_time'] } 
 			
-			<li class="" txt="{wc:$shop['time_H']}点" codeid="{wc:$shop['id']}" uweb="{wc:fun:idjia($shop['q_uid'])}">
+			<li class="" txt="{wc:$shop['time_H']}" codeid="{wc:$shop['id']}" uweb="{wc:fun:idjia($shop['q_uid'])}">
 				<article class="clearfix m-xs-ct m-xs-End">
 					<div class="u-xs-pic" style="float:right;">
 						<div class="z-xs-pic">
@@ -172,7 +172,6 @@
 							</span></p>
 							<ul class="Pro-bar-li">
 								<li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>قاتناشقانلار</li>
-								<li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>جەمئىي</li>
 								<li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>قالدۇق</li>
 							</ul>
 						</div>
@@ -180,7 +179,7 @@
 				</article>
 			</li>
 			 {wc:else}
-			<li class="" txt="{wc:$shop['time_H']}点" codeid="{wc:$shop['id']}" >
+			<li class="" txt="{wc:$shop['time_H']}" codeid="{wc:$shop['id']}" >
 			  <article class="clearfix m-xs-ct ">
 			      <div class="u-xs-pic" style="float:right;">
 				       <div class="z-xs-pic">
@@ -196,13 +195,12 @@
                   {wc:php:end}
 
 				  <div class="u-xs-con" style="margin-left: 0px; margin-right: 107px; text-align: right;">
-				      <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}" class="gray6 z-tt">(第{wc:$shop['qishu']}期){wc:$shop['title']}</a>
+				      <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}" class="gray6 z-tt">({wc:$shop['qishu']}چى سان){wc:$shop['title']}</a>
 				      <ins class="z-promo"><em class="arial">￥{wc:$shop['money']}</em></ins>
 
 				      <div class="Progress-bar"><p class="u-progress" title="已完成{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%"><span class="pgbar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"><span class="pging"></span></span></p>
 					    <ul class="Pro-bar-li">
 					     <li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>قاتناشقانلار</li>
-						 <li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>جەمئىي</li>
 						 <li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>قالدۇق</li>
 						</ul>
 					   </div>
@@ -245,7 +243,6 @@
 								</p>
 								<ul class="Pro-bar-li">
 									<li class="P-bar01"><em>{wc:$renqi['canyurenshu']}</em>قاتناشقانلار</li>
-									<li class="P-bar02"><em>{wc:$renqi['zongrenshu']}</em>جەمئىي</li>
 									<li class="P-bar03"><em>{wc:$renqi['zongrenshu']-$renqi['canyurenshu']}</em>قالدۇق</li>
 								</ul>
 							</div>

@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>收货地址 - {wc:$webname}触屏版</title>
+    <title>تاپشۇرۋېلىش ئادىرسى</title>
     <meta content="app-id=518966501" name="apple-itunes-app" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
@@ -43,7 +43,7 @@ $(function(){
             "tel":/^(([0\+]\d{2,3}-)?(0\d{2,3})-)(\d{7,8})(-(\d{3,}))?$/,
         },
     });
-    demo.tipmsg.w["tel"]="请正确输入电话号码(区号、号码必填，用“-”隔开)";
+    demo.tipmsg.w["tel"]="تېلفون نۇمۇرىڭىزنى كىرگۈزۈڭ";
     demo.addRule([
     {
         ele:"#txt_ship_tel",
@@ -92,7 +92,7 @@ function update(id){
     $("#div_consignee2").show();
 };
 function dell(id){
-    if (confirm("您确认要删除该条信息吗？")){
+    if (confirm("بۇ ئۇچۇرنى راستلا ئۆچۈرەمسىز؟")){
         window.location.href="{WEB_PATH}/mobile/home/deladdress/"+id;
     }
 }
@@ -102,12 +102,12 @@ function dell(id){
 <div class="R-content">
     {wc:if $count==0}
     <div  class="addAddress">
-        <dl>添加收货地址</dl>
+        <dl>مال تاپشۇرۋېلىش ئادىرسىنى كىرگۈزۈڭ</dl>
         <form class="registerform" method="post" action="{wc:WEB_PATH}/mobile/home/useraddress">
         <table border="0" cellpadding="0" cellspacing="0">
         <tbody>
         <tr>
-            <td><label>所在地区：</label></td>
+            <td><label>:تۈرۈشلۇق جاي</label></td>
             <script>var s=["province","city","county"];</script>
             <td>
                 <select style="color:#fff;background-color:#c00"  datatype="*" nullmsg="请选择有效的省市区" class="select" id="province" runat="server" name="sheng"></select>
@@ -119,7 +119,7 @@ function dell(id){
             <td><div class="Validform_checktip"></div></td>
         </tr>
         <tr>
-            <td><label>街道地址：</label></td>
+            <td><label>:يول ئادىرسى</label></td>
             <td>
                 <input datatype="*1-100" nullmsg="请填街道地址！" errormsg="范围在100之间！" name="jiedao" type="text" class="street"  />
                 <em id="ship_address_valid_msg" class="red">*</em>
@@ -128,7 +128,7 @@ function dell(id){
         </tr>
 
         <tr>
-            <td><label>邮政编码：</label></td>
+            <td><label>:پوچتا نۇمۇرى</label></td>
             <td>
                 <input datatype="p" ignore="ignore" errormsg="邮政编码错误！" name="youbian" type="text" maxlength="6" id="txt_ship_zip" class="inputTxt" value="">
 
@@ -136,7 +136,7 @@ function dell(id){
             <td><div class="Validform_checktip"></div></td>
         </tr>
         <tr>
-            <td><label>收货人：</label></td>
+            <td><label>:تاپشۇرۋالغۇچى</label></td>
             <td>
                 <input datatype="*" nullmsg="收货人不能为空" name="shouhuoren" type="text" maxlength="20" id="txt_ship_name" class="inputTxt" value="">
                 <em class="red" id="ship_name_valid_msg">*</em>
@@ -144,7 +144,7 @@ function dell(id){
             <td><div class="Validform_checktip"></div></td>
         </tr>
          <tr>
-            <td><label>支付宝：</label></td>
+            <td><label>:Zhifubao</label></td>
             <td>
                 <input datatype="*" nullmsg="支付宝不能为空" name="zhifubao" type="text" maxlength="20" id="txt_ship_name" class="inputTxt" value="">
                 <em class="red" id="ship_name_valid_msg">*</em>
@@ -152,7 +152,7 @@ function dell(id){
             <td><div class="Validform_checktip"></div></td>
         </tr>
         <tr>
-            <td><label>手机号码：</label></td>
+            <td><label>:تېلفۇن نۇمۇرى</label></td>
             <td>
                 <input datatype="m" nullmsg="手机号不能为空" errormsg="手机号不对" name="mobile" type="text" id="txt_ship_mb" value="" class="inputTxt" maxlength="11">
                 <em id="ship_mb_valid_msg" class="red">*</em>
@@ -176,7 +176,7 @@ function dell(id){
         {wc:loop $member_dizhi $v}
         <ul class="liBg">
             <li id="dizh_{wc:$v['id']}" class="pad">
-            <label>详细地址：</label>{wc:$v['sheng']},{wc:$v['shi']},{wc:$v['xian']},{wc:$v['jiedao']}</li>
+            <label>:تەپسىلى ئادىرسى</label>{wc:$v['sheng']},{wc:$v['shi']},{wc:$v['xian']},{wc:$v['jiedao']}</li>
 
 
             <li><label>邮政编码：</label><span id="yb_{wc:$v['id']}">{wc:$v['youbian']}</span></li>

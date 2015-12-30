@@ -202,7 +202,7 @@
 	padding-top:5px;
 }
 .Result_LConduct dd {
-	width:286px;
+	width:456px;
 	height:61px;
 	float:left;
 	border:1px solid #E3E3E3;
@@ -225,8 +225,8 @@
 	color:#fff;
 }
 .Result_Progress-bar {
-	width:198px;
-	margin:12px 5px 0 5px;
+	width:358px;
+	margin:20px 5px 0 10px;
 	height:44px;
 	float:left;
 	display:inline;
@@ -559,7 +559,7 @@
 	height:22px;
 }
 .MaCenter dl dd {
-	float:left;
+	float:right;
 	width:368px;
 	margin-left: 10px;
 }

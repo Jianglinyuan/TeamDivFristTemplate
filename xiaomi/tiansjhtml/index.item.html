@@ -11,20 +11,15 @@
 <div class="goods-detail container">
     <div class="goods-detail-info row clearfix">
 		<div id="divPeriodList" class="show_Period" style=>{wc:if count($itemlist)>32}<div class="period_Open"><a class="gray" href="javascript:void(0);">展开<i></i></a></div>{wc:if:end}{wc:$loopqishu}</div>
-        <div class="span14 J_mi_goodsPic_block">
+        <div class="span10 J_mi_goodsPic_block">
             <div class="goods-pic-box">
                 <div class="goods-big-pic">
 					<span href="{G_UPLOAD_PATH}/{wc:$item['thumb']}" class = 'J_goodsBigPic' id='zoom1' rel="adjustX:10, adjustY:-2">
 					<img width="80px" height="80px" src="{G_UPLOAD_PATH}/{wc:$item['thumb']}" /></span>
                 </div>
-				<div class="goods-small-pic clearfix">
-                    <ul id="goodsPicList">
-                          <li><img src="/templates/xiaomi/images/ii.jpg"></li>
-					</ul>
-                </div>
             </div>
         </div>
-		<div class="span6 goods-info-rightbox">
+		<div class="span10 goods-info-rightbox">
            <dl class="goods-info-box ">
             <dt class="goods-info-head">
                 <dl>

@@ -132,7 +132,7 @@ em {
 	cursor: pointer
 }
 .goods-info-rightbox {
-	width: 422px
+	width: 540px
 }
 .goods-small-pic li {
 	display: inline-block;
@@ -147,7 +147,7 @@ em {
 }
 dl.goods-info-box {
 	border-left: 1px solid #ededed;
-	width: 370px;
+	width: 540px;
 	padding-left: 25px
 }
 dl.goods-info-box .goods-info-head {
