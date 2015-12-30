@@ -63,4 +63,4 @@ $shaidan=$this->db->GetList("select * from `@#_shaidan` a left join `@#_member` 
 $shaidan_two=$this->db->GetList("select * from `@#_shaidan` a left join `@#_member` b on  a.sd_userid=b.uid where grade!='D'  order by `sd_id` DESC LIMIT 1,6");
 ```
 
-##未完待续-2015.12.25 By Dogod
+##未完待续-2015.12.27 By Dogod

@@ -1181,11 +1181,11 @@ a:hover, a:focus {
 	width: 104px;
 	height: 20px;
 	padding: 9px 10px;
-	border: 1px solid #ffdb3d;
+	border: 1px solid #cc0033;
 	line-height: 20px;
 	text-align: center;
-	color: #333;
-	background: #ffdb3d
+	color:white;
+	background: #cc0033
 }
 .site-header .header-info .mini-cart .iconfont {
 	margin-right: 3px;
@@ -3415,14 +3415,14 @@ a.u-service-off i {
 .g-nav a {
 	font-size: 16px;
 }
-.m-menu {
+/*.m-menu {
 	width: 240px;
 	height: 40px;
 	float: left;
 	background: #2af;
 	position: relative;
 	z-index: 60;
-}
+}*/
 .m-menu-all {
 	width: 240px;
 	position: absolute;
