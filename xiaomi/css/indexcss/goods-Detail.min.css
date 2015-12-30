@@ -93,7 +93,9 @@ em {
 }
 .goods-detail-info {
 	background: #fff;
-	margin-bottom: 31px
+	margin-bottom: 31px;
+    margin: 0 auto;
+    position: relative;
 }
 .goods-detail-info ul, .goods-detail-info li, .goods-detail-info p, .goods-detail-info dl, .goods-detail-info dd, .goods-detail-info h1, .goods-detail-info h2, .goods-detail-info h3, .goods-detail-info h4, .goods-detail-info h5, .goods-detail-info h6 {
 	padding: 0;
@@ -132,7 +134,7 @@ em {
 	cursor: pointer
 }
 .goods-info-rightbox {
-	width: 422px
+	/*width: 422px*/
 }
 .goods-small-pic li {
 	display: inline-block;
@@ -146,8 +148,8 @@ em {
 	border-color: #c3c3c3
 }
 dl.goods-info-box {
-	border-left: 1px solid #ededed;
-	width: 370px;
+	/*border-left: 1px solid #ededed;*/
+	width: 430px;
 	padding-left: 25px
 }
 dl.goods-info-box .goods-info-head {
@@ -470,7 +472,11 @@ dl.goods-info-box .goods-info-head-intro .item .icon-dot {
 }
 dl.goods-info-box .goods-info-foot {
 	border: 1px solid #dfdfdf;
-	height: 298px;
+	height: 179px;
+	width: 429px;
+}
+ul#ulRecordTab li {
+    width: 143px;
 }
 dl.goods-info-box .goods-info-foot a {
 	color: #333
@@ -516,48 +522,67 @@ dl.goods-info-box .goods-info-foot a:hover {
 .goods-detail-desc .goods-recent {
 	border: none
 }
-.goods-detail-desc .goods-recent .box-hd .title {
-	margin: 0px;
-	line-height: 55px
+.box-hd {
+    padding-left: 22px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #3c3c3c;
+    background-color: #f2f2f2;
+    font-family: "Microsoft Yahei";
 }
-.goods-detail-desc .goods-recent .box-bd {
-	padding-bottom: 35px
+.box-bd {
+    padding: 0 10px 9px;
+    height: 510px;
 }
-.goods-detail-desc .goods-recent .box-bd dl {
+.m-detail-period-main-wrap {
+    height: 489px;
+    background-color: #fff;
+    padding: 10px;
+}
+/*.box-bd dl {
 	float: left;
 	width: 290px;
 	margin-top: 10px;
 }
-.goods-detail-desc .goods-recent .box-bd dt {
+.box-bd dt {
 	float: right;
 	width: 80px;
 	margin-right: 7px;
 	font-size: 0;
 }
-.goods-detail-desc .goods-recent .box-bd dd {
+.box-bd dd {
 	float: left;
 	width: 200px;
 }
-.goods-detail-desc .goods-recent .box-bd dd p {
+.box-bd dd p {
 	height: 20px;
 	white-space: nowrap;
 	width: 280px;
 	overflow: hidden;
-}
-.goods-detail-desc .goods-recent .box-bd ul li {
+}*/
+/*.box-bd ul li {
 	float: left;
 	_display: inline;
 	width: 79px;
 	height: 79px;
 	margin-right: 10px;
 	margin-top: 10px
+}*/
+.box-bd dl dt .avatar {
+	margin: 20px auto;
+    padding: 4px;
+    width: 90px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
 }
-.goods-detail-desc .goods-recent .box-bd ul li img {
-	width: 78px;
-	height: 78px;
-	border: 1px solid #fff
+.box-bd dl dd p.title {
+    margin-bottom: 5px;
+    width: 100%;
+    line-height: 30px;
+    border-bottom: 1px dashed #ddd;
 }
-.goods-detail-desc .goods-recent .box-bd ul li:hover img {
+.box-bd ul li:hover img {
 	border: 1px solid #dfdfdf
 }
 .goods-detail-desc .xm-goods-side-list {
@@ -1791,4 +1816,68 @@ dl.goods-info-box .goods-info-foot a:hover {
 	background-position: -377px 0;
 	width: 64px;
 	float: right;
+}
+.g-main-l {
+	float: left;
+	width: 430px;
+}
+.m-detail-show {
+	position: relative;
+}
+.m-detail-show .ico-label {
+	z-index: 1
+}
+.w-gallery {
+    width: 430px;
+    /*height: 478px;*/
+    position: relative;
+    overflow: hidden;
+}
+.w-gallery-fullsize {
+    width: 410px;
+    height: 410px;
+    padding: 9px;
+    border: 1px solid #dddddd;
+    overflow: hidden;
+}
+.g-side {
+    height: 560px;
+    border: 1px solid #dddddd;
+    border-top: 0;
+    background-color: #f2f2f2;
+    width: 268px;
+    float: right;
+}
+img.zoom-tiny-image {
+    width: 74px;
+    border: 1px solid transparent;
+    position: absolute;
+    bottom: 0;
+}
+.img-cell {
+    margin: 3px;
+    width: 76px;
+    display: inline-block;
+    height: 98px;
+    position: relative;
+}
+.img-list {
+	width: 100%;
+}
+.small-imgs {
+    width: 430px;
+    /*height: 82px;*/
+    overflow: hidden;
+}
+.w-gallery-fullsize img {
+    width: 410px;
+    height: 410px;
+}
+.goods-info-midbox {
+	float: left;
+    _display: inline;
+    min-height: 1px;
+}
+.span14.J_mi_goodsPic_block {
+	border-right: 1px solid #ededed;
 }
