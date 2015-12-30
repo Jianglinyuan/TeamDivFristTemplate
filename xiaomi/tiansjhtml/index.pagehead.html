@@ -9,6 +9,8 @@
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/@/css/base.min.css"/>
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/@/css/index.min.css" />
 <link href="{G_TEMPLATES_CSS}/@/css/index.css" rel="stylesheet" type="text/css" />
+        <link href="{G_TEMPLATES_CSS}/163/css/common.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/163/css/slippry.css">
 <script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/ad.js"></script>
@@ -20,7 +22,6 @@
 </head>
 <body>
 
-<!--div id="indexheadpopup" style="background-color: #fae897;height: 27px;line-height: 27px;border-bottom: 1px solid #d3d6db;text-align: center;color: red;" class="mod_top_notice"><p><span>公告：</span>为打造更具公平、透明的{wc:fun:_cfg('web_name_two')}平台，{wc:fun:_cfg('web_name_two')}特成立各地QQ交流群（可在官网查找本地群），欢迎广大{wc:fun:_cfg('web_name_two')}网友加入。另外，{wc:fun:_cfg('web_name_two')}正在招募各地群主加盟，也可自建群，具体待遇和要求请咨询客服QQ{wc:fun:_cfg("qq")}</p></div-->
 
 <div class="site-topbar">
     <div class="container">
@@ -129,6 +130,7 @@
         $two_cate_list = $cmodel->GetList("select cateid,parentid,name from `@#_category` where `model` = '1' and `parentid` = '0' order by `order` DESC");
     {wc:php:end}
 
+<!-- 
     <div class="header-nav clearfix">
         <div id="J_categoryContainer" class="nav-category">
             <a class="btn-category-list" href="{WEB_PATH}/goods_list">全部商品分类</a>
@@ -178,9 +180,62 @@
             {wc:loop:end}
             </ul>
         </div>
-    </div>
+    </div> -->
     
 </div>
+<div class="m-nav">
+            <div class="g-wrap f-clear">
+                <div class="m-catlog">
+                    <div class="m-catlog-hd" style="padding-left:30px;cursor:pointer">
+                        <h2>商品分类<i class="ico ico-arrow ico-arrow-white ico-arrow-white-down" style="display: none;"></i></h2>
+                    </div>
+                    <div class="m-catlog-wrap">
+                        <div class="m-catlog-bd">
+                            <ul class="m-catlog-list">
+                                <li><a href="http://1.163.com/list.html">全部商品</a></li>
+                                <li><a href="http://1.163.com/list/1-0-1-1.html">手机平板</a></li>
+                                <li><a href="http://1.163.com/list/2-0-1-1.html">电脑办公</a></li>
+                                <li><a href="http://1.163.com/list/3-0-1-1.html">数码影音</a></li>
+                                <li><a href="http://1.163.com/list/4-0-1-1.html">女性时尚</a></li>
+                                <li><a href="http://1.163.com/list/5-0-1-1.html">美食天地</a></li>
+                                <li><a href="http://1.163.com/list/6-0-1-1.html">潮流新品</a></li>
+                                <li><a href="http://1.163.com/list/7-0-1-1.html">网易周边</a></li>
+                                <li class="last"><a href="http://1.163.com/list/8-0-1-1.html">其他商品</a></li>
+                            </ul>
+                        </div>
+                        <div class="m-catlog-ft"></div>
+                    </div>
+                </div>
+                <div class="m-menu" style="
+    height: 41px;
+">
+                    <ul class="m-menu-list" style="
+    height: 41px;
+    margin-right: 240px;
+    float: right;
+">
+                        <li class="m-menu-list-item  selected">
+                            <var>|</var>
+                            <a class="m-menu-list-item-link" href="http://1.163.com/">首页</a>
+                        </li>
+                        <li class="m-menu-list-item  ">
+                            <a class="m-menu-list-item-link" href="http://1.163.com/ten/index.html">十元专区</a>
+                        </li>
+                        <li class="m-menu-list-item  ">
+                            <var>|</var>
+                            <a class="m-menu-list-item-link" href="http://1.163.com/results.html">最新揭晓</a>
+                        </li>
+                        <li class="m-menu-list-item  ">
+                            <var>|</var>
+                            <a class="m-menu-list-item-link" href="http://1.163.com/share.html">晒单分享</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-nav-promot">
+                </div>
+            </div>
+        </div>
+    </div>
 <!-- .site-header END -->
 
  <script language="javascript" type="text/javascript">
