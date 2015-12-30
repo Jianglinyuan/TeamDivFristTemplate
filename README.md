@@ -62,5 +62,14 @@ $shaidan=$this->db->GetList("select * from `@#_shaidan` a left join `@#_member` 
 ```php
 $shaidan_two=$this->db->GetList("select * from `@#_shaidan` a left join `@#_member` b on  a.sd_userid=b.uid where grade!='D'  order by `sd_id` DESC LIMIT 1,6");
 ```
+##[2015.12.31]163模板修改说明##
+**在common/global.fun.php文件合适位置增加下面函数：**
+```php
+function qubiaoqian($string){
+	return strip_tags($string);
+}
+```
+**index.action.php文件修改过多，我还是拿出来给大家替换一下最好**
 
-##未完待续-2015.12.27 By Dogod
+
+##未完待续-2015.12.21 By Dogod
