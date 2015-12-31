@@ -1227,7 +1227,7 @@ div.jqZoomBigPic img {
 	width:920px;
 	margin:0 auto;
 	zoom:1;
-	background:url(../images/AllRecord_1.png) 0 repeat-y;
+	background:url(../images/AllRecord_1.png) 605px repeat-y;
 }
 .AllReclist {
 	padding-top:6px;
@@ -1242,7 +1242,7 @@ div.jqZoomBigPic img {
 	color:#999;
 	display:inline-block;
 	position:absolute;
-	left:124px;
+	right:124px;
 	top:-18px;
 }
 .AllRecTime b {
@@ -1252,7 +1252,7 @@ div.jqZoomBigPic img {
 	overflow:hidden;
 	display:inline-block;
 	position:absolute;
-	left:265px;
+	right:265px;
 	top:0;
 }
 .All_lineH {
@@ -1260,11 +1260,12 @@ div.jqZoomBigPic img {
 }
 .AllRecW .AllRecL {
 	width:292px;
-	text-align:right;
+	text-align:left;
 	position:relative;
-	padding-right:22px;
+	padding-left:22px;
 	margin-top:7px;
 	color:#9A9A9A;
+	left: 302px;
 }
 .AllRecW .AllRecL i {
 	width:16px;
@@ -1273,7 +1274,7 @@ div.jqZoomBigPic img {
 	background-position:-98px 0;
 	display:inline-block;
 	position:absolute;
-	right:0;
+	left:0;
 	top:7px;
 }
 .AllRecW .AllRecR {
@@ -1303,6 +1304,7 @@ div.jqZoomBigPic img {
 	color:#9A9A9A;
 	padding-left:4px;
 	padding-top:7px;
+	text-align: right;
 }
 .AllRecW .AllRecR .AllRecR_T a.blue {
 	margin-right:5px;

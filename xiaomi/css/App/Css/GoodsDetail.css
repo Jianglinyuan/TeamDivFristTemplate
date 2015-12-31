@@ -574,7 +574,7 @@ div.jqZoomBigPic img {
 	border-bottom:none;
 }
 .Pro_Record .Newest_Con {
-	/*margin:3px 10px 0 10px;*/
+	margin:3px 10px 0 10px;
 }
 .Pro_Record .Newest_Con li {
 	height:28px;
@@ -605,9 +605,9 @@ div.jqZoomBigPic img {
 	font-size:14px;
 	color:#999;
 	font-family:微软雅黑,宋体;
-	text-align:left;
+	text-align:right;
 	height:auto;
-	text-indent:2em;
+	/*text-indent:2em;*/
 }
 .Pro_Record .Newest_Con .MsgIntro1 {
 	padding:0 15px;
@@ -1063,7 +1063,7 @@ div.jqZoomBigPic img {
 	color:#666;
 }
 .ProductTabNav {
-	width:880px;
+	/*width:880px;*/
 	margin:10px auto 0;
 	height:35px;
 }
@@ -1087,8 +1087,8 @@ div.jqZoomBigPic img {
 .DetailsT_TitP {
 	border:1px solid #E4E4E4;
 	height:35px;
-	width:878px;
-	background:#fff;
+	width: 1188px;
+	background:#f2f2f2;
 	position:relative;
 	z-index:1;
 }
@@ -1190,7 +1190,7 @@ div.jqZoomBigPic img {
 	margin:0 5px;
 }
 .Product_Content,.AllRecord_Content,.Single_Content {
-	width:878px;
+	width: 1188px;
 	overflow:hidden;
 	border:1px solid #E4E4E4;
 	border-top:none;
@@ -1243,7 +1243,7 @@ div.jqZoomBigPic img {
 	color:#999;
 	display:inline-block;
 	position:absolute;
-	left:124px;
+	right:124px;
 	top:-18px;
 }
 .AllRecTime b {
@@ -1253,7 +1253,7 @@ div.jqZoomBigPic img {
 	overflow:hidden;
 	display:inline-block;
 	position:absolute;
-	left:265px;
+	right:265px;
 	top:0;
 }
 .All_lineH {
@@ -1261,9 +1261,9 @@ div.jqZoomBigPic img {
 }
 .AllRecW .AllRecL {
 	width:292px;
-	text-align:right;
+	text-align:left;
 	position:relative;
-	padding-right:22px;
+	padding-left:22px;
 	margin-top:7px;
 	color:#9A9A9A;
 }
@@ -1274,7 +1274,7 @@ div.jqZoomBigPic img {
 	background-position:-98px 0;
 	display:inline-block;
 	position:absolute;
-	right:0;
+	left:0;
 	top:7px;
 }
 .AllRecW .AllRecR {
@@ -1302,7 +1302,7 @@ div.jqZoomBigPic img {
 .AllRecW .AllRecR .AllRecR_T {
 	height:25px;
 	color:#9A9A9A;
-	padding-left:4px;
+	padding-right:4px;
 	padding-top:7px;
 }
 .AllRecW .AllRecR .AllRecR_T a.blue {
@@ -2145,4 +2145,7 @@ i.arrow-up2 {
 }
 div.img-cell div.show-arrow {
 	display: block;
+}
+.fr {
+	float: right;
 }

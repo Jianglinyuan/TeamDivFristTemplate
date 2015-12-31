@@ -1,7 +1,6 @@
 {wc:templates "index","header"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/goods-Detail.min.css" />
-<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/@/css/cloud-zoom.css"/>
-<script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/cloud-zoom.min.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/jquery.dotdotdot.min.js"></script>
 <div class="container breadcrumbs">
 	商品详情<span class="sep">/</span>
 	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
@@ -56,7 +55,9 @@
 							$('.w-gallery-fullsize img').attr('src', $(this).attr('src'));
 							$(this).addClass('img-selected');
 							$(this).prev('.goods-arrow').addClass('show-arrow').show();
-						})
+						});
+
+						$('#ellipsis-wraper').dotdotdot();
 					});
 				</script>
 
@@ -67,9 +68,7 @@
            <dl class="goods-info-box ">
             <dt class="goods-info-head">
                 <dl>
-                    <dt id="goodsName" style="
-    text-align: right;
-">{wc:$item['title']}</dt>
+                    <dt id="goodsName"><div id="ellipsis-wraper">{wc:$item['title']}</div></dt>
                     <dd class="goods-info-head-userfaq" style=''>
                         <ul>
                             <li class="mail" style="text-align:right;">{wc:$item['title2']}<i>简介</i></li>
@@ -203,9 +202,9 @@
                 <div class="fr"><a href="javascript:;" class="btn btn-primary goods-add-cart-btn" id="goodsSubBarAddCartBtn"><i class="iconfont"></i>立即{wc:fun:_cfg('web_name_two')}</a></div>
                 <div class="goods-desc-menu" id="">
                     <ul class="items clearfix J_pro_related_btns">
-                       <li><a href="#divMidNav" class="DetailsTCur">商品详情</a></li>
-                       <li><a href="#divMidNav" class="">参与记录</a></li>
-                       <li><a href="#divMidNav" class="">商品晒单</a></li>
+                       <li><a href="" data-goto="Product_DetT">商品详情</a></li>
+                       <li><a href="" data-goto="All_RecordT">参与记录</a></li>
+                       <li><a href="" data-goto="Single_ConT">商品晒单</a></li>
                        <!-- <li><a href="#divFaq" class="">常见问题</a></li> -->
                     </ul>
                 </div>
@@ -216,7 +215,7 @@
 </div>
 
 	<div class="row goods-detail-desc">
-	    <div class="span5">
+<!-- 	    <div class="span5">
             <div class="xm-box goods-alsobuy xm-goods-side-list">
 				<div class="box-hd">
 					<div class="title"> 商品来源 </div>
@@ -229,7 +228,7 @@
 				</div>
 			</div>
 		</div>
-
+ -->
 		<div class="span15">
             <!-- 商品描述 -->
             <!-- <div class="xm-box  goods-detail-box " id="divContent">
@@ -276,7 +275,7 @@
                     <div class="title" style="text-align:right;margin-right: 30px;">商品晒单</div>
                 </div>
                 <div class="box-bd">
-					<iframe id="iframea" src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:878px; border:none;" frameborder="0" scrolling="no"></iframe>
+					<iframe id="iframea" src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:1188px; border:none;" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div> -->
 
@@ -335,12 +334,12 @@
 			        </div>
 			        <!-- 购买记录20条 -->
 			        <div name="div_tab" id="bitem" class="AllRecordCon">
-			            <iframe id="iframea_bitem" g_src="{WEB_PATH}/go/goods/go_record_ifram/{wc:$itemid}/20" style="width:878px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
+			            <iframe id="iframea_bitem" g_src="{WEB_PATH}/go/goods/go_record_ifram/{wc:$itemid}/20" style="width:1188px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
 			        </div>
 			        <!-- /购买记录20条 -->
 			        <!-- 晒单 -->
 			        <div name="div_tab" id="divPost" class="Single_Content">
-			            <iframe id="iframea_divPost" g_src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:878px; border:none;" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+			            <iframe id="iframea_divPost" g_src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:1188px; border:none;" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
 			        </div>
 			        <!-- 晒单 -->
 			    </div>
@@ -543,13 +542,13 @@ var divCalResult =  $("div[name='div_tab']");
 	});
 
 
-	$(window).scroll(function(){
-		if($(window).scrollTop()>=941){
-			$("#divMidNav").addClass("nav-fixed");
-		}else if($(window).scrollTop()<941){
-			$("#divMidNav").removeClass("nav-fixed");
-		}
-	});
+	// $(window).scroll(function(){
+	// 	if($(window).scrollTop()>=941){
+	// 		$("#divMidNav").addClass("nav-fixed");
+	// 	}else if($(window).scrollTop()<941){
+	// 		$("#divMidNav").removeClass("nav-fixed");
+	// 	}
+	// });
 });
 function divOpen(){
 var height=$("#userRnoId").css("height");
@@ -562,6 +561,15 @@ var height=$("#userRnoId").css("height");
 $(function(){
 	$("#divOpen").click(divOpen);
 });
+
+$(function() {
+	$('.goods-sub-bar .goods-desc-menu .items').on('click', 'a', function(event) {
+		event.preventDefault();
+		var dest = this.dataset["goto"];
+		$('.'+dest).click();
+		$('html body').animate({scrollTop:850}, 300);
+	})
+})
 </script> 
 </div>
 </div>

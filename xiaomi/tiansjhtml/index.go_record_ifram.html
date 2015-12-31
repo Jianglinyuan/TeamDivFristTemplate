@@ -12,12 +12,14 @@
 .AllRecW .AllRecR .AllRecR_T span.user_see_code{
 	color: #fff;
 }
-.AllRecR{ border:1px solid #f8f8f8; background:#f8f8f8; padding:5px 0px; position:relative;}
+.AllRecR{ border:1px solid #f8f8f8; background:#f8f8f8; padding:5px 0px; position:relative;left: -314px;
+top: -32px;}
+span.AllRecR_Over a { float: right; }
 .user_codes_box{ display:none }
-.user_codes { color:#aaa; padding-left:35px;word-break:break-all;overflow:hidden;}
+.user_codes { color:#aaa; padding-right:35px;word-break:break-all;overflow:hidden;text-align: right;}
 .user_codes i{ width:75px; display:inline-block; text-align:center; height:20px;}
 .user_codes_js { width:100%; line-height:40px; background:#f8f8f8;text-align:center; color:#999; cursor:pointer;}
-.user_see_code{border-radius:5px; position:absolute; right:10px; width:75px; text-align:center; height:25px; line-height:25px; background:#cc0033; cursor:pointer; display:none;}
+.user_see_code{border-radius:5px; position:absolute; left:10px; width:75px; text-align:center; height:25px; line-height:25px; background:#cc0033; cursor:pointer; display:none;}
 </style>
 </head>
 <body style="width:878px; min-height:35px;  padding-top:20px;background-color:#fff">
@@ -35,8 +37,8 @@
             }
            
         {wc:php:end}        
-		<div class="AllRecW AllReclist"><div class="AllRecL fl">{wc:fun:microt($user['time'])}<i></i></div>
-			<div class="AllRecR fl">
+		<div class="AllRecW AllReclist"><div class="AllRecL"><i></i>{wc:fun:microt($user['time'])}</div>
+			<div class="AllRecR fr">
 			<p class="AllRecR_T">            	
 				<span name="spCodeInfo" class="AllRecR_Over">
 				<a class="Headpic" href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank"><img src="{G_UPLOAD_PATH}/{wc:$user['uphoto']}" border="0" width="20" height="20"></a>
@@ -64,7 +66,7 @@
 		{wc:php:start} } {wc:php:end}
 		<!--/获取当前会商品的购买记录-->
         {wc:if $total>$num}
-			<div class="pagesx" style=" padding-right:30px;">{wc:page:two}</div>
+			<div class="pagesx" style=" padding-left:30px;">{wc:page:two}</div>
 		{wc:if:end}
         
 <script>
@@ -93,11 +95,11 @@ $(function(){
 		if($(this).attr("see")=='off'){
 			$(this).attr("see","on");
 			$(this).text("关闭购买码");
-			$(this).parents().next().show();
+			$(this).parent().next().show();
 		}else{
 			$(this).text("显示购买码")
 			$(this).attr("see","off");
-			$(this).parents().next().hide();
+			$(this).parent().next().hide();
 		}
 	});
 	

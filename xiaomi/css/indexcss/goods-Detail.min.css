@@ -472,8 +472,9 @@ dl.goods-info-box .goods-info-head-intro .item .icon-dot {
 }
 dl.goods-info-box .goods-info-foot {
 	border: 1px solid #dfdfdf;
-	height: 179px;
+	height: 154px;
 	width: 429px;
+	overflow: hidden;
 }
 ul#ulRecordTab li {
     width: 143px;
@@ -523,7 +524,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	border: none
 }
 .box-hd {
-    padding-left: 22px;
+    padding-right: 22px;
     height: 40px;
     font-size: 16px;
     line-height: 40px;
@@ -1850,7 +1851,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 img.zoom-tiny-image {
     width: 74px;
-    border: 1px solid transparent;
+    border: 1px solid #dddddd;
     position: absolute;
     bottom: 0;
 }
@@ -1880,4 +1881,11 @@ img.zoom-tiny-image {
 }
 .span14.J_mi_goodsPic_block {
 	border-right: 1px solid #ededed;
+}
+div#ellipsis-wraper {
+	height: 50px;
+	direction: rtl;
+}
+.m-detail-period {
+    text-align: right;
 }
