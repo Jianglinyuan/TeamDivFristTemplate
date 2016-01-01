@@ -52,7 +52,8 @@
 							$(this).prev('.goods-arrow').addClass('show-arrow').show();
 						});
 
-						$('#ellipsis-wraper').dotdotdot();
+						$('.goods-info-head-userfaq .mail').dotdotdot();
+						$('#goodsName').dotdotdot();
 					});
 				</script>
 
@@ -62,11 +63,9 @@
            <dl class="goods-info-box ">
             <dt class="goods-info-head">
                 <dl>
-                    <dt id="goodsName"><div id="ellipsis-wraper">{wc:$item['title']}</div></dt>
+                    <dt id="goodsName">{wc:$item['title']}</dt>
                     <dd class="goods-info-head-userfaq" style=''>
-                        <ul>
-                            <li class="mail" style="text-align:right;">{wc:$item['title2']}<i>简介</i></li>
-                        </ul>
+                    	<ul><li class="mail"><i>简介</i>{wc:$item['title2']}</li></ul>
                     </dd>
 					<dd class="goods-info-head-colors clearfix">
                         {wc:if ($q_showtime=='Y')}
@@ -351,12 +350,12 @@ $(function(){
 		$("#ulRecordTab li").removeClass("Record_titCur").eq(add).addClass("Record_titCur");
 		$(".Pro_Record .hide").hide().eq(add).show();
 	});
-	$("#btnUserBuyMore").click(function(){
-		fouli.removeClass("DetailsTCur").eq(1).addClass("DetailsTCur");
-		$("#divContent .hide").hide().eq(1).show();
-		$("html,body").animate({scrollTop:1200},1500);
-		$("#divProductNav").addClass("nav-fixed");
-	});
+	// $("#btnUserBuyMore").click(function(){
+	// 	fouli.removeClass("DetailsTCur").eq(1).addClass("DetailsTCur");
+	// 	$("#divContent .hide").hide().eq(1).show();
+	// 	$("html,body").animate({scrollTop:1200},1500);
+	// 	$("#divProductNav").addClass("nav-fixed");
+	// });
 	$(window).scroll(function(){
 		if($(window).scrollTop()>=1200){
 			$("#divProductNav").addClass("nav-fixed");
@@ -449,9 +448,9 @@ $(function(){
 $(function(){
 $(".btn-dake").click(function(){ 
 	//添加到购物车动画
-	var src=$("#zoom1 img").attr('src');  
+	var src=$(".w-gallery-fullsize img").attr('src');  
 	var $shadow = $('<img id="cart_dh" style="display: none; border:1px solid #aaa; z-index: 99999;" width="400" height="400" src="'+src+'" />').prependTo("body"); 
-	var $img = $(".goods-big-pic").first("img");
+	var $img = $(".w-gallery-fullsize img").first();
 	$shadow.css({ 
 	   'width' : $img.css('width'), 
 	   'height': $img.css('height'),
@@ -472,7 +471,7 @@ $(".btn-dake").click(function(){
 		Cartcookie(false);
 	});		
 });
-	$(".btn-primary").click(function(){	
+	$(".w-button-main").click(function(){	
 		Cartcookie(true);
 	});	
 });
@@ -562,7 +561,11 @@ $(function() {
 		var dest = this.dataset["goto"];
 		$('.'+dest).click();
 		$('html body').animate({scrollTop:850}, 300);
-	})
+	});
+
+	$('a#btnUserBuyMore').click(function() {
+		$('a[data-goto="All_RecordT"]').click();
+	});
 })
 </script> 
 </div>

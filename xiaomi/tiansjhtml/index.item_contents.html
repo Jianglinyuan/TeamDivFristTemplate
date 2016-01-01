@@ -88,16 +88,17 @@
 			<dd class="goods-info-head-intro">
 				<p class="Pro_Detsingle" style="font-size:14px;text-align:right;">最低<b style="color:#999;">{wc:$item['yunjiage']}</b>元{wc:fun:_cfg('web_name_two')}</p>
 				<div id="divNumber" class="Pro_number" style="text-align:right;">
-					人次{wc:fun:_cfg('web_name_two')}
+					<div class="bubble"><span>多参与1人次，获奖机会翻倍！</span><i class="arrow-right"></i></div>
+					人次
 					<a href="javascript:;" class="num_del num_ban" id="shopsub">-</a>
 					<input style="border:1px solid #CFCFCF" type="text" value="1" maxlength="7" onkeyup="value=value.replace(/\D/g,'')" class="num_dig" id="num_dig"/>
-					<a href="javascript:;" class="num_add" id="shopadd">+</a> 我要购买
+					<a href="javascript:;" class="num_add" id="shopadd">+</a>购买
 				</div>
 				<div style="display:none;" id="hqid">{wc:$item['id']}</div>
 			</dd>
 			<dd class="goods-info-head-cart" id="goodsDetailBtnBox">
 				<div id="divBuy" class="Det_button" style="text-align:right;">
-					<a href="javascript:;" class="btn btn-dake goods-collect-btn"><i class="iconfont"></i></a>
-					<a href="javascript:;" class="btn btn-primary goods-add-cart-btn"><i class="iconfont "></i> 立即{wc:fun:_cfg('web_name_two')}</a>
+					<a href="javascript:;" class="w-button w-button-xl btn-dake">加入购物车 <i class="iconfont "></i></a>
+					<a href="javascript:;" class="w-button w-button-xl w-button-main">立即{wc:fun:_cfg('web_name_two')}</a>
 				</div>
             </dd>

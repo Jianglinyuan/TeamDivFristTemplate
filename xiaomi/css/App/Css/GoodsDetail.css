@@ -597,6 +597,8 @@ div.jqZoomBigPic img {
 .Pro_Record .Newest_Con p {
 	height:31px;
 	color:#666;
+	text-align: center;
+	margin-top: 10px;
 }
 .Pro_Record .Newest_Con .MsgIntro {
 	padding:15px 15px 0 15px;
@@ -848,7 +850,10 @@ div.jqZoomBigPic img {
 	color:#fff;
 }
 .Announced_Frame {
-	background:url(/templates/xiaomi/images/Announced_2.png);
+	/*background:url(/templates/xiaomi/images/Announced_2.png);*/
+	background: url(/templates/xiaomi/images/Announcebg.png);
+	height: 500px;
+	border-radius: 10px;
 }
 .Announced_FrameT,.Announced_FrameTin {
 	width:428px;
@@ -856,7 +861,8 @@ div.jqZoomBigPic img {
 	overflow:hidden;
 	text-align:center;
 	background:url(/templates/xiaomi/images/Announced_1.gif) no-repeat;
-	font-size:25px;
+    font-size: 45px;
+    margin: 30px auto;
 	color:#fff;
 	line-height:50px;
 	font-family:微软雅黑,宋体;
@@ -865,7 +871,7 @@ div.jqZoomBigPic img {
 	background:url(/templates/xiaomi/images/Announced_7.gif) no-repeat;
 }
 .Announced_FrameCode,.Announced_FrameGet,.Announced_FrameBm {
-	background:url(/templates/xiaomi/images/Announced_1.png) no-repeat;
+	background:url(/templates/xiaomi/images/Announced_1.png) repeat-x;
 }
 .Announced_FrameCode {
 	width:428px;
@@ -956,7 +962,7 @@ div.jqZoomBigPic img {
 	margin:13px auto 0 10px;
 }
 .Announced_FrameBut {
-	margin:0 auto;
+	margin:30px auto;
 }
 .Announced_But {
 	padding:5px 21px 6px 22px;
@@ -971,8 +977,11 @@ div.jqZoomBigPic img {
 	font-family:宋体;
 
 }
+a.Announced_But:focus {
+	color: #fc0;
+}
 .Announced_FrameBm {
-	width:428px;
+	width:720px;
 	height:15px;
 	background-position:0 -182px;
 }
@@ -1732,11 +1741,11 @@ a.go_Shopping12:hover {
 	border-radius:3px;
 }
 .Progress-bar p span {
-	height:12px;
-	/*border:1px solid #d43;*/
-	background: -webkit-gradient(linear, 100% 0, 0% 0, from(#ffca3d), to(#ff9e37));
-    background: -ms-linear-gradient(right, #ffca3d 0, #ff9e37 100%);
-    background: -o-linear-gradient(0deg, #ffca3d, #ff9e37);
+    height: 10px;
+    border-bottom: 2px solid #f87e10;	
+    background: -webkit-gradient(linear, 100% 0, 0% 0, from(#fe7), to(#ff9e37));
+    background: -ms-linear-gradient(right, #fe7 0, #ff9e37 100%);
+    background: -o-linear-gradient(0deg, #fe7, #ff9e37);
 	position:absolute;
 	top:-1px;
 	right:-1px;
@@ -2146,4 +2155,10 @@ div.img-cell div.show-arrow {
 }
 .fr {
 	float: right;
+}
+div#goodsDesc p {
+	text-align: center;
+}
+div#goodsDesc p img {
+	max-width: 1000px;
 }

@@ -177,7 +177,7 @@
 	height:398px;
 }
 .Result_LConduct {
-	height:63px;
+	height:73px;
 	clear:both;
 	position:relative;
 }
@@ -187,7 +187,7 @@
 }
 .Result_LConduct dt {
 	width:79px;
-	height:61px;
+	height:71px;
 	text-align:center;
 	border:1px solid #FD8;
 	background:#FFFBBB;
@@ -202,8 +202,8 @@
 	padding-top:5px;
 }
 .Result_LConduct dd {
-	width:456px;
-	height:61px;
+	width:347px;
+	height:71px;
 	float:left;
 	border:1px solid #E3E3E3;
 }
@@ -225,7 +225,7 @@
 	color:#fff;
 }
 .Result_Progress-bar {
-	width:358px;
+	width:240px;
 	margin:20px 5px 0 10px;
 	height:44px;
 	float:left;
@@ -541,10 +541,10 @@
 	border-bottom:1px solid #EDEDED;
 	line-height:30px;
 	color:#999;
-	text-indent:1em;
+	margin-right: 20px;
 }
 .MaCenterH {
-	height:90px;
+	height:180px;
 	overflow:hidden;
 	padding-top:1px;
 }
@@ -1214,7 +1214,8 @@
 	background-position:-106px -1px;
 }
 .ygRecord {
-	width:880px;
+	width:1000px;
+	margin: 0 auto;
 	overflow:hidden;
 	text-align: right;
 }
@@ -1253,7 +1254,7 @@
 .ygRecord div.RecordOnehundred {
 	border-top:0 solid #cc0033;
 	position:relative;
-	width:880px;
+	width: 1000px;
 	overflow:hidden;
 }
 .ygRecord div.RecordOnehundred h4 {
@@ -1262,7 +1263,7 @@
 	height:29px;
 	line-height:28px;
 	text-align:center;
-	width:900px;
+	width: 1000px;
 }
 .ygRecord div.RecordOnehundred div.FloatBox {
 	background:url("/templates/xiaomi/images/resultArrow01.png") repeat-y scroll 95px 0 transparent;
@@ -1279,16 +1280,18 @@
 	background:#e68;
 	color:#FFF;
 	line-height:20px;
-	padding:10px 0 10px 120px;
-	width:780px;
+	padding:0 120px 10px 0;
+	width:100%;
 	text-align:left;
-	position:relative;
+	/*position:relative;*/
 	display:inline-block;
 }
 .ygRecord .RecordOnehundred .ResultBox h2 {
 	position:absolute;
-	top:15px;
-	right:30px;
+	top:23px;
+	right:25px;
+	/*text-align: right;*/
+	margin: 10px 20px;
 	font-family:微软雅黑,宋体;
 	font-size:18px;
 }
@@ -1304,7 +1307,7 @@
 	overflow:hidden;
 	padding-right:150px;
 	line-height:31px;
-	background:url(/templates/xiaomi/images/Announced_3.png) 650px 8px no-repeat;
+	background:url(/templates/xiaomi/images/Announced_3.png) 860px 8px no-repeat;
 	text-align: right;
 }
 .ygRecord .RecordOnehundred .ResultBox span.rus {
@@ -2084,3 +2087,6 @@ color: #bab9b9;
 font-size: 32px;
 }
 .m-detail-main-rule .box:hover .more-box,.m-detail-main-rule .box-hover .more-box{display:block;}
+.Announced_Content {
+    padding-top: 100px;
+}

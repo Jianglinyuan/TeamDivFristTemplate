@@ -105,8 +105,8 @@ em {
 	list-style: none
 }
 .goods-pic-box, .goods-info-box {
-	min-height: 550px;
-	_height: 550px
+	min-height: 500px;
+	_height: 500px
 }
 .goods-pic-box {
 	position: relative;
@@ -135,6 +135,7 @@ em {
 }
 .goods-info-rightbox {
 	/*width: 422px*/
+	float: right;
 }
 .goods-small-pic li {
 	display: inline-block;
@@ -167,12 +168,15 @@ dl.goods-info-box .goods-info-head dl .goods-info-head-userfaq {
 }
 dl.goods-info-box .goods-info-head dl .goods-info-head-userfaq ul li {
 	font-size: 12px;
-	text-align: left;
+	/*text-align: left;*/
 	margin-bottom: 5px;
 	margin-top: 5px
 }
 dl.goods-info-box .goods-info-head dl .goods-info-head-userfaq ul .mail {
-	color: #d6313a
+	color: #d6313a;
+	height: 36px;
+	direction: rtl;
+	text-align: right;
 }
 dl.goods-info-box .goods-info-head dl .goods-info-head-userfaq ul .mail i {
 	padding-left: 5px;
@@ -183,7 +187,7 @@ dl.goods-info-box .goods-info-head dl .goods-info-head-userfaq ul .mail i {
 	font-style: normal;
 	color: #fff;
 	background-color: #d6313a;
-	margin-right: 5px
+	margin-left: 5px
 }
 dl.goods-info-box .goods-info-head dl .goods-info-head-userfaq ul .faq {
 	color: #000;
@@ -396,9 +400,6 @@ dl.goods-info-box .goods-info-head dl .goods-info-head-cart .goods-collect-btn {
 	border: none;
 	color: #fff
 }
-dl.goods-info-box .goods-info-head dl .goods-info-head-cart .goods-collect-btn.btn-dake {
-	background-color: #6d6d6d
-}
 dl.goods-info-box .goods-info-head dl .goods-info-head-cart .goodsDetailInfo {
 	position: absolute;
 	height: 40px;
@@ -536,7 +537,7 @@ dl.goods-info-box .goods-info-foot a:hover {
     height: 510px;
 }
 .m-detail-period-main-wrap {
-    height: 489px;
+    height: 495px;
     background-color: #fff;
     padding: 10px;
 }
@@ -1841,7 +1842,7 @@ dl.goods-info-box .goods-info-foot a:hover {
     overflow: hidden;
 }
 .g-side {
-    height: 560px;
+    height: 566px;
     border: 1px solid #dddddd;
     border-top: 0;
     background-color: #f2f2f2;
@@ -1850,6 +1851,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 img.zoom-tiny-image {
     width: 74px;
+    height: 74px;
     border: 1px solid #dddddd;
     position: absolute;
     bottom: 0;
@@ -1881,10 +1883,79 @@ img.zoom-tiny-image {
 .span14.J_mi_goodsPic_block {
 	border-right: 1px solid #ededed;
 }
-div#ellipsis-wraper {
+#goodsName {
 	height: 50px;
 	direction: rtl;
 }
 .m-detail-period {
     text-align: right;
+}
+
+
+
+.w-button {
+    white-space: nowrap;
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    background: #3399FE;
+    border: solid #1B7DE0;
+    border-width: 0 1px 2px 0;
+    padding: 0 15px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none!important;
+    font-family: "Microsoft Yahei",simhei;
+    font-weight: bold;
+    outline: none;
+}
+.w-button-main {
+    background: #db3652;
+    border-color: #b6243d;
+    margin-left: 10px;
+}
+.w-button-main:hover {
+	background-color: #e14a63;
+}
+.w-button-xl {
+	width: 132px;
+    padding: 0 35px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+.w-button:hover, .w-button:focus {
+	color: #fff;
+}
+.btn-dake:hover {
+	background-color: #4ea5fb;
+	border: solid #1B7DE0;
+    border-width: 0 1px 2px 0;
+}
+.bubble {
+	display: inline-block;
+	margin-bottom: -12px;
+}
+.bubble span {
+	background-color: #f4f4f4;
+	padding: 6px;
+	border-radius: 4px
+}
+.bubble span, .bubble i {
+	float: left;
+}
+i.arrow-right {
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 7px solid #f4f4f4;
 }

@@ -2,6 +2,7 @@
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/goods-Detail.min.css" />
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/LotteryDetail.css"/>
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/GoodsDetail.css"/>
+<script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/jquery.dotdotdot.min.js"></script>
 <div class="container breadcrumbs">
 	揭晓详情<span class="sep">/</span>
 	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
@@ -19,6 +20,7 @@
         <div class="span10 J_mi_goodsPic_block">
                 <div class="goods-big-pic">
 					<div class="Announced_Frame">
+				<div class="Announced_Content">
 				<div class="Announced_FrameT">揭晓结果</div>
 				<div class="Announced_FrameCode">
 					<ul class="Announced_FrameCodeMal">
@@ -42,24 +44,20 @@
 					<a href="javascript:;" class="Announced_But">看看有谁参与了</a>
 					<a href="javascript:;" class="Announced_But">看看有谁晒单</a>
 				</div>
+				</div>
 
-				<div class="Announced_FrameBm"></div>
+				<!-- <div class="Announced_FrameBm"></div> -->
 			</div>
                 </div>
-				<div style="margin:0 auto;width:616px;"><img src="/templates/xiaomi/images/ii.jpg"></div>
+				<!-- <div style="margin:0 auto;width:616px;"><img src="/templates/xiaomi/images/ii.jpg"></div> -->
         </div>
 		<div class="span6 goods-info-rightbox">
            <dl class="goods-info-box ">
             <dt class="goods-info-head">
                 <dl>
-                    <dt id="goodsName" style='
-    text-align: right;
-'>{wc:$item['title']}</dt>
+                    <dt id="goodsName">{wc:$item['title']}</dt>
                     <dd class="goods-info-head-userfaq" >
-                        <ul>
-                            <li class="mail" style='
-    text-align: right;'>{wc:$item['title2']}<i>简介</i></li>
-                        </ul>
+                    	<ul><li class="mail"><i>简介</i>{wc:$item['title2']}</li></ul>
                     </dd>
 					<dd class="goods-info-head-colors clearfix"></dd>
                         {wc:if $itemzx}
@@ -133,41 +131,7 @@
 </div>
 </div>
 <div class="row goods-detail-desc">
-    <div class="span5">
-	{wc:if $sid_code}
-            <div class="xm-box goods-recent">
-				<div class="box-hd">
-					<div class="title"> 上期获得者 </div>
-				</div>
-			{wc:php:start}
-				$sid_code['q_user'] = unserialize($sid_code['q_user']);
-			{wc:php:end}
-			{wc:if $sid_code['q_showtime']=='N'}
-						<dl>
-						<dt style="float: left;margin-right: 5px;"><a rel="nofollow" href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank"><img width="80" height="80" alt="" src="{G_UPLOAD_PATH}/{wc:$sid_code['q_user']['img']}" style="margin-top:5px;border-radius:50%;"></a></dt>
-						<dd class="gray02">
-							<p>恭喜 <a href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank" class="blue">{wc:fun:get_user_name($sid_code['q_uid'])}</a> 获得了本商品</p>
-							{wc:if $sid_go_record['ip']}
-							{wc:if:end}
-							<p>揭晓时间：{wc:fun:microt($sid_code['q_end_time'])}</p>
-							<p>幸运{wc:fun:_cfg('web_name_two')}码：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
-						</dd>
-					</dl>
-						{wc:if:end}
-				</div>
-			{wc:if:end}
-            <div class="xm-box goods-alsobuy xm-goods-side-list">
-				<div class="box-hd">
-					<div class="title"> 商品来源 </div>
-				</div>
-				<div class="box-bd">
-					<div class="jd"><span class="jd-ico"></span>手机数码、家电等商品</div>
-					<div class="jm"><span class="jm-ico"></span>护肤彩妆、香水等商品</div>
-					<div class="wb"><span class="wb-ico"></span>中国最大的名表商城</div>
-					<div class="hhz"><span class="hhz-ico"></span>纸尿裤、奶粉等商品</div>
-				</div>
-			</div>
-        </div>
+    
 	<div class="span15">
             <!-- 商品描述 -->
             <div class="xm-box goods-detail-box">
@@ -268,7 +232,7 @@
        <!--补丁3.1.6_b.0.2-->
 		<!-- 晒单 -->
 		<div name="div_tab" id="divPost" class="Single_Content">
-			<iframe id="iframea_divPost" g_src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:978px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
+			<iframe id="iframea_divPost" g_src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:1188px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
 		</div>
 		<!-- 晒单 -->
         <!--补丁3.1.6_b.0.2-->
@@ -278,7 +242,7 @@
 
             
             <!-- 常见问题 -->
-            <div class="common-question" id="divFaq">
+            <!-- <div class="common-question" id="divFaq">
                 <div class="question-hd clearfix">
                     <div class="title_a">常见问题</div>
                 </div>
@@ -302,7 +266,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <!-- 常见问题 END-->
         </div>
 </div>
@@ -327,6 +291,7 @@ var divCalResult =  $("div[name='div_tab']");
 			}
 
 		divCalResult.hide().eq(index).show();
+		$('html body').animate({scrollTop:840},300);
 	});
 <!--补丁3.1.6_b.0.3-->
 
@@ -348,14 +313,17 @@ var divCalResult =  $("div[name='div_tab']");
 });
 function divOpen(){
 var height=$("#userRnoId").css("height");
-	if(height=="90px"){
+	if(height=="180px"){
 		$("#userRnoId").css("height","auto");
 	}else{
-		$("#userRnoId").css("height",90);
+		$("#userRnoId").css("height",180);
 	};
 }
 $(function(){
 	$("#divOpen").click(divOpen);
+
+	$('.goods-info-head-userfaq .mail').dotdotdot();
+	$('#goodsName').dotdotdot();
 });
 </script>
 {wc:templates "index","foot"}

@@ -250,16 +250,16 @@ a:hover, a:focus {
 	border-color: #ffc700;
 	background-color: #ffc700
 }
-.btn-dake {
+/*.btn-dake {
 	background-color: #6d6d6d;
 	border-color: #6d6d6d;
 	color: #fff
-}
-.btn-dake:hover, .btn-dake:focus, .btn-dake.active, .btn-dake:active {
+}*/
+/*.btn-dake:hover, .btn-dake:focus, .btn-dake.active, .btn-dake:active {
 	color: #fff;
 	border-color: #333;
 	background-color: #333
-}
+}*/
 .btn-dakeLight {
 	background-color: #f3f3f3;
 	border-color: #f3f3f3;
@@ -683,7 +683,7 @@ a:hover, a:focus {
 	min-height: 1px
 }
 .span10 {
-	width: 620px;
+	width: 720px;
 	float: left;
 	_display: inline;
 	min-height: 1px
