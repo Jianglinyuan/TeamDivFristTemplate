@@ -192,15 +192,14 @@
                     <div class="m-catlog-wrap">
                         <div class="m-catlog-bd">
                             <ul class="m-catlog-list">
-                                <li><a href="http://1.163.com/list.html">全部商品</a></li>
-                                <li><a href="http://1.163.com/list/1-0-1-1.html">手机平板</a></li>
-                                <li><a href="http://1.163.com/list/2-0-1-1.html">电脑办公</a></li>
-                                <li><a href="http://1.163.com/list/3-0-1-1.html">数码影音</a></li>
-                                <li><a href="http://1.163.com/list/4-0-1-1.html">女性时尚</a></li>
-                                <li><a href="http://1.163.com/list/5-0-1-1.html">美食天地</a></li>
-                                <li><a href="http://1.163.com/list/6-0-1-1.html">潮流新品</a></li>
-                                <li><a href="http://1.163.com/list/7-0-1-1.html">网易周边</a></li>
-                                <li class="last"><a href="http://1.163.com/list/8-0-1-1.html">其他商品</a></li>
+                                 {wc:loop $two_cate_list $key $catelist}
+                        {wc:php:start}
+                            $cate2 = $cmodel->GetList("select cateid,parentid,name from `@#_category` where `parentid` = '$catelist[cateid]' order by `order` DESC");
+                            $i=$key+1;
+                        {wc:php:end}
+                                <li><a href="{WEB_PATH}/goods_list/{wc:$catelist['cateid']}_0_0">{wc:$catelist['name']}</a></li>
+                                 {wc:loop:end}
+
                             </ul>
                         </div>
                         <div class="m-catlog-ft"></div>
@@ -216,19 +215,24 @@
 ">
                         <li class="m-menu-list-item  selected">
                             <var>|</var>
-                            <a class="m-menu-list-item-link" href="http://1.163.com/">首页</a>
+                            <a class="m-menu-list-item-link" href="{G_WEB_PATH}">首页</a>
                         </li>
-                        <li class="m-menu-list-item  ">
-                            <a class="m-menu-list-item-link" href="http://1.163.com/ten/index.html">十元专区</a>
-                        </li>
+                         {wc:php:start}
+                if($this->db){
+                        $cmodel=$this->db;
+                }else{
+                        $cmodel=$mysql_model;
+                }
+
+                $nav_list = $cmodel->GetList("SELECT url,name FROM `@#_navigation` where `status`='Y' and type='index' order by `order`");
+            {wc:php:end}
+            {wc:loop $nav_list $key $nav}
                         <li class="m-menu-list-item  ">
                             <var>|</var>
-                            <a class="m-menu-list-item-link" href="http://1.163.com/results.html">最新揭晓</a>
+                            <a class="m-menu-list-item-link" href="{WEB_PATH}{wc:$nav['url']}">{wc:$nav['name']}</a>
                         </li>
-                        <li class="m-menu-list-item  ">
-                            <var>|</var>
-                            <a class="m-menu-list-item-link" href="http://1.163.com/share.html">晒单分享</a>
-                        </li>
+            {wc:loop:end}
+
                     </ul>
                 </div>
                 <div class="m-nav-promot">
