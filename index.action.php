@@ -14,6 +14,8 @@ class index extends base {
 		$new_shop=$this->db->GetOne("select * from `@#_shoplist` where `pos` = '1' and `q_uid` is null ORDER BY `id` DESC LIMIT 1");
 		$newestshop=$this->db->GetList("select * from `@#_shoplist` where `q_uid` is null  ORDER BY `id` DESC LIMIT 20");
 
+		//已中奖订单-2016.1.1
+	        $ygchuanqi=$this->db->GetList("select * from `@#_member_go_record` where huode!=0  ORDER BY `id` DESC LIMIT 8");
 		//新品上架
 		// $new_shop1=$this->db->GetOne("select * from `@#_shoplist` where `sid` in (select id from `@#_shoplist` where `id` = `sid` ORDER BY `id` DESC ) and `q_uid` is null ORDER BY `id` DESC LIMIT 1");
 		$new_shop1=$this->db->GetOne("select * from `@#_shoplist` where `newpos`='1' and `q_uid` is null ORDER BY id DESC LIMIT 1");
