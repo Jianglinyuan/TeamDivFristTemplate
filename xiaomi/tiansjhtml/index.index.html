@@ -40,7 +40,7 @@
                             <h4>最新揭晓</h4>
                             <div class="w-slide-wrap">
                                 <ul class="w-slide-wrap-list" data-pro="list">
-                                    <li data-pro="item" class="w-slide-wrap-list-item">
+                                   <!--  <li data-pro="item" class="w-slide-wrap-list-item">
                                         <div class="w-goods-newReveal" data-status="2" data-gid="979" data-period="212301800" data-remainTime="866999" data-type="1" data-price="2999">
                                             <i class="ico ico-label ico-label-revealing" title="正在揭晓"></i>
                                             <p class="w-goods-title"><a href="http://1.163.com/detail/979-212301800.html" title="周生生 黄金 足金旋转木马吊坠" target="_blank">周生生 黄金 足金旋转木马吊坠</a></p>
@@ -89,7 +89,35 @@
                                                     <br/>服务器开小差了，请稍后再试...</p>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li> -->
+                                    {wc:loop $shopqishu $qishu}
+                    {wc:php:start}
+                        $qishu['q_user'] = unserialize($qishu['q_user']);
+                    {wc:php:end}
+                 <li data-pro="item" class="w-slide-wrap-list-item">
+    <div class="w-goods-newReveal">
+        <i class="ico ico-label ico-label-newReveal" title="正在揭晓"></i>
+        <p class="w-goods-title"><a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" title="{wc:$qishu['title']}" target="_blank">{wc:$qishu['title']}</a></p>
+        <div class="w-goods-pic">
+            <a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" target="_blank">
+                <img width="140" height="105" src="{G_UPLOAD_PATH}/{wc:$qishu['thumb']}">
+            </a>
+        </div>
+        <p class="w-goods-price">总需：{wc:$qishu['zongrenshu']}人次</p>
+        <p class="w-goods-period">期号：{wc:$qishu['qishu']}</p>
+        <div class="w-goods-record">
+            <p class="w-goods-owner f-txtabb">获奖者：<a href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" title="{wc:fun:get_user_name($qishu['q_user'])}"><b>{wc:fun:get_user_name($qishu['q_user'])}</b></a></p>
+            <p>本期参与：25人次</p>
+            <p>幸运号码：{wc:$qishu['q_user_code']}</p>
+        </div>
+    </div>
+</li>
+
+                    {wc:loop:end}
+                    <script type="text/javascript" src="{G_TEMPLATES_CSS}/App/js/GLotteryFun.js"></script>
+                    <script type="text/javascript">
+                        $(document).ready(function(){gg_show_time_init("ulNewAwary",'{WEB_PATH}',0);});
+                    </script>
                                 </ul>
                             </div>
                             <div class="w-slide-controller">
