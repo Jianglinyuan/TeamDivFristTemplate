@@ -25,28 +25,30 @@ overflow: hidden;
 border-top: none;
 background: #fff;
 margin: auto;
+text-align: right;
 }
 .Single_list {
-width: 918px;
+width: 1128px;
 overflow: hidden;
 margin: 30px auto 15px;
 padding: 0 0 19px 0;
 border-bottom: 1px solid #E4E4E4;
 }
 .Single_list .Topiclist-img {
-width: 80px;
 overflow: hidden;
 text-align: center;
-float: left;
+float: right;
 }
 .Single_list .Topiclist-img .head-img {
-width: 80px;
 margin: 0 auto;
 display: block;
 }
 .Single_list .Topiclist-img .head-img img {
 width: 80px;
 height: 80px;
+border: 1px solid  #ddd;
+padding: 3px;
+border-radius: 3px;
 }
 .Single_list .Topiclist-img .blue {
 white-space: nowrap;
@@ -55,24 +57,27 @@ overflow: hidden;
 display: block;
 }
 .Single_list .SingleR {
-width: 782px;
-margin-left: 48px;
+width: 980px;
+padding: 0 15px;
+border: 1px solid  #ddd;
+border-radius: 6px;
+margin-right: 28px;
 display: inline;
 }
 .fl, .fl-img {
-float: left;
+float: right;
 }
 .Single_list .SingleR_TC {
 position: relative;
 zoom: 1;
 }
 .Single_list .SingleR_TC i {
-left: -28px;
+right: -28px;
 top: 0;
 background-position: -143px 0;
 }
 .Single_list .SingleR_TC s {
-right: 0;
+left: 0;
 bottom: 12px;
 background-position: -168px 0;
 }
@@ -110,8 +115,8 @@ padding: 7px 25px 12px 0;
 display: inline-block;
 }
 .Single_list .SingleR_pic li {
-float: left;
-margin-right: 10px;
+float: right;
+margin-left: 10px;
 display: inline;
 }
 .Single_list .SingleR_Comment .Comment_smile {
@@ -119,7 +124,7 @@ height: 25px;
 padding-top: 6px;
 }
 .SingleR_Comment .Comment_smile span {
-margin-right: 10px;
+margin-left: 10px;
 }
 .SingleR_Comment .Comment_smile span i {
 background: url({G_TEMPLATES_STYLE}/images/Detailsbg.png) no-repeat;
@@ -128,7 +133,7 @@ height: 18px;
 display: inline-block;
 vertical-align: -4px;
 background-position: -198px 0;
-margin-right: 3px;
+margin-left: 3px;
 }
 .SingleR_Comment .Comment_smile span s {
 width: 18px;
@@ -136,10 +141,25 @@ height: 18px;
 display: inline-block;
 vertical-align: -8px;
 background-position: -230px 0;
-margin-right: 0;
+margin-left: 0;
+}
+.shaidan-header {
+	border-bottom: 1px dashed  #ddd;
+	padding: 8px 0;
+}
+.shaidan-header em {
+	float: left;
+	margin-top: 6px;
+}
+.shaidan-header a b {
+	font-family: "Microsoft Yahei";
+	font-size: 18px;
+}
+.SingleR_Comment {
+	margin-bottom: 10px;
 }
 </style>
-<body style="width:970px; min-height:150px">
+<body style="width:1188px; min-height:150px">
 	{wc:if $error==0}
 		<div id="divPost" class="Single_Content">
 		{wc:loop $shaidan $v}			
@@ -152,8 +172,8 @@ margin-right: 0;
 				</div>
 				<div class="SingleR fl">
 					<div class="SingleR_TC"><i></i> <s></s>
-						<h3><span class="gray02">第{wc:$v['sd_qishu']}期晒单</span><a href="{WEB_PATH}/go/shaidan/detail/{wc:$v['sd_id']}" target="_blank">{wc:$v['sd_title']}</a>   <em class="gray02">{wc:fun:date("Y-m-d",$v['sd_time'])}</em></h3>
-						<p class="gray01">{wc:fun:_strcut($v['sd_content'],220)}</p>
+						<div class="shaidan-header"><span class="gray02">第{wc:$v['sd_qishu']}期晒单</span><a href="{WEB_PATH}/go/shaidan/detail/{wc:$v['sd_id']}" target="_blank"><b>{wc:$v['sd_title']}</b></a>   <em class="gray02">{wc:fun:date("Y-m-d",$v['sd_time'])}</em></div>
+						{wc:fun:_strcut($v['sd_content'],220)}
 					</div>
 					<ul class="SingleR_pic">
 						{wc:loop $v['sd_photolist'] $m}

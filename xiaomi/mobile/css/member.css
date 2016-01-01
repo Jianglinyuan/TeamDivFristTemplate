@@ -9,7 +9,8 @@
 }
 a.z-Recharge-btn {
 	padding:0 10px;
-	text-align:center;
+	margin-top: 8px;
+	margin-left: -200px;
 	color:#fff;
 	border:1px solid #c75c5c;
 	display:inline-block;
@@ -840,6 +841,8 @@ p.f-addressLH {
 	background:#fff;
 }
 .g-Record-ctlst h3 {
+	margin-right: 15px;
+	text-align: right;
 	line-height:30px;
 	padding-top:5px;
 	text-indent:10px;
@@ -856,13 +859,14 @@ p.f-addressLH {
 	cursor:pointer;
 }
 .g-Record-ctlst li p {
-	margin:0 10px;
+	margin:10px 20px;
+	text-align: right;
 }
 .g-Record-ctlst li b {
-	width:76px;
+	width:100%;
 	display:inline-block;
-	text-align:left;
-	text-align:center;
+	text-align:right;
+	margin-left: -20px;
 }
 .g-Record-ctlst li span {
 	margin-left:15px;
@@ -908,6 +912,7 @@ p.f-addressLH {
 }
 .g-Record-lst .u-sgl-r p {
 	margin-bottom:3px;
+	text-align: right;
 }
 .g-Record-lst .u-sgl-r p em {
 	margin:0 3px;

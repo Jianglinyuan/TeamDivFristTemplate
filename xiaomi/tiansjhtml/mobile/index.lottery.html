@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 <html>
-<head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" /><title>
-	最新揭晓 - {wc:$webname}触屏版
-</title><meta content="app-id=518966501" name="apple-itunes-app" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" /><meta content="telephone=no" name="format-detection" />
+<head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+  <title>اكارلار</title>
+<meta content="app-id=518966501" name="apple-itunes-app" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
 <link href="{G_TEMPLATES_MOBILE_CSS}/comm.css" rel="stylesheet" type="text/css" />
 <link href="{G_TEMPLATES_MOBILE_CSS}/lottery.css" rel="stylesheet" type="text/css" />
 <script src="{G_TEMPLATES_MOBILE_JS}/jquery190.js" language="javascript" type="text/javascript"></script>
@@ -43,10 +44,7 @@
           <a href="{G_WEB_PATH}/?/mobile/mobile/about"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava3.png"></a>
         </div>
         <div class="textnavword">
-
         <p style="text-align:center;font-size:14px;font-family:alkatip;color:#bbb;">كۆرسەتكۈچ</p>
-
-        
         </div>
     </div>
   <div class="wrapnavautos">
@@ -63,7 +61,7 @@
           <a href="{WEB_PATH}/mobile/autolottery"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava1.png"></a>
         </div>
         <div class="textnavword">
-        <p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb">ۋاقىتلىق جاكارلار</p>
+        <p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb">ۋاقىتلىق</p>
         
         </div>
     </div>
@@ -75,14 +73,12 @@
 
 
 <!-- 内页顶部 -->
-
     <section class="revealed">
 	    <div id="divLottery" class="revCon">
             <div id="divLotteryLoading" class="loading"><b></b>...ئېچىلىۋاتىدۇ</div>
             <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;">...تېخىمۇ كۆپ</a>
         </div>
-    </section>
-    
+    </section>   
 {wc:templates "mobile/index","footer"}
 <script language="javascript" type="text/javascript">
   var Path = new Object();
@@ -94,9 +90,6 @@ var Base={head:document.getElementsByTagName("head")[0]||document.documentElemen
 function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
 Base.getScript('{G_TEMPLATES_MOBILE_JS}/Bottom.js?v='+GetVerNum());
 </script>
-
-
-
 </div>
 </body>
 </html>

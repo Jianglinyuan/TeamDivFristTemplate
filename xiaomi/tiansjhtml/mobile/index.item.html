@@ -56,8 +56,8 @@
                         <div class="g-snav-lst">{wc:fun:_cfg('web_name_two')}ۋاقىت<br><dd class="gray9"><span>{wc:fun:microt($gorecode['time'])}</span></dd></div>
                     </div>
                 </div>
-				    <p>جەمئىى{wc:fun:_cfg('web_name_two')}：<b class="orange">{wc:$gorecode_count}قېتىم سانى</b></p>
-        	    <p><a href="{WEB_PATH}/mobile/mobile/calResult/{wc:$item['id']}" class="fr">نەتىجىسىنى كۆرۈش</a> تەلەيلىك نۇمۇر{wc:fun:_cfg('web_name_two')}：<b class="orange">{wc:$item['q_user_code']}</b></p>
+				    <p>جەمئىى سېتىۋېلىش：<b class="orange">{wc:$gorecode_count}قېتىم سانى</b></p>
+        	    <p><a href="{WEB_PATH}/mobile/mobile/calResult/{wc:$item['id']}" class="fr">نەتىجىسىنى كۆرۈش</a> تەلەيلىك نۇمۇر：<b class="orange">{wc:$item['q_user_code']}</b></p>
             </div>
         </div>
         {wc:if:end}
@@ -100,7 +100,7 @@
                 <b>چى سان1 ){wc:$item['title']} <span></span></b>
                 <p class="price">：<em class="arial gray">￥{wc:$item['money']}</em></p>
 				{wc:if empty($item['q_end_time'])}
-				<div class="Progress-bar"><p class="u-progress" title="已完成{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%"><span class="pgbar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"><span class="pging"></span></span></p>
+				<div class="Progress-bar"><p class="u-progress" title="{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%"><span class="pgbar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"><span class="pging"></span></span></p>
                     <ul class="Pro-bar-li">
                          <li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>قاتناشقانلار</li>
                          <li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>جەمئىي</li>

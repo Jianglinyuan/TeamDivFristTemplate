@@ -627,12 +627,12 @@ a.z-Site {
 	border-radius:3px;
 }
 .u-progress .pging {
-	background:#c75c5c;
+	background:rgb(255, 238, 13);
 }
 .Progress-bar .Pro-bar-li li {
 	float:left;
 	color:#AEADAD;
-	font-size:10px;
+	font-size:12px;
 	font-family:alkatip;
 	border:none;
 	margin:0;
@@ -645,7 +645,7 @@ a.z-Site {
 	font-size:10px;
 	font-family:arial;
 	height:14px;
-	padding:3px 0 0 0;
+	padding:3px 0 0 5px;
 	font-style:normal;
 }
 .Progress-bar .Pro-bar-li li.P-bar01 em {

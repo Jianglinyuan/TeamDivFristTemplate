@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>晒单添加 - {wc:$webname}触屏版</title>
+    <title>بەھىرلەش</title>
     <meta content="app-id=518966501" name="apple-itunes-app" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
@@ -71,7 +71,7 @@ function hidediv() {
         <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>قايتىش</b></a>
         </div>
-        <h2 style="margin-top: 0px;font-size:18px;">晒单添加</h2>
+        <h2 style="margin-top: 0px;font-size:18px;">بەھىرلەش</h2>
     </header>
 
     <form action="{WEB_PATH}/mobile/home/postsingle/{wc:$recordid}" method="POST" id="postsingle_form">
@@ -79,19 +79,19 @@ function hidediv() {
 	        <div class="registerCon">
     	        <ul>
         	        <li>
-                        <dl><input name="title" type="text" placeholder="标题"></dl>
-                        <dl style="margin-top:5px;"><textarea style="background: #fff none repeat scroll 0 0;border: 1px solid #ddd;border-radius: 5px;color: #ccc;display: inline-block;font-size: 16px;padding: 0 5px;position: relative;width: 100%;" name="content" rows='5'  placeholder="描述您的晒单内容"></textarea></dl>
+                        <dl><input name="title" type="text" placeholder="تېمىسى"></dl>
+                        <dl style="margin-top:5px;"><textarea style="background: #fff none repeat scroll 0 0;border: 1px solid #ddd;border-radius: 5px;color: #ccc;display: inline-block;font-size: 16px;padding: 0 5px;position: relative;width: 100%;" name="content" rows='5'  placeholder="بەھىر مەزمۇنىنى يېزىڭ"></textarea></dl>
                     </li>
                     <li>
                         <span class="btn btn-success fileinput-button">
                             <i class="glyphicon glyphicon-plus"></i>
-                            <span>晒图</span>
+                            <span>رەسىملەر</span>
                             <input id="fileupload" type="file" name="files[]" multiple>
                         </span>
                         <input type="hidden" name="fileurl_tmp" id="fileurl_tmp">
                         <div id="files" class="files"></div>
                     </li>
-                    <li><a href="javascript:;" onclick="$('#postsingle_form').submit();" id="btnLogin" class="nextBtn  orgBtn">晒单</a>(由于手机拍照图片较大，上传晒图请耐心等待)</li>
+                    <li><a href="javascript:;" onclick="$('#postsingle_form').submit();" id="btnLogin" class="nextBtn  orgBtn">بەھىر</a>(رەسىم سىغىمى چوڭ بولغانلىقتىن ، سەل تەخىر قىلىڭ)</li>
                 </ul>
 	        </div>
         </section>
