@@ -1,5 +1,6 @@
 {wc:templates "index","header"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/goods-Detail.min.css" />
+<script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/jquery.dotdotdot.min.js"></script>
 <div class="container breadcrumbs">
 	商品详情<span class="sep">/</span>
 	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
@@ -11,21 +12,57 @@
 <div class="goods-detail container">
     <div class="goods-detail-info row clearfix">
 		<div id="divPeriodList" class="show_Period" style=>{wc:if count($itemlist)>32}<div class="period_Open"><a class="gray" href="javascript:void(0);">展开<i></i></a></div>{wc:if:end}{wc:$loopqishu}</div>
-        <div class="span10 J_mi_goodsPic_block">
+
+<!--         <div class="span14 J_mi_goodsPic_block">
             <div class="goods-pic-box">
                 <div class="goods-big-pic">
 					<span href="{G_UPLOAD_PATH}/{wc:$item['thumb']}" class = 'J_goodsBigPic' id='zoom1' rel="adjustX:10, adjustY:-2">
 					<img width="80px" height="80px" src="{G_UPLOAD_PATH}/{wc:$item['thumb']}" /></span>
                 </div>
             </div>
+        </div> -->
+
+        <div class="g-main-l m-detail-show">
+            <div class="w-gallery" id="pro-view-3">
+                <div class="w-gallery-fullsize" data-pro="fullsize">
+                    <!-- <img src="{G_UPLOAD_PATH}/{wc:$item['thumb']}" /> -->
+                    <img src="{G_UPLOAD_PATH}/{wc:$item['picarr'][0]}" />
+                </div>
+
+				<div class="small-imgs">
+					<div class="img-list">
+						{wc:loop $item['picarr'] $imgtu}
+						<div class="img-cell">
+							<div class="goods-arrow" style="display:none"><i class="arrow-up1"></i><i class="arrow-up2"></i></div>
+							<img class="zoom-tiny-image" src="{G_UPLOAD_PATH}/{wc:$imgtu}" />
+						</div>
+						{wc:loop:end}
+					</div>
+				</div>
+				<script type="text/javascript">
+					$(function() {
+						$('.img-list img:first').addClass('img-selected');
+						$('.goods-arrow:first').addClass('show-arrow').show();
+
+						$('.small-imgs').on('hover', 'img', function() {
+							$('.img-selected').removeClass('img-selected');
+							$('.show-arrow').hide().removeClass('show-arrow');
+							$('.w-gallery-fullsize img').attr('src', $(this).attr('src'));
+							$(this).addClass('img-selected');
+							$(this).prev('.goods-arrow').addClass('show-arrow').show();
+						});
+
+						$('#ellipsis-wraper').dotdotdot();
+					});
+				</script>
+
+            </div>
         </div>
-		<div class="span10 goods-info-rightbox">
+		<div class="goods-info-midbox">
            <dl class="goods-info-box ">
             <dt class="goods-info-head">
                 <dl>
-                    <dt id="goodsName" style="
-    text-align: right;
-">{wc:$item['title']}</dt>
+                    <dt id="goodsName"><div id="ellipsis-wraper">{wc:$item['title']}</div></dt>
                     <dd class="goods-info-head-userfaq" style=''>
                         <ul>
                             <li class="mail" style="text-align:right;">{wc:$item['title2']}<i>简介</i></li>
@@ -56,8 +93,7 @@
 					<li class="NewestRec Record_titCur">最新{wc:fun:_cfg('web_name_two')}记录</li>
 				</ul>
 				<div class="Newest_Con hide" style="display:none;">
-					<p class="MsgIntro">{wc:fun:_cfg("web_name_two")}购是指只需1元就有机会买到想要的商品。即每件商品被平分成若干"等份"出售，每份1元，当一件商品所有"等份"售出后，根据{wc:fun:_cfg('web_name_two')}规则产生一名幸运者，该幸运者即可获得此商品。</p>
-					<p class="MsgIntro1">{wc:fun:_cfg("web_name_two")}以"一元{wc:fun:_cfg('web_name_two')}，{wc:fun:_cfg('web_name_two')}出惊喜"为宗旨，力求打造一个100%公平公正、100%正品保障、寄娱乐与购物一体化的新型购物网站。<a href="{WEB_PATH}/help/1" class="blue" target="_blank">查看详情&gt;&gt;</a></p>
+					<p class="MsgIntro">{wc:fun:_cfg("web_name_two")}购是指只需1元就有机会买到想要的商品。即每件商品被平分成若干"等份"出售，每份1元，当一件商品所有"等份"售出后，根据{wc:fun:_cfg('web_name_two')}规则产生一名幸运者，该幸运者即可获得此商品。<a href="{WEB_PATH}/help/1" class="blue" target="_blank">查看详情&gt;&gt;</a></p>
 				</div>
 				<div class="My_Record hide" style="display:none;">
 					{wc:if uidcookie('uid')}
@@ -70,18 +106,16 @@
 					</ul>
 					{wc:else}
 					<div class="My_RecordReg">
-						<b class="gray01">看不到？是不是没登录或是没注册？ 登录后看看</b>
+						<b class="gray01">看不到？注册或登录后看看</b>
 						<a href="{WEB_PATH}/member/user/register" class="My_Regbut">注册</a>
 						<a href="{WEB_PATH}/member/user/login" class="My_Signbut">登录</a>
 					</div>
 					{wc:if:end}
 				</div>
-								<div class="Newest_Con hide" style="display: block;">
+					<div class="Newest_Con hide" style="display: block;">
 					<ul style="text-align:right;">
 						{wc:loop $us $user}
-						<li>				
-
-人次
+						<li>人次
 						<em class="Fb gray01">{wc:$user['gonumber']}</em>了
 												{wc:if $user['ip']}
 						({wc:fun:get_ip($user['id'],'ipcity')}) 
@@ -103,7 +137,41 @@
             </dd>
         </dl>
         </div>
-        </div>
+
+        <div class="g-side">
+	        <div class="m-detail-period">
+	            <div class="box-hd">
+	               <h4>上期获得者</h4>
+	            </div>
+	            <div class="box-bd">
+		            <div class="m-detail-period-main-wrap">
+		                {wc:if $sid_code} 
+		                {wc:php:start} $sid_code['q_user'] = unserialize($sid_code['q_user']);
+		                {wc:php:end} 
+		                {wc:if $sid_code['q_showtime']=='N'}
+		                <dl>
+		                    <dt>
+		                        <div class="avatar"><a rel="nofollow" href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank"><img width="90" height="90" alt="" src="{G_UPLOAD_PATH}/{wc:$sid_code['q_user']['img']}"></a></div>
+		                    </dt>
+		                    <dd class="gray02">
+		                        <p class="title">恭喜 <a href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank" class="blue">{wc:fun:get_user_name($sid_code['q_uid'])}</a> 获得了本商品</p>
+		                        {wc:if $sid_go_record['ip']} 
+		                        {wc:fun:get_ip($sid_go_record['id'],'ipcity')} 
+		                        {wc:if:end}
+    							<p>揭晓时间：{wc:fun:microt($sid_code['q_end_time'])}</p>
+
+		                        <p>幸运拍码：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
+		                    </dd>
+		                </dl>
+		                {wc:if:end}
+		                {wc:if:end}
+		            </div>
+	            </div>
+	        </div>
+	    </div>
+
+    </div>
+
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/GoodsDetail.css"/>
 <div id="content">
 <div class="coin-layout">
@@ -128,10 +196,10 @@
                 <div class="fr"><a href="javascript:;" class="btn btn-primary goods-add-cart-btn" id="goodsSubBarAddCartBtn"><i class="iconfont"></i>立即{wc:fun:_cfg('web_name_two')}</a></div>
                 <div class="goods-desc-menu" id="">
                     <ul class="items clearfix J_pro_related_btns">
-                       <li><a href="#divContent" class="DetailsTCur">商品详情</a></li>
-                       <li><a href="#divBuyRecord" class="">参与记录</a></li>
-                       <li><a href="#divPost" class="">商品晒单</a></li>
-                       <li><a href="#divFaq" class="">常见问题</a></li>
+                       <li><a href="" data-goto="Product_DetT">商品详情</a></li>
+                       <li><a href="" data-goto="All_RecordT">参与记录</a></li>
+                       <li><a href="" data-goto="Single_ConT">商品晒单</a></li>
+                       <!-- <li><a href="#divFaq" class="">常见问题</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -139,33 +207,9 @@
     </div>
 </div>
 </div>
-<div class="row goods-detail-desc">
-    <div class="span5">
-            <div class="xm-box goods-recent">
-				<div class="box-hd">
-					<div class="title" style="text-align:right;"> 上期获得者 </div>
-				</div>
-				<div class="box-bd">
-						{wc:if $sid_code}
-			{wc:php:start}
-				$sid_code['q_user'] = unserialize($sid_code['q_user']);
-			{wc:php:end}
-			{wc:if $sid_code['q_showtime']=='N'}
-						<dl>
-						<dt><a rel="nofollow" href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank"><img width="80" height="80" alt="" src="{G_UPLOAD_PATH}/{wc:$sid_code['q_user']['img']}"></a></dt>
-						<dd class="gray02">
-							<p>恭喜 <a href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank" class="blue">{wc:fun:get_user_name($sid_code['q_uid'])}</a> 获得了本商品</p>
-							{wc:if $sid_go_record['ip']}
-							{wc:fun:get_ip($sid_go_record['id'],'ipcity')}
-							{wc:if:end}
-<!-- 							<p>揭晓时间：{wc:fun:microt($sid_code['q_end_time'])}</p>
- -->							<p>幸运拍码：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
-						</dd>
-					</dl>
-						{wc:if:end}
-			{wc:if:end}
-				</div>
-			</div>
+
+	<div class="row goods-detail-desc">
+<!-- 	    <div class="span5">
             <div class="xm-box goods-alsobuy xm-goods-side-list">
 				<div class="box-hd">
 					<div class="title"> 商品来源 </div>
@@ -177,24 +221,24 @@
 					<div class="hhz"><span class="hhz-ico"></span>纸尿裤、奶粉等商品</div>
 				</div>
 			</div>
-			</div>
-	<div class="span15">
+		</div>
+ -->
+		<div class="span15">
             <!-- 商品描述 -->
-            <div class="xm-box  goods-detail-box " id="divContent">
+            <!-- <div class="xm-box  goods-detail-box " id="divContent">
                <div class="box-hd">
-                    <ul class="items clearfix J_pro_related_btns" style="float:right;">
-                       <li><a href="#divFaq" class="">常见问题</a></li>
-                                              <li><a href="#divBuyRecord" class="">参与记录</a></li>
-                                                                     <li><a href="#divPost" class="">商品晒单</a></li>
-                       <li class="current"><a href="#divContent" class="DetailsTCur">商品详情</a></li>
-
-                    </ul>
+					<ul class="items clearfix J_pro_related_btns" style="float:right;"> -->
+					    <!-- <li><a href="#divFaq" class="">常见问题</a></li> -->
+					    <!-- <li><a href="#divBuyRecord" class="">参与记录</a></li>
+					    <li><a href="#divPost" class="">商品晒单</a></li>
+					    <li class="current"><a href="#divContent" class="DetailsTCur">商品详情</a></li>
+					</ul>
                </div>
                <div class="box-bd" id="goodsDesc">{wc:$item['content']}</div>
-            </div>
+            </div> -->
             <!-- 商品描述 END-->
             <!--S 所有参与记录-->
-            <div class="xm-box goods-detail-standard" id="divBuyRecord">
+            <!-- <div class="xm-box goods-detail-standard" id="divBuyRecord">
                 <div class="box-hd">
                     <div class="title" style="text-align:right;margin-right: 30px;">参与记录</div>
                 </div>
@@ -217,19 +261,20 @@
 					</div>
 					{wc:loop:end}
                 </div>
-            </div>
+            </div> -->
             <!--E 所有参与记录-->
             <!--S 商品晒单 -->
-            <div class="xm-box goods-detail-comment" id="divPost">
+            <!-- <div class="xm-box goods-detail-comment" id="divPost">
                 <div class="box-hd">
                     <div class="title" style="text-align:right;margin-right: 30px;">商品晒单</div>
                 </div>
                 <div class="box-bd">
-					<iframe id="iframea" src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:878px; border:none;" frameborder="0" scrolling="no"></iframe>
+					<iframe id="iframea" src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:1188px; border:none;" frameborder="0" scrolling="no"></iframe>
                 </div>
-            </div>
+            </div> -->
+
             <!-- 常见问题 -->
-            <div class="common-question" id="divFaq">
+<!--             <div class="common-question" id="divFaq">
                 <div class="question-hd clearfix">
                     <div class="title_a">常见问题</div>
                 </div>
@@ -261,8 +306,39 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <!-- 常见问题 END-->
+
+
+           <div class="xm-box goods-detail-box">
+			    <div id="calculate" class="ProductTabNav">
+			        <div id="divMidNav" class="DetailsT_Tit">
+			            <div class="DetailsT_TitP">
+			                <ul>
+			                    <li class="GoosTab2 Product_DetT DetailsTCur" style="float:right;"><span class="DetailsTCur">商品详情</span></li>
+			                    <li class="GoosTab2 All_RecordT"><span class="">参与记录</span></li>
+			                    <li class="GoosTab2 Single_ConT"><span class="">商品晒单</span></li>
+			                </ul>
+			            </div>
+			        </div>
+			    </div>
+			    <div id="divCalResult" class="Product_Content">
+			        <div class="ygRecord" name="div_tab">
+			           <div id="goodsDesc">{wc:$item['content']}</div>
+			        </div>
+			        <!-- 购买记录20条 -->
+			        <div name="div_tab" id="bitem" class="AllRecordCon">
+			            <iframe id="iframea_bitem" g_src="{WEB_PATH}/go/goods/go_record_ifram/{wc:$itemid}/20" style="width:1188px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
+			        </div>
+			        <!-- /购买记录20条 -->
+			        <!-- 晒单 -->
+			        <div name="div_tab" id="divPost" class="Single_Content">
+			            <iframe id="iframea_divPost" g_src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:1188px; border:none;" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+			        </div>
+			        <!-- 晒单 -->
+			    </div>
+			</div>
+ 
         </div>
 </div>
 </div>
@@ -296,7 +372,7 @@ $(function(){
 	function baifenshua(aa,n){
 	n = n || 2;
 	return ( Math.round( aa * Math.pow( 10, n + 2 ) ) / Math.pow( 10, n ) ).toFixed( n ) + '%';
-}
+	}
 	var shopnum = $("#num_dig");
 	shopnum.keyup(function(){
 		if(shopnum.val()>{wc:$syrs}){
@@ -401,7 +477,9 @@ $(".btn-dake").click(function(){
 	});	
 });
 
-
+function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
 
 function Cartcookie(cook){
 	var shopid=shopinfo['shopid'];
@@ -431,6 +509,61 @@ function Cartcookie(cook){
 		window.location.href="{WEB_PATH}/member/cart/cartlist/"+new Date().getTime();//+new Date().getTime()
 	}
 }  
+
+function set_iframe_height(fid,did,height){
+	$("#"+fid).css("height",height);
+}
+
+$(function(){
+var fouli=$(".DetailsT_TitP ul li");
+var divCalResult =  $("div[name='div_tab']");
+	fouli.click(function(){
+		var index=fouli.index(this);
+		fouli.removeClass("DetailsTCur").eq(index).addClass("DetailsTCur");
+		var iframe = divCalResult.hide().eq(index).find("iframe");
+			if (typeof(iframe.attr("g_src")) != "undefined") {
+			  	 iframe.attr("src",iframe.attr("g_src"));
+				 iframe.removeAttr("g_src");
+			}
+
+		divCalResult.hide().eq(index).show();
+	});
+
+	$(".Announced_But").click(function(){
+		var next_li = $(".DetailsT_TitP ul>li");
+		var index = $(this).index()
+		next_li.eq(index).click();
+	});
+
+
+	// $(window).scroll(function(){
+	// 	if($(window).scrollTop()>=941){
+	// 		$("#divMidNav").addClass("nav-fixed");
+	// 	}else if($(window).scrollTop()<941){
+	// 		$("#divMidNav").removeClass("nav-fixed");
+	// 	}
+	// });
+});
+function divOpen(){
+var height=$("#userRnoId").css("height");
+	if(height=="90px"){
+		$("#userRnoId").css("height","auto");
+	}else{
+		$("#userRnoId").css("height",90);
+	};
+}
+$(function(){
+	$("#divOpen").click(divOpen);
+});
+
+$(function() {
+	$('.goods-sub-bar .goods-desc-menu .items').on('click', 'a', function(event) {
+		event.preventDefault();
+		var dest = this.dataset["goto"];
+		$('.'+dest).click();
+		$('html body').animate({scrollTop:850}, 300);
+	})
+})
 </script> 
 </div>
 </div>
