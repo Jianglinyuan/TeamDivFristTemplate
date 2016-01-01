@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head><title>
-	账户明细 - {wc:$webname}触屏版
+	مالىيە تەپسىلاتى
 </title><meta content="app-id=518966501" name="apple-itunes-app" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" /><meta content="telephone=no" name="format-detection" />
 <link href="{G_TEMPLATES_MOBILE_CSS}/comm.css" rel="stylesheet" type="text/css" />
 <link href="{G_TEMPLATES_MOBILE_CSS}/member.css" rel="stylesheet" type="text/css" />
@@ -22,26 +22,26 @@
         <div class="head-r">
 	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>قايتىش</b></a>
         </div>
-        <h2>帐户明细</h2>
+        <h2>مالىيە تەپسىلاتى</h2>
     </header>
 
     <section class="clearfix g-member">
 	    <article class="clearfix m-round g-userMoney" style="text-align:end; padding-right:10px;">
-		    <a href="{WEB_PATH}/mobile/home/userrecharge/" class="z-Recharge-btn" style="float: left;">去充值</a>可用余额<span class="orange">{wc:$member['money']}</span>元
+		    <a href="{WEB_PATH}/mobile/home/userrecharge/" class="z-Recharge-btn" style="float: left;">پۇل قاچىلاش</a>سىزنىڭ قالدۇق سوممىڭىز<span class="orange">{wc:$member['money']}</span>يۇئەن
 	    </article>
 	    <article class="mt10 m-round">
 		    <ul class="m-userMoneyNav">
 			    
-			    <li><a id="btnRecharge" href="javascript:;"><b>充值明细</b>(充值总金额：￥{wc:$czsum})</a><s></s></li>
-			    <li><a id="btnConsumption" href="javascript:;"><b>消费明细</b>(消费总金额：￥{wc:$xfsum})</a></li>
+			    <li><a id="btnRecharge" href="javascript:;"><b>پۇل قاچىلاش تەپسىلاتى</b>({wc:$czsum}￥ :پۇل قاچىلاش سوممىسى)</a><s></s></li>
+			    <li><a id="btnConsumption" href="javascript:;"><b>خەجلەش تەپسىلاتى</b>{wc:$xfsum}￥ :خەجلەش سوممىسى)</a></li>
 		    </ul>
 		    
 		    <ul id="ulConsumption" class="m-userMoneylst m-Consumption">
 		    </ul>
 		    <ul id="ulRechage" class="m-userMoneylst" style="display:none;">
 		    </ul>
-		    <div id="divLoad" class="loading"><b></b>正在加载</div>
-		    <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;">点击加载更多</a>
+		    <div id="divLoad" class="loading"><b></b>...ئېچىلىۋاتىدۇ</div>
+		    <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;">...تېخىمۇ كۆپ</a>
 	    </article>
     </section>
     

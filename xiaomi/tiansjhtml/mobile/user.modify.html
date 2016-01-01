@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>个人设置 - {wc:$webname}触屏版</title>
+    <title>مىنىڭ تنظیم</title>
     <meta content="app-id=518966501" name="apple-itunes-app" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
@@ -19,16 +19,16 @@
         <div class="head-r">
             <a href="javascript:;" onclick="history.go(-1)" class="z-HReturn"><s></s><b>قايتىش</b></a>
         </div>
-        <h2>个人设置</h2>
+        <h2>مىنىڭ تنظیم</h2>
     </header>
 
         <section>
 	        <div class="registerCon">
     	        <ul>
-        	        <li><input type="text" id="username" value="{wc:$member['username']}" placeholder="请输入昵称" class="rText"/><s class="rs2"></s></li>
-                    <li><input type="text" id="qianming" value="{wc:$member['qianming']}" placeholder="签名" class="rText"/><s class="rs2"></s></li>
-					<li><input type="text" id="email" value="{wc:$member['email']}" placeholder="登录邮箱" class="rText"/><s class="rs2"></s></li>
-                    <li><a href="javascript:void(0);" id="nextFind" class="nextBtn  orgBtn">确&emsp;&emsp;认</a></li>
+        	        <li><input type="text" id="username" value="{wc:$member['username']}" placeholder="ئىسمىڭىزنى كىرگۈزۈڭ" class="rText"/><s class="rs2"></s></li>
+                    <li><input type="text" id="qianming" value="{wc:$member['qianming']}" placeholder="كەيپىيات" class="rText"/><s class="rs2"></s></li>
+					<li><input type="text" id="email" value="{wc:$member['email']}" placeholder="خەت ساندۇقى" class="rText"/><s class="rs2"></s></li>
+                    <li><a href="javascript:void(0);" id="nextFind" class="nextBtn  orgBtn">مۇقۇملاش</a></li>
                 </ul>
 	        </div>
         </section>
@@ -40,12 +40,12 @@ $("#nextFind").click(function(){
     var qianming = $("#qianming").val();
 	var email = $("#email").val();
     if(username.length < 3){
-        $.PageDialog.fail('请输入昵称！');
+        $.PageDialog.fail('! ئىسمىڭىزنى كىرگۈزۈڭ');
         return false;
     }
     $.post("{WEB_PATH}/mobile/home/modifyset/",{username:username,qianming:qianming,email:email},function(data){
         if(data == 1){
-            $.PageDialog.fail("设置成功！");
+            $.PageDialog.fail("! تاماملاندى");
             window.location.href="{WEB_PATH}/mobile/home/";
         }else{
             $.PageDialog.fail(data);

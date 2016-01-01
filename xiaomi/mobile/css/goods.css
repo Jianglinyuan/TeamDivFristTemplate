@@ -791,7 +791,7 @@
 	color:#fff;
 	text-align:center;
 	background:#c75c5c;
-	padding:0 18px;
+	padding:0 10px;
 	height:25px;
 	line-height:25px;
 	display:inline-block;
@@ -1026,7 +1026,7 @@
 .pClosed {
 	height:39px;
 	line-height:36px;
-	font-size:18px;
+	font-size:16px;
 	color:#999;
 	text-align:center;
 }
@@ -1034,7 +1034,7 @@
 	height:42px;
 	line-height:42px;
 	padding:0 8px;
-	font-size:16px;
+	font-size:13px;
 	color:#c75c5c;
 	direction: rtl;
 }

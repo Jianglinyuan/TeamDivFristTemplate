@@ -63,7 +63,7 @@
 	    $sysj=$shop['xsjx_time']-time();
         {wc:php:end}         
         {wc:if $shop['xsjx_time'] < time()} 	
-	     <li class="m-xs-li" txt="{wc:$shop['time_H']}点">
+	     <li class="m-xs-li" txt="{wc:$shop['time_H']}">
             <div class="m-round limit-bd limit-End">
                 <div class="f-limit-time">
                     <span class="f-limit-time-date">جاكارلاندى</span>
@@ -77,7 +77,7 @@
                 <div class="limit-bd-con">
                     <p class="z-limit-tt">
                         <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/" class="gray6 z-tt">
-                            (第s{wc:$shop['qishu']}期){wc:$shop['title']}
+                            ({wc:$shop['qishu']}چى سان){wc:$shop['title']}
                         </a>
                     </p>
                     <p class="z-promo">
@@ -120,7 +120,7 @@
             </div>
         </li>
 	    {wc:else}
-        <li class="m-xs-li" txt="{wc:$shop['time_H']}点">
+        <li class="m-xs-li" txt="{wc:$shop['time_H']}">
             <div class="m-round limit-bd ">
                 <div name="timerItem" class="f-limit-time" time="{wc:$sysj}">
                     <span class="f-limit-time-date">
@@ -136,13 +136,13 @@
                 <div class="limit-bd-con">
                     <p class="z-limit-tt">
                         <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/" class="gray6 z-tt">
-                            (第{wc:$shop['qishu']}期){wc:$shop['title']}
+                            ({wc:$shop['qishu']}چى سان){wc:$shop['title']}
                         </a>
                     </p>
                     <p class="z-promo">:<em class="gray9">￥{wc:$shop['money']}</em>
                     </p>
                     <div class="Progress-bar">
-                        <p class="u-progress" title="已完成{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%">
+                        <p class="u-progress" title="{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%">
                             <span class="pgbar" style="width:width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;">
                                 <span class="pging"></span>
                             </span>
@@ -181,7 +181,7 @@
     </ul>
 </article>
 	    
-	<article class="clearfix mt10 m-round limit-tips">
+	<!--article class="clearfix mt10 m-round limit-tips">
 		<h3>限时揭晓规则</h3>
 		<div class="limit-tips-ct">
 			<p><s></s><b>所有限时揭晓商品，不管已参与人次是否达到总需参与人次，都按截止时间准时揭晓。</b></p>
@@ -193,7 +193,7 @@
 			  <em><span>2)</span><b>时间按时、分、秒、毫秒依次排列组成一组数值。</b></em>
 			  <em><span>3)</span><b>将这100组数值之和除以商品总需参与人次后取余数，余数加上10,000,001即为“幸运{wc:fun:_cfg('web_name_two')}码”。</b></em>
 		</div>
-	</article>
+	</article-->
 </section>
         
 {wc:templates "mobile/index","footer"}
