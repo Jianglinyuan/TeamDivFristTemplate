@@ -13,9 +13,10 @@ class index extends base {
 		//最新商品
 		$new_shop=$this->db->GetOne("select * from `@#_shoplist` where `pos` = '1' and `q_uid` is null ORDER BY `id` DESC LIMIT 1");
 		$newestshop=$this->db->GetList("select * from `@#_shoplist` where `q_uid` is null  ORDER BY `id` DESC LIMIT 20");
-
 		//已中奖订单-2016.1.1
-	        $ygchuanqi=$this->db->GetList("select * from `@#_member_go_record` where huode!=0  ORDER BY `id` DESC LIMIT 8");
+	    $ygchuanqi=$this->db->GetList("select * from `@#_member_go_record` where huode!=0  ORDER BY `id` DESC LIMIT 20");
+
+
 		//新品上架
 		// $new_shop1=$this->db->GetOne("select * from `@#_shoplist` where `sid` in (select id from `@#_shoplist` where `id` = `sid` ORDER BY `id` DESC ) and `q_uid` is null ORDER BY `id` DESC LIMIT 1");
 		$new_shop1=$this->db->GetOne("select * from `@#_shoplist` where `newpos`='1' and `q_uid` is null ORDER BY id DESC LIMIT 1");
@@ -89,7 +90,7 @@ class index extends base {
 		//他们正在云购
 		$go_record=$this->db->GetList("select `@#_member`.uid,`@#_member`.username,`@#_member`.email,`@#_member`.mobile,`@#_member`.img,`@#_member_go_record`.shopname,`@#_member_go_record`.shopid from `@#_member_go_record`,`@#_member` where `@#_member`.uid = `@#_member_go_record`.uid and `@#_member_go_record`.`status` LIKE '%已付款%'  ORDER BY `@#_member_go_record`.time DESC LIMIT 0,12");
 		//最新揭晓
-		$shopqishu=$this->db->GetList("select qishu,id,sid,thumb,title,q_uid,q_user from `@#_shoplist` where `q_end_time` is not null and `q_showtime` = 'N' ORDER BY `q_end_time` DESC LIMIT 5");
+		$shopqishu=$this->db->GetList("select q_user_code,zongrenshu,qishu,id,sid,thumb,title,q_uid,q_user from `@#_shoplist` where `q_end_time` is not null and `q_showtime` = 'N' ORDER BY `q_end_time` DESC LIMIT 5");
 		//云购动态
 		$tiezi=$this->db->GetList("select * from `@#_quanzi_tiezi` where `qzid` = '1' order by `time` DESC LIMIT 12");
 		//晒单分享
