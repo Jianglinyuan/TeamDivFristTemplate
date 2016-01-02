@@ -731,10 +731,6 @@ div.jqZoomBigPic img {
 	vertical-align:middle;
 	padding:30px 0 0 0;
 }
-.goods_loding img {
-	margin-right:5px;
-	vertical-align:middle;
-}
 .Pro_Detleft .middlePicBox em {
 	width:75px;
 	height:95px;
@@ -2157,9 +2153,7 @@ div.img-cell div.show-arrow {
 .fr {
 	float: right;
 }
-div#goodsDesc p {
-	text-align: center;
-}
 div#goodsDesc p img {
 	max-width: 1000px;
+	margin: 0 auto;
 }

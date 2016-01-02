@@ -5630,7 +5630,7 @@ body.f-width-change .g-special li em {
 	clear: both;
 }
 #sCartLoading {
-	text-align: right;
+	text-align: center;
 }
 #content {
 	/*text-align: right;*/
@@ -5680,4 +5680,8 @@ a.delGood {
 }
 dd.del {
 	margin-bottom: -18px;
+}
+.goods_loding img {
+    margin: 0 auto;
+    vertical-align: middle;
 }
