@@ -1,14 +1,6 @@
 <div class="site-footer">
     <div class="container">
-        <div class="footer-service">
-            <ul class="list-service clearfix">
-               <li><a rel="nofollow"  href="javascript:void(0);"> <i class="i1"></i><strong>诚信网站</strong></a></li>
-                <li><a rel="nofollow" href="javascript:;" ><i class="i2"></i><strong>可信网站</strong></a></li>
-                <li><a rel="nofollow" href="javascript:;" ><i class="i3"></i><strong>电子商务诚信网站</strong></a></li>
-                <li><a rel="nofollow" href="http://webscan.360.cn/index/checkwebsite/url/34qy.com" target="_blank" ><i class="i4"></i><strong>360安全检测</strong></a></li>
-                <li><a rel="nofollow" href="{WEB_PATH}/help/4" ><i class="i5"></i><strong>安全购物保障</strong></a></li>
-            </ul>
-        </div>
+
         <div class="footer-links clearfix">
 			{wc:getlist sql="select * from `@#_category` where `parentid`='1'" return="category"}
 			{wc:loop $category $help}
@@ -35,26 +27,18 @@
 				<a rel="nofollow" class="btn btn-primary btn-small" href="http://wpa.qq.com/msgrd?v=3&uin={wc:fun:_cfg("qq")}&site=qq&menu=yes" target="_blank">在线客服</a>
 			</div>
         </div>
-        <div class="footer-info clearfix">
-            <div class="info-text">
-                <p>	{wc:getlist sql="select * from `@#_link` where `type`='1'" return="category"}
-					{wc:loop $category $link}
-					<span class="sep">|</span><a href="{wc:$link['url']}" target="_blank">{wc:$link['name']}</a>
-					{wc:loop:end}
-					{wc:getlist:end}
-					<span class="sep">|</span><a href="{WEB_PATH}" target="_blank">{wc:fun:_cfg("web_name_two")}</a>：友情链接{wc:fun:_cfg("web_name_two")}
-				</p>
-                <p><a href="{WEB_PATH}" target="_blank" title="ibipai.com"></a>{wc:fun:_cfg('web_copyright')}
-</p>
-            </div>
-<!--             <div class="info-sites J_globalList">
-                <div class="global-site-current"><i>元</i><span id="spanFundTotal">0000000.00</span>￥：公益基金</div>
-            </div> -->
-            <!--div class="info-links">
-                <a href="https://ss.knet.cn/verifyseal.dll?sn=e12033011010015771301369&amp;ct=df&amp;pa=461082" target="_blank"><img src="http://s1.mi.com/zt/12052601/cnnicVerifyseal.png" alt="可信网站"></a>
-                <a href="https://search.szfw.org/cert/l/CX20120926001783002010" target="_blank"><img src="http://s1.mi.com/zt/12052601/szfwVerifyseal.gif" alt="诚信网站"></a>
-                <a href="http://www.315online.com.cn/member/315140007.html" target="_blank"><img src="http://s1.mi.com/zt/12052601/save.jpg" alt="网上交易保障中心"></a>
-            </div-->
+</div><div class="m-copyright">
+    <div class="g-wrap">
+    	<div class="m-copyright-logo">
+	    	<a href="http://www.163.com" target="_blank"><img width="130" src="http://mimg.127.net/logo/netease_logo-m.gif"></a>
+	    	<a href="http://1.163.com/" target="_blank"><img width="117" src="http://mimg.127.net/logo/yy_logo.gif"></a>
+	    </div>
+	    <div class="m-copyright-txt">
+	    	<p>DivTeam © 2015-2016 ICP广东110-12345678</p>
+	        <p><a href="*****" target="_blank">关于Div</a><a href="" target="_blank">关于DivTeam</a><a href="http://mail.blog.163.com/" target="_blank">Div官方博客</a><a href="*****" target="_blank">客户服务</a><a href="****" target="_blank">隐私政策</a></p>
+	    </div>
+    </div>
+</div>
         </div>
     </div>
 </div>
@@ -184,3 +168,4 @@ $(function(){
 
 </body>
 </html>
+

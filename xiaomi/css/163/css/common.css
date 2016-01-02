@@ -4374,7 +4374,8 @@ body {
 
 .m-instruction .g-main {
   width: 54%;
-  border-right: 1px solid #e2e2e2;
+  border-left: 1px solid #e2e2e2;
+  padding-left: 10px;
 }
 
 .m-instruction .g-side {
