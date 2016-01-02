@@ -86,7 +86,7 @@
 }
 .show_Period .Period_list li a:hover {
 	background:#fff;
-	color:#cc0033;
+	color:#db3652;
 }
 .show_Period li .period_Ongoing {
 	width:98px;
@@ -97,7 +97,7 @@
 	font-family:微软雅黑,宋体,Arial;
 	font-size:12px;
 	position:relative;
-	color:#cc0033;
+	color:#db3652;
 	display:inline-block;
 }
 .show_Period li .period_Ongoing i {
@@ -116,7 +116,7 @@
 	font-size:16px;
 	line-height:32px;
 	height:32px;
-	background:#cc0033;
+	background:#db3652;
 	color:#fff;
 	text-align:center;
 	display:inline-block;
@@ -437,9 +437,9 @@ div.jqZoomBigPic img {
 	height:49px;
 	line-height:49px;
 	text-align:center;
-	border:1px solid #cc0033;
+	border:1px solid #db3652;
 	border-bottom:1px solid #E85700;
-	background:#cc0033;
+	background:#db3652;
 	color:#fff;
 	border-radius:3px;
 	font-family:微软雅黑,黑体;
@@ -471,7 +471,7 @@ div.jqZoomBigPic img {
 }
 .Det_button .Det_Cart:hover {
 	background:#FFF4BF;
-	color:#cc0033;
+	color:#db3652;
 }
 .Det_button .Det_Cart i {
 	width:21px;
@@ -531,7 +531,7 @@ div.jqZoomBigPic img {
 	color:#999;
 }
 .Security li a:hover {
-	color:#cc0033;
+	color:#db3652;
 }
 .Security .Det_Share {
 	height:21px;
@@ -586,6 +586,7 @@ div.jqZoomBigPic img {
 .Pro_Record .Newest_Con li img {
 	vertical-align:middle;
 	border-radius: 50%;
+	display: inline-block;
 	/* margin-right:8px; */
 }
 .Pro_Record .Newest_Con li em {
@@ -648,8 +649,8 @@ div.jqZoomBigPic img {
 .My_RecordReg .My_Signbut {
 	width:70px;
 	padding:6px 0 6px 0;
-	border:1px solid #cc0033;
-	background:#cc0033;
+	border:1px solid #db3652;
+	background:#db3652;
 	color:#fff;
 	border-radius:3px;
 	font-size:12px;
@@ -838,8 +839,8 @@ div.jqZoomBigPic img {
 .End_Detailslist .go_Shopping12 {
 	padding:5px 13px 6px 13px;
 	_padding:6px 13px 5px 13px;
-	border:1px solid #cc0033;
-	background:#cc0033;
+	border:1px solid #db3652;
+	background:#db3652;
 	color:#fff;
 	border-radius:3px;
 	font-size:12px;
@@ -905,7 +906,7 @@ div.jqZoomBigPic img {
 	background:#fff;
 	line-height:52px;
 	font-size:60px;
-	color:#cc0033;
+	color:#db3652;
 }
 .Announced_FrameCode li b {
 	width:40px;
@@ -1058,7 +1059,7 @@ a.Announced_But:focus {
 }
 .Details_HotTj .HotTj_Con .name a:hover {
 	text-decoration:underline;
-	color:#cc0033;
+	color:#db3652;
 }
 .Details_HotTj .HotTj_Con .money {
 	font-family:arial;
@@ -1136,7 +1137,7 @@ a.Announced_But:focus {
 .DetailsT_TitP li.DetailsTCur {
 	font-size:18px;
 	height:34px;
-	color:#cc0033;
+	color:#db3652;
 	font-weight:bold;
 	line-height:30px;
 	border-top:3px solid #DB3752;
@@ -1178,7 +1179,7 @@ a.Announced_But:focus {
 	height:35px;
 	line-height:32px;
 	text-indent:1em;
-	border-top:2px solid #cc0033;
+	border-top:2px solid #db3652;
 	background:#F8F8F8;
 	border-left:1px solid #E4E4E4;
 	border-right:1px solid #E4E4E4;
@@ -1546,7 +1547,7 @@ a.Announced_But:focus {
 	height:36px;
 	line-height:36px;
 	padding-left:15px;
-	border-top:2px solid #cc0033;
+	border-top:2px solid #db3652;
 	border-left:1px solid #E4E4E4;
 	border-right:1px solid #E4E4E4;
 }
@@ -1606,7 +1607,7 @@ a.Announced_But:focus {
 }
 .list_goodsTj .Roll_Left a.Roll_enabled:hover,.list_goodsTj .Roll_Right a.Roll_enabled:hover {
 	background:#F6F6F6;
-	color:#cc0033;
+	color:#db3652;
 }
 .list_goodsTj .Roll_Con {
 	width:880px;
@@ -1661,7 +1662,7 @@ a.Announced_But:focus {
 }
 .list_goodsTjCon .name a:hover {
 	text-decoration:underline;
-	color:#cc0033;
+	color:#db3652;
 }
 .list_goodsTjCon .money {
 	font-family:宋体;
@@ -1679,8 +1680,8 @@ a.Announced_But:focus {
 .go_Shopping12 {
 	padding:5px 16px 6px 16px;
 	_padding:6px 16px 5px 16px;
-	border:1px solid #cc0033;
-	background:#cc0033;
+	border:1px solid #db3652;
+	background:#db3652;
 	color:#fff;
 	border-radius:3px;
 	font-size:12px;
@@ -1708,7 +1709,7 @@ a.go_Shopping12:hover {
 }
 .detail_Prompt dd b,.detail_Prompt dd span {
 	display:block;
-	color:#cc0033;
+	color:#db3652;
 	font-family:微软雅黑,宋体;
 }
 .detail_Prompt dd b {
@@ -1722,8 +1723,8 @@ a.go_Shopping12:hover {
 }
 .detail_Prompt .detail_Promptbut {
 	padding:5px 16px 6px 16px;
-	border:1px solid #cc0033;
-	background:#cc0033;
+	border:1px solid #db3652;
+	background:#db3652;
 	color:#fff;
 	border-radius:3px;
 	font-size:12px;
@@ -1770,7 +1771,7 @@ a.go_Shopping12:hover {
 	height:20px;
 }
 .Progress-bar .Pro-bar-li li.P-bar01 em {
-	color:#cc0033;
+	color:#db3652;
 }
 .Progress-bar .Pro-bar-li li.P-bar02 em {
 	color:#777;
@@ -1852,8 +1853,8 @@ a.go_Shopping12:hover {
 	overflow:hidden;
 	padding-left:10px;
 	padding-right:10px;
-	background-color:#cc0033;
-	border:1px solid #cc0033;
+	background-color:#db3652;
+	border:1px solid #db3652;
 	color:#FFF;
 	text-decoration:none;
 	border-radius:5px;
@@ -1872,7 +1873,7 @@ a.go_Shopping12:hover {
 	overflow:hidden;
 }
 .pages ul.pageULEx li a:hover {
-	color:#cc0033;
+	color:#db3652;
 	text-decoration:none;
 }
 .pages ul.pageULEx li.prev_page a {
@@ -1891,7 +1892,7 @@ a.go_Shopping12:hover {
 	display:inline-block;
 }
 .pages ul.pageULEx li.prev_page a:hover,.pages li.next_page a:hover {
-	color:#cc0033;
+	color:#db3652;
 	overflow:hidden;
 }
 .pages ul.pageULEx li.page_curgray a,.pages ul.pageULEx li.page_curgray a:hover {
@@ -2066,7 +2067,7 @@ a.go_Shopping12:hover {
 	width:55px;
 	height:20px;
 	line-height:20px;
-	background:#cc0033;
+	background:#db3652;
 	color:#fff;
 	font-weight:normal;
 	text-align:center;
@@ -2081,7 +2082,7 @@ a.go_Shopping12:hover {
 	margin:9px 0 0 0;
 }
 .Immediate em {
-	color:#cc0033;
+	color:#db3652;
 	font-family:Arial;
 	font-size:20px;
 	line-height:20px;
@@ -2090,13 +2091,13 @@ a.go_Shopping12:hover {
 }
 .Immediate span {
 	float:right;
-	color:#cc0033;
+	color:#db3652;
 	top:12px;
 	right:8px;
 	position:absolute;
 }
 .Immediate span a:hover {
-	color:#cc0033;
+	color:#db3652;
 	text-decoration:underline;
 }
 .detail-jd .detail-jd-pic {

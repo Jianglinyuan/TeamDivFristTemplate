@@ -56,134 +56,136 @@
     </div>
 </div>
 <!-- .site-topbar END -->
-<div class="site-header container">
-    <div id="header-left">
-        <div class="header-info">
-            <div class="search-section">
-                <div class="search-form clearfix">
-                    <input type="text" id="txtSearch" class="search-text" placeholder="搜索您需要的商品"/>
-                    <input type="button" id="butSearch" class="search-btn iconfont" value="&#xe630;"/>
-                    <!--[if IE 6]><div class="ie6-fix"></div><![endif]-->
-                    <div class="hot-words">
-                        <a href="{WEB_PATH}/goods_list/5/">手机</a><a href="{WEB_PATH}/goods_list/12/">苹果</a>
+
+<div class="header-wraper">
+    <div class="site-header container">
+        <div id="header-left">
+            <div class="header-info">
+                <div class="search-section">
+                    <div class="search-form clearfix">
+                        <input type="text" id="txtSearch" class="search-text" placeholder="搜索您需要的商品"/>
+                        <input type="button" id="butSearch" class="search-btn iconfont" value="&#xe630;"/>
+                        <!--[if IE 6]><div class="ie6-fix"></div><![endif]-->
+                        <div class="hot-words">
+                            <a href="{WEB_PATH}/goods_list/5/">手机</a><a href="{WEB_PATH}/goods_list/12/">苹果</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-section">
+                    <div class="mini_mycart" id="sCart">
+                        <a rel="nofollow" href="{WEB_PATH}/member/cart/cartlist" id="sCartNavi" class="mini-cart">
+                        (<span id="sCartTotal">0</span>) 购物车<i class="iconfont">&#xe609;</i></a>
+                        <div class="mini-cart-list" id="J_miniCartList">
+                            <div class="goods_loding" id="sCartLoading" style="display: none;">...数据加载中，请稍后<img border="0" alt="" src="{G_TEMPLATES_STYLE}/images/goods_loading.gif"></div>
+                            <div class="count clearfix"><span class="total">件商品 <em id="sCartTotal2">0</em> 共计<strong><em id="sCartTotalM">0</em> ：合计</strong></span><a href="{WEB_PATH}/member/cart/cartlist" class="btn btn-primary">去购物车结算</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="cart-section">
-                <div class="mini_mycart" id="sCart">
-                    <a rel="nofollow" href="{WEB_PATH}/member/cart/cartlist" id="sCartNavi" class="mini-cart">
-                    (<span id="sCartTotal">0</span>) 购物车<i class="iconfont">&#xe609;</i></a>
-                    <div class="mini-cart-list" id="J_miniCartList">
-                        <div class="goods_loding" id="sCartLoading" style="display: none;">...数据加载中，请稍后<img border="0" alt="" src="{G_TEMPLATES_STYLE}/images/goods_loading.gif"></div>
-                        <div class="count clearfix"><span class="total">件商品 <em id="sCartTotal2">0</em> 共计<strong><em id="sCartTotalM">0</em> ：合计</strong></span><a href="{WEB_PATH}/member/cart/cartlist" class="btn btn-primary">去购物车结算</a></div>
-                    </div>
+            <div class="open-buy-info">
+                <div class="number">
+                    <a href="{WEB_PATH}/buyrecord" target="_blank">
+                    <ul id="ulHTotalBuy">
+                        <li class="nobor gray6 u-secondary"><b><s></s></b>人次</li>
+                        <li class="num" style="display: none;"><cite><em>0</em></cite><i></i></li>
+                        <li class="num" style="display: none;"><cite><em>0</em></cite><i></i></li>
+                        <li class="num"><cite><em>0</em></cite><i></i></li>
+                        <li class="nobor">,</li>
+                        <li class="num"><cite><em>0</em></cite><i></i></li>
+                        <li class="num"><cite><em>0</em></cite><i></i></li>
+                        <li class="num"><cite><em>0</em></cite><i></i></li>
+                        <li class="nobor">,</li>
+                        <li class="num"><cite><em>0</em></cite><i></i></li>
+                        <li class="num"><cite><em>0</em></cite><i></i></li>
+                        <li class="num"><cite><em>0</em></cite><i></i></li>
+                        <li class="nobor gray6">累计参与</li>
+                            </ul>
+                            <!--ul id="ulHTotalBuy">
+                                <li class="nobor gray6">累计参与</li>
+                                <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                                <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                                <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                                <li class="nobor">,</li>
+                                <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                                <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                                <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                                <li class="nobor">,</li>
+                                <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                                <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                                <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
+                                <li class="nobor gray6 u-secondary">人次<b><s></s></b></li>
+                            </ul-->
+                            </a>
                 </div>
             </div>
         </div>
-        <div class="open-buy-info">
-            <div class="number">
-                <a href="{WEB_PATH}/buyrecord" target="_blank">
-                <ul id="ulHTotalBuy">
-                    <li class="nobor gray6 u-secondary"><b><s></s></b>人次</li>
-                    <li class="num" style="display: none;"><cite><em>0</em></cite><i></i></li>
-                    <li class="num" style="display: none;"><cite><em>0</em></cite><i></i></li>
-                    <li class="num"><cite><em>0</em></cite><i></i></li>
-                    <li class="nobor">,</li>
-                    <li class="num"><cite><em>0</em></cite><i></i></li>
-                    <li class="num"><cite><em>0</em></cite><i></i></li>
-                    <li class="num"><cite><em>0</em></cite><i></i></li>
-                    <li class="nobor">,</li>
-                    <li class="num"><cite><em>0</em></cite><i></i></li>
-                    <li class="num"><cite><em>0</em></cite><i></i></li>
-                    <li class="num"><cite><em>0</em></cite><i></i></li>
-                    <li class="nobor gray6">累计参与</li>
-                        </ul>
-                        <!--ul id="ulHTotalBuy">
-                            <li class="nobor gray6">累计参与</li>
-                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
-                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
-                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
-                            <li class="nobor">,</li>
-                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
-                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
-                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
-                            <li class="nobor">,</li>
-                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
-                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
-                            <li class="num"><cite><em>{wc:fun:go_count_renci()}</em></cite><i></i></li>
-                            <li class="nobor gray6 u-secondary">人次<b><s></s></b></li>
-                        </ul-->
-                        </a>
-            </div>
-        </div>
-    </div>
 
-    <div class="site-logo"><a class="logo" href="{G_WEB_PATH}/" title="{wc:fun:_cfg('web_name')}" style="background: url({G_UPLOAD_PATH}/{wc:fun:Getlogo()}) no-repeat;"><i class="iconfont">&#xe61d;</i></a></div>
+        <div class="site-logo"><a class="logo" href="{G_WEB_PATH}/" title="{wc:fun:_cfg('web_name')}" style="background: url({G_UPLOAD_PATH}/{wc:fun:Getlogo()}) no-repeat;"><i class="iconfont">&#xe61d;</i></a></div>
 
-    {wc:php:start}
-        if($this->db){
-                $cmodel=$this->db;
-        }else{
-                $cmodel=$mysql_model;
-        }
+        {wc:php:start}
+            if($this->db){
+                    $cmodel=$this->db;
+            }else{
+                    $cmodel=$mysql_model;
+            }
 
-        $two_cate_list = $cmodel->GetList("select cateid,parentid,name from `@#_category` where `model` = '1' and `parentid` = '0' order by `order` DESC");
-    {wc:php:end}
+            $two_cate_list = $cmodel->GetList("select cateid,parentid,name from `@#_category` where `model` = '1' and `parentid` = '0' order by `order` DESC");
+        {wc:php:end}
 
-<!-- 
-    <div class="header-nav clearfix">
-        <div id="J_categoryContainer" class="nav-category">
-            <a class="btn-category-list" href="{WEB_PATH}/goods_list">全部商品分类</a>
-            <div class="nav-category-section" style="display: none;">
-                <ul class="nav-category-list">
-                    {wc:loop $two_cate_list $key $catelist}
-                        {wc:php:start}
-                            $cate2 = $cmodel->GetList("select cateid,parentid,name from `@#_category` where `parentid` = '$catelist[cateid]' order by `order` DESC");
-                            $i=$key+1;
-                        {wc:php:end}
+    <!-- 
+        <div class="header-nav clearfix">
+            <div id="J_categoryContainer" class="nav-category">
+                <a class="btn-category-list" href="{WEB_PATH}/goods_list">全部商品分类</a>
+                <div class="nav-category-section" style="display: none;">
+                    <ul class="nav-category-list">
+                        {wc:loop $two_cate_list $key $catelist}
+                            {wc:php:start}
+                                $cate2 = $cmodel->GetList("select cateid,parentid,name from `@#_category` where `parentid` = '$catelist[cateid]' order by `order` DESC");
+                                $i=$key+1;
+                            {wc:php:end}
 
-                        <li class="nav-category-item">
-                            <div class="nav-category-content">
-                                <a class="title" href="{WEB_PATH}/goods_list/{wc:$catelist['cateid']}_0_0">{wc:$catelist['name']}</a>
-                                <div class="links">
+                            <li class="nav-category-item">
+                                <div class="nav-category-content">
+                                    <a class="title" href="{WEB_PATH}/goods_list/{wc:$catelist['cateid']}_0_0">{wc:$catelist['name']}</a>
+                                    <div class="links">
 
-                                    {wc:php:start}
+                                        {wc:php:start}
 
-                                    if(is_array($cate2)){
-                                    foreach($cate2 AS $bval){
-                                    {wc:php:end}
-                                    <a href="{WEB_PATH}/goods_list/{wc:$bval['cateid']}_0_0">{wc:$bval['name']}</a>
-                                    {wc:php:start}
-                                    }}
-                                    {wc:php:end}
+                                        if(is_array($cate2)){
+                                        foreach($cate2 AS $bval){
+                                        {wc:php:end}
+                                        <a href="{WEB_PATH}/goods_list/{wc:$bval['cateid']}_0_0">{wc:$bval['name']}</a>
+                                        {wc:php:start}
+                                        }}
+                                        {wc:php:end}
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                    {wc:loop:end}
+                            </li>
+                        {wc:loop:end}
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-main">
+                <ul class="nav-main-list J_menuNavMain clearfix">
+                    <li class="nav-main-item"><a href="{G_WEB_PATH}/"><span class="text">首页</span></a></li>
+                {wc:php:start}
+                    if($this->db){
+                            $cmodel=$this->db;
+                    }else{
+                            $cmodel=$mysql_model;
+                    }
+
+                    $nav_list = $cmodel->GetList("SELECT url,name FROM `@#_navigation` where `status`='Y' and type='index' order by `order`");
+                {wc:php:end}
+                {wc:loop $nav_list $key $nav}
+                    <li class="nav-main-item"><a href="{WEB_PATH}{wc:$nav['url']}"><span class="text">{wc:$nav['name']}</span></a></li>
+                {wc:loop:end}
                 </ul>
             </div>
-        </div>
-        <div class="nav-main">
-            <ul class="nav-main-list J_menuNavMain clearfix">
-                <li class="nav-main-item"><a href="{G_WEB_PATH}/"><span class="text">首页</span></a></li>
-            {wc:php:start}
-                if($this->db){
-                        $cmodel=$this->db;
-                }else{
-                        $cmodel=$mysql_model;
-                }
-
-                $nav_list = $cmodel->GetList("SELECT url,name FROM `@#_navigation` where `status`='Y' and type='index' order by `order`");
-            {wc:php:end}
-            {wc:loop $nav_list $key $nav}
-                <li class="nav-main-item"><a href="{WEB_PATH}{wc:$nav['url']}"><span class="text">{wc:$nav['name']}</span></a></li>
-            {wc:loop:end}
-            </ul>
-        </div>
-    </div> -->
-    
-</div>
-<div class="m-nav">
+        </div> -->
+        
+    </div>
+    <div class="m-nav">
             <div class="g-wrap f-clear">
                 <div class="m-catlog">
                     <div class="m-catlog-hd" style="padding-left:30px;cursor:pointer">
@@ -239,6 +241,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 <!-- .site-header END -->
  <script language="javascript" type="text/javascript">

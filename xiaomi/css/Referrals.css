@@ -2,7 +2,7 @@
 	color:#999;
 }
 .orange {
-	color:#cc0033;
+	color:#db3652;
 }
 .hidden {
 	display:none;
@@ -132,7 +132,7 @@
 	font-size:16px;
 }
 .process_con a {
-	color:#cc0033;
+	color:#db3652;
 	text-decoration:underline;
 }
 .referrals_banner {
@@ -322,5 +322,5 @@ a.Myahoo {
 	background-position:-584px -90px;
 }
 a.M126:hover,a.M163:hover,a.Mmsn:hover,a.Msohu:hover,a.Mgmail:hover,a.Msina:hover,a.Myahoo:hover {
-	border:1px solid #cc0033;
+	border:1px solid #db3652;
 }

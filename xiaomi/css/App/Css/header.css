@@ -33,7 +33,7 @@ a:active {
 	star:expression(this.onFocus=this.blur());
 }
 a:hover {
-	color:#cc0033;
+	color:#db3652;
 	outline:none;
 }
 i,em {
@@ -79,7 +79,7 @@ i,em {
 	color:#bbb;
 }
 .Current_nav a:hover {
-	color:#cc0033;
+	color:#db3652;
 }
 .white {
 	color:#fff;
@@ -92,7 +92,7 @@ a.red:hover {
 	color:#f00;
 }
 .orange {
-	color:#cc0033;
+	color:#db3652;
 }
 .blue {
 	color:#2af;
@@ -305,7 +305,7 @@ a.blue:hover {
 	overflow:hidden;
 	display:inline-block;
 	background-position:0 -238px;
-	background-color:#cc0033;
+	background-color:#db3652;
 	position:absolute;
 	top:0;
 	right:0;
@@ -331,7 +331,7 @@ a.blue:hover {
 }
 .Roll_mycart li.Roll_CartMore a:hover {
 	background:#e8e8e8;
-	color:#cc0033;
+	color:#db3652;
 }
 .Roll_mycart li.Roll_CartMore a i {
 	font-weight:bold;
@@ -347,7 +347,7 @@ a.blue:hover {
 	padding-right:8px;
 }
 .Roll_mycart p span {
-	color:#cc0033;
+	color:#db3652;
 }
 .Roll_mycart h3 {
 	height:26px;
@@ -365,7 +365,7 @@ a.blue:hover {
 	cursor:pointer;
 	font-family:微软雅黑;
 	font-size:14px;
-	background:#cc0033;
+	background:#db3652;
 	border-radius:3px;
 	float:right;
 	padding:2px 0 5px;
@@ -450,7 +450,7 @@ a.blue:hover {
 	color:#666;
 }
 .head_top .collect a:hover {
-	color:#cc0033;
+	color:#db3652;
 }
 .head_top .Ht-qqicon {
 	float:left;
@@ -474,7 +474,7 @@ a.blue:hover {
 	padding-left:15px;
 }
 .gray_info a:hover,.Ht-qqicon a:hover {
-	color:#cc0033;
+	color:#db3652;
 }
 .login_info .h_1yyg {
 	margin-top:0;
@@ -674,17 +674,17 @@ a.blue:hover {
 .login_info .h_inv a,.login_info .h_inv a:visited {
 	background-position:0 -141px;
 	padding-left:17px;
-	color:#cc0033;
+	color:#db3652;
 }
 .login_info .h_inv a:hover {
 	background-position:0 -159px;
-	color:#cc0033;
+	color:#db3652;
 }
 .login_info .h_1yyg a,.login_info .h_1yyg a:visited,.login_info .h_news a,.login_info .h_news a:visited,.login_info .h_inv a,.login_info .h_inv a:visited,.login_info .h_help a,.h_help .h_1yyg a:visited,.login_info .h_Mobile a,.login_info .h_Mobile a:visited {
 	color:#666;
 }
 .login_info .h_1yyg a:hover,.login_info .h_news a:hover,.login_info .h_inv a:hover,.login_info .h_help a:hover,.login_info .h_Mobile a:hover {
-	color:#cc0033;
+	color:#db3652;
 }
 .login_info .h_tel {
 	height:15px;
@@ -697,7 +697,7 @@ a.blue:hover {
 .login_info .h_tel b {
 	width:138px;
 	display:block;
-	color:#cc0033;
+	color:#db3652;
 	line-height:20px;
 	margin-top:-3px;
 	font-family:Arial;
@@ -845,7 +845,7 @@ a.blue:hover {
 	color:#999;
 }
 .head_search .keySearch a:hover {
-	color:#cc0033;
+	color:#db3652;
 }
 .head_nav ul.nav_list li.home-back {
 	width:86px;
@@ -889,12 +889,12 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	height:35px;
 	position:relative;
 	z-index:19;
-	background:#cc0033;
+	background:#db3652;
 }
 .head_nav .nav_center {
 	width:980px;
 	height:33px;
-	background:#cc0033;
+	background:#db3652;
 	margin:0 auto;
 	position:relative;
 	z-index:19;
@@ -903,7 +903,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	float:left;
 	width:749px;
 	height:35px;
-	background:#cc0033;
+	background:#db3652;
 	margin:0;
 	overflow:hidden;
 }
@@ -921,7 +921,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	font-size:14px;
 	font-family:微软雅黑,宋体;
 	color:#fff;
-	border:1px solid #cc0033;
+	border:1px solid #db3652;
 }
 .head_nav .nav_list li a:hover {
 	background:#FF4800;
@@ -1034,7 +1034,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	display:inline-block;
 }
 .nav_class li a:hover {
-	color:#cc0033;
+	color:#db3652;
 }
 .mycart_list {
 	width:250px;
@@ -1098,11 +1098,11 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	background:none;
 }
 .head_nav .nav_center .mycart_list dl dd.title a:hover {
-	color:#cc0033;
+	color:#db3652;
 	text-decoration:underline;
 }
 .mycart_list dl dd.title span {
-	color:#cc0033;
+	color:#db3652;
 	line-height:20px;
 }
 .mycart_list dl dd.del {
@@ -1119,7 +1119,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	background:none;
 }
 .mycart_list dl dd.del a:hover {
-	color:#cc0033;
+	color:#db3652;
 	text-decoration:underline;
 }
 .mycart_list p {
@@ -1128,7 +1128,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	color:#999;
 }
 .mycart_list p span {
-	color:#cc0033;
+	color:#db3652;
 }
 .mycart_list h3 {
 	height:30px;
@@ -1144,7 +1144,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	cursor:pointer;
 	font-family:微软雅黑;
 	font-size:14px;
-	background:#cc0033;
+	background:#db3652;
 	border-radius:3px;
 	float:right;
 	padding:3px 0 5px;
@@ -1306,7 +1306,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	color:#9F9F9F;
 }
 .footservice a:hover,.footer a:hover {
-	color:#cc0033;
+	color:#db3652;
 	text-decoration:underline;
 }
 .service_date {
@@ -1321,7 +1321,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	padding:5px 0 0 15px;
 	height:43px;
 	text-align:left;
-	background:#cc0033;
+	background:#db3652;
 	border-radius:2px;
 	display:block;
 	float:left;
@@ -1547,7 +1547,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	margin-top:0;
 }
 .hCollect li a:hover {
-	color:#cc0033;
+	color:#db3652;
 }
 .hUnfold {
 	display:inline-block;
@@ -1701,7 +1701,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	margin-left:5px;
 }
 .hAddInfo input.hbtn1 {
-	background:#cc0033;
+	background:#db3652;
 }
 .hAddInfo input.hbtn1:hover {
 	background:#f40;
