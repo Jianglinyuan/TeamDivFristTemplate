@@ -89,7 +89,7 @@
 	color:#43b6ff;
 }
 .recordList ul li a:hover {
-	color:#cc0033;
+	color:#db3652;
 	text-decoration:underline;
 }
 .recordList ul li.price {
@@ -193,11 +193,11 @@
 	font-size:14px;
 	font-family:Arial,Helvetica,sans-serif;
 	font-weight:bold;
-	color:#cc0033;
+	color:#db3652;
 }
 .select li label strong {
 	font-family:"宋体";
-	color:#cc0033;
+	color:#db3652;
 }
 .select li.rdoCheck {
 	border:#bebebe 1px solid;
@@ -218,7 +218,7 @@
 	border:#d6d3d6 1px solid;
 	padding:0 3px;
 	margin-right:5px;
-	color:#cc0033;
+	color:#db3652;
 	position:relative;
 	top:1px;
 	_top:3px;
@@ -370,7 +370,7 @@ p.leix {
 	font-weight:bold;
 }
 .charge_money_list .imm:hover {
-	background: #cc0033;
+	background: #db3652;
 	color: #fff;
 }
 .prompt_box {
@@ -401,7 +401,7 @@ p.leix {
 	color:#1070C4;
 }
 .prompt_box p a:hover {
-	color:#cc0033;
+	color:#db3652;
 }
 .prompt_box ul {
 	width:280px;

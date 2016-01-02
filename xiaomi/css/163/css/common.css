@@ -2312,7 +2312,7 @@ img {
 
 .w-gallery {
   width: 430px;
-  height: 478px;
+  /*height: 478px;*/
   position: relative;
   overflow: hidden;
 }
@@ -3837,7 +3837,7 @@ a.w-tag:hover {
 
 body {
   min-width: 1220px;
-  background-color: #f5f5f5;
+  /*background-color: #f5f5f5;*/
 }
 
 .g-header {
@@ -4374,7 +4374,8 @@ body {
 
 .m-instruction .g-main {
   width: 54%;
-  border-right: 1px solid #e2e2e2;
+  border-left: 1px solid #e2e2e2;
+  padding-left: 10px;
 }
 
 .m-instruction .g-side {

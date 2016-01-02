@@ -1,4 +1,4 @@
-{wc:templates "index","header"}
+{wc:templates "index","pagehead"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
 <div class="container breadcrumbs"><span>我的订单</span><span class="sep">/</span><a href="/">首页</a></div>
 <div class="container">
@@ -38,7 +38,7 @@
 														<li class="first clearfix">
 															<a title="" target="_blank" class="pic" href="{WEB_PATH}/dataserver/{wc:$rt['shopid']}_{wc:$rt['shopqishu']}"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:$jiexiao['thumb']}"></a>
 															<a target="_blank" href="{WEB_PATH}/dataserver/{wc:$rt['shopid']}_{wc:$rt['shopqishu']}" class="goods-name">{wc:$rt['shopname']}</a>
-															<span class="goods-price">您当前购买的是第{wc:$rt['shopqishu']}期，共<em style="color:#cc0033;">{wc:$rt['gonumber']}</em>人次，小计：{wc:$rt['gonumber']}元</span>
+															<span class="goods-price">您当前购买的是第{wc:$rt['shopqishu']}期，共<em style="color:#db3652;">{wc:$rt['gonumber']}</em>人次，小计：{wc:$rt['gonumber']}元</span>
 															<span class="goods-link"></span>
 														</li>
 													</ul>
@@ -70,7 +70,7 @@
 														<li class="first clearfix">
 															<a title="" target="_blank" class="pic" href="{WEB_PATH}/goods/{wc:$rt['shopid']}"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:$jiexiao['thumb']}"></a>
 															<a target="_blank" href="{WEB_PATH}/goods/{wc:$rt['shopid']}" class="goods-name">{wc:$rt['shopname']}</a>
-															<span class="goods-price">您当前购买的是第{wc:$rt['shopqishu']}期，共<em style="color:#cc0033;">{wc:$rt['gonumber']}</em>人次</span>
+															<span class="goods-price">您当前购买的是第{wc:$rt['shopqishu']}期，共<em style="color:#db3652;">{wc:$rt['gonumber']}</em>人次</span>
 															<span class="goods-link"></span>
 														</li>
 													</ul>

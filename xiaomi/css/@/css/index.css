@@ -254,7 +254,7 @@
 	display: inline;
 }
 .handle-box a.hover {
-	background: #cc0033;
+	background: #db3652;
 	filter: alpha(opacity=100);
 	-moz-opacity: 1;
 	-khtml-opacity: 1;
@@ -294,7 +294,7 @@
 	color: #333;
 }
 .commodity li.comm-info a:hover {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: underline;
 }
 .commodity li.comm-info p {
@@ -420,7 +420,7 @@
 	cursor: pointer;
 }
 .honesty li a:hover {
-	color: #cc0033;
+	color: #db3652;
 }
 .honesty li i {
 	display: block;
@@ -509,7 +509,7 @@
 	margin-left: 10px;
 }
 .index_news dd a:hover {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: underline;
 }
 .index_news .u-loading-2014 {
@@ -571,7 +571,7 @@
 }
 .m-other a {
 	float: left;
-	color: #cc0033;
+	color: #db3652;
 	font-size: 14px;
 }
 .m-other a:hover {
@@ -592,7 +592,7 @@
 .m-other a.u-more:hover {
 	background-position: -132px -40px;
 	text-decoration: none;
-	color: #cc0033;
+	color: #db3652;
 }
 .g-list {
 	clear: both;
@@ -697,7 +697,7 @@
 	color: #333;
 }
 .g-list dd.u-name a:hover {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: underline;
 }
 .g-list dd.gray {
@@ -710,7 +710,7 @@
 .g-list li.current {
 	width: 236px;
 	height: 311px;
-	border: 1px solid #cc0033;
+	border: 1px solid #db3652;
 	position: relative;
 	padding: 0;
 }
@@ -745,7 +745,7 @@
 	height: 34px;
 	line-height: 34px;
 	text-align: center;
-	background: #cc0033;
+	background: #db3652;
 	font-size: 14px;
 	color: #fff;
 	margin-top: 4px;
@@ -851,7 +851,7 @@
 	z-index: 2;
 }
 .g-hotL-hover .g-hotL-con {
-	border: 1px solid #cc0033;
+	border: 1px solid #db3652;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -860,7 +860,7 @@
 	box-shadow: 3px 3px 3px #d8d8d8;
 }
 .g-hotL .g-hotL-list .g-hotL-con:hover {
-	border: 1px solid #cc0033;
+	border: 1px solid #db3652;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -897,7 +897,7 @@
 	color: #333;
 }
 .g-hotL-list li.g-hot-name a:hover {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: underline;
 }
 .g-hotL-list li.gray {
@@ -966,7 +966,7 @@ dl.m-progress dt b {
 	font-size: 14px;
 }
 .m-progress dd span.orange em {
-	color: #cc0033;
+	color: #db3652;
 }
 .m-progress dd span.gray6 em {
 	color: #666;
@@ -981,7 +981,7 @@ dl.m-progress dt b {
 	height: 35px;
 	line-height: 35px;
 	border-radius: 3px;
-	background: #cc0033;
+	background: #db3652;
 	color: #fff;
 	font-size: 16px;
 	text-align: center;
@@ -1105,7 +1105,7 @@ dl.m-progress dt b {
 	font-size: 14px;
 }
 .g-hotR a.u-ongoing:hover, .g-hotR .u-see100 a:hover {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: underline;
 }
 .m-sort {
@@ -1132,8 +1132,8 @@ dl.m-progress dt b {
 	font-size: 14px;
 }
 .m-sort .fr a:hover {
-	color: #cc0033;
-	border: 1px solid #cc0033;
+	color: #db3652;
+	border: 1px solid #db3652;
 }
 .announced-soon {
 	width: 1188px;
@@ -1164,7 +1164,7 @@ dl.m-progress dt b {
 	position: absolute;
 	left: 0;
 	top: -1px;
-	border: 1px solid #cc0033;
+	border: 1px solid #db3652;
 	overflow: hidden;
 	-moz-box-shadow: 3px 3px 3px #d8d8d8;
 	-webkit-box-shadow: 3px 3px 3px #d8d8d8;
@@ -1179,7 +1179,7 @@ dl.m-progress dt b {
 	position: absolute;
 	left: 0;
 	top: -1px;
-	border: 1px solid #cc0033;
+	border: 1px solid #db3652;
 	overflow: hidden;
 	-moz-box-shadow: 3px 3px 3px #d8d8d8;
 	-webkit-box-shadow: 3px 3px 3px #d8d8d8;
@@ -1213,7 +1213,7 @@ dl.m-progress dt b {
 	font-size: 14px;
 }
 .soon-list li.soon-list-name a:hover {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: underline;
 }
 .soon-list li.gray {
@@ -1250,7 +1250,7 @@ dl.m-progress dt b {
 .soon-list li a.u-now {
 	float: right;
 	width: 136px;
-	background: #cc0033;
+	background: #db3652;
 	color: #fff;
 	font-size: 16px;
 	margin: 0 31px 0 7px;
@@ -1350,7 +1350,7 @@ dl.m-progress dt b {
 	text-align: center;
 }
 .check-out a:hover {
-	color: #cc0033;
+	color: #db3652;
 }
 .g-single-sun {
 	clear: both;
@@ -1440,7 +1440,7 @@ dl.m-progress dt b {
 	color: #333;
 }
 .singleL dd p cite a:hover {
-	color: #cc0033;
+	color: #db3652;
 }
 .singleL dd span a:hover, .singleL dd p cite a:hover {
 	text-decoration: underline;
@@ -1518,7 +1518,7 @@ dl.m-progress dt b {
 	font-size: 14px;
 }
 .singleR a:hover p, .singleR a p:hover {
-	color: #cc0033 !important;
+	color: #db3652 !important;
 	text-decoration: underline !important;
 	cursor: pointer;
 }

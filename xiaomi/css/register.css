@@ -51,7 +51,7 @@
 	background-position:0 0;
 }
 .login_process li.login_processCur {
-	color:#cc0033;
+	color:#db3652;
 }
 .login_process li.login_arrow {
 	text-align:center;
@@ -100,7 +100,7 @@
 	line-height:33px;
 	padding-left:3px;
 	_padding-left:5px;
-	border:2px solid #cc0033;
+	border:2px solid #db3652;
 	font-family:Arial;
 	font-size:14px;
 	background:#FFFAF6;
@@ -304,8 +304,8 @@
 }
 
 .login_Email_but {
-	background:#cc0033;
-	border:1px solid #cc0033;
+	background:#db3652;
+	border:1px solid #db3652;
 	color:#fff;
 	font-size:14px;
 	font-weight:bold;
@@ -314,7 +314,7 @@
 	padding:0 15px;
 }
 .login_Email_but:hover {
-	background:#cc0033;
+	background:#db3652;
 	color:#fff;
 }
 a.login_Email_butClick {
@@ -356,8 +356,8 @@ a.login_Sendoutbut {
 	_line-height:22px;
 }
 .login_SendoutbutClick {
-	background:#cc0033;
-	border:1px solid #cc0033;
+	background:#db3652;
+	border:1px solid #db3652;
 	color:#fff;
 	font-size:12px;
 	height:25px;
