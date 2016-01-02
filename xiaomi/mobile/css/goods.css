@@ -45,10 +45,10 @@
 	text-align:center;
 }
 .goodsNav li.current a {
-	color:#c75c5c;
+	color:#db3652;
 	height:34px;
 	line-height:34px;
-	border-bottom:2px solid #c75c5c;
+	border-bottom:2px solid #db3652;
 	text-align: center;
 }
 .goodsNav li b {
@@ -91,10 +91,10 @@
 	left:5px;
 }
 .goodsNav a s.orange {
-	border-top-color:#c75c5c;
+	border-top-color:#db3652;
 }
 .goodsNav a em.orange {
-	border-bottom-color:#c75c5c;
+	border-bottom-color:#db3652;
 }
 .goodsNav s.arrowUp {
 	border:4px solid transparent;
@@ -174,7 +174,7 @@
 	background-position:-19px -117px;
 }
 .goodsNav lidl dd.sOrange a {
-	color:#c75c5c;
+	color:#db3652;
 }
 .goodsNav li dl dd.sOrange b.g1 {
 	background-position:0 0;
@@ -268,7 +268,7 @@
 	position:absolute;
 	right:-47px;
 	top:-10px;
-	background-color:#c75c5c;
+	background-color:#db3652;
 	border-radius:3px;
 }
 .goodsList .goodsListR a.add s {
@@ -294,7 +294,7 @@
 	font-size:10px;
 }
 .goodsList .pLimitedTime {
-	background:#c75c5c;
+	background:#db3652;
 }
 .goodsList .pNewProducts {
 	background:#3b0;
@@ -347,12 +347,12 @@
 .pNav ul.slides li.cur {
 	background:#f4f4f4;
 	border-bottom:3px solid #f4f4f4;
-	font-size:16px;
+	font-size:14px;
 }
 .pNav ul.slides li.cur a {
 	display:block;
 	padding:0 20px;
-	color:#c75c5c;
+	color:#db3652;
 }
 .pNav ul.slides li a.theLeft {
 	padding-left:21px;
@@ -771,7 +771,6 @@
 	border-left:1px solid #eee;
 	padding-top:10px;
 	height:62px;
-	direction: rtl;
 }
 .pResultsR .g-snav-lst dd {
 	margin-top:5px;
@@ -790,7 +789,7 @@
 	text-indent:0;
 	color:#fff;
 	text-align:center;
-	background:#c75c5c;
+	background:#db3652;
 	padding:0 10px;
 	height:25px;
 	line-height:25px;
@@ -865,7 +864,7 @@
 .pCountDown {
 	width:278px;
 	margin:20px auto 0;
-	background:#c75c5c;
+	background:#db3652;
 	border-radius:5px;
 	padding:7px 15px 7px 7px;
 }
@@ -892,7 +891,7 @@
 	font-size:16px;
 }
 .status1 em {
-	color:#c75c5c;
+	color:#db3652;
 }
 .status2 {
 	text-align:center;
@@ -961,7 +960,7 @@
 	display:inline-block;
 	padding:3px 10px;
 	box-shadow:0 1px 2px #c1bfa1;
-	background:#c75c5c;
+	background:#db3652;
 	color:#fff;
 	border-radius:20px;
 	position:relative;
@@ -995,7 +994,7 @@
 }
 .pSurplus span {
 	display:inline-block;
-	background:#c75c5c;
+	background:#db3652;
 	padding:0 8px;
 	height:18px;
 	line-height:18px;
@@ -1010,7 +1009,7 @@
 }
 .pSurplus em {
 	font-family:Arial;
-	color:#c75c5c;
+	color:#db3652;
 	font-size:16px;
 	margin:0 5px;
 }
@@ -1035,7 +1034,7 @@
 	line-height:42px;
 	padding:0 8px;
 	font-size:13px;
-	color:#c75c5c;
+	color:#db3652;
 	direction: rtl;
 }
 .pOngoing em {
@@ -1048,10 +1047,10 @@
 	line-height:28px;
 	font-size:14px;
 	text-align:center;
-	background:#c75c5c;
+	background:#db3652;
 	color:#fff;
 	border-radius:5px;
 	margin-top:5px;
-	border:1px solid #c75c5c;
+	border:1px solid #db3652;
 	float: left;
 }

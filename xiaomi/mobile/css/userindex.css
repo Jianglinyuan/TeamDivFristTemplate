@@ -77,10 +77,10 @@
 }
 .g-snav span.mCurr {
 	background:#fff;
-	border-bottom:2px solid #c75c5c;
+	border-bottom:2px solid #db3652;
 }
 .g-snav span.mCurr a {
-	color:#c75c5c;
+	color:#db3652;
 }
 .mBuyRecord {
 	clear:both;

@@ -11,7 +11,7 @@
 	text-align:right;
 }
 .g-Total a.z-Btn-js {
-	background:#c75c5c;
+	background:#db3652;
 	border-radius:3px;
 	padding:0 14px;
 	color:#fff;
@@ -120,7 +120,7 @@
 .z-Cart-tips {
 	border:1px solid #ffd8c1;
 	background:#fffacd;
-	color:#c75c5c;
+	color:#db3652;
 	text-align:center;
 	line-height:25px;
 	margin-top:-1px;
@@ -207,7 +207,7 @@ a.z-pay-Recharge {
 	float:right;
 	text-align:center;
 	margin-top:4px;
-	color:#c75c5c;
+	color:#db3652;
 }
 .g-bank-ct b.z-arrow, .g-bank-ct s.z-arrow {
 	float:right;

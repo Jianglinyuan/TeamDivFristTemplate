@@ -338,7 +338,7 @@
 	background: #fff;
 	border: 1px solid #C2C2C2;
 	border-radius: 3px;
-	color: #c75c5c;
+	color: #db3652;
 }
 .m-share-btn .z-btn-mood s, .m-share-btn .z-btn-comment s, .m-share-btn .z-btn-Share s {
 	display: inline-block;
@@ -346,8 +346,8 @@
 	vertical-align: -3px;
 }
 .m-share-btn .z-btn-mood {
-	background: #c75c5c;
-	border: 1px solid #c75c5c;
+	background: #db3652;
+	border: 1px solid #db3652;
 	color: #fff;
 }
 .m-share-btn .z-btn-moodgray {

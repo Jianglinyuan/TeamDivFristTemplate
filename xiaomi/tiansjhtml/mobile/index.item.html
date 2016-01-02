@@ -29,7 +29,7 @@
 	    <!-- 导航 -->
         <div id="divPeriod" class="pNav">
             <div class="loading"><b></b>...ئېچىلىۋاتىدۇ</div>
-    	    <ul class="slides">
+    	    <ul class="slides" style="font-size:14px;">
     	       {wc:$loopqishu}
             </ul>
         </div>
@@ -53,7 +53,7 @@
                     <div class="g-snav">
                       
                         <div class="g-snav-lst">جاكارلىنىدىغان ۋاقىت<br><dd class="gray9"><span>{wc:fun:microt($item['q_end_time'])}</span></dd></div>
-                        <div class="g-snav-lst">{wc:fun:_cfg('web_name_two')}ۋاقىت<br><dd class="gray9"><span>{wc:fun:microt($gorecode['time'])}</span></dd></div>
+                        <div class="g-snav-lst">سېتىۋالغان ۋاقىت<br><dd class="gray9"><span>{wc:fun:microt($gorecode['time'])}</span></dd></div>
                     </div>
                 </div>
 				    <p>جەمئىى سېتىۋېلىش：<b class="orange">{wc:$gorecode_count}قېتىم سانى</b></p>
@@ -159,7 +159,7 @@
 					</dd>
                     <dd>جەمئىى سېتىۋېلىش：<em class="orange arial">{wc:$countall['num']}</em>قېتىم سان</dd>
                     <dd>تەلەيلىك نۇمۇر：<em class="orange arial">{wc:$gorecode['huode']}</em></dd>
-                    <dd>جاكارلىنىش ۋاقتى：{wc:fun:microt($itemlist[0]['q_end_time'])}</em></dd>
+                    <dd style="direction:ltr;">جاكارلىنىش ۋاقتى：{wc:fun:microt($itemlist[0]['q_end_time'])}</em></dd>
                     <dd>سېتىۋالغان ۋاقىت：{wc:fun:microt($gorecode['time'])}</dd>
                 </li>
             </ul>
