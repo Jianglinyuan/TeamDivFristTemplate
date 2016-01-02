@@ -577,11 +577,17 @@ dl.goods-info-box .goods-info-foot a:hover {
     border: 1px solid #ddd;
     border-radius: 2px;
 }
+.avatar a img {
+	width: 90px;
+	height: 90px;
+}
 .box-bd dl dd p.title {
     margin-bottom: 5px;
     width: 100%;
     line-height: 30px;
     border-bottom: 1px dashed #ddd;
+    height: 30px;
+    direction: rtl;
 }
 .box-bd ul li:hover img {
 	border: 1px solid #dfdfdf
@@ -1921,6 +1927,22 @@ img.zoom-tiny-image {
 .w-button-main:hover {
 	background-color: #e14a63;
 }
+.w-button-simple {
+    padding: 0 8px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: "Verdana";
+    color: #808080;
+    border: 1px solid #d8d8d8;
+    border-radius: 2px;
+    background: #f6f6f6;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#eeeeee));
+    background: -moz-linear-gradient(top,#ffffff,#eeeeee);
+    background: -o-linear-gradient(top,#ffffff,#eeeeee);
+    background: -ms-linear-gradient(top,#ffffff,#eeeeee);
+}
 .w-button-xl {
 	width: 132px;
     padding: 0 35px;
@@ -1929,8 +1951,8 @@ img.zoom-tiny-image {
     font-size: 18px;
     border-radius: 4px;
 }
-.w-button:hover, .w-button:focus {
-	color: #fff;
+.w-button-simple:hover {
+	background: #fff;
 }
 .btn-dake:hover {
 	background-color: #4ea5fb;
@@ -1958,4 +1980,11 @@ i.arrow-right {
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent;
 	border-left: 7px solid #f4f4f4;
+}
+.m-detail-period-main-wrap .gray02 p:not(.title) {
+	line-height: 24px;
+}
+.last-winner {
+	text-align: center;
+	margin-top: 20px;
 }

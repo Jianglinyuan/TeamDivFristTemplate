@@ -53,7 +53,7 @@
 						});
 
 						$('.goods-info-head-userfaq .mail').dotdotdot();
-						$('#goodsName').dotdotdot();
+						$('#goodsName, .gray02 .title').dotdotdot();
 					});
 				</script>
 
@@ -157,9 +157,20 @@
 		                        {wc:if $sid_go_record['ip']} 
 		                        {wc:fun:get_ip($sid_go_record['id'],'ipcity')} 
 		                        {wc:if:end}
-    							<p>揭晓时间：{wc:fun:microt($sid_code['q_end_time'])}</p>
 
+		                        {wc:php:start} 
+		                        	$len = strlen($sid_code['q_uid']);
+									$uid = '';
+									for ($i=0; $i<8-$len; $i++) {
+										$uid = $uid.'0';
+									}
+									$uid = $uid.$sid_code['q_uid'];
+								{wc:php:end}
+		                        <p>用户ID：{wc:$uid}</p>
 		                        <p>幸运拍码：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
+    							<p>揭晓时间：{wc:fun:microt($sid_code['q_end_time'])}</p>
+								
+								<div class="last-winner"><a id="detail" class="w-button w-button-simple">查看详情</a></div>
 		                    </dd>
 		                </dl>
 		                {wc:if:end}
@@ -565,6 +576,11 @@ $(function() {
 
 	$('a#btnUserBuyMore').click(function() {
 		$('a[data-goto="All_RecordT"]').click();
+	});
+
+	$('#detail').click(function() {
+		var href = $('.Period_list li').eq(1).find('a').attr('href');
+		$(this).attr('href', href);
 	});
 })
 </script> 

@@ -139,10 +139,10 @@ a {
 	color: #8c8c8c;
 	text-decoration: none
 }
-a:hover, a:focus {
+/*a:hover, a:focus {
 	color: #cc0033;
 	text-decoration: none
-}
+}*/
 .clearfix {
 	*zoom: 1
 }
