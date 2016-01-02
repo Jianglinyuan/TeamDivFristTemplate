@@ -5653,15 +5653,18 @@ ul.payment li img {
 #J_miniCartList dl dd.title {
     width: 200px;
     height: 38px;
-    text-align: right;
+    /*height: 19px;*/
+    direction: rtl;
 }
 dl.mycartcur {
     height: 70px;
     padding: 0 20px;
+    position: relative;
 }
 span.rmbred {
 	display: block;
-    margin-left: 130px;
+    position: absolute;
+    right: 110px;
 }
 a.delGood {
 	color: #808080;
@@ -5674,4 +5677,7 @@ a.delGood {
 }
 .header-wraper {
 	background-color: #f5f5f5;
+}
+dd.del {
+	margin-bottom: -18px;
 }

@@ -14,6 +14,7 @@
 <script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/ad.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/jquery.dotdotdot.min.js"></script>
 <link rel="shortcut icon" href="/favicon.ico" />
 
 <meta property="qc:admins" content="230600116763141116375" />
@@ -265,6 +266,7 @@ $(function(){
                 $("#sCartTotalM").html(data.sum);
                 $("#sCartLoading").hide();
                 $("#J_miniCartList p,#J_miniCartList h3").show();
+                $('#J_miniCartList dl dd.title').dotdotdot({watch:true});
             });
         },
         function(){
