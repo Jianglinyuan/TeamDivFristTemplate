@@ -1,4 +1,4 @@
-{wc:templates "index","pagehead"}
+{wc:templates "index","head"}
     <link href="{G_TEMPLATES_CSS}/163/css/index.css" rel="stylesheet" />
     <script type="text/javascript" src="{G_TEMPLATES_CSS}/163/js/slippry.min.js"></script>
     <div class="g-body g-body-index">
@@ -450,4 +450,37 @@
         transition: 'horizontal'
     });
     </script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    var timer = {};
+
+    $('#m_btn').delegate('li', 'mouseenter', function(){
+        var self = $(this);
+        var tp = self.attr('data-type');
+        clearTimeout(timer[tp]);
+        timer[tp] = setTimeout(function(){
+            self.addClass('text-d-on');
+            $('div[data-panel=' + tp + ']').removeClass('hide');
+        },100);
+    }).delegate('li', 'mouseleave', function(){
+        var self = $(this);
+        var tp = self.attr('data-type');
+        clearTimeout(timer[tp])
+        timer[tp] = setTimeout(function(){
+            self.removeClass('text-d-on');
+            $('div[data-panel=' + tp + ']').addClass('hide');
+        },100);
+    });
+
+    $(document.body).delegate('div.m_content', 'mouseenter', function(){
+        clearTimeout(timer[$(this).attr('data-panel')]);
+    }).delegate('div.m_content', 'mouseleave', function(){
+        $(this).addClass('hide');
+        $('span[data-type='+ $(this).attr('data-panel') +']').removeClass('text-d-on');
+    });
+
+});
+</script>
+    
 {wc:templates "index","foot"}

@@ -190,7 +190,7 @@
                         <h2>商品分类<i class="ico ico-arrow ico-arrow-white ico-arrow-white-down" style="display: none;"></i></h2>
                     </div>
                     <div class="m-catlog-wrap">
-                        <div class="m-catlog-bd">
+                        <div class="m-catlog-bd" style="display:none;">
                             <ul class="m-catlog-list">
                                  {wc:loop $two_cate_list $key $catelist}
                         {wc:php:start}
@@ -241,7 +241,6 @@
         </div>
     </div>
 <!-- .site-header END -->
-
  <script language="javascript" type="text/javascript">
      var Base = { head: document.getElementsByTagName("head")[0] || document.documentElement, Myload: function (B, A) { this.done = false; B.onload = B.onreadystatechange = function () { if (!this.done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) { this.done = true; A(); B.onload = B.onreadystatechange = null; if (this.head && B.parentNode) { this.head.removeChild(B) } } } }, getScript: function (A, C) { var B = function () { }; if (C != undefined) { B = C } var D = document.createElement("script"); D.setAttribute("language", "javascript"); D.setAttribute("type", "text/javascript"); D.setAttribute("src", A); this.head.appendChild(D); this.Myload(D, B) }, getStyle: function (A, CB) { var B = function () { }; if (CB != undefined) { B = CB } var C = document.createElement("link"); C.setAttribute("type", "text/css"); C.setAttribute("rel", "stylesheet"); C.setAttribute("href", A); this.head.appendChild(C); this.Myload(C, B) } }
      function GetVerNum() { var D = new Date(); return D.getFullYear().toString().substring(2, 4) + '.' + (D.getMonth() + 1) + '.' + D.getDate() + '.' + D.getHours() + '.' + (D.getMinutes() < 10 ? '0' : D.getMinutes().toString().substring(0, 1)) }
@@ -328,17 +327,17 @@ $(function(){
 		window.location.href="{WEB_PATH}/s_tag/"+$("#txtSearch").val();
 	});
 });
-$(".nav-category").mouseover(function(){
-		    $(".nav-category-section").show();
+$(".m-catlog-hd").mouseover(function(){
+		    $(".m-catlog-bd").show();
     })
-	 $(".nav-category").mouseout(function(){
-		    $(".nav-category-section").hide();
+	 $(".m-catlog-hd").mouseout(function(){
+		    $(".m-catlog-bd").hide();
     })
-	 $(".nav-category-section").mouseover(function(){
-		    $(".nav-category-section").show();
+	 $(".m-catlog-bd").mouseover(function(){
+		    $(".m-catlog-bd").show();
     })
-	 $(".nav-category-section").mouseout(function(){
-		    $(".nav-category-section").hide();
+	 $(".m-catlog-bd").mouseout(function(){
+		    $(".m-catlog-bd").hide();
     })
 </script>
 
