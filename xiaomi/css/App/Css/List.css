@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-	background: #f7f7f7;
+	/*background: #f7f7f7;*/
 }
 .share_Curtit {
 	width: 1200px;
@@ -65,10 +65,10 @@ body {
 	float: left;
 }
 .list_Sort dd a:hover {
-	color: #cc0033;
+	color: #db3652;
 }
 .list_Sort dd a.SortCur {
-	border: 2px solid #cc0033;
+	border: 2px solid #db3652;
 	color: #666;
 	margin-right: 10px;
 	margin-top: 1px;
@@ -149,7 +149,7 @@ body {
 	overflow: hidden;
 }
 .goods_share_listC .hover {
-	border: 1px solid #cc0033;
+	border: 1px solid #db3652;
 }
 .share_list_content dt {
 	width: 265px;
@@ -355,7 +355,7 @@ a.smile_click:hover {
 	margin: 3px 0 0 3px;
 }
 .goods_share_listC .hover span.smile {
-	background: #cc0033;
+	background: #db3652;
 	display: inline-block;
 	color: #fff;
 	cursor: pointer;
@@ -478,8 +478,8 @@ a.smile_click:hover {
 	overflow: hidden;
 	padding-left: 10px;
 	padding-right: 10px;
-	background-color: #cc0033;
-	border: 1px solid #cc0033;
+	background-color: #db3652;
+	border: 1px solid #db3652;
 	color: #FFF;
 	text-decoration: none;
 	border-radius: 5px;
@@ -498,7 +498,7 @@ a.smile_click:hover {
 	overflow: hidden;
 }
 .pages ul.pageULEx li a:hover {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: none;
 }
 .pages ul.pageULEx li.prev_page a {
@@ -517,7 +517,7 @@ a.smile_click:hover {
 	display: inline-block;
 }
 .pages ul.pageULEx li.prev_page a:hover, .pages li.next_page a:hover {
-	color: #cc0033;
+	color: #db3652;
 	overflow: hidden;
 }
 .pages ul.pageULEx li.page_curgray a, .pages ul.pageULEx li.page_curgray a:hover {

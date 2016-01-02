@@ -57,7 +57,7 @@ a:active {
 }
 
 a:hover {
-	color: #cc0033;
+	color: #db3652;
 }
 
 a:focus,a:link {
@@ -114,7 +114,7 @@ a {
 }
 
 .orange {
-	color: #cc0033;
+	color: #db3652;
 }
 
 .blue {
@@ -274,7 +274,7 @@ a.blue:hover {
 	overflow: hidden;
 	display: inline-block;
 	background-position: 0 -238px;
-	background-color: #cc0033;
+	background-color: #db3652;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -308,7 +308,7 @@ a.blue:hover {
 	cursor: pointer;
 	font-family: 微软雅黑;
 	font-size: 14px;
-	background: #cc0033;
+	background: #db3652;
 	border-radius: 3px;
 	float: right;
 	padding: 2px 0 5px;
@@ -408,7 +408,7 @@ a.blue:hover {
 }
 
 .orange,a.orange:link,a.orange:visited {
-	color: #cc0033;
+	color: #db3652;
 }
 
 .blue,a.blue:link,a.blue:visited {
@@ -440,7 +440,7 @@ a.blue:hover {
 }
 
 a.gray3:hover,a.gray6:hover,a.gray9:hover,a.grayb:hover,a.grayc:hover,a.orange:hover,a.white:hover {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: underline;
 }
 
@@ -528,7 +528,7 @@ i {
 
 .orange_btn:hover {
 	color: #fff;
-	background: #cc0033;
+	background: #db3652;
 }
 
 .orange_bg_btn {
@@ -634,7 +634,7 @@ i {
 }
 
 .head-nav-bd .menu a:hover,.menu-bd-msg a:hover,.M-mobile .menu-hd a:hover b {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: underline;
 }
 
@@ -678,7 +678,7 @@ i {
 }
 
 .head-nav-bd .menu .menu-hd a.F-icon-guest {
-	color: #cc0033;
+	color: #db3652;
 	cursor: default;
 	text-decoration: none;
 }
@@ -995,7 +995,7 @@ li.M-my-1yyg .menu-hd a {
 	float: left;
 	margin-right: 4px;
 	font-size: 12px;
-	color: #cc0033!important;
+	color: #db3652!important;
 }
 
 .head-nav-bd .M-shop .u-shop-tit span.Hicon {
@@ -1014,8 +1014,8 @@ li.M-my-1yyg .menu-hd a {
 }
 
 .head-nav-bd .M-shop .triangle span {
-	*border-bottom-color: #cc0033;
-	border-top-color: #cc0033;
+	*border-bottom-color: #db3652;
+	border-top-color: #db3652;
 }
 
 .head-nav-bd .M-shop-size {
@@ -1188,7 +1188,7 @@ li.M-my-1yyg .menu-hd a {
 }
 
 .head_search .keySearch a:hover {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: underline;
 }
 
@@ -1233,7 +1233,7 @@ li.M-my-1yyg .menu-hd a {
 	display: inline-block;
 	height: 30px;
 	overflow: hidden;
-	color: #cc0033;
+	color: #db3652;
 	font-size: 22px;
 	margin: 0 3px;
 	line-height: 30px;
@@ -1301,7 +1301,7 @@ li.M-my-1yyg .menu-hd a {
 	clear: both;
 	width: 100%;
 	height: 42px;
-	background: #cc0033;
+	background: #db3652;
 }
 
 .nav .nav-bd .M-nav-column {
@@ -1327,7 +1327,7 @@ li.M-my-1yyg .menu-hd a {
 	display: block;
 	width: 90px;
 	height: 42px;
-	background: #cc0033;
+	background: #db3652;
 	text-align: center;
 	cursor: pointer;
 }
@@ -1408,7 +1408,7 @@ li.M-my-1yyg .menu-hd a {
 }
 
 .nav .U-goods-hover .U-All-T .white,.nav .U-goods-hover .U-All-T a.white:hover {
-	color: #cc0033;
+	color: #db3652;
 }
 
 .nav .M-All-goods .U-All-T a b {
@@ -1443,7 +1443,7 @@ li.M-my-1yyg .menu-hd a {
 	position: absolute;
 	z-index: 75;
 	background: #FFF;
-	border: 2px solid #cc0033;
+	border: 2px solid #db3652;
 	border-top: none;
 	box-shadow: 0 1px 2px #FAF3ED;
 }
@@ -1531,7 +1531,7 @@ li.M-my-1yyg .menu-hd a {
 }
 
 .goods-class-list .U-list-hover dt {
-	color: #cc0033;
+	color: #db3652;
 }
 
 .goods-class-list .U-list-hover .U-goods-1 .F-goods-img {
@@ -1662,7 +1662,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 }
 
 .M-guide dd a:hover {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: underline;
 }
 
@@ -1786,7 +1786,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 	line-height: 24px;
 	padding: 10px 5px 6px 3px;
 	float: left;
-	background: #cc0033;
+	background: #db3652;
 	color: #fff;
 	text-align: center;
 	display: block;
@@ -1798,7 +1798,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 
 .service-promise li.M-time .F-txt-point {
 	float: left;
-	color: #cc0033;
+	color: #db3652;
 	line-height: 42px;
 	font-size: 24px;
 	font-family: "Arial";
@@ -1864,7 +1864,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 	overflow: hidden;
 	font-family: Arial;
 	margin-bottom: 5px;
-	color: #cc0033;
+	color: #db3652;
 	font-weight: bold;
 	display: block;
 }
@@ -1880,7 +1880,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 }
 
 .service-promise li.M-tel a.F-icon-guest {
-	color: #cc0033;
+	color: #db3652;
 }
 
 .M-security {
@@ -1967,7 +1967,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 }
 
 .footer_links a:hover {
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: underline;
 }
 
@@ -2056,7 +2056,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 
 .Progress-bar p span {
 	height: 6px;
-	background: #cc0033;
+	background: #db3652;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -2085,7 +2085,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 }
 
 .Progress-bar .Pro-bar-li li.P-bar01 em {
-	color: #cc0033;
+	color: #db3652;
 }
 
 .Progress-bar .Pro-bar-li li.P-bar02 em {
@@ -2193,16 +2193,16 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 }
 
 .pagination-page .page-cur {
-	background: #cc0033;
+	background: #db3652;
 	color: #fff;
 	font-weight: bold;
-	border: 1px solid #cc0033;
+	border: 1px solid #db3652;
 }
 
 .pagination-page .page-prev:hover,.pagination-page .page:hover,.pagination-page .page-next:hover {
-	border: 1px solid #cc0033;
+	border: 1px solid #db3652;
 	background: #FEF5E4;
-	color: #cc0033;
+	color: #db3652;
 	text-decoration: none;
 }
 
@@ -2264,9 +2264,9 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 }
 
 .pagination-buy .btn-jump:hover {
-	border: 1px solid #cc0033;
+	border: 1px solid #db3652;
 	background: #FEF5E4;
-	color: #cc0033;
+	color: #db3652;
 }
 
 .g-popup {
@@ -2337,7 +2337,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 
 .u-popup-paytip {
 	background: #FEFEE4;
-	border: 1px solid #cc0033;
+	border: 1px solid #db3652;
 	margin: 0 62px;
 	padding: 5px 0;
 }
@@ -2602,7 +2602,7 @@ div.pageDialogMain .g-pay-tip p {
 	top: 2px;
 	right: 3px;
 	border: 2px solid #fff;
-	background: #cc0033;
+	background: #db3652;
 	border-radius: 50%;
 }
 
@@ -2673,7 +2673,7 @@ div.pageDialogMain .g-pay-tip p {
 
 .Roll_mycart li a.Close:hover {
 	background-position: -13px -307px;
-	background-color: #cc0033;
+	background-color: #db3652;
 	background-color: #ff6400;
 	filter: alpha(opacity=20);
 	-moz-opacity: 0.2;
@@ -2704,7 +2704,7 @@ div.pageDialogMain .g-pay-tip p {
 
 .Roll_mycart li.Roll_CartMore a:hover {
 	background: #e8e8e8;
-	color: #cc0033;
+	color: #db3652;
 }
 
 .Roll_mycart li.Roll_CartMore a i {
@@ -2727,7 +2727,7 @@ div.pageDialogMain .g-pay-tip p {
 }
 
 .Roll_mycart p span {
-	color: #cc0033;
+	color: #db3652;
 }
 
 .Roll_mycart h3 {
@@ -2873,7 +2873,7 @@ div.pageDialogMain .g-pay-tip p {
 
 .Roll_publish {
 	width: 241px;
-	border: 3px solid #cc0033;
+	border: 3px solid #db3652;
 	position: absolute;
 	right: 60px;
 	bottom: 0;
@@ -3080,7 +3080,7 @@ i,em {
 }
 
 .Current_nav a:hover {
-	color: #cc0033;
+	color: #db3652;
 }
 
 .red {
@@ -3158,7 +3158,7 @@ input[type=button]::-moz-focus-inner {
 }
 
 .orangebut {
-	background: #cc0033;
+	background: #db3652;
 	border: 1px solid #f65802;
 	color: #fff;
 }

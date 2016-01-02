@@ -236,7 +236,7 @@
 	border:1px solid #E7E7E7;
 }
 .yg_record_goods a.fl-img:hover img {
-	border:1px solid #cc0033;
+	border:1px solid #db3652;
 }
 .yg_record_goods .yg_record_r {
 	margin-left:10px;
@@ -298,6 +298,6 @@
 	float:left;
 }
 .goodsList ul li .lotter {
-	color:#cc0033;
+	color:#db3652;
 	font-weight:bold;
 }

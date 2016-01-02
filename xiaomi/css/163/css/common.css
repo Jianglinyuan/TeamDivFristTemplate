@@ -2312,7 +2312,7 @@ img {
 
 .w-gallery {
   width: 430px;
-  height: 478px;
+  /*height: 478px;*/
   position: relative;
   overflow: hidden;
 }
@@ -3837,7 +3837,7 @@ a.w-tag:hover {
 
 body {
   min-width: 1220px;
-  background-color: #f5f5f5;
+  /*background-color: #f5f5f5;*/
 }
 
 .g-header {
