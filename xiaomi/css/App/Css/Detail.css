@@ -29,8 +29,8 @@
 	width:1190px;
 	margin:0 auto 20px auto;
 	text-align:left;
-	background:url(http://skin.1yyg.com/Post/images/share_linebg.png?v=130607) repeat-y;
-	border:1px solid #e1e1e1;
+/*	background:url(http://skin.1yyg.com/Post/images/share_linebg.png?v=130607) repeat-y;
+*/	border:1px solid #e1e1e1;
 }
 .share_box:after {
 	content:"\0020";
