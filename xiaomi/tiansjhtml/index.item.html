@@ -512,7 +512,7 @@ function Cartcookie(cook){
 	info[shopid]['num']=number;
 	info[shopid]['shenyu']=shopinfo['shenyu'];
 	info[shopid]['money']=shopinfo['money'];
-	info['MoenyCount']='0.00';	
+	info['MoneyCount']='0.00';	
 	$.cookie('Cartlist',$.toJSON(info),{expires:7,path:'/'});
 	if(cook){
 		window.location.href="{WEB_PATH}/member/cart/cartlist/"+new Date().getTime();//+new Date().getTime()

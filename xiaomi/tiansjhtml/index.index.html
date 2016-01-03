@@ -90,36 +90,39 @@
                                             </div>
                                         </div>
                                     </li> -->
-                                    {wc:loop $shopqishu $qishu}
-                    {wc:php:start}
-                        $qishu['q_user'] = unserialize($qishu['q_user']);
-                    {wc:php:end}
-                 <li data-pro="item" class="w-slide-wrap-list-item">
-    <div class="w-goods-newReveal">
-        <i class="ico ico-label ico-label-newReveal" title="正在揭晓"></i>
-        <p class="w-goods-title"><a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" title="{wc:$qishu['title']}" target="_blank">{wc:$qishu['title']}</a></p>
-        <div class="w-goods-pic">
-            <a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" target="_blank">
-                <img width="140" height="105" src="{G_UPLOAD_PATH}/{wc:$qishu['thumb']}">
-            </a>
-        </div>
-        <p class="w-goods-price">总需：{wc:$qishu['zongrenshu']}人次</p>
-        <p class="w-goods-period">期号：{wc:$qishu['qishu']}</p>
-        <div class="w-goods-record">
-            <p class="w-goods-owner f-txtabb">获奖者：<a href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" title="{wc:fun:get_user_name($qishu['q_user'])}"><b>{wc:fun:get_user_name($qishu['q_user'])}</b></a></p>
-            <p>本期参与：25人次</p>
-            <p>幸运号码：{wc:$qishu['q_user_code']}</p>
-        </div>
-    </div>
-</li>
 
-                    {wc:loop:end}
-                    <script type="text/javascript" src="{G_TEMPLATES_CSS}/App/js/GLotteryFun.js"></script>
-                    <script type="text/javascript">
-                        $(document).ready(function(){gg_show_time_init("ulNewAwary",'{WEB_PATH}',0);});
-                    </script>
+                                {wc:loop $shopqishu $qishu}
+                                {wc:php:start}
+                                    $qishu['q_user'] = unserialize($qishu['q_user']);
+                                {wc:php:end}
+                                <li data-pro="item" class="w-slide-wrap-list-item">
+                                    <div class="w-goods-newReveal">
+                                        <i class="ico ico-label ico-label-newReveal" title="正在揭晓"></i>
+                                        <p class="w-goods-title"><a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" title="{wc:$qishu['title']}" target="_blank">{wc:$qishu['title']}</a></p>
+                                        <div class="w-goods-pic">
+                                            <a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" target="_blank">
+                                                <img width="140" height="105" src="{G_UPLOAD_PATH}/{wc:$qishu['thumb']}">
+                                            </a>
+                                        </div>
+                                        <p class="w-goods-price">总需：{wc:$qishu['zongrenshu']}人次</p>
+                                        <p class="w-goods-period">期号：{wc:$qishu['qishu']}</p>
+                                        <div class="w-goods-record">
+                                            <p class="w-goods-owner f-txtabb">获奖者：<a href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" title="{wc:fun:get_user_name($qishu['q_user'])}"><b>{wc:fun:get_user_name($qishu['q_user'])}</b></a></p>
+                                            <p>本期参与：25人次</p>
+                                            <p>幸运号码：{wc:$qishu['q_user_code']}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                {wc:loop:end}
+
+                                <script type="text/javascript" src="{G_TEMPLATES_CSS}/App/js/GLotteryFun.js"></script>
+                                <script type="text/javascript">
+                                    $(document).ready(function(){gg_show_time_init("ulNewAwary",'{WEB_PATH}',0);});
+                                </script>
                                 </ul>
                             </div>
+
+
                             <div class="w-slide-controller">
                                 <div class="w-slide-controller-btn" data-pro="controllerBtn">
                                     <a class="prev" data-pro="prev" href="javascript:void(0)"><i class="ico ico-arrow-large ico-arrow-large-l"></i><span class="f-txtHide">最新揭晓上一帧</span></a>
@@ -208,6 +211,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="g-wrap g-body-bd f-clear">
                 <div class="g-main">
                     <div class="m-index-mod m-index-goods-hotest">
@@ -252,12 +257,17 @@
                                             <a class="w-button w-button-main w-button-l" href="{WEB_PATH}/goods/{wc:$renqi['id']}" style="width:70px;" target="_blank">立即夺宝</a>
                                         </div>
                                     </div>
+
+                                    <div class="Curbor_id" style="display:none;">{wc:$renqi['id']}</div>
+                                    <div class="Curbor_yunjiage" style="display:none;">{wc:$renqi['yunjiage']}</div>
+                                    <div class="Curbor_shenyu" style="display:none;">{wc:$renqi['shenyurenshu']}</div>
                                 </li>
                                 {wc:loop:end}
                             </ul>
                         </div>
                     </div>
                 </div>
+
                 <div class="g-side">
                     <div class="m-index-mod m-index-recordRank m-index-recordRank-nb">
                         <div class="m-index-mod-hd">
@@ -363,6 +373,10 @@
                                          <a class="w-button w-button-main w-button-l" href="{WEB_PATH}/goods/{wc:$g_l['id']}" style="width:70px;" target="_blank">立即夺宝</a>
                                     </div>
                                 </div>
+
+                                <div class="Curbor_id" style="display:none;">{wc:$g_l['id']}</div>
+                                <div class="Curbor_yunjiage" style="display:none;">{wc:$g_l['yunjiage']}</div>
+                                <div class="Curbor_shenyu" style="display:none;">{wc:$g_l['shenyurenshu']}</div>
                             </li>
                          {wc:loop:end}
                         </ul>
@@ -481,6 +495,96 @@ $(document).ready(function(){
     });
 
 });
+
+$(function(){
+    $(".w-button-addToCart").click(function(){ 
+        var $img = $(this).parents('.w-goods.w-goods-ing').find('.w-goods-pic a img');
+        var src=$img.attr('src');  
+        var sw = $(".w-button-addToCart").index(this);
+        var $shadow = $('<img id="cart_dh" style="display:none; border:1px solid #aaa; z-index:99999;" width="200" height="200" src="'+src+'" />').prependTo("body");
+        $shadow.css({
+            'width' : 200,
+            'height': 200,
+            'position' : 'absolute',
+            "left":$img.offset().left+16,
+            "top":$img.offset().top+9,
+            'opacity' : 1
+        }).show();
+        var $cart = $("#btnMyCart");
+        $shadow.animate({
+            width: 1,
+            height: 1,
+            top: $cart.offset().top,
+            left: $cart.offset().left,
+            opacity: 0
+        },500,function(){
+            Cartcookie(sw,false);
+        });
+
+    });
+    // $("#ulGoodsList .item-actions a.J_addFav").click(function(){
+    //     var sw = $("#ulGoodsList .item-actions a.J_addFav").index(this);
+
+    //     Cartcookie(sw,true);
+    // });
+});
+//存到COOKIE
+function Cartcookie(sw,cook){
+    var shopid = $(".Curbor_id").eq(sw).text(),
+        money = $(".Curbor_yunjiage").eq(sw).text(),
+        shenyu = $(".Curbor_shenyu").eq(sw).text();
+    var Cartlist = $.cookie('Cartlist');
+    if(!Cartlist){
+        var info = {};
+    }else{
+        var info = $.evalJSON(Cartlist);
+    }
+    if(!info[shopid]){
+        var CartTotal=$("#sCartTotal").text();
+            $("#sCartTotal").text(parseInt(CartTotal)+1);
+            $("#btnMyCart em").text(parseInt(CartTotal)+1);
+    }
+    info[shopid]={};
+    info[shopid]['num']=1;
+    info[shopid]['shenyu']=shenyu;
+    info[shopid]['money']=money;
+    info['MoenyCount']='0.00';
+    $.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});
+    if(cook){
+        window.location.href="{WEB_PATH}/member/cart/cartlist";
+    }
+}
+
+// $(function(){
+// $(".w-button-addToCart").click(function(){ 
+//     //添加到购物车动画
+//     var $img = $(this).parents('.w-goods.w-goods-ing').find('.w-goods-pic a img');
+//     var src=$img.attr('src');  
+//     var $shadow = $('<img id="cart_dh" style="display: none; border:1px solid #aaa; z-index: 99999;" width="400" height="400" src="'+src+'" />').prependTo("body"); 
+//     $shadow.css({ 
+//        'width' : $img.css('width'), 
+//        'height': $img.css('height'),
+//        'position' : 'absolute',      
+//        'top' : $img.offset().top,
+//        'left' : $img.offset().left, 
+//        'opacity' :1    
+//     }).show();
+//     var $cart =$("#btnMyCart");
+//     var numdig=$(".num_dig").val();
+//     $shadow.animate({   
+//         width: 1, 
+//         height: 1, 
+//         top: $cart.offset().top, 
+//         left: $cart.offset().left,
+//         opacity: 0
+//     },500,function(){
+//         Cartcookie(false);
+//     });     
+// });
+//     // $(".w-button-main").click(function(){   
+//     //     Cartcookie(true);
+//     // }); 
+// });
 </script>
     
 {wc:templates "index","foot"}
