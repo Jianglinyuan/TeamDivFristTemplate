@@ -1,0 +1,88 @@
+﻿<footer class="footer">
+
+
+	<!--div class="u-ft-nav" id="fLoginInfo">
+		<span><a href="{WEB_PATH}/mobile/user/register/">注册</a><b></b></span>
+		<span><a href="{WEB_PATH}/mobile/user/login/">登录</a><b></b></span>
+		<span><a href="{WEB_PATH}/mobile/mobile/about/">新手指南</a><b></b></span>
+		<span><a href="{WEB_PATH}/mobile/mobile/">首页</a></span>
+	</div-->
+
+	{wc:php:start}
+		$g_web_path = _cfg("web_path");
+		$g_web_path = trim($g_web_path,"/");		
+	{wc:php:end}
+</footer>
+
+
+
+{wc:php:start}
+	$f_home = '';
+	$f_whole = '';
+	$f_jiexiao = '';
+	$f_car = '';
+	$f_personal = '';
+
+	if( ROUTE_C == 'home' || ROUTE_C == 'user' ){
+		$f_personal = 'cur';
+	}else if( ROUTE_C == 'mobile' && ROUTE_A == 'init'){
+		$f_home = 'cur';
+	}else if( ROUTE_C == 'mobile' && ROUTE_A == 'glist'){
+		$f_whole = 'cur';
+	}else if( ROUTE_C == 'mobile' && ROUTE_A == 'lottery'){
+		$f_jiexiao = 'cur';
+	}else if( ROUTE_C == 'cart'){
+		$f_car = 'cur';
+	}
+{wc:php:end}
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<style>
+.footerdi .f_home i.cur{
+	background-position: 0 0 !important;
+}
+.footerdi .f_whole i.cur{
+	background-position: 0 -52px !important;
+}
+.footerdi .f_jiexiao i.cur{
+	background-position: 0 -222px !important;
+}
+.footerdi .f_car i.cur{
+	background-position: 0 -105px !important;
+}
+.footerdi .f_personal i.cur{
+	background-position: 0 -152px !important;
+}
+</style>
+<div class="footerdi" style="bottom: 0px;">
+	<ul>
+
+		<li class="f_personal">
+			<a title="مىنىڭ" href="{WEB_PATH}/mobile/user/login/"><i class="{wc:$f_personal}">&nbsp;</i>مىنىڭ</a>
+		<li>
+		<li class="f_car">
+
+			<a title="مال ھارۋام" href="{WEB_PATH}/mobile/cart/cartlist/"><i class="{wc:$f_car}">&nbsp;</i>مال ھارۋام</a>
+
+		</li>
+		<li class="f_jiexiao">
+			<a title="جاكارلار" href="{WEB_PATH}/mobile/mobile/lottery/"><i class="{wc:$f_jiexiao}">&nbsp;</i>جاكارلار</a>
+		</li>
+		<li class="f_whole">
+			<a title="مەھسۇلاتلار" href="{WEB_PATH}/mobile/mobile/glist/"><i class="{wc:$f_whole}">&nbsp;</i>مەھسۇلاتلار</a>
+		</li>
+		<li class="f_home">
+			<a title="بەت باش" href="{WEB_PATH}/mobile/mobile/"><i class="{wc:$f_home}">&nbsp;</i>بەت باش</a>
+		</li>
+		
+
+	</ul>
+</div>
+

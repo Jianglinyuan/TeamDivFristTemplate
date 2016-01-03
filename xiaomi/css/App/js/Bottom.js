@@ -1,1 +1,0 @@
-Base.getScript("/templates/xiaomi/css/App/js/BottomFun.js");

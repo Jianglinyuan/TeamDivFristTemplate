@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>ۋاقىتلىق مەھسۇلاتلار</title>
+    <meta content="app-id=518966501" name="apple-itunes-app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!-- 该标签用于指定是否将网页内容中的手机号码显示为拨号的超链接 -->
+     <link href="{G_TEMPLATES_STYLE}/mobile/images/favicon.ico" rel="apple-touch-icon-precomposed" />
+    <link href="{G_TEMPLATES_MOBILE_CSS}/comm.css" rel="stylesheet" type="text/css" />
+    <link href="{G_TEMPLATES_MOBILE_CSS}/comm.css" rel="stylesheet" type="text/css" /><link href="{G_TEMPLATES_MOBILE_CSS}/AutoLottery.css" rel="stylesheet" type="text/css" /><script src="{G_TEMPLATES_MOBILE_JS}/jquery190.js" language="javascript" type="text/javascript"></script><script id="pageJS" data="{G_TEMPLATES_MOBILE_JS}/AutoLottery.js" language="javascript" type="text/javascript"></script> 
+ 
+
+</head>
+<body>
+    <div class="h5-yygcms-w310">
+        
+<!-- 栏目页面顶部 -->
+
+
+<!-- 内页顶部 -->
+
+    <header class="g-header">
+        <div class="head-r">
+	        <a href="javascript:;" onClick="history.go(-1)" class="z-HReturn"><s></s><b>قايتىش</b></a>
+        </div>
+        <h2>ۋاقىتلىق مەھسۇلاتلار</h2>
+		{wc:templates "mobile/index","headertop"}
+    </header>
+
+        <nav class="limit-nav">
+		<ul>
+			<li class="limit-navCur" onClick="location.href='{WEB_PATH}/mobile/autolottery/'">بۈگۈنلىك مەھسۇلات</li>
+			<li class="" onClick="location.href='{WEB_PATH}/mobile/autolottery/next/'">ئەتىلىك مەھسۇلات</li>
+		</ul>
+	</nav>
+        <!-- 焦点图 -->
+        <input name="hdStartAt" type="hidden" id="hdStartAt" value="0" />
+        <section class="flexbox clearfix limit-ct">
+	
+	    <article id="autoLotteryBox" class="clearfix limit-content">
+    <ul id="divTimerItems" class="slides">
+        {wc:if $count>1}
+		<div class="loading" style="background:#F4F4F4">
+            <b>
+            </b>
+            ئېچىلىۋاتىدۇ...
+        </div>
+		{wc:else}
+		 {wc:if 0 == $count }
+		 <div id="divNone" class="haveNot z-minheight" style="display:block"><s></s><p>{wc:$titlets}</p>
+		</div>
+		{wc:if:end}
+		{wc:if:end}
+	  	{wc:loop $shoplist $shop}
+        {wc:php:start}
+        $shop['time_H'] = abs(date("H",$shop['xsjx_time']));
+	    $sysj=$shop['xsjx_time']-time();
+        {wc:php:end}         
+        {wc:if $shop['xsjx_time'] < time()} 	
+	     <li class="m-xs-li" txt="{wc:$shop['time_H']}">
+            <div class="m-round limit-bd limit-End">
+                <div class="f-limit-time">
+                    <span class="f-limit-time-date">جاكارلاندى</span>
+                </div>
+                <div class="limt-pic">
+                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/">
+                        <img border="0" src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}"
+                        />
+                    </a>
+                </div>
+                <div class="limit-bd-con">
+                    <p class="z-limit-tt">
+                        <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/" class="gray6 z-tt">
+                            ({wc:$shop['qishu']}چى سان){wc:$shop['title']}
+                        </a>
+                    </p>
+                    <p class="z-promo">
+                        :<em class="gray9">￥{wc:$shop['money']}</em>
+                    </p>
+                    <div class="Progress-bar">
+                        <p class="u-progress" title="s{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%">
+                            <span class="pgbar" style="width:width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;">
+                                <span class="pging">
+                                </span>
+                            </span>
+                        </p>
+                        <ul class="Pro-bar-li">
+                            <li class="P-bar01">
+                                <em>{wc:$shop['canyurenshu']}</emقاتناشقانلار
+                            </li>
+                            <li class="P-bar02">
+                                <em>{wc:$shop['zongrenshu']}جەمئىي
+                            </li>
+                            <li class="P-bar03">
+                                <em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}قالدۇق
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix gray9 limit-user">
+                    <a class="fl z-Limg" href="location.href='{WEB_PATH}/uname/{wc:fun:idjia($shop['q_uid'])}/">
+                        <s></s>
+                        <img border="0" src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($shop['q_uid'],'img')}">
+                    </a>
+                    <p>
+                        <span class="z-user blue" onClick="location.href='{WEB_PATH}/uname/{wc:fun:idjia($shop['q_uid'])}'">{wc:fun:get_user_name($shop['q_uid'])}</span> نىڭ ئىرىىشكەنلىكىنى تەبىركلەيمىز
+                    </p>
+                    <p class="m-limit-Code">تەلەيلىك نۇمۇر：<em class="orange">{wc:$shop['q_user_code']}</em>
+                    </p>
+                    <p>
+                        {wc:fun:_cfg('web_name_two')} قېتىم سان：{wc:$user_shop_number[$shop['q_uid']][$shop['id']]}
+                    </p>
+                </div>
+            </div>
+        </li>
+	    {wc:else}
+        <li class="m-xs-li" txt="{wc:$shop['time_H']}">
+            <div class="m-round limit-bd ">
+                <div name="timerItem" class="f-limit-time" time="{wc:$sysj}">
+                    <span class="f-limit-time-date">
+                        <b>قالغان ۋاقىت</b><em>00</em>:<em>00</em>:<em>00</em>
+                    </span>
+                </div>
+                <div class="limt-pic">
+                    <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/">
+                        <img border="0" src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}"
+                        />
+                    </a>
+                </div>
+                <div class="limit-bd-con">
+                    <p class="z-limit-tt">
+                        <a href="{WEB_PATH}/mobile/mobile/item/{wc:$shop['id']}/" class="gray6 z-tt">
+                            ({wc:$shop['qishu']}چى سان){wc:$shop['title']}
+                        </a>
+                    </p>
+                    <p class="z-promo">:<em class="gray9">￥{wc:$shop['money']}</em>
+                    </p>
+                    <div class="Progress-bar">
+                        <p class="u-progress" title="{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%">
+                            <span class="pgbar" style="width:width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;">
+                                <span class="pging"></span>
+                            </span>
+                        </p>
+                        <ul class="Pro-bar-li">
+                            <li class="P-bar01">
+                                <em>{wc:$shop['canyurenshu']}</emقاتناشقانلار
+                            </li>
+                            <li class="P-bar02"><em>{wc:$shop['zongrenshu']}جەمئىي
+                            </li>
+                            <li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}قالدۇق
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="u-Btn">
+				   {wc:if $shop['canyurenshu']==$shop['zongrenshu']}
+                    <div class="u-Btn-li">
+                        <a class="grayBtn">
+                            كىيىن قاپسىز، مەھسۇلات تۈگەپ كەتتى
+                        </a>
+                    </div>
+					{wc:else}
+					<div class="u-Btn-li">
+						<a href="javascript:;" class="z-ShoppingBtn" id="{wc:$shop['id']}">سېتىۋېلىش</a>
+					</div>
+					<div class="u-Btn-li">
+						<a href="javascript:void(0);" class="z-cartBtn" id="{wc:$shop['id']}">مال ھارۋسىغا سېلىش</a>
+					</div>
+					{wc:if:end}
+                </div>
+            </div>
+        </li>
+	   {wc:if:end}
+       {wc:loop:end}
+    </ul>
+</article>
+	    
+	<!--article class="clearfix mt10 m-round limit-tips">
+		<h3>限时揭晓规则</h3>
+		<div class="limit-tips-ct">
+			<p><s></s><b>所有限时揭晓商品，不管已参与人次是否达到总需参与人次，都按截止时间准时揭晓。</b></p>
+			<p><s></s><b>如果计算出的{wc:fun:_cfg('web_name_two')}码未被购买，则取差值最小的{wc:fun:_cfg('web_name_two')}码作为幸运{wc:fun:_cfg('web_name_two')}码。</b></p>
+			<p><s></s><b>如果有2个{wc:fun:_cfg('web_name_two')}码最小差值相等，则取大值作为最终幸运{wc:fun:_cfg('web_name_two')}码。</b></p>
+			<p><s></s><b>限时揭晓商品不参与差价送福分活动且晒单不可再获得福分奖励。</b></p>
+			<p><s></s><b>限时揭晓的幸运{wc:fun:_cfg('web_name_two')}码计算方式：</b></p>
+			  <em><span>1)</span><b>限时揭晓商品取截止时间前网站所有商品100条购买时间记录。</b></em>
+			  <em><span>2)</span><b>时间按时、分、秒、毫秒依次排列组成一组数值。</b></em>
+			  <em><span>3)</span><b>将这100组数值之和除以商品总需参与人次后取余数，余数加上10,000,001即为“幸运{wc:fun:_cfg('web_name_two')}码”。</b></em>
+		</div>
+	</article-->
+</section>
+        
+{wc:templates "mobile/index","footer"}
+<script language="javascript" type="text/javascript">
+  var Path = new Object();
+  Path.Skin="{G_TEMPLATES_STYLE}";  
+  Path.Webpath = "{WEB_PATH}";
+  
+var Base={head:document.getElementsByTagName("head")[0]||document.documentElement,Myload:function(B,A){this.done=false;B.onload=B.onreadystatechange=function(){if(!this.done&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){this.done=true;A();B.onload=B.onreadystatechange=null;if(this.head&&B.parentNode){this.head.removeChild(B)}}}},getScript:function(A,C){var B=function(){};if(C!=undefined){B=C}var D=document.createElement("script");D.setAttribute("language","javascript");D.setAttribute("type","text/javascript");D.setAttribute("src",A);this.head.appendChild(D);this.Myload(D,B)},getStyle:function(A,B){var B=function(){};if(callBack!=undefined){B=callBack}var C=document.createElement("link");C.setAttribute("type","text/css");C.setAttribute("rel","stylesheet");C.setAttribute("href",A);this.head.appendChild(C);this.Myload(C,B)}}
+function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
+Base.getScript('{G_TEMPLATES_MOBILE_JS}/Bottom.js?v='+GetVerNum());
+</script>
+ 
+
+</body>
+</html>
