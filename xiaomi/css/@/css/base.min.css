@@ -251,16 +251,17 @@ a {
 	border-color: #ffc700;
 	background-color: #ffc700
 }
-/*.btn-dake {
-	background-color: #6d6d6d;
-	border-color: #6d6d6d;
-	color: #fff
-}*/
-/*.btn-dake:hover, .btn-dake:focus, .btn-dake.active, .btn-dake:active {
+.btn-dake {
+	background-color: #3399FE;
+	border-color: #3399FE;
 	color: #fff;
-	border-color: #333;
-	background-color: #333
-}*/
+	border-radius: 3px;
+}
+.btn-dake:hover, .btn-dake:focus, .btn-dake.active, .btn-dake:active {
+	color: #fff;
+	border-color: #42A8FF;
+	background-color: #42A8FF;
+}
 .btn-dakeLight {
 	background-color: #f3f3f3;
 	border-color: #f3f3f3;
@@ -2212,10 +2213,10 @@ a {
 .xm-goods-list li {
 	position: relative;
 	z-index: 1;
-	float: left;
+	float: right;
 	_display: inline;
 	width: 267px;
-	height: 380px;
+	height: 390px;
 	padding: 0 15px;
 	background: #fff;
 	overflow: hidden;
@@ -2230,7 +2231,7 @@ a {
 	top: 0;
 	left: 0;
 	z-index: 3;
-	height: 374px;
+	height: 380px;
 	padding: 46px 11px 20px;
 	border: 4px solid #f3f3f3
 }
@@ -2272,6 +2273,7 @@ a {
 .xm-goods-item .item-thumb img {
 	width: 220px;
 	height: 220px;
+	margin: 0 auto;
 	background: url(../images/placeholder-220.png) no-repeat 50% 50%;
 	background-image: -webkit-image-set(url(../images/placeholder-220.png) 1x, url(../images/placeholder-440.png) 2x)
 }
@@ -2279,11 +2281,13 @@ a {
 	height: 21px;
 	margin: 0;
 	padding: 0 10px;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 400;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+	direction: rtl;
+	text-align: right;
 	_zoom: 1
 }
 .xm-goods-item .item-title a {
@@ -2295,7 +2299,9 @@ a {
 }
 .xm-goods-item .item-price {
 	height: 21px;
-	padding: 0 10px
+	padding: 0 10px;
+	text-align: right;
+    color: #db3652;
 }
 .xm-goods-item .item-price .sep {
 	margin: 0 10px;
@@ -2312,8 +2318,8 @@ a {
 }
 .xm-goods-item .item-star {
 	_position: relative;
-	height: 18px;
-	padding: 0 10px 19px;
+	height: 47px;
+	padding: 0 10px;
 	border-bottom: 1px solid #dfdfdf;
 	font-size: 12px;
 	color: #8c8c8c
@@ -2379,17 +2385,16 @@ a {
 }
 .xm-filter-list {
 	margin: 0;
-	padding: 15px 0 5px;
 	border-top: 1px solid #dfdfdf;
 	font-size: 12px;
-	color: #8c8c8c
+	color: #8c8c8c;
+	padding: 10px 0;
 }
 .xm-filter-list dt {
-	float: left;
+	float: right;
 	clear: both;
-	margin: 0 0 10px;
-	_margin: 2px 0 10px;
-	text-align: left
+	text-align: right;
+	margin-left: 10px;
 }
 .xm-filter-list dd {
 	margin: 0;
@@ -2403,14 +2408,15 @@ a {
 	list-style-type: none
 }
 .xm-filter-list dd li {
-	float: left;
+	float: right;
 	_display: inline;
-	margin: 3px 0 13px;
-	padding: 0 20px;
-	border-left: 1px solid #dfdfdf;
-	line-height: 1;
-	*line-height: 1.25
+	padding: 1px 6px;
+	margin: 0 5px;
+	/*border-left: 1px solid #dfdfdf;*/
 }
+/*.xm-filter-list dd li.current {
+	background-color: #db3652;
+}*/
 .xm-filter-list dd li a {
 	color: #333
 }
@@ -4752,7 +4758,7 @@ body.f-width-change .g-special li em {
 	background: #FF9600;
 	position: absolute;
 	top: -1px;
-	left: -1px;
+	right: -1px;
 	font-size: 0;
 	border-radius: 3px;
 	font-size: 0;
@@ -4763,7 +4769,7 @@ body.f-width-change .g-special li em {
 	font-size: 12px;
 	font-family: ����;
 	border: none;
-	margin: 0;
+	margin: 5px 0;
 	padding: 0;
 	box-shadow: none;
 	border-radius: none;
@@ -5685,4 +5691,79 @@ dd.del {
 .goods_loding img {
     margin: 0 auto;
     vertical-align: middle;
+}
+.box-hd.order {
+    background: #f5f5f5;
+    height: 38px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #db3652;
+}
+
+.xm-order-list {
+	margin: 0;
+	font-size: 14px;
+	color: #8c8c8c;
+}
+.xm-order-list dt {
+	float: left;
+	clear: both;
+	margin: 0 0 10px;
+	_margin: 2px 0 10px;
+	text-align: left
+}
+.xm-order-list dd {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	_zoom: 1
+}
+.xm-order-list dd ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none
+}
+.xm-order-list dd li {
+	float: right;
+	_display: inline;
+	height: 38px;
+	padding: 0 20px;
+	text-align: center;
+	line-height: 38px;
+	*line-height: 1.25
+}
+.xm-order-list dd li.current {
+	background-color: #db3652;
+}
+.xm-order-list dd li a {
+	color: #777;
+}
+.xm-order-list dd li a:hover {
+	color: #db3652
+}
+.xm-order-list dd li.first {
+	border-left: 0
+}
+.xm-order-list dd li.current a {
+	color: #fff;
+}
+.xm-order-list dd li .icon-order-ascending, .xm-order-list dd li .icon-order-descending {
+	position: relative;
+	top: 1px;
+	width: 12px;
+	height: 12px;
+	margin-right: 2px;
+	*font-size: 0;
+	background-image: url(../images/icon-goods-list.png)
+}
+.xm-order-list dd li .icon-order-ascending {
+	background-position: 0 0
+}
+.xm-order-list dd li .icon-order-descending {
+	background-position: -12px 0
+}
+.xm-order-list dd li.current .icon-order-ascending {
+	background-position: 0 -12px
+}
+.xm-order-list dd li.current .icon-order-descending {
+	background-position: -12px -12px
 }
