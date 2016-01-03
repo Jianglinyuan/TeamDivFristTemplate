@@ -481,6 +481,67 @@ $(document).ready(function(){
     });
 
 });
+
+function Cartcookie(cook){
+    var shopinfo={'shopid':{wc:$item['id']},'money':{wc:$item['yunjiage']},'shenyu':{wc:$syrs}};
+    var shopid=shopinfo['shopid'];
+    var number=parseInt($("#num_dig").val());
+    if(number<=1){number=1;}
+    var Cartlist = $.cookie('Cartlist');
+    if(!Cartlist){
+        var info = {};
+    }else{
+        var info = $.evalJSON(Cartlist);
+        if((typeof info) !== 'object'){
+            var info = {};
+        }
+    }       
+    if(!info[shopid]){
+        var CartTotal=$("#sCartTotal").text();
+            $("#sCartTotal").text(parseInt(CartTotal)+1);
+            $("#btnMyCart em").text(parseInt(CartTotal)+1);
+    }   
+    info[shopid]={};
+    info[shopid]['num']=number;
+    info[shopid]['shenyu']=shopinfo['shenyu'];
+    info[shopid]['money']=shopinfo['money'];
+    info['MoneyCount']='0.00';  
+    $.cookie('Cartlist',$.toJSON(info),{expires:7,path:'/'});
+    if(cook){
+        window.location.href="{WEB_PATH}/member/cart/cartlist/"+new Date().getTime();//+new Date().getTime()
+    }
+};
+
+$(function(){
+$(".w-button-addToCart").click(function(){ 
+    //添加到购物车动画
+    var $img = $(this).parents('.w-goods.w-goods-ing').find('.w-goods-pic a img');
+    var src=$img.attr('src');  
+    var $shadow = $('<img id="cart_dh" style="display: none; border:1px solid #aaa; z-index: 99999;" width="400" height="400" src="'+src+'" />').prependTo("body"); 
+    $shadow.css({ 
+       'width' : $img.css('width'), 
+       'height': $img.css('height'),
+       'position' : 'absolute',      
+       'top' : $img.offset().top,
+       'left' : $img.offset().left, 
+       'opacity' :1    
+    }).show();
+    var $cart =$("#btnMyCart");
+    var numdig=$(".num_dig").val();
+    $shadow.animate({   
+        width: 1, 
+        height: 1, 
+        top: $cart.offset().top, 
+        left: $cart.offset().left,
+        opacity: 0
+    },500,function(){
+        Cartcookie(false);
+    });     
+});
+    // $(".w-button-main").click(function(){   
+    //     Cartcookie(true);
+    // }); 
+});
 </script>
     
 {wc:templates "index","foot"}
