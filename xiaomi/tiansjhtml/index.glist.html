@@ -39,12 +39,12 @@ a.list_classMore {
   _vertical-align: 2px;
 }
 </style>
-<div class="container breadcrumbs"><a href="{WEB_PATH}">首页</a><span class="sep">/</span>{wc:$daohang_title}</div>
+<div class="container breadcrumbs">{wc:$daohang_title}<span class="sep">/</span><a href="{WEB_PATH}">首页</a></div>
 <!-- .breadcrumbs END -->
 <div class="container">
 {wc:if $shoplist}
         <div class="xm-line-box filter-box">
-        <div class="box-hd"><h3 class="title">{wc:$daohang_title}</h3></div>
+        <!-- <div class="box-hd"><h3 class="title">{wc:$daohang_title}</h3></div> -->
         <div class="box-bd">
             <div class="filter-lists" style="position: relative;">
 			{wc:php:start}
@@ -151,9 +151,11 @@ a.list_classMore {
                                     <div class="item-actions">
                                         <a class="btn btn-dake btn-small J_addFav" href="javascript:;"><i class="iconfont"></i>立即{wc:fun:_cfg('web_name_two')}</a>
 										<a class="btn btn-small btn-primary J_addCart" href="javascript:;"><i class="iconfont"></i>加入购物车</a>
+
 										<div class="Curbor_id" style="display:none;">{wc:$shop['id']}</div>
 										<div class="Curbor_yunjiage" style="display:none;">{wc:$shop['yunjiage']}</div>
 										<div class="Curbor_shenyu" style="display:none;">{wc:$shop['shenyurenshu']}</div>
+										
                                     </div>
 									{wc:php:start}$i_googd_bj = null;{wc:php:end}
 									{wc:if ($this_time - $shop['time']) < 86400}
@@ -220,8 +222,8 @@ $(function(){
 //存到COOKIE
 function Cartcookie(sw,cook){
 	var shopid = $(".Curbor_id").eq(sw).text(),
-		shenyu = $(".Curbor_yunjiage").eq(sw).text(),
-		money = $(".Curbor_shenyu").eq(sw).text();
+		money = $(".Curbor_yunjiage").eq(sw).text(),
+		shenyu = $(".Curbor_shenyu").eq(sw).text();
 	var Cartlist = $.cookie('Cartlist');
 	if(!Cartlist){
 		var info = {};
@@ -237,7 +239,7 @@ function Cartcookie(sw,cook){
 	info[shopid]['num']=1;
 	info[shopid]['shenyu']=shenyu;
 	info[shopid]['money']=money;
-	info['MoenyCount']='0.00';
+	info['MoneyCount']='0.00';
 	$.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});
 	if(cook){
 		window.location.href="{WEB_PATH}/member/cart/cartlist";
