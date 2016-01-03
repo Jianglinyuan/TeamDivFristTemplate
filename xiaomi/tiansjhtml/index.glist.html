@@ -112,9 +112,9 @@ a.list_classMore {
         </div>
     </div>
         <div class="xm-line-box goods-list-box">
-        <div class="box-hd">
+        <div class="box-hd order">
             <div class="filter-lists">
-                <dl class="xm-filter-list xm-filter-list-first category-filter-list clearfix">
+                <dl class="xm-order-list xm-filter-list-first category-filter-list clearfix">
                     <dd>
                         <ul class="clearfix">
 							<li {wc:if $order=='4'}class="first current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_4">最新</a></li>
@@ -139,7 +139,7 @@ a.list_classMore {
                                 <div class="item-thumb"><a href="{WEB_PATH}/goods/{wc:$shop['id']}"><img src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" alt="{wc:$shop['title']}"></a></div>
                                 <div class="item-info">
                                     <h3 class="item-title"><a href="{WEB_PATH}/goods/{wc:$shop['id']}">{wc:$shop['title']}</a></h3>
-                                    <div class="item-price">价值：{wc:$shop['money']}元</div>
+                                    <div class="item-price">￥{wc:$shop['money']}</div>
                                     <div class="item-star">
 										<p><span style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],270)}px;"></span></p>
                                         <ul class="Pro-bar-li">
@@ -149,8 +149,8 @@ a.list_classMore {
 										</ul>
                                     </div>
                                     <div class="item-actions">
-                                        <a class="btn btn-dake btn-small J_addFav" href="javascript:;"><i class="iconfont"></i>立即{wc:fun:_cfg('web_name_two')}</a>
-										<a class="btn btn-small btn-primary J_addCart" href="javascript:;"><i class="iconfont"></i>加入购物车</a>
+                                        <a class="btn btn-primary btn-small J_addFav" href="javascript:;"><i class="iconfont"></i>立即{wc:fun:_cfg('web_name_two')}</a>
+										<a class="btn btn-small btn-dake J_addCart" href="javascript:;"><i class="iconfont"></i>加入购物车</a>
 
 										<div class="Curbor_id" style="display:none;">{wc:$shop['id']}</div>
 										<div class="Curbor_yunjiage" style="display:none;">{wc:$shop['yunjiage']}</div>
