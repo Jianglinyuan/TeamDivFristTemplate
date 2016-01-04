@@ -91,13 +91,14 @@
                                         </div>
                                     </li> -->
 
-                                {wc:loop $shopqishu $qishu}
+                                
+                                {wc:loop $shopqishu $key=>$qishu}
                                 {wc:php:start}
                                     $qishu['q_user'] = unserialize($qishu['q_user']);
                                 {wc:php:end}
                                 <li data-pro="item" class="w-slide-wrap-list-item">
                                     <div class="w-goods-newReveal">
-                                        <i class="ico ico-label ico-label-newReveal" title="正在揭晓"></i>
+                                        <i class="ico ico-label ico-label-newReveal" title="最新揭晓"></i>
                                         <p class="w-goods-title"><a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" title="{wc:$qishu['title']}" target="_blank">{wc:$qishu['title']}</a></p>
                                         <div class="w-goods-pic">
                                             <a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" target="_blank">
@@ -108,7 +109,7 @@
                                         <p class="w-goods-period">期号：{wc:$qishu['qishu']}</p>
                                         <div class="w-goods-record">
                                             <p class="w-goods-owner f-txtabb">获奖者：<a href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" title="{wc:fun:get_user_name($qishu['q_user'])}"><b>{wc:fun:get_user_name($qishu['q_user'])}</b></a></p>
-                                            <p>本期参与：25人次</p>
+                                            <p>本期参与：{wc:$renci[$key]['gonumber']}人次</p>
                                             <p>幸运号码：{wc:$qishu['q_user_code']}</p>
                                         </div>
                                     </div>

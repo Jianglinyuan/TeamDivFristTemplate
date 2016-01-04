@@ -4916,3 +4916,6 @@ body {
 p.w-record-price, p.w-goods-price {
     text-align: right;
 }
+.m-detail-period .box-hd h4 {
+  text-align: center;
+}
