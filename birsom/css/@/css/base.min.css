@@ -5767,3 +5767,18 @@ dd.del {
 .xm-order-list dd li.current .icon-order-descending {
 	background-position: -12px -12px
 }
+#no-goods {
+	width: 240px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+#no-goods img {
+	float: right;
+}
+#no-goods span {
+	float: right;
+	font-size: 14px;
+	height: 49px;
+	line-height: 49px;
+	margin-right: 10px;
+}
