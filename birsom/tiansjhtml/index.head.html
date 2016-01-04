@@ -29,29 +29,29 @@
         <div class="topbar-nav">
             <!-- <a href="{WEB_PATH}/single/business">商务合作</a>
             <span class="sep">|</span> -->            
-            <a id="btnFavorite" href="javascript:;" title="收藏{wc:fun:_cfg("web_name_two")}">收藏{wc:fun:_cfg("web_name_two")}</a>
-            <span class="sep">|</span><a href="{G_WEB_PATH}/?/go/index/app" target="_blank" title="手机版">手机{wc:fun:_cfg('web_name_two')}</a>
-            <span class="sep">|</span><a href="{WEB_PATH}/help/1" target="_blank" title="网站简介">{wc:fun:_cfg('web_name_two')}简介</a>
+            <a id="btnFavorite" href="javascript:;" title="收藏{wc:fun:_cfg("web_name_two")}">بېكەتنى ساقلىۋېلىش</a>
+            <span class="sep">|</span><a href="{G_WEB_PATH}/?/go/index/app" target="_blank" title="手机版">يانفون نەشىرى</a>
+            <span class="sep">|</span><a href="{WEB_PATH}/help/1" target="_blank" title="网站简介">بېكەت ھەققىدە</a>
             <!-- <span class="sep">|</span>
             <a href="{WEB_PATH}/group_qq" target="_blank" title="QQ群">{wc:fun:_cfg('web_name_two')}QQ群</a>
             <span class="sep">|</span><a href="{WEB_PATH}/go/shaidan/"><span class="text">晒单分享</span></a> -->
         </div>
         <div class="topbar-info J_userInfo">
         {wc:if get_user_arr()}
-            <a href="{WEB_PATH}/member/home" target="_blank">我的{wc:fun:_cfg("web_name_two")}账户</a><span class="sep">|</span>
-            <a href="{WEB_PATH}/member/home/userbuylist">我的订单</a><span class="sep">|</span>
-            <div class="welcome">欢迎您 <b>{wc:fun:get_user_name(get_user_arr(),'username')}<span class="arrow"></span></b>
+            <a href="{WEB_PATH}/member/home" target="_blank">مىنىڭ ھېساباتىم</a><span class="sep">|</span>
+            <a href="{WEB_PATH}/member/home/userbuylist">زاكاسلىرىم</a><span class="sep">|</span>
+            <div class="welcome">{wc:fun:get_user_name(get_user_arr(),'username')}<span class="arrow"><b>مەرھابا</span></b>
                 <div class="user-info-menu" style="display: none;">
                     <ul>
                         <li><a href="{WEB_PATH}/member/home" target="_blank">个人中心</a></li>
-                        <li><a href="{WEB_PATH}/member/home/userrecharge">帐户充值</a></li>
-                        <li><a href="{WEB_PATH}/member/user/cook_end">退出登录</a></li>
+                        <li><a href="{WEB_PATH}/member/home/userrecharge">پۇل قاچىلاش</a></li>
+                        <li><a href="{WEB_PATH}/member/user/cook_end">چېكىنىپ چىقىش</a></li>
                     </ul>
                     <span class="menu-arrow"></span>
                 </div>
             </div>
         {wc:else}
-            <a href="{WEB_PATH}/register">注册</a><span class="sep">|</span><a href="{WEB_PATH}/login">登录</a>
+            <a href="{WEB_PATH}/register">تىزىملىتىش</a><span class="sep">|</span><a href="{WEB_PATH}/login">كىرىش</a>
         {wc:if:end}
         </div>
     </div>
@@ -64,21 +64,21 @@
             <div class="header-info">
                 <div class="search-section">
                     <div class="search-form clearfix">
-                        <input type="text" id="txtSearch" class="search-text" placeholder="搜索您需要的商品"/>
+                        <input type="text" id="txtSearch" class="search-text" placeholder="ئىزدىمەكچى بولغان سۆزنى كىرگۈزۈڭ"/>
                         <input type="button" id="butSearch" class="search-btn iconfont" value="&#xe630;"/>
                         <!--[if IE 6]><div class="ie6-fix"></div><![endif]-->
                         <div class="hot-words">
-                            <a href="{WEB_PATH}/goods_list/5/">手机</a><a href="{WEB_PATH}/goods_list/12/">苹果</a>
+                            <a href="{WEB_PATH}/goods_list/5/">يانفون</a><a href="{WEB_PATH}/goods_list/12/">ئالما</a>
                         </div>
                     </div>
                 </div>
                 <div class="cart-section">
                     <div class="mini_mycart" id="sCart">
                         <a rel="nofollow" href="{WEB_PATH}/member/cart/cartlist" id="sCartNavi" class="mini-cart">
-                        (<span id="sCartTotal">0</span>) 购物车<i class="iconfont">&#xe609;</i></a>
+                        (<span id="sCartTotal">0</span>) مال ھارۋام<i class="iconfont">&#xe609;</i></a>
                         <div class="mini-cart-list" id="J_miniCartList">
-                            <div class="goods_loding" id="sCartLoading" style="display: none;">...数据加载中，请稍后<img border="0" alt="" src="{G_TEMPLATES_STYLE}/images/goods_loading.gif"></div>
-                            <div class="count clearfix"><span class="total">件商品 <em id="sCartTotal2">0</em> 共计<strong><em id="sCartTotalM">0</em> ：合计</strong></span><a href="{WEB_PATH}/member/cart/cartlist" class="btn btn-primary">去购物车结算</a></div>
+                            <div class="goods_loding" id="sCartLoading" style="display: none;">سانلىق مەلۇمات يۈكلىنىۋاتىدۇ،سەل ساقلاڭ<img border="0" alt="" src="{G_TEMPLATES_STYLE}/images/goods_loading.gif"></div>
+                            <div class="count clearfix"><span class="total">دانە مەھسۇلات<em id="sCartTotal2">0</em> جەمئىي<strong><em id="sCartTotalM">0</em> ：جەمئىي سوم</strong></span><a href="{WEB_PATH}/member/cart/cartlist" class="btn btn-primary">ھېسابات قىلىش</a></div>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                 <div class="number">
                     <a href="{WEB_PATH}/buyrecord" target="_blank">
                     <ul id="ulHTotalBuy">
-                        <li class="nobor gray6 u-secondary"><b><s></s></b>人次</li>
+                        <li class="nobor gray6 u-secondary"><b><s></s></b>قېتىم سان</li>
                         <li class="num" style="display: none;"><cite><em>0</em></cite><i></i></li>
                         <li class="num" style="display: none;"><cite><em>0</em></cite><i></i></li>
                         <li class="num"><cite><em>0</em></cite><i></i></li>
@@ -99,7 +99,7 @@
                         <li class="num"><cite><em>0</em></cite><i></i></li>
                         <li class="num"><cite><em>0</em></cite><i></i></li>
                         <li class="num"><cite><em>0</em></cite><i></i></li>
-                        <li class="nobor gray6">累计参与</li>
+                        <li class="nobor gray6">جەمىئىي قاتناشقان ئادەم</li>
                             </ul>
                             <!--ul id="ulHTotalBuy">
                                 <li class="nobor gray6">累计参与</li>
@@ -190,7 +190,7 @@
             <div class="g-wrap f-clear">
                 <div class="m-catlog">
                     <div class="m-catlog-hd" style="padding-left:30px;cursor:pointer">
-                        <h2>商品分类<i class="ico ico-arrow ico-arrow-white ico-arrow-white-down"></i></h2>
+                        <h2>تاۋار تۈرلىرى<i class="ico ico-arrow ico-arrow-white ico-arrow-white-down"></i></h2>
                     </div>
                     <div class="m-catlog-wrap">
                         <div class="m-catlog-bd">
@@ -218,7 +218,7 @@
 ">
                         <li class="m-menu-list-item  selected">
                             <var>|</var>
-                            <a class="m-menu-list-item-link" href="{G_WEB_PATH}">首页</a>
+                            <a class="m-menu-list-item-link" href="{G_WEB_PATH}">باش بەت</a>
                         </li>
                          {wc:php:start}
                 if($this->db){
@@ -317,15 +317,15 @@ $(function(){
     $("#txtSearch").focus(function(){
         $("#txtSearch").css({background:"#FFFFCC"});
         var va1=$("#txtSearch").val();
-        if(va1=='搜索您需要的商品'){
-            $("#txtSearch").val("");
+        if(va1=="ئىزدىمەكچى بولغان سۆزنى كىرگۈزۈڭ"){
+            $("#txtSearch").val('ئىزدىمەكچى بولغان سۆزنى كىرگۈزۈڭ');
         }
     });
     $("#txtSearch").blur(function(){
-        $("#txtSearch").css({background:"#FFF"});
+        $("#txtSearch").css({background:"#FFFFCC"});
         var va2=$("#txtSearch").val();
         if(va2==""){
-            $("#txtSearch").val('搜索您需要的商品');
+            $("#txtSearch").val('ئىزدىمەكچى بولغان سۆزنى كىرگۈزۈڭ');
         }
     });
     $("#butSearch").click(function(){
