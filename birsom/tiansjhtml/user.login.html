@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="">
 <meta name ="keywords" content="品牌,名品折扣,限时,特卖,VIP,尾品" />
-<title>登陆{wc:fun:_cfg('web_name_two')}网 - 一元疯抢,正品特卖</title>
+<title>كىرىش</title>
 <link type="text/css" rel="stylesheet" href="{G_TEMPLATES_CSS}/App/Css/us.css" />
 <meta name="renderer" content="webkit">
 <!--[if lte IE 6]>
@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="top_bar">
-	<a class="logo" href="{G_WEB_PATH}" style="background: url({G_UPLOAD_PATH}/{wc:fun:Getlogo()}) no-repeat;"><h1>{wc:fun:_cfg('web_name_two')}网</h1></a>
+	<a class="logo" href="{G_WEB_PATH}" style="background: url({G_UPLOAD_PATH}/{wc:fun:Getlogo()}) no-repeat;"><h1>تور بېكىتىمىزگە كىرىش</h1></a>
     <img src="{G_TEMPLATES_STYLE}/images/ad_words.png" class="ad_words" />
     <p class="clear"></p>
 </div>
@@ -30,29 +30,31 @@ $(function(){
 </script>
 <div class="log_reg_wrap"  style="background-image:url({G_TEMPLATES_STYLE}/images/login_bg.jpg);">
 	<div class="log_reg_box">
-    	<h2>登录{wc:fun:_cfg('web_name_two')}网</h2>
+    	<h2>تور بېكىتىمىزگە كىرىش</h2>
         <p class="blank30"></p>
         <form class="registerform" method="post" action="">
             <table width="260" border="0" cellspacing="0" cellpadding="0" class="form_table2" align="center">
               <tr>
                 <td >
                 		<div class="form_input_wrap">
-							<input class="form_input" name="username" type="text" placeholder="手机号/邮箱！" datatype="m | e" nullmsg="请填写帐号！" errormsg="手机号/邮箱！" />
+							<input class="form_input" name="username" type="text" placeholder="يانفۇن نومۇرىڭىز ياكى ئېلىخەت ئادرېسىڭىز" datatype="m | e" nullmsg="请填写帐号！" errormsg="手机号/邮箱！" />
                             <div class="Validform_checktip"></div>
-                            <div class="info">请输入您账号！<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            <div class="info">يانفۇن نومۇرىڭىز ياكى ئېلىخەت ئادرېسىڭىز<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
                         </div>
                  </td>
               </tr>
               <tr>
                 <td>
                 		<div class="form_input_wrap">
-							<input class="form_input" name="password" type="password" placeholder="密码" datatype="*6-20" nullmsg="请设置密码！" errormsg="密码范围在6~20位之间！"/>
+							<input class="form_input" name="password" type="password" placeholder="مەخپىي نومۇر" datatype="*6-20" nullmsg="请设置密码！" errormsg="密码范围在6~20位之间！"/>
                             <div class="Validform_checktip"></div>
-                            <div class="info">请输入您的密码！<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div></div>
+                            <div class="info">مەخپىي نومۇر<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span>
+                </div>
+            </div>
 
 
 				<li style="margin-top:18px;">
-                    <span style="float: right; margin: 7px 0 0 10px;">验证码：</span>
+                    <span style="float: right; text-align:right; margin-top:10px; margin-left:-10px; width:90px;">:تەستىق كودى</span>
                     <input style="width:90px; height:30px; font-size:16px; color:#1dcc5a; float:right; direction: rtl" class="text_verify" name="verify" type="text"  datatype="*6-6" nullmsg="请输入验证码！" errormsg="请输入正确的验证码！"/>
                     <span class="fog" style="padding-top:5px;"><img  id="checkcode" src="{WEB_PATH}/api/checkcode/image/82_27/"/></span>
                 </li>
@@ -62,22 +64,21 @@ $(function(){
 
 
               <tr>
-                <td><input name="submit" type="submit" value="登录" class="login_btn" ></td>
+                <td><input name="submit" type="submit" value="كىرىش" class="login_btn" ></td>
               </tr>
             </table>
         </form>
-        <div class="text_bar"><a href="{WEB_PATH}/register" class="ceb4">[免费注册]</a> | <a href="{WEB_PATH}/member/finduser/findpassword" class="c999">[忘记密码]</a></div>
-        <div class="cooperative_logging"><p>第三方登录</p>QQ登录<a href="{WEB_PATH}/api/qqlogin/" class="qq_ico" alt="使用QQ登录"></a></div>
+        <div class="text_bar"><a href="{WEB_PATH}/register" class="ceb4">ھەقسىز تىزىملىتىش</a> |<a href="{WEB_PATH}/member/finduser/findpassword" class="c999">مەخپىي نومۇرنى ئۇنتۇپ قالدىم</a></div>
+        <div class="cooperative_logging"><p>ئۈچىنچى تەرەپ ئارقىلىق كىرىش</p>QQ<a href="{WEB_PATH}/api/qqlogin/" class="qq_ico" alt="使用QQ登录"></a></div>
     </div>
 </div>
 <div class="footer_jian_wrap footer_jian_nbg">
-	<div class="footer_jian">
-		<p><a target="_blank" href="{WEB_PATH}/help/15">关于我们</a><em class="line"></em>
-		<a target="_blank" href="{WEB_PATH}/help/16">加入我们</a><em class="line"></em>
-		<a target="_blank" href="{WEB_PATH}/help/13">投诉建议</a><em class="line"></em>
-		<a target="_blank" href="{WEB_PATH}/help/3">服务协议</a><em class="line"></em>
-		<a target="_blank" href="{WEB_PATH}/help/18"></a></p>
-             <p><a href="{G_WEB_PATH}" target="_blank" title="wangzhi">{G_WEB_PATH}</a> &nbsp;{wc:fun:_cfg('web_copyright')}</p>
+  <div class="footer_jian">
+    <p><a target="_blank" href="{WEB_PATH}/help/15">بېكەت ھەققىدە</a><em class="line"></em>
+    <a target="_blank" href="{WEB_PATH}/help/13">تەكلىپ پىكىرلەر</a><em class="line"></em>
+    <a target="_blank" href="{WEB_PATH}/help/3">مۇلازىمەت بەلگىلىمىسى</a><em class="line"></em>
+    <a target="_blank" href="{WEB_PATH}/help/18"></a></p>
+             <p>&nbsp;{wc:fun:_cfg('web_copyright')}</p>
     </div>
 </div>
 </body>

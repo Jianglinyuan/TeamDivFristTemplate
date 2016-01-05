@@ -54,12 +54,12 @@
                                                 <img width="140" height="105" src="{G_UPLOAD_PATH}/{wc:$qishu['thumb']}">
                                             </a>
                                         </div>
-                                        <p class="w-goods-price">总需：{wc:$qishu['zongrenshu']}人次</p>
-                                        <p class="w-goods-period">期号：{wc:$qishu['qishu']}</p>
+                                        <p class="w-goods-price">جەمئىي ئادەم قېتىم سانى：{wc:$qishu['zongrenshu']}</p>
+                                        <p class="w-goods-period">سان：{wc:$qishu['qishu']}</p>
                                         <div class="w-goods-record">
-                                            <p class="w-goods-owner f-txtabb">获奖者：<a href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" title="{wc:fun:get_user_name($qishu['q_user'])}"><b>{wc:fun:get_user_name($qishu['q_user'])}</b></a></p>
-                                            <p>本期参与：{wc:$renci[$key]['gonumber']}人次</p>
-                                            <p>幸运号码：{wc:$qishu['q_user_code']}</p>
+                                            <p class="w-goods-owner f-txtabb">ئېرىشكۈچى ：<a href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" title="{wc:fun:get_user_name($qishu['q_user'])}"><b>{wc:fun:get_user_name($qishu['q_user'])}</b></a></p>
+                                            <p>مەزكۇر قېتىملىق قاتنىشىش قېتىم سانى：{wc:$renci[$key]['gonumber']}</p>
+                                            <p>تەلەيلىك نومۇر ：{wc:$qishu['q_user_code']}</p>
                                         </div>
                                     </div>
                                 </li>
@@ -100,7 +100,7 @@
                             </div>
                             <p class="w-goods-title f-txtabb"><a title="{wc:$new_shop1['title']}" href="{WEB_PATH}/goods/{wc:$new_shop1['id']}" target="_blank">{wc:$new_shop1['title']}</a></p>
                             <p class="w-goods-price">
-                                总需：{wc:$new_shop1['zongrenshu']}人次
+                               جەمئىي ئادەم قېتىم سانى：{wc:$new_shop1['zongrenshu']}
                             </p>
 
                             <div class="w-progressBar" title="{wc:fun:percent($new_shop1['canyurenshu'],$new_shop1['zongrenshu'])}">
@@ -110,11 +110,11 @@
                                 <ul class="w-progressBar-txt f-clear">
                                     <li class="w-progressBar-txt-r">
                                         <p><b>{wc:$new_shop1['canyurenshu']}</b></p>
-                                        <p>已参与人次</p>
+                                        <p>قاتناشقىنى</p>
                                     </li>
                                     <li class="w-progressBar-txt-l">
                                         <p><b>{wc:$new_shop1['zongrenshu']-$new_shop1['canyurenshu']}</b></p>
-                                        <p>剩余人次</p>
+                                        <p>قالغىنى</p>
                                     </li>
                                 </ul>
                             </div>
@@ -122,7 +122,7 @@
                                 <b class="txt-blue">1257</b>人次已参与，赶快去参加吧！剩余<b class="txt-red">343</b>人次
                             </p>
                             <div class="w-goods-opr">
-                                <a class="w-button w-button-main w-button-l" href="{WEB_PATH}/goods/{wc:$new_shop1['id']}" style="width:70px;" target="_blank">立即夺宝</a>
+                                <a class="w-button w-button-main w-button-l" href="{WEB_PATH}/goods/{wc:$new_shop1['id']}" target="_blank">دەرھال قاتنىشىش</a>
                             </div>
                         </div>
                     </div>
@@ -154,8 +154,8 @@
                         </div>
                         <div class="w-slide-controller">
                             <div class="w-slide-controller-btn" data-pro="controllerBtn">
-                                <a class="prev" data-pro="prev" href="javascript:void(0)"><i class="ico ico-arrow-small ico-arrow-small-l"></i><span class="f-txtHide">新品推荐上一帧</span></a>
-                                <a class="next" data-pro="next" href="javascript:void(0)"><i class="ico ico-arrow-small ico-arrow-small-r"></i><span class="f-txtHide">新品推荐下一帧</span></a>
+                                <a class="prev" data-pro="prev" href="javascript:void(0)"><i class="ico ico-arrow-small ico-arrow-small-l"></i><span class="f-txtHide"></span></a>
+                                <a class="next" data-pro="next" href="javascript:void(0)"><i class="ico ico-arrow-small ico-arrow-small-r"></i><span class="f-txtHide"></span></a>
                             </div>
                         </div>
                     </div>
@@ -167,8 +167,8 @@
                 <div class="g-main">
                     <div class="m-index-mod m-index-goods-hotest">
                         <div class="w-hd">
-                            <h3 class="w-hd-title">最热商品</h3>
-                            <a class="w-hd-more" href="http://1.163.com/list.html">&lt;&lt;更多商品，点击查看</a>
+                            <h3 class="w-hd-title">قىزىق تاۋارلار</h3>
+                            <a class="w-hd-more" href="http://1.163.com/list.html">&lt;&lt;بۇ يەرنى چېكىپ داۋامىنى كۆرۈڭ</a>
                         </div>
                         <div class="m-index-mod-bd">
                             <ul class="w-goodsList f-clear">
@@ -182,7 +182,7 @@
                                         </div>
                                         <p class="w-goods-title f-txtabb"><a title="{wc:$renqi['title']}" href="http://1.163.com/detail/1093-212302410.html" target="_blank">{wc:$renqi['title']}</a></p>
                                         <p class="w-goods-price">
-                                            总需：{wc:$renqi['zongrenshu']} 人次
+                                            جەمئىي ئادەم قېتىم سانى：{wc:$renqi['zongrenshu']}
                                         </p>
                                         <div class="w-progressBar" title="{wc:fun:percent($renqi['canyurenshu'],$renqi['zongrenshu'])}">
                                             <p class="w-progressBar-wrap">
@@ -191,20 +191,20 @@
                                             <ul class="w-progressBar-txt f-clear">
                                                 <li class="w-progressBar-txt-r">
                                                     <p><b>{wc:$renqi['canyurenshu']}</b></p>
-                                                    <p>已参与人次</p>
+                                                    <p>قاتناشقىنى</p>
                                                 </li>
                                                 <li class="w-progressBar-txt-l">
                                                     <p><b>{wc:$renqi['zongrenshu']-$renqi['canyurenshu']}</b></p>
-                                                    <p>剩余人次</p>
+                                                    <p>قالغىنى</p>
                                                 </li>
                                             </ul>
                                         </div>
                                         <p class="w-goods-progressHint">
-                                            <b class="txt-blue">1060</b>人次已参与，赶快去参加吧！剩余<b class="txt-red">7030</b>人次
+                                            <b class="txt-blue">1060</b>ئادەم قېتىم قاتناشتى،سىزمۇ قاتنىشىڭ قالغىنى<b class="txt-red">7030</b> قېتىم سان
                                         </p>
                                         <div class="w-goods-opr">
-                                            <a class="w-button w-button-addToCart" href="javascript:void(0)" title="添加到购物车"></a>
-                                            <a class="w-button w-button-main w-button-l" href="{WEB_PATH}/goods/{wc:$renqi['id']}" style="width:70px;" target="_blank">立即夺宝</a>
+                                            <a class="w-button w-button-addToCart" href="javascript:void(0)" title="مال ھارۋىسىغا سېلىش"></a>
+                                            <a class="w-button w-button-main w-button-l" href="{WEB_PATH}/goods/{wc:$renqi['id']}" target="_blank">دەرھال قاتنىشىش</a>
                                         </div>
                                     </div>
 
@@ -221,7 +221,7 @@
                 <div class="g-side">
                     <div class="m-index-mod m-index-recordRank m-index-recordRank-nb">
                         <div class="m-index-mod-hd">
-                            <h3>一元传奇</h3>
+                            <h3>بىر سوم</h3>
                         </div>
                         <div class="m-index-mod-bd">
                             <ul class="w-intervalScroll" data-minLine="6">
@@ -233,18 +233,18 @@
                                     <div class="w-record-detail">
                                         <p class="w-record-intro">
                                             <a class="w-record-user f-txtabb" href="{WEB_PATH}/uname/{wc:fun:idjia($chuanqi['uid'])}" target="_blank" title="{wc:$chuanqi['username']}">{wc:$chuanqi['username']}</a>
-                                            <span class="w-record-date">于{wc:fun:date("m-d",$chuanqi['time'])}</span>
+                                            <span class="w-record-date">{wc:fun:date("m-d",$chuanqi['time'])}</span>
                                         </p>
-                                        <p class="w-record-title f-txtabb"><strong>{wc:$chuanqi['gonumber']}人次</strong>夺得<a title="{wc:$chuanqi['shopname']}" href="{WEB_PATH}/goods/{wc:$chuanqi['shopid']}" target="_blank">{wc:$chuanqi['shopname']}</a></p>
+                                        <p class="w-record-title f-txtabb"><strong>{wc:$chuanqi['gonumber']}يۇەن</strong><a title="{wc:$chuanqi['shopname']}" href="{WEB_PATH}/goods/{wc:$chuanqi['shopid']}" target="_blank">{wc:$chuanqi['shopname']}</a></p>
                                         <p class="w-record-price">
-                                            中奖期数：第 {wc:$chuanqi['shopqishu']} 期
+                                            مۇكاپاتقا ئېرىشكەن سان :{wc:$chuanqi['shopqishu']}
                                         </p>
                                     </div>
                                 </li>
                             {wc:loop:end}
                             </ul>
                         </div>
-                        <div class="m-index-mod-ft">拼的就是人品！</div>
+                        <div class="m-index-mod-ft">تەلەي ھەممىمىزگە مەنسۈپ</div>
                     </div>
                 </div>
             </div>
@@ -267,7 +267,7 @@
              <div class="m-index-mod m-index-goods-catlog">
                     <div class="w-hd">
                         <h3 class="w-hd-title">{wc:$daohang['name']}</h3>
-                        <a class="w-hd-more" href="{WEB_PATH}/goods_list/{wc:$daohang['cateid']}">&lt;&lt;更多商品，点击查看</a>
+                        <a class="w-hd-more" href="{WEB_PATH}/goods_list/{wc:$daohang['cateid']}">&lt;&lt;بۇ يەرنى چېكىپ داۋامىنى كۆرۈڭ</a>
                     </div>
                     <div class="m-index-mod-bd f-clear">
                         <div class="w-slide m-index-promotGoods">
@@ -298,7 +298,7 @@
                                     </div>
                                     <p class="w-goods-title f-txtabb"><a title="{wc:$g_l['title']}" href="{WEB_PATH}/goods/{wc:$g_l['id']}" target="_blank">{wc:$g_l['title']}</a></p>
                                     <p class="w-goods-price">
-                                        总需：{wc:$g_l['zongrenshu']} 人次
+                                        جەمئىي ئادەم قېتىم سانى：{wc:$g_l['zongrenshu']}
                                     </p>
                                     <div class="w-progressBar" title="{wc:fun:percent($g_l['canyurenshu'],$g_l['zongrenshu'])}">
                                         <p class="w-progressBar-wrap">
@@ -307,20 +307,20 @@
                                         <ul class="w-progressBar-txt f-clear">
                                             <li class="w-progressBar-txt-r">
                                                 <p><b>{wc:$g_l['canyurenshu']}</b></p>
-                                                <p>已参与人次</p>
+                                                <p>قاتناشقىنى</p>
                                             </li>
                                             <li class="w-progressBar-txt-l">
                                                 <p><b>{wc:$g_l['zongrenshu']-$g_l['canyurenshu']}</b></p>
-                                                <p>剩余人次</p>
+                                                <p>قالغىنى</p>
                                             </li>
                                         </ul>
                                     </div>
                                     <p class="w-goods-progressHint">
-                                        <b class="txt-blue">247</b>人次已参与，赶快去参加吧！剩余<b class="txt-red">752</b>人次
+                                        <b class="txt-blue">247</b>ئادەم قېتىم قاتناشتى،سىزمۇ قاتنىشىڭ قالغىنى قالغىنى<b class="txt-red">752</b>
                                     </p>
                                     <div class="w-goods-opr">
-                                        <a class="w-button w-button-addToCart" href="javascript:void(0)" title="添加到购物车"></a>
-                                         <a class="w-button w-button-main w-button-l" href="{WEB_PATH}/goods/{wc:$g_l['id']}" style="width:70px;" target="_blank">立即夺宝</a>
+                                        <a class="w-button w-button-addToCart" href="javascript:void(0)" title="مال ھارۋىسىغا سېلىش"></a>
+                                         <a class="w-button w-button-main w-button-l" href="{WEB_PATH}/goods/{wc:$g_l['id']}" target="_blank">دەرھال قاتنىشىش</a>
                                     </div>
                                 </div>
 
@@ -341,8 +341,8 @@
                 <a name="newArrivals"></a>
                 <div class="m-index-mod m-index-newArrivals">
                     <div class="w-hd">
-                        <h3 class="w-hd-title">最新上架</h3>
-                        <a class="w-hd-more" >&lt;&lt;更多新品，尽在云购</a>
+                        <h3 class="w-hd-title">ئەڭ يېڭى تاۋارلار</h3>
+                        <a class="w-hd-more" >&lt;&lt;بۇ يەرنى چېكىپ تېخىمۇ كۆپ تاۋارلارنى كۆرۈڭ</a>
                     </div>
                     <div class="m-index-mod-bd">
                         <ul class="w-goodsList f-clear">
@@ -356,7 +356,7 @@
                                     </div>
                                     <p class="w-goods-title f-txtabb"><a title="{wc:$newest['title']}" href="{WEB_PATH}/goods/{wc:$newest['id']}" target="_blank">{wc:$newest['title']}</a></p>
                                     <p class="w-goods-price">
-                                        总需：{wc:$newest['zongrenshu']} 人次
+                                        جەمئىي ئادەم قېتىم سانى：{wc:$newest['zongrenshu']}
                                     </p>
                                 </div>
                             </li>
@@ -367,8 +367,8 @@
                 </div>
                 <div class="m-index-mod m-index-share">
                     <div class="w-hd">
-                        <h3 class="w-hd-title">晒单分享</h3>
-                        <a class="w-hd-more" href="http://localhost/index.php/go/shaidan/init">&lt;&lt;更多分享，点击查看</a>
+                        <h3 class="w-hd-title">بەھرلەش</h3>
+                        <a class="w-hd-more" href="http://localhost/index.php/go/shaidan/init">&lt;&lt;بۇ يەرنى چېكىپ داۋامىنى كۆرۈڭ</a>
                     </div>
                     <div class="m-index-mod-bd">
                         <ul class="w-intervalScroll f-clear" data-minLine="6" data-perLine="2">            

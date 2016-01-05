@@ -122,7 +122,7 @@ body:before {
 .m-index-news-list .lv1,
 .m-index-news-list .lv2 {
   padding-right: 6px;
-  font-family: 'verdana';
+  font-family: 'alkatip';
   font-size: 16px;
   font-style: italic;
 }
@@ -139,7 +139,7 @@ body:before {
   position: absolute;
   bottom: 8px;
   right: 0;
-  font-family: simsun;
+  font-family: "alkatip";
 }
 
 .m-index-news-ext {
@@ -149,7 +149,7 @@ body:before {
 }
 
 .m-index-news-ext a {
-  font-family: simsun
+  font-family: "alkatip";
 }
 
 .m-index-promot {
@@ -338,7 +338,7 @@ body:before {
   font-size: 18px;
   color: #000;
   font-weight: bold;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
 }
 
 .m-index-mod-more {
@@ -347,7 +347,7 @@ body:before {
   bottom: 0px;
   line-height: 30px;
   color: #808080;
-  font-family: "simsun";
+  font-family: "alkatip";
 }
 
 .m-index-mod-bd {
@@ -356,17 +356,17 @@ body:before {
 }
 
 .g-side .m-index-mod-hd {
-  padding-right: 15px;
   height: 32px;
-  background-color: #898989;
+  background: #db3652;
+  border-color: #b6243d;
 }
 
 .g-side .m-index-mod-hd h3 {
   line-height: 32px;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
-  text-align: right;
+  text-align: center;
 }
 
 .w-goodsList .w-goods-ing {

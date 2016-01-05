@@ -2,17 +2,23 @@ html {
   -overflow-y: scroll
 }
 
+@font-face {
+    font-family: "alkatip";
+    src:url('{G_TEMPLATES_CSS}/alkatip.ttf')format('truetype');
+    }
+
 body {
   color: #808080;
   background: #fff;
   font-size: 12px;
   line-height: 1.666
+  font-family:"alkatip";
 }
 
 body,
 input,
 textarea {
-  font-family: verdana
+  font-family: "alkatip";
 }
 
 header,
@@ -48,7 +54,8 @@ fieldset,
 menu,
 pre {
   margin: 0;
-  padding: 0
+  padding: 0;
+  font-family: "alkatip"
 }
 
 table,
@@ -56,7 +63,8 @@ th,
 td,
 img,
 fieldset {
-  border: 0
+  border: 0;
+  font-family: "alkatip"
 }
 
 time,
@@ -74,7 +82,8 @@ i,
 th,
 caption {
   font-style: normal;
-  text-decoration: none
+  text-decoration: none;
+  font-family:"alkatip"
 }
 
 h1,
@@ -85,7 +94,8 @@ h5,
 h6,
 th {
   font-size: 100%;
-  font-weight: normal
+  font-weight: normal;
+  font-family: "alkatip"
 }
 
 input,
@@ -94,14 +104,16 @@ button,
 textarea,
 table {
   margin: 0;
-  font-family: inherit;
-  font-size: 100%
+  font-family: "alkatip";
+  font-size: 100%;
+
 }
 
 abbr,
 acronym {
   border: 0;
-  font-variant: normal
+  font-variant: normal;
+  font-family: "alkatip"
 }
 
 q:before,
@@ -166,7 +178,7 @@ img {
   border-radius: 3px;
   cursor: pointer;
   text-decoration: none!important;
-  font-family: "Microsoft Yahei", simhei;
+  font-family: "alkatip";
   font-weight: bold;
   outline: none;
 }
@@ -191,7 +203,7 @@ img {
   line-height: 24px;
   font-size: 12px;
   font-weight: normal;
-  font-family: "Verdana";
+  font-family: "alkatip";
   color: #808080;
   border: 1px solid #d8d8d8;
   border-radius: 2px;
@@ -226,7 +238,7 @@ img {
   padding: 0 20px;
   height: 35px;
   line-height: 35px;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 4px;
 }
 
@@ -571,7 +583,7 @@ img {
 .w-pager-first,
 .w-pager-last {
   font-weight: bold;
-  font-family: "Simsun";
+  font-family: "alkatip";
 }
 
 .w-pager .w-pager-cur,
@@ -750,7 +762,7 @@ img {
   top: 150px;
   left: 310px;
   width: 177px;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
   font-size: 14px;
   line-height: 23px;
   color: #ffc098;
@@ -775,7 +787,7 @@ img {
   height: 38px;
   font-size: 17px;
   line-height: 38px;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
   color: #fff;
   text-decoration: none;
 }
@@ -811,7 +823,7 @@ img {
   width: 610px;
   height: 572px;
   background: url(../../lib/img/common/cooperation_bg.png) no-repeat;
-  font-family: "Microsoft Yahei"
+  font-family: "alkatip"
 }
 
 .w-msgbox-special-tequan {
@@ -880,7 +892,7 @@ img {
 .w-fixedLayer-tt {
   text-indent: 0!important;
   text-align: center;
-  font-family: 'Microsoft Yahei';
+  font-family: 'alkatip';
   font-size: 21px;
   line-height: 32px;
   font-weight: bold
@@ -903,7 +915,7 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 30px;
-  font-family: simsun;
+  font-family: "alkatip";
 }
 
 .w-dir a {
@@ -1205,7 +1217,7 @@ img {
 }
 
 .w-label-text {
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
@@ -1391,13 +1403,13 @@ img {
 .w-wishSetting-title {
   font-size: 22px;
   font-weight: bold;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
   line-height: 45px;
 }
 
 .w-wishSetting-subtitle {
   padding: 5px 0;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
   font-size: 17px;
   line-height: 26px;
 }
@@ -1803,7 +1815,7 @@ img {
   font-size: 18px;
   color: #000;
   font-weight: bold;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
   text-align: right;
 }
 
@@ -1812,7 +1824,7 @@ img {
   bottom: 0px;
   line-height: 30px;
   color: #808080;
-  font-family: "simsun";
+  font-family: "alkatip";
 }
 
 .w-goodsList {}
@@ -2089,7 +2101,7 @@ img {
 
 .w-goods-newReveal {
   position: relative;
-  padding: 5px 0 0 20px;
+  padding: 0 0 0 20px;
   width: 344px;
   height: 169px;
   color: #3c3c3c;
@@ -2274,7 +2286,7 @@ img {
 
 .w-goods-newest .w-goods-title a {
   color: #3c3c3c;
-  font-family: "Microsoft Yahei", simhei, verdana;
+  font-family: "alkatip";
 }
 
 .w-goods-newest .w-goods-desc {
@@ -2589,7 +2601,7 @@ img {
 .w-msg-catlog-hd h3,
 .w-msg-news h3 a,
 .w-msg-catlog-list dt {
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
   color: #3c3c3c;
 }
 
@@ -2683,7 +2695,7 @@ img {
   line-height: 18px;
   font-size: 16px;
   font-weight: bold;
-  font-family: "MicroSoft Yahei";
+  font-family: "alkatip";
   background-position: -235px -26px;
 }
 
@@ -2742,7 +2754,7 @@ img {
   border-radius: 50%;
   font-size: 18px;
   line-height: 33px;
-  font-family: Arial;
+  font-family: "alkatip";
   font-weight: normal;
   color: #9B9B9B;
 }
@@ -2997,7 +3009,7 @@ a.w-tag:hover {
 
 .w-goods-mall-name {
   height: 42px;
-  font-family: simusun;
+  font-family:"alkatip";
   font-size: 14px;
   margin: 0px 15px 0px 20px;
   overflow: hidden;
@@ -3015,14 +3027,14 @@ a.w-tag:hover {
   height: 24px;
   line-height: 24px;
   color: #999999;
-  font-family: simusun;
+  font-family: "alkatip";
   font-size: 14px;
   margin: 17px 15px 27px 20px;
 }
 
 .w-goods-mall-price span {
   font-size: 24px;
-  font-family: Arial;
+  font-family: "alkatip";
   vertical-align: -1px;
 }
 
@@ -3085,7 +3097,7 @@ a.w-tag:hover {
   line-height: 75px;
   text-align: center;
   color: #8a8a8a;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
   font-size: 17px;
 }
 
@@ -4144,7 +4156,7 @@ body {
   right: 10px;
   top: 0;
   font-size: 15px;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
   color: #fff
 }
 
@@ -4214,7 +4226,7 @@ body {
 
 .m-menu {
   font-size: 16px;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
 }
 
 .m-menu-list var {
@@ -4338,7 +4350,7 @@ body {
   float: right;
   color: #3c3c3c;
   font-size: 14px;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
 }
 
 #joinNumber {
@@ -4358,7 +4370,7 @@ body {
   overflow: hidden;
   font-size: 28px;
   line-height: 30px;
-  font-family: "Arial";
+  font-family: "alkatip";
   background-position: 0 -30px;
   position: relative;
 }
@@ -4418,7 +4430,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
 }
 
 .m-instruction-list-item .list {
@@ -4437,7 +4449,7 @@ body {
 .m-instruction-state {
   margin: 0 auto;
   width: 170px;
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
 }
 
 .m-instruction-state li {
@@ -4472,7 +4484,7 @@ body {
   line-height: 18px;
   font-size: 16px;
   font-weight: bold;
-  font-family: "MicroSoft Yahei";
+  font-family: "alkatip";
   background-position: -235px -26px;
 }
 
@@ -4488,7 +4500,7 @@ body {
   right: 30px;
   bottom: 5px;
   font-size: 14px;
-  font-family: 'Microsoft Yahei'
+  font-family: 'alkatip';
 }
 
 .m-instruction-110 a {
@@ -4569,7 +4581,7 @@ body {
 }
 
 .m-login .w-msgbox-bd {
-  font-family: "Microsoft Yahei";
+  font-family: "alkatip";
   font-size: 12px;
 }
 

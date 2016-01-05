@@ -4,15 +4,22 @@
 
 /* GLOBAL & RESET
 ---------------------------------------------------------------------- */
+@font-face {
+    font-family: "alkatip";
+    src:url('{G_TEMPLATES_CSS}/alkatip.ttf')format('truetype');
+    }
+
 body, div, table, td, p, h1, h2, h3, h4, h5, em, span, a, fieldsetform, textarea, ul, li, dl, dt, dd, form {
 	margin: 0;
 	padding: 0;
 	border: none;
+	font-family: "alkatip";
 }
 body {
 	color: #333;
 	width: 100%;
-	font: 12px SimSun, Tahoma, Arial, \5b8b\4f53, sans-serif;
+	font-size: 12px;
+	font-family: "alkatip";
 	-webkit-text-size-adjust: none;
 	background: #ececec;
 }
@@ -27,21 +34,25 @@ input, textarea, select {
 	outline: none;
 	resize: none;
 	margin: 0;
-	padding: 0
+	padding: 0;
+	font-family:"alkatip";
 }
 input:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 table {
 	border-collapse: collapse;
-	border: none
+	border: none;
+	font-family:"alkatip";
 }
 ul, li, ol, dl, dd, dt {
 	list-style: none;
+	font-family: "alkatip";
 }
 h2, h3, h4, h5, strong {
 	font-weight: 700;
-	font-size: 12px
+	font-size: 12px;
+	font-family: "alkatip";
 }
 em, i {
 	font-style: normal
@@ -118,16 +129,16 @@ a.c267:hover {
 
 /*统一字体设置*/
 .f_arial, .product_info_top h2, .price_box, .price_box em, .remaining_time strong, .remaining_time span, .start_time span, .zt_bar .discount i, .page a, .comments_list dd.c_date, .p_number, .footer dl dd a.c448, .top_list li p, .top_list li .num, .comments_list dt, .comments_list dd.c_date, .order_message p strong, .form_input, .order_number td .c619 {
-	font-family: Arial, Helvetica, sans-serif
+	font-family: "alkatip";
 }
 .f_yahei, .zt_bar h2, .remaining_time em, .zt_bar .discount, .product_detial_r h2, .buy_btn, .gwc_btn, .detial_nav, .comments_list dt, .btn_red_l, .btn_yellow_l, .step_bar li, .my_cart_table td.price, .add_people em, .to_pay .cf19, .pay_box_r h2, .log_reg_box h2, .login_btn, .reg_btn, .radius_box_tt, .retrievepassword_success h2, .retrievepassword_failed h2, .uc_page_r_tt, .r_box_tt, .about_info h2, .text_box strong, .uc_page_r .total_bar, .nosearchresults, .retrievepassword_success h3, .retrievepassword_failed h3, .sell_out, .no_message, .r_box_h3, .r_box_content, .recruitment_table, .ljzf_btn, .special_banner .remaining_time_end  p.ccc, .h2_tt, .top_list_box h2, .h3_tt, .about_text, .pay_tt, .crazymoney_box_l_top, .crazymoney_introduction h2, .special_mask, .s_price {
-	font-family: Microsoft YaHei, Tahoma, Arial, \5b8b\4f53, sans-serif;
+	font-family: "alkatip";
 }
 .remaining_time b i, .comments_list dd {
-	font-family: SimSun, Tahoma, Arial, \5b8b\4f53, sans-serif;
+	font-family: "alkatip"
 }
 .remaining_time .f_hei, .start_time .f_hei {
-	font-family: SimHei;
+	font-family: "alkatip";
 }
 .remaining_time, .load_more, .start_time, .show_more, .total_bar, .to_pay .cf19, .myorder_table .t_head th, .get_yzm_dis, .footer_copyright, .h2_tt, .static_page .uc_page_l .left_menu h3 {
 	text-shadow: 1px 1px #fff;
@@ -647,7 +658,7 @@ html {
 }
 .remaining_time p.ccc {
 	color: #999;
-	font-family: 黑体;
+	font-family: "alkatip";
 	font-size: 18px;
 	padding-top: 0;
 	line-height: 20px;
@@ -832,7 +843,7 @@ html {
 	line-height: 40px;
 	padding-top: 25px;
 	height: 45px;
-	font-family: SimHei, Arial, Helvetica, sans-serif
+	font-family: "alkatip";
 }
 .special_mask .discount b {
 	font-weight: normal
@@ -841,7 +852,7 @@ html {
 /*.special_mask .discount span{ font-size:32px; color:#eb4455; position:relative; top:-2px; right:6px;}
 .special_mask .discount span b{font-weight:normal; font-size:40px; position:relative; top:3px; padding-right:1px;}*/
 .special_countdown {
-	font-family: SimSun, Tahoma, Arial, \5b8b\4f53, sans-serif;
+	font-family: "alkatip";
 	color: #996633;
 	height: 12px;
 	overflow: hidden;
@@ -1577,7 +1588,7 @@ html {
 .footer dl dd a.c448 {
 	color: #3399cc;
 	margin-bottom: 0;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "alkatip";
 	font-weight: bold
 }
 .footer dl dd .more_link {
@@ -1638,7 +1649,7 @@ html {
 .cf19 {
 	color: #F19149;
 	font-weight: bold;
-	font-family: Arial, Helvetica, sans-serif
+	font-family: "alkatip";
 }
 .footer dl.ad_wrap {
 	background: none;
@@ -1958,7 +1969,7 @@ html {
 	top: -1px;
 	_width: 14px;
 	_padding-left: 2px;
-	font-family: SimSun, Tahoma, Arial, \5b8b\4f53, sans-serif;
+	font-family: "alkatip";
 	font-size: 12px;
 	background-position: 0 -60px;
 }
@@ -2648,7 +2659,7 @@ html {
 }
 .step_bar li i {
 	font-size: 30px;
-	font-family: Latha, Arial, Helvetica, sans-serif;
+	font-family: "alkatip";
 	font-weight: bold;
 	font-style: italic;
 	margin-right: 7px;
@@ -3225,7 +3236,7 @@ html {
 	left: -9px;
 }
 .log_reg_box h2 {
-	font-size: 30px;
+	font-size: 26px;
 	color: #eb4455;
 	font-weight: normal;
 	text-align: center;
@@ -3271,6 +3282,7 @@ html {
 	position: relative;
 	display: block;
 	height: 37px;
+	font-family: "alkatip";
 }
 .form_input {
 	width: 240px;
@@ -3473,7 +3485,7 @@ html {
 	width: 8px;
 }
 .dec s {
-	font-family: simsun;
+	font-family:"alkatip";
 	font-size: 16px;
 	height: 19px;
 	left: 0;
@@ -5203,7 +5215,7 @@ html {
 	font-size: 16px;
 	background: #FFF;
 	border-bottom: #FFF 1px solid;
-	font-family: Microsoft YaHei, Tahoma, Arial, \5b8b\4f53, sans-serif;
+	font-family: "alkatip";
 	border-top: #EB4455 2px solid;
 	height: 34px;
 }
@@ -5335,7 +5347,7 @@ html {
 	height: 26px;
 	overflow: hidden;
 	font-size: 14px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "alkatip";
 	position: static;
 	display: inline;
 	float: left;
@@ -5428,7 +5440,7 @@ html {
 }
 .sort_float_select.fixed_sort .sort_box .page {
 	right: 14px;
-	font-family: Arial, Helvetica, sans-serif
+	font-family: "alkatip";
 }
 .sort_float_select.fixed_sort .sort_box .page a {
 	font-size: 12px;
@@ -5946,7 +5958,7 @@ html {
 	text-align: center;
 	color: #fff;
 	background-position: -30px -170px;
-	font-family: Arial, Helvetica, sans-serif
+	font-family: "alkatip";
 }
 .no_crazymoney {
 	color: #999;
@@ -5972,7 +5984,7 @@ html {
 	height: 70px;
 	color: #aa6d0d;
 	font-size: 18px;
-	font-family: Microsoft YaHei, Tahoma, Arial, \5b8b\4f53, sans-serif;
+	font-family: "alkatip";
 }
 .crazy_prompts_content td h4 {
 	font-size: 24px;
@@ -5994,7 +6006,7 @@ html {
 	height: 40px;
 	width: 180px;
 	color: #fff;
-	font-family: Microsoft YaHei, Tahoma, Arial, \5b8b\4f53, sans-serif;
+	font-family: "alkatip";
 	font-size: 18px;
 	line-height: 40px;
 	display: block;
