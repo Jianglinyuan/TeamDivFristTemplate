@@ -2300,7 +2300,7 @@ a {
 .xm-goods-item .item-price {
 	height: 21px;
 	padding: 0 10px;
-	text-align: right;
+	text-align: left;
     color: #db3652;
 }
 .xm-goods-item .item-price .sep {
@@ -2551,7 +2551,7 @@ a {
 }
 .xm-pagenavi ul li.Page_This {
 	width: 30px;
-	background-color: #ff8800;
+	background-color: #db3652;
 	color: #FFF;
 }
 .xm-pagenavi ul li.Page_This a {

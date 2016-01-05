@@ -34,9 +34,9 @@
 			</div>
 			<div class="m-name-info" ><p class="u-name">
 				<em>({wc:$member['mobile']})</em><b class="z-name gray01">{wc:fun:get_user_name($member['uid'])}</b></p>
-				<ul class="clearfix u-mbr-info"><li style="text-align: right;"><span class="orange">{wc:$member['score']}</span><s></s></li>
-				<li style="text-align: right;"><span class="orange">￥{wc:$member['money']}</span> قالدۇق سومما
-				<a style="float: left; margin-left:5px; "href="{WEB_PATH}/mobile/home/userrecharge/" class="fr z-Recharge-btn">پۇل قاچىلاش</a></li>
+				<ul class="clearfix u-mbr-info">
+				<li><a href="{WEB_PATH}/mobile/home/userrecharge/" class="fr z-Recharge-btn">پۇل قاچىلاش</a></li>
+				<li>قالدۇق سومما <span class="orange"> {wc:$member['money']}￥</span></li>
 				</ul>
 			</div>
 		</div>
@@ -49,8 +49,7 @@
 			    <li><a href="{WEB_PATH}/mobile/home/singlelist/"><b style="float: left;transform: rotate(-135deg);" class="z-arrow"></b>بەھىرلەر</a></li>
 			    <li><a href="{WEB_PATH}/mobile/home/userbalance/"><b style="float: left;transform: rotate(-135deg);" class="z-arrow"></b>مالىيە تەپسىلاتى</a></li>     
 				<li><a href="{WEB_PATH}/mobile/home/address/"><b style="float: left;transform: rotate(-135deg);" class="z-arrow"></b>مال تاپشۇرۋېلىش ئادىرسى</a></li>
-				<li><a href="{WEB_PATH}/mobile/invite/usertransfer/"><b style="float: left;transform: rotate(-135deg);" class="z-arrow"></b>بەخت موممىسىنى يۆتكەش</a></li>
-				    <li><a href="{WEB_PATH}/mobile/home/password/"><b style="float: left;transform: rotate(-135deg);" class="z-arrow"></b>پارولنى ئۆزگەرتىش</a></li>
+				<li><a href="{WEB_PATH}/mobile/home/password/"><b style="float: left;transform: rotate(-135deg);" class="z-arrow"></b>پارولنى ئۆزگەرتىش</a></li>
 		    </ul>
 	    </div>
     </section>

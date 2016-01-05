@@ -4,24 +4,24 @@
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/GoodsDetail.css"/>
 <script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/jquery.dotdotdot.min.js"></script>
 <div class="container breadcrumbs">
-	揭晓详情<span class="sep">/</span>
+	جاكارلانغانلىق تەپسىلاتى<span class="sep">/</span>
 	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
 	{wc:$brand['name']}
 	</a><span class="sep">/</span>
 	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}">
 	{wc:$category['name']}
 	</a><span class="sep">/</span>
-	<a href="{WEB_PATH}">首页</a>
+	<a href="{WEB_PATH}">باش بەت</a>
 </div>
 <div class="goods-detail container">
 
     <div class="goods-detail-info row clearfix">
-		<div id="divPeriodList" class="show_Period">{wc:if count($itemlist)>32}<div class="period_Open"><a class="gray" href="javascript:void(0);">展开<i></i></a></div>{wc:if:end}{wc:$loopqishu}</div>
+		<div id="divPeriodList" class="show_Period">{wc:if count($itemlist)>32}<div class="period_Open"><a class="gray" href="javascript:void(0);">داۋامىنى كۆرۈش<i></i></a></div>{wc:if:end}{wc:$loopqishu}</div>
         <div class="span10 J_mi_goodsPic_block">
                 <div class="goods-big-pic">
 					<div class="Announced_Frame">
 				<div class="Announced_Content">
-				<div class="Announced_FrameT">揭晓结果</div>
+				<div class="Announced_FrameT">1.جاكار نەتىجىسى</div>
 				<div class="Announced_FrameCode">
 					<ul class="Announced_FrameCodeMal">
                     	{wc:loop $q_user_code_arr  $q_code_num}
@@ -32,17 +32,17 @@
 				<div class="Announced_FrameGet">
 					<dl>
 						<dd class="gray02">
-							<p>恭喜<a href="{WEB_PATH}/uname/{wc:fun:idjia($item['q_uid'])}" target="_blank" class="blue" title="Warm">{wc:fun:get_user_name($q_user)}</a> 获得本期商品</p>
-							<p>揭晓时间：{wc:fun:microt($item['q_end_time'])}</p>
-							<p>{wc:fun:_cfg('web_name_two')}时间：{wc:fun:microt($user_shop_time)}</p>
+							<p><a href="{WEB_PATH}/uname/{wc:fun:idjia($item['q_uid'])}" target="_blank" class="blue" title="Warm">{wc:fun:get_user_name($q_user)}</a> نىڭ مەزكۇر تاۋارغان ئېرىشكەنلىكىنى تەبرىكلەيمىز</p>
+							<p>جاكارلانغان ۋاقىت：{wc:fun:microt($item['q_end_time'])}</p>
+							<p>قاتناشقان ۋاقىت：{wc:fun:microt($user_shop_time)}</p>
 						</dd>
 					</dl>
 				</div>
 
                 <div class="Announced_FrameBut">
-					<a href="javascript:;" class="Announced_But">本期详细计算结果</a>
-					<a href="javascript:;" class="Announced_But">看看有谁参与了</a>
-					<a href="javascript:;" class="Announced_But">看看有谁晒单</a>
+					<a href="javascript:;" class="Announced_But">بۇ ساندىكى ھېسابلاش نەتىجىسى</a>
+					<a href="javascript:;" class="Announced_But">يەنە كىملەر قاتناشتى</a>
+					<a href="javascript:;" class="Announced_But">باشقىلارنىڭ كۆرسەتكىنى</a>
 				</div>
 				</div>
 
@@ -57,22 +57,22 @@
                 <dl>
                     <dt id="goodsName">{wc:$item['title']}</dt>
                     <dd class="goods-info-head-userfaq" >
-                    	<ul><li class="mail"><i>简介</i>{wc:$item['title2']}</li></ul>
+                    	<ul><li class="mail"><i>تونۇشتۇرۇش</i>{wc:$item['title2']}</li></ul>
                     </dd>
 					<dd class="goods-info-head-colors clearfix"></dd>
                         {wc:if $itemzx}
 			<div class="Result_LConduct">
 				<dl>
-					<dt><span>第{wc:$itemzx['qishu']}期</span>正在进行</dt>
+					<dt><span>{wc:$itemzx['qishu']}</span>سان ئېلىپ بېرىلۋاتىدۇ</dt>
 					<dd>
 					<div style="float:left;
-				"><a href="{WEB_PATH}/goods/{wc:$itemzx['id']}" target="_blank" class="Result_LConductBut">查看详情</a></div>
+				"><a href="{WEB_PATH}/goods/{wc:$itemzx['id']}" target="_blank" class="Result_LConductBut">تەپسىلاتى</a></div>
 						<div class="Result_Progress-bar">
 							<p><span style="width:{wc:fun:width($itemzx['canyurenshu'],$itemzx['zongrenshu'],208)}px;"></span></p>
 							<ul class="Pro-bar-li">
-								<li class="P-bar03"><em>{wc:$itemzx['shenyurenshu']}</em>剩余人次</li>
-								<li class="P-bar02"><em>{wc:$itemzx['zongrenshu']}</em>总需人次</li>
-								<li class="P-bar01"><em>{wc:$itemzx['canyurenshu']}</em>已参与人次</li>
+								<li class="P-bar03"><em>{wc:$itemzx['shenyurenshu']}</em>قالغىنى</li>
+								<li class="P-bar02"><em>{wc:$itemzx['zongrenshu']}</em>جەمئىي</li>
+								<li class="P-bar01"><em>{wc:$itemzx['canyurenshu']}</em>قاتناشقىنى</li>
 							</ul>
 						</div>
 					</dd>
@@ -83,7 +83,7 @@
             </dt>
                 <div class="MaCenter">
 				<p style='
-    text-align: right;' >商品获得者本期总共{wc:fun:_cfg('web_name_two')}了<em class="orange">{wc:$user_shop_number}</em>人次</p>
+    text-align: right;' >تاۋارغا ئېرىشكۈچى مەزكۇر ساندا جەمئىي قاتناشقان قېتىم سانى<em class="orange">{wc:$user_shop_number}</em></p>
                     <div id="userRnoId" class="MaCenterH"><dl>
                         <dt>{wc:fun:microt($user_shop_time)}
                         <dd>
@@ -92,7 +92,7 @@
                     </dl>
                 </div>
 			</div>
-			<div id="divOpen" class="MaOff" style=""><span>展开查看全部<s></s></span></div>
+			<div id="divOpen" class="MaOff" style=""><span>داۋامىنى كۆرۈش<s></s></span></div>
         </dl>
         </div>
         </div>
@@ -111,18 +111,17 @@
                     <dt><img src="{G_UPLOAD_PATH}/{wc:$item['thumb']}"></dt>
                     <dd>
                         <strong>{wc:$item['title']}</strong>
-                        <p><em>最低<span class="J_mi_goodsPrice">{wc:$item['yunjiage']}</span>元{wc:fun:_cfg('web_name_two')}</em></p>
+                        <p><em>بىر سوم بىلەن قاتنىشىش</em></p>
                     </dd>
                 </dl>
             </div>
             <div class="span15">
-                <div class="fr"><a href="javascript:;" class="btn btn-primary goods-add-cart-btn" id="goodsSubBarAddCartBtn"><i class="iconfont"></i>立即{wc:fun:_cfg('web_name_two')}</a></div>
+                <div class="fr"><a href="javascript:;" class="btn btn-primary goods-add-cart-btn" id="goodsSubBarAddCartBtn"><i class="iconfont"></i>دەرھال قاتنىشىش</a></div>
                 <div class="goods-desc-menu" id="">
                     <ul class="items clearfix J_pro_related_btns">
-                       <li><a href="#divContent" class="DetailsTCur">商品详情</a></li>
-                       <li><a href="#divBuyRecord" class="">参与记录</a></li>
-                       <li><a href="#divPost" class="">商品晒单</a></li>
-                       <li><a href="#divFaq" class="">常见问题</a></li>
+                       <li><a href="#divContent" class="DetailsTCur">تاۋار تەپسىلاتى</a></li>
+                       <li><a href="#divBuyRecord" class="">بارلىق قاتناشقۇچىلار</a></li>
+                       <li><a href="#divPost" class="">كۆرسىتىلگەن مۇكاپاتلار</a></li>
                     </ul>
                 </div>
             </div>
@@ -139,9 +138,9 @@
 	    <div id="divMidNav" class="DetailsT_Tit">
 	        <div class="DetailsT_TitP">
                 <ul>
-			        <li class="GoosTab2 Product_DetT DetailsTCur" style="float:right;"><span class="DetailsTCur">计算结果</span></li>
-			        <li class="GoosTab2 All_RecordT"><span class="">所有参与记录</span></li>
-					<li class="GoosTab2 Single_ConT"><span class="">晒单</span></li>
+			        <li class="GoosTab2 Product_DetT DetailsTCur" style="float:right;"><span class="DetailsTCur">ھېسابلاش نەتىجىسى</span></li>
+			        <li class="GoosTab2 All_RecordT"><span class="">بارلىق قاتناشقۇچىلار</span></li>
+					<li class="GoosTab2 Single_ConT"><span class="">كۆرسىتىلگەن مۇكاپاتلار</span></li>
 		        </ul>
 		    </div>
 	    </div>

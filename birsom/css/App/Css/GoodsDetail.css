@@ -1122,16 +1122,16 @@ a.Announced_But:focus {
 	right:0;
 }
 .DetailsT_TitP li.Product_DetT {
-	width:134px;
+	width:200px;
 }
 .DetailsT_TitP li.All_RecordT {
-	width:158px;
+	width:220px;
 }
 .DetailsT_TitP li.Single_ConT {
-	width:98px;
+	width:220px;
 }
 .DetailsT_TitP li.DetailsTCur {
-	font-size:18px;
+	font-size:14px;
 	height:34px;
 	color:#db3652;
 	font-weight:bold;

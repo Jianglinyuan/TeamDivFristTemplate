@@ -486,9 +486,10 @@
 	color:#E80000;
 }
 .pDetails p.price {
-	margin:8px 0 10px;
+	margin:0 0 5px;
 	color:#bbb;
 	direction: rtl;
+	text-align: center;
 }
 .pDetails p.price em {
 	color:#a1a1a1;

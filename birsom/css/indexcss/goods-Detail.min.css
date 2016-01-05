@@ -524,13 +524,13 @@ dl.goods-info-box .goods-info-foot a:hover {
 	border: none
 }
 .box-hd {
-    padding-right: 22px;
+    padding-right: 12px;
     height: 40px;
-    font-size: 16px;
+    font-size: 21px;
     line-height: 40px;
     color: #3c3c3c;
     background-color: #f2f2f2;
-    font-family: "Microsoft Yahei";
+    font-family: "Microsoft Uighur";
 }
 .box-bd {
     padding: 0 10px 9px;
@@ -1453,12 +1453,12 @@ dl.goods-info-box .goods-info-foot a:hover {
 }
 .goods-sub-bar .goods-desc-menu .items li {
 	text-align: center;
-	font-size: 18px;
+	font-size: 12px;
 	font-weight: 400;
 	line-height: 60px;
 	color: #6d6d6d;
 	float: left;
-	width: 110px
+	width: 120px
 }
 .goods-sub-bar .goods-desc-menu .items .current a {
 	color: #ee330a
@@ -1941,11 +1941,11 @@ img.zoom-tiny-image {
     background: -ms-linear-gradient(top,#ffffff,#eeeeee);
 }
 .w-button-xl {
-	width: 132px;
-    padding: 0 35px;
+	width: 135px;
+    padding: 0 36px;
     height: 45px;
     line-height: 45px;
-    font-size: 18px;
+    font-size: 13px;
     border-radius: 4px;
 }
 .w-button-simple:hover {

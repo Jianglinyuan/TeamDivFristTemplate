@@ -97,8 +97,8 @@
 
 
         <div class="pDetails {wc:if $item['q_end_time']!=''}pDetails-end{wc:if:end}">
-                <b>چى سان1 ){wc:$item['title']} <span></span></b>
-                <p class="price">：<em class="arial gray">￥{wc:$item['money']}</em></p>
+                <b>{wc:$item['title']}<span></span></b>
+                <p class="price"><em class="arial gray">￥{wc:$item['money']}</em></p>
 				{wc:if empty($item['q_end_time'])}
 				<div class="Progress-bar"><p class="u-progress" title="{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%"><span class="pgbar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"><span class="pging"></span></span></p>
                     <ul class="Pro-bar-li">

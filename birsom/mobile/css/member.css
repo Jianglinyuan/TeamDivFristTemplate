@@ -104,12 +104,11 @@ a.z-Recharge-btn {
 }
 .u-mbr-info li {
 	width:50%;
-	line-height:25px;
-	padding:3px 0;
+	line-height:45px;
+	padding:12px 0;
 	float:left;
-	text-align:right;
-	text-indent:5px;
-	box-shadow:-1px 0 0 #EFEFEF inset;
+	text-align:center;
+	text-indent:15px;
 }
 .u-mbr-info li:nth-child(3n-1) {
 box-shadow:none;

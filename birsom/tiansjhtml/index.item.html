@@ -1,25 +1,16 @@
 {wc:templates "index","pagehead"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/goods-Detail.min.css" />
 <div class="container breadcrumbs">
-	商品详情<span class="sep">/</span>
+	تاۋار تەپسىلاتى<span class="sep">/</span>
 	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
 	{wc:$brand['name']}</a><span class="sep">/</span>
 	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}">
 	{wc:$category['name']}</a><span class="sep">/</span>
-	<a href="{WEB_PATH}">首页</a>
+	<a href="{WEB_PATH}">باش بەت</a>
 </div>
 <div class="goods-detail container">
     <div class="goods-detail-info row clearfix">
-		<div id="divPeriodList" class="show_Period" style=>{wc:if count($itemlist)>32}<div class="period_Open"><a class="gray" href="javascript:void(0);">展开<i></i></a></div>{wc:if:end}{wc:$loopqishu}</div>
-
-<!--         <div class="span14 J_mi_goodsPic_block">
-            <div class="goods-pic-box">
-                <div class="goods-big-pic">
-					<span href="{G_UPLOAD_PATH}/{wc:$item['thumb']}" class = 'J_goodsBigPic' id='zoom1' rel="adjustX:10, adjustY:-2">
-					<img width="80px" height="80px" src="{G_UPLOAD_PATH}/{wc:$item['thumb']}" /></span>
-                </div>
-            </div>
-        </div> -->
+		<div id="divPeriodList" class="show_Period" style=>{wc:if count($itemlist)>32}<div class="period_Open"><a class="gray" href="javascript:void(0);">داۋامىنى كۆرۈش<i></i></a></div>{wc:if:end}{wc:$loopqishu}</div>
 
         <div class="g-main-l m-detail-show">
             <div class="w-gallery" id="pro-view-3">
@@ -64,7 +55,7 @@
                 <dl>
                     <dt id="goodsName">{wc:$item['title']}</dt>
                     <dd class="goods-info-head-userfaq" style=''>
-                    	<ul><li class="mail"><i>简介</i>{wc:$item['title2']}</li></ul>
+                    	<ul><li class="mail"><i>تونۇشتۇرۇش</i>{wc:$item['title2']}</li></ul>
                     </dd>
 					<dd class="goods-info-head-colors clearfix">
                         {wc:if ($q_showtime=='Y')}
@@ -77,18 +68,17 @@
             </dt>
             <dd class="goods-info-head-actlist">
 				<ul style="float:right;">
-					<li>正规来源保障</li>
-					<li>100%正品</li>
-					<li>闪电发货</li>
-					<li>免费退换货</li>
+					<li>سۈپەتلىك مال </li>
+					<li>مال ۋاقتىدا سېلىنىدۇ</li>
+					<li>مالنى قايتۇرۇش ياكى ئالماشتۇرۇش</li>
 				</ul>
             </dd>
             <dd class="goods-info-foot">
                 <div class="Pro_Record">
 				<ul id="ulRecordTab" class="Record_tit">
-					<li class="Explain orange">{wc:fun:_cfg('web_name_two')}是什么？</li>
-					<li class="MytRec">我的{wc:fun:_cfg('web_name_two')}记录</li>
-					<li class="NewestRec Record_titCur">最新{wc:fun:_cfg('web_name_two')}记录</li>
+					<li class="Explain orange">بىر سوم بىلەن قاتنىشىش؟</li>
+					<li class="MytRec">قاتناشقانلىرىم</li>
+					<li class="NewestRec Record_titCur">يېڭىدىن قاتناشقانلار</li>
 				</ul>
 				<div class="Newest_Con hide" style="display:none;">
 					<p class="MsgIntro">{wc:fun:_cfg("web_name_two")}购是指只需1元就有机会买到想要的商品。即每件商品被平分成若干"等份"出售，每份1元，当一件商品所有"等份"售出后，根据{wc:fun:_cfg('web_name_two')}规则产生一名幸运者，该幸运者即可获得此商品。<a href="{WEB_PATH}/help/1" class="blue" target="_blank">查看详情&gt;&gt;</a></p>
@@ -105,15 +95,15 @@
 					{wc:else}
 					<div class="My_RecordReg">
 						<b class="gray01">看不到？注册或登录后看看</b>
-						<a href="{WEB_PATH}/member/user/register" class="My_Regbut">注册</a>
-						<a href="{WEB_PATH}/member/user/login" class="My_Signbut">登录</a>
+						<a href="{WEB_PATH}/member/user/register" class="My_Regbut">تىزىملىتىش</a>
+						<a href="{WEB_PATH}/member/user/login" class="My_Signbut">كىرىش</a>
 					</div>
 					{wc:if:end}
 				</div>
 					<div class="Newest_Con hide" style="display: block;">
 					<ul style="text-align:right;">
 						{wc:loop $us $user}
-						<li>人次
+						<li>ئادەم قېتىم
 						<em class="Fb gray01">{wc:$user['gonumber']}</em>了
 												{wc:if $user['ip']}
 						({wc:fun:get_ip($user['id'],'ipcity')}) 
@@ -129,7 +119,7 @@
 						{wc:loop:end}</li>
 						<a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank">
 					</ul>
-					<p style=""><a id="btnUserBuyMore" href="#divBuyRecord" class="gray01">查看更多</a></p>					
+					<p style=""><a id="btnUserBuyMore" href="#divBuyRecord" class="gray01">داۋامىنى كۆرۈش</a></p>					
 				</div>
 			</div>
             </dd>
@@ -139,7 +129,7 @@
         <div class="g-side">
 	        <div class="m-detail-period">
 	            <div class="box-hd">
-	               <h4>上期获得者</h4>
+	               <h4>ئالدىنقى قېتىملىق مۇكاپاتقا ئېرىشكۈچىنىڭ ئۇچۇرى</h4>
 	            </div>
 	            <div class="box-bd">
 		            <div class="m-detail-period-main-wrap">
@@ -152,7 +142,7 @@
 		                        <div class="avatar"><a rel="nofollow" href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank"><img width="90" height="90" alt="" src="{G_UPLOAD_PATH}/{wc:$sid_code['q_user']['img']}"></a></div>
 		                    </dt>
 		                    <dd class="gray02">
-		                        <p class="title">恭喜 <a href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank" class="blue">{wc:fun:get_user_name($sid_code['q_uid'])}</a> 获得了本商品</p>
+		                        <p class="title"><a href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank" class="blue">{wc:fun:get_user_name($sid_code['q_uid'])}</a>نىڭ مەزكۇر تاۋارغان ئېرىشكەنلىكىنى تەبرىكلەيمىز</p>
 		                        {wc:if $sid_go_record['ip']} 
 		                        {wc:fun:get_ip($sid_go_record['id'],'ipcity')} 
 		                        {wc:if:end}
@@ -165,11 +155,11 @@
 									}
 									$uid = $uid.$sid_code['q_uid'];
 								{wc:php:end}
-		                        <p>用户ID：{wc:$uid}</p>
-		                        <p>幸运拍码：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
-    							<p>揭晓时间：{wc:fun:microt($sid_code['q_end_time'])}</p>
+		                        <p>ئەزالىق نومۇرى：{wc:$uid}</p>
+		                        <p>تەلەيلىك نومۇر：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
+    							<p>جاكارلىنىش ۋاقتى：{wc:fun:microt($sid_code['q_end_time'])}</p>
 								
-								<div class="last-winner"><a id="detail" class="w-button w-button-simple">查看详情</a></div>
+								<div class="last-winner"><a id="detail" class="w-button w-button-simple">تەپسىلاتىنى كۆرۈش</a></div>
 		                    </dd>
 		                </dl>
 		                {wc:if:end}
@@ -197,17 +187,17 @@
                     <dt><img src="{G_UPLOAD_PATH}/{wc:$item['thumb']}"></dt>
                     <dd>
                         <strong>{wc:$item['title']}</strong>
-                        <p style="text-align:right;"><em>最低<span class="J_mi_goodsPrice">{wc:$item['yunjiage']}</span>元{wc:fun:_cfg('web_name_two')}</em></p>
+                        <p style="text-align:right;"><em><span class="J_mi_goodsPrice">{wc:$item['yunjiage']}</span>سوم بىلەن قاتنىشىڭ</em></p>
                     </dd>
                 </dl>
             </div>
             <div class="span15">
-                <div class="fr"><a href="javascript:;" class="btn btn-primary goods-add-cart-btn" id="goodsSubBarAddCartBtn"><i class="iconfont"></i>立即{wc:fun:_cfg('web_name_two')}</a></div>
+                <div class="fr"><a href="javascript:;" class="btn btn-primary goods-add-cart-btn" id="goodsSubBarAddCartBtn"><i class="iconfont"></i>دەرھال قاتنىشىش</a></div>
                 <div class="goods-desc-menu" id="">
                     <ul class="items clearfix J_pro_related_btns">
-                       <li><a href="" data-goto="Product_DetT">商品详情</a></li>
-                       <li><a href="" data-goto="All_RecordT">参与记录</a></li>
-                       <li><a href="" data-goto="Single_ConT">商品晒单</a></li>
+                       <li><a href="" data-goto="Product_DetT">تاۋار تەپسىلاتى</a></li>
+                       <li><a href="" data-goto="All_RecordT">بارلىق قاتناشقۇچىلار</a></li>
+                       <li><a href="" data-goto="Single_ConT">كۆرسىتىلگەن مۇكاپاتلار</a></li>
                        <!-- <li><a href="#divFaq" class="">常见问题</a></li> -->
                     </ul>
                 </div>
@@ -218,115 +208,15 @@
 </div>
 
 	<div class="row goods-detail-desc">
-<!-- 	    <div class="span5">
-            <div class="xm-box goods-alsobuy xm-goods-side-list">
-				<div class="box-hd">
-					<div class="title"> 商品来源 </div>
-				</div>
-				<div class="box-bd">
-					<div class="jd"><span class="jd-ico"></span>手机数码、家电等商品</div>
-					<div class="jm"><span class="jm-ico"></span>护肤彩妆、香水等商品</div>
-					<div class="wb"><span class="wb-ico"></span>中国最大的名表商城</div>
-					<div class="hhz"><span class="hhz-ico"></span>纸尿裤、奶粉等商品</div>
-				</div>
-			</div>
-		</div>
- -->
 		<div class="span15">
-            <!-- 商品描述 -->
-            <!-- <div class="xm-box  goods-detail-box " id="divContent">
-               <div class="box-hd">
-					<ul class="items clearfix J_pro_related_btns" style="float:right;"> -->
-					    <!-- <li><a href="#divFaq" class="">常见问题</a></li> -->
-					    <!-- <li><a href="#divBuyRecord" class="">参与记录</a></li>
-					    <li><a href="#divPost" class="">商品晒单</a></li>
-					    <li class="current"><a href="#divContent" class="DetailsTCur">商品详情</a></li>
-					</ul>
-               </div>
-               <div class="box-bd" id="goodsDesc">{wc:$item['content']}</div>
-            </div> -->
-            <!-- 商品描述 END-->
-            <!--S 所有参与记录-->
-            <!-- <div class="xm-box goods-detail-standard" id="divBuyRecord">
-                <div class="box-hd">
-                    <div class="title" style="text-align:right;margin-right: 30px;">参与记录</div>
-                </div>
-                <div class="box-bd">
-                    {wc:loop $us2 $user}
-					<div class="AllRecW AllReclist">
-						<div class="AllRecR fl">
-							<p class="AllRecR_T">
-								<span name="spCodeInfo" class="AllRecR_Over">
-								<a class="Headpic" href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank"><img src="{G_UPLOAD_PATH}/{wc:$user['uphoto']}" border="0" width="20" height="20"></a>
-								<a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank" class="blue">{wc:fun:_strcut($user['username'],6)}</a>
-								{wc:if $user['ip']}
-								({wc:fun:get_ip($user['id'],'ipcity')} IP:{wc:fun:get_ip($user['id'],'ipmac')})
-								{wc:if:end}
-								{wc:fun:_cfg('web_name_two')}了<em class="Fb orange">{wc:$user['gonumber']}</em>人次
-								</span>
-							</p>
-						</div>
-						<div class="AllRecL fl">{wc:fun:microt($user['time'])}<i></i></div>
-					</div>
-					{wc:loop:end}
-                </div>
-            </div> -->
-            <!--E 所有参与记录-->
-            <!--S 商品晒单 -->
-            <!-- <div class="xm-box goods-detail-comment" id="divPost">
-                <div class="box-hd">
-                    <div class="title" style="text-align:right;margin-right: 30px;">商品晒单</div>
-                </div>
-                <div class="box-bd">
-					<iframe id="iframea" src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:1188px; border:none;" frameborder="0" scrolling="no"></iframe>
-                </div>
-            </div> -->
-
-            <!-- 常见问题 -->
-<!--             <div class="common-question" id="divFaq">
-                <div class="question-hd clearfix">
-                    <div class="title_a">常见问题</div>
-                </div>
-                <div class="question-bd">
-                    <ul class="content">
-                        <li>
-                            <h3>怎样参加{wc:fun:_cfg('web_name_two')}网{wc:fun:_cfg('web_name_two')}？</h3>
-                            <p>1、登陆{wc:fun:_cfg('web_name_two')}网并成功充值，然后选择喜欢的奖品开始{wc:fun:_cfg('web_name_two')}；<br>2、点击一个感兴趣的奖品，选择要参与的人次并支付参与{wc:fun:_cfg('web_name_two')}。</p>
-                        </li>
-                        <li>
-                            <h3>{wc:fun:_cfg('web_name_two')}网是怎么计算幸运号码的？</h3>
-                            <p>1）奖品的最后一个号码分配完毕后，将公示该分配时间点前本站全部奖品的最后100个参与时间；<br>2）将这100组数值之和除以商品总需参与人次后取余数，余数加上10,000,001即为"{wc:fun:_cfg('web_name_two')}幸运码"；<br>3）为保证公平公正公开，系统还会等待一小段时间，会得到的余数 + 原始数 10000001，得到最终幸运号码，拥有该幸运号码者，直接获得该奖品。</p>
-                        </li>
-                        <li>
-                            <h3>为什么要等待一小段时间？</h3>
-                            <p>等待一小段时间是为了保证幸运号码计算结果的绝对公平公正（计算机处理需要反应时间）。</p>
-                        </li>
-                        <li>
-                            <h3>幸运号码的计算结果可信吗？</h3>
-                            <p>由于使用了"最后100个参与时间"结果作为参数，因此幸运号码肯定是未知的；<br>您可以绝对相信计算结果真实、可信。</p>
-                        </li>
-						<li>
-                            <h3>怎样查看是否中奖？</h3>
-                            <p>个人中心有您的{wc:fun:_cfg('web_name_two')}记录，点击对应的记录，即可知道该期{wc:fun:_cfg('web_name_two')}的获得者；<br>如果您获奖，将会有邮件、短信等方式的通知。</p>
-                        </li>
-						<li>
-                            <h3>奖品是正品吗？怎么保证？</h3>
-                            <p>{wc:fun:_cfg('web_name_two')}网所有奖品均从正规渠道采购（渠道包括：京东、聚美优品、万表网、红孩子等），100%正品，可享受厂家所提供的全国联保服务。</p>
-                        </li>
-                    </ul>
-                </div>
-            </div> -->
-            <!-- 常见问题 END-->
-
-
            <div class="xm-box goods-detail-box">
 			    <div id="calculate" class="ProductTabNav">
 			        <div id="divMidNav" class="DetailsT_Tit">
 			            <div class="DetailsT_TitP">
 			                <ul>
-			                    <li class="GoosTab2 Product_DetT DetailsTCur" style="float:right;"><span class="DetailsTCur">商品详情</span></li>
-			                    <li class="GoosTab2 All_RecordT"><span class="">参与记录</span></li>
-			                    <li class="GoosTab2 Single_ConT"><span class="">商品晒单</span></li>
+			                    <li class="GoosTab2 Product_DetT DetailsTCur" style="float:right;"><span class="DetailsTCur">تاۋار تەپسىلاتى</span></li>
+			                    <li class="GoosTab2 All_RecordT"><span class="">بارلىق قاتناشقۇچىلار</span></li>
+			                    <li class="GoosTab2 Single_ConT"><span class="">كۆرسىتىلگەن مۇكاپاتلار</span></li>
 			                </ul>
 			            </div>
 			        </div>

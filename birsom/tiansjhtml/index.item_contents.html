@@ -1,23 +1,23 @@
 <div class="Progress-bar">
 				<p title="已完成{wc:fun:percent($item['canyurenshu'],$item['zongrenshu'])}"><span style="width:{wc:fun:width($item['canyurenshu'],$item['zongrenshu'],450)}px; display:;"></span></p>
 				<ul class="Pro-bar-li">
-										<li class="P-bar01"><em id="CodeLift">{wc:$syrs}</em>剩余人次</li>
-					<li class="P-bar02"><em id="CodeQuantity">{wc:$item['zongrenshu']}</em>总需人次</li>
-										<li class="P-bar03"><em>{wc:$item['canyurenshu']}</em>已参与人次</li>
+										<li class="P-bar01"><em id="CodeLift">{wc:$syrs}</em>قالغىنى</li>
+					<li class="P-bar02"><em id="CodeQuantity">{wc:$item['zongrenshu']}</em>جەمئىي ئادەم قېتىم</li>
+										<li class="P-bar03"><em>{wc:$item['canyurenshu']}</em>قاتناشقىنى</li>
 
 				</ul>
 			</div>
 
 			{wc:if $item['shenyurenshu']=='0' && $item['xsjx_time']=='0' && empty($item['q_uid'])}
                 <div class="Immediate">
-                  <span style="left:10px;right:0px;">这个商品未揭晓成功,请联系客服手动揭晓！</span>
+                  <span style="left:10px;right:0px;">بۇ تاۋار توغرا جاكارلانمىدى ! تور باشقۇرغۇچىسى بىلەن ئالاقىلىشىڭ.！</span>
                 </div>
 			{wc:if:end}
 
 			 <!-- 限时揭晓 -->
             {wc:if $item['xsjx_time']!='0'}
             <div id="divAutoRTime" class="Immediate">
-			            <span><a class="orange" target="_blank" href="#">限时揭晓的规则？</a></span>
+			            <span><a class="orange" target="_blank" href="#">مۇددەتلىك جاكارنىڭ قائىدىسى</a></span>
                         <i id="timeall" endtime="{wc:fun:date("m-d-y h:i:s",$item['xsjx_time'])}" lxfday="no"></i>
 			</div>
             <script type="text/javascript">
@@ -86,19 +86,19 @@
             {wc:if:end}
 			<!-- 限时揭晓end -->
 			<dd class="goods-info-head-intro">
-				<p class="Pro_Detsingle" style="font-size:14px;text-align:right;">最低<b style="color:#999;">{wc:$item['yunjiage']}</b>元{wc:fun:_cfg('web_name_two')}</p>
+				<p class="Pro_Detsingle" style="font-size:14px;text-align:right;">بىر سوم بىلەن قاتنىشىش</p>
 				<div id="divNumber" class="Pro_number" style="text-align:right;">
-					<div class="bubble"><span>多参与1人次，获奖机会翻倍！</span><i class="arrow-right"></i></div>
-					人次
+					<div class="bubble"><span>! قوللىغىنىڭىزغا رەھمەت</span><i class="arrow-right"></i></div>
+				
 					<a href="javascript:;" class="num_del num_ban" id="shopsub">-</a>
 					<input style="border:1px solid #CFCFCF" type="text" value="1" maxlength="7" onkeyup="value=value.replace(/\D/g,'')" class="num_dig" id="num_dig"/>
-					<a href="javascript:;" class="num_add" id="shopadd">+</a>购买
+					<a href="javascript:;" class="num_add" id="shopadd">+</a>سېتىۋېلىش
 				</div>
 				<div style="display:none;" id="hqid">{wc:$item['id']}</div>
 			</dd>
 			<dd class="goods-info-head-cart" id="goodsDetailBtnBox">
 				<div id="divBuy" class="Det_button" style="text-align:right;">
-					<a href="javascript:;" class="w-button w-button-xl" id="addToCart">加入购物车 <i class="iconfont "></i></a>
-					<a href="javascript:;" class="w-button w-button-xl w-button-main">立即{wc:fun:_cfg('web_name_two')}</a>
+					<a href="javascript:;" class="w-button w-button-xl" id="addToCart">مال ھارۋىسىغا سېلىش<i class="iconfont "></i></a>
+					<a href="javascript:;" class="w-button w-button-xl w-button-main">بىر سوم بىلەن قاتنىشىش</a>
 				</div>
             </dd>
