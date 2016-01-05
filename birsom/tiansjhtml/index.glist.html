@@ -139,22 +139,21 @@ a.list_classMore {
                                 <div class="item-thumb"><a href="{WEB_PATH}/goods/{wc:$shop['id']}"><img src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" alt="{wc:$shop['title']}"></a></div>
                                 <div class="item-info">
                                     <h3 class="item-title"><a href="{WEB_PATH}/goods/{wc:$shop['id']}">{wc:$shop['title']}</a></h3>
-                                    <div class="item-price">总需人次：{wc:$shop['money']}</div>
+                                    <div class="item-price">总需：{wc:$shop['zongrenshu']} 人次</div>
                                     <div class="item-star">
 										<p><span style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],270)}px;"></span></p>
                                         <ul class="Pro-bar-li">
-											<li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>已参与人次</li>
-											<li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>剩余人次</li>
+											<li class="P-bar01"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>剩余人次</li>
+											<li class="P-bar03"><em>{wc:$shop['canyurenshu']}</em>已参与人次</li>
 										</ul>
                                     </div>
                                     <div class="item-actions">
-                                        <a class="btn btn-primary btn-small J_addFav" href="javascript:;"><i class="iconfont"></i>立即{wc:fun:_cfg('web_name_two')}</a>
-										<a class="btn btn-small btn-dake J_addCart" href="javascript:;"><i class="iconfont"></i>加入购物车</a>
+                                        <a class="w-button w-button-main w-button-l J_addFav" href="javascript:;">立即{wc:fun:_cfg('web_name_two')}</a>
+										<a class="w-button w-button-l J_addCart" href="javascript:;">加入购物车</a>
 
 										<div class="Curbor_id" style="display:none;">{wc:$shop['id']}</div>
 										<div class="Curbor_yunjiage" style="display:none;">{wc:$shop['yunjiage']}</div>
-										<div class="Curbor_shenyu" style="display:none;">{wc:$shop['shenyurenshu']}</div>
-										
+										<div class="Curbor_shenyu" style="display:none;">{wc:$shop['shenyurenshu']}</div>	
                                     </div>
 									{wc:php:start}$i_googd_bj = null;{wc:php:end}
 									{wc:if ($this_time - $shop['time']) < 86400}

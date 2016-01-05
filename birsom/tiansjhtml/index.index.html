@@ -15,7 +15,7 @@
                                 <p>网易考拉海购（<a href="http://www.kaola.com" target="_blank">http://www.kaola.com</a>）提供并发货的夺宝活动，商品均从国外直供，根据海关政策，获奖者需要提供收货人的身份证信息，参与请慎重！</p>
                                 <p>您的实名认证信息仅作清关用途，一元夺宝将严格保密。</p>
                             </div>
-                            <p class="m-index-news-ext"><a href="http://1.163.com/news/detail/11.html" target="_blank">查看详情>></a></p>
+                            <p class="m-index-news-ext"><a href="http://1.163.com/news/detail/11.html" target="_blank">&lt;&lt;查看详情</a></p>
                         </div>
                     </div>
                     <div class="g-main-m">
@@ -38,14 +38,16 @@
                         </div>
                         <div class="w-slide m-index-newReveal">
                             <div class="w-slide-wrap">
-                                <ul class="w-slide-wrap-list" data-pro="list">   
-                                {wc:loop $shopqishu $qishu}
+
+                                <ul class="w-slide-wrap-list" data-pro="list">
+                                {wc:loop $shopqishu $key=>$qishu}
+                                
                                 {wc:php:start}
                                     $qishu['q_user'] = unserialize($qishu['q_user']);
                                 {wc:php:end}
                                 <li data-pro="item" class="w-slide-wrap-list-item">
                                     <div class="w-goods-newReveal">
-                                        <i class="ico ico-label ico-label-newReveal" title="正在揭晓"></i>
+                                        <i class="ico ico-label ico-label-newReveal" title="最新揭晓"></i>
                                         <p class="w-goods-title"><a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" title="{wc:$qishu['title']}" target="_blank">{wc:$qishu['title']}</a></p>
                                         <div class="w-goods-pic">
                                             <a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" target="_blank">
@@ -56,7 +58,7 @@
                                         <p class="w-goods-period">期号：{wc:$qishu['qishu']}</p>
                                         <div class="w-goods-record">
                                             <p class="w-goods-owner f-txtabb">获奖者：<a href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" title="{wc:fun:get_user_name($qishu['q_user'])}"><b>{wc:fun:get_user_name($qishu['q_user'])}</b></a></p>
-                                            <p>本期参与：25人次</p>
+                                            <p>本期参与：{wc:$renci[$key]['gonumber']}人次</p>
                                             <p>幸运号码：{wc:$qishu['q_user_code']}</p>
                                         </div>
                                     </div>
@@ -103,14 +105,14 @@
 
                             <div class="w-progressBar" title="{wc:fun:percent($new_shop1['canyurenshu'],$new_shop1['zongrenshu'])}">
                                 <p class="w-progressBar-wrap">
-                                    <span class="w-progressBar-bar" style="width:{wc:fun:percent($new_shop1['canyurenshu'],$new_shop1['zongrenshu'])};"></span>
+                                    <span class="w-progressBar-bar flipx" style="width:{wc:fun:percent($new_shop1['canyurenshu'],$new_shop1['zongrenshu'])};"></span>
                                 </p>
                                 <ul class="w-progressBar-txt f-clear">
-                                    <li class="w-progressBar-txt-l">
+                                    <li class="w-progressBar-txt-r">
                                         <p><b>{wc:$new_shop1['canyurenshu']}</b></p>
                                         <p>已参与人次</p>
                                     </li>
-                                    <li class="w-progressBar-txt-r">
+                                    <li class="w-progressBar-txt-l">
                                         <p><b>{wc:$new_shop1['zongrenshu']-$new_shop1['canyurenshu']}</b></p>
                                         <p>剩余人次</p>
                                     </li>
@@ -166,7 +168,7 @@
                     <div class="m-index-mod m-index-goods-hotest">
                         <div class="w-hd">
                             <h3 class="w-hd-title">最热商品</h3>
-                            <a class="w-hd-more" href="http://1.163.com/list.html">更多商品，点击查看&gt;&gt;</a>
+                            <a class="w-hd-more" href="http://1.163.com/list.html">&lt;&lt;更多商品，点击查看</a>
                         </div>
                         <div class="m-index-mod-bd">
                             <ul class="w-goodsList f-clear">
@@ -184,14 +186,14 @@
                                         </p>
                                         <div class="w-progressBar" title="{wc:fun:percent($renqi['canyurenshu'],$renqi['zongrenshu'])}">
                                             <p class="w-progressBar-wrap">
-                                                <span class="w-progressBar-bar" style="width:{wc:fun:percent($renqi['canyurenshu'],$renqi['zongrenshu'])};"></span>
+                                                <span class="w-progressBar-bar flipx" style="width:{wc:fun:percent($renqi['canyurenshu'],$renqi['zongrenshu'])};"></span>
                                             </p>
                                             <ul class="w-progressBar-txt f-clear">
-                                                <li class="w-progressBar-txt-l">
+                                                <li class="w-progressBar-txt-r">
                                                     <p><b>{wc:$renqi['canyurenshu']}</b></p>
                                                     <p>已参与人次</p>
                                                 </li>
-                                                <li class="w-progressBar-txt-r">
+                                                <li class="w-progressBar-txt-l">
                                                     <p><b>{wc:$renqi['zongrenshu']-$renqi['canyurenshu']}</b></p>
                                                     <p>剩余人次</p>
                                                 </li>
@@ -265,7 +267,7 @@
              <div class="m-index-mod m-index-goods-catlog">
                     <div class="w-hd">
                         <h3 class="w-hd-title">{wc:$daohang['name']}</h3>
-                        <a class="w-hd-more" href="{WEB_PATH}/goods_list/{wc:$daohang['cateid']}">更多商品，点击查看&gt;&gt;</a>
+                        <a class="w-hd-more" href="{WEB_PATH}/goods_list/{wc:$daohang['cateid']}">&lt;&lt;更多商品，点击查看</a>
                     </div>
                     <div class="m-index-mod-bd f-clear">
                         <div class="w-slide m-index-promotGoods">
@@ -300,14 +302,14 @@
                                     </p>
                                     <div class="w-progressBar" title="{wc:fun:percent($g_l['canyurenshu'],$g_l['zongrenshu'])}">
                                         <p class="w-progressBar-wrap">
-                                            <span class="w-progressBar-bar" style="width:{wc:fun:percent($g_l['canyurenshu'],$g_l['zongrenshu'])};"></span>
+                                            <span class="w-progressBar-bar flipx" style="width:{wc:fun:percent($g_l['canyurenshu'],$g_l['zongrenshu'])};"></span>
                                         </p>
                                         <ul class="w-progressBar-txt f-clear">
-                                            <li class="w-progressBar-txt-l">
+                                            <li class="w-progressBar-txt-r">
                                                 <p><b>{wc:$g_l['canyurenshu']}</b></p>
                                                 <p>已参与人次</p>
                                             </li>
-                                            <li class="w-progressBar-txt-r">
+                                            <li class="w-progressBar-txt-l">
                                                 <p><b>{wc:$g_l['zongrenshu']-$g_l['canyurenshu']}</b></p>
                                                 <p>剩余人次</p>
                                             </li>
@@ -340,7 +342,7 @@
                 <div class="m-index-mod m-index-newArrivals">
                     <div class="w-hd">
                         <h3 class="w-hd-title">最新上架</h3>
-                        <a class="w-hd-more" >更多新品，尽在云购&gt;&gt;</a>
+                        <a class="w-hd-more" >&lt;&lt;更多新品，尽在云购</a>
                     </div>
                     <div class="m-index-mod-bd">
                         <ul class="w-goodsList f-clear">
@@ -366,7 +368,7 @@
                 <div class="m-index-mod m-index-share">
                     <div class="w-hd">
                         <h3 class="w-hd-title">晒单分享</h3>
-                        <a class="w-hd-more" href="http://localhost/index.php/go/shaidan/init">更多分享，点击查看&gt;&gt;</a>
+                        <a class="w-hd-more" href="http://localhost/index.php/go/shaidan/init">&lt;&lt;更多分享，点击查看</a>
                     </div>
                     <div class="m-index-mod-bd">
                         <ul class="w-intervalScroll f-clear" data-minLine="6" data-perLine="2">            
@@ -376,10 +378,10 @@
                                     <img class="m-index-share-pic" width="110" src="{G_UPLOAD_PATH}/{wc:$sditem['sd_thumbs']}" style="width:110px;" />
                                 </a>
                                 <div class="m-index-share-wrap">
-                                    <i class="ico ico-quote ico-quote-former"></i>
+                                    <i class="ico ico-quote ico-quote-former flipy"></i>
                                     <p class="txt"><a href="{WEB_PATH}/go/shaidan/detail/{wc:$sditem['sd_id']}" target="_blank"><span title="{wc:$sditem['sd_title']}">【{wc:$sditem['sd_title']}】</span>{wc:fun:qubiaoqian($sditem['sd_content'])} </a></p>
-                                    <p class="author">—— <a title="" href="{WEB_PATH}/uname/{wc:$sditem['sd_userid']}" target="_blank">{wc:fun:get_user_name($sditem['sd_userid'])}</a> {wc:fun:date("Y-m-d",$sditem['sd_time'])}</p>
-                                    <i class="ico ico-quote ico-quote-after"></i>
+                                    <p class="author">{wc:fun:date("Y-m-d",$sditem['sd_time'])} <a title="" href="{WEB_PATH}/uname/{wc:$sditem['sd_userid']}" target="_blank">{wc:fun:get_user_name($sditem['sd_userid'])}</a> ——</p>
+                                    <i class="ico ico-quote ico-quote-after flipy"></i>
                                 </div>
                                    <span class="shaidancontent"></span>
 

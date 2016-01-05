@@ -1138,6 +1138,7 @@ img {
   position: absolute;
   height: 100%;
   background-position: 0 -8px;
+  right: 0;
 }
 
 .w-progressBar-txt li {
@@ -2034,6 +2035,7 @@ img {
 }
 
 .w-goods-ing .w-goods-price {
+  text-align: right;
   margin-bottom: 10px;
 }
 
@@ -2094,11 +2096,12 @@ img {
 }
 
 .w-goods-newReveal .ico-label {
-  left: auto;
-  right: 10px;
+  left: 10px;
 }
 
 .w-goods-newReveal .w-goods-title {
+  margin-left: 100px;
+  text-align: right;
   width: 230px;
   height: 45px;
   overflow: hidden;
@@ -2112,18 +2115,20 @@ img {
 }
 
 .w-goods-newReveal .w-goods-pic {
-  float: right;
-  margin: 5px 10px 0 0;
+  float: left;
+  margin: 5px 0 0 10px;
 }
 
 .w-goods-newReveal .w-goods-price {
-  margin: 2px 0 0 0;
+  text-align: right;
+  margin: 2px 12px 0 0;
   color: #808080;
 }
 
 .w-goods-newReveal .w-goods-period {
-  margin: 2px 0 10px 0;
+  margin: 2px 12px 10px 0;
   color: #808080;
+  text-align: right;
 }
 
 .w-goods-newReveal .w-goods-user {
@@ -2163,11 +2168,14 @@ img {
 }
 
 .w-goods-newReveal .w-goods-record {
+  margin-right: 12px;
+  text-align: right;
   line-height: 20px;
 }
 
 .w-goods-newReveal .w-goods-owner {
   width: 180px;
+  float: right;
 }
 
 .w-goods-willReveal {
@@ -2459,7 +2467,7 @@ img {
 }
 
 .w-record-date {
-  float: right;
+  float: left;
 }
 
 .w-record-title strong {
@@ -3048,6 +3056,8 @@ a.w-tag:hover {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: right;
+  direction: rtl;
   *zoom: 1;
 }
 
@@ -4885,4 +4895,27 @@ body {
   margin-left: -15px;
   _font-size: 0;
   background: url(../images/user-menu-arrow.png) no-repeat 50% 0
+}
+/*水平翻转*/
+.flipx {
+    -moz-transform:scaleX(-1);
+    -webkit-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+    /*IE*/
+    filter:FlipH;
+}
+.flipy {
+    -moz-transform:scaleY(-1);
+    -webkit-transform:scaleY(-1);
+    -o-transform:scaleY(-1);
+    transform:scaleY(-1);
+    /*IE*/
+    filter:FlipV;
+}
+p.w-record-price, p.w-goods-price {
+    text-align: right;
+}
+.m-detail-period .box-hd h4 {
+  text-align: center;
 }

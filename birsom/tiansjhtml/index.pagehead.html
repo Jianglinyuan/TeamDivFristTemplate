@@ -78,6 +78,7 @@
                         (<span id="sCartTotal">0</span>) 购物车<i class="iconfont">&#xe609;</i></a>
                         <div class="mini-cart-list" id="J_miniCartList">
                             <div class="goods_loding" id="sCartLoading" style="display: none;">...数据加载中，请稍后<img border="0" alt="" src="{G_TEMPLATES_STYLE}/images/goods_loading.gif"></div>
+                            <div id="no-goods" class="clearfix"><img src="{G_TEMPLATES_STYLE}/images/settleup-nogoods.png" alt="" /><span>还没有商品，赶快选购吧！</span></div>
                             <div class="count clearfix"><span class="total">件商品 <em id="sCartTotal2">0</em> 共计<strong><em id="sCartTotalM">0</em> ：合计</strong></span><a href="{WEB_PATH}/member/cart/cartlist" class="btn btn-primary">去购物车结算</a></div>
                         </div>
                     </div>
@@ -255,19 +256,25 @@ $(function(){
 	$("#sCart").hover(
 		function(){
 			$("#J_miniCartList,#sCartLoading").show();
-			$("#J_miniCartList p,#J_miniCartList h3").hide();
-			$("#sCart .mycartcur").remove();
-			$("#sCartTotal2").html("");
-			$("#sCartTotalM").html("");
-			$.getJSON("{WEB_PATH}/member/cart/cartheader/="+ new Date().getTime(),function(data){
-				$("#sCart .mycartcur").remove();
-				$("#sCartLoading").before(data.li);
-				$("#sCartTotal2").html(data.num);
-				$("#sCartTotalM").html(data.sum);
-				$("#sCartLoading").hide();
-				$("#J_miniCartList p,#J_miniCartList h3").show();
-                $('#J_miniCartList dl dd.title').dotdotdot({watch:true});
-			});
+            $('#no-goods').hide();
+            $("#J_miniCartList p,#J_miniCartList h3").hide();
+            $("#sCart .mycartcur").remove();
+            $("#sCartTotal2").html("");
+            $("#sCartTotalM").html("");
+            $.getJSON("{WEB_PATH}/member/cart/cartheader/="+ new Date().getTime(),function(data){
+                if ( data.num === 0 ) {
+                    $("#sCartLoading").hide();
+                    $('#no-goods').show();
+                } else {
+                    $("#sCart .mycartcur").remove();
+                    $("#sCartLoading").before(data.li);
+                    $("#sCartTotal2").html(data.num);
+                    $("#sCartTotalM").html(data.sum);
+                    $("#sCartLoading").hide();
+                    $("#J_miniCartList p,#J_miniCartList h3").show();
+                    $('#J_miniCartList dl dd.title').dotdotdot({watch:true});
+                }
+            });
 		},
 		function(){
 			$("#J_miniCartList").hide();

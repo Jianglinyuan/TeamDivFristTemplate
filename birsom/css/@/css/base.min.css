@@ -2266,13 +2266,13 @@ a {
 	*zoom: 1
 }
 .xm-goods-item .item-thumb {
-	height: 220px;
+	height: 210px;
 	padding: 0 0 30px;
 	text-align: center
 }
 .xm-goods-item .item-thumb img {
 	width: 220px;
-	height: 220px;
+	height: 210px;
 	margin: 0 auto;
 	background: url(../images/placeholder-220.png) no-repeat 50% 50%;
 	background-image: -webkit-image-set(url(../images/placeholder-220.png) 1x, url(../images/placeholder-440.png) 2x)
@@ -2298,10 +2298,10 @@ a {
 	text-decoration: none
 }
 .xm-goods-item .item-price {
-	height: 21px;
+	height: 27px;
 	padding: 0 10px;
-	text-align: left;
-    color: #db3652;
+	text-align: right;
+    color: #AEADAD;
 }
 .xm-goods-item .item-price .sep {
 	margin: 0 10px;
@@ -4781,13 +4781,13 @@ body.f-width-change .g-special li em {
 	height: 14px;
 }
 .item-star .Pro-bar-li li.P-bar01 em {
-	color: #db3652;
+	color: #333;
 }
 .item-star .Pro-bar-li li.P-bar02 em {
 	color: #777;
 }
 .item-star .Pro-bar-li li.P-bar03 em {
-	color: #14A8E4;
+	color: #333;
 }
 .item-star .Pro-bar-li li.P-bar01 {
 	width: 35%;
@@ -5766,4 +5766,19 @@ dd.del {
 }
 .xm-order-list dd li.current .icon-order-descending {
 	background-position: -12px -12px
+}
+#no-goods {
+	width: 240px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+#no-goods img {
+	float: right;
+}
+#no-goods span {
+	float: right;
+	font-size: 14px;
+	height: 49px;
+	line-height: 49px;
+	margin-right: 10px;
 }

@@ -30,6 +30,7 @@ body:before {
 }
 
 .m-index-news {
+  text-align: right;
   margin-top: 347px;
   padding: 0 12px;
   height: 213px;
@@ -144,7 +145,7 @@ body:before {
 .m-index-news-ext {
   position: absolute;
   bottom: 10px;
-  right: 12px;
+  left: 12px;
 }
 
 .m-index-news-ext a {
@@ -395,7 +396,7 @@ body:before {
 }
 
 .w-goods-ing .w-goods-opr .w-button-addToCart {
-  margin-left: 5px;
+  margin-right: 5px;
   border: none;
   padding: 0;
 }
@@ -466,7 +467,7 @@ body:before {
 }
 
 .m-index-recordRank .w-record-user {
-  float: left;
+  float: right;
   display: inline-block;
   width: 80px;
 }
@@ -574,6 +575,7 @@ body:before {
   overflow: hidden;
   word-break: break-all;
   word-wrap: break-word;
+  text-align: right;
 }
 
 .m-index-share-wrap .txt a {
@@ -583,7 +585,7 @@ body:before {
 
 .m-index-share-wrap .author {
   margin-top: 5px;
-  text-align: right;
+  text-align: left;
   color: #b5b5b5;
 }
 
@@ -592,11 +594,14 @@ body:before {
 }
 
 .m-index-share .ico-quote-former {
-  top: 0;
+  bottom: 0;
   left: 10px;
 }
 
 .m-index-share .ico-quote-after {
-  bottom: 0;
+  top: 0;
   right: 10px;
+}
+p.txt a span {
+  float: right;
 }
