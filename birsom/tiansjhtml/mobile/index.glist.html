@@ -17,8 +17,8 @@
     <div class="h5-yygcms-v1" id="loadingPicBlock">
     
 <!-- 栏目页面顶部 -->
-{wc:templates "mobile/index","header"}
 
+{wc:templates "mobile/index","header"}
 <script src="{G_TEMPLATES_MOBILE_JS}/ajax.js"></script>
 
 <!-- 内页顶部 -->
@@ -27,33 +27,30 @@
 	    <!-- 导航 -->
 	    <div class="goodsNav">
             <ul id="divGoodsNav">
-                <li order="10">
-                    <a href="javascript:;">تۈرلەر<s class="arrowUp"></s><b></b></a>
+       	 	    <li order="10" class="current"><a href="javascript:;">جاكارلار<b></b></a></li>
+                <li order="20"><a href="javascript:;">ئاۋاتلىق<b></b></a></li>
+                <li order="40"><a href="javascript:;">يىڭى<b></b></a></li>
+                <li order="50" type="price"><a href="javascript:;">باھاسى<em></em><s></s><b></b></a></li>
+                <li order="">
+                    <a href="javascript:;">تۈرلەر<s class="arrowUp"></s></a>
                     <dl style="display:none;width:100%;position:fixed;top:120px;z-index:50;">
 
                         <dd type="0" class="sOrange"><a href="javascript:;">ھەممىسى</a></dd>
 						{wc:getlist sql="select * from `@#_category` where parentid=0 and `model`='1'"}
 						{wc:loop $data $categoryx}
-						<dd><a style="text-align: center;"id="{wc:$categoryx['cateid']}" href="javascript:;">{wc:$categoryx['name']}</a></dd>
+						<dd><a id="{wc:$categoryx['cateid']}" href="javascript:;">{wc:$categoryx['name']}</a></dd>
 						{wc:loop:end}
 						{wc:getlist:end}
 					</dl>
                 </li>
-                <li order="50" type="price"><a href="javascript:;">باھاسى<em></em><s></s><b></b></a></li>
-                <li order="40"><a href="javascript:;">يىڭى<b></b></a></li>
-                <li order="20"><a href="javascript:;">ئاۋاتلىقى<b></b></a></li>
-                <li order="30" class="current"><a href="javascript:;">جاكارلار</a></li>
            </ul>
         </div>
         <!-- 列表 -->
         <div class="goodsList">
-            
             <div id="divGoodsLoading" class="loading" style="display:none;"><b></b>...ئېچىلىۋاتىدۇ</div>
-            <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;"><font color="#db3652">...تېخىمۇ كۆپ</font></a>
-
+            <a id="btnLoadMore" class="loading" href="javascript:;" style="display:none;"><font color="red">...تېخىمۇ كۆپ</font></a>
             <a id="btnLoadMore2" class="loading"  style="display:none;">تۈگىدى</a>
             <a id="btnLoadMore3" class="loading"  style="display:none;">تۈگىدى</a>
-
         </div>
     </section>
 	
@@ -64,7 +61,7 @@
 
 //打开页面加载数据
 window.onload=function(){
-	glist_json("list/10");
+	glist_json("list/50");
 	//购物车数量
 	$.getJSON('{WEB_PATH}/mobile/ajax/cartnum',function(data){
 		if(data.num){
@@ -85,18 +82,18 @@ function glist_json(parm){
 			$("#pagenum").val(data[0].page);
 			for(var i=0;i<data.length;i++){			
 			var ul='<ul><li>';
-				ul+='<span id="'+data[i].id+'" class="z-Limg" style="float:right;"><img src="{G_UPLOAD_PATH}/'+data[i].thumb+'"></span>';
-				ul+='<div class="goodsListR" style="margin-left:0px;">';
-					ul+='<h2 id="'+data[i].id+'" onclick="tz('+data[i].id+')">'+data[i].title+'</h2>';
-				ul+='<div class="pRate" style="left:45px; margin-right:132px">';
+				ul+='<span id="'+data[i].id+'" class="z-Limg"><img src="{G_UPLOAD_PATH}/'+data[i].thumb+'"></span>';
+				ul+='<div class="goodsListR">';
+				ul+='<h2 id="'+data[i].id+'">'+data[i].title+'</h2>';
+				ul+='<div class="pRate">';
 				ul+='<div class="Progress-bar" id="'+data[i].id+'">';				
-				ul+='<p class="u-progress"><span class="pgbar" style="width:'+(data[i].canyurenshu / data[i].zongrenshu)*100 +'%;"><span class="pging"></span></span></p>';
+				ul+='<p class="u-progress"><span class="pgbar" style="width:'+(data[i].canyurenshu / data[i].zongrenshu)*100+'%;"><span class="pging"></span></span></p>';
 				ul+='<ul class="Pro-bar-li">';
 				ul+='<li class="P-bar01"><em>'+data[i].canyurenshu+'</em>قاتناشقانلار</li>';
 				ul+='<li class="P-bar02"><em>'+data[i].zongrenshu+'</em>جەمئىي</li>';
 				ul+='<li class="P-bar03"><em>'+data[i].shenyurenshu+'</em>قالدۇق</li>';
 				ul+='</ul></div>';
-				ul+='<a class="add " style="left:-45px; "codeid="'+data[i].id+'" href="javascript:;"><s></s></a>';
+				ul+='<a class="add " codeid="'+data[i].id+'" href="javascript:;"><s></s></a>';
 				ul+='</div></div></li></ul>';
 				$("#divGoodsLoading").before(ul);			
 			}
@@ -136,7 +133,7 @@ $(document).ready(function(){
 	var dl=$("#divGoodsNav dl"),
 		last=$("#divGoodsNav li:last"),
 		first=$("#divGoodsNav dd:first");
-	$("#divGoodsNav li:first a:first").click(function(){		
+	$("#divGoodsNav li:last a:first").click(function(){		
 		if(dl.css("display")=='none'){
 			dl.show();
 			last.addClass("gSort");
@@ -157,8 +154,7 @@ $(document).ready(function(){
 		if(id){			
 			$("#divGoodsLoading").css('display','block');
 			$(".goodsList ul").remove();
-			// glist_json(id+'/'+parm);
-			window.location.href="{WEB_PATH}/mobile/mobile/glist_category/"+id+"/10/1/";
+			glist_json(id+'/'+parm);
 		}else{
 			glist_json("list/"+parm);
 			$(".goodsList ul").remove();
@@ -188,11 +184,11 @@ $(document).ready(function(){
 	$(document).on("click",'.add',function(){
 		var codeid=$(this).attr('codeid');
 		$.getJSON('{WEB_PATH}/mobile/ajax/addShopCart/'+codeid+'/1',function(data){
-			 if(data.code==1){
-                addsuccess('خاتالىق يۈز بەردى');
-            }else if(data.code==0){
-                addsuccess('مۇۋاپىقىيەتلىك قوشۇلدى');
-            }return false;
+			if(data.code==1){
+				addsuccess('添加失败');
+			}else if(data.code==0){
+				addsuccess('添加成功');				
+			}return false;
 		});
 	});
 	function addsuccess(dat){
@@ -218,12 +214,6 @@ $(document).ready(function(){
 	});
 
 });
-
-function tz(id){
-	if(id){
-		window.location.href="{LOCAL_PATH}/mobile/mobile/item/"+id;
-	}		
-}
 
 </script>
 
