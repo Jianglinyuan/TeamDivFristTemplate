@@ -162,7 +162,7 @@
 }
 .shop_process .submitted ul.order li.ts p.right span {
 	font-size:18px;
-	font-family:arial;
+	font-family: "alkatip";
 	color:#db3652;
 	padding:0 5px;
 }
@@ -685,7 +685,7 @@ li.end span.money,li.end span.all,li.end span.moneys,li.end span.xj {
 }
 .payment_Total span {
 	color:#F00;
-	font-family:arial;
+	font-family: "alkatip";
 	font-size:16px;
 	font-weight:bold;
 }
@@ -699,12 +699,12 @@ li.end span.money,li.end span.all,li.end span.moneys,li.end span.xj {
 .point_out em {
 	color:#db3652;
 	font-weight:bold;
-	font-family:宋体;
+	font-family: "alkatip";
 	padding:0 3px;
 }
 .point_out span {
 	color:#666;
-	font-family:arial;
+	font-family: "alkatip";
 	font-size:16px;
 	font-weight:bold;
 }
@@ -759,7 +759,7 @@ li.end span.money,li.end span.all,li.end span.moneys,li.end span.xj {
 }
 .point_in .J_Sum {
 	color:#FE3F3F;
-	font-family:arial;
+	font-family: "alkatip";
 	font-size:22px;
 }
 .point_in span {
@@ -785,7 +785,7 @@ li.end span.money,li.end span.all,li.end span.moneys,li.end span.xj {
 .shop_payment .payment_list ul.order_list li.end span.num,.shop_payment .payment_list ul.order_list li.bottom span {
 	color:#f00;
 	font-size:14px;
-	font-family:arial;
+	font-family: "alkatip";
 }
 .shop_payment .payment_list ul.order_list li.bottom span {
 	font-size:18px;
@@ -793,7 +793,7 @@ li.end span.money,li.end span.all,li.end span.moneys,li.end span.xj {
 }
 .shop_payment .payment_list ul.order_list li.end span.all span {
 	font-size:18px;
-	font-family:arial;
+	font-family: "alkatip";
 	color:#f00;
 	padding:0 5px;
 }
@@ -888,7 +888,7 @@ li.end span.money,li.end span.all,li.end span.moneys,li.end span.xj {
 }
 .shop_payment .account li span {
 	color:#2d9f00;
-	font-family:arial;
+	font-family: "alkatip";
 	font-size:18px;
 	padding:0 5px 0 0;
 }
@@ -1236,7 +1236,7 @@ dl.add dd input.amount {
 	background:#fdf2d9;
 	border:#d8d8d8 1px solid;
 	color:#333;
-	font-family:Arial,Helvetica,sans-serif;
+	font-family: "alkatip";
 }
 dl.add dd a.jia {
 	display:block;

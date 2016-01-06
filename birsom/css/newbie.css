@@ -63,11 +63,11 @@
 }
 .Guide-Explain li.Explain-l p {
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 }
 .Guide-Explain li.Explain-r p {
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 }
 .ExplainA {
 	padding-top:74px;
@@ -99,7 +99,7 @@
 }
 .Rule .Rule-Exp li {
 	height:35px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:15px;
 	color:#666;
 }

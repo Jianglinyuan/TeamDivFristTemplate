@@ -15,13 +15,13 @@
 	font-size:18px;
 	line-height:22px;
 	color:#db3752;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-weight:bold;
 	padding:8px 10px 0 10px;
 	_padding:9px 10px 0 10px;
 }
 .list_Curtit span {
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	padding:11px 10px 0 10px;
 	_padding:12px 10px 0 10px;
 	display:block;
@@ -341,12 +341,12 @@ a.list_classMore:visited,a.list_classMore:hover,a.list_classMore:active {
 }
 .goods-iten .money {
 	padding:0 10px 5px;
-	font-family:宋体;
+	font-family: "alkatip";
 	text-align:left;
 	color:#999;
 }
 .goods-iten .money span {
-	font-family:arial;
+	font-family: "alkatip";
 	color:#666;
 }
 .goods-iten .Progress-bar {
@@ -377,7 +377,7 @@ a.list_classMore:visited,a.list_classMore:hover,a.list_classMore:active {
 	height:18px;
 	overflow:hidden;
 	display:inline-block;
-	font-family:宋体;
+	font-family: "alkatip";
 	border:1px solid #CFCFCF;
 	text-align:center;
 	font-size:14px;
@@ -396,7 +396,7 @@ a.list_classMore:visited,a.list_classMore:hover,a.list_classMore:active {
 	border-left:none;
 	border-right:none;
 	background:#fff;
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .goods-iten .go_buy:after {
 	content:"\0020";
@@ -416,7 +416,7 @@ a.list_classMore:visited,a.list_classMore:hover,a.list_classMore:active {
 	background:#db3752;
 	color:#fff;
 	border-radius:3px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:14px;
 	line-height:14px;
 }
@@ -432,7 +432,7 @@ a.go_Shopping:hover {
 	background:#EFE5E6;
 	color:#db3752;
 	border-radius:3px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:14px;
 	line-height:14px;
 }
@@ -455,7 +455,7 @@ a.go_Shopping:hover {
 	line-height:90px;
 	padding-left:80px;
 	display:inline-block;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:18px;
 	color:#999;
 	background-position:0 -90px;
@@ -489,7 +489,7 @@ a.go_Shopping:hover {
 .list_goodsTj .list_goodsTjTit {
 	font-size:18px;
 	color:#666;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	height:36px;
 	line-height:36px;
 	padding-left:15px;
@@ -513,7 +513,7 @@ a.go_Shopping:hover {
 	display:inline-block;
 	text-align:center;
 	line-height:111px;
-	font-family:宋体;
+	font-family: "alkatip";
 	font-size:24px;
 	font-weight:bold;
 	border:1px solid #E4E4E4;
@@ -538,7 +538,7 @@ a.go_Shopping:hover {
 	display:inline-block;
 	text-align:center;
 	line-height:111px;
-	font-family:宋体;
+	font-family: "alkatip";
 	font-size:24px;
 	font-weight:bold;
 	border:1px solid #E4E4E4;
@@ -611,12 +611,12 @@ a.go_Shopping:hover {
 	color:#db3652;
 }
 .list_goodsTjCon .money {
-	font-family:宋体;
+	font-family: "alkatip";
 	text-align:center;
 	color:#999;
 }
 .list_goodsTjCon .money span {
-	font-family:arial;
+	font-family: "alkatip";
 	color:#666;
 }
 .list_goodsTjCon .go_buy {
@@ -663,7 +663,7 @@ a.go_Shopping12:hover {
 	float:left;
 	color:#AEADAD;
 	font-size:12px;
-	font-family:宋体;
+	font-family: "alkatip";
 	border:none;
 	margin:0;
 	padding:0;
@@ -673,7 +673,7 @@ a.go_Shopping12:hover {
 .Progress-bar .Pro-bar-li li em {
 	display:block;
 	font-size:12px;
-	font-family:arial;
+	font-family: "alkatip";
 	height:14px;
 }
 .Progress-bar .Pro-bar-li li.P-bar01 em {
@@ -701,7 +701,7 @@ a.go_Shopping12:hover {
 .goods_loding {
 	font-size:18px;
 	color:#666;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	height:66px;
 	min-height:66px;
 	text-align:center;
@@ -729,13 +729,13 @@ a.go_Shopping12:hover {
 .pages ul.pageULEx li.curr_page {
 	padding:4px 0 3px 0;
 	font-size:14px;
-	font-family:Arial;
+	font-family: "alkatip";
 	line-height:22px;
 }
 .pages ul.pageULEx li a {
 	padding:3px 0 4px 0;
 	font-size:14px;
-	font-family:Arial;
+	font-family: "alkatip";
 	line-height:22px;
 }
 .pages ul.pageULEx li.prev_page a,.pages ul.pageULEx li.next_page a {
@@ -745,7 +745,7 @@ a.go_Shopping12:hover {
 	line-height:22px;
 }
 .pages ul.pageULEx li.prev_page i,.pages ul.pageULEx li.next_page i {
-	font-family:宋体;
+	font-family: "alkatip";
 	font-weight:bold;
 }
 .pages ul.pageULEx li.prev_page i {
@@ -764,7 +764,7 @@ a.go_Shopping12:hover {
 	float:left;
 	text-align:center;
 	color:#666;
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .pages ul.pageULEx li.curr_page {
 	display:block;

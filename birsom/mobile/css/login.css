@@ -45,7 +45,7 @@ input:-moz-placeholder {
 	position: relative;
 	text-align: right;
 	font-size: 12px;
-	font-family: alkatip;
+	font-family: "alkatip";
 }
 .registerCon li input.rText {
 	padding-left: 30px;
@@ -148,7 +148,7 @@ input:-moz-placeholder {
 	display: inline-block;
 	-webkit-box-sizing: border-box;
 	position: relative;
-    font-family: alkatip;
+    font-family: "alkatip";
 	font-size: 12px;
 	text-align: right;
 }

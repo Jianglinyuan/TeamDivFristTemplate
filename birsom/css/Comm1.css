@@ -199,7 +199,7 @@ a.blue:hover {
 	top: 32px;
 	left: 0;
 	display: inline-block;
-	font-family: 微软雅黑;	 
+	font-family: "alkatip";	 
 	cursor: pointer;
 	z-index: 10;
 	color: #BBB;
@@ -215,7 +215,7 @@ a.blue:hover {
 	height: 17px;
 	line-height: 16px;
 	font-size: 11px;
-	font-family: Arial;
+	font-family: "alkatip";
 	text-align: center;
 	color: #fff;
 	position: absolute;
@@ -306,7 +306,7 @@ a.blue:hover {
 	display: block;
 	border: none;
 	cursor: pointer;
-	font-family: 微软雅黑;
+	font-family: "alkatip";
 	font-size: 14px;
 	background: #db3652;
 	border-radius: 3px;
@@ -499,11 +499,11 @@ i {
 }
 
 .rmbf {
-	font-family: 微软雅黑;
+	font-family: "alkatip";
 }
 
 .fam-y {
-	font-family: 微软雅黑;
+	font-family: "alkatip";
 }
 
 .Hicon,.F-msg-close,.U_sina s,.U_qq s,.U_wx s,.F-icon-guest s,.F-icon-gray s,.M-nav-help a s,.search_submit,.search_submit_hover,.m-app-dow-img,.u-banner-close,.F-number-l,.F-number-r,.F-bg,.F-android-img,.F-wx-img,.M-wx .F-txt b i,.F-security-img,.F-goods-img,.F-goods-arrow,.m-popup-close a,.u-popup-Tip s,.u-popup-Tip i,u-popup-Tip b,.f-user-qq,.f-pay-succeed,.f-pay-fail,.roll_close a {
@@ -512,7 +512,7 @@ i {
 
 .orange_btn,.orange_bg_btn {
 	background: #ff7010;
-	font-family: "宋体";
+	font-family: "alkatip";
 	display: inline-block;
 	color: #fff;
 	-webkit-border-radius: 2px;
@@ -942,7 +942,7 @@ li.M-my-1yyg .menu-hd a {
 }
 
 .head-nav-bd .menu-bd-msg .M-msg-size .orange {
-	font-family: Arial;
+	font-family: "alkatip";
 }
 
 .head-nav-bd .menu-bd-msg .F-msg-close {
@@ -1047,7 +1047,7 @@ li.M-my-1yyg .menu-hd a {
 	font-size: 12px;
 	cursor: pointer;
 	display: inline-block;
-	font-family: "宋体";
+	font-family: "alkatip";
 }
 
 .head-nav-bd .M-shop .orange_btn:hover {
@@ -1198,7 +1198,7 @@ li.M-my-1yyg .menu-hd a {
 	margin-top: 10px;
 	margin-right: -5px;
 	overflow: hidden!important;
-	font-family: "宋体";
+	font-family: "alkatip";
 }
 
 .head_number li {
@@ -1237,7 +1237,7 @@ li.M-my-1yyg .menu-hd a {
 	font-size: 22px;
 	margin: 0 3px;
 	line-height: 30px;
-	font-family: Arial,"微软雅黑";
+	font-family: "alkatip";
 }
 
 .head_number li.F-number-bg .gray9 {
@@ -1309,12 +1309,12 @@ li.M-my-1yyg .menu-hd a {
 	line-height: 41px;
 	overflow: hidden;
 	zoom: 1;
-	font-family: 微软雅黑;
+	font-family: "alkatip";
 }
 
 .nav .nav-bd li {
 	float: left;
-	font-family: 微软雅黑;
+	font-family: "alkatip";
 	font-size: 18px;
 }
 
@@ -1365,12 +1365,12 @@ li.M-my-1yyg .menu-hd a {
 	position: relative;
 	z-index: 40;
 	background: #F45100;
-	font-family: 微软雅黑;
+	font-family: "alkatip";
 }
 
 .nav .M-All-goods .U-All-T {
 	line-height: 38px;
-	font-family: 微软雅黑;
+	font-family: "alkatip";
 	font-size: 18px;
 	color: #fff;
 	z-index: 71;
@@ -1467,7 +1467,7 @@ li.M-my-1yyg .menu-hd a {
 .nav .U-goods-class dt {
 	font-size: 16px;
 	color: #333;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	padding-bottom: 10px;
 	overflow: hidden;
 	zoom: 1;
@@ -1559,7 +1559,7 @@ li.M-my-1yyg .menu-hd a {
 }
 
 .M-nav-column {
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	font-size: 14px;
 }
 
@@ -1648,7 +1648,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 }
 
 .M-guide dt {
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	font-size: 18px;
 	color: #333;
 	padding-bottom: 10px;
@@ -1694,7 +1694,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 .service-promise li .F-txt b {
 	display: block;
 	font-size: 14px;
-	font-family: 微软雅黑;
+	font-family: "alkatip";
 	font-weight: normal;
 	margin-bottom: 3px;
 }
@@ -1724,7 +1724,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 .service-promise li.M-android .orange_btn {
 	width: 110px;
 	line-height: 32px;
-	font-family: 微软雅黑;
+	font-family: "alkatip";
 	font-size: 14px;
 	text-align: center;
 }
@@ -1782,7 +1782,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 
 .service-promise li.M-time .F-txt-dig {
 	font-size: 24px;
-	font-family: Arial,"微软雅黑";
+	font-family: "alkatip";
 	line-height: 24px;
 	padding: 10px 5px 6px 3px;
 	float: left;
@@ -1801,7 +1801,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 	color: #db3652;
 	line-height: 42px;
 	font-size: 24px;
-	font-family: "Arial";
+	font-family: "alkatip";
 	padding: 0 5px 0 3px;
 }
 
@@ -1823,7 +1823,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 
 .service-promise li.M-fund .F-fund-buy {
 	background: #94D45A;
-	font-family: "Arial";
+	font-family: "alkatip";
 	border-bottom: 2px solid #79C13B;
 	text-align: center;
 	color: #fff;
@@ -1862,7 +1862,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 	font-size: 20px;
 	height: 22px;
 	overflow: hidden;
-	font-family: Arial;
+	font-family: "alkatip";
 	margin-bottom: 5px;
 	color: #db3652;
 	font-weight: bold;
@@ -1910,7 +1910,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 
 .M-security .F-security-T {
 	font-size: 18px;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	color: #333;
 	height: 30px;
 	line-height: 30px;
@@ -1956,7 +1956,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 	text-align: center;
 	padding: 10px 0 10px;
 	background: #fff;
-	font-family: "宋体";
+	font-family: "alkatip";
 }
 
 .footer_links a {
@@ -1990,7 +1990,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 }
 
 .copyright span {
-	font-family: Arial,Helvetica,sans-serif;
+	font-family: "alkatip";
 }
 
 .footer_icon2 {
@@ -2079,7 +2079,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 .Progress-bar .Pro-bar-li li em {
 	display: block;
 	font-size: 12px;
-	font-family: arial;
+	font-family: "alkatip";
 	height: 19px;
 	line-height: 20px;
 }
@@ -2117,7 +2117,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 	text-align: center;
 	position: relative;
 	font-size: 22px;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	color: #666;
 }
 
@@ -2152,7 +2152,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 	display: inline-block;
 	border: 1px solid #E6E6E6;
 	border-radius: 2px;
-	font-family: arial;
+	font-family: "alkatip";
 	float: left;
 	margin-right: 6px;
 }
@@ -2169,18 +2169,18 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 	line-height: 29px;
 	height: 29px;
 	display: inline-block;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	float: left;
 	color: #999;
 }
 
 .pagination-page .page-prev,.pagination-page .page-next {
-	font-family: "宋体";
+	font-family: "alkatip";
 	font-weight: bold;
 }
 
 .pagination-page .btn-prev,.pagination-page .btn-next {
-	font-family: "宋体";
+	font-family: "alkatip";
 	font-weight: normal;
 }
 
@@ -2256,11 +2256,11 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 	display: inline-block;
 	border: 1px solid #E6E6E6;
 	border-radius: 2px;
-	font-family: arial;
+	font-family: "alkatip";
 	margin-right: 6px;
 	cursor: pointer;
 	color: #999;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 }
 
 .pagination-buy .btn-jump:hover {
@@ -2352,7 +2352,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 }
 
 .u-popup-paytip .blue span {
-	font-family: 宋体;
+	font-family: "alkatip";
 }
 
 .num_del,.num_add,.num_dig {
@@ -2360,7 +2360,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 	height: 28px;
 	overflow: hidden;
 	display: inline-block;
-	font-family: 宋体;
+	font-family: "alkatip";
 	border: 1px solid #CFCFCF;
 	text-align: center;
 	font-size: 24px;
@@ -2407,7 +2407,7 @@ body.index .nav-bd .M-nav-column li.F-nav-back,body.lottery .nav-bd .M-nav-colum
 	border-left: none;
 	border-right: none;
 	font-size: 18px;
-	font-family: arial;
+	font-family: "alkatip";
 }
 
 .g-pay-tip {
@@ -2442,7 +2442,7 @@ div.pageDialogMain .g-pay-tip p {
 .g-pay-tip .f-pay-tit {
 	font-size: 20px;
 	height: 30px;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 }
 
 .g-pay-tip .f-pay-btn {
@@ -2457,7 +2457,7 @@ div.pageDialogMain .g-pay-tip p {
 	text-align: center;
 	font-size: 16px;
 	margin-bottom: 15px;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 }
 
 .u-progress {
@@ -2579,7 +2579,7 @@ div.pageDialogMain .g-pay-tip p {
 	top: 32px;
 	left: 0;
 	display: inline-block;
-	font-family: 微软雅黑;
+	font-family: "alkatip";
 	cursor: pointer;
 	z-index: 10;
 	color: #BBB;
@@ -2595,7 +2595,7 @@ div.pageDialogMain .g-pay-tip p {
 	height: 18px;
 	line-height: 18px;
 	font-size: 10px;
-	font-family: Arial;
+	font-family: "alkatip";
 	text-align: center;
 	color: #fff;
 	position: absolute;
@@ -2688,7 +2688,7 @@ div.pageDialogMain .g-pay-tip p {
 }
 
 .Roll_mycart li span {
-	font-family: Arial;
+	font-family: "alkatip";
 	font-weight: bold;
 }
 
@@ -2698,7 +2698,7 @@ div.pageDialogMain .g-pay-tip p {
 	background: #F0F0F0;
 	display: inline-block;
 	line-height: 60px;
-	font-family: 宋体;
+	font-family: "alkatip";
 	color: #999;
 }
 
@@ -2743,14 +2743,14 @@ div.pageDialogMain .g-pay-tip p {
 	margin: 0 auto;
 	text-align: center;
 	font-weight: normal;
-	font-family: "宋体";
+	font-family: "alkatip";
 	font-size: 14px;
 }
 
 .Roll_mycart .quick_goods_loding {
 	font-size: 18px;
 	color: #666;
-	font-family: 微软雅黑,宋体;
+	font-family: "alkatip";
 	height: 111px;
 	min-height: 111px;
 	text-align: center;
@@ -2922,10 +2922,10 @@ div.pageDialogMain .g-pay-tip p {
 	height: 26px;
 	line-height: 26px;
 	text-align: center;
-	font-family: 宋体;
+	font-family: "alkatip";
 	font-weight: normal;
 	background: #ff7010;
-	font-family: "宋体";
+	font-family: "alkatip";
 	display: inline-block;
 	color: #fff;
 }
@@ -2933,7 +2933,7 @@ div.pageDialogMain .g-pay-tip p {
 .Roll_publish_list li b span {
 	font-weight: bold;
 	font-size: 14px;
-	font-family: 宋体;
+	font-family: "alkatip";
 }
 
 .Roll_publish_list li .u-publish-member,.Roll_publish_list li .u-publish-order,.Roll_publish_list li .u-publish-number {
@@ -3066,13 +3066,13 @@ i,em {
 	width: 1190px;
 	font-size: 12px;
 	color: #bbb;
-	font-family: 宋体;
+	font-family: "alkatip";
 	height: 25px;
 	margin: 0 auto;
 }
 
 .Current_nav span {
-	font-family: 宋体;
+	font-family: "alkatip";
 }
 
 .Current_nav a {
@@ -3353,7 +3353,7 @@ input[type=button]::-moz-focus-inner {
 	padding: 4px 0 5px 0\9;
 	_padding: 4px 0 5px 0;
 	font-size: 14px;
-	font-family: Arial;
+	font-family: "alkatip";
 	line-height: 22px;
 }
 
@@ -3362,7 +3362,7 @@ input[type=button]::-moz-focus-inner {
 	padding: 3px 0 4px 0\9;
 	_padding: 3px 0 4px 0;
 	font-size: 14px;
-	font-family: Arial;
+	font-family: "alkatip";
 	line-height: 22px;
 }
 
@@ -3384,7 +3384,7 @@ input[type=button]::-moz-focus-inner {
 	float: left;
 	text-align: center;
 	color: #666;
-	font-family: Arial;
+	font-family: "alkatip";
 }
 
 .page_nav ul.pageULEx li.curr_page {
@@ -3455,7 +3455,7 @@ input[type=button]::-moz-focus-inner {
 .fixed_wx_r .fixed_wx_close {
 	width: 15px;
 	height: 15px;
-	font-family: Arial;
+	font-family: "alkatip";
 	color: #fff;
 	text-align: right;
 	font-size: 16px;

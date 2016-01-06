@@ -154,7 +154,7 @@ body fieldset.blue legend{padding:3px 8px;font-weight:700;color:#347add; backgro
 .content-menu a.on{background-position: left -40px;*background-position: left -41px;_background-position: left -39px; color:#fff; padding:0 0 0 5px;}
 .content-menu a.on em{background-position: right -40px;*background-position: right -41px;_background-position: right -39px; padding:0 10px 0 5px}
 /*分页*/
-#pages { padding:14px 0 10px;font-family:宋体; text-align:right}
+#pages { padding:14px 0 10px;font-family: "alkatip"; text-align:right}
 #pages a { display:inline-block; height:22px; line-height:22px; background:#fff; border:1px solid #e3e3e3; text-align:center; color:#333; padding:0 10px}
 #pages a.a1 { background:url(../images/admin_img/pages.png) no-repeat 0 5px; width:56px; padding:0 }
 #pages a:hover { background:#f1f1f1; color:#000; text-decoration:none; }
@@ -201,7 +201,7 @@ body fieldset.blue legend{padding:3px 8px;font-weight:700;color:#347add; backgro
 .addContent a.r-close,.addContent a.r-open { float:right}
 
 .list-dot{ padding-bottom:10px}
-.list-dot li,.list-dot-othors li{padding:5px 0; border-bottom:1px dotted #c6dde0; font-family:"宋体"; color:#bbb; position:relative;_height:22px}
+.list-dot li,.list-dot-othors li{padding:5px 0; border-bottom:1px dotted #c6dde0; font-family: "alkatip";_height:22px}
 .list-dot li:hover,.list-dot-othors li:hover{ background-color:#d9e5ee}
 .list-dot li span,.list-dot-othors li span{color:#004499}
 .list-dot li a.close span,.list-dot-othors li a.close span{display:none}
@@ -245,7 +245,7 @@ body fieldset.blue legend{padding:3px 8px;font-weight:700;color:#347add; backgro
 .ScreenLock {background-position:50% 50%;background-repeat:no-repeat;height:100%;left:0;position:absolute;top:0;width:100%;z-index:2000}
 .ScreenLock .inputpwd {font-size:14px;height:134px;left:50%;margin:-102px 0 0 -150px;padding:28px;position:absolute;top:50%;width:280px}
 .ScreenLock h5{ height:60px; line-height:60px; padding-top:10px; padding-left:40px;background:url(../images/msg_img/msg_bg.png) no-repeat 0px -476px;}
-.ScreenLock .input-text{border:1px solid #A7A6AA;height:18px;margin:0 5px 0 0;padding:2px 0 2px 5px;border: 1px solid #d0d0d0;background: #FFF url(../images/admin_img/input.png) repeat-x; font-family: Verdana, Geneva, sans-serif,"宋体";font-size:12px;}
+.ScreenLock .input-text{border:1px solid #A7A6AA;height:18px;margin:0 5px 0 0;padding:2px 0 2px 5px;border: 1px solid #d0d0d0;background: #FFF url(../images/admin_img/input.png) repeat-x; font-family: "alkatip";}
 .ScreenLock .submit{ background: url(../images/admin_img/ScreenLockBut.png) no-repeat; height:24px; width:55px;cursor:hand;display:inline-block;display:-moz-inline-stack;zoom:1;*display:inline; border:none}
 
 /*网站地图*/

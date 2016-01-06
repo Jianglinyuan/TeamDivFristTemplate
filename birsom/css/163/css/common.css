@@ -11,8 +11,8 @@ body {
   color: #808080;
   background: #fff;
   font-size: 12px;
-  line-height: 1.666
-  font-family:"alkatip";
+  line-height: 1.666;
+  font-family: "alkatip";
 }
 
 body,
@@ -235,10 +235,9 @@ img {
 }
 
 .w-button-l {
-  padding: 0 20px;
   height: 35px;
   line-height: 35px;
-  font-size: 14px;
+  font-size: 15px;
   border-radius: 4px;
 }
 
@@ -892,7 +891,7 @@ img {
 .w-fixedLayer-tt {
   text-indent: 0!important;
   text-align: center;
-  font-family: 'alkatip';
+  font-family: "alkatip";
   font-size: 21px;
   line-height: 32px;
   font-weight: bold
@@ -2138,7 +2137,7 @@ img {
 }
 
 .w-goods-newReveal .w-goods-period {
-  margin: 2px 12px 10px 0;
+  margin: 0px 10px 5px 0;
   color: #808080;
   text-align: right;
 }
@@ -3009,7 +3008,7 @@ a.w-tag:hover {
 
 .w-goods-mall-name {
   height: 42px;
-  font-family:"alkatip";
+  font-family: "alkatip";
   font-size: 14px;
   margin: 0px 15px 0px 20px;
   overflow: hidden;
@@ -4262,7 +4261,7 @@ body {
 .m-menu-list .m-menu-hd {
   display: block;
   margin: 0 5px 0 12px;
-  width: 88px;
+  padding: 0 15px;
   height: 28px;
   line-height: 28px;
   text-align: center;
@@ -4500,7 +4499,7 @@ body {
   right: 30px;
   bottom: 5px;
   font-size: 14px;
-  font-family: 'alkatip';
+  font-family: "alkatip";
 }
 
 .m-instruction-110 a {

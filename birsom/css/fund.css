@@ -41,7 +41,7 @@
 .fundCon .step {
 	width:587px;
 	padding-bottom:25px;
-	font-family:Arial,"宋体";
+	font-family: "alkatip";
 }
 .fundCon .step ul {
 	clear:both;
@@ -142,7 +142,7 @@
 .value p b {
 	color:#f40;
 	font-size:28px;
-	font-family:Arial;
+	font-family: "alkatip";
 	margin-right:10px;
 }
 .value p span {

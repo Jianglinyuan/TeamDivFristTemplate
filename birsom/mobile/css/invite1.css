@@ -137,7 +137,7 @@
     float: right;
     color: #43b6ff;
     font-size: 14px;
-    font-family: "宋体";
+    font-family: "alkatip";
     background-position: 0 -47px;
     padding: 0 20px;
     height: 29px;
@@ -165,7 +165,7 @@
     line-height: 9px;
     border-radius: 2px;
     padding: 2px;
-    font-family: Arial;
+    font-family: "alkatip";
     font-weight: normal;
 }
 
@@ -252,7 +252,7 @@
 }
 
 .txtAri {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "alkatip";
 }
 
 .Apply-con .inp-money {
@@ -277,7 +277,7 @@
 
 .Apply-con span.orange {
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "alkatip";
     font-size: 14px;
 }
 

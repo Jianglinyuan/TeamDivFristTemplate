@@ -41,7 +41,7 @@
 	_line-height:34px;
 	padding-left:36px;
 	_padding-top:11px;
-	font-family:宋体;
+	font-family: "alkatip";
 	display:inline-block;
 	cursor:pointer;
 	font-size:12px;
@@ -81,7 +81,7 @@
 	height:31px;
 	line-height:31px;
 	text-align:center;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	display:inline-block;
 }
 .show_Period .Period_list li a:hover {
@@ -94,7 +94,7 @@
 	padding-top:0;
 	_padding-top:1px;
 	overflow:hidden;
-	font-family:微软雅黑,宋体,Arial;
+	font-family: "alkatip";
 	font-size:12px;
 	position:relative;
 	color:#db3652;
@@ -112,7 +112,7 @@
 }
 .show_Period li .period_ArrowCur {
 	width:108px;
-	font-family:微软雅黑,宋体,Arial;
+	font-family: "alkatip";
 	font-size:16px;
 	line-height:32px;
 	height:32px;
@@ -129,7 +129,7 @@
 	margin:auto;
 }
 .Pro_Details h1 {
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:24px;
 	padding-bottom:9px;
 	margin-top:15px;
@@ -256,7 +256,7 @@ div.jqZoomTitle {
 	z-index:5000;
 	text-align:center;
 	font-size:11px;
-	font-family:Tahoma;
+	font-family: "alkatip";
 	height:16px;
 	padding-top:2px;
 	position:absolute;
@@ -290,7 +290,7 @@ div.jqZoomTitle {
 	filter:alpha(opacity = 80);
 	color:#333;
 	font-size:12px;
-	font-family:Tahoma;
+	font-family: "alkatip";
 	text-decoration:none;
 	border:1px solid #CCC;
 	background-color:white;
@@ -322,7 +322,7 @@ div.jqZoomBigPic img {
 	border:1px solid #EEE;
 }
 .Pro_Detleft .Pro_GetPrize h2 {
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:18px;
 	padding:4px 0 0 12px;
 	color:#666;
@@ -358,19 +358,19 @@ div.jqZoomBigPic img {
 .Pro_Detright .Det_money {
 	height:30px;
 	padding-top:2px;
-	font-family:宋体;
+	font-family: "alkatip";
 	font-size:14px;
 	color:#666;
 }
 .Pro_Detright .Det_money span {
-	font-family:Arial;
+	font-family: "alkatip";
 	font-size:14px;
 }
 .Pro_Detright .Det_money span.rmbgray {
 	background-position:0 -2px;
 }
 .Pro_Detright .Det_money em {
-	font-family:"Microsoft Yahei","Arial","Verda","tahoma";
+	font-family: "alkatip";
 	font-size:14px;
 	font-weight:400px;
 	margin-right:2px;
@@ -379,13 +379,13 @@ div.jqZoomBigPic img {
 	height:15px;
 	line-height:15px;
 	color:#999;
-	font-family:宋体;
+	font-family: "alkatip";
 	display:block;
 	padding:13px 0 0;
 	_padding:13px 0 0;
 }
 .Pro_Detright .Pro_Detsingle span {
-	font-family:Arial;
+	font-family: "alkatip";
 	margin:0 5px;
 }
 .Pro_Detright .Pro_number {
@@ -405,7 +405,7 @@ div.jqZoomBigPic img {
 	height:24px;
 	overflow:hidden;
 	display:inline-block;
-	font-family:宋体;
+	font-family: "alkatip";
 	border:1px solid #CFCFCF;
 	text-align:center;
 	font-size:18px;
@@ -425,7 +425,7 @@ div.jqZoomBigPic img {
 	border-left:none;
 	border-right:none;
 	font-size:18px;
-	font-family:arial;
+	font-family: "alkatip";
 }
 .Pro_Detright .Det_button {
 	margin-top:10px;
@@ -442,7 +442,7 @@ div.jqZoomBigPic img {
 	background:#db3652;
 	color:#fff;
 	border-radius:3px;
-	font-family:微软雅黑,黑体;
+	font-family: "alkatip";
 	font-size:24px;
 	display:inline-block;
 	float:left;
@@ -461,7 +461,7 @@ div.jqZoomBigPic img {
 	background:#FFEBC4;
 	color:#FF6F0D;
 	border-radius:3px;
-	font-family:微软雅黑,黑体;
+	font-family: "alkatip";
 	font-size:18px;
 	display:inline-block;
 	position:relative;
@@ -498,7 +498,7 @@ div.jqZoomBigPic img {
 }
 .Security li {
 	float:left;
-	font-family:宋体;
+	font-family: "alkatip";
 	line-height:16px;
 	_line-height:18px;
 	font-size:12px;
@@ -590,7 +590,7 @@ div.jqZoomBigPic img {
 	/* margin-right:8px; */
 }
 .Pro_Record .Newest_Con li em {
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .Pro_Record .Newest_Con li a.blue {
 	/* margin-right:5px; */
@@ -605,7 +605,7 @@ div.jqZoomBigPic img {
 	padding:15px 15px 0 15px;
 	font-size:14px;
 	color:#999;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	text-align:right;
 	height:auto;
 	/*text-indent:2em;*/
@@ -614,7 +614,7 @@ div.jqZoomBigPic img {
 	padding:0 15px;
 	font-size:14px;
 	color:#999;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	text-align:left;
 	height:auto;
 	text-indent:2em;
@@ -633,7 +633,7 @@ div.jqZoomBigPic img {
 .My_Record p {
 	text-align:right;
 	line-height:28px;
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .My_RecordReg {
 	text-align:center;
@@ -643,7 +643,7 @@ div.jqZoomBigPic img {
 	font-weight:normal;
 	display:block;
 	height:35px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	color:#999;
 }
 .My_RecordReg .My_Signbut {
@@ -699,7 +699,7 @@ div.jqZoomBigPic img {
 	height:50px;
 	padding-top:18px;
 	line-height:24px;
-	font-family:宋体;
+	font-family: "alkatip";
 	display:block;
 }
 .NewRecord_msg .NewRecord_msgtxt em {
@@ -715,7 +715,7 @@ div.jqZoomBigPic img {
 	height:110px;
 	line-height:90px;
 	display:inline-block;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:18px;
 	color:#999;
 	overflow:hidden;
@@ -724,7 +724,7 @@ div.jqZoomBigPic img {
 .goods_loding {
 	font-size:18px;
 	color:#666;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	height:80px;
 	min-height:80px;
 	text-align:center;
@@ -742,7 +742,7 @@ div.jqZoomBigPic img {
 	text-align:center;
 	font-size:20px;
 	color:#999;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	overflow:hidden;
 	background:url(/templates/birsom/images/Details_EndCircle.png) no-repeat;
 	_background:none;
@@ -752,7 +752,7 @@ div.jqZoomBigPic img {
 	height:114px;
 	line-height:110px;
 	text-align:center;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	color:#999;
 	margin:6px 0 15px;
 	font-size:20px;
@@ -763,7 +763,7 @@ div.jqZoomBigPic img {
 	height:56px;
 	line-height:52px;
 	text-align:center;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	color:#999;
 	margin:13px 0 0;
 	font-size:20px;
@@ -788,7 +788,7 @@ div.jqZoomBigPic img {
 	color:#666;
 	border-bottom:1px solid #E4E4E4;
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 }
 .End_Detailslist li {
 	width:100px;
@@ -820,12 +820,12 @@ div.jqZoomBigPic img {
 	display:block;
 }
 .End_Detailslist .money {
-	font-family:arial;
+	font-family: "alkatip";
 	text-align:center;
 	color:#999;
 }
 .End_Detailslist .money span {
-	font-family:arial;
+	font-family: "alkatip";
 	color:#666;
 }
 .End_Detailslist .Endgo_buy {
@@ -862,7 +862,7 @@ div.jqZoomBigPic img {
     margin: 30px auto;
 	color:#fff;
 	line-height:50px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 }
 .Announced_FrameTin {
 	background:url(/templates/birsom/images/Announced_7.gif) no-repeat;
@@ -897,7 +897,7 @@ div.jqZoomBigPic img {
 	float:left;
 	text-align:center;
 	position:relative;
-	font-family:Arial;
+	font-family: "alkatip";
 	font-weight:bold;
 	background:#fff;
 	line-height:52px;
@@ -971,7 +971,7 @@ div.jqZoomBigPic img {
 	line-height:12px;
 	display:inline-block;
 	margin:10px 0 0 14px;
-	font-family:宋体;
+	font-family: "alkatip";
 
 }
 a.Announced_But:focus {
@@ -1008,7 +1008,7 @@ a.Announced_But:focus {
 	_line-height:31px;
 	text-indent:1em;
 	color:#666;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	color:#6E6E6E;
 	border-bottom:1px solid #E4E4E4;
 }
@@ -1058,12 +1058,12 @@ a.Announced_But:focus {
 	color:#db3652;
 }
 .Details_HotTj .HotTj_Con .money {
-	font-family:arial;
+	font-family: "alkatip";
 	text-align:center;
 	color:#999;
 }
 .Details_HotTj .HotTj_Con .money span {
-	font-family:arial;
+	font-family: "alkatip";
 	color:#666;
 }
 .ProductTabNav {
@@ -1105,7 +1105,7 @@ a.Announced_But:focus {
 }
 .DetailsT_TitP li {
 	float:left;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:16px;
 	text-align:center;
 	height:36px;
@@ -1144,7 +1144,7 @@ a.Announced_But:focus {
 	background:#22ABFE;
 	height:37px;
 	color:#fff;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:14px;
 	line-height:34px;
 	_line-height:38px;
@@ -1170,7 +1170,7 @@ a.Announced_But:focus {
 .AllRecordT_Tit,.SingleT_Tit {
 	width:978px;
 	margin:10px auto 0;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:14px;
 	height:35px;
 	line-height:32px;
@@ -1187,10 +1187,10 @@ a.Announced_But:focus {
 .SingleT_Tit span {
 	font-size:12px;
 	color:#A6A6A6;
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .AllRecordT_Tit span em,.SingleT_Tit span em {
-	font-family:Arial;
+	font-family: "alkatip";
 	margin:0 5px;
 }
 .Product_Content,.AllRecord_Content,.Single_Content {
@@ -1242,7 +1242,7 @@ a.Announced_But:focus {
 	position:relative;
 }
 .AllRecTime p {
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:24px;
 	color:#999;
 	display:inline-block;
@@ -1314,7 +1314,7 @@ a.Announced_But:focus {
 }
 .AllRecW .AllRecR .AllRecR_T em.orange {
 	margin:0 5px;
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .AllRecW .AllRecR .AllRecR_T i {
 	width:10px;
@@ -1335,10 +1335,10 @@ a.Announced_But:focus {
 	border-radius: 50%;
 }
 .AllRecW .AllRecR .AllRecR_T em {
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .AllRecW .AllRecR .AllRecR_Code {
-	font-family:宋体;
+	font-family: "alkatip";
 	padding-left:14px;
 }
 .AllRecW .AllRecR .AllRecR_Code b {
@@ -1416,7 +1416,7 @@ a.Announced_But:focus {
 }
 .Single_list .SingleR_TC h3 {
 	color:#999;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	font-size:18px;
 	color:#333;
 	line-height:24px;
@@ -1480,7 +1480,7 @@ a.Announced_But:focus {
 .Single_list .SingleR_Comment p.SingleRmore {
 	height:31px;
 	line-height:31px;
-	font-family:宋体;
+	font-family: "alkatip";
 	border-top:1px dotted #DDD;
 }
 .Single_list .SingleR_Comment li {
@@ -1539,7 +1539,7 @@ a.Announced_But:focus {
 .list_goodsTj .list_goodsTjTit {
 	font-size:18px;
 	color:#666;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	height:36px;
 	line-height:36px;
 	padding-left:15px;
@@ -1563,7 +1563,7 @@ a.Announced_But:focus {
 	display:inline-block;
 	text-align:center;
 	line-height:111px;
-	font-family:宋体;
+	font-family: "alkatip";
 	font-size:24px;
 	font-weight:bold;
 	border:1px solid #E4E4E4;
@@ -1588,7 +1588,7 @@ a.Announced_But:focus {
 	display:inline-block;
 	text-align:center;
 	line-height:111px;
-	font-family:宋体;
+	font-family: "alkatip";
 	font-size:24px;
 	font-weight:bold;
 	border:1px solid #E4E4E4;
@@ -1661,12 +1661,12 @@ a.Announced_But:focus {
 	color:#db3652;
 }
 .list_goodsTjCon .money {
-	font-family:宋体;
+	font-family: "alkatip";
 	text-align:center;
 	color:#999;
 }
 .list_goodsTjCon .money span {
-	font-family:arial;
+	font-family: "alkatip";
 	color:#666;
 }
 .list_goodsTjCon .go_buy {
@@ -1706,7 +1706,7 @@ a.go_Shopping12:hover {
 .detail_Prompt dd b,.detail_Prompt dd span {
 	display:block;
 	color:#db3652;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 }
 .detail_Prompt dd b {
 	font-size:20px;
@@ -1753,7 +1753,7 @@ a.go_Shopping12:hover {
 	float:left;
 	color:#AEADAD;
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	border:none;
 	margin:0;
 	padding:0;
@@ -1763,7 +1763,7 @@ a.go_Shopping12:hover {
 .Progress-bar .Pro-bar-li li em {
 	display:block;
 	font-size:18px;
-	font-family:arial;
+	font-family: "alkatip";
 	height:20px;
 }
 .Progress-bar .Pro-bar-li li.P-bar01 em {
@@ -1805,13 +1805,13 @@ a.go_Shopping12:hover {
 .pages ul.pageULEx li.curr_page {
 	padding:4px 0 3px 0;
 	font-size:14px;
-	font-family:Arial;
+	font-family: "alkatip";
 	line-height:22px;
 }
 .pages ul.pageULEx li a {
 	padding:3px 0 4px 0;
 	font-size:14px;
-	font-family:Arial;
+	font-family: "alkatip";
 	line-height:22px;
 }
 .pages ul.pageULEx li.prev_page a,.pages ul.pageULEx li.next_page a {
@@ -1821,7 +1821,7 @@ a.go_Shopping12:hover {
 	line-height:22px;
 }
 .pages ul.pageULEx li.prev_page i,.pages ul.pageULEx li.next_page i {
-	font-family:宋体;
+	font-family: "alkatip";
 	font-weight:bold;
 }
 .pages ul.pageULEx li.prev_page i {
@@ -1840,7 +1840,7 @@ a.go_Shopping12:hover {
 	float:left;
 	text-align:center;
 	color:#666;
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .pages ul.pageULEx li.curr_page {
 	display:block;
@@ -2057,7 +2057,7 @@ a.go_Shopping12:hover {
 	height:40px;
 	margin-top:-1px;
 	position:relative;
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .Immediate b {
 	width:55px;
@@ -2079,7 +2079,7 @@ a.go_Shopping12:hover {
 }
 .Immediate em {
 	color:#db3652;
-	font-family:Arial;
+	font-family: "alkatip";
 	font-size:20px;
 	line-height:20px;
 	padding-right:5px;

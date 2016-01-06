@@ -67,7 +67,7 @@ b{font-weight:normal; display:inline-block; color:#f27f02;}
 	line-height:26px;
 	height:64px;
 	font-size:16px;
-	font-family:"microsoft yahei";
+	font-family: "alkatip";
 	background:url(../img/download.png) no-repeat;
 }
 .donate{
@@ -107,7 +107,7 @@ b{font-weight:normal; display:inline-block; color:#f27f02;}
 	position:absolute;
 	right:-1px;
 	top:0;
-	font-family:"microsoft yahei";
+	font-family: "alkatip";
 }
 .header .nav li {
 	float:left;
@@ -166,7 +166,7 @@ b{font-weight:normal; display:inline-block; color:#f27f02;}
     font-weight: normal;
     line-height: 1.2em;
     margin-bottom: 22px;
-	font-family:"microsoft yahei";
+	font-family: "alkatip";
 }
 .main h3 span,
 .main h2 span{

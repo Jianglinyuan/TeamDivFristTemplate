@@ -359,7 +359,7 @@
 .help-main .qqTitle {
 	font-size:12px;
 	color:#999;
-	font-family:"宋体";
+	font-family: "alkatip";
 	background:#fbfbfb;
 	border-bottom:#dfdfdf 1px solid;
 	height:60px;
@@ -374,13 +374,13 @@
 }
 .help-main .qqTitle span.groupt {
 	font-size:22px;
-	font-family:"微软雅黑";
+	font-family: "alkatip";
 	color:#555;
 	padding-left:18px;
 	padding-top:3px;
 }
 .help-main .qqTitle span.groupt b {
-	font-family:Arial;
+	font-family: "alkatip";
 	font-weight:normal;
 }
 .help-main .qsearch {
@@ -395,7 +395,7 @@
 }
 .help-main .qsearch span {
 	color:#555;
-	font-family:"微软雅黑";
+	font-family: "alkatip";
 	font-size:18px;
 	padding-left:5px;
 	position:relative;
@@ -484,7 +484,7 @@
 .help-main .qqList p {
 	font-size:18px;
 	color:#db3652;
-	font-family:"微软雅黑";
+	font-family: "alkatip";
 	padding-left:29px;
 }
 .help-main .qqList ul {
@@ -518,7 +518,7 @@
 .help-main .qqList li dd {
 	color:#2af;
 	font-size:14px;
-	font-family:Arial;
+	font-family: "alkatip";
 	margin-top:26px;
 	*width:110px;
 	*margin-top:5px;
@@ -554,6 +554,6 @@
 	color:#666;
 }
 .help-main .nothing em {
-	font-family:Arial;
+	font-family: "alkatip";
 	font-style:normal;
 }

@@ -517,7 +517,7 @@ body {
 .service-btn {
 	width:73px;
 	padding-left:35px;
-	font-family:微软雅黑;
+	font-family: "alkatip";
 	overflow:hidden;
 	font-size:12px;
 	height:26px;
@@ -585,7 +585,7 @@ body {
 	float:left;
 	color:#43b6ff;
 	font-size:14px;
-	font-family:"宋体";
+	font-family: "alkatip";
 	background-position:0 -47px;
 	padding:0 20px;
 	height:29px;
@@ -611,7 +611,7 @@ body {
 	line-height:9px;
 	border-radius:2px;
 	padding:2px;
-	font-family:Arial;
+	font-family: "alkatip";
 	font-weight:normal;
 }
 .subMenu a.current {
@@ -698,7 +698,7 @@ body {
 	float:right;
 	position:relative;
 	margin-top:6px;
-	font-family:"宋体";
+	font-family: "alkatip";
 }
 .list-tab {
 	width:780px;
@@ -744,7 +744,7 @@ body {
 	float:left;
 	color:#AEADAD;
 	font-size:12px;
-	font-family:宋体;
+	font-family: "alkatip";
 	border:none;
 	margin:0;
 	padding:0;
@@ -754,7 +754,7 @@ body {
 .Progress-bar .Pro-bar-li li em {
 	display:block;
 	font-size:12px;
-	font-family:arial;
+	font-family: "alkatip";
 	height:14px;
 }
 .Progress-bar .Pro-bar-li li.P-bar01 em {

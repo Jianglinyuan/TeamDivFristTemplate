@@ -13,13 +13,13 @@ body {
 	font-size: 18px;
 	line-height: 22px;
 	color: #db3752;
-	font-family: 微软雅黑, 宋体;
+	font-family: "alkatip";
 	font-weight: bold;
 	padding: 8px 10px 0 10px;
 	_padding: 9px 10px 0 10px;
 }
 .share_Curtit span {
-	font-family: 微软雅黑, 宋体;
+	font-family: "alkatip";
 	padding: 11px 10px 0 10px;
 	_padding: 12px 10px 0 10px;
 	display: block;
@@ -311,7 +311,7 @@ a.smile_click:hover {
 	margin-left: 5px;
 	margin-right: 40px;
 	border-radius: 3px;
-	font-family: 宋体;
+	font-family: "alkatip";
 	font-size: 12px;
 }
 .message .gray03 {
@@ -322,7 +322,7 @@ a.smile_click:hover {
 }
 .message .much {
 	float: right;
-	font-family: 宋体;
+	font-family: "alkatip";
 	font-size: 12px;
 }
 .message .much a {
@@ -434,13 +434,13 @@ a.smile_click:hover {
 .pages ul.pageULEx li.curr_page {
 	padding: 4px 0 3px 0;
 	font-size: 14px;
-	font-family: Arial;
+	font-family: "alkatip";
 	line-height: 22px;
 }
 .pages ul.pageULEx li a {
 	padding: 3px 0 4px 0;
 	font-size: 14px;
-	font-family: Arial;
+	font-family: "alkatip";
 	line-height: 22px;
 }
 .pages ul.pageULEx li.prev_page a, .pages ul.pageULEx li.next_page a {
@@ -450,7 +450,7 @@ a.smile_click:hover {
 	line-height: 22px;
 }
 .pages ul.pageULEx li.prev_page i, .pages ul.pageULEx li.next_page i {
-	font-family: 宋体;
+	font-family: "alkatip";
 	font-weight: bold;
 }
 .pages ul.pageULEx li.prev_page i {
@@ -469,7 +469,7 @@ a.smile_click:hover {
 	float: left;
 	text-align: center;
 	color: #666;
-	font-family: Arial;
+	font-family: "alkatip";
 }
 .pages ul.pageULEx li.curr_page {
 	display: block;

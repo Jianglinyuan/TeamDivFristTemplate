@@ -43,7 +43,7 @@
 	height:23px;
 	display:inline-block;
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	color:#fff;
 	top:18px;
 	right:18px;
@@ -79,7 +79,7 @@
 .goods_loding {
 	font-size:18px;
 	color:#666;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	height:80px;
 	min-height:80px;
 	text-align:center;
@@ -129,7 +129,7 @@
 	border:1px solid #ddd;
 	opacity:0.8;
 	filter:Alpha(Opacity=60);
-	font-family:Arial;
+	font-family: "alkatip";
 	line-height:16px;
 	text-align:center;
 	background:#fefefe;
@@ -207,7 +207,7 @@
 	color:#db3652;
 	font-size:14px;
 	font-weight:bold;
-	font-family:arial;
+	font-family: "alkatip";
 	padding:0;
 	text-align:left;
 }
@@ -242,12 +242,12 @@
 }
 .recommend .Pro .money {
 	padding:0 0 8px 0;
-	font-family:arial;
+	font-family: "alkatip";
 	text-align:left;
 	color:#999;
 }
 .recommend .Pro .money span {
-	font-family:arial;
+	font-family: "alkatip";
 	color:#666;
 }
 .recommend .Pro .name a {
@@ -263,7 +263,7 @@
 }
 .recommend dl dd span.all {
 	color:#fe0000;
-	font-family:arial;
+	font-family: "alkatip";
 	padding:0 3px;
 	font-size:14px;
 	font-weight:bold;
@@ -297,7 +297,7 @@
 	height:25px;
 	display:block;
 	color:#666;
-	font-family:microsoft yahei;
+	font-family: "alkatip";
 	float:left;
 	margin:12px 0 0 5px;
 }
@@ -309,7 +309,7 @@
 	font-weight:normal;
 	display:block;
 	float:right;
-	font-family:"宋体";
+	font-family: "alkatip";
 	margin:20px 10px 0 0;
 }
 .get_ready h3 a:hover {
@@ -371,12 +371,12 @@
 }
 .get_ready .list-block .money {
 	padding:0 0 9px 0;
-	font-family:arial;
+	font-family: "alkatip";
 	text-align:left;
 	color:#999;
 }
 .get_ready .list-block .money span {
-	font-family:arial;
+	font-family: "alkatip";
 	color:#666;
 }
 .goods_hot {
@@ -406,7 +406,7 @@
 	height:25px;
 	display:block;
 	color:#FF6500;
-	font-family:microsoft yahei;
+	font-family: "alkatip";
 	float:left;
 	margin:0 0 0 5px;
 }
@@ -418,7 +418,7 @@
 	display:block;
 	float:right;
 	margin:7px 10px 0 0;
-	font-family:"宋体";
+	font-family: "alkatip";
 	color:#9B9B9B;
 }
 .goods_hot .goods_left .new_lottery h4 a:hover {
@@ -486,7 +486,7 @@
 	font-size:16px;
 	font-weight:bold;
 	color:#FF0;
-	font-family:"宋体";
+	font-family: "alkatip";
 }
 .goods_hot .goods_left .new_lottery ul li.countdown_li div.countdown_div span.lateron {
 	width:175px;
@@ -495,7 +495,7 @@
 	font-size:13px;
 	font-weight:bold;
 	color:#FFF;
-	font-family:"宋体";
+	font-family: "alkatip";
 	margin-top:3px;
 	margin-left:10px;
 }
@@ -615,12 +615,12 @@ position: relative
 }
 .hot .list-block .money {
 	padding:0 0 9px 0;
-	font-family:arial;
+	font-family: "alkatip";
 	text-align:left;
 	color:#999;
 }
 .hot .list-block .money span {
-	font-family:arial;
+	font-family: "alkatip";
 	color:#666;
 }
 .goods_hot .goods_left .hot h3 {
@@ -636,7 +636,7 @@ position: relative
 	height:25px;
 	display:block;
 	color:#666;
-	font-family:microsoft yahei;
+	font-family: "alkatip";
 	float:left;
 	margin:12px 0 0 5px;
 }
@@ -648,7 +648,7 @@ position: relative
 	font-weight:normal;
 	display:block;
 	float:right;
-	font-family:"宋体";
+	font-family: "alkatip";
 	margin:20px 10px 0 0;
 }
 .goods_hot .goods_left .hot h3 a:hover {
@@ -731,7 +731,7 @@ position: relative
 	height:27px;
 	line-height:27px;
 	font-size:22px;
-	font-family:arial;
+	font-family: "alkatip";
 	color:#fff;
 	background:url(../images/index.png) -120px -380px;
 	margin:0 0 0 2px;
@@ -867,7 +867,7 @@ position: relative
 	height:25px;
 	display:block;
 	color:#666;
-	font-family:microsoft yahei;
+	font-family: "alkatip";
 	float:left;
 	margin:12px 0 0 5px;
 }
@@ -879,7 +879,7 @@ position: relative
 	font-weight:normal;
 	display:block;
 	float:right;
-	font-family:"宋体";
+	font-family: "alkatip";
 	margin:20px 10px 0 0;
 }
 .share_show h3 a:hover {
@@ -1043,7 +1043,7 @@ position: relative
 	float:left;
 	color:#AEADAD;
 	font-size:12px;
-	font-family:宋体;
+	font-family: "alkatip";
 	border:none;
 	margin:0;
 	padding:0;
@@ -1053,7 +1053,7 @@ position: relative
 .Progress-bar .Pro-bar-li li em {
 	display:block;
 	font-size:12px;
-	font-family:arial;
+	font-family: "alkatip";
 	height:14px;
 	padding:3px 0 5px 0;
 }

@@ -42,13 +42,13 @@ body {
 	line-height: 60px;
 	text-align: center;
 	margin-top: 7px;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	font-size: 30px;
 	cursor: pointer;
 	border-radius: 5px 5px 0 0;
 }
 .auto-nav ul li.autoCur {
-	background: #e14;
+	background: #db3652;
 	color: #fff;
 }
 .auto-nav ul li em {
@@ -62,7 +62,7 @@ body {
 .autoCon {
 	width: 1190px;
 	margin: 20px auto 0;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	text-align: right;
 }
 .showCon {
@@ -100,7 +100,7 @@ body {
 	padding: 0 19px;
 }
 .showCon .autolist .jxTime {
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	font-size: 16px;
 	color: #fff;
 	text-align: center;
@@ -121,7 +121,7 @@ body {
 	line-height: 31px;
 	padding-left: 86px;
 	font-size: 16px;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	color: #FF4B04;
 	position: relative;
 }
@@ -141,7 +141,7 @@ body {
 	text-align: center;
 	line-height: 31px;
 	font-size: 20px;
-	font-family: "Arial";
+	font-family: "alkatip";
 	display: inline-block;
 	color: #FF4B04;
 	background: #fff;
@@ -160,7 +160,7 @@ body {
 	height: 37px;
 	padding-top: 6px;
 	color: #ACACAC;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	font-size: 24px;
 	line-height: 31px;
 	text-align: center;
@@ -197,12 +197,12 @@ body {
 }
 .showCon .money {
 	padding: 0 0 9px 0;
-	font-family: arial;
+	font-family: "alkatip";
 	text-align: left;
 	color: #999;
 }
 .showCon .money span {
-	font-family: arial;
+	font-family: "alkatip";
 	color: #666;
 }
 .showCon .ashowM {
@@ -234,7 +234,7 @@ body {
 	display: inline-block;
 }
 .listEndInfo .uInfo {
-	font-family: 宋体;
+	font-family: "alkatip";
 	height: 53px;
 	border-top: 1px solid #FFC683;
 	background: #fffae6;
@@ -257,7 +257,7 @@ body {
 	margin-left: 67px;
 }
 .listEndInfo .uInfo span {
-	font-family: Arial;
+	font-family: "alkatip";
 }
 .listEndInfo .uInfo span.orange {
 	font-weight: bold;
@@ -318,7 +318,7 @@ body {
 	float: left;
 	color: #AEADAD;
 	font-size: 12px;
-	font-family: 宋体;
+	font-family: "alkatip";
 	border: none;
 	margin: 0;
 	padding: 0;
@@ -328,7 +328,7 @@ body {
 .Progress-bar .Pro-bar-li li em {
 	display: block;
 	font-size: 12px;
-	font-family: arial;
+	font-family: "alkatip";
 	height: 14px;
 	padding: 3px 0 5px 0;
 }
@@ -360,7 +360,7 @@ body {
 	height: 49px;
 	line-height: 49px;
 	padding-left: 15px;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	float: right;
 }
 .autoOld .autoOldMore {
@@ -370,10 +370,10 @@ body {
 	height: 49px;
 	line-height: 49px;
 	padding-left: 15px;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 }
 .autoOld .autoOldMore em {
-	font-family: 宋体;
+	font-family: "alkatip";
 	font-weight: bold;
 }
 .autoOld .autoOldMore a {
@@ -389,7 +389,7 @@ body {
 .autoOld {
 	width: 1150px;
 	padding: 0 20px;
-	font-family: "宋体";
+	font-family: "alkatip";
 	display: inline-block;
 	background: #ECE1CD;
 	overflow: hidden;
@@ -402,7 +402,7 @@ body {
 	padding-left: 2px;
 }
 .autoOld ul.autoOldlist {
-	float: left;
+	float: right;
 	margin: 22px 0 0 21px;
 	display: inline;
 	width: 214px;
@@ -463,13 +463,13 @@ body {
 	color: #db3652;
 }
 .autoOld li.pInfo dd {
-	float: left;
+	float: right;
 	color: #999;
 }
 .autoOld li.pInfo dd.autoNum {
 	float: right;
 	display: block;
-	font-family: Arial;
+	font-family: "alkatip";
 	background: url(http://skin.1yyg.com/images/atuo_27.gif?v=130228) repeat;
 	width: 88px;
 	height: 15px;
@@ -513,7 +513,7 @@ body {
 	white-space: nowrap;
 }
 .autoOld li.uInfo span {
-	font-family: Arial;
+	font-family: "alkatip";
 }
 .autoOld li.uInfo span.orange {
 	font-weight: bold;
@@ -522,7 +522,7 @@ body {
 	width: 1150px;
 	padding: 20px;
 	padding-top: 0;
-	font-family: "宋体";
+	font-family: "alkatip";
 	display: inline-block;
 	background: #ECE1CD;
 }
@@ -532,6 +532,6 @@ body {
 .autoRule li {
 	color: #666;
 	font-size: 16px;
-	font-family: "微软雅黑";
+	font-family: "alkatip";
 	line-height: 35px;
 }

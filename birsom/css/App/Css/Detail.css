@@ -58,7 +58,7 @@
 	margin:0 auto;
 	text-align:center;
 	font-size:24px;
-	font-family:微软雅黑;
+	font-family: "alkatip";
 }
 .share_title_icon {
 	background:url(../images/Expression_icon.png?v=130607) 0 -109px no-repeat;
@@ -75,13 +75,13 @@
 	text-align:center;
 	padding:20px 0 10px;
 	font-size:24px;
-	font-family:微软雅黑;
+	font-family: "alkatip";
 	color:#666;
 }
 .share_time {
 	color:#C2C2C2;
 	text-align:center;
-	font-family:宋体;
+	font-family: "alkatip";
 	margin-bottom:15px;
 }
 .share-get i,.share-get s,.Comment_victory h3,.page-upgray,.page-updow,.Comment_Collapse b {
@@ -133,7 +133,7 @@
 	padding-top:10px;
 }
 .share-getinfo .orange {
-	font-family:Arial;
+	font-family: "alkatip";
 	margin-right:3px;
 }
 .share-getinfo p {
@@ -165,7 +165,7 @@
 	color:#E4E4E4;
 	height:10px;
 	width:5px;
-	font-family:Simsun;
+	font-family: "alkatip";
 	font-size:14px;
 	line-height:14px;
 	overflow:hidden;
@@ -265,7 +265,7 @@
 	position:relative;
 	margin-right:8px;
 	border-radius:3px;
-	font-family:宋体;
+	font-family: "alkatip";
 	font-size:12px;
 }
 .moodm .smile {
@@ -293,7 +293,7 @@
 	padding:4px 5px 2px 22px;
 	display:inline-block;
 	position:relative;
-	font-family:宋体;
+	font-family: "alkatip";
 	font-size:12px;
 }
 .moodm .smile i {
@@ -593,7 +593,7 @@
 	position:absolute;
 	bottom:0;
 	right:0;
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .C_summary .Reply-r b {
 	font-weight:normal;
@@ -613,7 +613,7 @@
 }
 .Summary-time {
 	color:#BBB;
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .C_summary .Reply-r a {
 	margin-left:10px;
@@ -701,7 +701,7 @@
 	vertical-align:top;
 }
 .victory_User {
-	font-family:Arial,Helvetica,sans-serif;
+	font-family: "alkatip";
 	font-size:12px;
 	height:18px;
 	color:#676767;
@@ -777,7 +777,7 @@
 	color:#E9E9E9;
 	height:5px;
 	width:12px;
-	font-family:Simsun;
+	font-family: "alkatip";
 	font-size:14px;
 	line-height:14px;
 	overflow:hidden;
@@ -895,13 +895,13 @@
 .pages ul.pageULEx li.curr_page {
 	padding:4px 0 3px 0;
 	font-size:14px;
-	font-family:Arial;
+	font-family: "alkatip";
 	line-height:22px;
 }
 .pages ul.pageULEx li a {
 	padding:3px 0 4px 0;
 	font-size:14px;
-	font-family:Arial;
+	font-family: "alkatip";
 	line-height:22px;
 }
 .pages ul.pageULEx li.prev_page a,.pages ul.pageULEx li.next_page a {
@@ -911,7 +911,7 @@
 	line-height:22px;
 }
 .pages ul.pageULEx li.prev_page i,.pages ul.pageULEx li.next_page i {
-	font-family:宋体;
+	font-family: "alkatip";
 	font-weight:bold;
 }
 .pages ul.pageULEx li.prev_page i {
@@ -930,7 +930,7 @@
 	float:left;
 	text-align:center;
 	color:#666;
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .pages ul.pageULEx li.curr_page {
 	display:block;

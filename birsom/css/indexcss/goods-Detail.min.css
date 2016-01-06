@@ -157,10 +157,11 @@ dl.goods-info-box .goods-info-head {
 	padding-bottom: 15px
 }
 dl.goods-info-box .goods-info-head dl dt {
-	font-size: 18px;
+	font-family: "alkatip";
+	font-size: 16px;
 	color: #333;
 	font-weight: bold;
-	line-height: 25px
+	line-height: 22px
 }
 dl.goods-info-box .goods-info-head dl .goods-info-head-userfaq {
 	margin-top: 10px;
@@ -524,20 +525,21 @@ dl.goods-info-box .goods-info-foot a:hover {
 	border: none
 }
 .box-hd {
+	padding: 10px;
     padding-right: 12px;
-    height: 40px;
-    font-size: 21px;
+    height: 80px;
+    font-size: 20px;
     line-height: 40px;
     color: #3c3c3c;
     background-color: #f2f2f2;
-    font-family: "Microsoft Uighur";
+    font-family: "alkatip";
 }
 .box-bd {
     padding: 0 10px 9px;
-    height: 510px;
+    height: 435px;
 }
 .m-detail-period-main-wrap {
-    height: 495px;
+    height: 435px;
     background-color: #fff;
     padding: 10px;
 }
@@ -1754,7 +1756,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 	cursor: move;
 }
 #pbBottom {
-	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+	font-family: "alkatip";
 	font-size: 10px;
 	text-align: center;
 	color: #EEE;
@@ -1915,7 +1917,7 @@ img.zoom-tiny-image {
     border-radius: 3px;
     cursor: pointer;
     text-decoration: none!important;
-    font-family: "Microsoft Yahei",simhei;
+    font-family: "alkatip";
     font-weight: bold;
     outline: none;
 }
@@ -1930,7 +1932,7 @@ img.zoom-tiny-image {
     line-height: 24px;
     font-size: 12px;
     font-weight: normal;
-    font-family: "Verdana";
+    font-family: "alkatip";
     color: #808080;
     border: 1px solid #d8d8d8;
     border-radius: 2px;
@@ -1942,11 +1944,12 @@ img.zoom-tiny-image {
 }
 .w-button-xl {
 	width: 135px;
-    padding: 0 36px;
+    padding: 0 35px;
     height: 45px;
     line-height: 45px;
-    font-size: 13px;
+    font-size: 15px;
     border-radius: 4px;
+    font-family: "alkatip";
 }
 .w-button-simple:hover {
 	background: #fff;

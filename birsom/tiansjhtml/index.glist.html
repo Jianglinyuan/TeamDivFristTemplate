@@ -5,11 +5,11 @@ var height=$("#ddBrandList_brand").innerHeight();
 	if(height==78){
 		$("#ddBrandList_brand").css("height","auto");
 		$(".list_classMore").addClass("MoreClick");
-		$(".list_classMore").html("收起<i></i>");
+		$(".list_classMore").html("يىغىش<i></i>");
 	}else{
 		$("#ddBrandList_brand").css("height","78px");
 		$(".list_classMore").removeClass("MoreClick");
-		$(".list_classMore").html("展开<i></i>");
+		$(".list_classMore").html("ئېچىش<i></i>");
 	};
 }
 $(function(){
@@ -39,7 +39,7 @@ a.list_classMore {
   _vertical-align: 2px;
 }
 </style>
-<div class="container breadcrumbs">{wc:$daohang_title}<span class="sep">/</span><a href="{WEB_PATH}">首页</a></div>
+<div class="container breadcrumbs">{wc:$daohang_title}<span class="sep">/</span><a href="{WEB_PATH}">باش بەت</a></div>
 <!-- .breadcrumbs END -->
 <div class="container">
 {wc:if $shoplist}
@@ -58,13 +58,13 @@ a.list_classMore {
 			{wc:php:end}
 			{wc:if !empty($two_cate_list)}
                 <dl class="xm-filter-list xm-filter-list-first category-filter-list clearfix">
-                    <dt>分类：</dt>
+                    <dt>تاۋار تۈرلىرى：</dt>
                     <dd>
                         <ul id="typeCat" class="clearfix">
                             {wc:if isset($daohang['parentid'])}
-							<li class="first"><a href="{WEB_PATH}/goods_list/{wc:$daohang['parentid']}_0_0">全部</a></li>
+							<li class="first"><a href="{WEB_PATH}/goods_list/{wc:$daohang['parentid']}_0_0">بارلىق تاۋارلار</a></li>
 							{wc:else}
-							<li class="first"><a href="{WEB_PATH}/goods_list/{wc:$cid}_0_0" >全部</a></li>
+							<li class="first"><a href="{WEB_PATH}/goods_list/{wc:$cid}_0_0" >بارلىق تاۋارلار</a></li>
 							{wc:if:end}
 							{wc:loop $two_cate_list $two_cate}
 								{wc:if $cid == $two_cate['cateid']}
@@ -79,7 +79,7 @@ a.list_classMore {
 				{wc:if:end}
 				{wc:if count($brand)>1}
                 <dl class="xm-filter-list  category-filter-list clearfix">
-                    <dt>品牌：</dt>
+                    <dt>: ماركا نامى</dt>
                     <dd>
                     	{wc:if count($brand)>17}
 						<dd id="ddBrandList_brand" style="height:78px">
@@ -88,9 +88,9 @@ a.list_classMore {
 						{wc:if:end}
                         <ul id="typeAdapt" class="clearfix">
 							{wc:if !$bid}
-							<li class="first current"><a href="{WEB_PATH}/goods_list/{wc:$cid}_0_{wc:$order}">全部</a></li>
+							<li class="first current"><a href="{WEB_PATH}/goods_list/{wc:$cid}_0_{wc:$order}">بارلىق تاۋارلار</a></li>
 							{wc:else}
-							<li><a href="{WEB_PATH}/goods_list/{wc:$cid}_0_{wc:$order}">全部</a></li>
+							<li><a href="{WEB_PATH}/goods_list/{wc:$cid}_0_{wc:$order}">بارلىق تاۋارلار</a></li>
 							{wc:if:end}
 							{wc:loop $brand $brands}
 							{wc:if $brands['id'] == $bid}
@@ -103,7 +103,7 @@ a.list_classMore {
                     </dd>
                 </dl>
                 {wc:if count($brand)>17}
-				<a class="list_classMore" href="javascript:;">展开<i></i></a>
+				<a class="list_classMore" href="javascript:;">ئېچىش<i></i></a>
 				{wc:if:end}
 				{wc:else}
 				<dl class="xm-filter-list" style="display: none;"></dl>
@@ -117,12 +117,12 @@ a.list_classMore {
                 <dl class="xm-order-list xm-filter-list-first category-filter-list clearfix">
                     <dd>
                         <ul class="clearfix">
-							<li {wc:if $order=='4'}class="first current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_4">最新</a></li>
-                            <li {wc:if $order=='1'}class="current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_1">即将揭晓</a></li>
-                            <li {wc:if $order=='2'}class="current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_2">人气</a></li>
-                            <li {wc:if $order=='3'}class="current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_3">剩余人次</a></li>
-                            <li {wc:if $order=='5'}class="current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_5">价格从高到低</a></li>
-                            <li {wc:if $order=='6'}class="current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_6">价格从低到高</a></li>
+							<li {wc:if $order=='4'}class="first current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_4">ئەڭ يېڭى</a></li>
+                            <li {wc:if $order=='1'}class="current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_1">جاكارلىنىدىغان تاۋارلار نۆۋەتتە</a></li>
+                            <li {wc:if $order=='2'}class="current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_2">ئاۋاتلىقى</a></li>
+                            <li {wc:if $order=='3'}class="current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_3">قالغان ئادەم قېتىم</a></li>
+                            <li {wc:if $order=='5'}class="current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_5">باھاسى يۇقىرىدىن تۆۋەنگە</a></li>
+                            <li {wc:if $order=='6'}class="current"{wc:if:end}><a href="{WEB_PATH}/goods_list/{wc:$cid}_{wc:$bid}_6">باھاسى تۆۋەندىن يۇقىرىغا</a></li>
 
                         </ul>
                     </dd>
@@ -139,17 +139,17 @@ a.list_classMore {
                                 <div class="item-thumb"><a href="{WEB_PATH}/goods/{wc:$shop['id']}"><img src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" alt="{wc:$shop['title']}"></a></div>
                                 <div class="item-info">
                                     <h3 class="item-title"><a href="{WEB_PATH}/goods/{wc:$shop['id']}">{wc:$shop['title']}</a></h3>
-                                    <div class="item-price">总需：{wc:$shop['zongrenshu']} 人次</div>
+                                    <div class="item-price">جەمئىي ئادەم قېتىم سانى：{wc:$shop['zongrenshu']} </div>
                                     <div class="item-star">
 										<p><span style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],270)}px;"></span></p>
                                         <ul class="Pro-bar-li">
-											<li class="P-bar01"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>剩余人次</li>
-											<li class="P-bar03"><em>{wc:$shop['canyurenshu']}</em>已参与人次</li>
+											<li class="P-bar01"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>قالغىنى</li>
+											<li class="P-bar03"><em>{wc:$shop['canyurenshu']}</em>قاتناشقىنى</li>
 										</ul>
                                     </div>
                                     <div class="item-actions">
-                                        <a class="w-button w-button-main w-button-l J_addFav" href="javascript:;">立即{wc:fun:_cfg('web_name_two')}</a>
-										<a class="w-button w-button-l J_addCart" href="javascript:;">加入购物车</a>
+                                        <a style="font-size:12px;" class="w-button w-button-main w-button-l J_addFav" href="javascript:;">دەرھال قاتنىشىش</a>
+										<a style="font-size:12px;" class="w-button w-button-l J_addCart" href="javascript:;">مال ھارۋىسىغا سېلىش</a>
 
 										<div class="Curbor_id" style="display:none;">{wc:$shop['id']}</div>
 										<div class="Curbor_yunjiage" style="display:none;">{wc:$shop['yunjiage']}</div>
@@ -157,13 +157,13 @@ a.list_classMore {
                                     </div>
 									{wc:php:start}$i_googd_bj = null;{wc:php:end}
 									{wc:if ($this_time - $shop['time']) < 86400}
-											{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">新品</span></div>';{wc:php:end}
+											{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">يىڭى</span></div>';{wc:php:end}
 									{wc:if:end}
 									{wc:if $shop['pos']!='0' && !isset($i_googd_bj)}
-										{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">推荐</span></div>';{wc:php:end}
+										{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">تەۋسىيە</span></div>';{wc:php:end}
 									{wc:if:end}
 									{wc:if $shop['renqi']=='1' && !isset($i_googd_bj)}
-											{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">人气</span></div>';{wc:php:end}
+											{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">ئاۋات</span></div>';{wc:php:end}
 									{wc:if:end}
 									{wc:$i_googd_bj}
                                 </div>

@@ -84,12 +84,12 @@ i,em {
 	width:980px;
 	font-size:12px;
 	color:#bbb;
-	font-family:宋体;
+	font-family: "alkatip";
 	height:25px;
 	margin:0 auto;
 }
 .Current_nav span {
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .Current_nav a {
 	color:#bbb;
@@ -306,7 +306,7 @@ input[type=button]::-moz-focus-inner {
 	top:32px;
 	left:0;
 	display:inline-block;
-	font-family:微软雅黑;
+	font-family: "alkatip";
 	display:none;
 	cursor:pointer;
 	z-index:10;
@@ -320,7 +320,7 @@ input[type=button]::-moz-focus-inner {
 	height:17px;
 	line-height:16px;
 	font-size:11px;
-	font-family:Arial;
+	font-family: "alkatip";
 	text-align:center;
 	color:#fff;
 	position:absolute;
@@ -416,7 +416,7 @@ input[type=button]::-moz-focus-inner {
 	height:58px;
 }
 .Roll_mycart li span {
-	font-family:Arial;
+	font-family: "alkatip";
 	font-weight:bold;
 }
 .Roll_mycart li.Roll_CartMore a {
@@ -425,7 +425,7 @@ input[type=button]::-moz-focus-inner {
 	background:#F0F0F0;
 	display:inline-block;
 	line-height:60px;
-	font-family:宋体;
+	font-family: "alkatip";
 	color:#999;
 }
 .Roll_mycart li.Roll_CartMore a:hover {
@@ -461,7 +461,7 @@ input[type=button]::-moz-focus-inner {
 	display:block;
 	border:none;
 	cursor:pointer;
-	font-family:微软雅黑;
+	font-family: "alkatip";
 	font-size:14px;
 	background:#db3652;
 	border-radius:3px;
@@ -781,7 +781,7 @@ input[type=button]::-moz-focus-inner {
 	color:#db3652;
 	line-height:20px;
 	margin-top:-3px;
-	font-family:Arial;
+	font-family: "alkatip";
 	text-indent:15px;
 	font-size:18px;
 	font-weight:normal;
@@ -867,7 +867,7 @@ input[type=button]::-moz-focus-inner {
 	background:#F5F5F5;
 	border:1px solid #e5e5e5;
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	padding:1px 10px 2px 10px;
 	color:#666;
 }
@@ -878,7 +878,7 @@ input[type=button]::-moz-focus-inner {
 }
 .head_mid .head_number span {
 	font-size:20px;
-	font-family:arial;
+	font-family: "alkatip";
 	vertical-align:-2px;
 	color:#2AF;
 	padding:0 5px;
@@ -897,7 +897,7 @@ input[type=button]::-moz-focus-inner {
 	color:#CCC;
 	border-right:none;
 	float:left;
-	font-family:Arial,"宋体";
+	font-family: "alkatip";
 }
 .head_search .text {
 	text-align:left;
@@ -1004,7 +1004,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	line-height:32px;
 	_line-height:34px;
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	color:#fff;
 	border:1px solid #db3652;
 }
@@ -1054,7 +1054,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	float:left;
 	text-align:left;
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	overflow:hidden;
 	color:#fff;
 	position:relative;
@@ -1078,7 +1078,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	_line-height:27px;
 	text-align:center;
 	background:#0095F2;
-	font-family:微软雅黑;
+	font-family: "alkatip";
 	font-size:14px;
 	float:right;
 	color:#fff;
@@ -1087,7 +1087,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	display:inline-block;
 }
 #sCartTotal {
-	font-family:Arial,Helvetica,sans-serif;
+	font-family: "alkatip";
 }
 .head_nav .nav_list li.sort-all {
 	position:relative;
@@ -1117,7 +1117,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	float:left;
 	height:33px;
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	color:#888;
 }
 .nav_class li a {
@@ -1179,7 +1179,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 }
 .mycart_list dl dd.title em {
 	color:#999;
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .mycart_list dl dd.title a {
 	width:145px;
@@ -1236,7 +1236,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	display:block;
 	border:none;
 	cursor:pointer;
-	font-family:微软雅黑;
+	font-family: "alkatip";
 	font-size:14px;
 	background:#db3652;
 	border-radius:3px;
@@ -1384,7 +1384,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 .footservice .support dd.ft-fwrx-service .ft-qqgroup {
 	display:block;
 	font-size:12px;
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .footservice .support dd b {
 	width:3px;
@@ -1529,7 +1529,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	margin:0 auto 15px auto;
 	padding:5px 0 0 0;
 	clear:both;
-	font-family:Arial,"宋体";
+	font-family: "alkatip";
 }
 .footer_icon {
 	margin:0 auto 0 auto;
@@ -1667,7 +1667,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	padding:4px 0 5px 0\9;
 	_padding:4px 0 5px 0;
 	font-size:14px;
-	font-family:Arial;
+	font-family: "alkatip";
 	line-height:22px;
 }
 .page_nav ul.pageULEx li a {
@@ -1675,7 +1675,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	padding:3px 0 4px 0\9;
 	_padding:3px 0 4px 0;
 	font-size:14px;
-	font-family:Arial;
+	font-family: "alkatip";
 	line-height:22px;
 }
 .page_nav ul.pageULEx li.prev_page a,.page_nav ul.pageULEx li.next_page a {
@@ -1694,7 +1694,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	float:left;
 	text-align:center;
 	color:#666;
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .page_nav ul.pageULEx li.curr_page {
 	display:block;

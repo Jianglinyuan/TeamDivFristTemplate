@@ -41,7 +41,7 @@
 	text-align:center;
 	color:#fff;
 	line-height:18px;
-	font-family:Arial;
+	font-family: "alkatip";
 	display:inline-block;
 }
 .login_process li b {
@@ -89,7 +89,7 @@
 	padding-left:3px;
 	_padding-left:5px;
 	border:1px solid #BBB;
-	font-family:Arial;
+	font-family: "alkatip";
 	font-size:14px;
 	margin:1px;
 	float:left;
@@ -101,7 +101,7 @@
 	padding-left:3px;
 	_padding-left:5px;
 	border:2px solid #db3652;
-	font-family:Arial;
+	font-family: "alkatip";
 	font-size:14px;
 	background:#FFFAF6;
 	margin:0;
@@ -448,7 +448,7 @@ a.login_Sendoutbut {
 	padding-left:3px;
 	_padding-left:5px;
 	border:1px solid #BBB;
-	font-family:Arial;
+	font-family: "alkatip";
 	font-size:14px;
 	vertical-align:middle;
 }
@@ -507,7 +507,7 @@ a.login_Sendoutbut {
 	padding-left:3px;
 	_padding-left:5px;
 	border:1px solid #BBB;
-	font-family:Arial;
+	font-family: "alkatip";
 	font-size:14px;
 }
 .login_CMobile_Complete dl dd .login_input_textCur {
@@ -519,7 +519,7 @@ a.login_Sendoutbut {
 	padding-left:3px;
 	_padding-left:5px;
 	border:2px solid #FF6500;
-	font-family:Arial;
+	font-family: "alkatip";
 	font-size:14px;
 	background:#FFFAF6;
 }
@@ -534,7 +534,7 @@ a.login_Sendoutbut {
 	padding-left:3px;
 	_padding-left:5px;
 	border:1px solid #BBB;
-	font-family:Arial;
+	font-family: "alkatip";
 	font-size:14px;
 	vertical-align:middle;
 	float:left;

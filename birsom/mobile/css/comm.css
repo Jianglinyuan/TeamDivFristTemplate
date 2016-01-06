@@ -15,7 +15,7 @@ body{
 }
 button,input,select,textarea {
 	font-size:12px;
-	font-family: arial;
+	font-family: "alkatip";
 }
 :focus {
 	outline:0;
@@ -72,7 +72,7 @@ input,select,textarea {
 ins {
 	text-decoration:none;
 	font-size:12px;
-	font-family:"alkatip";
+	font-family: "alkatip";
 }
 em {
 	font-style:normal;
@@ -402,7 +402,7 @@ a.grayBtn {
 	top:3px;
 	right:3px;
 	color:#db3652;
-	font-family:Arial;
+	font-family: "alkatip";
 	font-size:8px;
 	color:#fff;
 	font-weight:bold;
@@ -633,7 +633,7 @@ a.z-Site {
 	float:left;
 	color:#AEADAD;
 	font-size:12px;
-	font-family:alkatip;
+	font-family: "alkatip";
 	border:none;
 	margin:0;
 	padding:0;
@@ -643,7 +643,7 @@ a.z-Site {
 .Progress-bar .Pro-bar-li li em {
 	display:block;
 	font-size:10px;
-	font-family:arial;
+	font-family: "alkatip";
 	height:14px;
 	padding:3px 0 0 5px;
 	font-style:normal;
@@ -901,7 +901,7 @@ div.pageDialog {
 .footerdi li.f_jiexiao i{width:28px;height:23px;background-position:0 -198px;position:relative;top:2px;margin-bottom:3px;position:relative;}
 .footerdi li.f_car i{width:28px;height:23px;background-position:0 -128px;position:relative;top:2px;margin-bottom:3px;position:relative;}
 .footerdi li.f_car a.hover i{width:28px;height:23px;background-position:0 -128px;position:relative;top:2px;margin-bottom:3px;}
-.footerdi li.f_car b{background:#f60;padding:1px;width:16px;height:16px;line-height:16px;border-radius:16px;color:#fff;position:absolute;top:-5px;font-family:Arial;text-align:center;font-size:10px;overflow:hidden;}
+.footerdi li.f_car b{background:#f60;padding:1px;width:16px;height:16px;line-height:16px;border-radius:16px;color:#fff;position:absolute;top:-5px;font-family: "alkatip";}
 .footerdi li.f_personal i{width:23px;height:22px;background-position:0 -175px;position:relative;top:3px;margin-bottom:4px;}
 .footerdi li.f_personal a.hover i{width:20px;height:22px;background-position:0 -175px;position:relative;top:3px;margin-bottom:4px;}
 
@@ -910,7 +910,7 @@ div.pageDialog {
 /*四个小导航的css*/
 .navautos{width:100%;height:80px;margin-top:0px;background-color:#fff;}
 .wrapnavautos{width:25%;height:80px;float:left;}
-.textnavword{width:100%;background-color:#fff;margin-top:4px;font-family:微软雅黑;font-size: 12px}
+.textnavword{width:100%;background-color:#fff;margin-top:4px;font-family: "alkatip";font-size: 12px}
 .textnav{height:19px;width:100%;background-color:#fff;}
 .textnav2{height:14px;width:100%;background-color:#fff;}
 #navautos1{width:60px;height:60px;margin:0 auto;}

@@ -17,7 +17,7 @@
 }
 .last ul li b {
 	font-size:30px;
-	font-family:Arial,Helvetica,sans-serif;
+	font-family: "alkatip";
 	position:relative;
 	margin-left:5px;
 }
@@ -83,7 +83,7 @@
 	text-align:right;
 }
 .recordList ul li.leftTitle,.recordList ul li.fontAri {
-	font-family:Arial,Helvetica,sans-serif;
+	font-family: "alkatip";
 }
 .recordList ul li a {
 	color:#43b6ff;
@@ -116,7 +116,7 @@
 	font-size:14px;
 }
 .count dd em {
-	font-family:Arial,Helvetica,sans-serif;
+	font-family: "alkatip";
 	margin-right:17px;
 }
 .count dd.btn {
@@ -169,7 +169,7 @@
 	line-height:38px;
 	color:#666;
 	font-size:12px;
-	font-family:"宋体";
+	font-family: "alkatip";
 	font-weight:bold;
 	padding-left:10px;
 	margin-right:17px;
@@ -191,12 +191,12 @@
 }
 .select li label b,.select li input.enter {
 	font-size:14px;
-	font-family:Arial,Helvetica,sans-serif;
+	font-family: "alkatip";
 	font-weight:bold;
 	color:#db3652;
 }
 .select li label strong {
-	font-family:"宋体";
+	font-family: "alkatip";
 	color:#db3652;
 }
 .select li.rdoCheck {
@@ -352,7 +352,7 @@ p.leix {
 }
 .charge_money_list p.much span#Money {
 	font-size:18px;
-	font-family:Arial,Helvetica,sans-serif;
+	font-family: "alkatip";
 	position:relative;
 	top:2px;
 }

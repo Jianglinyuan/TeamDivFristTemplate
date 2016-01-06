@@ -272,11 +272,11 @@ ul,li,p,dl,dd,h1,h2,h3,h4,h5,h6{padding:0;margin:0}ul,li,ol{list-style:none}em{f
 }
 .payment_List_Rc .F20 {
 	font-size:20px;
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .payment_List_Lc .F18 {
 	font-size:18px;
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .point_out,.point_in {
 	height:55px;
@@ -353,7 +353,7 @@ a.form_ReturnBut {
 }
 .pay_but_txt b {
 	color:#999;
-	font-family:Arial;
+	font-family: "alkatip";
 	padding:0 2px;
 }
 .payment_but .shop_pay_but {
@@ -567,7 +567,7 @@ a.form_ReturnBut {
 	font-size:14px;
 	height:34px;
 	padding-top:10px;
-	font-family:Arial,"宋体";
+	font-family: "alkatip";
 }
 .wait_list_tips dd p {
 	font-size:14px;

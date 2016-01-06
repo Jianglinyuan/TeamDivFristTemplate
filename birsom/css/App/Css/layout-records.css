@@ -190,7 +190,7 @@
 	background:#fdf2d9;
 	border:#d8d8d8 1px solid;
 	color:#333;
-	font-family:Arial,Helvetica,sans-serif;
+	font-family: "alkatip";
 	*margin-top:-1px;
 }
 .add dd input.btn29 {
@@ -257,7 +257,7 @@
 	margin-top:6px;
 }
 .goods-tit .blue {
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .goodsList {
 	color:#666;

@@ -35,7 +35,7 @@ input, textarea, select {
 	resize: none;
 	margin: 0;
 	padding: 0;
-	font-family:"alkatip";
+	font-family: "alkatip";
 }
 input:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0px 1000px white inset;
@@ -43,7 +43,7 @@ input:-webkit-autofill {
 table {
 	border-collapse: collapse;
 	border: none;
-	font-family:"alkatip";
+	font-family: "alkatip";
 }
 ul, li, ol, dl, dd, dt {
 	list-style: none;
@@ -3278,11 +3278,9 @@ html {
 	color: #999
 }
 .form_input_wrap {
-	direction: rtl;	
 	position: relative;
 	display: block;
 	height: 37px;
-	font-family: "alkatip";
 }
 .form_input {
 	width: 240px;
@@ -3292,7 +3290,8 @@ html {
 	line-height: 15px;
 	font-size: 14px;
 	color: #666;
-	float: left;
+	text-align: right;
+	font-family: "alkatip";
 	background: #fff;
 }
 .w120 {
@@ -3485,7 +3484,7 @@ html {
 	width: 8px;
 }
 .dec s {
-	font-family:"alkatip";
+	font-family: "alkatip";
 	font-size: 16px;
 	height: 19px;
 	left: 0;

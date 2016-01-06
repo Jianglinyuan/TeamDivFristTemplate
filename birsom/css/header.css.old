@@ -187,7 +187,7 @@ a.blue:hover {
 	top:32px;
 	left:0;
 	display:inline-block;
-	font-family:微软雅黑;
+	font-family: "alkatip";
 	display:none;
 	cursor:pointer;
 	z-index:10;
@@ -201,7 +201,7 @@ a.blue:hover {
 	height:17px;
 	line-height:16px;
 	font-size:11px;
-	font-family:Arial;
+	font-family: "alkatip";
 	text-align:center;
 	color:#fff;
 	position:absolute;
@@ -238,7 +238,7 @@ a.blue:hover {
 .quick_goods_loding {
 	font-size:18px;
 	color:#666;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	height:111px;
 	min-height:111px;
 	text-align:center;
@@ -311,7 +311,7 @@ a.blue:hover {
 	height:58px;
 }
 .Roll_mycart li span {
-	font-family:Arial;
+	font-family: "alkatip";
 	font-weight:bold;
 }
 .Roll_mycart li.Roll_CartMore a {
@@ -320,7 +320,7 @@ a.blue:hover {
 	background:#F0F0F0;
 	display:inline-block;
 	line-height:60px;
-	font-family:宋体;
+	font-family: "alkatip";
 	color:#999;
 }
 .Roll_mycart li.Roll_CartMore a:hover {
@@ -357,7 +357,7 @@ a.blue:hover {
 	display:block;
 	border:none;
 	cursor:pointer;
-	font-family:微软雅黑;
+	font-family: "alkatip";
 	font-size:14px;
 	background:#f60;
 	border-radius:3px;
@@ -694,7 +694,7 @@ a.blue:hover {
 	color:#f60;
 	line-height:20px;
 	margin-top:-3px;
-	font-family:Arial;
+	font-family: "alkatip";
 	text-indent:15px;
 	font-size:18px;
 	font-weight:normal;
@@ -782,7 +782,7 @@ a.blue:hover {
 	background:#F5F5F5;
 	border:1px solid #e5e5e5;
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	padding:1px 10px 2px 10px;
 	color:#666;
 }
@@ -793,7 +793,7 @@ a.blue:hover {
 }
 .head_mid .head_number span {
 	font-size:20px;
-	font-family:arial;
+	font-family: "alkatip";
 	vertical-align:-2px;
 	color:#2AF;
 	padding:0 5px;
@@ -812,7 +812,7 @@ a.blue:hover {
 	color:#CCC;
 	border-right:none;
 	float:left;
-	font-family:Arial,"宋体";
+	font-family: "alkatip";
 }
 .head_search .text {
 	text-align:left;
@@ -913,7 +913,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	line-height:32px;
 	_line-height:34px;
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	color:#fff;
 	border:1px solid #F60;
 }
@@ -956,7 +956,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	float:left;
 	text-align:left;
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	overflow:hidden;
 	color:#fff;
 	position:relative;
@@ -981,7 +981,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	_line-height:27px;
 	text-align:center;
 	background:#0095F2;
-	font-family:微软雅黑;
+	font-family: "alkatip";
 	font-size:14px;
 	float:right;
 	color:#fff;
@@ -990,7 +990,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	display:inline-block;
 }
 #sCartTotal {
-	font-family:Arial,Helvetica,sans-serif;
+	font-family: "alkatip";
 }
 .nav_class {
 	width:978px;
@@ -1017,7 +1017,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	float:left;
 	height:33px;
 	font-size:14px;
-	font-family:微软雅黑,宋体;
+	font-family: "alkatip";
 	color:#888;
 }
 .nav_class li a {
@@ -1079,7 +1079,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 }
 .mycart_list dl dd.title em {
 	color:#999;
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .mycart_list dl dd.title a {
 	width:145px;
@@ -1136,7 +1136,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	display:block;
 	border:none;
 	cursor:pointer;
-	font-family:微软雅黑;
+	font-family: "alkatip";
 	font-size:14px;
 	background:#f60;
 	border-radius:3px;
@@ -1284,7 +1284,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 .footservice .support dd.ft-fwrx-service .ft-qqgroup {
 	display:block;
 	font-size:12px;
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .footservice .support dd b {
 	width:3px;
@@ -1428,7 +1428,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 	margin:0 auto 15px auto;
 	padding:5px 0 0 0;
 	clear:both;
-	font-family:Arial,"宋体";
+	font-family: "alkatip";
 }
 .footer_icon {
 	margin:0 auto 0 auto;
@@ -1679,7 +1679,7 @@ body.sort .head_nav .nav_center ul.nav_list li a.nav_ico {
 }
 .hAddInfo input.hWebsite {
 	width:450px;
-	font-family:Arial!important;
+	font-family: "alkatip";
 	float:left;
 }
 .hAddInfo input.hbtn {

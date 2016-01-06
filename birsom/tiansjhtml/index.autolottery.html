@@ -14,8 +14,8 @@
 </div>
 <div class="auto-nav">
 	<ul>
-		<li id="liTimerHead" class="fl autoCur"><em>({wc:$jinri_time})</em> 今天揭晓</li>
-		<li id="liWillHead" class="fr"><em>({wc:$minri_time})</em> 明天限时</li>
+		<li id="liTimerHead" class="fl autoCur"><em>({wc:$jinri_time})</em>بۈگۈنكى مۇددەتلىك جاكار</li>
+		<li id="liWillHead" class="fr"><em>({wc:$minri_time})</em>ئەتىكى مۇددەتلىك جاكار</li>
 	</ul>
 </div>
 
@@ -218,8 +218,8 @@ $(function(){
 	</div>
 	<div class="autoOld">
 		<p class="dsjx">
-			往期回顾</p>
-		<span class="autoOldMore"><a href="#" target="_blank"><em>&lt;&lt;</em> 更多</a></span>
+			 ئۆتكەن سانلىق پائالىيەتلەر</p>
+		<span class="autoOldMore"><a href="#" target="_blank"><em>&lt;&lt;</em> تېخىمۇ كۆپ</a></span>
 		<div class="autoOldC">
 			
             		{wc:loop $endshoplist $eshop}
@@ -231,16 +231,15 @@ $(function(){
 								{wc:$eshop['title']}</a></dt>
 							<dd>
 								<p class="Det_money">
-								价值：<span class="rmbgray">{wc:$eshop['money']}</span></p>
+								   جەمئىي ئادەم قېتىم سانى：{wc:$eshop['zongrenshu']}</p>
 							</dd>
 							<i></i></li>
 						<li class="pro-barw">
 						<div class="Progress-bar">
 							<p><span style="width:100%;"></span></p>
                             <ul class="Pro-bar-li">
-                             <li class="P-bar01"><em>{wc:$eshop['canyurenshu']}</em>已参与人次</li>
-                                <li class="P-bar02"><em id="Em1">{wc:$eshop['zongrenshu']}</em>总需人次</li>
-                                <li class="P-bar03"><em id="Em2">{wc:$eshop['zongrenshu']-$eshop['canyurenshu']}</em>剩余人次</li>
+                             <li class="P-bar01"><em>{wc:$eshop['canyurenshu']}</em>قاتناشقىنى</li>
+                             <li class="P-bar03"><em id="Em2">{wc:$eshop['zongrenshu']-$eshop['canyurenshu']}</em>قالغىنى</li>
                             </ul>
 						</div>
 						</li>
@@ -259,13 +258,12 @@ $(function(){
 	<div class="autoRule">
 		<a name="regular" id="regular"></a>
 		<p class="dsjx">
-			限时揭晓规则</p>
+			مۇددەتلىك جاكارنىڭ قائىدىسى</p>
 		<div class="autoOldC">
 			<ul>
-				<li>1、所有限时揭晓商品，不管已参与人次是否达到总需参与人次，都按截止时间准时揭晓。</li>
-				<li>2、限制揭晓的商品无人购买，则揭晓失败。</li>
-				<li>3、限时揭晓的幸运码的计算规则与网站商品揭晓的幸运码的计算规则一致。</li>
-				<li>4、限时揭晓商品不参与送福分活动且晒单不可再获得福分奖励。</li>
+				<li>بىرىنچى ،بارلىق مۇددەتلىك جاكار تۈرىگە تەۋە تاۋارلار،قاتناشقان ئادەم قېتىم سانى ئۇمۇمىي ئېھتىياجلىق ئادەم قېتىم سانىغا توشۇش توشماسلىقتىن قەتئىينەزەر،بەلگىلەنگەن ۋاقىتتا مۇكاپاتقا ئېرىشىش نەتىجىسى جاكارلىنىدۇ</li>
+				<li>ئىككىنچى ،مۇددەتلىك جاكار تۈرىگە تەۋە تاۋارلارنى سېتىۋالىدىغان ئادەم چىقمىسا مەزكۇر قېتىملىق جاكار ئىناۋەتسىز</li>
+				<li>ئۈچىنچى ،مۇددەتلىك جاكارلارنىڭ تەلەيلىك نومۇر ھېسابلاش قائىدىسى تور بېكەتتىكى باشقا    تاۋارلارنىڭ تەلەيلىك نومۇرىنى ھېسابلاش قائىدىسى بىلەن بىردەك</li>
 				
 			</ul>
 		</div>

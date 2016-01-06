@@ -15,7 +15,7 @@ label,
 body{
 font:12px "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
-button, input, select, textarea {font-family:"Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}  
+button, input, select, textarea {font-family: "alkatip";}  
 input:-moz-placeholder {color: #ccc; }
 ::-webkit-input-placeholder {color:#ccc;}
 .clearfix:after{display: block; content: "\20"; height: 0; clear: both; overflow: hidden; visibility: hidden;}/*ie8ртио*/

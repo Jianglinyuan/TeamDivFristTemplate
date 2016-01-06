@@ -5,7 +5,7 @@
 }
 body,button,input,select,textarea {
 	font-size:12px;
-	font-family:arial,微软雅黑;
+	font-family: "alkatip";
 }
 :focus {
 	outline:0;
@@ -62,13 +62,13 @@ input,select,textarea {
 ins {
 	text-decoration:none;
 	font-size:12px;
-	font-family:arial;
+	font-family: "alkatip";
 }
 em {
 	font-style:normal;
 }
 .arial {
-	font-family:Arial;
+	font-family: "alkatip";
 }
 .F14 {
 	font-size:14px;
@@ -397,7 +397,7 @@ a.grayBtn {
 	top:3px;
 	right:3px;
 	color:#f60;
-	font-family:Arial;
+	font-family: "alkatip";
 	font-size:8px;
 	color:#fff;
 	font-weight:bold;
@@ -627,7 +627,7 @@ a.z-Site {
 	float:left;
 	color:#666;
 	font-size:12px;
-	font-family:宋体;
+	font-family: "alkatip";
 	border:none;
 	margin:0;
 	padding:0;
@@ -637,7 +637,7 @@ a.z-Site {
 .Progress-bar .Pro-bar-li li em {
 	display:block;
 	font-size:12px;
-	font-family:arial;
+	font-family: "alkatip";
 	height:14px;
 	padding:3px 0 0 0;
 	font-style:normal;

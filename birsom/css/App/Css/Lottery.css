@@ -16,13 +16,13 @@ body {
 	font-size: 18px;
 	line-height: 22px;
 	color: #db3652;
-	font-family: 微软雅黑, 宋体;
+	font-family: "alkatip";
 	font-weight: bold;
 	padding: 8px 10px 0 10px;
 	_padding: 9px 10px 0 10px;
 }
 .publish_Curtit span {
-	font-family: 微软雅黑, 宋体;
+	font-family: "alkatip";
 	padding: 11px 10px 0 10px;
 	_padding: 12px 10px 0 10px;
 	display: block;
@@ -96,10 +96,10 @@ body {
 	/*margin-left: 55px;*/
 	_margin-left: 52px;
 	white-space: nowrap;
-	font-family: 宋体;
+	font-family: "alkatip";
 }
 .publishC-Member p em {
-	font-family: Arial;
+	font-family: "alkatip";
 	padding-right: 3px;
 }
 .publishC-tit {
@@ -108,7 +108,7 @@ body {
 }
 .publishC-tit h3 {
 	font-size: 12px;
-	font-family: 宋体;
+	font-family: "alkatip";
 	margin-bottom: 2px;
 	height: 36px;
 	overflow: hidden;
@@ -118,11 +118,11 @@ body {
 }
 .publishC-tit .money {
 	color: #999;
-	font-family: 宋体;
+	font-family: "alkatip";
 }
 .publishC-tit .money span {
 	padding-left: 10px;
-	font-family: Arial;
+	font-family: "alkatip";
 }
 .publishC-tit .Announced-time {
 	white-space: nowrap;
@@ -181,7 +181,7 @@ body {
 	top: 7px;
 	font-size: 12px;
 	line-height: 12px;
-	font-family: 宋体;
+	font-family: "alkatip";
 	width: 5px;
 	height: 12px;
 	overflow: hidden;
@@ -230,7 +230,7 @@ body {
 	_padding-top: 10px;
 	text-align: center;
 	color: #fff;
-	font-family: 微软雅黑, 宋体;
+	font-family: "alkatip";
 	font-size: 14px;
 	font-weight: normal;
 	float: left;
@@ -265,12 +265,12 @@ body {
 	background: #fff;
 	border-radius: 5px;
 	color: #FF4B04;
-	font-family: Arial;
+	font-family: "alkatip";
 	font-weight: normal;
 	font-size: 20px;
 }
 .pour-are {
-	font-family: 微软雅黑, 宋体;
+	font-family: "alkatip";
 	font-size: 20px;
 	line-height: 48px;
 	width: 174px;
@@ -394,7 +394,7 @@ body {
 .RcenterPH li b {
 	width: 20px;
 	height: 18px;
-	font-family: Arial;
+	font-family: "alkatip";
 	font-size: 12px;
 	line-height: 16px;
 	left: 4px;
@@ -489,12 +489,12 @@ body {
 }
 .Rcenter .list-block .money {
 	padding: 0 0 9px 0;
-	font-family: arial;
+	font-family: "alkatip";
 	text-align: left;
 	color: #999;
 }
 .Rcenter .list-block .money span {
-	font-family: arial;
+	font-family: "alkatip";
 	color: #666;
 }
 .Rcenter .list-block .shop_buttom {
@@ -512,7 +512,7 @@ body {
 	background: #db3652;
 	color: #fff;
 	border-radius: 3px;
-	font-family: 微软雅黑, 宋体;
+	font-family: "alkatip";
 	font-size: 14px;
 	line-height: 14px;
 	display: inline-block;
@@ -547,7 +547,7 @@ body {
 	height: 40px;
 	color: #AEADAD;
 	font-size: 12px;
-	font-family: 宋体;
+	font-family: "alkatip";
 	border: none;
 	margin: 0;
 	padding: 0;
@@ -557,7 +557,7 @@ body {
 .Progress-bar .Pro-bar-li li em {
 	display: block;
 	font-size: 12px;
-	font-family: arial;
+	font-family: "alkatip";
 	height: 14px;
 	padding: 3px 0 5px 0;
 	overflow: hidden;
@@ -602,13 +602,13 @@ body {
 .pages ul.pageULEx li.curr_page {
 	padding: 4px 0 3px 0;
 	font-size: 14px;
-	font-family: Arial;
+	font-family: "alkatip";
 	line-height: 22px;
 }
 .pages ul.pageULEx li a {
 	padding: 3px 0 4px 0;
 	font-size: 14px;
-	font-family: Arial;
+	font-family: "alkatip";
 	line-height: 22px;
 }
 .pages ul.pageULEx li.prev_page a, .pages ul.pageULEx li.next_page a {
@@ -618,7 +618,7 @@ body {
 	line-height: 22px;
 }
 .pages ul.pageULEx li.prev_page i, .pages ul.pageULEx li.next_page i {
-	font-family: 宋体;
+	font-family: "alkatip";
 	font-weight: bold;
 }
 .pages ul.pageULEx li.prev_page i {
@@ -637,7 +637,7 @@ body {
 	float: left;
 	text-align: center;
 	color: #666;
-	font-family: Arial;
+	font-family: "alkatip";
 }
 .pages ul.pageULEx li.curr_page {
 	display: block;

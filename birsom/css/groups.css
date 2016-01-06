@@ -736,7 +736,7 @@ body {
 	line-height:24px;
 	font-size:12px;
 	color:#666;
-	font-family:Arial,"宋体";
+	font-family: "alkatip";
 }
 .pageDialogMain .Edit-Pop p {
 	height:30px;
@@ -1106,7 +1106,7 @@ body {
 }
 .R-tit .red {
 	font-size:14px;
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .zhiding {
 	background-position:-48px -30px;
@@ -1185,7 +1185,7 @@ body {
 }
 .detail-Htit .return {
 	float:right;
-	font-family:宋体;
+	font-family: "alkatip";
 }
 .detail-content {
 	padding:15px 17px 15px 17px;
@@ -1488,7 +1488,7 @@ body {
 	color:#EBEBEB;
 	height:19px;
 	width:17px;
-	font-family:Simsun;
+	font-family: "alkatip";
 	font-size:16px;
 	line-height:21px;
 	overflow:hidden;

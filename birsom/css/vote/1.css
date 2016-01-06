@@ -3,7 +3,7 @@
 .vote_bar div span{ display:block; position:absolute; left:0; top:0; width:180px; text-align:center; height:16px; font-size:10px; line-height:12px; vertical-align:middle}
 
 /*∑÷“≥*/
-#pages { padding:14px 0 10px;font-family:ÀŒÃÂ; text-align:right}
+#pages { padding:14px 0 10px;font-family: "alkatip"; text-align:right}
 #pages a { display:inline-block; height:22px; line-height:22px; background:#fff; border:1px solid #e3e3e3; text-align:center; color:#333; padding:0 10px}
 #pages a.a1 { background:url(../images/admin_img/pages.png) no-repeat 0 5px; width:56px; padding:0 }
 #pages a:hover { background:#f1f1f1; color:#000; text-decoration:none; }

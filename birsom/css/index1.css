@@ -17,7 +17,7 @@
 
 .a_container,.a_container2,.a_service,.a_trust,.a_enter {
 	font-size: 14px;
-	font-family: '寰蒋闆呴粦';
+	font-family: "alkatip";
 	background: #fff;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .ad1 span {
-	font-family: impact;
+	font-family: "alkatip";
 	font-size: 42px;
 	left: -56px;
 	top: 1px;
@@ -195,7 +195,7 @@
 }
 
 .ad2 span {
-	font-family: impact;
+	font-family: "alkatip";
 	font-size: 42px;
 	right: 230px;
 	top: 1px;
@@ -255,7 +255,7 @@
 }
 
 .ad3 span {
-	font-family: impact;
+	font-family: "alkatip";
 	font-size: 42px;
 	left: -56px;
 	top: 1px;
@@ -286,7 +286,7 @@
 }
 
 .ad4 span {
-	font-family: impact;
+	font-family: "alkatip";
 	font-size: 42px;
 	right: 196px;
 	top: 1px;
@@ -317,7 +317,7 @@
 }
 
 .ad5 span {
-	font-family: impact;
+	font-family: "alkatip";
 	font-size: 42px;
 	left: -56px;
 	left: -56px;
@@ -496,7 +496,7 @@ dl.s_dl {
 
 dt.dt {
 	font-size: 30px;
-	font-family: impact;
+	font-family: "alkatip";
 	color: #fff;
 	float: left;
 }
