@@ -178,7 +178,6 @@ function pay_insert_shop($shop='',$type=''){
 							`q_counttime` ='$counttime',
 							`q_end_time` = '$time',
 							`q_showtime` = '$q_showtime'
-							-- 'apinumber' = '$apinumber'
 							 where `id` = '$shop[id]'";
 
 		$q = $db->Query($sqlss);
