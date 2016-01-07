@@ -17,8 +17,6 @@
 
 <body>
     <div class="h5-yygcms-v1" id="loadingPicBlock">
-
-
         <!-- 栏目页面顶部 -->
         <header class="g-header">
             <style type="text/css">
@@ -165,8 +163,6 @@
         <hr/>
         <script src="{G_TEMPLATES_MOBILE_JS}/ajax.js"></script>
         <!-- 内页顶部 -->
-
-
         <style type="text/css">
         .u-progress .pgbar {
             width: 0px;
@@ -205,62 +201,63 @@
         <input id="urladdress" value="" type="hidden" />
         <input id="pagenum" value="" type="hidden" /> {wc:templates "mobile/index","footer"}
         <script type="text/javascript">
-        $("#btnLoadMore").click(function() {
-            var url = $("#urladdress").val(),
-                page = $("#pagenum").val();
-            glist_json(url + '/' + page);
-        });
-        //返回顶部
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > 50) {
-                $("#btnTop").show();
-            } else {
-                $("#btnTop").hide();
-            }
-        });
-        $("#btnTop").click(function() {
-            $("body").animate({
-                scrollTop: 0
-            }, 10);
-        });
-        //添加到购物车
-        $(document).on("click", '.add', function() {
-            var codeid = $(this).attr('codeid');
-            $.getJSON('{WEB_PATH}/mobile/ajax/addShopCart/' + codeid + '/1', function(data) {
-                if (data.code == 1) {
-                    addsuccess('添加失败');
-                } else if (data.code == 0) {
-                    addsuccess('添加成功');
+        $(document).ready(function() {
+            $("#btnLoadMore").click(function() {
+                var url = $("#urladdress").val(),
+                    page = $("#pagenum").val();
+                glist_json(url + '/' + page);
+            });
+            //返回顶部
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 50) {
+                    $("#btnTop").show();
+                } else {
+                    $("#btnTop").hide();
                 }
-                return false;
             });
-        });
+            $("#btnTop").click(function() {
+                $("body").animate({
+                    scrollTop: 0
+                }, 10);
+            });
+            //添加到购物车
+            $(document).on("click", '.add', function() {
+                var codeid = $(this).attr('codeid');
+                $.getJSON('{WEB_PATH}/mobile/ajax/addShopCart/' + codeid + '/1', function(data) {
+                    if (data.code == 1) {
+                        addsuccess('添加失败');
+                    } else if (data.code == 0) {
+                        addsuccess('添加成功');
+                    }
+                    return false;
+                });
+            });
 
-        function addsuccess(dat) {
-            $("#pageDialogBG .Prompt").text("");
-            var w = ($(window).width() - 255) / 2,
-                h = ($(window).height() - 45) / 2;
-            $("#pageDialogBG").css({
-                top: h,
-                left: w,
-                opacity: 0.8
+            function addsuccess(dat) {
+                $("#pageDialogBG .Prompt").text("");
+                var w = ($(window).width() - 255) / 2,
+                    h = ($(window).height() - 45) / 2;
+                $("#pageDialogBG").css({
+                    top: h,
+                    left: w,
+                    opacity: 0.8
+                });
+                $("#pageDialogBG").stop().fadeIn(1000);
+                $("#pageDialogBG .Prompt").append('<s></s>' + dat);
+                $("#pageDialogBG").fadeOut(1000);
+                //购物车数量
+                $.getJSON('{WEB_PATH}/mobile/ajax/cartnum', function(data) {
+                    $("#btnCart").append('<em>' + data.num + '</em>');
+                });
+            }
+            //跳转页面
+            var gt = '.goodsList span,.goodsList h2,.goodsList .Progress-bar';
+            $(document).on('click', gt, function() {
+                var id = $(this).attr('id');
+                if (id) {
+                    window.location.href = "{WEB_PATH}/mobile/mobile/item/" + id;
+                }
             });
-            $("#pageDialogBG").stop().fadeIn(1000);
-            $("#pageDialogBG .Prompt").append('<s></s>' + dat);
-            $("#pageDialogBG").fadeOut(1000);
-            //购物车数量
-            $.getJSON('{WEB_PATH}/mobile/ajax/cartnum', function(data) {
-                $("#btnCart").append('<em>' + data.num + '</em>');
-            });
-        }
-        //跳转页面
-        var gt = '.goodsList span,.goodsList h2,.goodsList .Progress-bar';
-        $(document).on('click', gt, function() {
-        var id = $(this).attr('id');
-        if (id) {
-            window.location.href = "{WEB_PATH}/mobile/mobile/item/" + id;
-        }
-        });
 
         });
         </script>
