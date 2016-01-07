@@ -71,5 +71,5 @@ function qubiaoqian($string){
 ```
 **index.action.php文件修改过多，我还是拿出来给大家替换一下最好**
 
-
+##即将更新彩票代码。
 ##未完待续-2015.12.21 By Dogod
