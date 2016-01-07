@@ -1,5 +1,10 @@
 @(Divteam)[Teamplate|Bug修复]
 ~~是branch，不是brancth，挖鼻 @linyuan~~
+#移动搜索页面使用说明
+
+1. 添加mobile.action.php 到 controller/search 文件夹
+2. 替换param.inc.php 到data/config/ 文件夹下同名文件
+
 #使用说明
  
 - **修改配置文件** ：修改/data/config/templates.inc.php文件下的代码如下：
