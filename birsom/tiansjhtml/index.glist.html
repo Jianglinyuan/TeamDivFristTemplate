@@ -139,34 +139,34 @@ a.list_classMore {
                                 <div class="item-thumb"><a href="{WEB_PATH}/goods/{wc:$shop['id']}"><img src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}" alt="{wc:$shop['title']}"></a></div>
                                 <div class="item-info">
                                     <h3 class="item-title"><a href="{WEB_PATH}/goods/{wc:$shop['id']}">{wc:$shop['title']}</a></h3>
-                                    <div class="item-price">جەمئىي ئادەم قېتىم سانى：{wc:$shop['zongrenshu']} </div>
-                                    <div class="item-star">
-										<p><span style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],270)}px;"></span></p>
-                                        <ul class="Pro-bar-li">
-											<li class="P-bar01"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>قالغىنى</li>
-											<li class="P-bar03"><em>{wc:$shop['canyurenshu']}</em>قاتناشقىنى</li>
-										</ul>
-                                    </div>
-                                    <div class="item-actions">
-                                        <a style="font-size:12px;" class="w-button w-button-main w-button-l J_addFav" href="javascript:;">دەرھال قاتنىشىش</a>
-										<a style="font-size:12px;" class="w-button w-button-l J_addCart" href="javascript:;">مال ھارۋىسىغا سېلىش</a>
+						        <div class="item-price">جەمئىي ئادەم قېتىم سانى：{wc:$shop['zongrenshu']} </div>
+						        <div class="item-star">
+									<p><span style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],270)}px;"></span></p>
+						            <ul class="Pro-bar-li">
+										<li class="P-bar01"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>قالغىنى</li>
+										<li class="P-bar03"><em>{wc:$shop['canyurenshu']}</em>قاتناشقىنى</li>
+									</ul>
+						        </div>
+						        <div class="item-actions">
+						            <a style="font-size:12px;" class="w-button w-button-main w-button-l J_addFav" href="javascript:;">دەرھال قاتنىشىش</a>
+									<a style="font-size:12px;" class="w-button w-button-l J_addCart" href="javascript:;">مال ھارۋىسىغا سېلىش</a>
 
-										<div class="Curbor_id" style="display:none;">{wc:$shop['id']}</div>
-										<div class="Curbor_yunjiage" style="display:none;">{wc:$shop['yunjiage']}</div>
-										<div class="Curbor_shenyu" style="display:none;">{wc:$shop['shenyurenshu']}</div>	
-                                    </div>
-									{wc:php:start}$i_googd_bj = null;{wc:php:end}
-									{wc:if ($this_time - $shop['time']) < 86400}
-											{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">يىڭى</span></div>';{wc:php:end}
-									{wc:if:end}
-									{wc:if $shop['pos']!='0' && !isset($i_googd_bj)}
-										{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">تەۋسىيە</span></div>';{wc:php:end}
-									{wc:if:end}
-									{wc:if $shop['renqi']=='1' && !isset($i_googd_bj)}
-											{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">ئاۋات</span></div>';{wc:php:end}
-									{wc:if:end}
-									{wc:$i_googd_bj}
-                                </div>
+									<div class="Curbor_id" style="display:none;">{wc:$shop['id']}</div>
+									<div class="Curbor_yunjiage" style="display:none;">{wc:$shop['yunjiage']}</div>
+									<div class="Curbor_shenyu" style="display:none;">{wc:$shop['shenyurenshu']}</div>	
+						        </div>
+								{wc:php:start}$i_googd_bj = null;{wc:php:end}
+								{wc:if ($this_time - $shop['time']) < 86400}
+										{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">يىڭى</span></div>';{wc:php:end}
+								{wc:if:end}
+								{wc:if $shop['pos']!='0' && !isset($i_googd_bj)}
+									{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">تەۋسىيە</span></div>';{wc:php:end}
+								{wc:if:end}
+								{wc:if $shop['renqi']=='1' && !isset($i_googd_bj)}
+										{wc:php:start}$i_googd_bj = '<div class="item-flag"><span class="icon-saleoff icon-saleoff-3">ئاۋات</span></div>';{wc:php:end}
+								{wc:if:end}
+								{wc:$i_googd_bj}
+						    </div>
                             </div>
                         </li>
 						{wc:loop:end}
@@ -180,7 +180,7 @@ a.list_classMore {
     </div>
 	{wc:else}
 	<div class="xm-box search-title-box">
-        <div class="box-bd"><h3 class="search-title">抱歉，该分类下没有找到相关的商品！您可以返回 <a href="/">首页</a> 浏览其他商品。</h3></div>
+        <div class="box-bd"><h3 class="search-title">كەچۈرۈڭ، مۇناسىۋەتلىك تاۋار تېپىلمىدى<a href="/">باش بەتكە</a> قايتىپ باشقا تاۋارلارنى كۆرۈپ بېقىڭ</h3></div>
     </div>
 	{wc:if:end}
 </div>

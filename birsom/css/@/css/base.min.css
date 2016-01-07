@@ -4507,7 +4507,9 @@ body.f-width-change .g-special li em {
 }
 .search-title-box .search-title {
 	margin: 0;
-	font-size: 18px
+	font-size: 18px;
+	direction: rtl;
+	text-align: center;
 }
 .search-title-box .search-tips {
 	margin-top: 10px

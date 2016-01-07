@@ -1829,7 +1829,7 @@ img {
 .w-goodsList {}
 
 .w-goodsList-item {
-  float: left;
+  float: right;
   margin-top: -1px;
   margin-right: -1px;
   overflow: hidden;

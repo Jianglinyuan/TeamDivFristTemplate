@@ -1305,6 +1305,8 @@ div.jqZoomBigPic img {
 	padding-left:4px;
 	padding-top:7px;
 	text-align: right;
+	font-size: 13px;
+	font-family: "alkatip";
 }
 .AllRecW .AllRecR .AllRecR_T a.blue {
 	margin-right:5px;
@@ -1324,7 +1326,7 @@ div.jqZoomBigPic img {
 	margin:0 2px 0 5px;
 }
 .AllRecW .AllRecR .AllRecR_T span {
-	color:#CCC;
+	color:#808080;
 }
 .AllRecW .AllRecR .AllRecR_T img {
 	vertical-align:middle;
