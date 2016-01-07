@@ -265,7 +265,8 @@ a {
 .btn-lineDakeLight {
 	background-color: #fafafa;
 	border-color: #f3f3f3;
-	color: #333
+	color: #333;
+	border-radius: 3px;
 }
 .btn-lineDakeLight:hover, .btn-lineDakeLight:focus, .btn-lineDakeLight.active, .btn-lineDakeLight:active {
 	color: #333;
@@ -2874,10 +2875,10 @@ body {
 	text-align: center;
 	font-size: 24px;
 	color: #999;
-	line-height: 15px;
 	vertical-align: middle;
 	background: #f4f4f4;
-	padding: 5px 0;
+	padding: 0 0 3px 0;
+	line-height: 24px;
     /*height: 15px;*/
 }
 .u-popup-number {
@@ -2896,8 +2897,8 @@ body {
 }
 .num_add {
 	margin-right: 5px;
-    padding: 11px 0 0 0;
-    height: 14px;
+    height: px;
+	padding: 3px 0 0 0;
 }
 .num_add:hover, .num_del:hover {
 	text-decoration: none;
@@ -2913,12 +2914,11 @@ body {
 .num_dig {
 	width: 65px;
 	background: #fff;
-	line-height: 28px;
 	border-left: none;
 	border-right: none;
 	font-size: 18px;
 	padding-top: 5px;
-	height: 15px;
+	height: 19px;
 }
 .g-pay-tip {
 	position: relative;

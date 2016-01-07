@@ -2,6 +2,7 @@
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/goods-Detail.min.css" />
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/LotteryDetail.css"/>
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/GoodsDetail.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/163/css/detail.css"/>
 <script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/jquery.dotdotdot.min.js"></script>
 <div class="container breadcrumbs">
 	جاكارلانغانلىق تەپسىلاتى<span class="sep">/</span>
@@ -13,10 +14,13 @@
 	</a><span class="sep">/</span>
 	<a href="{WEB_PATH}">باش بەت</a>
 </div>
-<div class="goods-detail container">
+<div class="goods-detail container m-detail m-detail-revealed">
 
     <div class="goods-detail-info row clearfix">
 		<div id="divPeriodList" class="show_Period">{wc:if count($itemlist)>32}<div class="period_Open"><a class="gray" href="javascript:void(0);">داۋامىنى كۆرۈش<i></i></a></div>{wc:if:end}{wc:$loopqishu}</div>
+
+
+        <!-- 暂时注释
         <div class="span10 J_mi_goodsPic_block">
                 <div class="goods-big-pic">
 					<div class="Announced_Frame">
@@ -46,56 +50,100 @@
 				</div>
 				</div>
 
-				<!-- <div class="Announced_FrameBm"></div> -->
 			</div>
                 </div>
-				<!-- <div style="margin:0 auto;width:616px;"><img src="/templates/birsom/images/ii.jpg"></div> -->
-        </div>
-
-
-
-		<div class="span6 goods-info-rightbox">
-           <dl class="goods-info-box ">
-            <dt class="goods-info-head">
-                <dl>
-                    <dt class="goodsName">{wc:$item['title']}</dt>
-                    <dd class="goods-info-head-userfaq" >
-                    	<ul><li class="mail"><i>تونۇشتۇرۇش</i>{wc:$item['title2']}</li></ul>
-                    </dd>
-					<dd class="goods-info-head-colors clearfix"></dd>
-                        {wc:if $itemzx}
-			<div class="Result_LConduct">
-				<dl>
-					<dt><span>{wc:$itemzx['qishu']}</span>سان ئېلىپ بېرىلۋاتىدۇ</dt>
-					<dd>
-					<div style="float:left;
-				"><a href="{WEB_PATH}/goods/{wc:$itemzx['id']}" target="_blank" class="Result_LConductBut">تەپسىلاتى</a></div>
-						<div class="Result_Progress-bar">
-							<p><span style="width:{wc:fun:width($itemzx['canyurenshu'],$itemzx['zongrenshu'],208)}px;"></span></p>
-							<ul class="Pro-bar-li">
-								<li class="P-bar03"><em>{wc:$itemzx['shenyurenshu']}</em>قالغىنى</li>
-								<li class="P-bar01"><em>{wc:$itemzx['canyurenshu']}</em>قاتناشقىنى</li>
-							</ul>
-						</div>
-					</dd>
-				</dl>
-			</div>
-			{wc:if:end}
-                </dl>
-            </dt>
-                <div class="MaCenter">
-				<p style='
-    text-align: right;' >تاۋارغا ئېرىشكۈچى مەزكۇر ساندا جەمئىي قاتناشقان قېتىم سانى<em class="orange">{wc:$user_shop_number}</em></p>
-                    <div id="userRnoId" class="MaCenterH"><dl>
-                        <dt>{wc:fun:microt($user_shop_time)}
-                        <dd>
-                            {wc:fun:yunma($user_shop_codes,"b")}
-                        </dd>
-                    </dl>
+        </div> -->
+		
+		<div class="m-detail-main">
+            <div class="m-detail-main-pic">
+                <i class="ico ico-label ico-label-ten"></i>
+                
+                <img width="200" height="200" src="{G_UPLOAD_PATH}/{wc:$item['thumb']}">
+            </div>
+            <div class="m-detail-main-info">
+                <div class="m-detail-main-title">
+                    <h1 title="{wc:$item['title']}">{wc:$item['title']}</h1>
                 </div>
-			</div>
-			<div id="divOpen" class="MaOff" style=""><span>داۋامىنى كۆرۈش<s></s></span></div>
-        </dl>
+                <div class="m-detail-main-wrap m-detail-main-end">
+                    <h3>揭晓结果</h3>
+                    {wc:php:start}
+                    	$len = strlen($item['qishu']);
+                    	$qihao = $item['qishu'];
+                    	for ( $i=0; $i<9-$len; $i++ ) {
+							$qihao = '0'.$qihao;
+                    	}
+                    {wc:php:end}
+                    <div class="m-detail-main-period">期号：{wc:$qihao}</div>
+                    <div class="m-detail-main-end-luckyCode">
+                        {wc:loop $q_user_code_arr  $q_code_num}
+                        <b class="w-num w-num-{wc:$q_code_num}">{wc:$q_code_num}</b>
+                        {wc:loop:end}
+                    </div>
+                </div>
+            </div>
+            <div class="m-detail-main-winner">
+                <div class="m-detail-main-winner-content">
+                    <div class="avatar">
+						<img width="90" height="90" src="{G_UPLOAD_PATH}/{wc:$q_user['img']}">
+                    </div>
+                    {wc:php:start} 
+                    	$len = strlen($item['q_uid']);
+						$uid = '';
+						for ($i=0; $i<8-$len; $i++) {
+							$uid = $uid.'0';
+						}
+						$uid = $uid.$item['q_uid'];
+					{wc:php:end}
+                    <p class="txt-green user">获得了本期商品 (甘肃省兰州市) <a href="{WEB_PATH}/uname/{wc:fun:idjia($item['q_uid'])}" title="({wc:$uid}:ID){wc:fun:get_user_name($item['q_uid'])}">{wc:fun:get_user_name($item['q_uid'])}</a> 恭喜</p>
+                    <p class="cid txt-green"><b>用户ID：{wc:$uid}</b> (ID为用户唯一不变标识)</p>
+                    <p>揭晓时间：{wc:fun:microt($item['q_end_time'])}</p>
+                    <p>夺宝时间：{wc:fun:microt($user_shop_time)}</p>
+                </div>
+                <div class="m-detail-main-winner-codes">
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td colspan="2"><p style="margin-bottom:5px;color:#3c3c3c;text-align: right;">商品获得者本期总共参与了<b class="txt-red">{wc:$user_shop_number}</b>人次</p></td>
+                            </tr>
+                            <tr>
+                                <th>Ta的号码:</th>
+                                <td class="m-detail-main-codes-list">
+                                    {wc:fun:yunma($user_shop_codes,"span")}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+					<div id="divOpen" class="MaOff" style=""><a href="javascript:void(0)">&lt;&lt;TA的所有号码</a></div>
+                </div>
+            </div>
+            <div class="m-detail-main-codes">
+                <div class="deco"></div>
+		            <p style="text-align:center"><a class="btn-login" href="javascript:void(0)"><b>请登录</b></a>，查看你的夺宝号码！</p>
+            </div>
+			<div class="m-detail-main-rule">
+                <ul class="txt">
+                    <li>
+                        <span class="title">计算公式</span>
+                        <div class="f-clear formula">
+                            <div class="box red-box">
+                                <b class="txt-red">{wc:$item['q_user_code']}</b><br><b class="txt-red" style="font-size:12px">本期幸运号码</b>
+                                </div><div class="operator">=(</div><div class="box gray-box"><b class="txt-red">{wc:$user_shop_time_add}</b><br>50个时间求和
+                                <div class="more-box">
+                                    <i class="ico ico-arrow ico-arrow-yellow"></i>
+                                    <div class="yellow-box">商品的最后一个号码分配完毕，公示该分配时间点前本站全部商品的<span class="txt-red">最后50个参与时间</span>，并求和。</div>
+                                </div>
+                            </div><div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">???</b><br>“老时时彩”开奖号码
+                                <div class="more-box">
+                                    <i class="ico ico-arrow ico-arrow-yellow"></i>
+                                    <div class="yellow-box f-breakword">
+                                            取最近一期“老时时彩” (第<span class="txt-red">???</span>期) 开奖结果。 <a href="http://caipiao.163.com/award/ssc/20160107.html" target="_blank">开奖查询</a>
+                                    </div>
+                                </div>
+                            </div><div class="operator" title="取余">)%</div><div class="box"><b class="txt-red">{wc:$item['canyurenshu']}</b><br>该商品总需人次</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>原始数</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
 
 
@@ -145,8 +193,20 @@
 	        </div>
 	    </div>
 
-
-
+<!-- 暂时注释掉
+<div class="MaCenter">
+				<p style='
+    text-align: right;' >تاۋارغا ئېرىشكۈچى مەزكۇر ساندا جەمئىي قاتناشقان قېتىم سانى<em class="orange">{wc:$user_shop_number}</em></p>
+                    <div id="userRnoId" class="MaCenterH"><dl>
+                        <dt>{wc:fun:microt($user_shop_time)}
+                        <dd>
+                            {wc:fun:yunma($user_shop_codes,"b")}
+                        </dd>
+                    </dl>
+                </div>
+			</div>
+			<div id="divOpen" class="MaOff" style=""><span>داۋامىنى كۆرۈش<s></s></span></div>
+ -->
 
         </div>
 <div id="content">
@@ -225,7 +285,7 @@
 							</p>
 							<b>{wc:$item['q_user_code']}:最终结果</b>
 						</div>
-						<div style="width:100%;height:30px;clear:bolt;"></div>
+						<div style="width:100%;height:30px;clear:both;"></div>
 				</div>
 				{wc:else}
 
@@ -291,35 +351,7 @@
 	</div>
 </div>
 
-
-            
-            <!-- 常见问题 -->
-            <!-- <div class="common-question" id="divFaq">
-                <div class="question-hd clearfix">
-                    <div class="title_a">常见问题</div>
-                </div>
-                <div class="question-bd">
-                    <ul class="content">
-                        <li>
-                            <h3>如何挑选商品？</h3>
-                            <p>点击页面上方“加入购物车”按钮或页面下拉时顶部导航上的“加入购物车”按钮将商品加入购物车，再点击页面右上角的“购物车”前往购物车页面进行结算。</p>
-                        </li>
-                        <li>
-                            <h3>收藏商品功能</h3>
-                            <p>点击“收藏按钮”后，按钮中的白心亮起,背景由黑色变为黄色代表收藏成功，再次点击取消收藏。您可在“个人中心”中的我的收藏查看所有收藏商品。</p>
-                        </li>
-                        <li>
-                            <h3>维修网点销售配件吗？</h3>
-                            <p>所有授权维修网点具备维修手机标配里配件的功能，部分指定授权维修网点可销售标配及部分官网配件，具体销售的产品及价格请以修网点信息为准。</p>
-                        </li>
-                        <li>
-                            <h3>退换货办理流程</h3>
-                            <p>您可拨打小米客服中心400-100-5678与客服人员沟通，或登录小米网“我的订单” -&gt;“订单详情”下方点击“申请售后服务”并填写相应信息，小米看到您的申请，会安排工作人员与您进行退换货质量确认并办理相关事宜.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div> -->
-            <!-- 常见问题 END-->
+           
         </div>
 </div>
 </div>
@@ -363,19 +395,22 @@ var divCalResult =  $("div[name='div_tab']");
 		}
 	});
 });
-function divOpen(){
-var height=$("#userRnoId").css("height");
-	if(height=="180px"){
-		$("#userRnoId").css("height","auto");
+function divOpen(btn){
+var height=$(".m-detail-main-codes-list").css("height");
+	if(height=="38px"){
+		$(".m-detail-main-codes-list").css("height","95px").css("overflow","auto");
+		btn.html('<a href="javascript:void(0)">收起</a>');
 	}else{
-		$("#userRnoId").css("height",180);
+		$(".m-detail-main-codes-list").css("height",38).css("overflow","hidden");
+		btn.html('<a href="javascript:void(0)">&lt;&lt;TA的所有号码</a>');
 	};
 }
 $(function(){
-	$("#divOpen").click(divOpen);
+	$("#divOpen").click(function() {divOpen($(this));});
 
 	$('.goods-info-head-userfaq .mail').dotdotdot();
 	$('.goodsName').dotdotdot();
+	$('.m-detail-main-title').dotdotdot();
 });
 
 $(function() {

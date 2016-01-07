@@ -539,9 +539,12 @@ dl.goods-info-box .goods-info-foot a:hover {
     height: 435px;
 }
 .m-detail-period-main-wrap {
-    height: 415px;
+    height: 410px;
     background-color: #fff;
     padding: 10px;
+}
+.m-detail .m-detail-period-main-wrap {
+	height: 370px;
 }
 /*.box-bd dl {
 	float: left;
@@ -1850,7 +1853,7 @@ dl.goods-info-box .goods-info-foot a:hover {
     overflow: hidden;
 }
 .g-side {
-    height: 566px;
+    height: 540px;
     border: 1px solid #dddddd;
     border-top: 0;
     background-color: #f2f2f2;
