@@ -146,18 +146,18 @@ $(function() {
             var u = r.next();
             if (s == 1) {
                 q.addClass("z-jiandis");
-                u.addClass("z-jiadis")
+                u.addClass("z-jiadis");
             } else {
                 if (t == 1) {
                     q.addClass("z-jiandis");
-                    u.removeClass("z-jiadis")
+                    u.removeClass("z-jiadis");
                 } else {
                     if (t == s) {
                         q.removeClass("z-jiandis");
-                        u.addClass("z-jiadis")
+                        u.addClass("z-jiadis");
                     } else {
                         q.removeClass("z-jiandis");
-                        u.removeClass("z-jiadis")
+                        u.removeClass("z-jiadis");
                     }
                 }
             }

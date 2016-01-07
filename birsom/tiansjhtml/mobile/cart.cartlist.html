@@ -54,9 +54,12 @@
 							<p class="f-Cart-Other">
 								<a href="javascript:;" class="fr z-del" name="delLink" cid="{wc:$val['id']}" style="float:left"></a>
 
-								<a style="float:right" href="javascript:;" class="fl z-jia {wc:if $Mcartlist[$val['id']]['num']==$val['zongrenshu']}z-jiadis{wc:if:end}">+</a>
+								<a style="float:right" href="javascript:;" class="fl z-jian {wc:if $Mcartlist[$val['id']]['num']==1}z-jiandis{wc:if:end}">-</a>
+								
 								<input style="float:right" id="txtNum{wc:$val['id']}" name="num" type="text" maxlength="7" value="{wc:$Mcartlist[$val['id']]['num']}" class="fl z-amount" price="{wc:$Mcartlist[$val['id']]['money']}" />
-								<a href="javascript:;" class="fl z-jian {wc:if $Mcartlist[$val['id']]['num']==1}z-jiandis{wc:if:end}" style="float:right">-</a>
+
+								<a href="javascript:;" class="fl z-jia {wc:if $Mcartlist[$val['id']]['num'] == $val['zongrenshu']}z-jiadis{wc:if:end}" style="float:right">+</a>
+								
 								<input type="hidden" value="{wc:$Mcartlist[$val['id']]['num']}" />
 								<input type="hidden" value="{wc:$val['zongrenshu']-$val['canyurenshu']}" />
 								<input type="hidden" value="{wc:$val['zongrenshu']}" />
