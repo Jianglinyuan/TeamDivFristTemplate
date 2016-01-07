@@ -6,7 +6,7 @@
 ---------------------------------------------------------------------- */
 @font-face {
     font-family: "alkatip";
-    src:url('{G_TEMPLATES_CSS}/alkatip.ttf')format('truetype');
+    src:url('../../alkatip.ttf')format('truetype');
     }
 
 body, div, table, td, p, h1, h2, h3, h4, h5, em, span, a, fieldsetform, textarea, ul, li, dl, dt, dd, form {
