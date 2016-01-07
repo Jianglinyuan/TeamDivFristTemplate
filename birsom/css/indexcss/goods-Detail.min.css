@@ -1428,7 +1428,7 @@ dl.goods-info-box .goods-info-foot a:hover {
 .goods-sub-bar .fr .goods-add-cart-btn, .goods-sub-bar .fr .goods-over-btn {
 	width: 235px;
 	color: #fff;
-	font-size: 12px;
+	font-size: 18px;
 	line-height: 40px;
 	height: 40px
 }
@@ -1451,16 +1451,16 @@ dl.goods-info-box .goods-info-foot a:hover {
 	_zoom: 1
 }
 .goods-sub-bar .goods-desc-menu {
-	margin-left: 50px;
+	margin-right: 50px;
 }
 .goods-sub-bar .goods-desc-menu .items li {
 	text-align: center;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: 60px;
 	color: #6d6d6d;
-	float: left;
-	width: 120px
+	float: right;
+	padding: 0 20px;
 }
 .goods-sub-bar .goods-desc-menu .items .current a {
 	color: #ee330a

@@ -4873,10 +4873,10 @@ body {
 .site-topbar .topbar-info .user-info-menu {
   display: none;
   position: absolute;
-  right: 0px;
+  right: -40px;
   top: 36px;
   z-index: 30;
-  width: 110px;
+  width: 120px;
   padding: 9px 0 10px;
   border: 1px solid #dfdfdf;
   font-size: 12px;
