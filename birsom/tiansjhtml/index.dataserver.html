@@ -51,11 +51,14 @@
                 </div>
 				<!-- <div style="margin:0 auto;width:616px;"><img src="/templates/birsom/images/ii.jpg"></div> -->
         </div>
+
+
+
 		<div class="span6 goods-info-rightbox">
            <dl class="goods-info-box ">
             <dt class="goods-info-head">
                 <dl>
-                    <dt id="goodsName">{wc:$item['title']}</dt>
+                    <dt class="goodsName">{wc:$item['title']}</dt>
                     <dd class="goods-info-head-userfaq" >
                     	<ul><li class="mail"><i>تونۇشتۇرۇش</i>{wc:$item['title2']}</li></ul>
                     </dd>
@@ -94,6 +97,57 @@
 			<div id="divOpen" class="MaOff" style=""><span>داۋامىنى كۆرۈش<s></s></span></div>
         </dl>
         </div>
+
+
+		<div class="g-side" id="zx">
+	        <div class="m-detail-period">
+	            <div class="box-hd">
+	               <h4>最新一期</h4>
+	            </div>
+	            <div class="box-bd">
+		            <div class="m-detail-period-main-wrap">
+		                <dl>
+		                    <dt>
+		                        <div class="avatar"><a rel="nofollow" href="{WEB_PATH}/goods/{wc:$itemzx['id']}" target="_blank"><img width="90" height="90" alt="" src="{G_UPLOAD_PATH}/{wc:$item['thumb']}"></a></div>
+		                    </dt>
+		                    <dd class="gray02">
+								<dt class="goodsName">{wc:$item['title']}</dt>
+			                    <dd class="goods-info-head-userfaq" >
+			                    	<ul><li class="mail">{wc:$item['title2']}</li></ul>
+			                    </dd>
+								
+								<div class="Result_Progress-bar">
+									<p><span style="width:{wc:fun:width($itemzx['canyurenshu'],$itemzx['zongrenshu'],208)}px;"></span></p>
+									<ul class="Pro-bar-li">
+										<li class="P-bar03"><em>{wc:$itemzx['shenyurenshu']}</em>قالغىنى</li>
+										<li class="P-bar01"><em>{wc:$itemzx['canyurenshu']}</em>قاتناشقىنى</li>
+									</ul>
+								</div>
+
+								<div class="zx-foot">
+									<div class="goods-info-head-intro">
+										<div id="divNumber" class="Pro_number" style="text-align:right;">
+											<a href="javascript:;" class="num_del num_ban" id="shopsub">-</a>
+											<input style="border:1px solid #CFCFCF" type="text" value="1" maxlength="7" onkeyup="value=value.replace(/\D/g,'')" class="num_dig" id="num_dig">
+											<a href="javascript:;" class="num_add" id="shopadd">+</a>سېتىۋېلىش
+										</div>
+										<div style="display:none;" id="hqid">{wc:$item['id']}</div>
+									</div>	
+
+									<div id="right-now"><a class="w-button w-button-main">立即参与</a></div>
+								</div>
+
+		                    </dd>
+		                </dl>
+
+		            </div>
+	            </div>
+	        </div>
+	    </div>
+
+
+
+
         </div>
 <div id="content">
 <div class="coin-layout">
@@ -321,7 +375,107 @@ $(function(){
 	$("#divOpen").click(divOpen);
 
 	$('.goods-info-head-userfaq .mail').dotdotdot();
-	$('#goodsName').dotdotdot();
+	$('.goodsName').dotdotdot();
+});
+
+$(function() {
+
+	var shopinfo={'shopid':{wc:$itemzx['id']},'money':{wc:$itemzx['yunjiage']},'shenyu':{wc:$itemzx['shenyurenshu']}};
+
+	$(".w-button-main").click(function(){	
+		Cartcookie(true);
+	});	
+
+	function baifenshua(aa,n){
+	n = n || 2;
+	return ( Math.round( aa * Math.pow( 10, n + 2 ) ) / Math.pow( 10, n ) ).toFixed( n ) + '%';
+	}
+	var shopnum = $("#num_dig");
+	shopnum.keyup(function(){
+		if(shopnum.val()>{wc:$syrs}){
+			shopnum.val({wc:$syrs});
+		}
+		var numshop=shopnum.val();
+		if(numshop=={wc:$item['zongrenshu']}){
+			var baifenbi='100%';
+		}else{
+			var showbaifen=numshop/{wc:$item['zongrenshu']};
+			var baifenbi=baifenshua(showbaifen,2);
+		}
+		$("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
+	});	
+
+	function Cartcookie(cook){
+		var shopid=shopinfo['shopid'];
+		var number=parseInt($("#num_dig").val());
+		if(number<=1){number=1;}
+		var Cartlist = $.cookie('Cartlist');
+		if(!Cartlist){
+			var info = {};
+		}else{
+			var info = $.evalJSON(Cartlist);
+			if((typeof info) !== 'object'){
+				var info = {};
+			}
+		}		
+		if(!info[shopid]){
+			var CartTotal=$("#sCartTotal").text();
+				$("#sCartTotal").text(parseInt(CartTotal)+1);
+				$("#btnMyCart em").text(parseInt(CartTotal)+1);
+		}	
+		info[shopid]={};
+		info[shopid]['num']=number;
+		info[shopid]['shenyu']=shopinfo['shenyu'];
+		info[shopid]['money']=shopinfo['money'];
+		info['MoneyCount']='0.00';	
+		$.cookie('Cartlist',$.toJSON(info),{expires:7,path:'/'});
+		if(cook){
+			window.location.href="{WEB_PATH}/member/cart/cartlist/"+new Date().getTime();//+new Date().getTime()
+		}
+	}  
+
+	$("#shopadd").click(function(){
+		var shopnum = $("#num_dig");
+			var resshopnump='';
+			var num = parseInt(shopnum.val());				
+			// if(num+1 > 450){				
+			// 	shopnum.val({wc:$syrs});
+			// 	resshopnump = {wc:$syrs};
+			// }else{
+				resshopnump=parseInt(shopnum.val())+1;
+				shopnum.val(resshopnump);	
+				if(shopnum.val()>={wc:$itemzx['shenyurenshu']}){
+					resshopnump=shopinfo['shenyu'];
+					shopnum.val(resshopnump);
+				}
+			// }
+			if(resshopnump=={wc:$itemzx['zongrenshu']}){
+				var baifenbi='100%';
+			}else{
+				var showbaifen=resshopnump/{wc:$itemzx['zongrenshu']};
+				var baifenbi=baifenshua(showbaifen,2);
+			}
+			$("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
+	});
+	
+	
+	$("#shopsub").click(function(){
+		var shopnum = $("#num_dig");
+		var num = parseInt(shopnum.val());
+		if(num<2){
+			shopnum.val(1);			
+		}else{
+			shopnum.val(parseInt(shopnum.val())-1);
+		}
+		var shopnums=parseInt(shopnum.val());
+		if(shopnums=={wc:$itemzx['zongrenshu']}){
+				var baifenbi='100%';
+		}else{
+			var showbaifen=shopnums/{wc:$itemzx['zongrenshu']};
+			var baifenbi=baifenshua(showbaifen,2);
+		}
+		$("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
+	});
 });
 </script>
 {wc:templates "index","foot"}
