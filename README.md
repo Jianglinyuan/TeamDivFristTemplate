@@ -1,5 +1,74 @@
 @(Divteam)[Teamplate|Bug修复]
 ~~是branch，不是brancth，挖鼻 @linyuan~~
+
+(2016-1-8 18:07 begin)
+
+#### 1\. `controller\go\index.action.php`->`function dataserver`:
+
+* 将“没有这个商品”下面的一段代码注释掉：
+```
+		if(!$item){
+			_message("没有这个商品!");
+		}
+		// if(empty($item['q_end_time']) && $item['q_showtime'] == 'Y'){
+		// 	header("location: ".WEB_PATH."/dataserver/".$item['id']);
+		// 	exit;
+		// }
+```	
+
+* 还有“该商品正在进行中”下面那一段也注释掉：
+```
+		if(empty($item['q_user_code'])){
+			_message("该商品正在进行中...",WEB_PATH.'/goods/'.$itemid);
+		}
+		// if(isset($item['q_showtime']) && $item['q_showtime'] == 'Y'){
+		// 	header("location: ".WEB_PATH."/dataserver/".$item['id']);
+		// 	exit;
+		// }
+```
+
+* 找到`$itemlist`的定义，在`select`里加上`, q_showtime`：
+```
+$itemlist = $this->db->GetList("select id,sid,q_uid,qishu,q_showtime from `@#_shoplist` where `sid`='$item[sid]' order by `qishu` DESC");
+```
+
+* 在期数显示的那段代码下方的第一个`if`，括号中增加是否正在倒计时的判断：
+```
+		//期数显示
+		$itemlist = $this->db->GetList("select id,sid,q_uid,qishu,q_showtime from `@#_shoplist` where `sid`='$item[sid]' order by `qishu` DESC");
+		$loopqishu='<ul class="Period_list">';
+		//没有获奖者，且未进入倒计时动画 => 显示商品详情页面
+		if(empty($itemlist[0]['q_uid']) && $itemlist[0]['q_showtime']=='N') {
+			$loopqishu.='<li><a href="'.WEB_PATH.'/goods/'.$itemlist[0]['id'].'"><b class="period_Ongoing">'."第".$itemlist[0]['qishu']."期<i></i></b></a></li>";
+			unset($itemlist[0]);
+		}
+```
+
+- - -
+
+#### 2\. `controller\adminwei\setting.action.php`->`function config`:
+
+将倒计时300秒上限改为3599秒（59分59秒）：
+```
+			if($goods_end_time >= 3599){
+
+				$goods_end_time = 3599;
+
+			}
+```	
+
+- - -
+
+#### 3\. `controller\adminwei\tpl\config.system.tpl.php`:
+
+第35行，将提示也更新一下：
+```
+<span>单位(秒),不低于30秒，不大于3599秒（59分59秒）</span>
+```
+(2016-1-8 18:07 end)
+
+- - -
+
 #移动搜索页面使用说明
 
 1. 添加mobile.action.php 到 controller/search 文件夹
