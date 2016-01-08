@@ -112,6 +112,7 @@ body {
 	margin-bottom: 2px;
 	height: 36px;
 	overflow: hidden;
+	direction: rtl;
 }
 .publishC-tit h3 a {
 	text-decoration: none;

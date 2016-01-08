@@ -294,6 +294,7 @@ img {
 .w-num {
   display: inline-block;
   width: 38px;
+  float: left;
   padding-top: 56px;
   height: 0;
   overflow: hidden;
@@ -4822,7 +4823,7 @@ body {
   *z-index: 11;
   height: 36px;
   border-bottom: 1px solid #dfdfdf;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 36px;
   color: #8c8c8c;
   background: #fafafa
@@ -4856,6 +4857,7 @@ body {
   cursor: pointer
 }
 .site-topbar .topbar-info .arrow {
+  margin-top: 5px;
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -4871,15 +4873,14 @@ body {
   vertical-align: middle
 }
 .site-topbar .topbar-info .user-info-menu {
-  display: none;
   position: absolute;
-  right: -40px;
   top: 36px;
+  right: -10px;
   z-index: 30;
-  width: 120px;
+  width: 130px;
   padding: 9px 0 10px;
   border: 1px solid #dfdfdf;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   text-align: center;
   background: #fff

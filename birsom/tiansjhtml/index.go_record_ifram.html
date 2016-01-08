@@ -48,7 +48,7 @@ span.AllRecR_Over a { float: right; }
 				{wc:if:end}
 				<em class="Fb orange">{wc:$user['gonumber']}</em>قېتىم سېتىۋالدى
 				</span>     
-                <span class="user_see_code" see="off">查看{wc:fun:_cfg('web_name_two')}码</span>           
+                <span class="user_see_code" see="off">تەپسىلاتى</span>           
 			</p>
                 <div class="user_codes_box">
                 	<div class="user_codes" style="max-height:260px;">
@@ -59,7 +59,7 @@ span.AllRecR_Over a { float: right; }
                      	}                       
                     {wc:php:end}  
                     </div> 
-                   {wc:if $user['gonumber'] > '98'}<div class="user_codes_js" click="off" num="{wc:$user['gonumber']}">展开查看全部↓</div>{wc:if:end}                                   
+                   {wc:if $user['gonumber'] > '98'}<div class="user_codes_js" click="off" num="{wc:$user['gonumber']}">تەپسىلاتىنى كۆرۈش↓</div>{wc:if:end}                                   
                 </div>
 			</div>
 		</div>
@@ -94,10 +94,10 @@ $(function(){
 	$(".user_see_code").click(function(){
 		if($(this).attr("see")=='off'){
 			$(this).attr("see","on");
-			$(this).text("关闭购买码");
+			$(this).text("قايتىش");
 			$(this).parent().next().show();
 		}else{
-			$(this).text("显示购买码")
+			$(this).text("تەپسىلاتى")
 			$(this).attr("see","off");
 			$(this).parent().next().hide();
 		}
@@ -112,11 +112,11 @@ $(function(){
 			var line = Math.ceil(num / 7) * 20;	
 			codes.css("max-height",line+"px");
 			$(this).attr("click","on");
-			$(this).text("收起全部↑");
+			$(this).text("قايتىش↑");
 		}else{
 			codes.css("max-height","260px");
 			$(this).attr("click","off");
-			$(this).text("展开查看全部↓");	
+			$(this).text("تەپسىلاتىنى كۆرۈش↓");	
 		}
 		
 	});

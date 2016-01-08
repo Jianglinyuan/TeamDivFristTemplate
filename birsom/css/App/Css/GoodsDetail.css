@@ -645,6 +645,7 @@ div.jqZoomBigPic img {
 	height:35px;
 	font-family: "alkatip";
 	color:#999;
+	direction:rtl;
 }
 .My_RecordReg .My_Signbut {
 	width:70px;

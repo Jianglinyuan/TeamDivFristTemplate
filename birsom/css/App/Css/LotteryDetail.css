@@ -602,12 +602,8 @@
 	top:10px;
 }
 .MaOff {
-	border:1px solid #EDEDED;
-	height:28px;
-	line-height:26px;
 	border-top:none;
 	text-align:center;
-	background:#F7F7F7;
 	cursor:pointer;
 }
 .MaOff span {

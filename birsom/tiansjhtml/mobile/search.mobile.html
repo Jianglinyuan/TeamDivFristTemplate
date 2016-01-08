@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>搜索页面</title>
+    <meta content="app-id=518966501" name="apple-itunes-app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link href="{G_TEMPLATES_MOBILE_CSS}/comm.css" rel="stylesheet" type="text/css" />
+    <link href="{G_TEMPLATES_MOBILE_CSS}/goods.css" rel="stylesheet" type="text/css" />
+    <script src="{G_TEMPLATES_MOBILE_JS}/jquery190.js" language="javascript" type="text/javascript"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+</head>
+
+<body>
+    <div class="h5-yygcms-v1" id="loadingPicBlock">
+        <!-- 栏目页面顶部 -->
+        <header class="g-header">
+            <style type="text/css">
+            .zSearchbtn {
+                background-color: #e44d6c;
+                width: 45px;
+                height: 35px;
+                border: 1px solid #de4900;
+                border-radius: 5px;
+                top: 6px;
+                left: 6px;
+                display: block;
+                text-align: center;
+                position: absolute;
+                color: white;
+            }
+            
+            .search-section {
+                display: none;
+                height: 115px;
+                background-color: rgba(0, 0, 0, 0.5);
+                margin-top: 1px;
+            }
+            
+            .search-btn,
+            .exit,
+            .search-text {
+                display: block;
+                margin: 5px auto;
+            }
+            
+            .search-form {
+                width: 100%;
+                padding-top: 10px;
+                margin: 0 auto;
+            }
+            
+            .search-text {
+                width: 86%;
+                height: 28px;
+                border-radius: 5px;
+                padding-right: 5px;
+                direction: rtl;
+                padding-bottom: 3px;
+            }
+            
+            .exit,
+            .search-btn {
+                width: 25%;
+                height: 22px;
+                border-radius: 5px;
+                background-color: #e44d6c;
+                color: #fff;
+                border: none;
+            }
+            </style>
+            <div class="fl u-slogan"></div>
+            <div class="fr head-r"></div>
+            <h2 class>搜索结果</h2>
+            <div class="head-r" style="font-size:15px;">
+                <a href="javascript:;" onclick="history.go(-1)" class="z-HReturn">
+                    <s></s><b>قايتىش</b></a>
+            </div>
+            <button class="zSearchbtn" value="搜索">搜索</button>
+            <div class="search-section">
+                <div class="search-form clearfix">
+                    <input type="text" id="txtSearch" class="search-text" placeholder="搜索您需要的商品" />
+                    <button type="button" id="butSearch" class="search-btn iconfont" value="搜索">搜索</button>
+                    <button type="button" id="butSearch" class="exit" value="搜索">取消</button>
+                </div>
+            </div>
+            <script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
+            <script type="text/javascript">
+            $(function() {
+                $("#txtSearch").focus(function() {
+                    $("#txtSearch").css({
+                        background: "#FFFFCC"
+                    });
+                    var va1 = $("#txtSearch").val();
+                    if (va1 == '搜索您需要的商品') {
+                        $("#txtSearch").val("");
+                    }
+                });
+                $("#txtSearch").blur(function() {
+                    $("#txtSearch").css({
+                        background: "#FFF"
+                    });
+                    var va2 = $("#txtSearch").val();
+                    if (va2 == "") {
+                        $("#txtSearch").val('搜索您需要的商品');
+                    }
+                });
+                $("#butSearch").click(function() {
+                    window.location.href = "{WEB_PATH}/mobile/s_tag/" + $("#txtSearch").val();
+                });
+                $(".zSearchbtn").click(function(event) {
+                    $(".search-section").slideToggle("fast");
+                });
+                $(".exit").click(function(event) {
+                    $(".search-section").slideToggle("fast");
+                });
+            });
+            </script>
+        </header>
+        <section class="navautos">
+            <div class="textnav2">
+            </div>
+            <div class="wrapnavautos">
+                <div id="navautos4">
+                    <a href="{G_WEB_PATH}/?/mobile/home/userrecharge"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava4.png"></a>
+                </div>
+                <div class="textnavword">
+                    <p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb">پۇل قاچىلاش</p>
+                </div>
+            </div>
+            <div class="wrapnavautos">
+                <div id="navautos3">
+                    <a href="{G_WEB_PATH}/?/mobile/mobile/about"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava3.png"></a>
+                </div>
+                <div class="textnavword">
+                    <p style="text-align:center;font-size:14px;font-family:alkatip;color:#bbb;">كۆرسەتكۈچ</p>
+                </div>
+            </div>
+            <div class="wrapnavautos">
+                <div id="navautos2">
+                    <a href="{G_WEB_PATH}/?/mobile/shaidan/"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava2.png"></a>
+                </div>
+                <div class="textnavword">
+                    <p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb"> بەھىرلەر</p>
+                </div>
+            </div>
+            <div class="wrapnavautos">
+                <div id="navautos1">
+                    <a href="{WEB_PATH}/mobile/autolottery"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava1.png"></a>
+                </div>
+                <div class="textnavword">
+                    <p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb">ۋاقىتلىق</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <div class="textnav">
+        </div>
+        <hr/>
+        <script src="{G_TEMPLATES_MOBILE_JS}/ajax.js"></script>
+        <!-- 内页顶部 -->
+        <style type="text/css">
+        .u-progress .pgbar {
+            width: 0px;
+        }
+        </style>
+        <section class="goodsCon">
+            <!-- 列表 -->
+            <div class="goodsList">
+                {wc:if $shoplist!=null} {wc:loop $shoplist $shop}
+                <ul>
+                    <li>
+                        <span id="{wc:$shop['id']}" class="z-Limg"><img src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}"></span>
+                        <div class="goodsListR">
+                            <h2 id="{wc:$shop['id']}">{wc:$shop['title']}</h2>
+                            <div class="pRate">
+                                <div class="Progress-bar" id="{wc:$shop['id']}">
+                                    <p class="u-progress"><span class="pgbar" id="prog" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"><span class="pging"></span></span>
+                                    </p>
+                                    <ul class="Pro-bar-li">
+                                        <li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>قاتناشقىنى</li>
+                                        <li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>جەمئىي</li>
+                                        <li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>قالغىنى</li>
+                                    </ul>
+                                </div>
+                                <a class="add" codeid="{wc:$shop['id']}" href="javascript:;">
+                                    <s></s>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                {wc:loop:end} {wc:else}
+                <a id="btnLoadMore2" class="loading" style="">抱歉，没有找到<em class="orange">"{wc:$search}"</em>相关的商品！</a> {wc:if:end}
+            </div>
+        </section>
+        <input id="urladdress" value="" type="hidden" />
+        <input id="pagenum" value="" type="hidden" /> {wc:templates "mobile/index","footer"}
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#btnLoadMore").click(function() {
+                var url = $("#urladdress").val(),
+                    page = $("#pagenum").val();
+                glist_json(url + '/' + page);
+            });
+            //返回顶部
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 50) {
+                    $("#btnTop").show();
+                } else {
+                    $("#btnTop").hide();
+                }
+            });
+            $("#btnTop").click(function() {
+                $("body").animate({
+                    scrollTop: 0
+                }, 10);
+            });
+            //添加到购物车
+            $(document).on("click", '.add', function() {
+                var codeid = $(this).attr('codeid');
+                $.getJSON('{WEB_PATH}/mobile/ajax/addShopCart/' + codeid + '/1', function(data) {
+                    if (data.code == 1) {
+                        addsuccess('添加失败');
+                    } else if (data.code == 0) {
+                        addsuccess('添加成功');
+                    }
+                    return false;
+                });
+            });
+
+            function addsuccess(dat) {
+                $("#pageDialogBG .Prompt").text("");
+                var w = ($(window).width() - 255) / 2,
+                    h = ($(window).height() - 45) / 2;
+                $("#pageDialogBG").css({
+                    top: h,
+                    left: w,
+                    opacity: 0.8
+                });
+                $("#pageDialogBG").stop().fadeIn(1000);
+                $("#pageDialogBG .Prompt").append('<s></s>' + dat);
+                $("#pageDialogBG").fadeOut(1000);
+                //购物车数量
+                $.getJSON('{WEB_PATH}/mobile/ajax/cartnum', function(data) {
+                    $("#btnCart").append('<em>' + data.num + '</em>');
+                });
+            }
+            //跳转页面
+            var gt = '.goodsList span,.goodsList h2,.goodsList .Progress-bar';
+            $(document).on('click', gt, function() {
+                var id = $(this).attr('id');
+                if (id) {
+                    window.location.href = "{WEB_PATH}/mobile/mobile/item/" + id;
+                }
+            });
+
+        });
+        </script>
+    </div>
+</body>
+
+</html>
+<style>
+#pageDialogBG {
+    -webkit-border-radius: 5px;
+    width: 255px;
+    height: 45px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 45px;
+}
+</style>
+<div id="pageDialogBG" class="pageDialogBG">
+    <div class="Prompt"></div>
+</div>

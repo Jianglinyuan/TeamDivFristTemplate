@@ -248,7 +248,7 @@ $(function(){
 								<img border="0" src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($eshop['q_uid'],'img')}"></a></dt>
 							<dt class="uget">نى تەبرىكلەيمىز<a href="{WEB_PATH}/uname/{wc:fun:idjia($eshop['q_uid'])}" target="_blank">{wc:fun:get_user_name($eshop['q_uid'])}</a><br>
 								تەلەيلىك نومۇر：<span class="orange">{wc:$eshop['q_user_code']}</span><br>
-								جاكار ۋاقتى:<span>{wc:fun:date("Y-m-d",$eshop['q_end_time'])}</span></dt>
+								<span>{wc:fun:date("Y-m-d",$eshop['q_end_time'])}: جاكار ۋاقتى</span></dt>
 						</li>
 					</ul>			
 					{wc:loop:end}

@@ -1,94 +1,138 @@
 <!-- 栏目页面顶部 -->
 <header class="g-header">
-        <div class="fl u-slogan"></div>
-        <div class="fr head-r"></div>
-        <h2 class>مەھسۇلاتلار</h2>
-
-	<style type="text/css">
-.zRechargebtn{background-position: 0 0;
-  background-color: #db3652;
-  width: 60px;
-  height: 32px;
-  line-height: 32px;
-  border: 0px solid #de4900;
-  border-radius: 5px;
-  box-shadow: 0px 0px 0px #ff8533 inset;
-  display: inline-block;
-  background: url({G_TEMPLATES_STYLE}/mobile/images/signwap.png) no-repeat;
-  text-decoration: none;
-  outline: medium none;
-  margin: 0;
-  padding: 0;
-  }
-.zSearchbtn{
-	background-position: 0 0;
-    background-color: #db3652;
-    width: 36px;
-    height: 32px;
-    border: 1px solid #de4900;
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px #ff8533 inset;
-    display: inline-block;
-    background: url("{G_TEMPLATES_STYLE}/mobile/images/searchbtn.png") no-repeat;
-    text-decoration: none;
-    outline: medium none;
-    margin: 0;
-    padding: 0;
-  }
- 
-</style>  
-
-            <div class="head-r" style="font-size:15px;">
-                <a href="javascript:;" onclick="history.go(-1)" class="z-HReturn"><s></s><b>قايتىش</b></a>
-            </div>
-        </div>
-    </header>
+    <style type="text/css">
+    .zSearchbtn {
+        background-color: #e44d6c;
+        width: 45px;
+        height: 35px;
+        border: 1px solid #de4900;
+        border-radius: 5px;
+        top: 6px;
+        left: 6px;
+        display: block;
+        text-align: center;
+        position: absolute;
+        color: white;
+    }
     
-	<section class="navautos">
-	<div class="textnav2">
+    .search-section {
+        display: none;
+        height: 115px;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 1px;
+    }
+	.search-btn, .exit, .search-text{
+		display: block;
+		margin:5px auto;
+	}
+	.search-form{
+		width: 100%;
+		padding-top: 10px;
+		margin:0 auto;
+	}
+	.search-text{
+	    width: 86%;
+	    height: 28px;
+	    border-radius: 5px;
+	    padding-right: 5px;
+	    direction: rtl;
+	    padding-bottom: 3px;
+	}
+	.exit, .search-btn{
+		width: 25%;
+		height: 22px;
+		border-radius: 5px;
+		background-color: #e44d6c;
+		color: #fff;
+		border:none;
+	}
+	
+    </style>
+    <div class="fl u-slogan"></div>
+    <div class="fr head-r"></div>
+    <h2 class>مەھسۇلاتلار</h2>
+    <div class="head-r" style="font-size:15px;">
+        <a href="javascript:;" onclick="history.go(-1)" class="z-HReturn">
+            <s></s><b>قايتىش</b></a>
+    </div>
+    <button class="zSearchbtn" value="搜索">搜索</button>
+    <div class="search-section">
+        <div class="search-form clearfix">
+            <input type="text" id="txtSearch" class="search-text" placeholder="搜索您需要的商品" />
+            <button type="button" id="butSearch" class="search-btn iconfont" value="搜索">搜索</button>
+            <button type="button" id="butSearch" class="exit" value="搜索">取消</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $("#txtSearch").focus(function() {
+            $("#txtSearch").css({
+                background: "#FFFFCC"
+            });
+            var va1 = $("#txtSearch").val();
+            if (va1 == '搜索您需要的商品') {
+                $("#txtSearch").val("");
+            }
+        });
+        $("#txtSearch").blur(function() {
+            $("#txtSearch").css({
+                background: "#FFF"
+            });
+            var va2 = $("#txtSearch").val();
+            if (va2 == "") {
+                $("#txtSearch").val('搜索您需要的商品');
+            }
+        });
+        $("#butSearch").click(function() {
+            window.location.href = "{WEB_PATH}/mobile/s_tag/" + $("#txtSearch").val();
+        });
+        $(".zSearchbtn").click(function(event) {
+            $(".search-section").slideToggle("fast");
+        });
+        $(".exit").click(function(event) {
+            $(".search-section").slideToggle("fast");
+        });
+    });
+    </script>
+</header>
+<section class="navautos">
+    <div class="textnav2">
     </div>
     <div class="wrapnavautos">
-				<div id="navautos4">
-					<a href="{G_WEB_PATH}/?/mobile/home/userrecharge"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava4.png"></a>
-				</div>
-				<div class="textnavword">
-
-				<p style="text-align:center;font-size: 14px;font-family: "alkatip";color:#bbb">پۇل قاچىلاش</p>
-
-				
-				</div>
-		</div>    
-	<div class="wrapnavautos">
-				<div id="navautos3">
-					<a href="{G_WEB_PATH}/?/mobile/mobile/about"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava3.png"></a>
-				</div>
-				<div class="textnavword">
-
-				<p style="text-align:center;font-size:14px;font-family: "alkatip";">كۆرسەتمە</p>
-
-				
-				</div>
-		</div>
-	<div class="wrapnavautos">
-				<div id="navautos2">
-					<a href="{G_WEB_PATH}/?/mobile/shaidan/"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava2.png"></a>
-				</div>
-				<div class="textnavword">
-				<p style="text-align:center;font-size: 14px;font-family: "alkatip";color:#bbb">بەھىرلەر</p>
-				
-				</div>
-		</div>	
+        <div id="navautos4">
+            <a href="{G_WEB_PATH}/?/mobile/home/userrecharge"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava4.png"></a>
+        </div>
+        <div class="textnavword">
+            <p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb">پۇل قاچىلاش</p>
+        </div>
+    </div>
     <div class="wrapnavautos">
-				<div id="navautos1">
-					<a href="{WEB_PATH}/mobile/autolottery"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava1.png"></a>
-				</div>
-				<div class="textnavword">
-				<p style="text-align:center;font-size: 14px;font-family: "alkatip";color:#bbb">ۋاقىتلىق</p>
-				
-				</div>
-		</div>
-	</section>
-	
+        <div id="navautos3">
+            <a href="{G_WEB_PATH}/?/mobile/mobile/about"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava3.png"></a>
+        </div>
+        <div class="textnavword">
+            <p style="text-align:center;font-size:14px;font-family:alkatip;color:#bbb;">كۆرسەتكۈچ</p>
+        </div>
+    </div>
+    <div class="wrapnavautos">
+        <div id="navautos2">
+            <a href="{G_WEB_PATH}/?/mobile/shaidan/"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava2.png"></a>
+        </div>
+        <div class="textnavword">
+            <p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb"> بەھىرلەر</p>
+        </div>
+    </div>
+    <div class="wrapnavautos">
+        <div id="navautos1">
+            <a href="{WEB_PATH}/mobile/autolottery"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava1.png"></a>
+        </div>
+        <div class="textnavword">
+            <p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb">ۋاقىتلىق</p>
+        </div>
+    </div>
+</section>
 <hr>
-<div class="textnav">  
-</div> <hr/>
+<div class="textnav">
+</div>
+<hr/>

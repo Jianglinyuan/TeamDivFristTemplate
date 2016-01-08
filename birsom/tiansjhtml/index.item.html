@@ -81,20 +81,22 @@
 					<li class="NewestRec Record_titCur">يېڭىدىن قاتناشقانلار</li>
 				</ul>
 				<div class="Newest_Con hide" style="display:none;">
-					<p class="MsgIntro">{wc:fun:_cfg("web_name_two")}购是指只需1元就有机会买到想要的商品。即每件商品被平分成若干"等份"出售，每份1元，当一件商品所有"等份"售出后，根据{wc:fun:_cfg('web_name_two')}规则产生一名幸运者，该幸运者即可获得此商品。<a href="{WEB_PATH}/help/1" class="blue" target="_blank">查看详情&gt;&gt;</a></p>
+					<p class="MsgIntro">بىر سوم توغۇرلۇق قىسقىچە چۈشەندۈرلۈش<br/>
+						<a class="w-button w-button-simple" href="{WEB_PATH}/help/1" class="blue" target="_blank">تەپسىلاتىنى كۆرۈش</a>
+					</p>
 				</div>
 				<div class="My_Record hide" style="display:none;">
 					{wc:if uidcookie('uid')}
 					<ul>
 						{wc:loop $us2 $user}
 						{wc:if $user['uid']==uidcookie('uid')}
-						<li style="padding-left: 10px;">你参与本期{wc:fun:_cfg('web_name_two')}，{wc:fun:_cfg('web_name_two')}了{wc:$user['gonumber']}人次</li>
+						<li style="padding-left: 10px;">سىز مەزكۇر ساندا جەمئىي قاتناشقان قېتىم سانى{wc:$user['gonumber']}</li>
 						{wc:if:end}
 						{wc:loop:end}
 					</ul>
 					{wc:else}
 					<div class="My_RecordReg">
-						<b class="gray01">看不到？注册或登录后看看</b>
+						<b class="gray01"> تىزىملىتىپ كىرىپ ئاندىن كۆرۈڭ !</b>
 						<a href="{WEB_PATH}/member/user/register" class="My_Regbut">تىزىملىتىش</a>
 						<a href="{WEB_PATH}/member/user/login" class="My_Signbut">كىرىش</a>
 					</div>
