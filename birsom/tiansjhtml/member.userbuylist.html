@@ -68,8 +68,17 @@
 												<td class="column-detail column-l">
 													<ul class="order-goods-list">
 														<li class="first clearfix">
+														{wc:if $jiexiao}
 															<a title="" target="_blank" class="pic" href="{WEB_PATH}/goods/{wc:$rt['shopid']}"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:$jiexiao['thumb']}"></a>
 															<a target="_blank" href="{WEB_PATH}/goods/{wc:$rt['shopid']}" class="goods-name">{wc:$rt['shopname']}</a>
+														{wc:else}
+														{wc:php:start}
+															$shopid=$rt['shopid'];
+														{wc:php:end}
+														{wc:getone sql="select thumb from `@#_shoplist` where `id`='$shopid' and `q_showtime` = 'Y' LIMIT 1" return="pic"}
+															<a title="" target="_blank" class="pic" href="{WEB_PATH}/dataserver/{wc:$rt['shopid']}"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:$pic['thumb']}"></a>
+															<a target="_blank" href="{WEB_PATH}/dataserver/{wc:$rt['shopid']}" class="goods-name">{wc:$rt['shopname']}</a>	
+														{wc:if:end}
 															<span class="goods-price">您当前购买的是第{wc:$rt['shopqishu']}期，共<em style="color:#db3652;">{wc:$rt['gonumber']}</em>人次</span>
 															<span class="goods-link"></span>
 														</li>

@@ -44,48 +44,53 @@ $(function() {
             }
         };
         var d = function() {
-            var z = $(this);
-            var t = z.attr("id");
-            var v = t.replace("txtNum", "");
-            var q = z.next().next();
-            var r = parseInt(z.next().next().next().val());
-            var ten_per = Math.floor(parseInt(z.next().next().next().next().val()));
+            var cartNum = $(this);
+            var cartNumId = cartNum.attr("id");
+            var cartNumIdUpdate = cartNumId.replace("txtNum", "");
+            var cartNumIuput = cartNum.next().next();
+            var leftNum = parseInt(cartNum.next().next().next().val());
+            var totalNum = Math.floor(parseInt(cartNum.next().next().next().next().val()));
             var s, y, w = /^[1-9]{1}\d{0,6}$/;
             var u;
-            o = t;
+            o = cartNumId;
             var x = function() {
-                if (o != t) {
+                if (o != cartNumId) {
                     return
                 }
-                s = q.val();
-                y = z.val();
-                var pr = z.attr("price");
+                s = cartNumIuput.val();
+                y = cartNum.val();
+                var pr = cartNum.attr("price");
                 if (y != "" && s != y) {
                     var B = $(window).width();
-                    var A = (B) / 2 - z.offset().left - 127;
+                    var A = (B) / 2 - cartNum.offset().left - 127;
                     if (w.test(y)) {
                         u = parseInt(y);
-                        var max_num = (ten_per > u) ? u : ten_per;
-                        if (u <= max_num) {
-                            q.val(y)
+                        // var max_num = (totalNum > u) ? u : totalNum;
+                        // console.log("max_num:"+max_num);
+
+                        if (u <= leftNum) {
+                            cartNumIuput.val(y)
                         } else {
-                            u = max_num;
-                            e("最多" + u + "人次", z, -75, A);
-                            z.val(u);
-                            q.val(u)
+                            u = leftNum;
+                            e("最多" + u + "人次", cartNum, -75, A);
+                            cartNum.val(u);
+                            cartNumIuput.val(u)
                         }
-                        p(u, z);
-                        j(z, v, u,pr);
-                        i(z, u, max_num);
+                        p(u, cartNum);
+                        j(cartNum, cartNumIdUpdate, u,pr);
+                        console.log("leftNum"+leftNum);
+                        console.log("currentNum"+u);
+                        i(cartNum, u, leftNum);
                         m()
                     } else {
-                        e("只能输正整数哦", z, -75, A);
-                        z.val(s)
+                        e("只能输正整数哦", cartNum, -75, A);
+                        cartNum.val(s)
                     }
                 }
-                setTimeout(x, 200)
+                setTimeout(x, 200);
             };
-            x()
+            x();
+            // console.log("max_num:"+max_num);
         };
         var p = function(r, u) {
             var t = u.parent().parent().parent();
@@ -123,41 +128,47 @@ $(function() {
             };
             GetJPData(Gobal.Webpath, "ajax", "addShopCart/" + t + "/" + r+"/cart", s)
         };
-        var k = function(w, v) {
-            var u = v.attr("id");
+        var k = function(addNum, input) {
+            var u = input.attr("id");
             var s = u.replace("txtNum", "");
-            var r = parseInt(v.next().next().next().val());
-            var ten_per = Math.floor(parseInt(v.next().next().next().next().val()));
-            var q = v.next().next();
-            var pr = v.attr("price");
-            var t = parseInt(q.val()) + w;
-            var max_num = (ten_per > t) ? t : ten_per;
-            if (t > 0 && t <= max_num) {
-                i(v, t, max_num);
-                q.val(t);
-                v.val(t);
-                p(t, v);
-                j(v, s, t, pr);
-                m()
+            var leftNum = parseInt(input.next().next().next().val());
+            var totalNum = Math.floor(parseInt(input.next().next().next().next().val()));
+            var q = input.next().next();
+            var pr = input.attr("price");
+            var nextNum = parseInt(q.val()) + addNum;
+            // var max_num = (ten_per > t) ? t : ten_per;
+            if (nextNum > 0 && nextNum <= leftNum) {
+                i(input, nextNum, leftNum);
+                q.val(nextNum);
+                input.val(nextNum);
+                p(nextNum, input);
+                j(input, s, nextNum, pr);
+                m();
             }
         };
-        var i = function(r, t, s) {
-            var q = r.prev();
-            var u = r.next();
-            if (s == 1) {
-                q.addClass("z-jiandis");
-                u.addClass("z-jiadis");
+        var i = function(r, currentNum, leftNum) {
+            var jian = r.prev();
+            var jia = r.next();
+            console.log("currentNum in i" +currentNum);
+            console.log("leftNum in i" +leftNum);
+            if (leftNum == 1) {
+                jian.addClass("z-jiandis");
+                jia.removeClass("z-jiadis");
+                console.log(1);
             } else {
-                if (t == 1) {
-                    q.addClass("z-jiandis");
-                    u.removeClass("z-jiadis");
+                if (currentNum == 1) {
+                    jian.addClass("z-jiandis");
+                    jia.removeClass("z-jiadis");
+                    console.log(2);
                 } else {
-                    if (t == s) {
-                        q.removeClass("z-jiandis");
-                        u.addClass("z-jiadis");
+                    if (currentNum == leftNum) {
+                        jian.removeClass("z-jiandis");
+                        jia.addClass("z-jiadis");
+                        console.log(3);
                     } else {
-                        q.removeClass("z-jiandis");
-                        u.removeClass("z-jiadis");
+                        jian.removeClass("z-jiandis");
+                        jia.removeClass("z-jiadis");
+                        console.log(4);
                     }
                 }
             }

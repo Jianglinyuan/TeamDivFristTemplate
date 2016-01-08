@@ -4102,9 +4102,8 @@ dl:hover span.u-close, dl.hover span.u-close {
 	left: 7px;
 }
 .u-mui-tab li.f-cart a.u-menus em {
-	padding: 3px 1px 0;
 	min-width: 12px;
-	height: 11px;
+	height: 13px;
 	border-radius: 14px;
 	line-height: 14px;
 	text-align: center;
@@ -4115,6 +4114,7 @@ dl:hover span.u-close, dl.hover span.u-close {
 	left: 12px;
 	_left: 14px;
 	font-size: 10px;
+	padding: 1px 1px 0;
 }
 .u-mui-tab li.f-customer {
 	height: 40px;
