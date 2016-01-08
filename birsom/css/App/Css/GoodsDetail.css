@@ -70,11 +70,11 @@
 	margin-bottom: -1px;
 }
 .show_Period .Period_list li {
-	float:left;
+	float:right;
 	width:107px;
 	height:31px;
-	border-right:1px solid #E4E4E4;
 	border-bottom: 1px solid #E4E4E4;
+	border-left:1px solid #E4E4E4;
 }
 .show_Period .Period_list li a {
 	width:107px;

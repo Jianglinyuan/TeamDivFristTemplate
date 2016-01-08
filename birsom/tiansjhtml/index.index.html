@@ -176,11 +176,19 @@
                                 <li class="w-goodsList-item row-first">
                                     <div class="w-goods w-goods-ing" data-gid="1093" data-period="212302410" data-price="8090" data-existingTimes="1060" data-regularBuyMax="1" data-buyUnit="1">
                                         <div class="w-goods-pic">
-                                            <a href="{WEB_PATH}/goods/{wc:$renqi['id']}" title="{wc:$renqi['title']}" target="_blank">
+                                        {wc:php:start}
+                                            $path = '';
+                                            if (empty($renqi['q_uid']) && $renqi['q_showtime']=='N') {
+                                                $path = 'goods';
+                                            } else {
+                                                $path = 'dataserver';
+                                            }
+                                        {wc:php:end}
+                                            <a href="{WEB_PATH}/{wc:$path}/{wc:$renqi['id']}" title="{wc:$renqi['title']}" target="_blank">
                                                 <img width="200" height="150" alt="{wc:$renqi['title']}" src="{G_UPLOAD_PATH}/{wc:$renqi['thumb']}" onerror="this.src='http://mimg.127.net/p/yy/lib/img/products/m.png'" style="height:150px;" />
                                             </a>
                                         </div>
-                                        <p class="w-goods-title f-txtabb"><a title="{wc:$renqi['title']}" href="http://1.163.com/detail/1093-212302410.html" target="_blank">{wc:$renqi['title']}</a></p>
+                                        <p class="w-goods-title f-txtabb"><a title="{wc:$renqi['title']}" href="{WEB_PATH}/{wc:$path}/{wc:$renqi['id']}" target="_blank">{wc:$renqi['title']}</a></p>
                                         <p class="w-goods-price">
                                             جەمئىي ئادەم قېتىم سانى：{wc:$renqi['zongrenshu']}
                                         </p>
@@ -292,11 +300,19 @@
                             <li class="w-goodsList-item">
                                 <div class="w-goods w-goods-ing" data-gid="1420" data-period="212302375" data-price="999" data-existingTimes="247" data-regularBuyMax="1" data-buyUnit="1">
                                     <div class="w-goods-pic">
-                                        <a href="{WEB_PATH}/goods/{wc:$g_l['id']}" title="{wc:$g_l['title']}" target="_blank">
+                                        {wc:php:start}
+                                            $path = '';
+                                            if ( empty($g_l['q_uid']) && $g_l['q_showtime']=='N' ) {
+                                                $path = 'goods';
+                                            } else {
+                                                $path = 'dataserver';
+                                            }
+                                        {wc:php:end}
+                                        <a href="{WEB_PATH}/{wc:$path}/{wc:$g_l['id']}" title="{wc:$g_l['title']}" target="_blank">
                                             <img width="200" height="150" alt="{wc:$g_l['title']}" src="{G_UPLOAD_PATH}/{wc:$g_l['thumb']}"  onerror="this.src='http://mimg.127.net/p/yy/lib/img/products/m.png'" style="width:200px;height:150px;" />
                                         </a>
                                     </div>
-                                    <p class="w-goods-title f-txtabb"><a title="{wc:$g_l['title']}" href="{WEB_PATH}/goods/{wc:$g_l['id']}" target="_blank">{wc:$g_l['title']}</a></p>
+                                    <p class="w-goods-title f-txtabb"><a title="{wc:$g_l['title']}" href="{WEB_PATH}/{wc:$path}/{wc:$g_l['id']}" target="_blank">{wc:$g_l['title']}</a></p>
                                     <p class="w-goods-price">
                                         جەمئىي ئادەم قېتىم سانى：{wc:$g_l['zongrenshu']}
                                     </p>
@@ -350,11 +366,19 @@
                             <li class="w-goodsList-item">
                                 <div class="w-goods w-goods-brief">
                                     <div class="w-goods-pic">
-                                        <a href="{WEB_PATH}/goods/{wc:$newest['id']}" title="{wc:$newest['title']}" target="_blank">
+                                        {wc:php:start}
+                                            $path = '';
+                                            if ( empty($newest['q_uid']) && $newest['q_showtime']=='N' ) {
+                                                $path = 'goods';
+                                            } else {
+                                                $path = 'dataserver';
+                                            }
+                                        {wc:php:end}
+                                        <a href="{WEB_PATH}/{wc:$path}/{wc:$newest['id']}" title="{wc:$newest['title']}" target="_blank">
                                             <img width="200" height="150" alt="{wc:$newest['title']}" src="{G_UPLOAD_PATH}/{wc:$newest['thumb']}"  onerror="this.src='http://mimg.127.net/p/yy/lib/img/products/m.png'" style="width:200px;height:150px;" />
                                         </a>
                                     </div>
-                                    <p class="w-goods-title f-txtabb"><a title="{wc:$newest['title']}" href="{WEB_PATH}/goods/{wc:$newest['id']}" target="_blank">{wc:$newest['title']}</a></p>
+                                    <p class="w-goods-title f-txtabb"><a title="{wc:$newest['title']}" href="{WEB_PATH}/{wc:$path}/{wc:$newest['id']}" target="_blank">{wc:$newest['title']}</a></p>
                                     <p class="w-goods-price">
                                         جەمئىي ئادەم قېتىم سانى：{wc:$newest['zongrenshu']}
                                     </p>
