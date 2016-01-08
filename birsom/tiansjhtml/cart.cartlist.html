@@ -77,13 +77,13 @@
                     <div class="col col-2">{wc:$shops['money']}元</div>
                     <div class="col col-3">
 						<div class="change-goods-num num">
-                            <a href="javascript:;" class="J_minus" val="{wc:$shops['id']}"><i class="iconfont"></i></a>
+                            <a href="javascript:;" class="J_minus" val="{wc:$shops['id']}"><i class="iconfont">-</i></a>
 							<input type="type" val="{wc:$shops['id']}" onkeyup="value=value.replace(/\D/g,'')" value="{wc:$shops['cart_gorenci']}" class="goods-num" />
-                            <a href="javascript:;" class="J_plus" val="{wc:$shops['id']}"><i class="iconfont"></i></a>
+                            <a href="javascript:;" class="J_plus" val="{wc:$shops['id']}"><i class="iconfont">+</i></a>
                         </div>
                     </div>
                     <div class="col col-4"><em>{wc:$shops['cart_shenyu']}</em>人次</div>
-                    <div class="col col-5"><a  href="javascript:;" onclick="delcart({wc:$shops['id']})" class="del J_delGoods"><i class="iconfont"></i></a></div>
+                    <div class="col col-5"><a  href="javascript:;" onclick="delcart({wc:$shops['id']})" class="del J_delGoods"><i class="iconfont">&times;</i></a></div>
                 </div>
             </dd>
 			{wc:loop:end}

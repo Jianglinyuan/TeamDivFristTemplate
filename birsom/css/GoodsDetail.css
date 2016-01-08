@@ -1305,8 +1305,9 @@ div.jqZoomBigPic img {
 	padding-left:4px;
 	padding-top:7px;
 	text-align: right;
-	font-size: 13px;
+	font-size: 14px;
 	font-family: "alkatip";
+	direction: rtl;
 }
 .AllRecW .AllRecR .AllRecR_T a.blue {
 	margin-right:5px;

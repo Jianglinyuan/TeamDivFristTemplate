@@ -539,7 +539,7 @@ dl.goods-info-box .goods-info-foot a:hover {
     height: 435px;
 }
 .m-detail-period-main-wrap {
-    height: 435px;
+    height: 415px;
     background-color: #fff;
     padding: 10px;
 }
@@ -1891,9 +1891,14 @@ img.zoom-tiny-image {
 .span14.J_mi_goodsPic_block {
 	border-right: 1px solid #ededed;
 }
-#goodsName {
-	height: 50px;
+.goodsName {
+	height: 44px;
 	direction: rtl;
+    font-family: "alkatip";
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    line-height: 22px;
 }
 .m-detail-period {
     text-align: right;
@@ -1987,4 +1992,30 @@ i.arrow-right {
 .last-winner {
 	text-align: center;
 	margin-top: 20px;
+}
+#zx .mail {
+    height: 19px;
+    direction: rtl;
+    text-align: right;
+}
+#zx li.P-bar01 {
+	width: 35%;
+    float: left;
+    text-align: left;
+}
+#zx .Result_Progress-bar {
+    width: 208px;
+    height: 44px;
+    float: left;
+    display: inline;
+    margin: 20px 0;
+}
+#zx .m-detail-period-main-wrap {
+	padding: 20px;
+}
+#zx ul.Pro-bar-li li, #zx ul.Pro-bar-li li em {
+	font-size: 14px;
+}
+#zx ul.Pro-bar-li li {
+	margin-top: 5px;
 }

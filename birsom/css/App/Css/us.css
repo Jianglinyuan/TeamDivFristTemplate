@@ -6,7 +6,7 @@
 ---------------------------------------------------------------------- */
 @font-face {
     font-family: "alkatip";
-    src:url('{G_TEMPLATES_CSS}/alkatip.ttf')format('truetype');
+    src:url('../../alkatip.ttf')format('truetype');
     }
 
 body, div, table, td, p, h1, h2, h3, h4, h5, em, span, a, fieldsetform, textarea, ul, li, dl, dt, dd, form {
@@ -18,7 +18,7 @@ body, div, table, td, p, h1, h2, h3, h4, h5, em, span, a, fieldsetform, textarea
 body {
 	color: #333;
 	width: 100%;
-	font-size: 12px;
+	font-size: 13px;
 	font-family: "alkatip";
 	-webkit-text-size-adjust: none;
 	background: #ececec;
@@ -3236,7 +3236,7 @@ html {
 	left: -9px;
 }
 .log_reg_box h2 {
-	font-size: 26px;
+	font-size: 25px;
 	color: #eb4455;
 	font-weight: normal;
 	text-align: center;
@@ -3381,7 +3381,8 @@ html {
 	color: #999;
 	position: relative;
 	width: 260px;
-	margin: 0 auto
+	margin: 0 auto;
+	direction: rtl;
 }
 .agree_to_the_terms .Validform_checktip, .agree_to_the_terms .info {
 	top: 4px;

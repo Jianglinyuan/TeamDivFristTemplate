@@ -100,11 +100,11 @@
                 <b>{wc:$item['title']}<span></span></b>
                 <p class="price"><em class="arial gray">￥{wc:$item['money']}</em></p>
 				{wc:if empty($item['q_end_time'])}
-				<div class="Progress-bar"><p class="u-progress" title="{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%"><span class="pgbar" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"><span class="pging"></span></span></p>
+				<div class="Progress-bar"><p class="u-progress" title="{wc:fun:width($item['canyurenshu'],$item['zongrenshu'],100)}%"><span class="pgbar" style="width:{wc:fun:width($item['canyurenshu'],$item['zongrenshu'],100)}%;"><span class="pging"></span></span></p>
                     <ul class="Pro-bar-li">
-                         <li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>قاتناشقىنى</li>
-                         <li class="P-bar02"><em>{wc:$shop['zongrenshu']}</em>جەمئىي</li>
-                         <li class="P-bar03"><em>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>قالغىنى</li>
+                         <li class="P-bar01"><em>{wc:$item['canyurenshu']}</em>قاتناشقىنى</li>
+                         <li class="P-bar02"><em>{wc:$item['zongrenshu']}</em>جەمئىي</li>
+                         <li class="P-bar03"><em>{wc:$item['zongrenshu']-$item['canyurenshu']}</em>قالغىنى</li>
                     </ul>
                 </div>
 				{wc:if:end}

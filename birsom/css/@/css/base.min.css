@@ -2867,16 +2867,18 @@ body {
 }
 .num_del, .num_add, .num_dig {
 	width: 28px;
-	height: 28px;
+	/*height: 28px;*/
 	overflow: hidden;
 	display: inline-block;
 	border: 1px solid #cfcfcf;
 	text-align: center;
 	font-size: 24px;
 	color: #999;
-	line-height: 28px;
+	line-height: 15px;
 	vertical-align: middle;
 	background: #f4f4f4;
+	padding: 5px 0;
+    /*height: 15px;*/
 }
 .u-popup-number {
 	width: 220px;
@@ -2894,6 +2896,12 @@ body {
 }
 .num_add {
 	margin-right: 5px;
+    padding: 11px 0 0 0;
+    height: 14px;
+}
+.num_add:hover, .num_del:hover {
+	text-decoration: none;
+	color: #333;
 }
 .num_ban {
 	color: #ccc;
@@ -2909,6 +2917,8 @@ body {
 	border-left: none;
 	border-right: none;
 	font-size: 18px;
+	padding-top: 5px;
+	height: 15px;
 }
 .g-pay-tip {
 	position: relative;
@@ -4091,9 +4101,9 @@ dl:hover span.u-close, dl.hover span.u-close {
 	left: 7px;
 }
 .u-mui-tab li.f-cart a.u-menus em {
-	padding: 0 1px;
+	padding: 3px 1px 0;
 	min-width: 12px;
-	height: 14px;
+	height: 11px;
 	border-radius: 14px;
 	line-height: 14px;
 	text-align: center;
@@ -5765,17 +5775,24 @@ dd.del {
 	background-position: -12px -12px
 }
 #no-goods {
-	width: 240px;
+	width: 280px;
 	margin: 0 auto;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 #no-goods img {
 	float: right;
 }
 #no-goods span {
 	float: right;
-	font-size: 14px;
+	font-size: 12px;
 	height: 49px;
 	line-height: 49px;
 	margin-right: 10px;
+}
+#right-now {
+	text-align: center;
+	margin-top: 20px;
+}
+.zx-foot {
+	clear: both;
 }

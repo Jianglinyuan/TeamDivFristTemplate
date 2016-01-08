@@ -4,13 +4,13 @@ html {
 
 @font-face {
     font-family: "alkatip";
-    src:url('{G_TEMPLATES_CSS}/alkatip.ttf')format('truetype');
+    src:url('../../alkatip.ttf')format('truetype');
     }
 
 body {
   color: #808080;
   background: #fff;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.666;
   font-family: "alkatip";
 }
@@ -236,7 +236,7 @@ img {
 
 .w-button-l {
   height: 35px;
-  line-height: 35px;
+  line-height: 40px;
   font-size: 15px;
   border-radius: 4px;
 }
