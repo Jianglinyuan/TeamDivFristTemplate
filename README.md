@@ -6,7 +6,7 @@
 #### 1\. `controller\go\index.action.php`->`function dataserver`:
 
 * 将“没有这个商品”下面的一段代码注释掉：
-```
+```php
 		if(!$item){
 			_message("没有这个商品!");
 		}
@@ -17,7 +17,7 @@
 ```	
 
 * 还有“该商品正在进行中”下面那一段也注释掉：
-```
+```php
 		if(empty($item['q_user_code'])){
 			_message("该商品正在进行中...",WEB_PATH.'/goods/'.$itemid);
 		}
@@ -28,12 +28,12 @@
 ```
 
 * 找到`$itemlist`的定义，在`select`里加上`, q_showtime`：
-```
+```php
 $itemlist = $this->db->GetList("select id,sid,q_uid,qishu,q_showtime from `@#_shoplist` where `sid`='$item[sid]' order by `qishu` DESC");
 ```
 
 * 在期数显示的那段代码下方的第一个`if`，括号中增加是否正在倒计时的判断：
-```
+```php
 		//期数显示
 		$itemlist = $this->db->GetList("select id,sid,q_uid,qishu,q_showtime from `@#_shoplist` where `sid`='$item[sid]' order by `qishu` DESC");
 		$loopqishu='<ul class="Period_list">';
@@ -44,12 +44,10 @@ $itemlist = $this->db->GetList("select id,sid,q_uid,qishu,q_showtime from `@#_sh
 		}
 ```
 
-- - -
-
 #### 2\. `controller\adminwei\setting.action.php`->`function config`:
 
 将倒计时300秒上限改为3599秒（59分59秒）：
-```
+```php
 			if($goods_end_time >= 3599){
 
 				$goods_end_time = 3599;
@@ -57,17 +55,15 @@ $itemlist = $this->db->GetList("select id,sid,q_uid,qishu,q_showtime from `@#_sh
 			}
 ```	
 
-- - -
-
 #### 3\. `controller\adminwei\tpl\config.system.tpl.php`:
 
 第35行，将提示也更新一下：
-```
+```php
 <span>单位(秒),不低于30秒，不大于3599秒（59分59秒）</span>
 ```
 (2016-1-8 18:07 end)
 
-- - -
+
 
 #移动搜索页面使用说明
 
