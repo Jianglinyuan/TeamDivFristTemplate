@@ -1208,7 +1208,7 @@
 	background-position:-106px -1px;
 }
 .ygRecord {
-	width:1000px;
+	width:1100px;
 	margin: 0 auto;
 	overflow:hidden;
 	text-align: right;
@@ -1819,7 +1819,7 @@ a.go_Shopping12:hover {
 .m-detail-mainTab-calcRule {
 height: 162px;
 overflow: hidden;
-margin-top: 15px;
+margin-top: 35px;
 }
 .m-detail-mainTab-calcRule h4 {
 float: left;
@@ -1844,13 +1844,13 @@ border-left: 0;
 margin: 30px auto 10px;
 }
 
-.ico {
+/*.ico {
 display: inline-block;
 vertical-align: middle;
 background: url('/templates/birsom/images/mix-icon.png') no-repeat;
 _background-image: url('/templates/birsom/images/mix-icon_ie6.png');
 overflow: hidden;
-}
+}*/
 .ico-text {
 width: 32px;
 height: 44px;
@@ -1870,12 +1870,13 @@ color: #3c3c3c;
 }
  span.index {
 display: inline-block;
-margin-right: 10px;
 width: 16px;
 height: 16px;
 line-height: 16px;
 border-radius: 50%;
 text-align: center;
+margin-left: 7px;
+float: right;
 }
 .m-detail-mainTab-calcRule .index {
 background-color: #4f4846;
