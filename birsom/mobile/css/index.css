@@ -1,11 +1,11 @@
 @charset "utf-8";
 @font-face {
     font-family: "alkatip";
-    src:url('{G_TEMPLATES_MOBILE_CSS}/alkatip.ttf')format('truetype');
+    src:url('alkatip.ttf')format('truetype');
 }
 body {
    font-family: "alkatip";
-   font-size: 12px;
+   font-size: 13px;
    background:#f4f4f4;
 }
 .h5-yygcms-v1 {

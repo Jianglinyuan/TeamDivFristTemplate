@@ -3,6 +3,13 @@
 	margin:0;
 	padding:0;
 }
+
+@font-face {
+    font-family: "alkatip";
+    src:url('../alkatip.ttf')format('truetype');
+    }
+
+
 body,button,input,select,textarea {
 	font-size:12px;
 	font-family: "alkatip";

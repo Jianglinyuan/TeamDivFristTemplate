@@ -1,11 +1,11 @@
 
 @font-face {
     font-family: "alkatip";
-    src:url('{G_TEMPLATES_MOBILE_CSS}/alkatip.ttf')format('truetype');
+    src:url('alkatip.ttf')format('truetype');
 }
 body{
    font-family: "alkatip";
-   font-size: 12px;
+   font-size: 13px;
 }
 
 @charset "utf-8";
@@ -14,7 +14,7 @@ body{
 	padding:0;
 }
 button,input,select,textarea {
-	font-size:12px;
+	font-size:13px;
 	font-family: "alkatip";
 }
 :focus {
@@ -27,7 +27,7 @@ ul,li {
 	list-style:none;
 }
 div,ul,li,dl,dt,dd,table,td,input {
-	font-size:12px;
+	font-size:13px;
 }
 input,select,textarea {
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
@@ -59,19 +59,19 @@ input,select,textarea {
 }
 .blank5 {
 	line-height:0;
-	font-size:1px;
+	font-size:13px;
 	height:5px;
 	clear:both;
 }
 .blank10 {
 	line-height:0;
-	font-size:1px;
+	font-size:13px;
 	height:10px;
 	clear:both;
 }
 ins {
 	text-decoration:none;
-	font-size:12px;
+	font-size:13px;
 	font-family: "alkatip";
 }
 em {

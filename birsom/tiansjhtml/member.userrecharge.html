@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/App/Css/layout-recharge.css"/>
 <!-- <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/layout-recharge.css"/> -->
-<div class="container breadcrumbs"><span>账户充值</span><span class="sep">/</span><a href="/">首页</a></div><link href="{G_TEMPLATES_CSS}/mobile/login.css" rel="stylesheet" type="text/css" /></head>
+<div class="container breadcrumbs"><span>قىممەت تولۇقلاش</span><span class="sep">/</span><a href="/">باش بەت</a></div><link href="{G_TEMPLATES_CSS}/mobile/login.css" rel="stylesheet" type="text/css" /></head>
 <script>
 $(function(){
 	var je=$("#ulMoneyList li");
@@ -39,24 +39,23 @@ $(function(){
 				<div class="xm-line-box uc-box">
 					<div class="box-hd">
                     <form id="toPayForm" name="toPayForm" action="{WEB_PATH}/member/cart/addmoney" method="post" target="_blank">
-<div class="R-content">
-						<h3 class="title">账户充值</h3>
-
+                    <div class="R-content">
+						<h3 class="title">قىممەت تولۇقلاش</h3>
 					</div>
 
 					<div class="box-bd">
 					<form id="toPayForm" name="toPayForm" action="{WEB_PATH}/member/cart/addmoney" method="post" target="_blank">
 						<div class="cash-start">
-							<h2 class="title">请您选择充值金额</h2>
+							<h2 class="title">قاچىلىماقچى بولغان پۇل سوممىسىنى تاللاڭ</h2>
 
 							<div class="select">
 								<ul id="ulMoneyList">
-									<li class="selected" style="margin-right:0;"><input  type="radio" id="rd10" name="money" value="10" checked="checked"> <label for="rd10">充值 <strong>￥</strong><b>10</b></label></li>
+									<li class="selected" style="margin-right:0;"><input  type="radio" id="rd10" name="money" value="10" checked="checked"> <label for="rd10"><b>10</b><strong>سوم</strong></label></li>
 
-									<li><input type="radio" name="money" value="50" id="rd50"> <label for="rd50">充值 <strong>￥</strong><b>50</b></label></li>
-									<li><input type="radio" name="money" value="100" id="rd100"> <label for="rd100">充值 <strong>￥</strong><b>100</b></label></li>
-									<li><input type="radio" name="money" value="200" id="rd200"> <label for="rd200">充值 <strong>￥</strong><b>200</b></label></li>
-									<li class="custom"><input type="radio" value="0" name="money" id="rdOther"> <label for="rdOther">其它金额</label><input value="" id="txtOtherMoney" type="text" class="enter" maxlength="7" /></li>
+									<li><input type="radio" name="money" value="50" id="rd50"> <label for="rd50"><b>50</b><strong>سوم</strong></label></li>
+									<li><input type="radio" name="money" value="100" id="rd100"> <label for="rd100"><b>100</b><strong>سوم</strong></label></li>
+									<li><input type="radio" name="money" value="200" id="rd200"> <label for="rd200"><b>200</b><strong>سوم</strong></label></li>
+									<li class="custom"><input type="radio" value="0" name="money" id="rdOther"> <label for="rdOther">باشقا سومما</label><input value="" id="txtOtherMoney" type="text" class="enter" maxlength="7" /></li>
 								</ul>
 							</div>
 
@@ -67,7 +66,7 @@ $(function(){
 				.yeepay_bank input{ float:left;}
 			</style>
 
-		<p class="leix">支付平台支付：</p>
+		<p class="leix">: تور ئارقىلىق پۇل تۆلەش</p>
 		<ul class="payment yeepay_click clearfix">
           {wc:loop $paylist  $pay}
 			<li>
@@ -78,60 +77,22 @@ $(function(){
            {wc:loop:end}
 		</ul>
 		<div id="pay-wrapper" class="clearfix">
-			<p class="much">应付金额：<span class="yf"><strong>￥</strong><span id="Money">10</span></span></p>
+			<p class="much">تۆلەشكە تېگىشلىك سومما ：<span class="yf"><span id="Money">10</span><strong>سوم</strong></span></p>
 			<h6>
 				<input type="hidden" id="hidPayName" name="payName" value="">
 				<input type="hidden" id="hidPayBank" name="payBank" value="0">
 				<input type="hidden" id="hidMoney" name="money" value="10">
-				<input id="submit_ok" class="bluebut imm" type="submit" name="submit" value="立即充值" title="立即充值">
+				<input id="submit_ok" class="bluebut imm" type="submit" name="submit" value="دەرھال قاچىلاش" title="دەرھال قاچىلاش">
 			</form>
 			</h6>
 		</div>
-
-  <div id="recharge-card">
-		<p class="leix">充值卡支付：</p>
-                <div class="registerCon">
-                    <form action="{WEB_PATH}/member/cart/card_addmoney" method="post">
-                        <ul>
-                            <li class="accAndPwd">
-                                <dl><input id="txtAccount" type="text" placeholder="请输入卡号" class="lEmail" name="czknum" maxlength="20"><s class="rs4"></s></dl>
-                                <dl>
-                                    <input type="password" id="txtPassword" class="lPwd" placeholder="请输入卡密" name="password" maxlength="20">
-                                    <s class="rs3"></s>
-                                </dl>
-                            </li>
-                            <li><input type="submit" value=" 确认充值" /></li>
-                    </form>
-
-                    <li class="rSelect" style="width: 80%;"><!-- <a href="FindPassword.html">忘记密码？</a> -->
-                        <a href="http://item.taobao.com" hidefocus="true" target="_blank">1元充值卡购买</a> |
-                        <a href="http://item.taobao.com" hidefocus="true" target="_blank">10元充值卡购买</a>
-
-                        <a href="http://item.taobao.com" hidefocus="true" target="_blank">50元充值卡购买</a>  |
-                        <a href="http://item.taobao.com" hidefocus="true" target="_blank">100元充值卡购买</a>
-
-                        <a href="http://item.taobao.com" hidefocus="true" target="_blank">500元充值卡购买</a></li>
-
-                </div>
-            </div>
-
-
-							<div id="payAltBox" style="display:none;">
-								<div class="prompt_box">
-									<p class="pic"><em></em>请您在新开的页面上完成支付！</p>
-									<p class="ts">付款完成之前，请不要关闭本窗口！<br>完成付款后跟据您的个人情况完成此操作！</p>
-									<ul>
-										<li><a href="{WEB_PATH}/member/home/userbalance" class="look" title="查看充值记录">查看充值记录 </a></li>
-										<li><a href="javascript:gotoClick();" class="look" id="btnReSelect" title="重选支付方式">重选支付方式</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
+	</div>
+	</div>
+	</form>
+	</div>
+	</div>
+	</div>
+	</div>
 	</div>
 </div>
 

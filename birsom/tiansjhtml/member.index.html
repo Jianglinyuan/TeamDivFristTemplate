@@ -1,6 +1,6 @@
 {wc:templates "index","pagehead"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
-<div class="container breadcrumbs"><span>个人中心</span><span class="sep">/</span><a href="/">首页</a></div>
+<div class="container breadcrumbs"><span>ئەزالىق مەركىزى</span><span class="sep">/</span><a href="/"> باش بەت</a></div>
 <div class="container">
     <div class="uc-full-box">
         <div class="row">
@@ -8,7 +8,7 @@
             <div class="span16">
 				<div class="xm-box uc-box">
 					<div class="xm-line-box uc-info-box">
-                        <div class="box-bd clearfix"><p style="width:80px;float:right;margin-left:30px;"><img class="uc-avatar" src="{G_UPLOAD_PATH}/{wc:fun:get_user_img('160160')}" alt="{wc:fun:get_user_name(get_user_arr(),'username')}"><a href="{WEB_PATH}/member/home/userphoto" class="blue" style="margin-left:10px;">修改头像</a></p>
+                        <div class="box-bd clearfix"><p style="width:120px;float:right;margin-left:30px;"><img class="uc-avatar" src="{G_UPLOAD_PATH}/{wc:fun:get_user_img('160160')}" alt="{wc:fun:get_user_name(get_user_arr(),'username')}"><a href="{WEB_PATH}/member/home/userphoto" class="blue" style="margin-left:10px;">باش سۈرەت</a></p>
 							<div class="uc-info">
 								<h3 class="uc-welcome">
 									<span class="user-name">
@@ -27,10 +27,10 @@
 									{wc:$member['email']}
 									{wc:if:end}
 									)
-									{wc:if:end}</span>您好～</h3>
+									{wc:if:end}</span>مەرھابا</h3>
 								<div class="uc-info-detail">
 								  <div class="info-notice">
-										<div class="notice-safe-tip uc-tooltip">
+										<!--div class="notice-safe-tip uc-tooltip">
 										如何获取经验值？
 										<div class="uc-tooltip-popup hide" style="display: none;">
 											<ol>
@@ -39,26 +39,18 @@
 											</ol>
 											<span class="arrow"></span>
 										</div>
-										</div>
-
-									<span class="sep">|</span>
-									 {wc:$dengji_x} 点经验值<span class="icon-common"></span>：升级（{wc:$dengji_2['name']}）需要
-									<span class="sep">|</span>
-									{wc:$dengji_1['name']}<span class="icon-common"></span>：目前等级
-									<span class="sep">|</span>
-									{wc:$member['jingyan']}<span class="icon-common"></span>：经验值
-									<a href="{WEB_PATH}/member/home/modify" class="blue" style="float: right; margin-left: 5px;">编辑资料</a>
+										</div-->
+									<a href="{WEB_PATH}/member/home/modify" class="blue" style="float: right; margin-left: 5px;">ماتىريالنى تەھرىرلاش</a>
   								  </div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="xm-line-box uc-home-box">
-						<div class="box-hd"><h3 class="title">本帐户余额</h3></div>
 						<div class="box-bd">
 							<div class="cash-overall clearfix">
-								<div class="balance"><span class="type">元<b>{wc:fun:uidcookie('money')}</b>：可用余额</span></div>
-								<div class="mobile"><a href="{WEB_PATH}/member/home/userrecharge" title="我要充值">我要充值</a> ：为了更好的体验，请保证可用余额</div>
+								<div class="balance"><span class="type">ئىشلەتكىلى بولىدىغان قالدۇق سومما ：<b>{wc:fun:uidcookie('money')}</b>سوم</span></div>
+								<div class="mobile"><a href="{WEB_PATH}/member/home/userrecharge" title="قىممەت تولۇقلايمەن">قىممەت تولۇقلايمەن </a>: پائالىيەتكە قاتنىشىشىڭىزغا تەسىر يەتمەسلىكى ئۈچۈن يېتەرلىك قالدۇق سوممىڭىزنىڭ بولىشىغا كاپالەتلىك قىلىڭ</div>
 							</div>
 						</div>
 					</div>

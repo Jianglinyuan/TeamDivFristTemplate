@@ -1,6 +1,6 @@
 {wc:templates "index","pagehead"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
-<div class="container breadcrumbs"><span>账户明细</span><span class="sep">/</span><a href="/">首页</a></div>
+<div class="container breadcrumbs"><span>ھېسابات تەپسىلاتى</span><span class="sep">/</span><a href="/">باش بەت</a></div>
 <div class="container">
     <div class="uc-full-box">
         <div class="row">
@@ -8,7 +8,7 @@
 			<div class="span16">
 				<div class="xm-line-box uc-box">
 					<div class="box-hd">
-						<h3 class="title">账户明细</h3>
+						<h3 class="title">ھېسابات تەپسىلاتى</h3>
 						<!--div class="more">
 							<div class="subMenu">
 								<a href="javascript:;" class="current">已晒单</a>
@@ -18,11 +18,10 @@
 						</div-->
 					</div>
 					<div class="xm-line-box uc-home-box">
-						<div class="box-hd"><h3 class="title">您的账户可用余额</h3></div>
 						<div class="box-bd">
 							<div class="cash-overall clearfix">
-								<div class="balance"><span class="type">可用余额：<b>{wc:fun:uidcookie('money')}</b>元</span></div>
-								<div class="mobile">为了更好的体验，请保证可用余额： <a href="{WEB_PATH}/member/home/userrecharge" title="我要充值">我要充值</a></div>
+								<div class="balance"><span class="type">ئىشلەتكىلى بولىدىغان قالدۇق سومما ：<b>{wc:fun:uidcookie('money')}</b>سوم</span></div>
+								<div class="mobile"><a href="{WEB_PATH}/member/home/userrecharge" title="قىممەت تولۇقلايمەن">قىممەت تولۇقلايمەن </a>: پائالىيەتكە قاتنىشىشىڭىزغا تەسىر يەتمەسلىكى ئۈچۈن يېتەرلىك قالدۇق سوممىڭىزنىڭ بولىشىغا كاپالەتلىك قىلىڭ</div>
 							</div>
 						</div>
 					</div>
@@ -35,18 +34,21 @@
 										<thead>
 											<tr>
 												<th class="column-info column-t" colspan="3">
-													<div class="column-content"><span class="order-status">为了更好的体验，请保证可用余额</span></div>
+													<div class="column-content"><span class="order-status">پائالىيەتكە قاتنىشىشىڭىزغا تەسىر يەتمەسلىكى ئۈچۈن يېتەرلىك قالدۇق سوممىڭىزنىڭ بولىشىغا كاپالەتلىك قىلىڭ</span></div>
 												</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td class="column-detail column-l">
-													<ul class="order-goods-list">
-														<li class="first" style="padding: 0 20px;min-height:0px;">您于 {wc:fun:date("Y-m-d H:i:s",$at['time'])} {wc:$at['content']} {wc:if $at['type'] == 1} 支出￥{wc:$at['money']}元{wc:else} 支出￥{wc:$at['money']}元{wc:if:end}</li>
-													</ul>
-												</td>
-												<td class="column-price"><div class="order-info order-price">帐户剩余<br />{wc:fun:uidcookie('money')}元</div></td>
+											<td class="column-detail column-l">
+												<ul class="order-goods-list">
+												<li class="first" style="padding: 0 20px;min-height:0px;margin-left:300px;">
+											    <span style="float:left;">{wc:fun:date("Y-m-d H:i:s",$at['time'])} : ۋاقىتى</span>
+											    <em> سىز مەھسۇلات سېتىۋېلىپ{wc:if $at['type'] == 1} {wc:$at['money']} سوم{wc:else} {wc:$at['money']} سوم{wc:if:end} خەجلىدىڭىز</em>
+											</li>
+												</ul>
+											</td>
+												<td class="column-price"><div class="order-info order-price" style="direction:rtl;">قالدۇق سومما<br/>{wc:fun:uidcookie('money')} سوم</div></td>
 											</tr>
 										</tbody>
 									</table>

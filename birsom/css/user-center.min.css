@@ -1,1 +1,519 @@
-a{color:#6d6d6d}a:hover{color:#db3652}.btn-primary{color:#fff}.btn-primary:hover{color:#fff}.uc-full-box{margin-bottom:20px}.uc-full-box .col-8{width:485px}.uc-box{margin-left:20px}.uc-tooltip{position:relative;*zoom:1;cursor:pointer}.uc-tooltip .uc-tooltip-popup{position:absolute;left:50%;bottom:100%;z-index:10;text-align:left;color:#fff;background:#6d6d6d}.uc-tooltip .uc-tooltip-popup p{margin:0}.uc-tooltip .uc-tooltip-popup .arrow{position:absolute;left:50%;bottom:-20px;width:60px;height:20px;margin-left:-30px;background:url(http://img03.mifile.cn/webfile/images/2014/cn/uc/icon-delivery.png) no-repeat 23px -126px}.uc-order-list{margin:0;padding:0;list-style-type:none}.uc-order-list .uc-order-item{padding:20px 0;border-top:1px solid #dfdfdf}.uc-order-list .uc-order-item:first-child{border-top:0}.uc-order-list.uc-order-item-first{border-top:0}.uc-order-list .order-item{position:relative;width:62px;height:62px;padding:0;margin:0;border-left:0;text-align:left}.uc-order-list .order-item img{position:relative;z-index:5;display:block;width:60px;height:60px;border:1px solid #dfdfdf}.uc-order-list .order-item-2:after{position:absolute;z-index:2;content:'';border:1px solid #dfdfdf;top:1px;left:4px;width:58px;height:58px;background:#fff}.uc-order-list .order-item-3:before,.uc-order-list .order-item-3:after{position:absolute;content:'';border:1px solid #dfdfdf;background:#fff}.uc-order-list .order-item-3:before{z-index:1;top:2px;left:8px;width:56px;height:56px}.uc-order-list .order-item-3:after{z-index:2;top:1px;left:4px;width:58px;height:58px}.order-delivery-status .order-delivery-steps{margin:0;padding:0;list-style-type:none;font-size:12px;color:#8c8c8c;text-align:center}.order-delivery-status .order-delivery-steps .step{position:relative;float:left;_display:inline;width:188px;margin-right:-8px}.order-delivery-status .order-delivery-steps .step .progress{margin-bottom:5px;color:#fff}.order-delivery-status .order-delivery-steps .step .progress:before,.order-delivery-status .order-delivery-steps .step .progress:after{position:absolute;top:0;content:'';width:10px;height:20px;background-image:url(http://img03.mifile.cn/webfile/images/2014/cn/uc/delivery.png);background-repeat:no-repeat}.order-delivery-status .order-delivery-steps .step .progress:before{left:0;background-position:0 0}.order-delivery-status .order-delivery-steps .step .progress:after{right:0;background-position:100% -20px}.order-delivery-status .order-delivery-steps .step .progress .text{display:block;height:18px;padding:1px 10px;margin:0 10px;background:#c3c3c3}.order-delivery-status .order-delivery-steps .step-first .progress:before{display:none}.order-delivery-status .order-delivery-steps .step-first .progress .text{margin-left:0}.order-delivery-status .order-delivery-steps .step-last .progress:after{display:none}.order-delivery-status .order-delivery-steps .step-last .progress .text{margin-right:0}.order-delivery-status .order-delivery-steps .step-now .progress:before,.order-delivery-status .order-delivery-steps .step-done .progress:before{background-position:0 -40px}.order-delivery-status .order-delivery-steps .step-now .progress:after,.order-delivery-status .order-delivery-steps .step-done .progress:after{background-position:100% -60px}.order-delivery-status .order-delivery-steps .step-now .progress .text,.order-delivery-status .order-delivery-steps .step-done .progress .text{background:#83bd39}.order-delivery-status .order-delivery-steps .uc-tooltip-popup{left:50%;bottom:37px;width:360px;padding:12px;margin-left:-192px;color:#fff;background:#6d6d6d;text-align:left}.order-delivery-status .order-delivery-steps .uc-tooltip-popup a{color:#83bd39}.order-delivery-status .order-delivery-mini-steps .step{width:110px}@media (max-width:1260px){.uc-full-box .span20{width:930px}.uc-full-box .span16{width:682px}.uc-full-box .col-16{width:681px}.uc-full-box .col-8{width:330px}.order-delivery-status .order-delivery-steps .step{width:130px}.order-delivery-status .order-delivery-mini-steps .step{width:120px}}.uc-nav-box{padding-bottom:15px;background:#fafafa}.uc-nav-box .box-hd{height:50px;margin:0 30px;border-bottom:1px solid #dfdfdf}.uc-nav-box .box-hd .title{margin:0;font-size:18px;font-weight:400;line-height:50px;color:#000}.uc-nav-list{margin:10px 0 0;padding:0;list-style-type:none;font-size:14px}.uc-nav-list li{position:relative;*zoom:1}.uc-nav-list li.current a{padding-left:27px;border-left:3px solid #db3652;color:#333;background-color:#fafafa}.uc-nav-list li a{display:block;padding:9px 30px;color:#6d6d6d}.uc-nav-list li a:hover{color:#db3652}.uc-nav-list li li a{padding-left:50px}.uc-nav-list .children{margin:0;padding:0;list-style-type:none}.icon-safe-open,.icon-safe-closed,.icon-safe-level{background:url(http://img03.mifile.cn/webfile/images/2014/cn/uc/icon-common.png) no-repeat 0 0}.icon-safe-open,.icon-safe-closed{position:relative;top:2px;width:13px;height:13px;*margin-right:5px;*font-size:1px}.icon-safe-open{background-position:0 0}.icon-safe-closed{background-position:0 -13px}.icon-safe-level{position:relative;top:1px;width:61px;height:11px;*margin-right:5px;*font-size:1px}.icon-safe-level-1{background-position:-14px 0}.icon-safe-level-2{background-position:-14px -11px}.icon-safe-level-3{background-position:-14px -22px}.uc-home-box{border-top:1px solid #dfdfdf}.uc-home-box .box-hd{height:40px;border-bottom:1px solid #dfdfdf;background:#fafafa}.uc-home-box .box-hd .title{margin-left:20px;font-size:14px;line-height:40px;color:#333}.uc-home-box .box-hd .more{top:0;right:20px}.uc-home-box .box-hd .more .more-link{line-height:40px}.uc-home-box .box-bd{margin:0 30px}.uc-home-box .uc-tip-section{_height:3em;min-height:3em;padding:30px 10px 10px;color:#c3c3c3;font-size:12px;text-align:center}.uc-home-box .uc-tip-section p{margin:0}.uc-item-list{height:64px;margin:0 auto 15px;padding:25px 0 0;list-style-type:none;overflow:hidden;_zoom:1}.uc-item-list li{float:left;_display:inline;width:62px;height:62px;margin:0 4px;text-align:center}.uc-item-list li.more{width:30px;color:#f3f3f3}.uc-item-list li.more .ellipsis{display:block;padding-top:40px}.uc-item-list li img{width:60px;height:60px}.uc-item-thumb-list{height:255px;overflow:hidden;_zoom:1;margin:30px 0;padding:0;list-style-type:none;color:#333}.uc-item-thumb-list li{float:left;width:227px;text-align:center}.uc-item-thumb-list .item-thumb{display:block;margin-bottom:15px}.uc-item-thumb-list .item-title{display:block;margin-bottom:5px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;_zoom:1}.uc-item-thumb-list .item-share{color:#db3652}.uc-item-thumb-list .btn-lineDake{width:100px;border-color:#dfdfdf}.cash-start{padding:70px 0 0;text-align:center;color:#6d6d6d}.cash-start .title{margin:0;font-size:30px;font-weight:400;color:#333}.cash-start .description{margin:0}.cash-start .action{margin:15px 0 70px}.cash-start .features{margin:0 0 60px 90px;padding:0;list-style-type:none}.cash-start .features li{float:left;_display:inline;width:180px;margin:0 45px;font-size:12px;color:#8c8c8c}.cash-start .features li p{margin:30px 0 0}.cash-open{position:relative;padding:70px 0;font-size:16px;line-height:1.8;text-align:center;color:#6d6d6d}.cash-open p{margin:0 0 20px}.cash-open p .btn{padding:0 25px;text-decoration:none}.cash-open p label,.cash-open p .input-text,.cash-open p .btn-resend{vertical-align:middle}.cash-open p .btn-resend{width:80px;padding:0 5px;color:#fff}.cash-open p .btn-resend:focus{outline:0}.cash-open p .disabled:hover,.cash-open p .disabled:focus{background:#ccd0d9}.cash-open .input-text{width:210px;height:35px;line-height:35px;padding:0 10px;background:#fff;border:1px solid #dfdfdf;color:#333}.cash-open .input-text:focus{border-color:#c3c3c3;outline:0}.cash-open .change-number-link{position:absolute;right:20px;top:20px;font-size:14px;color:#8c8c8c;text-decoration:underline}.cash-overall{padding:20px;color:#333}.cash-overall .balance{float:left;font-size:18px;line-height:1}.cash-overall .balance .type{margin-right:35px}.cash-overall .balance b{font-size:60px;font-weight:400}.cash-overall .mobile{float:right;margin-top:20px}.cash-overall .mobile a{color:#db3652}.cash-list-switch{padding:10px 20px;font-size:14px;line-height:30px}.cash-list-switch .tab{color:#8c8c8c}.cash-list-switch .tab:hover{color:#8c8c8c}.cash-list-switch .tab-active{color:#db3652}.cash-list-switch .tab-active:hover{color:#db3652}.cash-list-switch .separator{margin:0 10px;font-family: "alkatip";color:#f3f3f3}.order-compensate-footer .btn-primary{margin:0 0 0 10px}
+a {
+	color: #6d6d6d
+}
+a:hover {
+	color: #db3652
+}
+.btn-primary {
+	color: #fff
+}
+.btn-primary:hover {
+	color: #fff
+}
+.uc-full-box {
+	margin-bottom: 20px
+}
+.uc-full-box .col-8 {
+	width: 485px
+}
+.uc-box {
+	margin-left: 20px
+}
+.uc-tooltip {
+	position: relative;
+	*zoom: 1;
+	cursor: pointer
+}
+.uc-tooltip .uc-tooltip-popup {
+	position: absolute;
+	left: 50%;
+	bottom: 100%;
+	z-index: 10;
+	text-align: left;
+	color: #fff;
+	background: #6d6d6d
+}
+.uc-tooltip .uc-tooltip-popup p {
+	margin: 0
+}
+.uc-tooltip .uc-tooltip-popup .arrow {
+	position: absolute;
+	left: 50%;
+	bottom: -20px;
+	width: 60px;
+	height: 20px;
+	margin-left: -30px;
+	background: url(http://img03.mifile.cn/webfile/images/2014/cn/uc/icon-delivery.png) no-repeat 23px -126px
+}
+.uc-order-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none
+}
+.uc-order-list .uc-order-item {
+	padding: 20px 0;
+	border-top: 1px solid #dfdfdf
+}
+.uc-order-list .uc-order-item:first-child {
+	border-top: 0
+}
+.uc-order-list.uc-order-item-first {
+	border-top: 0
+}
+.uc-order-list .order-item {
+	position: relative;
+	width: 62px;
+	height: 62px;
+	padding: 0;
+	margin: 0;
+	border-left: 0;
+	text-align: left
+}
+.uc-order-list .order-item img {
+	position: relative;
+	z-index: 5;
+	display: block;
+	width: 60px;
+	height: 60px;
+	border: 1px solid #dfdfdf
+}
+.uc-order-list .order-item-2:after {
+	position: absolute;
+	z-index: 2;
+	content: '';
+	border: 1px solid #dfdfdf;
+	top: 1px;
+	left: 4px;
+	width: 58px;
+	height: 58px;
+	background: #fff
+}
+.uc-order-list .order-item-3:before, .uc-order-list .order-item-3:after {
+	position: absolute;
+	content: '';
+	border: 1px solid #dfdfdf;
+	background: #fff
+}
+.uc-order-list .order-item-3:before {
+	z-index: 1;
+	top: 2px;
+	left: 8px;
+	width: 56px;
+	height: 56px
+}
+.uc-order-list .order-item-3:after {
+	z-index: 2;
+	top: 1px;
+	left: 4px;
+	width: 58px;
+	height: 58px
+}
+.order-delivery-status .order-delivery-steps {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 12px;
+	color: #8c8c8c;
+	text-align: center
+}
+.order-delivery-status .order-delivery-steps .step {
+	position: relative;
+	float: left;
+	_display: inline;
+	width: 188px;
+	margin-right: -8px
+}
+.order-delivery-status .order-delivery-steps .step .progress {
+	margin-bottom: 5px;
+	color: #fff
+}
+.order-delivery-status .order-delivery-steps .step .progress:before, .order-delivery-status .order-delivery-steps .step .progress:after {
+	position: absolute;
+	top: 0;
+	content: '';
+	width: 10px;
+	height: 20px;
+	background-image: url(http://img03.mifile.cn/webfile/images/2014/cn/uc/delivery.png);
+	background-repeat: no-repeat
+}
+.order-delivery-status .order-delivery-steps .step .progress:before {
+	left: 0;
+	background-position: 0 0
+}
+.order-delivery-status .order-delivery-steps .step .progress:after {
+	right: 0;
+	background-position: 100% -20px
+}
+.order-delivery-status .order-delivery-steps .step .progress .text {
+	display: block;
+	height: 18px;
+	padding: 1px 10px;
+	margin: 0 10px;
+	background: #c3c3c3
+}
+.order-delivery-status .order-delivery-steps .step-first .progress:before {
+	display: none
+}
+.order-delivery-status .order-delivery-steps .step-first .progress .text {
+	margin-left: 0
+}
+.order-delivery-status .order-delivery-steps .step-last .progress:after {
+	display: none
+}
+.order-delivery-status .order-delivery-steps .step-last .progress .text {
+	margin-right: 0
+}
+.order-delivery-status .order-delivery-steps .step-now .progress:before, .order-delivery-status .order-delivery-steps .step-done .progress:before {
+	background-position: 0 -40px
+}
+.order-delivery-status .order-delivery-steps .step-now .progress:after, .order-delivery-status .order-delivery-steps .step-done .progress:after {
+	background-position: 100% -60px
+}
+.order-delivery-status .order-delivery-steps .step-now .progress .text, .order-delivery-status .order-delivery-steps .step-done .progress .text {
+	background: #83bd39
+}
+.order-delivery-status .order-delivery-steps .uc-tooltip-popup {
+	left: 50%;
+	bottom: 37px;
+	width: 360px;
+	padding: 12px;
+	margin-left: -192px;
+	color: #fff;
+	background: #6d6d6d;
+	text-align: left
+}
+.order-delivery-status .order-delivery-steps .uc-tooltip-popup a {
+	color: #83bd39
+}
+.order-delivery-status .order-delivery-mini-steps .step {
+	width: 110px
+}
+@media (max-width:1260px) {
+	.uc-full-box .span20 {
+		width: 930px
+	}
+	.uc-full-box .span16 {
+		width: 682px
+	}
+	.uc-full-box .col-16 {
+		width: 681px
+	}
+	.uc-full-box .col-8 {
+		width: 330px
+	}
+	.order-delivery-status .order-delivery-steps .step {
+		width: 130px
+	}
+	.order-delivery-status .order-delivery-mini-steps .step {
+		width: 120px
+	}
+}
+.uc-nav-box {
+	padding-bottom: 15px;
+	background: #fafafa
+}
+.uc-nav-box .box-hd {
+	height: 50px;
+	margin: 0 30px;
+	border-bottom: 1px solid #dfdfdf
+}
+.uc-nav-box .box-hd .title {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 50px;
+	color: #000
+}
+.uc-nav-list {
+	margin: 10px 0 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 14px
+}
+.uc-nav-list li {
+	position: relative;
+	*zoom: 1
+}
+.uc-nav-list li.current a {
+	padding-left: 27px;
+	border-left: 3px solid #db3652;
+	color: #333;
+	background-color: #fafafa
+}
+.uc-nav-list li a {
+	display: block;
+	padding: 9px 30px;
+	color: #6d6d6d
+}
+.uc-nav-list li a:hover {
+	color: #db3652
+}
+.uc-nav-list li li a {
+	padding-left: 50px
+}
+.uc-nav-list .children {
+	margin: 0;
+	padding: 0;
+	list-style-type: none
+}
+.icon-safe-open, .icon-safe-closed, .icon-safe-level {
+	background: url(http://img03.mifile.cn/webfile/images/2014/cn/uc/icon-common.png) no-repeat 0 0
+}
+.icon-safe-open, .icon-safe-closed {
+	position: relative;
+	top: 2px;
+	width: 13px;
+	height: 13px;
+	*margin-right: 5px;
+	*font-size: 1px
+}
+.icon-safe-open {
+	background-position: 0 0
+}
+.icon-safe-closed {
+	background-position: 0 -13px
+}
+.icon-safe-level {
+	position: relative;
+	top: 1px;
+	width: 61px;
+	height: 11px;
+	*margin-right: 5px;
+	*font-size: 1px
+}
+.icon-safe-level-1 {
+	background-position: -14px 0
+}
+.icon-safe-level-2 {
+	background-position: -14px -11px
+}
+.icon-safe-level-3 {
+	background-position: -14px -22px
+}
+.uc-home-box {
+	border-top: 1px solid #dfdfdf
+}
+.uc-home-box .box-hd {
+	height: 40px;
+	border-bottom: 1px solid #dfdfdf;
+	background: #fafafa
+}
+.uc-home-box .box-hd .title {
+	margin-left: 20px;
+	font-size: 14px;
+	line-height: 40px;
+	color: #333
+}
+.uc-home-box .box-hd .more {
+	top: 0;
+	right: 20px
+}
+.uc-home-box .box-hd .more .more-link {
+	line-height: 40px
+}
+.uc-home-box .box-bd {
+	margin: 0 30px
+}
+.uc-home-box .uc-tip-section {
+	_height: 3em;
+	min-height: 3em;
+	padding: 30px 10px 10px;
+	color: #c3c3c3;
+	font-size: 12px;
+	text-align: center
+}
+.uc-home-box .uc-tip-section p {
+	margin: 0
+}
+.uc-item-list {
+	height: 64px;
+	margin: 0 auto 15px;
+	padding: 25px 0 0;
+	list-style-type: none;
+	overflow: hidden;
+	_zoom: 1
+}
+.uc-item-list li {
+	float: left;
+	_display: inline;
+	width: 62px;
+	height: 62px;
+	margin: 0 4px;
+	text-align: center
+}
+.uc-item-list li.more {
+	width: 30px;
+	color: #f3f3f3
+}
+.uc-item-list li.more .ellipsis {
+	display: block;
+	padding-top: 40px
+}
+.uc-item-list li img {
+	width: 60px;
+	height: 60px
+}
+.uc-item-thumb-list {
+	height: 255px;
+	overflow: hidden;
+	_zoom: 1;
+	margin: 30px 0;
+	padding: 0;
+	list-style-type: none;
+	color: #333
+}
+.uc-item-thumb-list li {
+	float: left;
+	width: 227px;
+	text-align: center
+}
+.uc-item-thumb-list .item-thumb {
+	display: block;
+	margin-bottom: 15px
+}
+.uc-item-thumb-list .item-title {
+	display: block;
+	margin-bottom: 5px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	_zoom: 1
+}
+.uc-item-thumb-list .item-share {
+	color: #db3652
+}
+.uc-item-thumb-list .btn-lineDake {
+	width: 100px;
+	border-color: #dfdfdf
+}
+.cash-start {
+	padding: 70px 0 0;
+	text-align: center;
+	color: #6d6d6d
+}
+.cash-start .title {
+	margin: 0;
+	font-size: 30px;
+	font-weight: 400;
+	color: #333
+}
+.cash-start .description {
+	margin: 0
+}
+.cash-start .action {
+	margin: 15px 0 70px
+}
+.cash-start .features {
+	margin: 0 0 60px 90px;
+	padding: 0;
+	list-style-type: none
+}
+.cash-start .features li {
+	float: left;
+	_display: inline;
+	width: 180px;
+	margin: 0 45px;
+	font-size: 12px;
+	color: #8c8c8c
+}
+.cash-start .features li p {
+	margin: 30px 0 0
+}
+.cash-open {
+	position: relative;
+	padding: 70px 0;
+	font-size: 16px;
+	line-height: 1.8;
+	text-align: center;
+	color: #6d6d6d
+}
+.cash-open p {
+	margin: 0 0 20px
+}
+.cash-open p .btn {
+	padding: 0 25px;
+	text-decoration: none
+}
+.cash-open p label, .cash-open p .input-text, .cash-open p .btn-resend {
+	vertical-align: middle
+}
+.cash-open p .btn-resend {
+	width: 80px;
+	padding: 0 5px;
+	color: #fff
+}
+.cash-open p .btn-resend:focus {
+	outline: 0
+}
+.cash-open p .disabled:hover, .cash-open p .disabled:focus {
+	background: #ccd0d9
+}
+.cash-open .input-text {
+	width: 210px;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px;
+	background: #fff;
+	border: 1px solid #dfdfdf;
+	color: #333
+}
+.cash-open .input-text:focus {
+	border-color: #c3c3c3;
+	outline: 0
+}
+.cash-open .change-number-link {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	font-size: 14px;
+	color: #8c8c8c;
+	text-decoration: underline
+}
+.cash-overall {
+	padding: 20px;
+	color: #333
+}
+.cash-overall .balance {
+	float: left;
+	font-size: 18px;
+	line-height: 1
+}
+.cash-overall .balance .type {
+	margin-right: 35px
+}
+.cash-overall .balance b {
+	font-size: 60px;
+	font-weight: 400
+}
+.cash-overall .mobile {
+	float: right;
+	margin-top: 20px
+}
+.cash-overall .mobile a {
+	color: #db3652
+}
+.cash-list-switch {
+	padding: 10px 20px;
+	font-size: 14px;
+	line-height: 30px
+}
+.cash-list-switch .tab {
+	color: #8c8c8c
+}
+.cash-list-switch .tab:hover {
+	color: #8c8c8c
+}
+.cash-list-switch .tab-active {
+	color: #db3652
+}
+.cash-list-switch .tab-active:hover {
+	color: #db3652
+}
+.cash-list-switch .separator {
+	margin: 0 10px;
+	font-family: "alkatip";
+	color: #f3f3f3
+}
+.order-compensate-footer .btn-primary {
+	margin: 0 0 0 10px
+}

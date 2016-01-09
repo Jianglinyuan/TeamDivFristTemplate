@@ -287,10 +287,11 @@
 p.leix {
 	clear:both;
 	float:right;
-	margin:10px 0;
+	margin:5px 10px;
 	display:block;
 	width:150px;
 	color:#666;
+	font-size:16px;
 }
 .charge_money_list li span.gh_bank {
 	background:url(../images/bank_logo.png) 8px 0;
@@ -338,15 +339,16 @@ p.leix {
 	background:url(../images/bank_logo.png) 8px -462px;
 }
 .charge_money_list p.much {
-	width:150px;
-	float:right;
-	/*border-bottom:1px solid #e6e7e8;*/
-	padding:15px 0;
+	width:200px;
+	float:left;
 	color:#666;
 	font-weight:bold;
+	padding:15px 0px;
+	border-bottom:1px solid #e6e7e8;
+	font-size:15px;
 }
 .charge_money_list p.much span {
-	font-size:12px;
+	font-size:16px;
 	color:#e25;
 	font-weight:bold;
 }
@@ -357,9 +359,10 @@ p.leix {
 	top:2px;
 }
 .charge_money_list h6 {
-	width: 100px;
-	float: right;
 	padding:15px 0;
+	margin-bottom: 40px;
+	width:300px;
+	float:right;
 }
 .charge_money_list .imm {
 	padding:6px 19px;

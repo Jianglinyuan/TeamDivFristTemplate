@@ -1,13 +1,13 @@
 {wc:templates "index","pagehead"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
-<div class="container breadcrumbs"><span>我的订单</span><span class="sep">/</span><a href="/">首页</a></div>
+<div class="container breadcrumbs"><span>زاكاسلىرىم</span><span class="sep">/</span><a href="/">باش بەت</a></div>
 <div class="container">
     <div class="uc-full-box">
         <div class="row">
 			{wc:templates "member","left"}
 			<div class="span16">
 				<div class="xm-line-box uc-box">
-					<div class="box-hd"><h3 class="title">我的订单</h3><div id="divPageNav" class="page_nav">{wc:page:one}</div></div>
+					<div class="box-hd"><h3 class="title">زاكاسلىرىم</h3></div>
 					<div class="box-bd">
 						<div class="uc-order-list-box">
 							<ul class="uc-order-detail-list">
@@ -22,7 +22,7 @@
 											<tr>
 												<th class="column-info column-t" colspan="3">
 													<div class="column-content">
-														{wc:fun:microt($rt['time'])}：揭晓时间<span class="sep">|</span><a href="{WEB_PATH}/uname/{wc:fun:idjia($jiexiao['q_uid'])}" target="_blank">{wc:fun:get_user_name($jiexiao['q_user'])}</a>：获得者<span class="sep">|</span><span class="order-status">本期已揭晓</span>
+														{wc:fun:microt($rt['time'])}：جاكارلانغان ۋاقىت<span class="sep">|</span><a href="{WEB_PATH}/uname/{wc:fun:idjia($jiexiao['q_uid'])}" target="_blank">{wc:fun:get_user_name($jiexiao['q_user'])}</a>：ئېرىشكۈچى
 													</div>
 												</th>
 											</tr>
@@ -30,15 +30,15 @@
 										<tbody>
 											<tr>
 												<td class="column-action column-r">
-													<div class="order-info order-action"><a href="{WEB_PATH}/member/home/userbuydetail/{wc:$rt['id']}" class="btn btn-primary btn-small" title="揭晓详情">揭晓详情</a></div>
+													<div class="order-info order-action"><a href="{WEB_PATH}/dataserver/{wc:$rt['shopid']}_{wc:$rt['shopqishu']}" class="btn btn-primary btn-small" title="جاكارلانغانلىق تەپسىلاتى">جاكارلانغانلىق تەپسىلاتى</a></div>
 												</td>
-												<td class="column-price"><div class="order-info order-price">已揭晓</div></td>
+												<td class="column-price"><div class="order-info order-price">جاكارلىنىپ بولدى</div></td>
 												<td class="column-detail column-l">
 													<ul class="order-goods-list">
 														<li class="first clearfix">
 															<a title="" target="_blank" class="pic" href="{WEB_PATH}/dataserver/{wc:$rt['shopid']}_{wc:$rt['shopqishu']}"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:$jiexiao['thumb']}"></a>
 															<a target="_blank" href="{WEB_PATH}/dataserver/{wc:$rt['shopid']}_{wc:$rt['shopqishu']}" class="goods-name">{wc:$rt['shopname']}</a>
-															<span class="goods-price">您当前购买的是第{wc:$rt['shopqishu']}期，共<em style="color:#db3652;">{wc:$rt['gonumber']}</em>人次，小计：{wc:$rt['gonumber']}元</span>
+															<span class="goods-price"> سىزنىڭ قاتناشقىنىڭىز {wc:$rt['shopqishu']} چى سان ، <em style="color:#db3652;"> جەمئىي {wc:$rt['gonumber']} قېتىم سان</em> ، جەمئىي {wc:$rt['gonumber']} سوم</span>
 															<span class="goods-link"></span>
 														</li>
 													</ul>
@@ -54,7 +54,7 @@
 											<tr>
 												<th class="column-info column-t" colspan="3">
 													<div class="column-content">
-														{wc:fun:microt($rt['time'])}：购买时间<span class="sep">|</span><span class="order-status">本期正在进行中</span>
+														{wc:fun:microt($rt['time'])}：قاتناشقان ۋاقىت
 													</div>
 												</th>
 											</tr>
@@ -62,9 +62,9 @@
 										<tbody>
 											<tr>
 												<td class="column-action column-r">
-													<div class="order-info order-action"><a href="{WEB_PATH}/member/home/userbuydetail/{wc:$rt['id']}" class="btn btn-primary btn-small" title="查看{wc:fun:_cfg('web_name_two')}码">查看{wc:fun:_cfg('web_name_two')}码</a></div>
+													<div class="order-info order-action"><a href="{WEB_PATH}/member/home/userbuydetail/{wc:$rt['id']}" class="btn btn-primary btn-small" title="تەلەي نۇمۇرىنى كۆرۈش">تەلەي نۇمۇرىنى كۆرۈش</a></div>
 												</td>
-												<td class="column-price"><div class="order-info order-price">正在进行...</div></td>
+												<td class="column-price"><div class="order-info order-price">...ئېلىپ بېرىلۋاتىدۇ</div></td>
 												<td class="column-detail column-l">
 													<ul class="order-goods-list">
 														<li class="first clearfix">
@@ -79,7 +79,7 @@
 															<a title="" target="_blank" class="pic" href="{WEB_PATH}/dataserver/{wc:$rt['shopid']}"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:$pic['thumb']}"></a>
 															<a target="_blank" href="{WEB_PATH}/dataserver/{wc:$rt['shopid']}" class="goods-name">{wc:$rt['shopname']}</a>	
 														{wc:if:end}
-															<span class="goods-price">您当前购买的是第{wc:$rt['shopqishu']}期，共<em style="color:#db3652;">{wc:$rt['gonumber']}</em>人次</span>
+															<span class="goods-price"> سىزنىڭ قاتناشقىنىڭىز {wc:$rt['shopqishu']} چى سان ، <em style="color:#db3652;"> جەمئىي {wc:$rt['gonumber']} قېتىم سان</em> ، جەمئىي {wc:$rt['gonumber']} سوم</span>
 															<span class="goods-link"></span>
 														</li>
 													</ul>

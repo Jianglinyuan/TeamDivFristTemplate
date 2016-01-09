@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
 
-<div class="container breadcrumbs"><span>获得的商品</span><span class="sep">/</span><a href="/">首页</a></div>
+<div class="container breadcrumbs"><span>ئېرىشكەن تاۋارلار</span><span class="sep">/</span><a href="/">باش بەت</a></div>
 
 <div class="container">
 
@@ -16,7 +16,8 @@
 
 				<div class="xm-line-box uc-box">
 
-					<div class="box-hd"><h3 class="title"><a href="#" id="wuliu_select">查询物流</a>您在{wc:fun:_cfg("web_name_two")}网成功获得了 <b id="goodsCount" class="orange">{wc:fun:count($record)}</b> 个商品</h3><div id="divPageNav" class="page_nav">{wc:page:one}</div></div>
+					<div class="box-hd"><h3 class="title"><!--a href="#" id="wuliu_select">查询物流</a-->سىز بىرسوم تورىدا جەمئىي <b id="goodsCount" class="orange">{wc:fun:count($record)}</b>  تاۋارغا ئېرىشتىڭىز</h3>
+					</div>
 
 					{wc:if !member_get_dizhi($uid)}
 
@@ -67,7 +68,7 @@
 												<th class="column-info column-t" colspan="3">
 
 													<div class="column-content">
-														{wc:if $recd['company']}{wc:$recd['company_code']}：快递单号<span class="sep">|</span><span>{wc:$recd['company']}：快递公司</span><span class="sep">|</span>{wc:if:end}
+														{wc:if $recd['company']}{wc:$recd['company_code']}：تىز يوللانما نومۇرى<span class="sep">|</span><span>{wc:$recd['company']}：تىز يوللانما شىركىتى</span><span class="sep">|</span>{wc:if:end}
 														<span class="order-status">{wc:php:start}
 
 														$status=@explode(",",$recd['status']);
@@ -76,13 +77,13 @@
 
 															if($status[1]=='未发货'){
 
-																echo "您获得的商品现已捡货，请耐心等待！如有疑问，请联系官方客服！";
+																echo "سىز ئېرىشكەن مەھسۇلات تەييارلىنىۋاتىدۇ ، سەۋرىچانلىق بىلەن ساقلىغايسىز . سوئالىڭىز بولسا مۇلازىمەت تېلفۇنى ئارقىلىق ئالاقىلىشىڭ ";
 
 															}
 
 															if($status[1]=='已发货'){
 
-																echo "您获得的商品现已经发出，请留意快递信息。";
+																echo "سىز ئېرىشكەن مەھسۇلات ئەۋەتىلىپ بولدى . تىز يوللانما ئۇچۇرىغا دىققەت قىلىڭ ";
 
 															}
 
@@ -90,13 +91,13 @@
 
 														if($status[2]=='已完成'){
 
-															echo "您的订单已完成交易，如商品存在质量问题，请联系客服进行处理！";
+															echo "سىزنىڭ مەزكۇر قېتىملىق سېتىۋېلىشىڭىز تاماملاندى . پىكىر تەلەپلىرىڭىز بولسا مۇلازىمەت تېلفۇنى ئارقىلىق ئالاقىلىشىڭ";
 
 														}
 
 														if($status[2]=='已作废'){
 
-															echo "您的订单已作废";
+															echo "سىزنىڭ مەزكۇر قېتىملىق سېتىۋېلىشىڭىز بىكار قىلىندى";
 
 														}
 
@@ -126,13 +127,13 @@
 
 															if($status[1]=='未发货'){
 
-																echo '<a class="btn btn-primary btn-small">等待操作</a>';
+																echo '<a class="btn btn-primary btn-small">تەخىر قىلغايسىز</a>';
 
 															}
 
 															if($status[1]=='已发货'){
 
-																echo '<a class="btn btn-primary btn-small order_click" oid="'.$recd['id'].'" uid="'.$recd['uid'].'">确认收货</a>';
+																echo '<a class="btn btn-primary btn-small order_click" oid="'.$recd['id'].'" uid="'.$recd['uid'].'">تاپشۇرۋېلىش</a>';
 
 															}
 
@@ -140,13 +141,13 @@
 
 														if($status[2]=='已完成'){
 
-															echo '<a href="http://wpa.qq.com/msgrd?v=3&uin=1810524351&site=qq&menu=yes" class="btn btn-primary btn-small" oid="'.$recd['id'].'" uid="'.$recd['uid'].'">申请售后</a>';
+															echo '<a href="http://wpa.qq.com/msgrd?v=3&uin=1810524351&site=qq&menu=yes" class="btn btn-primary btn-small" oid="'.$recd['id'].'" uid="'.$recd['uid'].'">كىيىنكى مۇلازىمەت</a>';
 
 														}
 
 														if($status[2]=='已作废'){
 
-															echo "已作废";
+															echo "بىكار قىلىندى";
 
 														}
 
@@ -168,13 +169,13 @@
 
 															if($status[1]=='未发货'){
 
-																echo "等待发货";
+																echo "مەھسۇلات تەييارلىنىۋاتىدۇ";
 
 															}
 
 															if($status[1]=='已发货'){
 
-																echo "已发货";
+																echo "مەھسۇلات ئەۋەتىلىپ بولدى";
 
 															}
 
@@ -182,13 +183,13 @@
 
 														if($status[2]=='已完成'){
 
-															echo "已完成";
+															echo "تاماملاندى";
 
 														}
 
 														if($status[2]=='已作废'){
 
-															echo "已作废";
+															echo "بىكار قىلىندى";
 
 														}
 
@@ -206,7 +207,7 @@
 
 															<a target="_blank" class="pic" href="{WEB_PATH}/dataserver/{wc:$recd['shopid']}"><img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:fun:yunjl($recd['shopid'])}"></a>
 
-															<a target="_blank" href="{WEB_PATH}/dataserver/{wc:$recd['shopid']}" class="goods-name">您获得了第{wc:$recd['shopqishu']}期：{wc:$recd['shopname']}</a>
+															<a target="_blank" href="{WEB_PATH}/dataserver/{wc:$recd['shopid']}" class="goods-name">سىز ئېرىشكەن تاۋار: ({wc:$recd['shopqishu']} چى سان) {wc:$recd['shopname']}</a>
 
 														</li>
 

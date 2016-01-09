@@ -1,6 +1,6 @@
 {wc:templates "index","pagehead"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
-<div class="container breadcrumbs"><span>我的晒单</span><span class="sep">/</span><a href="/">首页</a></div>
+<div class="container breadcrumbs"><span>كۆرسەتكەنلىرىم</span><span class="sep">/</span><a href="/">باش بەت</a></div>
 <div class="container">
     <div class="uc-full-box">
         <div class="row">
@@ -8,12 +8,12 @@
 			<div class="span16">
 				<div class="xm-line-box uc-box">
 					<div class="box-hd">
-						<h3 class="title">我的晒单</h3>
+						<h3 class="title">كۆرسەتكەنلىرىم</h3>
 						<div class="more">
 							<div class="subMenu">
-								<a href="javascript:;" class="" id="share_yes">已晒单</a>
+								<a href="javascript:;" class="" id="share_yes">باشقىلارغا كۆرسەتكەنلىرىم</a>
 								<span class="sep">|</span>
-								<a href="javascript:;" class="current" id="share_none">未晒单</a>
+								<a href="javascript:;" class="current" id="share_none">كۆرسەتمىگەنلىرىم</a>
 							</div>
 						</div>
 					</div>
@@ -21,7 +21,7 @@
 						<div class="uc-order-list-box">
 							{wc:if $shaidan==null}
 							<ul class="uc-order-detail-list">
-								<li class="uc-order-detail-item empty">暂无记录！</a></li>
+								<li class="uc-order-detail-item empty">مەزمۇن يوق</a></li>
 							</ul>
 							{wc:else}
 							{wc:loop $shaidan $sd}
@@ -31,14 +31,14 @@
 										<thead>
 											<tr>
 												<th class="column-info column-t" colspan="3">
-													<div class="column-content"><span class="order-status">{wc:fun:date("Y-m-d H:i:s",$sd['sd_time'])}</span>：晒单发布时间</div>
+													<div class="column-content"><span class="order-status">{wc:fun:date("Y-m-d H:i:s",$sd['sd_time'])}</span>：كۆرسىتىلگەن ۋاقىت</div>
 												</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
 												<td class="column-action column-r">
-													<div class="order-info order-action"><a class="btn btn-primary btn-small">不可修改</a></div>
+													<div class="order-info order-action"><a class="btn btn-primary btn-small">ئۆزگەرتكىلى بولمايدۇ</a></div>
 												</td>
 												<td class="column-detail column-l">
 													<ul class="order-goods-list">
@@ -64,7 +64,7 @@
 						<div class="uc-order-list-box">
 							{wc:if $record==null}
 							<ul class="uc-order-detail-list">
-								<li class="uc-order-detail-item empty">暂无记录！</a></li>
+								<li class="uc-order-detail-item empty">مەزمۇن يوق</a></li>
 							</ul>
 							{wc:else}
 							{wc:loop $record $sd}
@@ -74,24 +74,21 @@
 										<thead>
 											<tr>
 												<th class="column-info column-t" colspan="3">
-													<div class="column-content"><span class="order-status">偷偷告诉你：晒单有积分送的哦~</span></div>
+													<div class="column-content"><span class="order-status">ئېرىشكەن مەھسۇلاتلىرىڭىزنى باشقىلارغا كۆرسىتىڭ</span></div>
 												</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-																							<td class="column-action column-r">
-													<div class="order-info order-action"><a href="{WEB_PATH}/member/home/singleinsert/{wc:$sd['id']}" class="btn btn-primary btn-small">添加晒单</a></div>
+												<td class="column-action column-r">
+													<div class="order-info order-action"><a href="{WEB_PATH}/member/home/singleinsert/{wc:$sd['id']}" class="btn btn-primary btn-small">كۆرسىتىش</a></div>
 												</td>
 												<td class="column-detail column-l">
 													<ul class="order-goods-list">
-														<li class="first">
-															<img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:fun:shoplisext($sd['shopid'],'thumb')}" style="
-    width: 60px;
-    height: 60px;
-" />
-															<a href="{WEB_PATH}/goods/{wc:$sd['shopid']}" target="_blank" class="goods-name">{wc:fun:shoplisext($sd['shopid'],'title')}</a>
-														</li>
+													<li class="first">
+														<img class="goods-thumb" src="{G_UPLOAD_PATH}/{wc:fun:shoplisext($sd['shopid'],'thumb')}" style="width: 60px;height: 60px;" />
+														<a href="{WEB_PATH}/goods/{wc:$sd['shopid']}" target="_blank" class="goods-name">{wc:fun:shoplisext($sd['shopid'],'title')}</a>
+													</li>
 													</ul>
 												</td>
 

@@ -2766,6 +2766,7 @@ html {
 }
 .blue {
 	color: #2af;
+	font-size: 15px;
 }
 .f-mar-left {
 	margin-left: 10px !important;
@@ -4817,10 +4818,9 @@ body.f-width-change .g-special li em {
 	width: 922px;
 	float: right;
 	margin-top: -40px;
-	/*margin-right: 118px;*/
+	margin-right: 270px;
 }
 .page_nav ul {
-	float: left;
 	/*position: relative;*/
 	overflow: visible;
 	height: 30px;
@@ -5651,6 +5651,7 @@ body.f-width-change .g-special li em {
 }
 div.uc-info {
 	text-align: right;
+	margin-top: 30px;
 }
 ul.payment li img {
     width: 104px;
