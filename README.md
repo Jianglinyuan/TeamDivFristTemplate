@@ -1,5 +1,4 @@
 @(Divteam)[Teamplate|Bug修复]
-~~是branch，不是brancth，挖鼻 @linyuan~~
 
 (2016-1-8 18:07 begin)
 
@@ -65,10 +64,11 @@ $itemlist = $this->db->GetList("select id,sid,q_uid,qishu,q_showtime from `@#_sh
 
 
 
-#移动搜索页面使用说明
+#移动搜索页面及退出登陆使用说明
 
 1. 添加mobile.action.php 到 controller/search 文件夹
 2. 替换param.inc.php 到data/config/ 文件夹下同名文件
+3. 替换user.action.php至 controller/member 文件夹同名文件
 
 #使用说明
  
