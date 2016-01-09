@@ -17,7 +17,7 @@
 		$goucode_cur = explode(',', $goucode_cur);
 		$goucode_cur = join(' ', $goucode_cur);
 ```
-(2016-1-9 21:27 begin)
+(2016-1-9 21:27 end)
 
 ---
 
