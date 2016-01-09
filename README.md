@@ -1,5 +1,26 @@
 @(Divteam)[Teamplate|Bug修复]
 
+(2016-1-9 21:27 begin)
+#### `index.action.php`->`function dataserver`:
+在最后的`include`语句之前加入：
+```php
+		// 当前登录用户的信息
+		$userid_cur = uidcookie('uid');
+		$record_cur = $this->db->GetList("select * from `@#_member_go_record` where `shopid`='$item[id]' and `uid`='$userid_cur'");
+		$gonum_cur = 0;
+		$goucode_cur = '';
+		foreach ( $record_cur as $rcd ) {
+			$gonum_cur += intval($rcd['gonumber']);
+			$goucode_cur = $goucode_cur.','.$rcd['goucode'];
+		}
+		$goucode_cur = substr($goucode_cur, 1);
+		$goucode_cur = explode(',', $goucode_cur);
+		$goucode_cur = join(' ', $goucode_cur);
+```
+(2016-1-9 21:27 end)
+
+---
+
 (2016-1-8 18:07 begin)
 
 #### 1\. `controller\go\index.action.php`->`function dataserver`:

@@ -7,15 +7,16 @@
 <meta name="keywords" content="{wc:if isset($keywords)}{wc:$keywords}{wc:else}{wc:fun:_cfg("web_key")}{wc:if:end}" />
 <meta name="description" content="{wc:if isset($description)}{wc:$description}{wc:else}{wc:fun:_cfg("web_des")}{wc:if:end}" />
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/Comm.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/163/css/common.css"/>
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/register.css"/>
 <script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>	
 <script>
-$(function(){
-	window.parent.set_iframe_height(document.body.offsetHeight+120);
-});
-$(function(){
-	window.parent.set_iframe_height("iframea_divPost","divPost",document.body.offsetHeight+120);
-});
+// $(function(){
+// 	window.parent.set_iframe_height(document.body.offsetHeight+120);
+// });
+// $(function(){
+// 	window.parent.set_iframe_height("iframea_divPost","divPost",document.body.offsetHeight+120);
+// });
 
 </script>
 </head>
@@ -160,8 +161,12 @@ margin-left: 0;
 }
 </style>
 <body style="width:1188px; min-height:150px">
-	{wc:if $error==0}
 		<div id="divPost" class="Single_Content">
+	{wc:if count($shaidan)==0}
+		<div class="empty" style="">
+            <p class="status-empty"><i class="littleU littleU-cry"></i>&nbsp;&nbsp;暂时还没有任何晒单</p>
+        </div>
+    {wc:else}
 		{wc:loop $shaidan $v}			
 			<div class="Single_list">
 				<div class="SingleL fl Topiclist-img">
@@ -191,12 +196,9 @@ margin-left: 0;
 		{wc:if $total>$num}
 			<div class="pagesx">{wc:page:two}</div>
 		{wc:if:end}
-		</div>
-	{wc:else}
-		<div style="text-align: center;direction: rtl;font-family: alkatip;font-size: 18px;width: 100%;font-weight: bold;color:#555; margin-top:80px;">
-			<b>مەزكۇر تاۋار توغۇرلۇق بەھىرلار يوق !</b>
-		</div>
+
 	{wc:if:end}
+		</div>
 
 </body>
 </html>

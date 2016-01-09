@@ -570,7 +570,7 @@ div.jqZoomBigPic img {
 }
 .Pro_Record .Record_tit li.Record_titCur {
 	background:#fff;
-	color:#666;
+	color:#db3652;
 	border-bottom:none;
 }
 .Pro_Record .Newest_Con {
@@ -602,7 +602,7 @@ div.jqZoomBigPic img {
 	margin-top: 10px;
 }
 .Pro_Record .Newest_Con .MsgIntro {
-	padding:15px 15px 0 15px;
+	padding:5px 15px 0 15px;
 	font-size:14px;
 	color:#999;
 	font-family: "alkatip";
@@ -667,13 +667,19 @@ div.jqZoomBigPic img {
 	width:70px;
 	padding:5px 0 6px 0;
 	border:1px solid #2AF;
-	background:#2AF;
+	background:#3399FE;
 	color:#fff;
 	border-radius:3px;
 	font-size:12px;
 	line-height:12px;
 	display:inline-block;
 	font-weight:bold;
+}
+a.My_Regbut:hover {
+    background: #42A8FF;
+}
+a.My_Signbut:hover {
+    background: #EA4163;
 }
 .NewRecord_msg s {
 	background:url(/templates/birsom/images/webmsg.png) no-repeat;

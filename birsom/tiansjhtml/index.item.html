@@ -1,5 +1,6 @@
 {wc:templates "index","pagehead"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/goods-Detail.min.css" />
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/163/css/detail.css"/>
 <div class="container breadcrumbs">
 	تاۋار تەپسىلاتى<span class="sep">/</span>
 	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
@@ -72,7 +73,7 @@
             <dd class="goods-info-foot">
                 <div class="Pro_Record">
 				<ul id="ulRecordTab" class="Record_tit">
-					<li class="Explain orange">بىر سوم بىلەن قاتنىشىش؟</li>
+					<li class="Explain">بىر سوم بىلەن قاتنىشىش؟</li>
 					<li class="MytRec">قاتناشقانلىرىم</li>
 					<li class="NewestRec Record_titCur">يېڭىدىن قاتناشقانلار</li>
 				</ul>
@@ -84,11 +85,26 @@
 				<div class="My_Record hide" style="display:none;">
 					{wc:if uidcookie('uid')}
 					<ul>
-						{wc:loop $us2 $user}
+					{wc:php:start}
+						$has_record=false;
+					{wc:php:end}
+
+					{wc:loop $us2 $user}
 						{wc:if $user['uid']==uidcookie('uid')}
+						
 						<li style="padding-left: 10px;">سىز مەزكۇر ساندا جەمئىي قاتناشقان قېتىم سانى{wc:$user['gonumber']}</li>
+
+						{wc:php:start}
+							$has_record = true;
+							break;
+						{wc:php:end}
+
 						{wc:if:end}
-						{wc:loop:end}
+					{wc:loop:end}
+
+					{wc:if !$has_record}
+						<p style="text-align: center;margin-top: 20px;font-size: 14px;">您近期未购买该商品</p>
+					{wc:if:end}
 					</ul>
 					{wc:else}
 					<div class="My_RecordReg">
@@ -131,10 +147,10 @@
 	            </div>
 	            <div class="box-bd">
 		            <div class="m-detail-period-main-wrap">
+		            <!-- 存在上期获奖者 -->
 	                {wc:if $sid_code} 
 		                {wc:php:start} $sid_code['q_user'] = unserialize($sid_code['q_user']);
 		                {wc:php:end} 
-		                {wc:if $sid_code['q_showtime']=='N'}
 		                <dl>
 		                    <dt>
 		                        <div class="avatar"><a rel="nofollow" href="{WEB_PATH}/uname/{wc:fun:idjia($sid_code['q_uid'])}" target="_blank"><img width="90" height="90" alt="" src="{G_UPLOAD_PATH}/{wc:$sid_code['q_user']['img']}"></a></div>
@@ -163,8 +179,11 @@
 								<div class="last-winner"><a id="detail" class="w-button w-button-simple">تەپسىلاتىنى كۆرۈش</a></div>
 		                    </dd>
 		                </dl>
-		                {wc:if:end}
-
+	           		{wc:else}
+	           			<div class="m-detail-no-winner">
+	           				<p class="title txt-red">该商品尚未有获奖者</p>
+	           				<p class="title">快来试试手气</p>
+	           			</div>
 	                {wc:if:end}
 		            </div>
 	            </div>
@@ -234,7 +253,7 @@
 			        <!-- /购买记录20条 -->
 			        <!-- 晒单 -->
 			        <div name="div_tab" id="divPost" class="Single_Content">
-			            <iframe id="iframea_divPost" g_src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:1188px; border:none;" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+			            <iframe id="iframea_divPost" g_src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:1188px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
 			        </div>
 			        <!-- 晒单 -->
 			    </div>
@@ -346,6 +365,10 @@ var height=$("#divPeriodList").innerHeight();
 }
 $(function(){	
 	$(".period_Open").click(showh);
+
+	$('#iframea_divPost').load(function() {
+		resizeIframe(this);
+	});
 });
 $(function(){
 $("#addToCart").click(function(){ 

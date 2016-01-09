@@ -481,10 +481,9 @@ ul#ulRecordTab li {
     width: 143px;
 }
 dl.goods-info-box .goods-info-foot a {
-	color: #333
 }
 dl.goods-info-box .goods-info-foot a:hover {
-	color: #ee330a
+		text-decoration: none;;
 }
 .goods-detail-desc ul, .goods-detail-desc li, .goods-detail-desc p, .goods-detail-desc dl, .goods-detail-desc dd, .goods-detail-desc h1, .goods-detail-desc h2, .goods-detail-desc h3, .goods-detail-desc h4, .goods-detail-desc h5, .goods-detail-desc h6 {
 	padding: 0;

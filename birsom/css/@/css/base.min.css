@@ -5779,17 +5779,18 @@ dd.del {
 #no-goods {
 	width: 280px;
 	margin: 0 auto;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+	text-align: right;
 }
 #no-goods img {
 	float: right;
+	margin-left: 10px;
 }
 #no-goods span {
-	float: right;
-	font-size: 12px;
+	font-size: 14px;
 	height: 49px;
-	line-height: 49px;
-	margin-right: 10px;
+	line-height: 29px;
+	width: 180px;
 }
 #right-now {
 	text-align: center;

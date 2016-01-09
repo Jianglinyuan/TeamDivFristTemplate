@@ -4931,3 +4931,19 @@ p.w-record-price, p.w-goods-price {
 .m-detail-period .box-hd h4 {
   text-align: center;
 }
+.m-detail-no-winner {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 140px;
+    position: relative;
+}
+img.good-luck {
+    width: 80px;
+}
+.m-detail-no-winner {
+    background: url(../img/common/good-luck.png) center no-repeat;
+    height: 370px;
+    width: 248px;
+    margin-left: -10px;
+}
