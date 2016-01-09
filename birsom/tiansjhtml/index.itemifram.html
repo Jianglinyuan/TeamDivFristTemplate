@@ -11,12 +11,12 @@
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/register.css"/>
 <script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>	
 <script>
-// $(function(){
-// 	window.parent.set_iframe_height(document.body.offsetHeight+120);
-// });
-// $(function(){
-// 	window.parent.set_iframe_height("iframea_divPost","divPost",document.body.offsetHeight+120);
-// });
+$(function(){
+	window.parent.set_iframe_height(document.body.offsetHeight+120);
+});
+$(function(){
+	window.parent.set_iframe_height("iframea_divPost","divPost",document.body.offsetHeight+120);
+});
 
 </script>
 </head>
@@ -162,7 +162,7 @@ margin-left: 0;
 </style>
 <body style="width:1188px; min-height:150px">
 		<div id="divPost" class="Single_Content">
-	{wc:if count($shaidan)==0}
+	{wc:if $error!=0}
 		<div class="empty" style="">
             <p class="status-empty"><i class="littleU littleU-cry"></i>&nbsp;&nbsp;暂时还没有任何晒单</p>
         </div>
