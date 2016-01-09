@@ -3,7 +3,7 @@
 
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>搜索页面</title>
+    <title>ئىزدەش</title>
     <meta content="app-id=518966501" name="apple-itunes-app" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
@@ -75,17 +75,17 @@
             </style>
             <div class="fl u-slogan"></div>
             <div class="fr head-r"></div>
-            <h2 class>搜索结果</h2>
+            <h2 class>ئىزدەش</h2>
             <div class="head-r" style="font-size:15px;">
                 <a href="javascript:;" onclick="history.go(-1)" class="z-HReturn">
                     <s></s><b>قايتىش</b></a>
             </div>
-            <button class="zSearchbtn" value="搜索">搜索</button>
+            <button class="zSearchbtn" value="ئىزدەش">ئىزدەش</button>
             <div class="search-section">
                 <div class="search-form clearfix">
-                    <input type="text" id="txtSearch" class="search-text" placeholder="搜索您需要的商品" />
-                    <button type="button" id="butSearch" class="search-btn iconfont" value="搜索">搜索</button>
-                    <button type="button" id="butSearch" class="exit" value="搜索">取消</button>
+                    <input type="text" id="txtSearch" class="search-text" placeholder="ئىزدىمەكچى بولغان مەھسۇلاتىڭىزنى كىرگۈزۈڭ" />
+                    <button type="button" id="butSearch" class="search-btn iconfont" value="ئىزدەش">ئىزدەش</button>
+                    <button type="button" id="butSearch" class="exit" value="بىكار قىلىش">بىكار قىلىش</button>
                 </div>
             </div>
             <script type="text/javascript" src="{G_GLOBAL_STYLE}/global/js/jquery-1.8.3.min.js"></script>
@@ -96,7 +96,7 @@
                         background: "#FFFFCC"
                     });
                     var va1 = $("#txtSearch").val();
-                    if (va1 == '搜索您需要的商品') {
+                    if (va1 == 'ئىزدىمەكچى بولغان مەھسۇلاتىڭىزنى كىرگۈزۈڭ') {
                         $("#txtSearch").val("");
                     }
                 });
@@ -106,7 +106,7 @@
                     });
                     var va2 = $("#txtSearch").val();
                     if (va2 == "") {
-                        $("#txtSearch").val('搜索您需要的商品');
+                        $("#txtSearch").val('ئىزدىمەكچى بولغان مەھسۇلاتىڭىزنى كىرگۈزۈڭ');
                     }
                 });
                 $("#butSearch").click(function() {
@@ -145,7 +145,7 @@
                     <a href="{G_WEB_PATH}/?/mobile/shaidan/"><img src="{G_TEMPLATES_STYLE}/mobile/images/nava2.png"></a>
                 </div>
                 <div class="textnavword">
-                    <p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb"> بەھىرلەر</p>
+                    <p style="text-align:center;font-size: 14px;font-family:alkatip;color:#bbb">بەھىرلەر</p>
                 </div>
             </div>
             <div class="wrapnavautos">
@@ -161,15 +161,36 @@
         <div class="textnav">
         </div>
         <hr/>
-        <script src="{G_TEMPLATES_MOBILE_JS}/ajax.js"></script>
         <!-- 内页顶部 -->
         <style type="text/css">
         .u-progress .pgbar {
             width: 0px;
         }
-        </style>
+</style>
+<script src="{G_TEMPLATES_MOBILE_JS}/ajax.js"></script>
+
         <section class="goodsCon">
             <!-- 列表 -->
+        <!--div class="goodsNav">
+            <ul id="divGoodsNav">
+                <li order="10" class="current"><a href="javascript:;">جاكارلار<b></b></a></li>
+                <li order="20"><a href="javascript:;">ئاۋاتلىق<b></b></a></li>
+                <li order="40"><a href="javascript:;">يىڭى<b></b></a></li>
+                <li order="50" type="price"><a href="javascript:;">باھاسى<em></em><s></s><b></b></a></li>
+                <li order="">
+                    <a href="javascript:;">تۈرلەر<s class="arrowUp"></s></a>
+                    <dl style="display:none;width:100%;position:fixed;top:120px;z-index:50;">
+
+                        <dd type="0" class="sOrange"><a href="javascript:;">ھەممىسى</a></dd>
+                        {wc:getlist sql="select * from `@#_category` where parentid=0 and `model`='1'"}
+                        {wc:loop $data $categoryx}
+                        <dd><a id="{wc:$categoryx['cateid']}" href="javascript:;">{wc:$categoryx['name']}</a></dd>
+                        {wc:loop:end}
+                        {wc:getlist:end}
+                    </dl>
+                </li>
+           </ul>
+        </div-->
             <div class="goodsList">
                 {wc:if $shoplist!=null} {wc:loop $shoplist $shop}
                 <ul>
@@ -195,75 +216,172 @@
                     </li>
                 </ul>
                 {wc:loop:end} {wc:else}
-                <a id="btnLoadMore2" class="loading" style="">抱歉，没有找到<em class="orange">"{wc:$search}"</em>相关的商品！</a> {wc:if:end}
+                <a id="btnLoadMore2" class="loading" style="">كەچۈرۈڭ، <em class="orange">"{wc:$search}"</em>بىلەن مۇناسىۋەتلىك مەھسۇلات تېپىلمىدى</a> {wc:if:end}
             </div>
         </section>
         <input id="urladdress" value="" type="hidden" />
-        <input id="pagenum" value="" type="hidden" /> {wc:templates "mobile/index","footer"}
-        <script type="text/javascript">
-        $(document).ready(function() {
-            $("#btnLoadMore").click(function() {
-                var url = $("#urladdress").val(),
-                    page = $("#pagenum").val();
-                glist_json(url + '/' + page);
-            });
-            //返回顶部
-            $(window).scroll(function() {
-                if ($(window).scrollTop() > 50) {
-                    $("#btnTop").show();
-                } else {
-                    $("#btnTop").hide();
-                }
-            });
-            $("#btnTop").click(function() {
-                $("body").animate({
-                    scrollTop: 0
-                }, 10);
-            });
-            //添加到购物车
-            $(document).on("click", '.add', function() {
-                var codeid = $(this).attr('codeid');
-                $.getJSON('{WEB_PATH}/mobile/ajax/addShopCart/' + codeid + '/1', function(data) {
-                    if (data.code == 1) {
-                        addsuccess('添加失败');
-                    } else if (data.code == 0) {
-                        addsuccess('添加成功');
-                    }
-                    return false;
-                });
-            });
+        <input id="pagenum" value="" type="hidden" /> 
+{wc:templates "mobile/index","footer"}
+<script type="text/javascript">
 
-            function addsuccess(dat) {
-                $("#pageDialogBG .Prompt").text("");
-                var w = ($(window).width() - 255) / 2,
-                    h = ($(window).height() - 45) / 2;
-                $("#pageDialogBG").css({
-                    top: h,
-                    left: w,
-                    opacity: 0.8
-                });
-                $("#pageDialogBG").stop().fadeIn(1000);
-                $("#pageDialogBG .Prompt").append('<s></s>' + dat);
-                $("#pageDialogBG").fadeOut(1000);
-                //购物车数量
-                $.getJSON('{WEB_PATH}/mobile/ajax/cartnum', function(data) {
-                    $("#btnCart").append('<em>' + data.num + '</em>');
-                });
+//打开页面加载数据
+window.onload=function(){
+    glist_json("list/50");
+    //购物车数量
+    $.getJSON('{WEB_PATH}/mobile/ajax/cartnum',function(data){
+        if(data.num){
+            $("#btnCart").append('<em>'+data.num+'</em>');
+        }
+    });
+    
+}
+//获取数据
+function glist_json(parm){
+    $("#urladdress").val('');
+    $("#pagenum").val('');
+    $.getJSON('{WEB_PATH}/mobile/mobile/glistajax/'+parm,function(data){
+        $("#divGoodsLoading").css('display','none');        
+        if(data[0].sum){
+            var fg=parm.split("/");
+            $("#urladdress").val(fg[0]+'/'+fg[1]);
+            $("#pagenum").val(data[0].page);
+            for(var i=0;i<data.length;i++){         
+            var ul='<ul><li>';
+                ul+='<span id="'+data[i].id+'" class="z-Limg"><img src="{G_UPLOAD_PATH}/'+data[i].thumb+'"></span>';
+                ul+='<div class="goodsListR">';
+                ul+='<h2 id="'+data[i].id+'">'+data[i].title+'</h2>';
+                ul+='<div class="pRate">';
+                ul+='<div class="Progress-bar" id="'+data[i].id+'">';               
+                ul+='<p class="u-progress"><span class="pgbar" style="width:'+(data[i].canyurenshu / data[i].zongrenshu)*100+'%;"><span class="pging"></span></span></p>';
+                ul+='<ul class="Pro-bar-li">';
+                ul+='<li class="P-bar01"><em>'+data[i].canyurenshu+'</em>قاتناشقىنى</li>';
+                ul+='<li class="P-bar02"><em>'+data[i].zongrenshu+'</em>جەمئىي</li>';
+                ul+='<li class="P-bar03"><em>'+data[i].shenyurenshu+'</em>قالغىنى</li>';
+                ul+='</ul></div>';
+                ul+='<a class="add " codeid="'+data[i].id+'" href="javascript:;"><s></s></a>';
+                ul+='</div></div></li></ul>';
+                $("#divGoodsLoading").before(ul);           
             }
-            //跳转页面
-            var gt = '.goodsList span,.goodsList h2,.goodsList .Progress-bar';
-            $(document).on('click', gt, function() {
-                var id = $(this).attr('id');
-                if (id) {
-                    window.location.href = "{WEB_PATH}/mobile/mobile/item/" + id;
-                }
-            });
+            if(data[0].page<=data[0].sum){
+                $("#btnLoadMore").css('display','block');
+                $("#btnLoadMore2").css('display','none');
+                $("#btnLoadMore3").css('display','none');
+            }else if(data[0].page>data[0].sum){
+                $("#btnLoadMore").css('display','none');
+                $("#btnLoadMore2").css('display','none');
+                $("#btnLoadMore3").css('display','block');
+            }
+        }else{
+            $("#btnLoadMore").css('display','none');
+            $("#btnLoadMore2").css('display','block');  
+            $("#btnLoadMore3").css('display','none');           
+        }
+    });
+}
+$(document).ready(function(){
+    //即将揭晓,人气,最新,价格 
+    $("#divGoodsNav li:not(:last)").click(function() {
+        var l=$(this).index();
+        $("#divGoodsNav li").removeClass().eq(l).addClass('current');
+        var parm=$("#divGoodsNav li").eq(l).attr('order');
 
+        if(parm=='50') $("#divGoodsNav li").eq(l).attr('order', '60');
+        if(parm=='60') $("#divGoodsNav li").eq(l).attr('order', '50');
+
+        $("#divGoodsLoading").css('display','block');
+        $(".goodsList ul").remove();
+        var glist=glist_json("list/"+parm);
+    });
+    
+    //商品分类
+    var dl=$("#divGoodsNav dl"),
+        last=$("#divGoodsNav li:last"),
+        first=$("#divGoodsNav dd:first");
+    $("#divGoodsNav li:last a:first").click(function(){     
+        if(dl.css("display")=='none'){
+            dl.show();
+            last.addClass("gSort");
+            first.addClass("sOrange");          
+        }else{
+            dl.hide();
+            last.removeClass("gSort");
+            first.removeClass("sOrange");
+        }
+    });
+    $("#divGoodsNav  dd").click(function(){
+        var s=$(this).index();
+        var t=$("#divGoodsNav .gSort dd a").eq(s).html();
+        var id=$("#divGoodsNav .gSort dd a").eq(s).attr('id');
+        $("#divGoodsNav .gSort a:first").html(t+'<s class="arrowUp"></s>');
+        var l=$("#divGoodsNav .current").index(),
+            parm=$("#divGoodsNav li").eq(l).attr('order');
+        if(id){         
+            $("#divGoodsLoading").css('display','block');
+            $(".goodsList ul").remove();
+            glist_json(id+'/'+parm);
+        }else{
+            glist_json("list/"+parm);
+            $(".goodsList ul").remove();
+        }   
+        dl.hide();
+        last.removeClass("gSort");
+        first.removeClass("sOrange");
+    });
+    //加载更多
+    $("#btnLoadMore").click(function(){     
+        var url=$("#urladdress").val(),
+            page=$("#pagenum").val();
+        glist_json(url+'/'+page);
+    }); 
+    //返回顶部
+    $(window).scroll(function(){
+        if($(window).scrollTop()>50){
+            $("#btnTop").show();
+        }else{
+            $("#btnTop").hide();
+        }
+    });
+    $("#btnTop").click(function(){
+        $("body").animate({scrollTop:0},10);
+    });
+    //添加到购物车
+    $(document).on("click",'.add',function(){
+        var codeid=$(this).attr('codeid');
+        $.getJSON('{WEB_PATH}/mobile/ajax/addShopCart/'+codeid+'/1',function(data){
+            if(data.code==1){
+                addsuccess('添加失败');
+            }else if(data.code==0){
+                addsuccess('添加成功');             
+            }return false;
         });
-        </script>
-    </div>
-</body>
+    });
+    function addsuccess(dat){
+        $("#pageDialogBG .Prompt").text("");
+        var w=($(window).width()-255)/2,
+            h=($(window).height()-45)/2;
+        $("#pageDialogBG").css({top:h,left:w,opacity:0.8});
+        $("#pageDialogBG").stop().fadeIn(1000);
+        $("#pageDialogBG .Prompt").append('<s></s>'+dat);
+        $("#pageDialogBG").fadeOut(1000);
+        //购物车数量
+        $.getJSON('{WEB_PATH}/mobile/ajax/cartnum',function(data){
+            $("#btnCart").append('<em>'+data.num+'</em>');
+        });
+    }
+    //跳转页面
+    var gt='.goodsList span,.goodsList h2,.goodsList .Progress-bar';
+    $(document).on('click',gt,function(){
+        var id=$(this).attr('id');
+        if(id){
+            window.location.href="{WEB_PATH}/mobile/mobile/item/"+id;
+        }           
+    });
 
+});
+</script>
+
+</div>
+</body>
 </html>
 <style>
 #pageDialogBG {
