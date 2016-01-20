@@ -21,7 +21,8 @@ class user extends base {
 	public function cook_end_mobile(){
 		_setcookie("uid","",time()-3600);
 		_setcookie("ushell","",time()-3600);
-		_message("退出成功","/?/mobile/mobile");
+		// _message("退出成功","/?/mobile/mobile");
+		header("Location:/?/mobile/mobile");
 		//_message("退出成功",WEB_PATH);
 	}
 
