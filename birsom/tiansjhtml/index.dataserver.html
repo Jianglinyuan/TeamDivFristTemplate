@@ -122,7 +122,7 @@
             <!-- 获奖人信息 -->
                 <div class="m-detail-main-winner-content">
                     <div class="avatar">
-						<img width="90" height="90" src="{G_UPLOAD_PATH}/{wc:$q_user['img']}">
+						<img width="90" height="90" onerror="this.src='http://mimg.127.net/p/yy/lib/img/avatar/90.jpeg'" src="{G_UPLOAD_PATH}/{wc:$q_user['img']}">
                     </div>
                     <!-- ID补齐8位 -->
                     {wc:php:start} 
@@ -186,19 +186,20 @@
                 <p class="slogan"><i class="ico ico-state-l ico-state-l-1"></i>我们有严谨的幸运号码计算规则，保证公平公正公开</p>
                 <ul class="txt">
                     <li>
-                        <span class="title">为什么会进行倒计时？</span>
-                        <p>为保证公平公正公开，正等待一小段时间，取最近一期中国福利彩票“老时时彩”的开奖结果。 <a href="http://caipiao.163.com/award/ssc/20160108.html" target="_blank" style="font-family:simsun">开奖查询&gt;&gt;</a></p>
+                        <span class="title">倒计时中</span>
+                        <p>请耐心等待一小段时间…… <!-- <a href="http://caipiao.163.com/award/ssc/20160108.html" target="_blank" style="font-family:simsun">开奖查询&gt;&gt;</a> --></p>
                     </li>
                     <!-- 计算公式 -->
                     <li>
                         <span class="title">计算公式</span>
                         <div class="formula">
-                            <div class="box red-box"><b class="txt-red">本期幸运号码</b></div><div class="operator">=(</div><div class="box gray-box"><b class="txt-red">5006121137</b><br>50个时间求和
+                            <div class="box red-box"><b class="txt-red">本期幸运号码</b></div><div class="operator">=</div><div class="box gray-box"><b class="txt-red">{wc:$user_shop_time_add}</b><br>50个时间求和
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box">商品的最后一个号码分配完毕，公示该分配时间点前本站全部商品的<span class="txt-red">最后50个参与时间</span>，并求和。</div>
                                 </div>
-                            </div><div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">?</b><br>“老时时彩”开奖号码
+                            </div>
+                            <!-- <div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">?</b><br>“老时时彩”开奖号码
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box">
@@ -206,7 +207,8 @@
                                         
                                     </div>
                                 </div>
-                            </div><div class="operator" title="取余">)%</div><div class="box"><b class="txt-red">35</b><br>该商品总需人次</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>原始数</div>
+                            </div> -->
+                            <div class="operator" title="取余">%</div><div class="box"><b class="txt-red">{wc:$item['canyurenshu']}</b><br>该商品总需人次</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>原始数</div>
                         </div>
                     </li>
                 </ul>
@@ -218,19 +220,21 @@
                         <div class="f-clear formula">
                             <div class="box red-box">
                                 <b class="txt-red">{wc:$item['q_user_code']}</b><br><b class="txt-red" style="font-size:12px">本期幸运号码</b>
-                                </div><div class="operator">=(</div><div class="box gray-box"><b class="txt-red">{wc:$user_shop_time_add}</b><br>50个时间求和
+                                </div><div class="operator">=</div><div class="box gray-box"><b class="txt-red">{wc:$user_shop_time_add}</b><br>50个时间求和
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box">商品的最后一个号码分配完毕，公示该分配时间点前本站全部商品的<span class="txt-red">最后50个参与时间</span>，并求和。</div>
                                 </div>
-                            </div><div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">???</b><br>“老时时彩”开奖号码
+                            </div>
+                            <!-- <div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">???</b><br>“老时时彩”开奖号码
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box f-breakword">
                                             取最近一期“老时时彩” (第<span class="txt-red">???</span>期) 开奖结果。 <a href="http://caipiao.163.com/award/ssc/20160107.html" target="_blank">开奖查询</a>
                                     </div>
                                 </div>
-                            </div><div class="operator" title="取余">)%</div><div class="box"><b class="txt-red">{wc:$item['canyurenshu']}</b><br>该商品总需人次</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>原始数</div>
+                            </div> -->
+                            <div class="operator" title="取余">%</div><div class="box"><b class="txt-red">{wc:$item['canyurenshu']}</b><br>该商品总需人次</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>原始数</div>
                         </div>
                     </li>
                 </ul>
@@ -343,14 +347,14 @@
                 <h4 style="height: 162px;">
                         <i class="ico ico-text"></i><br>幸运号码<br>计算规则
                 </h4>
-                <div class="ruleWrap" style="height: auto;">
+                <div class="ruleWrap">
                 <!-- 计算规则 -->
                     <ol class="ruleList">
                             <li><span class="index">1</span>商品的最后一个号码分配完毕后，将公示该分配时间点前本站全部商品的最后50个参与时间；</li>
                             <li><span class="index">2</span>将这50个时间的数值进行求和（得出数值A）（每个时间按时、分、秒、毫秒的顺序组合，如20:15:25.362则为201525362）；</li>
-                            <li><span class="index">3</span>为保证公平公正公开，系统还会等待一小段时间，取最近下一期中国福利彩票“老时时彩”的开奖结果（一个五位数值B）；</li>
-                            <li><span class="index">4</span>（数值A+数值B）除以该商品总需人次得到的余数<i style="margin-top:-3px;" data-func="remainder" class="ico ico-questionMark" title="余数：指整数除法中，被除数未被除尽部分。“例如27除以6，商为4，余数为3”"></i> + 原始数&nbsp;10000001，得到最终幸运号码，拥有该幸运号码者，直接获得该商品。</li>
-                            <li class="txt-red">注：如遇福彩中心通讯故障，无法获取上述期数的中国福利彩票“老时时彩”开奖结果，且24小时内该期“老时时彩”开奖结果仍未公布，则默认“老时时彩”开奖结果为00000。</li>
+                            <!-- <li><span class="index">3</span>为保证公平公正公开，系统还会等待一小段时间，取最近下一期中国福利彩票“老时时彩”的开奖结果（一个五位数值B）；</li> -->
+                            <li><span class="index">3</span>数值A除以该商品总需人次得到的余数<i style="margin-top:-3px;" data-func="remainder" class="ico ico-questionMark" title="余数：指整数除法中，被除数未被除尽部分。“例如27除以6，商为4，余数为3”"></i> + 原始数&nbsp;10000001，得到最终幸运号码，拥有该幸运号码者，直接获得该商品。</li>
+                            <!-- <li class="txt-red">注：如遇福彩中心通讯故障，无法获取上述期数的中国福利彩票“老时时彩”开奖结果，且24小时内该期“老时时彩”开奖结果仍未公布，则默认“老时时彩”开奖结果为00000。</li> -->
                     </ol>
                 </div>
             </div>
@@ -403,53 +407,21 @@
                                 <h4>计算结果<a name="calcResult"></a></h4>
                                 <ol>
                                     <li><span class="index">.1</span>求和：{wc:$user_shop_time_add} (上面50条参与记录的时间取值相加)</li>
-                                    <li><span class="index">.2</span>
-                                        第 ??? 期“老时时彩”开奖号码：
 
-                                        <!-- 已经揭晓，这里换成真正的彩票数据 -->
-                                        {wc:if $item['q_showtime']=='N'}
-                                        <b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b>
-                                        <!-- 倒计时，保留问号 -->
-                                        {wc:else}
-                                        <b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b>
-                                        {wc:if:end}
-
-                                        <a href="http://caipiao.163.com/award/ssc/20160109.html" target="_blank">&lt;&lt;开奖查询</a>
-                                    </li>
                                     {wc:php:start}
                                         $mod_str = strval($user_shop_fmod);
                                         $mod_str = str_split($mod_str);
                                     {wc:php:end}
-                                    <li><span class="index">.3</span>求余：({wc:$user_shop_time_add} + 
-
-                                        <!-- 已经揭晓，这里换成真正的彩票数据 -->
-                                        {wc:if $item['q_showtime']=='N'}
-                                        <b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b>
-                                        <!-- 倒计时，保留问号 -->
-                                        {wc:else}
-                                        <b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b>
-                                        {wc:if:end}
-
+                                    <li><span class="index">.3</span>求余：{wc:$user_shop_time_add}
                                      % {wc:$item['canyurenshu']} (商品所需人次) = 
-
-                                    {wc:if $item['q_showtime']=='N'}
                                         {wc:loop $mod_str $digit}
                                         <b class="square">{wc:$digit}</b>
                                         {wc:loop:end}
-                                    {wc:else}
-                                        <b class="square">?</b>
-                                        <b class="square">?</b>
-                                        <b class="square">?</b>
-                                        <b class="square">?</b>
-                                        <b class="square">?</b>
-                                    {wc:if:end}
 
         (余数) <i data-func="remainder" class="ico ico-questionMark" title="余数：指整数除法中，被除数未被除尽部分。“例如27除以6，商为4，余数为3”"></i>
                                     </li>
-                                    <li><span class="index">.4</span>
+                                    <li><span class="index">.3</span>
                     
-                                <!-- 已揭晓 -->
-                                {wc:if $item['q_showtime']=='N'}
                                     {wc:loop $mod_str $digit}
                                         <b class="square">{wc:$digit}</b>
                                     {wc:loop:end}
@@ -457,7 +429,11 @@
                                     {wc:php:start}
                                         $res = str_split($item['q_user_code']);
                                     {wc:php:end}
-        (余数) + 10000001 = 
+
+                                    (余数) + 10000001 = 
+
+                                <!-- 已揭晓 -->
+                                {wc:if $item['q_showtime']=='N'}
                                     {wc:loop $res $res_bit}
                                         <b class="square">{wc:$res_bit}</b>
                                     {wc:loop:end}
@@ -471,12 +447,6 @@
                                     <b class="square">?</b>
                                     <b class="square">?</b>
                                     <b class="square">?</b>
-                                     (余数) + 10000001 = 
-                                    <b class="square">?</b>
-                                    <b class="square">?</b>
-                                    <b class="square">?</b>
-                                    <b class="square">?</b>
-                                    <b class="square">?</b>
                                     <b class="square">?</b>
                                     <b class="square">?</b>
                                     <b class="square">?</b>
@@ -484,6 +454,7 @@
                                 </ol>
                                 <span class="resultCode">幸运号码：<span style="margin-left:10px;color:#bbb">等待揭晓...</span></span>
                                 {wc:if:end}
+
                             </td>
                         </tr>
                 </tbody>
