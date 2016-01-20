@@ -47,15 +47,15 @@
                                 {wc:php:end}
                                 <li data-pro="item" class="w-slide-wrap-list-item">
                                     <div class="w-goods-newReveal">
-                                        <i class="ico ico-label ico-label-newReveal" title="最新揭晓"></i>
+                                        <i class="ico ico-label ico-label-newReveal" title=""></i>
                                         <p class="w-goods-title"><a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" title="{wc:$qishu['title']}" target="_blank">{wc:$qishu['title']}</a></p>
                                         <div class="w-goods-pic">
                                             <a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" target="_blank">
                                                 <img width="140" height="105" src="{G_UPLOAD_PATH}/{wc:$qishu['thumb']}">
                                             </a>
                                         </div>
-                                        <p class="w-goods-price">جەمئىي ئادەم قېتىم سانى：{wc:$qishu['zongrenshu']}</p>
-                                        <p class="w-goods-period">سان：{wc:$qishu['qishu']}</p>
+                                        <p class="w-goods-price">جەمئىي ئېھتىياجلىق ئادەم قېتىم：{wc:$qishu['zongrenshu']}</p>
+                                        <p class="w-goods-period">{wc:$qishu['qishu']} - سان</p>
                                         <div class="w-goods-record">
                                             <p class="w-goods-owner f-txtabb">ئېرىشكۈچى ：<a href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" title="{wc:fun:get_user_name($qishu['q_user'])}"><b>{wc:fun:get_user_name($qishu['q_user'])}</b></a></p>
                                             <p>مەزكۇر قېتىملىق قاتنىشىش قېتىم سانى：{wc:$renci[$key]['gonumber']}</p>
@@ -75,8 +75,8 @@
 
                             <div class="w-slide-controller">
                                 <div class="w-slide-controller-btn" data-pro="controllerBtn">
-                                    <a class="prev" data-pro="prev" href="javascript:void(0)"><i class="ico ico-arrow-large ico-arrow-large-l"></i><span class="f-txtHide">最新揭晓上一帧</span></a>
-                                    <a class="next" data-pro="next" href="javascript:void(0)"><i class="ico ico-arrow-large ico-arrow-large-r"></i><span class="f-txtHide">最新揭晓下一帧</span></a>
+                                    <a class="prev" data-pro="prev" href="javascript:void(0)"><i class="ico ico-arrow-large ico-arrow-large-l"></i><span class="f-txtHide"></span></a>
+                                    <a class="next" data-pro="next" href="javascript:void(0)"><i class="ico ico-arrow-large ico-arrow-large-r"></i><span class="f-txtHide"></span></a>
                                 </div>
                                 <div class="w-slide-controller-nav" data-pro="controllerNav"></div>
                             </div>
@@ -91,7 +91,7 @@
         </div> -->
                     <div class="m-index-recommend">
                         <h4>تەۋسىيەلەر</h4>
-                        <i class="ico ico-label ico-label-recommend" title="推荐夺宝"></i>
+                        <i class="ico ico-label ico-label-recommend" title="تەۋسىيەلەر"></i>
                         <div class="w-goods w-goods-ing">
                             <div class="w-goods-pic">
                                 <a href="{WEB_PATH}/goods/{wc:$new_shop1['id']}" title="{wc:$new_shop1['title']}" target="_blank">
@@ -100,7 +100,7 @@
                             </div>
                             <p class="w-goods-title f-txtabb"><a title="{wc:$new_shop1['title']}" href="{WEB_PATH}/goods/{wc:$new_shop1['id']}" target="_blank">{wc:$new_shop1['title']}</a></p>
                             <p class="w-goods-price">
-                               جەمئىي ئادەم قېتىم سانى：{wc:$new_shop1['zongrenshu']}
+                               جەمئىي ئېھتىياجلىق ئادەم قېتىم：{wc:$new_shop1['zongrenshu']}
                             </p>
 
                             <div class="w-progressBar" title="{wc:fun:percent($new_shop1['canyurenshu'],$new_shop1['zongrenshu'])}">
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                     <div class="w-slide m-index-newGoods">
-                        <i class="ico ico-label ico-label-newRecommend" title="新品推荐"><a style="display:block;width:100%;height:100%" href="#newArrivals"></a></i>
+                        <i class="ico ico-label ico-label-newRecommend" title=""><a style="display:block;width:100%;height:100%" href="#newArrivals"></a></i>
                         <div class="w-slide-wrap">
                             <ul class="w-slide-wrap-list-xptuijian" data-pro="list">
 
@@ -190,7 +190,7 @@
                                         </div>
                                         <p class="w-goods-title f-txtabb"><a title="{wc:$renqi['title']}" href="{WEB_PATH}/{wc:$path}/{wc:$renqi['id']}" target="_blank">{wc:$renqi['title']}</a></p>
                                         <p class="w-goods-price">
-                                            جەمئىي ئادەم قېتىم سانى：{wc:$renqi['zongrenshu']}
+                                            جەمئىي ئېھتىياجلىق ئادەم قېتىم：{wc:$renqi['zongrenshu']}
                                         </p>
                                         <div class="w-progressBar" title="{wc:fun:percent($renqi['canyurenshu'],$renqi['zongrenshu'])}">
                                             <p class="w-progressBar-wrap">
@@ -243,9 +243,11 @@
                                             <a class="w-record-user f-txtabb" href="{WEB_PATH}/uname/{wc:fun:idjia($chuanqi['uid'])}" target="_blank" title="{wc:$chuanqi['username']}">{wc:$chuanqi['username']}</a>
                                             <span class="w-record-date">{wc:fun:date("m-d",$chuanqi['time'])}</span>
                                         </p>
-                                        <p class="w-record-title f-txtabb"><strong>{wc:$chuanqi['gonumber']} سوم </strong><a title="{wc:$chuanqi['shopname']}" href="{WEB_PATH}/goods/{wc:$chuanqi['shopid']}" target="_blank">{wc:$chuanqi['shopname']}</a></p>
+                                        <p class="w-record-title f-txtabb"><a title="{wc:$chuanqi['shopname']}" href="{WEB_PATH}/goods/{wc:$chuanqi['shopid']}" target="_blank">{wc:$chuanqi['shopname']}</a></br>
+                                        {wc:$chuanqi['shopqishu']} - سان
+                                        </p>
                                         <p class="w-record-price">
-                                            مۇكاپاتقا ئېرىشكەن سان :{wc:$chuanqi['shopqishu']}
+                                        <strong>{wc:$chuanqi['gonumber']} سوم بىلەن ئېرىشتى</strong>  
                                         </p>
                                     </div>
                                 </li>
@@ -314,7 +316,7 @@
                                     </div>
                                     <p class="w-goods-title f-txtabb"><a title="{wc:$g_l['title']}" href="{WEB_PATH}/{wc:$path}/{wc:$g_l['id']}" target="_blank">{wc:$g_l['title']}</a></p>
                                     <p class="w-goods-price">
-                                        جەمئىي ئادەم قېتىم سانى：{wc:$g_l['zongrenshu']}
+                                        جەمئىي ئېھتىياجلىق ئادەم قېتىم：{wc:$g_l['zongrenshu']}
                                     </p>
                                     <div class="w-progressBar" title="{wc:fun:percent($g_l['canyurenshu'],$g_l['zongrenshu'])}">
                                         <p class="w-progressBar-wrap">
@@ -380,7 +382,7 @@
                                     </div>
                                     <p class="w-goods-title f-txtabb"><a title="{wc:$newest['title']}" href="{WEB_PATH}/{wc:$path}/{wc:$newest['id']}" target="_blank">{wc:$newest['title']}</a></p>
                                     <p class="w-goods-price">
-                                        جەمئىي ئادەم قېتىم سانى：{wc:$newest['zongrenshu']}
+                                        جەمئىي ئېھتىياجلىق ئادەم قېتىم：{wc:$newest['zongrenshu']}
                                     </p>
                                 </div>
                             </li>

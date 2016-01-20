@@ -34,13 +34,13 @@
 					<a class="fl-img" href="{WEB_PATH}/dataserver/{wc:$shaidan['sd_shopid']}" target="_blank">
 					<img src="{G_UPLOAD_PATH}/{wc:$goods['thumb']}" border="0"></a>
 					<div class="share-getinfo">
-						<p class="getinfo-title"><a class="gray01" href="{WEB_PATH}/goods/{wc:$goods['id']}" target="_blank">(第{wc:$goods['qishu']}期){wc:$goods['title']}</a></p>
+						<p class="getinfo-title"><a class="gray01" href="{WEB_PATH}/goods/{wc:$goods['id']}" target="_blank">({wc:$goods['qishu']} - سان){wc:$goods['title']}</a></p>
 						<p>价值：￥{wc:$goods['money']}</p>
 						<p id="GoToBuy"><a class="getbut-a" href="{WEB_PATH}/goods/{wc:$goods['id']}" target="_blank">
 						{wc:if !empty($goods['q_uid'])}
 						已揭晓
 						{wc:else}
-						第{wc:$goods['qishu']}期正在进行中...
+						{wc:$goods['qishu']} - سان ئېلىپ بېرىلىۋاتىدۇ
 						{wc:if:end}
 						</span></a></p>
 					</div>

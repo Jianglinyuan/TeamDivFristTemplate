@@ -166,15 +166,15 @@
 									$uid = '';
 									for ($i=0; $i<8-$len; $i++) {
 										$uid = $uid.'0';
-									}
+									};
 									$uid = $uid.$sid_code['q_uid'];
 								{wc:php:end}
 
 		                        <p>ئەزالىق نومۇرى：{wc:$uid}</p>
 		                        <p>تەلەيلىك نومۇر：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
-		                        <p>بۇ ساندا قاتناشقانلار：<em class="orange Fb">{wc:$user_shop_number}</em></p>
-    							<p>: سېتىۋېلىش ۋاقتى<br/>{wc:fun:microt($sid_go_record['time'])}</p>
-    							<p>: جاكارلىنىش ۋاقتى<br/>{wc:fun:microt($sid_code['q_end_time'])}</p>
+		                        <p>مەزكۇر قېتىملىق قاتنىشىش قېتىم سانى：<em class="orange Fb">{wc:$user_shop_number}</em></p>
+    							<p>: سېتىۋالغان ۋاقتى<br/>{wc:fun:microt($sid_go_record['time'])}</p>
+    							<p>: جاكارلانغان ۋاقتى<br/>{wc:fun:microt($sid_code['q_end_time'])}</p>
 								
 								<div class="last-winner"><a id="detail" class="w-button w-button-simple">تەپسىلاتىنى كۆرۈش</a></div>
 		                    </dd>

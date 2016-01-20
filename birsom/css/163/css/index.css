@@ -1,4 +1,3 @@
-/* * 首页 * Author Cloud * CreateDate 2014-03-20 * Copyright:1997-2014 Netease Inc. All rights reserved. */
 
 .m-index {}
 
@@ -454,8 +453,8 @@ body:before {
 
 .m-index-recordRank .w-intervalScroll-item {
   padding: 15px 10px;
-  height: 65px;
   border-bottom: 1px solid #ffffff;
+  height: 80px;
 }
 
 .m-index-recordRank .w-record-detail {

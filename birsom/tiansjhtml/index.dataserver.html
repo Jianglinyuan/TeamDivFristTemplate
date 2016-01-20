@@ -72,7 +72,7 @@
                 <!-- 倒计时 -->
                 {wc:if ($item['q_showtime'] == 'Y')}
                 <div class="m-detail-main-wrap m-detail-main-will">
-                    <h3>揭晓倒计时</h3>
+                    <h3>جاكارلىنىش تەتۈر ساناق</h3>
                     {wc:php:start}
                     	$len = strlen($item['qishu']);
                     	$qihao = $item['qishu'];
@@ -80,7 +80,7 @@
 							$qihao = '0'.$qihao;
                     	}
                     {wc:php:end}
-                    <div class="m-detail-main-period">期号：{wc:$qihao}</div>
+                    <div class="m-detail-main-period">{wc:$qihao} - سان</div>
                     <div class="m-detail-main-will-countdown" time="493945">
 	                    <b class="count-m0 w-num w-num-9">9</b>
 	                    <b class="count-m1 w-num w-num-9">9</b>
@@ -90,14 +90,14 @@
 	                    <b class="count-ms1 w-num w-num-9">9</b>
                     </div>
                     <div class="m-detail-main-will-waiting" style="display:none">
-                        <p class="txt-red"><b>正在计算，敬请期待...</b></p>
+                        <p class="txt-red"><b>ھېسابلىنىۋاتىدۇ، سەل تەخىر قىلىڭ</b></p>
                     </div>
                 </div>
                 
                 <!-- 已揭晓 -->
                 {wc:else}
                 <div class="m-detail-main-wrap m-detail-main-end">
-                    <h3>揭晓结果</h3>
+                    <h3>جاكارلىنىش نەتىجىسى</h3>
                     {wc:php:start}
                     	$len = strlen($item['qishu']);
                     	$qihao = $item['qishu'];
@@ -105,7 +105,7 @@
 							$qihao = '0'.$qihao;
                     	}
                     {wc:php:end}
-                    <div class="m-detail-main-period">期号：{wc:$qihao}</div>
+                    <div class="m-detail-main-period">{wc:$qihao} - سان</div>
                     <div class="m-detail-main-end-luckyCode">
                         {wc:loop $q_user_code_arr  $q_code_num}
                         <b class="w-num w-num-{wc:$q_code_num}">{wc:$q_code_num}</b>
@@ -133,20 +133,20 @@
 						}
 						$uid = $uid.$item['q_uid'];
 					{wc:php:end}
-                    <p class="txt-green user">获得了本期商品 (甘肃省兰州市) <a href="{WEB_PATH}/uname/{wc:fun:idjia($item['q_uid'])}" title="({wc:$uid}:ID){wc:fun:get_user_name($item['q_uid'])}">{wc:fun:get_user_name($item['q_uid'])}</a> 恭喜</p>
-                    <p class="cid txt-green"><b>用户ID：{wc:$uid}</b> (ID为用户唯一不变标识)</p>
-                    <p>揭晓时间：{wc:fun:microt($item['q_end_time'])}</p>
-                    <p>夺宝时间：{wc:fun:microt($user_shop_time)}</p>
+                    <p class="txt-green user">نىڭ مەزكۇر تاۋارغان ئېرىشكەنلىكىنى تەبرىكلەيمىز<a href="{WEB_PATH}/uname/{wc:fun:idjia($item['q_uid'])}" title="({wc:$uid}:ID){wc:fun:get_user_name($item['q_uid'])}">{wc:fun:get_user_name($item['q_uid'])}</a> </p>
+                    <p class="cid txt-green"><b>ئەزالىق نومۇرى ：{wc:$uid}</b></p>
+                    <p>جاكارلانغان ۋاقتى：{wc:fun:microt($item['q_end_time'])}</p>
+                    <p>سېتىۋالغان ۋاقتى：{wc:fun:microt($user_shop_time)}</p>
                 </div>
                 <!-- 获奖人号码 -->
                 <div class="m-detail-main-winner-codes">
                     <table cellpadding="0" cellspacing="0">
                         <tbody>
                             <tr>
-                                <td colspan="2"><p style="margin-bottom:5px;color:#3c3c3c;text-align: right;">商品获得者本期总共参与了<b class="txt-red">{wc:$user_shop_number}</b>人次</p></td>
+                                <td colspan="2"><p style="margin-bottom:5px;color:#3c3c3c;text-align: right;">تاۋارغا ئېرىشكۈچى مەزكۇر ساندا جەمئىي قاتناشقان قېتىم سانى<b class="txt-red">{wc:$user_shop_number}</b></p></td>
                             </tr>
                             <tr>
-                                <th>Ta的号码:</th>
+                                <th>Ta的号码</th>
                                 <td class="m-detail-main-codes-list">
                                     {wc:fun:yunma($user_shop_codes,"span")}
                                 </td>
@@ -243,7 +243,7 @@
 		<div class="g-side" id="zx">
 	        <div class="m-detail-period">
 	            <div class="box-hd">
-	               <h4>最新一期</h4>
+	               <h4>ئەڭ يېڭى سان</h4>
 	            </div>
 	            <div class="box-bd">
 		            <div class="m-detail-period-main-wrap">
@@ -275,7 +275,7 @@
 										<div style="display:none;" id="hqid">{wc:$itemzx['id']}</div>
 									</div>	
 
-									<div id="right-now"><a class="w-button w-button-main">立即参与</a></div>
+									<div id="right-now"><a class="w-button w-button-main">دەرھال قاتنىشىىش</a></div>
 								</div>
 
 		                    </dd>

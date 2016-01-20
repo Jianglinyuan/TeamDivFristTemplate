@@ -1721,7 +1721,7 @@ a {
 .site-header .open-buy-info {
 	position: absolute;
 	top: 60px;
-	right: 200px;
+	right: 220px;
 }
 
 /*  加入头部滚动  */
@@ -1872,7 +1872,7 @@ a {
 	border: 0 none;
 }
 .number li.gray6 {
-	width: 136px;
+	width: 45px;
 	font-size: 14px;
 	line-height: 29px;
 	_line-height: 31px;
@@ -1899,7 +1899,7 @@ a {
 	z-index: 0;
 }
 .number li.u-secondary {
-	width: 40px;
+	width: 120px;
 	position: relative;
 	text-align: right;
 }
