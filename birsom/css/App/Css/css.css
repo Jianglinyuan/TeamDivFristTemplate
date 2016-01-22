@@ -4000,7 +4000,7 @@
 .txt-bold {
 	font-weight: bold;
 }
-.ico {
+/*.ico {
 	display: inline-block;
 	vertical-align: middle;
 	background: url('../img/common/mix-icon.png') no-repeat;
@@ -4008,7 +4008,7 @@
 	overflow: hidden;
 	*display: inline;
 	*zoom: 1;
-}
+}*/
 .ico-hot {
 	width: 25px;
 	height: 13px;
@@ -4044,8 +4044,8 @@
 	height: 21px;
 	background-position: -30px -30px;
 }
-.ico-arrow {
-}
+/*.ico-arrow {
+}*/
 .ico-arrow-large {
 	width: 14px;
 	height: 23px;
@@ -4076,13 +4076,13 @@
 .ico-arrow-white-solid-r {
 	background-position: -110px -90px;
 }
-.ico-arrow-white {
+/*.ico-arrow-white {
 	width: 13px;
 	height: 8px;
-}
-.ico-arrow-white-down {
+}*/
+/*.ico-arrow-white-down {
 	background-position: -60px -130px;
-}
+}*/
 .ico-arrow-white-up {
 	background-position: -60px -140px;
 }
@@ -4553,12 +4553,12 @@ body {
 .g-side {
 	float: right;
 }
-.g-wrap {
+/*.g-wrap {
 	margin: 0 auto;
 	padding: 0 10px;
 	width: 1190px;
 	position: relative;
-}
+}*/
 .g-alert {
 	background: #FFFFE1;
 	line-height: 30px;
@@ -4583,11 +4583,11 @@ body {
 	display: inline-block;
 	overflow: hidden
 }
-.m-catlog-ft, .m-joinNum-wrap {
+/*.m-catlog-ft, .m-joinNum-wrap {
 	background-image: url('../img/common/mix-icon.png');
 	_background-image: url('../img/common/mix-icon_ie6.png');
 	background-repeat: no-repeat;
-}
+}*/
 .m-toolbar {
 	position: relative;
 	z-index: 3;
@@ -4596,10 +4596,10 @@ body {
 	position: relative;
 	z-index: 2;
 }
-.m-nav {
+/*.m-nav {
 	position: relative;
 	z-index: 1;
-}
+}*/
 .g-header .fixed {
 	position: fixed;
 	width: 100%;
@@ -4744,21 +4744,21 @@ body {
 	border-bottom: 3px solid #db3652;
 	box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.3);
 }
-.m-nav-promot {
+/*.m-nav-promot {
 	position: absolute;
 	bottom: 2px;
 	right: 10px;
 	height: 45px;
 	overflow: hidden;
-}
-.m-catlog {
+}*/
+/*.m-catlog {
 	width: 240px;
 	position: absolute;
 	left: 10px;
 	top: 0;
 	font-size: 15px;
 	font-family: "alkatip";
-}
+}*/
 .m-catlog a {
 	display: block;
 	padding-left: 30px;
@@ -4781,7 +4781,7 @@ body {
 	font-weight: bold;
 	line-height: 37px;
 }
-.m-catlog-hd .ico-arrow {
+/*.m-catlog-hd .ico-arrow {
 	position: absolute;
 	right: 30px;
 	top: 15px;
@@ -4790,7 +4790,7 @@ body {
 	-o-transition: all 0.3s;
 	-ms-transition: all 0.3s;
 	transition: all 0.3s;
-}
+}*/
 .m-catlog-wrap {
 	overflow: hidden;
 }
@@ -4807,17 +4807,17 @@ body {
 .m-catlog-list li.last {
 	border-bottom: 0;
 }
-.m-catlog-ft {
+/*.m-catlog-ft {
 	height: 4px;
 	background-position: 0 0;
 	background-repeat: repeat-x;
 	overflow: hidden;
-}
-.m-menu {
+}*/
+/*.m-menu {
 	margin-left: 240px;
 	font-size: 16px;
 	font-family: "alkatip";
-}
+}*/
 .m-menu-list var {
 	float: left;
 	font-size: 16px;
@@ -4832,11 +4832,11 @@ body {
 	background-color: #f5f5f5;
 	text-decoration: none;
 }
-.m-menu-list .m-menu-list-item {
+/*.m-menu-list .m-menu-list-item {
 	float: left;
 	padding: 5px 0;
 	position: relative;
-}
+}*/
 .m-menu-list .m-menu-list-item-link, .m-menu-list .m-menu-hd {
 	display: block;
 	margin: 0 5px 0 12px;
