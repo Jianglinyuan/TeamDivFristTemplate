@@ -109,16 +109,16 @@ function SetImgphoto(data){
 }
 </script>
 <style>
-#file_upload{float:left;}
+#file_upload{float:right;}
 #file_upload-queue{display:block; margin:30px 0 0 0;}
 .uploadCon {
 	margin:50px 0 0 43px;
 }
 .upLeft,.upRight {
-	float:left;
+	float:right;
 }
 .upLeft {
-	width:330px;
+	width:302px;
 }
 .localBtn {
 	position:relative;
@@ -182,6 +182,8 @@ function SetImgphoto(data){
 .upLeft .upload {
 	/*height:26px;
 	line-height:26px;*/
+    float: right;
+    margin-right: 10px;
 }
 .upLeft .upload dd {
 	float:left;
@@ -189,7 +191,7 @@ function SetImgphoto(data){
 	display:inline;
 }
 .frameCut {
-	float:left;
+	float:right;
 	margin-top:25px;
 	clear:both;
 	width:300px;
@@ -202,8 +204,9 @@ function SetImgphoto(data){
 }
 .upRight {
 	width:400px;
-	margin:55px 0 0 2px;
+	margin:55px 50px 0 0;
 	display:inline;
+	text-align: right;
 }
 .upRight p {
 	padding-left:6px;
@@ -213,9 +216,9 @@ function SetImgphoto(data){
 }
 .photo li {
 	text-align:center;
-	float:left;
-	margin-right:32px;
-	_margin-right:20px;
+	float:right;
+	margin-left:32px;
+	_margin-left:20px;
 	display:inline;
 	line-height:22px;
 }
@@ -254,6 +257,7 @@ span.tishi {
 	height:20px;
 	line-height:20px;
 	display:block;
+	text-align: right;
 }
 .savePhoto input {
 	display:block;
@@ -261,12 +265,12 @@ span.tishi {
 	background:#49b8ff;
 	border:#1ba3fa 1px solid;
 	color:#fff;
+	margin: auto;
 	margin-top:30px;
-	float:left;
 }
 .pic {
-	/*position:absolute;
-	*/top:0;
+	position:absolute;
+	top:0;
 	vertical-align:middle;
 	line-height:300px;
 	display:table-cell;
@@ -298,8 +302,8 @@ span.tishi {
 					<div id="urlxx"></div>
 					<div class="uploadCon" style="margin-top:20px;">
 						<div class="upLeft">
-							<div class="gray02">支持  png,  jpg,  jpeg 图片上传</div>
-							<div class="upload" style="float:left; width:300px;"><input type="file" name="file_upload"  id="file_upload" multiple="true" /></div>
+							<div class="gray02" style="text-align: right; float:right;">支持  png,  jpg,  jpeg 图片上传</div>
+							<div class="upload"><input type="file" name="file_upload"  id="file_upload" multiple="true" /></div>
 							<div class="frameCut">
 								<div class="zhix"></div>
 								<div id="divImgTip" class="photo_text">选择一张本地的图片编辑后上传成为头像</div>
