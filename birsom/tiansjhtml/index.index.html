@@ -7,22 +7,27 @@
                 <div class="g-main">
                     <div class="g-main-l">
                         <div class="m-index-news">
+                           
+                            {wc:getlist sql="select * from `@#_gonggao` ORDER BY `id` DESC LIMIT 1" return="gonggaos"}
+                             {wc:loop $gonggaos $gonggao}
+                             {wc:if $ln == 1}
                             <div class="m-index-news-hd">
-                                <h4 class="f-txtabb"><a href="http://1.163.com/news/detail/11.html" target="_blank" title="关于海购类商品需要验证身份证的说明">关于海购类商品需要验证身份证的说明</a></h4>
+                            <h4 class="f-txtabb">{wc:$gonggao['title']}</a></h4>
                             </div>
                             <div class="m-index-news-bd f-breakword">
-
-                                <p>网易考拉海购（<a href="http://www.kaola.com" target="_blank">http://www.kaola.com</a>）提供并发货的夺宝活动，商品均从国外直供，根据海关政策，获奖者需要提供收货人的身份证信息，参与请慎重！</p>
-                                <p>您的实名认证信息仅作清关用途，一元夺宝将严格保密。</p>
+                            {wc:$gonggao['content']}
                             </div>
-                            <p class="m-index-news-ext"><a href="http://1.163.com/news/detail/11.html" target="_blank">&lt;&lt;查看详情</a></p>
+                                   {wc:if:end}
+                         {wc:loop:end}
+                             {wc:getlist:end}
+                            
                         </div>
                     </div>
                     <div class="g-main-m">
                         <div class="w-slide m-index-promot">
                             <div class="w-slide-wrap">
                                 <ul class="w-slide-wrap-list-indexsilie" data-pro="list">
-                                               {wc:getlist sql="select * from `@#_slide` where 1" return="slides"}
+                            {wc:getlist sql="select * from `@#_slide` where 1" return="slides"}
                              {wc:loop $slides $slide}
                              {wc:if $ln == 1}
 <!--                                  <li><a href="{wc:$slide['link']}" target="_blank"><img src="{G_UPLOAD_PATH}/{wc:$slide['img']}"></a></li>

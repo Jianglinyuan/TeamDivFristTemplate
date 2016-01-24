@@ -7,10 +7,8 @@
 
         <link type="text/css" rel="stylesheet" href="data/plugin/style/global/css/materialize/css/materialize.min.css" media="screen,projection" />
         <script>
-
         //function locahost(){
-        //	window.history.back();}
-
+        //  window.history.back();}
             function locahost(){
                 {wc:if $defurl == ':js:'}
                     window.history.back();
@@ -18,12 +16,10 @@
                     location.href = "{wc:$defurl}";
                 {wc:if:end}
             }
-
             function closeWindow() {
                 window.open('', '_self', '');
                 window.close();
             }
-
             var i = 1;
             if (i != 0) {
                 window.close_id = setInterval(function () {
