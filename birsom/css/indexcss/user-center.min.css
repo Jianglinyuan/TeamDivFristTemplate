@@ -1531,7 +1531,7 @@ a:hover {
 	margin-left: -10px
 }
 .xm-address-list .item {
-	float: left;
+	float: right;
 	_display: inline;
 	width: 256px;
 	height: 160px;
@@ -1566,7 +1566,7 @@ a:hover {
 	color: #333
 }
 .xm-address-list .item dt strong {
-	float: left;
+	float: right;
 	font-weight: 400
 }
 .xm-address-list .item dt span {
@@ -1723,7 +1723,8 @@ a:hover {
 }
 .uc-address-section {
 	margin: 20px 0;
-	position: relative
+	position: relative;
+	text-align: right;
 }
 .uc-address-section .xm-address-list {
 	margin-left: 0;

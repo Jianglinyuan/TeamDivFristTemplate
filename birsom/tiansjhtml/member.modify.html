@@ -7,14 +7,15 @@
 	line-height:24px;
 	padding:0 3px;
 	font-size:14px;
-	float:left;
-	margin-right:5px;
+	float:right;
+	margin-left:5px;
 }
 .xm-address-list table td input.txt {
 	border:#ccc 1px solid;
+	direction: rtl;
 }
 </style>
-<div class="container breadcrumbs"><a href="/">首页</a><span class="sep">/</span><span>编辑个人资料</span></div>
+<div class="container breadcrumbs"><span>编辑个人资料</span><span class="sep">/</span><a href="/">首页</a></div>
 <div class="container">
     <div class="uc-full-box">
         <div class="row">
@@ -33,17 +34,17 @@
 			<div class="uc-address-section">
                 <div class="xm-address-list uc-address-list clearfix">
 				<div class="prompt orange">完善以下资料，{wc:fun:_cfg('web_name_two')}网不会以任何形式公开您的个人隐私，请放心填写！<s></s></div>
-					<form class="registerform" method="post" action="{WEB_PATH}/member/home/usermodify">
+					<form class="registerform" method="post" action="{WEB_PATH}/member/home/usermodify" style="float:right">
 						<table border="0" cellpadding="0" cellspacing="8">
 							<tr>
 								{wc:if $member['mobile']!=null && $member['mobilecode']=='1'}
-								<td align="right"><em><font>*</font><label>手机：</label></em></td>
+								<td align="right"><em><label>手机：</label><font>*</font></em></td>
 								<td>
-									<b>{wc:$member['mobile']}</b>
 									 已验证
+									<b>{wc:$member['mobile']}</b>
 								</td>
 								{wc:else}
-								<td align="right"><em><font>*</font><label>手机：</label></em></td>
+								<td align="right"><em><label>手机：</label><font>*</font></em></td>
 								<td>
 									<a style="margin-left:0;" href="{WEB_PATH}/member/home/mobilechecking" title="绑定手机">绑定手机</a>
 								</td>
@@ -51,13 +52,13 @@
 							</tr>
 							<tr>
 								{wc:if $member['email']!=null && $member['emailcode']=='1'}
-								<td align="right"><em><font>*</font><label>邮箱：</label></em></td>
+								<td align="right"><em><label>邮箱：</label><font>*</font></em></td>
 								<td>
-									<b>{wc:$member['email']}</b>
 									 已验证
+									<b>{wc:$member['email']}</b>
 								</td>
 								{wc:else}
-								<td align="right"><em><font>*</font><label>邮箱：</label></em></td>
+								<td align="right"><em><label>邮箱：</label><font>*</font></em></td>
 								<td>
 									<a style="margin-left:0;" href="{WEB_PATH}/member/home/mailchecking" title="绑定邮箱">绑定邮箱</a>
 								</td>
@@ -65,19 +66,19 @@
 							</tr>
 							<tr>
 								{wc:if $member_qq['b_id']!=null || $member_qq['b_type']=='qq'}
-								<td align="right"><em><font>*</font><label>QQ：</label></em></td>
+								<td align="right"><em><label>QQ：</label><font>*</font></em></td>
 								<td>
 									 已绑定
 								</td>
 								{wc:else}
-								<td align="right"><em><font>*</font><label>QQ：</label></em></td>
+								<td align="right"><em><label>QQ：</label><font>*</font></em></td>
 								<td>
 									<a style="margin-left:0;" href="{WEB_PATH}/member/home/qqclock" title="请绑定qq">请绑定qq</a>
 								</td>
 								{wc:if:end}
 							</tr>
 							<tr>
-								<td align="right"><em><font>*</font><label>昵称：</label></em></td>
+								<td align="right"><em><label>昵称：</label><font>*</font></em></td>
 								<td>
 									<input id="nicxx" datatype="nic" nullmsg="昵称不能为空" name="username" value="{wc:$member['username']}" type="text"  class="txt gray" maxlength="20" />
 								</td>

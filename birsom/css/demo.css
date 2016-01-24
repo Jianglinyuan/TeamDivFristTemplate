@@ -16,7 +16,8 @@ input{/*padding: 8px 20px;*/ vertical-align:middle;}
 .registerform td{
 	padding:5px 0;
 	vertical-align:top;
-	text-align:left;
+	text-align:right;
+	float: right;
 }
 .registerform .inputxt,.registerform textarea{
 	border:1px solid #a5aeb6;
@@ -26,9 +27,10 @@ input{/*padding: 8px 20px;*/ vertical-align:middle;}
 }
 .registerform textarea{
 	height:75px;
+	direction: rtl;
 }
 .registerform label{
-	margin:0 15px 0 4px;
+	margin:0 4px 0 15px;
 }
 .registerform .tip{
 	line-height:20px;
