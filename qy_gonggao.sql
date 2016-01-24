@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `qy_gonggao` (
 --
 
 INSERT INTO `qy_gonggao` (`id`, `title`, `content`) VALUES
-(6, 'asdfasdfasdf', 'asdfasdfsadfasdfasdf');
+(1, '你为何乳此之屌', '乳房大就屌咯？');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
