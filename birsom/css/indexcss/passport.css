@@ -13,7 +13,7 @@ a,
 label,
 :focus{outline:0 none;}
 body{
-font:12px "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+font:12px "alkatip";
 }
 button, input, select, textarea {font-family: "alkatip";}  
 input:-moz-placeholder {color: #ccc; }
@@ -318,17 +318,17 @@ p.sent_p b{margin-left:10px;}
 .suc_content{height:auto;}
 
 /* 每个form上面的提示 */
-.account_tips{text-align:left; height:32px; line-height:16px; font-size:14px; margin-left:180px;}
+.account_tips{text-align:right; height:32px; line-height:16px; font-size:14px; margin-right:180px;}
 
 /* 每个表单的公共部分 */
 dl{margin-bottom:20px;}
 .dt_l,
 .dd_r{float:left; height:38px; margin-bottom:12px; vertical-align:middle;}
-.dt_l{width:170px; padding-right:10px; font-size:14px; font-weight:bold; line-height:38px; text-align:right;}
+.dt_l{width:170px; padding-left:10px; font-size:14px; font-weight:bold; line-height:38px; text-align:left;float: right;position: relative;}
 .dd_r{width:580px;}
 .dd_r_pos{position:relative;}
-.dd_r input{display:block; float:left;}
-.dd_r span{ float:left;}
+.dd_r input{display:block; float:right; direction: rtl;}
+.dd_r span{ float:right;}
 .dd_r p{font-size:14px; line-height:38px;}
 .check_tips{margin-top:11px;}
 .newerror .error_tip, .nosame .no_tips, .error .error_tip, .empty .empty_tip, .repeat .repeat_tip, .succ .succ_tips{display:block;}
@@ -338,12 +338,12 @@ dl{margin-bottom:20px;}
 .error .littlepop, 
 .empty .littlepop{display:inline-block; *display:inline; zoom:1;}
 .prompt_info,
-.validate_info{padding-top:10px; margin-left:10px;}
+.validate_info{padding-top:10px; margin-right:10px;text-align: right;}
 .prompt_info{position:static;}
 /* 针对单个页面的宽度定制 */
 .changP .dt_l{width:210px;}
 .changP_container{margin:60px auto 0 auto;}
-.changP_container .dd_r{width:620px;}
+.changP_container .dd_r{width:620px;float: right;}
 .changP .account_tips{margin-left:220px;}
 /* 重置密码 */
 .resetP .dd_r{width:680px;}

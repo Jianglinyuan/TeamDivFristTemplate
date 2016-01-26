@@ -128,7 +128,9 @@ ol {
 
 table {
   border-collapse: collapse;
-  border-spacing: 0
+  border-spacing: 0;
+  margin-left: 20px;
+  
 }
 
 th,
@@ -2141,6 +2143,7 @@ img {
   margin: 0px 10px 5px 0;
   color: #808080;
   text-align: right;
+  direction: rtl;
 }
 
 .w-goods-newReveal .w-goods-user {
@@ -4927,6 +4930,8 @@ body {
 }
 p.w-record-price, p.w-goods-price {
     text-align: right;
+    direction: rtl;
+    color: #db3652;
 }
 .m-detail-period .box-hd h4 {
   text-align: center;

@@ -288,6 +288,9 @@ b{font-weight:normal; display:inline-block; color:#f27f02;}
 	overflow:hidden;
 	color:#999;
 	font-size:12px;
+    position: absolute;
+    top: -40px;
+    left: -700px;
 }
 .Validform_right{
 	color:#71b83d;
@@ -296,7 +299,7 @@ b{font-weight:normal; display:inline-block; color:#f27f02;}
 }
 .Validform_wrong{
 	color:red;
-	padding-left:20px;
+	padding-right:20px;
 	white-space:nowrap;
 	background:url(../img/error.png) no-repeat left center;
 }

@@ -103,7 +103,7 @@
 					{wc:loop:end}
 
 					{wc:if !$has_record}
-						<p style="text-align: center;margin-top: 20px;font-size: 14px;">您近期未购买该商品</p>
+						<p style="text-align: center;margin-top: 20px;font-size: 14px;">سىز يېقىندا بۇ مەھسۇلاتنى سېتىۋالمىدىڭىز</p>
 					{wc:if:end}
 					</ul>
 					{wc:else}
@@ -166,23 +166,23 @@
 									$uid = '';
 									for ($i=0; $i<8-$len; $i++) {
 										$uid = $uid.'0';
-									}
+									};
 									$uid = $uid.$sid_code['q_uid'];
 								{wc:php:end}
 
 		                        <p>ئەزالىق نومۇرى：{wc:$uid}</p>
 		                        <p>تەلەيلىك نومۇر：<em class="orange Fb">{wc:$sid_code['q_user_code']}</em></p>
-		                        <p>بۇ ساندا قاتناشقانلار：<em class="orange Fb">{wc:$user_shop_number}</em></p>
-    							<p>: سېتىۋېلىش ۋاقتى<br/>{wc:fun:microt($sid_go_record['time'])}</p>
-    							<p>: جاكارلىنىش ۋاقتى<br/>{wc:fun:microt($sid_code['q_end_time'])}</p>
+		                        <p>مەزكۇر قېتىملىق قاتنىشىش قېتىم سانى：<em class="orange Fb">{wc:$user_shop_number}</em></p>
+    							<p>: سېتىۋالغان ۋاقتى<br/>{wc:fun:microt($sid_go_record['time'])}</p>
+    							<p>: جاكارلانغان ۋاقتى<br/>{wc:fun:microt($sid_code['q_end_time'])}</p>
 								
 								<div class="last-winner"><a id="detail" class="w-button w-button-simple">تەپسىلاتىنى كۆرۈش</a></div>
 		                    </dd>
 		                </dl>
 	           		{wc:else}
 	           			<div class="m-detail-no-winner">
-	           				<p class="title txt-red">该商品尚未有获奖者</p>
-	           				<p class="title">快来试试手气</p>
+	           				<p class="title txt-red">بۇ مەھسۇلاتقا ئېرىشكۈچى يوق</p>
+	           				<p class="title">تەلەيىڭىزنى سىناپ كۆرۈڭ</p>
 	           			</div>
 	                {wc:if:end}
 		            </div>
