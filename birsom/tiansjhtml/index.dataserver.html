@@ -146,14 +146,13 @@
                                 <td colspan="2"><p style="margin-bottom:5px;color:#3c3c3c;text-align: right;">تاۋارغا ئېرىشكۈچى مەزكۇر ساندا جەمئىي قاتناشقان قېتىم سانى<b class="txt-red">{wc:$user_shop_number}</b></p></td>
                             </tr>
                             <tr>
-                                <th>Ta的号码</th>
                                 <td class="m-detail-main-codes-list">
                                     {wc:fun:yunma($user_shop_codes,"span")}
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-					<div id="divOpen" class="MaOff" style=""><a href="javascript:void(0)">&lt;&lt;TA的所有号码</a></div>
+					<div id="divOpen" class="MaOff" style=""><a href="javascript:void(0)">&lt;&lt;</a></div>
                 </div>
             </div>
             {wc:if:end}
@@ -165,17 +164,17 @@
                 {wc:if $userid_cur}
                     <!-- 购买次数大于0 -->
                     {wc:if $gonum_cur>0}
-                    <span class="total">我参与了: <b class="txt-red">{wc:$gonum_cur}</b>人次</span>
+                    <span class="total">مەن <b class="txt-red">{wc:$gonum_cur} قېتىم قاتناشتىم</b></span>
                     <var>|</var>
-                    <span class="detail fold-codes">夺宝号码: {wc:$goucode_cur}</span>
+                    <span class="detail fold-codes">تەلەيلىك نومۇر :{wc:$goucode_cur}</span>
                     <span id="show-all-codes"><a href="javascript:void(0)">所有号码</a></span>
                     <!-- 购买次数为0 -->
                     {wc:else}
-                    <p style="text-align:center">您没有参与本次夺宝。</p>
+                    <p style="text-align:center">سىز بۇ قېتىملىق پائالىيەتكە قاتناشماپسىز</p>
                     {wc:if:end}
                 <!-- 未登录 -->
                 {wc:else}
-		            <p style="text-align:center"><a class="btn-login" href="{WEB_PATH}/member/user/login"><b>请登录</b></a>，查看你的夺宝号码！</p>
+		            <p style="text-align:center"><a class="btn-login" href="{WEB_PATH}/member/user/login"><b>تىزىملىتىپ كىرىپ</b></a>، تەلەيلىك نومۇرىڭىزنى كۆرۈڭ</p>
 		            <!-- TODO: 登录显示自己的夺宝号码 -->
                 {wc:if:end}
             </div>
@@ -191,7 +190,7 @@
                     </li>
                     <!-- 计算公式 -->
                     <li>
-                        <span class="title">计算公式</span>
+                        <span class="title">ھېسابلاش فورمىلاسى</span>
                         <div class="formula">
                             <div class="box red-box"><b class="txt-red">本期幸运号码</b></div><div class="operator">=</div><div class="box gray-box"><b class="txt-red">{wc:$user_shop_time_add}</b><br>50个时间求和
                                 <div class="more-box">
@@ -216,7 +215,7 @@
 				{wc:else}
                 <ul class="txt">
                     <li>
-                        <span class="title">计算公式</span>
+                        <span class="title">ھېسابلاش فورمىلاسى</span>
                         <div class="f-clear formula">
                             <div class="box red-box">
                                 <b class="txt-red">{wc:$item['q_user_code']}</b><br><b class="txt-red" style="font-size:12px">本期幸运号码</b>
@@ -545,6 +544,7 @@
        <!--补丁3.1.6_b.0.2-->
 		<!-- 晒单 -->
 		<div name="div_tab" id="divPost" class="Single_Content">
+            
 			<iframe id="iframea_divPost" g_src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:1188px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
 		</div>
 		<!-- 晒单 -->

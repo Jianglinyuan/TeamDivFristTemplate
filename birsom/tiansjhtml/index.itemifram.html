@@ -164,7 +164,7 @@ margin-left: 0;
 		<div id="divPost" class="Single_Content">
 	{wc:if $error!=0}
 		<div class="empty" style="">
-            <p class="status-empty"><i class="littleU littleU-cry"></i>&nbsp;&nbsp;暂时还没有任何晒单</p>
+            <p class="status-empty"><i class="littleU littleU-cry"></i>&nbsp;&nbsp;</p>
         </div>
     {wc:else}
 		{wc:loop $shaidan $v}			
@@ -177,8 +177,8 @@ margin-left: 0;
 				</div>
 				<div class="SingleR fl">
 					<div class="SingleR_TC"><i></i> <s></s>
-						<div class="shaidan-header"><span class="gray02">第{wc:$v['sd_qishu']}期晒单</span><a href="{WEB_PATH}/go/shaidan/detail/{wc:$v['sd_id']}" target="_blank"><b>{wc:$v['sd_title']}</b></a>   <em class="gray02">{wc:fun:date("Y-m-d",$v['sd_time'])}</em></div>
-						{wc:fun:_strcut($v['sd_content'],220)}
+						<div class="shaidan-header" style="direction:rtl;"><span class="gray02" style="font-size:15px;">{wc:$v['sd_qishu']}-ساندىكى كۆرسىتىشلەر</span><a href="{WEB_PATH}/go/shaidan/detail/{wc:$v['sd_id']}" target="_blank"><b>{wc:$v['sd_title']}</b></a><em class="gray02">{wc:fun:date("Y-m-d",$v['sd_time'])}</em></div>
+						  {wc:fun:_strcut($v['sd_content'],220)}
 					</div>
 					<ul class="SingleR_pic">
 						{wc:loop $v['sd_photolist'] $m}
@@ -187,8 +187,8 @@ margin-left: 0;
 							{wc:if:end}
 						{wc:loop:end}
 					</ul>
-					<div class="SingleR_Comment" postid="2676" count="7">
-						<div class="Comment_smile gray02"><span><i></i>{wc:$v['sd_zhan']}人羡慕嫉妒恨</span><span><s></s>{wc:$v['sd_ping']}条评论</span></div>
+					<div class="SingleR_Comment" postid="2676" count="7" style="direction:rtl;">
+						<div class="Comment_smile gray02"><span><i></i>{wc:$v['sd_zhan']} ياقتۇردى</span><span><s></s>{wc:$v['sd_ping']}باھا</span></div>
 					</div>
 				</div>
 			</div>

@@ -2575,6 +2575,7 @@ td.m-detail-main-codes-list {
 
 .m-detail-revealed .m-detail-main-codes {
     margin-top: 0;
+    direction: rtl;
 }
 
 .m-detail-revealed .m-detail-main-rule {

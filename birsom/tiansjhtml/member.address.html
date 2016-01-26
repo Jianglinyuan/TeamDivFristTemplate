@@ -10,7 +10,7 @@ $(function(){
 			"tel":/^(([0\+]\d{2,3}-)?(0\d{2,3})-)(\d{7,8})(-(\d{3,}))?$/,
 		},
 	});
-	demo.tipmsg.w["tel"]="请正确输入电话号码(区号、号码必填，用“-”隔开)";
+	demo.tipmsg.w["tel"]="تېلفۇن نۇمۇرىڭىزنى توغرا كىرگۈزۈڭ";
 	demo.addRule([
 	{
 		ele:"#txt_ship_tel",
@@ -53,12 +53,12 @@ function update(id){
 	$("#div_consignee2").show();
 };
 function dell(id){
-	if (confirm("您确认要删除该条信息吗？")){
+	if (confirm("بۇ ئۈچۇرنى ئۆچۈرۈشنى جەزىملەشتۈرەمسىز ؟")){
 		window.location.href="{WEB_PATH}/member/home/deladdress/"+id;
 	}
 }
 </script>
-<div class="container breadcrumbs"><span>编辑个人资料</span><span class="sep">/</span><a href="/">首页</a></div>
+<div class="container breadcrumbs"><span>ماتىريالنى تەھرىرلەش</span><span class="sep">/</span><a href="/">باش بەت</a></div>
 <div class="container">
     <div class="uc-full-box">
         <div class="row">
@@ -66,7 +66,7 @@ function dell(id){
 				<div class="span16">
     <div class="xm-line-box uc-box">
         <div class="box-hd">
-            <h3 class="title">编辑个人资料</h3>
+            <h3 class="title">ماتىريالنى تەھرىرلەش</h3>
 			<div class="more">
 				<div class="subMenu">
 					{wc:templates "member","shezhi"}
@@ -78,7 +78,7 @@ function dell(id){
 				<div class="xm-address-list uc-address-list clearfix">
 					<div class="item use-new-addr J_addAddress">
                         <span class="iconfont icon-add" id="btnAddnewAddr"></span>
-                        使用新地址
+                        يېڭى ئادېرىس قوشۇش
                     </div>
 					{wc:if $count>0}
 					{wc:loop $member_dizhi $v}
@@ -92,10 +92,10 @@ function dell(id){
                             <p class="itemRegion">{wc:$v['sheng']}  {wc:$v['shi']}  {wc:$v['xian']}</p>
                             <p class="itemStreet">{wc:$v['jiedao']} ({wc:$v['youbian']})</p>
 							{wc:if $v['default']=='Y'}
-							<a onclick="dell({wc:$v['id']})" class="edit-btn J_delAddr" href="javascript:;" >删除</a>
+							<a onclick="dell({wc:$v['id']})" class="edit-btn J_delAddr" href="javascript:;" >ئۆچۈرۈش</a>
 							{wc:else}
-							<a class="edit-btn J_editAddr xiugai" href="javascript:;" onclick="update({wc:$v['id']})">编辑</a>
-							<a onclick="dell({wc:$v['id']})" class="edit-btn J_delAddr" href="javascript:;" >删除</a>
+							<a class="edit-btn J_editAddr xiugai" href="javascript:;" onclick="update({wc:$v['id']})">تەھرىرلەش</a>
+							<a onclick="dell({wc:$v['id']})" class="edit-btn J_delAddr" href="javascript:;" >ئۆچۈرۈش</a>
 							{wc:if:end}
                         </dd>
                     </dl>
@@ -109,12 +109,12 @@ function dell(id){
 						<script>var s=["province","city","county"];</script>
                             <div class="bd">
                                     <div class="item">
-                                        <label for="Consignee">收货人姓名<span>*</span></label>
-										<input datatype="*" nullmsg="收货人不能为空" name="shouhuoren" type="text" maxlength="20" id="txt_ship_name" class="input" value="" placeholder="收货人姓名">
+                                        <label for="Consignee">تاپشۇرۋالغۇچىنىڭ ئسمى<span>*</span></label>
+										<input datatype="*" nullmsg="تاپشۇرۋالغۇچىنىڭ ئسمى قۇرۇق قالمىسۇن" name="shouhuoren" type="text" maxlength="20" id="txt_ship_name" class="input" value="" placeholder="تاپشۇرۋالغۇچىنىڭ ئسمى">
                                         <p class="tip-msg tipMsg"></p>
                                     </div>
                                     <div class="item">
-                                        <label for="Telephone">联系电话<span>*</span></label>
+                                        <label for="Telephone">تېلفۇن نومۇرى<span>*</span></label>
 										<input datatype="m" nullmsg="手机号不能为空" errormsg="手机号不对" name="mobile" type="text" id="txt_ship_mb" value="" class="input" maxlength="11" placeholder="11位手机号">
                                         <p class="tel-modify-tip" id="telModifyTip">如果不修改手机号，请重新输入原收货手机号 <em></em> 以便确认</p>
                                         <p class="tip-msg tipMsg"></p>

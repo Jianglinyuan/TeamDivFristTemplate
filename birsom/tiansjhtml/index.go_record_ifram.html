@@ -24,7 +24,7 @@ span.AllRecR_Over a { float: right; }
 </head>
 <body style="width:878px; min-height:35px;  padding-top:20px;background-color:#fff">
 		{wc:if !$go_record_list}
-        	<h1 style=" text-align:center; direction:rtl; font-family:alkatip; font-size: 18px;width:100%;font-weight:bold;color:#555;">سىز بىرىنچى بولۇپ سېتىۋېلىڭ !</h1>
+        	<h1 style=" text-align:center; direction:rtl; font-family:alkatip; font-size: 16px;width:100%;font-weight:bold;color:#555;">تەلەيىڭىزنى سىناپ كۆرۈڭ</h1>
         {wc:if:end}         
 		<!--获取当前会商品的购买记录50条-->		
    		{wc:php:start} 
@@ -42,11 +42,12 @@ span.AllRecR_Over a { float: right; }
 			<p class="AllRecR_T">            	
 				<span name="spCodeInfo" class="AllRecR_Over">
 				<a class="Headpic" href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank"><img src="{G_UPLOAD_PATH}/{wc:$user['uphoto']}" border="0" width="20" height="20"></a>
-				<a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank" class="blue">{wc:fun:_strcut($user['username'],6)}</a>
+				<em class="Fb orange">{wc:$user['gonumber']}</em>قېتىم سېتىۋالدى
+				<a href="{WEB_PATH}/uname/{wc:fun:idjia($user['uid'])}" target="_blank" class="blue">{wc:fun:_strcut($user['username'])}</a>
 				{wc:if $user['ip']}
 				({wc:fun:get_ip($user['id'],'ipcity')} IP:{wc:fun:get_ip($user['id'],'ipmac')})
 				{wc:if:end}
-				<em class="Fb orange">{wc:$user['gonumber']}</em>قېتىم سېتىۋالدى
+				
 				</span>     
                 <span class="user_see_code" see="off">تەپسىلاتى</span>           
 			</p>

@@ -13,7 +13,7 @@ a,
 label,
 :focus{outline:0 none;}
 body{
-font:12px "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+font:12px "alkatip";
 }
 button, input, select, textarea {font-family: "alkatip";}  
 input:-moz-placeholder {color: #ccc; }
