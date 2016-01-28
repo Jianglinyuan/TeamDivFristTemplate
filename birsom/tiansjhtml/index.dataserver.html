@@ -5,14 +5,14 @@
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/163/css/detail.css"/>
 <script type="text/javascript" src="{G_TEMPLATES_CSS}/@/js/jquery.dotdotdot.min.js"></script>
 <div class="container breadcrumbs">
-	جاكارلانغانلىق تەپسىلاتى<span class="sep">/</span>
-	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
-	{wc:$brand['name']}
-	</a><span class="sep">/</span>
-	<a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}">
-	{wc:$category['name']}
-	</a><span class="sep">/</span>
-	<a href="{WEB_PATH}">باش بەت</a>
+    جاكارلانغانلىق تەپسىلاتى<span class="sep">/</span>
+    <a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}e{wc:$item['brandid']}">
+    {wc:$brand['name']}
+    </a><span class="sep">/</span>
+    <a href="{WEB_PATH}/goods_list/{wc:$item['cateid']}">
+    {wc:$category['name']}
+    </a><span class="sep">/</span>
+    <a href="{WEB_PATH}">باش بەت</a>
 </div>
 {wc:if ($item['q_showtime'] == 'Y')}
 <div class="goods-detail container m-detail m-detail-willReveal">
@@ -21,44 +21,44 @@
 {wc:if:end}
 
     <div class="goods-detail-info row clearfix">
-		<div id="divPeriodList" class="show_Period">{wc:if count($itemlist)>32}<div class="period_Open"><a class="gray" href="javascript:void(0);">داۋامىنى كۆرۈش<i></i></a></div>{wc:if:end}{wc:$loopqishu}</div>
+        <div id="divPeriodList" class="show_Period">{wc:if count($itemlist)>32}<div class="period_Open"><a class="gray" href="javascript:void(0);">داۋامىنى كۆرۈش<i></i></a></div>{wc:if:end}{wc:$loopqishu}</div>
 
 
         <!-- 暂时注释
         <div class="span10 J_mi_goodsPic_block">
                 <div class="goods-big-pic">
-					<div class="Announced_Frame">
-				<div class="Announced_Content">
-				<div class="Announced_FrameT">1.جاكار نەتىجىسى</div>
-				<div class="Announced_FrameCode">
-					<ul class="Announced_FrameCodeMal">
-                    	{wc:loop $q_user_code_arr  $q_code_num}
+                    <div class="Announced_Frame">
+                <div class="Announced_Content">
+                <div class="Announced_FrameT">1.جاكار نەتىجىسى</div>
+                <div class="Announced_FrameCode">
+                    <ul class="Announced_FrameCodeMal">
+                        {wc:loop $q_user_code_arr  $q_code_num}
                         <li class="Code_{wc:$q_code_num}">{wc:$q_code_num}<b></b></li>
                         {wc:loop:end}
-					</ul>
-				</div>
-				<div class="Announced_FrameGet">
-					<dl>
-						<dd class="gray02">
-							<p><a href="{WEB_PATH}/uname/{wc:fun:idjia($item['q_uid'])}" target="_blank" class="blue" title="Warm">{wc:fun:get_user_name($q_user)}</a> نىڭ مەزكۇر تاۋارغان ئېرىشكەنلىكىنى تەبرىكلەيمىز</p>
-							<p>جاكارلانغان ۋاقىت：{wc:fun:microt($item['q_end_time'])}</p>
-							<p>قاتناشقان ۋاقىت：{wc:fun:microt($user_shop_time)}</p>
-						</dd>
-					</dl>
-				</div>
+                    </ul>
+                </div>
+                <div class="Announced_FrameGet">
+                    <dl>
+                        <dd class="gray02">
+                            <p><a href="{WEB_PATH}/uname/{wc:fun:idjia($item['q_uid'])}" target="_blank" class="blue" title="Warm">{wc:fun:get_user_name($q_user)}</a> نىڭ مەزكۇر تاۋارغان ئېرىشكەنلىكىنى تەبرىكلەيمىز</p>
+                            <p>جاكارلانغان ۋاقىت：{wc:fun:microt($item['q_end_time'])}</p>
+                            <p>قاتناشقان ۋاقىت：{wc:fun:microt($user_shop_time)}</p>
+                        </dd>
+                    </dl>
+                </div>
 
                 <div class="Announced_FrameBut">
-					<a href="javascript:;" class="Announced_But">بۇ ساندىكى ھېسابلاش نەتىجىسى</a>
-					<a href="javascript:;" class="Announced_But">يەنە كىملەر قاتناشتى</a>
-					<a href="javascript:;" class="Announced_But">باشقىلارنىڭ كۆرسەتكىنى</a>
-				</div>
-				</div>
+                    <a href="javascript:;" class="Announced_But">بۇ ساندىكى ھېسابلاش نەتىجىسى</a>
+                    <a href="javascript:;" class="Announced_But">يەنە كىملەر قاتناشتى</a>
+                    <a href="javascript:;" class="Announced_But">باشقىلارنىڭ كۆرسەتكىنى</a>
+                </div>
+                </div>
 
-			</div>
+            </div>
                 </div>
         </div> -->
-		
-		<div class="m-detail-main">
+        
+        <div class="m-detail-main">
             <div class="m-detail-main-pic">
                 <!-- <i class="ico ico-label ico-label-ten"></i> -->
                 
@@ -74,20 +74,20 @@
                 <div class="m-detail-main-wrap m-detail-main-will">
                     <h3>جاكارلىنىش تەتۈر ساناق</h3>
                     {wc:php:start}
-                    	$len = strlen($item['qishu']);
-                    	$qihao = $item['qishu'];
-                    	for ( $i=0; $i<9-$len; $i++ ) {
-							$qihao = '0'.$qihao;
-                    	}
+                        $len = strlen($item['qishu']);
+                        $qihao = $item['qishu'];
+                        for ( $i=0; $i<9-$len; $i++ ) {
+                            $qihao = '0'.$qihao;
+                        }
                     {wc:php:end}
                     <div class="m-detail-main-period">{wc:$qihao} - سان</div>
                     <div class="m-detail-main-will-countdown" time="493945">
-	                    <b class="count-m0 w-num w-num-9">9</b>
-	                    <b class="count-m1 w-num w-num-9">9</b>
-	                    <b class="count-s0 w-num w-num-9">9</b>
-	                    <b class="count-s1 w-num w-num-9">9</b>
-	                    <b class="count-ms0 w-num w-num-9">9</b>
-	                    <b class="count-ms1 w-num w-num-9">9</b>
+                        <b class="count-m0 w-num w-num-9">9</b>
+                        <b class="count-m1 w-num w-num-9">9</b>
+                        <b class="count-s0 w-num w-num-9">9</b>
+                        <b class="count-s1 w-num w-num-9">9</b>
+                        <b class="count-ms0 w-num w-num-9">9</b>
+                        <b class="count-ms1 w-num w-num-9">9</b>
                     </div>
                     <div class="m-detail-main-will-waiting" style="display:none">
                         <p class="txt-red"><b>ھېسابلىنىۋاتىدۇ، سەل تەخىر قىلىڭ</b></p>
@@ -99,11 +99,11 @@
                 <div class="m-detail-main-wrap m-detail-main-end">
                     <h3>جاكارلىنىش نەتىجىسى</h3>
                     {wc:php:start}
-                    	$len = strlen($item['qishu']);
-                    	$qihao = $item['qishu'];
-                    	for ( $i=0; $i<9-$len; $i++ ) {
-							$qihao = '0'.$qihao;
-                    	}
+                        $len = strlen($item['qishu']);
+                        $qihao = $item['qishu'];
+                        for ( $i=0; $i<9-$len; $i++ ) {
+                            $qihao = '0'.$qihao;
+                        }
                     {wc:php:end}
                     <div class="m-detail-main-period">{wc:$qihao} - سان</div>
                     <div class="m-detail-main-end-luckyCode">
@@ -122,17 +122,17 @@
             <!-- 获奖人信息 -->
                 <div class="m-detail-main-winner-content">
                     <div class="avatar">
-						<img width="90" height="90" onerror="this.src='http://mimg.127.net/p/yy/lib/img/avatar/90.jpeg'" src="{G_UPLOAD_PATH}/{wc:$q_user['img']}">
+                        <img width="90" height="90" src="{G_UPLOAD_PATH}/{wc:$q_user['img']}">
                     </div>
                     <!-- ID补齐8位 -->
                     {wc:php:start} 
-                    	$len = strlen($item['q_uid']);
-						$uid = '';
-						for ($i=0; $i<8-$len; $i++) {
-							$uid = $uid.'0';
-						}
-						$uid = $uid.$item['q_uid'];
-					{wc:php:end}
+                        $len = strlen($item['q_uid']);
+                        $uid = '';
+                        for ($i=0; $i<8-$len; $i++) {
+                            $uid = $uid.'0';
+                        }
+                        $uid = $uid.$item['q_uid'];
+                    {wc:php:end}
                     <p class="txt-green user">نىڭ مەزكۇر تاۋارغان ئېرىشكەنلىكىنى تەبرىكلەيمىز<a href="{WEB_PATH}/uname/{wc:fun:idjia($item['q_uid'])}" title="({wc:$uid}:ID){wc:fun:get_user_name($item['q_uid'])}">{wc:fun:get_user_name($item['q_uid'])}</a> </p>
                     <p class="cid txt-green"><b>ئەزالىق نومۇرى ：{wc:$uid}</b></p>
                     <p>جاكارلانغان ۋاقتى：{wc:fun:microt($item['q_end_time'])}</p>
@@ -146,13 +146,14 @@
                                 <td colspan="2"><p style="margin-bottom:5px;color:#3c3c3c;text-align: right;">تاۋارغا ئېرىشكۈچى مەزكۇر ساندا جەمئىي قاتناشقان قېتىم سانى<b class="txt-red">{wc:$user_shop_number}</b></p></td>
                             </tr>
                             <tr>
+                                <th>Ta的号码</th>
                                 <td class="m-detail-main-codes-list">
                                     {wc:fun:yunma($user_shop_codes,"span")}
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-					<div id="divOpen" class="MaOff" style=""><a href="javascript:void(0)">&lt;&lt;</a></div>
+                    <div id="divOpen" class="MaOff" style=""><a href="javascript:void(0)">&lt;&lt;TA的所有号码</a></div>
                 </div>
             </div>
             {wc:if:end}
@@ -164,41 +165,40 @@
                 {wc:if $userid_cur}
                     <!-- 购买次数大于0 -->
                     {wc:if $gonum_cur>0}
-                    <span class="total">مەن <b class="txt-red">{wc:$gonum_cur} قېتىم قاتناشتىم</b></span>
+                    <span class="total">我参与了: <b class="txt-red">{wc:$gonum_cur}</b>人次</span>
                     <var>|</var>
-                    <span class="detail fold-codes">تەلەيلىك نومۇر :{wc:$goucode_cur}</span>
+                    <span class="detail fold-codes">夺宝号码: {wc:$goucode_cur}</span>
                     <span id="show-all-codes"><a href="javascript:void(0)">所有号码</a></span>
                     <!-- 购买次数为0 -->
                     {wc:else}
-                    <p style="text-align:center">سىز بۇ قېتىملىق پائالىيەتكە قاتناشماپسىز</p>
+                    <p style="text-align:center">您没有参与本次夺宝。</p>
                     {wc:if:end}
                 <!-- 未登录 -->
                 {wc:else}
-		            <p style="text-align:center"><a class="btn-login" href="{WEB_PATH}/member/user/login"><b>تىزىملىتىپ كىرىپ</b></a>، تەلەيلىك نومۇرىڭىزنى كۆرۈڭ</p>
-		            <!-- TODO: 登录显示自己的夺宝号码 -->
+                    <p style="text-align:center"><a class="btn-login" href="{WEB_PATH}/member/user/login"><b>请登录</b></a>，查看你的夺宝号码！</p>
+                    <!-- TODO: 登录显示自己的夺宝号码 -->
                 {wc:if:end}
             </div>
 
 
-			<div class="m-detail-main-rule">
-				{wc:if ($item['q_showtime'] == 'Y')}	
+            <div class="m-detail-main-rule">
+                {wc:if ($item['q_showtime'] == 'Y')}    
                 <p class="slogan"><i class="ico ico-state-l ico-state-l-1"></i>我们有严谨的幸运号码计算规则，保证公平公正公开</p>
                 <ul class="txt">
                     <li>
-                        <span class="title">倒计时中</span>
-                        <p>请耐心等待一小段时间…… <!-- <a href="http://caipiao.163.com/award/ssc/20160108.html" target="_blank" style="font-family:simsun">开奖查询&gt;&gt;</a> --></p>
+                        <span class="title">为什么会进行倒计时？</span>
+                        <p>为保证公平公正公开，正等待一小段时间，取最近一期中国福利彩票“老时时彩”的开奖结果。 <a href="http://caipiao.163.com/award/ssc/20160108.html" target="_blank" style="font-family:simsun">开奖查询&gt;&gt;</a></p>
                     </li>
                     <!-- 计算公式 -->
                     <li>
-                        <span class="title">ھېسابلاش فورمىلاسى</span>
+                        <span class="title">计算公式</span>
                         <div class="formula">
-                            <div class="box red-box"><b class="txt-red">本期幸运号码</b></div><div class="operator">=</div><div class="box gray-box"><b class="txt-red">{wc:$user_shop_time_add}</b><br>50个时间求和
+                            <div class="box red-box"><b class="txt-red">本期幸运号码</b></div><div class="operator">=(</div><div class="box gray-box"><b class="txt-red">5006121137</b><br>50个时间求和
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box">商品的最后一个号码分配完毕，公示该分配时间点前本站全部商品的<span class="txt-red">最后50个参与时间</span>，并求和。</div>
                                 </div>
-                            </div>
-                            <!-- <div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">?</b><br>“老时时彩”开奖号码
+                            </div><div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">?</b><br>“老时时彩”开奖号码
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box">
@@ -206,34 +206,31 @@
                                         
                                     </div>
                                 </div>
-                            </div> -->
-                            <div class="operator" title="取余">%</div><div class="box"><b class="txt-red">{wc:$item['canyurenshu']}</b><br>该商品总需人次</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>原始数</div>
+                            </div><div class="operator" title="取余">)%</div><div class="box"><b class="txt-red">35</b><br>该商品总需人次</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>原始数</div>
                         </div>
                     </li>
                 </ul>
 
-				{wc:else}
+                {wc:else}
                 <ul class="txt">
                     <li>
-                        <span class="title">ھېسابلاش فورمىلاسى</span>
+                        <span class="title">计算公式</span>
                         <div class="f-clear formula">
                             <div class="box red-box">
                                 <b class="txt-red">{wc:$item['q_user_code']}</b><br><b class="txt-red" style="font-size:12px">本期幸运号码</b>
-                                </div><div class="operator">=</div><div class="box gray-box"><b class="txt-red">{wc:$user_shop_time_add}</b><br>50个时间求和
+                                </div><div class="operator">=(</div><div class="box gray-box"><b class="txt-red">{wc:$user_shop_time_add}</b><br>50个时间求和
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box">商品的最后一个号码分配完毕，公示该分配时间点前本站全部商品的<span class="txt-red">最后50个参与时间</span>，并求和。</div>
                                 </div>
-                            </div>
-                            <!-- <div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">???</b><br>“老时时彩”开奖号码
+                            </div><div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">???</b><br>“老时时彩”开奖号码
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box f-breakword">
                                             取最近一期“老时时彩” (第<span class="txt-red">???</span>期) 开奖结果。 <a href="http://caipiao.163.com/award/ssc/20160107.html" target="_blank">开奖查询</a>
                                     </div>
                                 </div>
-                            </div> -->
-                            <div class="operator" title="取余">%</div><div class="box"><b class="txt-red">{wc:$item['canyurenshu']}</b><br>该商品总需人次</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>原始数</div>
+                            </div><div class="operator" title="取余">)%</div><div class="box"><b class="txt-red">{wc:$item['canyurenshu']}</b><br>该商品总需人次</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>原始数</div>
                         </div>
                     </li>
                 </ul>
@@ -243,51 +240,51 @@
 
 
         <!-- 右侧边栏 -->
-		<div class="g-side" id="zx">
-	        <div class="m-detail-period">
-	            <div class="box-hd">
-	               <h4>ئەڭ يېڭى سان</h4>
-	            </div>
-	            <div class="box-bd">
-		            <div class="m-detail-period-main-wrap">
-		                <dl>
-		                    <dt>
-		                        <div class="avatar"><a rel="nofollow" href="{WEB_PATH}/goods/{wc:$itemzx['id']}" target="_blank"><img width="90" height="90" alt="" src="{G_UPLOAD_PATH}/{wc:$item['thumb']}"></a></div>
-		                    </dt>
-		                    <dd class="gray02">
-								<dt class="goodsName">{wc:$item['title']}</dt>
-			                    <dd class="goods-info-head-userfaq" >
-			                    	<ul><li class="mail">{wc:$item['title2']}</li></ul>
-			                    </dd>
-								
-								<div class="Result_Progress-bar">
-									<p><span style="width:{wc:fun:width($itemzx['canyurenshu'],$itemzx['zongrenshu'],208)}px;"></span></p>
-									<ul class="Pro-bar-li">
-										<li class="P-bar01"><em>{wc:$itemzx['shenyurenshu']}</em>قالغىنى</li>
-										<li class="P-bar03"><em>{wc:$itemzx['canyurenshu']}</em>قاتناشقىنى</li>
-									</ul>
-								</div>
+        <div class="g-side" id="zx">
+            <div class="m-detail-period">
+                <div class="box-hd">
+                   <h4>ئەڭ يېڭى سان</h4>
+                </div>
+                <div class="box-bd">
+                    <div class="m-detail-period-main-wrap">
+                        <dl>
+                            <dt>
+                                <div class="avatar"><a rel="nofollow" href="{WEB_PATH}/goods/{wc:$itemzx['id']}" target="_blank"><img width="90" height="90" alt="" src="{G_UPLOAD_PATH}/{wc:$item['thumb']}"></a></div>
+                            </dt>
+                            <dd class="gray02">
+                                <dt class="goodsName">{wc:$item['title']}</dt>
+                                <dd class="goods-info-head-userfaq" >
+                                    <ul><li class="mail">{wc:$item['title2']}</li></ul>
+                                </dd>
+                                
+                                <div class="Result_Progress-bar">
+                                    <p><span style="width:{wc:fun:width($itemzx['canyurenshu'],$itemzx['zongrenshu'],208)}px;"></span></p>
+                                    <ul class="Pro-bar-li">
+                                        <li class="P-bar01"><em>{wc:$itemzx['shenyurenshu']}</em>قالغىنى</li>
+                                        <li class="P-bar03"><em>{wc:$itemzx['canyurenshu']}</em>قاتناشقىنى</li>
+                                    </ul>
+                                </div>
 
-								<div class="zx-foot">
-									<div class="goods-info-head-intro">
-										<div id="divNumber" class="Pro_number" style="text-align:right;">
-											<a href="javascript:;" class="num_del num_ban" id="shopsub">-</a>
-											<input style="border:1px solid #CFCFCF" type="text" value="1" maxlength="7" onkeyup="value=value.replace(/\D/g,'')" class="num_dig" id="num_dig">
-											<a href="javascript:;" class="num_add" id="shopadd">+</a>سېتىۋېلىش
-										</div>
-										<div style="display:none;" id="hqid">{wc:$itemzx['id']}</div>
-									</div>	
+                                <div class="zx-foot">
+                                    <div class="goods-info-head-intro">
+                                        <div id="divNumber" class="Pro_number" style="text-align:right;">
+                                            <a href="javascript:;" class="num_del num_ban" id="shopsub">-</a>
+                                            <input style="border:1px solid #CFCFCF" type="text" value="1" maxlength="7" onkeyup="value=value.replace(/\D/g,'')" class="num_dig" id="num_dig">
+                                            <a href="javascript:;" class="num_add" id="shopadd">+</a>سېتىۋېلىش
+                                        </div>
+                                        <div style="display:none;" id="hqid">{wc:$itemzx['id']}</div>
+                                    </div>  
 
-									<div id="right-now"><a class="w-button w-button-main">دەرھال قاتنىشىىش</a></div>
-								</div>
+                                    <div id="right-now"><a class="w-button w-button-main">دەرھال قاتنىشىىش</a></div>
+                                </div>
 
-		                    </dd>
-		                </dl>
+                            </dd>
+                        </dl>
 
-		            </div>
-	            </div>
-	        </div>
-	    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         </div>
@@ -296,9 +293,9 @@
     <div class="coin-bg J_ModLayout"></div>
     <div class="coin-wrapper">
 <div class="main-wrap">
-	<div class="topicitem-mod common-layout">
+    <div class="topicitem-mod common-layout">
 <div class="ProductTabNav">
-	<div class="goods-sub-bar " id="divProductNav">
+    <div class="goods-sub-bar " id="divProductNav">
     <div class="container">
         <div class="row">
             <div class="span5">
@@ -326,34 +323,34 @@
 </div>
 <div class="row goods-detail-desc">
     
-	<div class="span15">
+    <div class="span15">
             <!-- 商品描述 -->
             <div class="xm-box goods-detail-box">
                <div id="calculate" class="ProductTabNav">
-	    <div id="divMidNav" class="DetailsT_Tit">
-	        <div class="DetailsT_TitP">
+        <div id="divMidNav" class="DetailsT_Tit">
+            <div class="DetailsT_TitP">
                 <ul>
-			        <li class="GoosTab2 Product_DetT DetailsTCur" style="float:right;"><span class="DetailsTCur">ھېسابلاش نەتىجىسى</span></li>
-			        <li class="GoosTab2 All_RecordT"><span class="">بارلىق قاتناشقۇچىلار</span></li>
-					<li class="GoosTab2 Single_ConT"><span class="">كۆرسىتىلگەن مۇكاپاتلار</span></li>
-		        </ul>
-		    </div>
-	    </div>
-	</div>
+                    <li class="GoosTab2 Product_DetT DetailsTCur" style="float:right;"><span class="DetailsTCur">ھېسابلاش نەتىجىسى</span></li>
+                    <li class="GoosTab2 All_RecordT"><span class="">بارلىق قاتناشقۇچىلار</span></li>
+                    <li class="GoosTab2 Single_ConT"><span class="">كۆرسىتىلگەن مۇكاپاتلار</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div id="divCalResult" class="Product_Content">
-		<div class="ygRecord" name="div_tab">
+        <div class="ygRecord" name="div_tab">
             <div class="m-detail-mainTab-calcRule" style="height: auto;">
-                <h4 style="height: 162px;">
+                <h4 style="height: 178px;">
                         <i class="ico ico-text"></i><br>幸运号码<br>计算规则
                 </h4>
-                <div class="ruleWrap">
+                <div class="ruleWrap" style="height: auto;">
                 <!-- 计算规则 -->
                     <ol class="ruleList">
                             <li><span class="index">1</span>商品的最后一个号码分配完毕后，将公示该分配时间点前本站全部商品的最后50个参与时间；</li>
                             <li><span class="index">2</span>将这50个时间的数值进行求和（得出数值A）（每个时间按时、分、秒、毫秒的顺序组合，如20:15:25.362则为201525362）；</li>
-                            <!-- <li><span class="index">3</span>为保证公平公正公开，系统还会等待一小段时间，取最近下一期中国福利彩票“老时时彩”的开奖结果（一个五位数值B）；</li> -->
-                            <li><span class="index">3</span>数值A除以该商品总需人次得到的余数<i style="margin-top:-3px;" data-func="remainder" class="ico ico-questionMark" title="余数：指整数除法中，被除数未被除尽部分。“例如27除以6，商为4，余数为3”"></i> + 原始数&nbsp;10000001，得到最终幸运号码，拥有该幸运号码者，直接获得该商品。</li>
-                            <!-- <li class="txt-red">注：如遇福彩中心通讯故障，无法获取上述期数的中国福利彩票“老时时彩”开奖结果，且24小时内该期“老时时彩”开奖结果仍未公布，则默认“老时时彩”开奖结果为00000。</li> -->
+                            <li><span class="index">3</span>为保证公平公正公开，系统还会等待一小段时间，取最近下一期中国福利彩票“老时时彩”的开奖结果（一个五位数值B）；</li>
+                            <li><span class="index">4</span>（数值A+数值B）除以该商品总需人次得到的余数<i style="margin-top:-3px;" data-func="remainder" class="ico ico-questionMark" title="余数：指整数除法中，被除数未被除尽部分。“例如27除以6，商为4，余数为3”"></i> + 原始数&nbsp;10000001，得到最终幸运号码，拥有该幸运号码者，直接获得该商品。</li>
+                            <li class="txt-red">注：如遇福彩中心通讯故障，无法获取上述期数的中国福利彩票“老时时彩”开奖结果，且24小时内该期“老时时彩”开奖结果仍未公布，则默认“老时时彩”开奖结果为00000。</li>
                     </ol>
                 </div>
             </div>
@@ -406,21 +403,53 @@
                                 <h4>计算结果<a name="calcResult"></a></h4>
                                 <ol>
                                     <li><span class="index">.1</span>求和：{wc:$user_shop_time_add} (上面50条参与记录的时间取值相加)</li>
+                                    <li><span class="index">.2</span>
+                                        第 ??? 期“老时时彩”开奖号码：
 
+                                        <!-- 已经揭晓，这里换成真正的彩票数据 -->
+                                        {wc:if $item['q_showtime']=='N'}
+                                        <b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b>
+                                        <!-- 倒计时，保留问号 -->
+                                        {wc:else}
+                                        <b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b>
+                                        {wc:if:end}
+
+                                        <a href="http://caipiao.163.com/award/ssc/20160109.html" target="_blank">&lt;&lt;开奖查询</a>
+                                    </li>
                                     {wc:php:start}
                                         $mod_str = strval($user_shop_fmod);
                                         $mod_str = str_split($mod_str);
                                     {wc:php:end}
-                                    <li><span class="index">.3</span>求余：{wc:$user_shop_time_add}
-                                     % {wc:$item['canyurenshu']} (商品所需人次) = 
+                                    <li><span class="index">.3</span>求余：({wc:$user_shop_time_add} + 
+
+                                        <!-- 已经揭晓，这里换成真正的彩票数据 -->
+                                        {wc:if $item['q_showtime']=='N'}
+                                        <b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b>
+                                        <!-- 倒计时，保留问号 -->
+                                        {wc:else}
+                                        <b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b><b class="ball">?</b>
+                                        {wc:if:end}
+
+                                    ) % {wc:$item['canyurenshu']} (商品所需人次) = 
+
+                                    {wc:if $item['q_showtime']=='N'}
                                         {wc:loop $mod_str $digit}
                                         <b class="square">{wc:$digit}</b>
                                         {wc:loop:end}
+                                    {wc:else}
+                                        <b class="square">?</b>
+                                        <b class="square">?</b>
+                                        <b class="square">?</b>
+                                        <b class="square">?</b>
+                                        <b class="square">?</b>
+                                    {wc:if:end}
 
         (余数) <i data-func="remainder" class="ico ico-questionMark" title="余数：指整数除法中，被除数未被除尽部分。“例如27除以6，商为4，余数为3”"></i>
                                     </li>
-                                    <li><span class="index">.3</span>
+                                    <li><span class="index">.4</span>
                     
+                                <!-- 已揭晓 -->
+                                {wc:if $item['q_showtime']=='N'}
                                     {wc:loop $mod_str $digit}
                                         <b class="square">{wc:$digit}</b>
                                     {wc:loop:end}
@@ -428,11 +457,7 @@
                                     {wc:php:start}
                                         $res = str_split($item['q_user_code']);
                                     {wc:php:end}
-
-                                    (余数) + 10000001 = 
-
-                                <!-- 已揭晓 -->
-                                {wc:if $item['q_showtime']=='N'}
+        (余数) + 10000001 = 
                                     {wc:loop $res $res_bit}
                                         <b class="square">{wc:$res_bit}</b>
                                     {wc:loop:end}
@@ -446,6 +471,12 @@
                                     <b class="square">?</b>
                                     <b class="square">?</b>
                                     <b class="square">?</b>
+                                     (余数) + 10000001 = 
+                                    <b class="square">?</b>
+                                    <b class="square">?</b>
+                                    <b class="square">?</b>
+                                    <b class="square">?</b>
+                                    <b class="square">?</b>
                                     <b class="square">?</b>
                                     <b class="square">?</b>
                                     <b class="square">?</b>
@@ -453,103 +484,101 @@
                                 </ol>
                                 <span class="resultCode">幸运号码：<span style="margin-left:10px;color:#bbb">等待揭晓...</span></span>
                                 {wc:if:end}
-
                             </td>
                         </tr>
                 </tbody>
             </table>
 
 
-				<!-- <div class="yghelp">
-					1、取该商品最后购买时间前网站所有商品的最后100条购买时间记录
-					<br>
-					2、每个时间记录按时、分、秒、毫秒依次排列取数值
-					<br>
-					3、将这100个数值之和除以该商品总参与人次后取余数，余数加上10000001 即为“幸运{wc:fun:_cfg('web_name_two')}码”。
-					{wc:if !$item['q_content']}
-					<br>
-					<b>由于网站还未满100条购买记录。所以按照   10000001 + (揭晓时间求和结果*100/参与人数) 的余数   即为“幸运{wc:fun:_cfg('web_name_two')}码”。</b>
-					{wc:if:end}
-				</div>
+                <!-- <div class="yghelp">
+                    1、取该商品最后购买时间前网站所有商品的最后100条购买时间记录
+                    <br>
+                    2、每个时间记录按时、分、秒、毫秒依次排列取数值
+                    <br>
+                    3、将这100个数值之和除以该商品总参与人次后取余数，余数加上10000001 即为“幸运{wc:fun:_cfg('web_name_two')}码”。
+                    {wc:if !$item['q_content']}
+                    <br>
+                    <b>由于网站还未满100条购买记录。所以按照   10000001 + (揭晓时间求和结果*100/参与人数) 的余数   即为“幸运{wc:fun:_cfg('web_name_two')}码”。</b>
+                    {wc:if:end}
+                </div>
 
-				{wc:if !$item['q_content']}
-				<div class="RecordOnehundred"><h4> 未满100条计算结果 </h4>
-					<div class="ResultBox"><h2>计算结果</h2>
-							<p class="num4">求和：
-								<span class="Fb">{wc:$user_shop_time_add}</span>(揭晓时间求和结果)<br>取余：
-								<span class="Fb">{wc:$user_shop_time_add}</span>(揭晓时间)
-								<span class="Fb"> * 100 / {wc:$item['canyurenshu']}</span>(本商品总需参与人次)
-								<span class="Fb"> = {wc:$user_shop_fmod}</span>(余数)<br>结果：
-								<span class="Fb">{wc:$user_shop_fmod}</span>(余数)
-								<span class="Fb"> + 10000001 = <em> {wc:$item['q_user_code']}</em></span>
-							</p>
-							<b>{wc:$item['q_user_code']}:最终结果</b>
-						</div>
-						<div style="width:100%;height:30px;clear:both;"></div>
-				</div>
-				{wc:else}
+                {wc:if !$item['q_content']}
+                <div class="RecordOnehundred"><h4> 未满100条计算结果 </h4>
+                    <div class="ResultBox"><h2>计算结果</h2>
+                            <p class="num4">求和：
+                                <span class="Fb">{wc:$user_shop_time_add}</span>(揭晓时间求和结果)<br>取余：
+                                <span class="Fb">{wc:$user_shop_time_add}</span>(揭晓时间)
+                                <span class="Fb"> * 100 / {wc:$item['canyurenshu']}</span>(本商品总需参与人次)
+                                <span class="Fb"> = {wc:$user_shop_fmod}</span>(余数)<br>结果：
+                                <span class="Fb">{wc:$user_shop_fmod}</span>(余数)
+                                <span class="Fb"> + 10000001 = <em> {wc:$item['q_user_code']}</em></span>
+                            </p>
+                            <b>{wc:$item['q_user_code']}:最终结果</b>
+                        </div>
+                        <div style="width:100%;height:30px;clear:both;"></div>
+                </div>
+                {wc:else}
 
-				<ul class="Record_title">
-					<li class="time">{wc:fun:_cfg('web_name_two')}时间</li>
-					<li class="nem">会员账号</li>
-					<li class="name">商品名称</li>
-					<li class="much">{wc:fun:_cfg('web_name_two')}人次</li>
-				</ul>
-				<div class="RecordOnehundred"><h4>截止该商品揭晓购买时间【{wc:fun:microt($item['q_end_time'])}】最后100条全站购买时间记录</h4>
-				<div class="FloatBox"></div>
-				   {wc:loop $item['q_content'] $record}
-				   {wc:php:start}
-						$itemid = $item['id'];
-						$record_time = explode(".",$record['time']);
-						$record['time'] = $record_time[0];
-				   {wc:php:end}
-				   <ul class="Record_content">
-						<li class="time"><b>{wc:fun:date("Y-m-d",$record['time'])}</b>{wc:fun:date("H:i:s",$record['time'])}.{wc:$record_time[1]}</li>
-						<li class="timeVal">{wc:$record['timeadd']}</li>
-						<li class="nem"><a class="gray02" href="{WEB_PATH}/uname/{wc:fun:idjia($record['uid'])}" target="_blank">{wc:fun:get_user_name($record['uid'])}</a></li>
-						<li class="name"><a class="gray02" href="{WEB_PATH}/goods/{wc:$record['shopid']}" target="_blank">（第{wc:$record['shopqishu']}期）{wc:$record['shopname']}</a></li>
-						<li class="much">{wc:$record['gonumber']}人次</li>
-					</ul>
-					{wc:loop:end}
-				</div>
+                <ul class="Record_title">
+                    <li class="time">{wc:fun:_cfg('web_name_two')}时间</li>
+                    <li class="nem">会员账号</li>
+                    <li class="name">商品名称</li>
+                    <li class="much">{wc:fun:_cfg('web_name_two')}人次</li>
+                </ul>
+                <div class="RecordOnehundred"><h4>截止该商品揭晓购买时间【{wc:fun:microt($item['q_end_time'])}】最后100条全站购买时间记录</h4>
+                <div class="FloatBox"></div>
+                   {wc:loop $item['q_content'] $record}
+                   {wc:php:start}
+                        $itemid = $item['id'];
+                        $record_time = explode(".",$record['time']);
+                        $record['time'] = $record_time[0];
+                   {wc:php:end}
+                   <ul class="Record_content">
+                        <li class="time"><b>{wc:fun:date("Y-m-d",$record['time'])}</b>{wc:fun:date("H:i:s",$record['time'])}.{wc:$record_time[1]}</li>
+                        <li class="timeVal">{wc:$record['timeadd']}</li>
+                        <li class="nem"><a class="gray02" href="{WEB_PATH}/uname/{wc:fun:idjia($record['uid'])}" target="_blank">{wc:fun:get_user_name($record['uid'])}</a></li>
+                        <li class="name"><a class="gray02" href="{WEB_PATH}/goods/{wc:$record['shopid']}" target="_blank">（第{wc:$record['shopqishu']}期）{wc:$record['shopname']}</a></li>
+                        <li class="much">{wc:$record['gonumber']}人次</li>
+                    </ul>
+                    {wc:loop:end}
+                </div>
 
-					{wc:php:start}
-						$shop_fmod = fmod($item['q_counttime'],$item['canyurenshu']);
-					{wc:php:end}
-					<div class="RecordOnehundred"><h4> 100条计算结果 </h4>
-					 <div class="ResultBox"><h2>计算结果</h2>
-						<p class="num4">求和：
-							<span class="Fb">{wc:$item['q_counttime']}</span>(上面100条{wc:fun:_cfg('web_name_two')}记录时间取值相加之和)<br>取余：
-							<span class="Fb">{wc:$item['q_counttime']}</span>(100条时间记录之和)
-							<span class="Fb"> % {wc:$item['canyurenshu']}</span>(本商品总需参与人次)
-							<span class="Fb"> =  {wc:$shop_fmod}</span>(余数)<br>结果：
-							<span class="Fb">{wc:$shop_fmod}</span>(余数)
-							<span class="Fb"> + 10000001 = <em>{wc:$item['q_user_code']}</em></span>
-						</p>
-						<b>{wc:$item['q_user_code']}:最终结果</b>
-					</div>
-				   </div>
-				{wc:if:end}
+                    {wc:php:start}
+                        $shop_fmod = fmod($item['q_counttime'],$item['canyurenshu']);
+                    {wc:php:end}
+                    <div class="RecordOnehundred"><h4> 100条计算结果 </h4>
+                     <div class="ResultBox"><h2>计算结果</h2>
+                        <p class="num4">求和：
+                            <span class="Fb">{wc:$item['q_counttime']}</span>(上面100条{wc:fun:_cfg('web_name_two')}记录时间取值相加之和)<br>取余：
+                            <span class="Fb">{wc:$item['q_counttime']}</span>(100条时间记录之和)
+                            <span class="Fb"> % {wc:$item['canyurenshu']}</span>(本商品总需参与人次)
+                            <span class="Fb"> =  {wc:$shop_fmod}</span>(余数)<br>结果：
+                            <span class="Fb">{wc:$shop_fmod}</span>(余数)
+                            <span class="Fb"> + 10000001 = <em>{wc:$item['q_user_code']}</em></span>
+                        </p>
+                        <b>{wc:$item['q_user_code']}:最终结果</b>
+                    </div>
+                   </div>
+                {wc:if:end}
  -->
-			</div>
+            </div>
 
 
-		<!-- 购买记录20条 -->
-		<div name="div_tab" id="bitem" class="AllRecordCon">
-			<iframe id="iframea_bitem" g_src="{WEB_PATH}/go/goods/go_record_ifram/{wc:$itemid}/20" style="width:978px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
-		</div>
-	   <!-- /购买记录20条 -->
+        <!-- 购买记录20条 -->
+        <div name="div_tab" id="bitem" class="AllRecordCon">
+            <iframe id="iframea_bitem" g_src="{WEB_PATH}/go/goods/go_record_ifram/{wc:$itemid}/20" style="width:978px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
+        </div>
+       <!-- /购买记录20条 -->
        <!--补丁3.1.6_b.0.1-->
 
        <!--补丁3.1.6_b.0.2-->
-		<!-- 晒单 -->
-		<div name="div_tab" id="divPost" class="Single_Content">
-            
-			<iframe id="iframea_divPost" g_src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:1188px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
-		</div>
-		<!-- 晒单 -->
+        <!-- 晒单 -->
+        <div name="div_tab" id="divPost" class="Single_Content">
+            <iframe id="iframea_divPost" g_src="{WEB_PATH}/go/shaidan/itemifram/{wc:$itemid}" style="width:1188px; border:none;height:0px;" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <!-- 晒单 -->
         <!--补丁3.1.6_b.0.2-->
-	</div>
+    </div>
 </div>
             <!-- 常见问题 -->
             <!--div class="common-question" id="divFaq">
@@ -583,127 +612,127 @@
 </div>
 </div>
 
-<script type="text/javascript">	 
+<script type="text/javascript">  
 function show_date_time_location(){
-	window.setTimeout(function(){
-		$(".m-detail-main-will-countdown").hide();
-		$(".m-detail-main-will-waiting").show();	
-		$.post("{WEB_PATH}/api/getshop/lottery_shop_set/",{"lottery_sub":"true","gid":{wc:$item['id']}},null);
-		
-		window.setTimeout(function(){window.location.href="{WEB_PATH}/dataserver/{wc:$item['id']}";},5000);},1000);}
-function show_date_time(endTime,obj){	
-	if(!this.endTime){this.endTime=endTime;this.obj=obj;}	
-	rTimeout = window.setTimeout("show_date_time()",30);	
-	timeold = this.endTime-(new Date().getTime());
-	if(timeold <= 0){		
-		$(".count-m0").attr("class","count-m0 w-num w-num-0");
-		$(".count-m1").attr("class","count-m1 w-num w-num-0");
-		$(".count-s0").attr("class","count-s0 w-num w-num-0");
-		$(".count-s1").attr("class","count-s1 w-num w-num-0");
-		$(".count-ms0").attr("class","count-ms0 w-num w-num-0");
-		$(".count-ms1").attr("class","count-ms1 w-num w-num-0");
-		// $("#last").attr("class","Code_0");	
-		rTimeout && clearTimeout(rTimeout);	
-		show_date_time_location();	
-		return;
-	}	
-	sectimeold=timeold/1000
-	secondsold=Math.floor(sectimeold); 
-	msPerDay=24*60*60*1000
-	e_daysold=timeold/msPerDay 	
-	daysold=Math.floor(e_daysold); 				//天	
-	e_hrsold=(e_daysold-daysold)*24; 
-	hrsold=Math.floor(e_hrsold); 				//时
-	e_minsold=(e_hrsold-hrsold)*60;	
-	//分
-	minsold=Math.floor((e_hrsold-hrsold)*60);
-	minsold = (minsold<10?'0'+minsold:minsold)
-	minsold = new String(minsold);
-	minsold_1 = minsold.substr(0,1);
-	minsold_2 = minsold.substr(1,1);	
+    window.setTimeout(function(){
+        $(".m-detail-main-will-countdown").hide();
+        $(".m-detail-main-will-waiting").show();    
+        $.post("{WEB_PATH}/api/getshop/lottery_shop_set/",{"lottery_sub":"true","gid":{wc:$item['id']}},null);
+        
+        window.setTimeout(function(){window.location.href="{WEB_PATH}/dataserver/{wc:$item['id']}";},5000);},1000);}
+function show_date_time(endTime,obj){   
+    if(!this.endTime){this.endTime=endTime;this.obj=obj;}   
+    rTimeout = window.setTimeout("show_date_time()",30);    
+    timeold = this.endTime-(new Date().getTime());
+    if(timeold <= 0){       
+        $(".count-m0").attr("class","count-m0 w-num w-num-0");
+        $(".count-m1").attr("class","count-m1 w-num w-num-0");
+        $(".count-s0").attr("class","count-s0 w-num w-num-0");
+        $(".count-s1").attr("class","count-s1 w-num w-num-0");
+        $(".count-ms0").attr("class","count-ms0 w-num w-num-0");
+        $(".count-ms1").attr("class","count-ms1 w-num w-num-0");
+        // $("#last").attr("class","Code_0");   
+        rTimeout && clearTimeout(rTimeout); 
+        show_date_time_location();  
+        return;
+    }   
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold); 
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay  
+    daysold=Math.floor(e_daysold);              //天 
+    e_hrsold=(e_daysold-daysold)*24; 
+    hrsold=Math.floor(e_hrsold);                //时
+    e_minsold=(e_hrsold-hrsold)*60; 
+    //分
+    minsold=Math.floor((e_hrsold-hrsold)*60);
+    minsold = (minsold<10?'0'+minsold:minsold)
+    minsold = new String(minsold);
+    minsold_1 = minsold.substr(0,1);
+    minsold_2 = minsold.substr(1,1);    
 
-	//秒
-	e_seconds = (e_minsold-minsold)*60;	
-	seconds=Math.floor((e_minsold-minsold)*60);
-	seconds = (seconds<10?'0'+seconds:seconds)
-	seconds = new String(seconds);
-	seconds_1 = seconds.substr(0,1);
-	seconds_2 = seconds.substr(1,1);	
-	//毫秒	
-	ms = e_seconds-seconds;
-	ms = new String(ms)
-	ms_1 = ms.substr(2,1);
-	ms_2 = ms.substr(3,1);
-	
-	$(".count-m0").attr("class","count-m0 w-num w-num-"+minsold_1);
-	$(".count-m1").attr("class","count-m1 w-num w-num-"+minsold_2);
-	$(".count-s0").attr("class","count-s0 w-num w-num-"+seconds_1);
-	$(".count-s1").attr("class","count-s1 w-num w-num-"+seconds_2);
-	$(".count-ms0").attr("class","count-ms0 w-num w-num-"+ms_1);
-	$(".count-ms1").attr("class","count-ms1 w-num w-num-"+ms_2);
-	//this.obj.innerHTML=daysold+"天"+(hrsold<10?'0'+hrsold:hrsold)+"小时"+(minsold<10?'0'+minsold:minsold)+"分"+(seconds<10?'0'+seconds:seconds)+"秒."+ms;
+    //秒
+    e_seconds = (e_minsold-minsold)*60; 
+    seconds=Math.floor((e_minsold-minsold)*60);
+    seconds = (seconds<10?'0'+seconds:seconds)
+    seconds = new String(seconds);
+    seconds_1 = seconds.substr(0,1);
+    seconds_2 = seconds.substr(1,1);    
+    //毫秒    
+    ms = e_seconds-seconds;
+    ms = new String(ms)
+    ms_1 = ms.substr(2,1);
+    ms_2 = ms.substr(3,1);
+    
+    $(".count-m0").attr("class","count-m0 w-num w-num-"+minsold_1);
+    $(".count-m1").attr("class","count-m1 w-num w-num-"+minsold_2);
+    $(".count-s0").attr("class","count-s0 w-num w-num-"+seconds_1);
+    $(".count-s1").attr("class","count-s1 w-num w-num-"+seconds_2);
+    $(".count-ms0").attr("class","count-ms0 w-num w-num-"+ms_1);
+    $(".count-ms1").attr("class","count-ms1 w-num w-num-"+ms_2);
+    //this.obj.innerHTML=daysold+"天"+(hrsold<10?'0'+hrsold:hrsold)+"小时"+(minsold<10?'0'+minsold:minsold)+"分"+(seconds<10?'0'+seconds:seconds)+"秒."+ms;
 }
 
 $(function(){
-	$.ajaxSetup({async:false});
-	$.post("{WEB_PATH}/api/getshop/lottery_shop_get",{"lottery_shop_get":true,"gid":{wc:$item['id']},"times":Math.random()},function(sdata){	
-	if(sdata!='no'){show_date_time((new Date().getTime())+(parseInt(sdata))*1000,null);}});});
+    $.ajaxSetup({async:false});
+    $.post("{WEB_PATH}/api/getshop/lottery_shop_get",{"lottery_shop_get":true,"gid":{wc:$item['id']},"times":Math.random()},function(sdata){    
+    if(sdata!='no'){show_date_time((new Date().getTime())+(parseInt(sdata))*1000,null);}});});
 </script>
 
 <script>
 
 function set_iframe_height(fid,did,height){
-	$("#"+fid).css("height",height);
+    $("#"+fid).css("height",height);
 }
 
 $(function(){
 var fouli=$(".DetailsT_TitP ul li");
 var divCalResult =  $("div[name='div_tab']");
-	fouli.click(function(){
-		var index=fouli.index(this);
-		fouli.removeClass("DetailsTCur").eq(index).addClass("DetailsTCur");
-		var iframe = divCalResult.hide().eq(index).find("iframe");
-			if (typeof(iframe.attr("g_src")) != "undefined") {
-			  	 iframe.attr("src",iframe.attr("g_src"));
-				 iframe.removeAttr("g_src");
-			}
+    fouli.click(function(){
+        var index=fouli.index(this);
+        fouli.removeClass("DetailsTCur").eq(index).addClass("DetailsTCur");
+        var iframe = divCalResult.hide().eq(index).find("iframe");
+            if (typeof(iframe.attr("g_src")) != "undefined") {
+                 iframe.attr("src",iframe.attr("g_src"));
+                 iframe.removeAttr("g_src");
+            }
 
-		divCalResult.hide().eq(index).show();
-		$('html body').animate({scrollTop:840},300);
-	});
-
-
-	$(".Announced_But").click(function(){
-		var next_li = $(".DetailsT_TitP ul>li");
-		var index = $(this).index()
-		next_li.eq(index).click();
-	});
+        divCalResult.hide().eq(index).show();
+        $('html body').animate({scrollTop:840},300);
+    });
 
 
-	$(window).scroll(function(){
-		if($(window).scrollTop()>=941){
-			$("#divMidNav").addClass("nav-fixed");
-		}else if($(window).scrollTop()<941){
-			$("#divMidNav").removeClass("nav-fixed");
-		}
-	});
+    $(".Announced_But").click(function(){
+        var next_li = $(".DetailsT_TitP ul>li");
+        var index = $(this).index()
+        next_li.eq(index).click();
+    });
+
+
+    $(window).scroll(function(){
+        if($(window).scrollTop()>=941){
+            $("#divMidNav").addClass("nav-fixed");
+        }else if($(window).scrollTop()<941){
+            $("#divMidNav").removeClass("nav-fixed");
+        }
+    });
 });
 function divOpen(btn){
 var height=$(".m-detail-main-codes-list").css("height");
-	if(height=="38px"){
-		$(".m-detail-main-codes-list").css("height","95px").css("overflow","auto");
-		btn.html('<a href="javascript:void(0)">收起</a>');
-	}else{
-		$(".m-detail-main-codes-list").css("height",38).css("overflow","hidden");
-		btn.html('<a href="javascript:void(0)">&lt;&lt;TA的所有号码</a>');
-	};
+    if(height=="38px"){
+        $(".m-detail-main-codes-list").css("height","95px").css("overflow","auto");
+        btn.html('<a href="javascript:void(0)">收起</a>');
+    }else{
+        $(".m-detail-main-codes-list").css("height",38).css("overflow","hidden");
+        btn.html('<a href="javascript:void(0)">&lt;&lt;TA的所有号码</a>');
+    };
 }
 $(function(){
-	$("#divOpen").click(function() {divOpen($(this));});
+    $("#divOpen").click(function() {divOpen($(this));});
 
-	$('.goods-info-head-userfaq .mail').dotdotdot();
-	$('.goodsName').dotdotdot();
-	$('.m-detail-main-title').dotdotdot();
+    $('.goods-info-head-userfaq .mail').dotdotdot();
+    $('.goodsName').dotdotdot();
+    $('.m-detail-main-title').dotdotdot();
     // $('.detail').dotdotdot({after:'#show-all-codes'});
     $('#show-all-codes').click(function() {
         var detail = $('.detail');
@@ -715,102 +744,102 @@ $(function(){
 
 $(function() {
 
-	var shopinfo={'shopid':{wc:$itemzx['id']},'money':{wc:$itemzx['yunjiage']},'shenyu':{wc:$itemzx['shenyurenshu']}};
+    var shopinfo={'shopid':{wc:$itemzx['id']},'money':{wc:$itemzx['yunjiage']},'shenyu':{wc:$itemzx['shenyurenshu']}};
 
-	$(".w-button-main").click(function(){	
-		Cartcookie(true);
-	});	
+    $(".w-button-main").click(function(){   
+        Cartcookie(true);
+    }); 
 
-	function baifenshua(aa,n){
-	n = n || 2;
-	return ( Math.round( aa * Math.pow( 10, n + 2 ) ) / Math.pow( 10, n ) ).toFixed( n ) + '%';
-	}
-	var shopnum = $("#num_dig");
-	shopnum.keyup(function(){
-		if(shopnum.val()>{wc:$itemzx['shenyurenshu']}){
-			shopnum.val({wc:$itemzx['shenyurenshu']});
-		}
-		var numshop=shopnum.val();
-		if(numshop=={wc:$itemzx['zongrenshu']}){
-			var baifenbi='100%';
-		}else{
-			var showbaifen=numshop/{wc:$itemzx['zongrenshu']};
-			var baifenbi=baifenshua(showbaifen,2);
-		}
-		$("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
-	});	
+    function baifenshua(aa,n){
+    n = n || 2;
+    return ( Math.round( aa * Math.pow( 10, n + 2 ) ) / Math.pow( 10, n ) ).toFixed( n ) + '%';
+    }
+    var shopnum = $("#num_dig");
+    shopnum.keyup(function(){
+        if(shopnum.val()>{wc:$itemzx['shenyurenshu']}){
+            shopnum.val({wc:$itemzx['shenyurenshu']});
+        }
+        var numshop=shopnum.val();
+        if(numshop=={wc:$itemzx['zongrenshu']}){
+            var baifenbi='100%';
+        }else{
+            var showbaifen=numshop/{wc:$itemzx['zongrenshu']};
+            var baifenbi=baifenshua(showbaifen,2);
+        }
+        $("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
+    }); 
 
-	function Cartcookie(cook){
-		var shopid=shopinfo['shopid'];
-		var number=parseInt($("#num_dig").val());
-		if(number<=1){number=1;}
-		var Cartlist = $.cookie('Cartlist');
-		if(!Cartlist){
-			var info = {};
-		}else{
-			var info = $.evalJSON(Cartlist);
-			if((typeof info) !== 'object'){
-				var info = {};
-			}
-		}		
-		if(!info[shopid]){
-			var CartTotal=$("#sCartTotal").text();
-				$("#sCartTotal").text(parseInt(CartTotal)+1);
-				$("#btnMyCart em").text(parseInt(CartTotal)+1);
-		}	
-		info[shopid]={};
-		info[shopid]['num']=number;
-		info[shopid]['shenyu']=shopinfo['shenyu'];
-		info[shopid]['money']=shopinfo['money'];
-		info['MoneyCount']='0.00';	
-		$.cookie('Cartlist',$.toJSON(info),{expires:7,path:'/'});
-		if(cook){
-			window.location.href="{WEB_PATH}/member/cart/cartlist/"+new Date().getTime();//+new Date().getTime()
-		}
-	}  
+    function Cartcookie(cook){
+        var shopid=shopinfo['shopid'];
+        var number=parseInt($("#num_dig").val());
+        if(number<=1){number=1;}
+        var Cartlist = $.cookie('Cartlist');
+        if(!Cartlist){
+            var info = {};
+        }else{
+            var info = $.evalJSON(Cartlist);
+            if((typeof info) !== 'object'){
+                var info = {};
+            }
+        }       
+        if(!info[shopid]){
+            var CartTotal=$("#sCartTotal").text();
+                $("#sCartTotal").text(parseInt(CartTotal)+1);
+                $("#btnMyCart em").text(parseInt(CartTotal)+1);
+        }   
+        info[shopid]={};
+        info[shopid]['num']=number;
+        info[shopid]['shenyu']=shopinfo['shenyu'];
+        info[shopid]['money']=shopinfo['money'];
+        info['MoneyCount']='0.00';  
+        $.cookie('Cartlist',$.toJSON(info),{expires:7,path:'/'});
+        if(cook){
+            window.location.href="{WEB_PATH}/member/cart/cartlist/"+new Date().getTime();//+new Date().getTime()
+        }
+    }  
 
-	$("#shopadd").click(function(){
-		var shopnum = $("#num_dig");
-			var resshopnump='';
-			var num = parseInt(shopnum.val());				
-			// if(num+1 > 450){				
-			// 	shopnum.val({wc:$syrs});
-			// 	resshopnump = {wc:$syrs};
-			// }else{
-				resshopnump=parseInt(shopnum.val())+1;
-				shopnum.val(resshopnump);	
-				if(shopnum.val()>={wc:$itemzx['shenyurenshu']}){
-					resshopnump=shopinfo['shenyu'];
-					shopnum.val(resshopnump);
-				}
-			// }
-			if(resshopnump=={wc:$itemzx['zongrenshu']}){
-				var baifenbi='100%';
-			}else{
-				var showbaifen=resshopnump/{wc:$itemzx['zongrenshu']};
-				var baifenbi=baifenshua(showbaifen,2);
-			}
-			$("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
-	});
-	
-	
-	$("#shopsub").click(function(){
-		var shopnum = $("#num_dig");
-		var num = parseInt(shopnum.val());
-		if(num<2){
-			shopnum.val(1);			
-		}else{
-			shopnum.val(parseInt(shopnum.val())-1);
-		}
-		var shopnums=parseInt(shopnum.val());
-		if(shopnums=={wc:$itemzx['zongrenshu']}){
-				var baifenbi='100%';
-		}else{
-			var showbaifen=shopnums/{wc:$itemzx['zongrenshu']};
-			var baifenbi=baifenshua(showbaifen,2);
-		}
-		$("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
-	});
+    $("#shopadd").click(function(){
+        var shopnum = $("#num_dig");
+            var resshopnump='';
+            var num = parseInt(shopnum.val());              
+            // if(num+1 > 450){             
+            //  shopnum.val({wc:$syrs});
+            //  resshopnump = {wc:$syrs};
+            // }else{
+                resshopnump=parseInt(shopnum.val())+1;
+                shopnum.val(resshopnump);   
+                if(shopnum.val()>={wc:$itemzx['shenyurenshu']}){
+                    resshopnump=shopinfo['shenyu'];
+                    shopnum.val(resshopnump);
+                }
+            // }
+            if(resshopnump=={wc:$itemzx['zongrenshu']}){
+                var baifenbi='100%';
+            }else{
+                var showbaifen=resshopnump/{wc:$itemzx['zongrenshu']};
+                var baifenbi=baifenshua(showbaifen,2);
+            }
+            $("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
+    });
+    
+    
+    $("#shopsub").click(function(){
+        var shopnum = $("#num_dig");
+        var num = parseInt(shopnum.val());
+        if(num<2){
+            shopnum.val(1);         
+        }else{
+            shopnum.val(parseInt(shopnum.val())-1);
+        }
+        var shopnums=parseInt(shopnum.val());
+        if(shopnums=={wc:$itemzx['zongrenshu']}){
+                var baifenbi='100%';
+        }else{
+            var showbaifen=shopnums/{wc:$itemzx['zongrenshu']};
+            var baifenbi=baifenshua(showbaifen,2);
+        }
+        $("#chance").html("<span style='color:red'>获得机率"+baifenbi+"</span>");
+    });
 });
 
 $(function() {
