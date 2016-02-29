@@ -55,15 +55,15 @@
         <!--S cart-->
     <div id="shopCartBox">
         <div class="shop-cart-box">
-    <div class="shop-cart-box-hd"><h2 class="title">我的购物车</h2></div>
+    <div class="shop-cart-box-hd"><h2 class="title">مال ھارۋام</h2></div>
     <div class="shop-cart-box-bd">
         <dl class="shop-cart-goods">
             <dt class="clearfix">
-                <span class="col col-1">商品</span>
-                <span class="col col-2">价值</span>
-                <span class="col col-3">数量</span>
-                <span class="col col-4">剩余</span>
-                <span class="col col-5">操作</span>
+                <span class="col col-1">تاۋارلار</span>
+                <span class="col col-2">قىممىتى</span>
+                <span class="col col-3">سانى</span>
+                <span class="col col-4">قالغان ئادەم قېتىم</span>
+                <span class="col col-5">مەشغۇلات</span>
             </dt>
 			{wc:loop $shoplist $shops}
             <dd class="item" id="shoplist{wc:$shops['id']}">
@@ -74,7 +74,7 @@
                             <div class="g-name"><a href="{WEB_PATH}/goods/{wc:$shops['id']}" target="_blank">{wc:$shops['title']}</a><br /><p class="tips"></p></div>
                         </div>
                     </div>
-                    <div class="col col-2">{wc:$shops['money']}元</div>
+                    <div class="col col-2">{wc:$shops['money']} سوم</div>
                     <div class="col col-3">
 						<div class="change-goods-num num">
                             <a href="javascript:;" class="J_minus" val="{wc:$shops['id']}"><i class="iconfont">-</i></a>
@@ -82,16 +82,16 @@
                             <a href="javascript:;" class="J_plus" val="{wc:$shops['id']}"><i class="iconfont">+</i></a>
                         </div>
                     </div>
-                    <div class="col col-4"><em>{wc:$shops['cart_shenyu']}</em>人次</div>
+                    <div class="col col-4"><em>{wc:$shops['cart_shenyu']}</em>ئادەم قېتىم</div>
                     <div class="col col-5"><a  href="javascript:;" onclick="delcart({wc:$shops['id']})" class="del J_delGoods"><i class="iconfont">&times;</i></a></div>
                 </div>
             </dd>
 			{wc:loop:end}
             <dd class="item clearfix">
                 <div class="col col-1">
-                    <div class="g-pic"><span class="icon-activity icon-activity-my">免邮</span></div>
+                    <div class="g-pic"><span class="icon-activity icon-activity-my">پوچتا ھەققى ئېلىنمايدۇ</span></div>
                     <div class="g-info">
-                        <div class="activity-info clearfix">{wc:fun:_cfg("web_name_two")}全场免邮费</div>
+                        <div class="activity-info clearfix">مەزكۇر تور بېكەتتىكى بارلىق مەھسۇلاتلاردىن پوچتا ھەققى ئېلىنمايدۇ</div>
                     </div>
                 </div>
                 <div class="col col-2"></div>
@@ -102,10 +102,10 @@
         </dl>
     </div>
     <div class="shop-cart-box-ft clearfix">
-        <div class="shop-cart-total"><p class="total-price">商品总计：<span><strong id="moenyCount">{wc:$MoenyCount}</strong>元</span></p></div>
+        <div class="shop-cart-total"><p class="total-price">جەمئىي سومما ：<span><strong id="moenyCount">{wc:$MoenyCount}</strong> سوم</span></p></div>
         <div class="shop-cart-action clearfix">
-            <a href="javascript:;" class="btn btn-primary btn-next" id="but_ok">去结账</a>
-            <a href="{WEB_PATH}" class="btn btn-lineDakeLight btn-back">继续购物</a>
+            <a href="javascript:;" class="btn btn-primary btn-next" id="but_ok">ھېسابات قىلىش</a>
+            <a href="{WEB_PATH}" class="btn btn-lineDakeLight btn-back">داۋاملىق سېتىۋېلىش</a>
         </div>
     </div>
 </div>
@@ -128,7 +128,7 @@ $(function(){
 			$.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});
 			document.location.href='{WEB_PATH}/member/cart/pay';
 		}else{
-			alert("购物车为空!");
+			alert("مال ھارۋسى قۇرۇق");
 		}
 	});
 });

@@ -28,12 +28,12 @@
 
 							</a>
 							<p><a class="blue Fb" href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" target="_blank">{wc:fun:get_user_name($qishu['q_user'])}</a>:ئېرىشكۈچى</p>
-							<p>قاتناشقان :<em class="orange Fb">{wc:fun:get_user_goods_num($qishu['q_uid'],$qishu['id'])}</em>قېتىم</p>
+							<p>قاتناشقان :<em class="orange Fb">{wc:fun:get_user_goods_num($qishu['q_uid'],$qishu['id'])}</em>ئادەم قېتىم</p>
 						</div>
 						<div class="publishC-tit">
 							<h3><a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" target="_blank" class="gray01">({wc:$qishu['qishu']}چى سان){wc:$qishu['title']}</a></h3>
-							<p class="money">تاۋار قىممىتى :<span class="rmb">{wc:$qishu['money']}</span>يۈەن</p>
-							<p class="Announced-time gray02">{wc:fun:date("Y-m-d",$qishu['q_end_time'])} :جاكارلانغان ۋاقىت</p>
+							<p class="money">جەمئىي ئېھتىياج :<span class="rmb">{wc:$qishu['zongrenshu']}</span>ئادەم قېتىم</p>
+							<p class="Announced-time gray02">{wc:fun:date("Y-m-d h:i:s",$qishu['q_end_time'])} :جاكارلانغان ۋاقىت</p>
 						</div>
 						<div class="details">
 							<p class="fl details-Code"><em class="orange Fb">{wc:$qishu['q_user_code']}</em> :تەلەيلىك نومۇر</p>
