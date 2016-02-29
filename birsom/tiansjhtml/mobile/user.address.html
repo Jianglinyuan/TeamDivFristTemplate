@@ -31,8 +31,8 @@
 
 <div class="main-content clearfix">
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_MOBILE_CSS}/layout-setUp.css"/>
-<script type="text/javascript" src="{G_TEMPLATES_STYLE}/pc/js/jquery.Validform.min.js"></script>
-<script type="text/javascript" src="{G_TEMPLATES_STYLE}/pc/js/area.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/jquery.Validform.min.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/area.js"></script>
 <script type="text/javascript">
 $(function(){
     var demo=$(".registerform").Validform({
@@ -108,9 +108,9 @@ function dell(id){
             <td><label>:تۈرۈشلۇق جاي</label></td>
             <script>var s=["province","city","county"];</script>
             <td>
-                <select style="color:#fff;background-color:#c00"  datatype="*" nullmsg="请选择有效的省市区" class="select" id="province" runat="server" name="sheng"></select>
-                <select style="color:#fff;background-color:#c00"  datatype="*" nullmsg="请选择有效的省市区" id="city" runat="server" name="shi"></select>
-                <select style="color:#fff;background-color:#c00"  datatype="*" nullmsg="请选择有效的省市区" id="county" runat="server" name="xian"></select>
+                <select style="color:#fff;background-color:#7b7b7b"  datatype="*" nullmsg="请选择有效的省市区" class="select" id="province" runat="server" name="sheng"></select>
+                <select style="color:#fff;background-color:#7b7b7b"  datatype="*" nullmsg="请选择有效的省市区" id="city" runat="server" name="shi"></select>
+                <select style="color:#fff;background-color:#7b7b7b"  datatype="*" nullmsg="请选择有效的省市区" id="county" runat="server" name="xian"></select>
                 <em id="ship_address_valid_msg" class="red">*</em>
                 <script type="text/javascript">setup()</script>
             </td>
@@ -161,7 +161,8 @@ function dell(id){
         <tr>
             <td><label>&nbsp;</label></td>
             <td>
-                <input style="height: 30px; width: 85px;background: #F0414E;border: 1px solid #ef6000;" name="submit" type="submit" class="orangebut" id="btn_consignee_save" value="保存" title="保存">
+    <div class="add"><input style="height: 30px; width: 85px;color:white;background: #c75c5c;border: 1px solid #c75c5c;margin-right: 20px; float: right;" id="btnAddnewAddr" type="button" class="orangebut" value="قوشۇش"></div>
+                <input style="height: 30px; width: 85px;background: #c75c5c;border: 1px solid #ef6000;" name="submit" type="submit" class="orangebut" id="btn_consignee_save" value="保存" title="保存">
             </td>
         </tr>
         </tbody>
@@ -193,7 +194,7 @@ function dell(id){
         </ul>
         {wc:loop:end}
     </div>
-    <div class="add"><input style="height: 30px; width: 85px;color:white;background: #c75c5c;border: 1px solid #c75c5c;margin-right: 20px;" id="btnAddnewAddr" type="button" class="orangebut" value="قوشۇش"></div>
+    <div class="add"><input style="height: 30px; width: 85px;color:white;background: #c75c5c;border: 1px solid #c75c5c;margin-right: 20px; float: right;" id="btnAddnewAddr" type="button" class="orangebut" value="قوشۇش"></div>
     {wc:if:end}
     {wc:if $count<=5}
     <div id="div_consignee" class="addAddress" style="display:none;">
@@ -205,9 +206,9 @@ function dell(id){
         <script>var s2=["province2","city2","county2"];</script>
             <td><label>所在地区：</label></td>
             <td>
-                <select style="color:#fff;background-color:#c00"  datatype="*" nullmsg="请选择有效的省市区" class="select" id="province2" runat="server" name="sheng"></select>
-                <select style="color:#fff;background-color:#c00"  datatype="*" nullmsg="请选择有效的省市区" id="city2" runat="server" name="shi"></select>
-                <select style="color:#fff;background-color:#c00"  datatype="*" nullmsg="请选择有效的省市区" id="county2" runat="server" name="xian"></select>
+                <select style="color:#fff;background-color:#7b7b7b"  datatype="*" nullmsg="请选择有效的省市区" class="select" id="province2" runat="server" name="sheng"></select>
+                <select style="color:#fff;background-color:#7b7b7b"  datatype="*" nullmsg="请选择有效的省市区" id="city2" runat="server" name="shi"></select>
+                <select style="color:#fff;background-color:#7b7b7b"  datatype="*" nullmsg="请选择有效的省市区" id="county2" runat="server" name="xian"></select>
                 <em id="ship_address_valid_msg" class="red">*</em>
                 <script type="text/javascript">setup2()</script>
             </td>
@@ -257,8 +258,8 @@ function dell(id){
         <tr>
             <td><label>&nbsp;</label></td>
             <td>
-                <input style="height: 30px;width: 85px;background: #F0414E;border: 1px solid #ef6000;" name="submit" type="submit" class="orangebut" id="btn_consignee_save" value="保存" title="保存">
-                <input style="height: 30px;width: 85px;background: #F0414E;border: 1px solid #ef6000;margin-right: 20px;" type="button" class="cancelBtn" value="取消" id="btn_consignee_cancle" title="取消">
+                <input style="height: 30px;width: 85px;background: #c75c5c;border: 1px solid #ef6000;" name="submit" type="submit" class="orangebut" id="btn_consignee_save" value="保存" title="保存">
+                <input style="height: 30px;width: 85px;background: #c75c5c;border: 1px solid #ef6000;margin-right: 20px;" type="button" class="cancelBtn" value="取消" id="btn_consignee_cancle" title="取消">
             </td>
         </tr>
         </tbody>
@@ -276,9 +277,9 @@ function dell(id){
         <tr>
             <td><label>所在地区：</label></td>
             <td>
-                <select style="color:#fff;background-color:#c00"  datatype="*" nullmsg="请选择有效的省市区" class="select" id="province3" runat="server" name="sheng"></select>
-                <select style="color:#fff;background-color:#c00"  datatype="*" nullmsg="请选择有效的省市区" id="city3" runat="server" name="shi"></select>
-                <select style="color:#fff;background-color:#c00"  datatype="*" nullmsg="请选择有效的省市区" id="county3" runat="server" name="xian"></select>
+                <select style="color:#fff;background-color:#7b7b7b"  datatype="*" nullmsg="请选择有效的省市区" class="select" id="province3" runat="server" name="sheng"></select>
+                <select style="color:#fff;background-color:#7b7b7b"  datatype="*" nullmsg="请选择有效的省市区" id="city3" runat="server" name="shi"></select>
+                <select style="color:#fff;background-color:#7b7b7b"  datatype="*" nullmsg="请选择有效的省市区" id="county3" runat="server" name="xian"></select>
                 <em id="ship_address_valid_msg" class="red">*</em>
             </td>
             <td><div class="Validform_checktip"></div></td>
@@ -296,7 +297,6 @@ function dell(id){
             <td><label>邮政编码：</label></td>
             <td>
                 <input id="yb2" datatype="p" ignore="ignore" errormsg="邮政编码错误！" name="youbian" type="text" maxlength="6" class="inputTxt" value="">
-                <font><a href="http://alexa.ip138.com/post/Search.aspx" class="blue" target="_blank">邮编查询</a></font>
             </td>
             <td><div class="Validform_checktip"></div></td>
         </tr>
@@ -328,8 +328,8 @@ function dell(id){
         <tr>
             <td><label>&nbsp;</label></td>
             <td>
-                <input style="height: 30px;width: 85px;background: #F0414E;border: 1px solid #ef6000;" name="submit" type="submit" class="orangebut" id="btn_consignee_save" value="保存" title="保存">
-                <input  style="height: 30px;width: 85px;background: #F0414E;border: 1px solid #ef6000;margin-right: 20px;" type="button" class="cancelBtn" value="取消" id="btn_consignee_cancle2" title="取消">
+                <input style="height: 30px;width: 85px;background: #c75c5c;border: 1px solid #ef6000;" name="submit" type="submit" class="orangebut" id="btn_consignee_save" value="保存" title="保存">
+                <input  style="height: 30px;width: 85px;background: #c75c5c;border: 1px solid #ef6000;margin-right: 20px;" type="button" class="cancelBtn" value="取消" id="btn_consignee_cancle2" title="取消">
             </td>
         </tr>
         </tbody>

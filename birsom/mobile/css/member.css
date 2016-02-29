@@ -862,10 +862,10 @@ p.f-addressLH {
 	text-align: right;
 }
 .g-Record-ctlst li b {
-	width:100%;
+
 	display:inline-block;
 	text-align:right;
-	margin-left: -20px;
+	margin:5px;
 }
 .g-Record-ctlst li span {
 	margin-left:15px;
