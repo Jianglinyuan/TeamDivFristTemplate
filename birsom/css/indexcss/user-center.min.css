@@ -897,18 +897,18 @@ a:hover {
 .uc-order-detail-item .order-detail-table .column-info {
 	height: 41px;
 	font-weight: 400;
-	text-align: left;
-	background: #fafafa
+	background: #fafafa;;;;;
 }
 .uc-order-detail-item .order-detail-table .column-info .column-content {
-	float: right;
 	position: relative;
 	height: 21px;
 	padding: 10px 20px;
+	float: right;;
 }
 .uc-order-detail-item .order-detail-table .column-info .order-status {
 	color: #db3652;
-	float: right;
+	float: left;
+	direction: ltr;
 }
 .uc-order-detail-item .order-detail-table .column-info .order-status-shipping {
 	color: #90ce36

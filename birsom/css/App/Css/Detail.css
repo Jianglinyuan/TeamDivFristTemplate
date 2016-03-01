@@ -342,11 +342,11 @@
 	width:220px;
 }
 .moodwm .share span.fen {
-	float:left;
 	vertical-align:middle;
 	color:#999;
 	display:inline-block;
 	line-height:26px;
+	margin-left:10px;
 }
 .moodwm .share .bdshare_t {
 	float:left;
@@ -413,7 +413,7 @@
 .Comment-pic {
 	width:50px;
 	height:50px;
-	float:left;
+	float:right;
 }
 .Comment-pic img {
 	width:50px;
@@ -452,8 +452,8 @@
 	clear:both;
 }
 .Comment_form {
-	margin-left:60px;
 	zoom:1;
+	margin-left:20px;
 }
 .Comment_textbox:after {
 	content:"\0020";
@@ -733,6 +733,7 @@
 	color:#666;
 	height:20px;
 	margin-top:15px;
+	text-align: center;
 }
 .New-single {
 	width:288px;
@@ -741,12 +742,17 @@
 	padding-bottom:15px;
 	border-bottom:1px dotted #D9D9D9;
 }
+
+.New-single {
+}
 .New-single-time {
 	color:#BBB;
 	white-space:nowrap;
 }
 .New-single-time .blue {
-	margin-right:5px;
+	float:right;
+	margin-right:30px;
+	direction:rtl;
 }
 .New-single-C {
 	margin-top:5px;
@@ -996,6 +1002,7 @@
 	resize:none;
 	padding:5px;
 	width:752px;
+	direction: rtl;
 }
 .reply_unbotton {
 	width: 64px;

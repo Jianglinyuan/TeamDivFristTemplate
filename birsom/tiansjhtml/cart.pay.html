@@ -57,15 +57,15 @@
                 <div id="checkoutGoodsList" class="checkout-goods-box">
                                     <div class="xm-box">
                     <div class="box-hd">
-                        <h2 class="title">确认商品及优惠券</h2>
+                        <h2 class="title">تاۋار ئۇچۇرى</h2>
                     </div>
                     <div class="box-bd">
                         <dl class="checkout-goods-list">
                             <dt class="clearfix">
-                                <span class="col col-1">商品名称</span>
-                                <span class="col col-2">商品价值</span>
-                                <span class="col col-3">购买人次</span>
-                                <span class="col col-4">小计</span>
+                                <span class="col col-1">تاۋار نامى</span>
+                                <span class="col col-2">تاۋار قىممىتى</span>
+                                <span class="col col-3">سېتىۋالغان ئادەم قېتىم سانى</span>
+                                <span class="col col-4">جەمئىي</span>
                             </dt>
                             <dd class="item clearfix">
 							{wc:loop $shoplist $shops}
@@ -74,9 +74,9 @@
                                         <div class="g-pic"><img src="{G_UPLOAD_PATH}/{wc:$shops['thumb']}" width="40" height="40"></div>
                                         <div class="g-info"><a href="{WEB_PATH}/goods/{wc:$shops['id']}" target="_blank">{wc:$shops['title']}</a></div>
                                     </div>
-                                    <div class="col col-2">{wc:$shops['money']}元</div>
-                                    <div class="col col-3">{wc:$shops['cart_gorenci']}人次</div>
-                                    <div class="col col-4">{wc:$shops['cart_xiaoji']}元</div>
+                                    <div class="col col-2">{wc:$shops['money']}سوم</div>
+                                    <div class="col col-3">{wc:$shops['cart_gorenci']}ئادەم قېتىم</div>
+                                    <div class="col col-4">{wc:$shops['cart_xiaoji']}سوم</div>
                                 </div>
 							{wc:loop:end}
                             </dd>
@@ -84,11 +84,12 @@
                         <div class="checkout-count clearfix">
                             <div class="checkout-count-extend xm-add-buy">
 								<ul class="order_list">
-                                {wc:if $fufen_dikou}
+             <!--
+             {wc:if $fufen_dikou}
 			 <li id="liPayByPoints" class="point_out">
 					<div class="payment_List_Lc">
 					<input type="checkbox" class="input_choice" id="shop_score" name="shop_score" value="1"/>使用福分抵扣现金：您的福分({wc:$member['score']})本次消费最多可抵扣现金
-                    <span class="orange Fb">{wc:$fufen_dikou}.00</span>元)，我要使用
+                    <span class="orange Fb">{wc:$fufen_dikou}.00</span>سوم)，我要使用
                     <input type="text" maxlength="8" class="pay_input_text_gray" id="shop_score_num" value="0" money="{wc:$fufen['fufen_yuan']}" name="shop_score_num"/> 福分, 1元 = {wc:$fufen['fufen_yuan']} 福分</div>
                     <p id="pPointsTip" class="pay_Value" style="display:none;"></p>
                     <p class="payment_List_Rc"></p>
@@ -103,20 +104,20 @@
                     <p class="payment_List_Rc"></p>
               </li>
              {wc:if:end}
-							   <li class="point_in" id="liPayByBalance">
+             <-->
+			    <li class="point_in" id="liPayByBalance">
 				<div class="payment_List_Lc">
-					<input type="checkbox" name="moneycheckbox" id="MoneyCheckbox" class="input_choice"/>使用账户余额支付，账户余额：
-					<span class="green F18">{wc:$Money}</span>元
+					<input type="checkbox" name="moneycheckbox" id="MoneyCheckbox" class="input_choice"/>ھېسابات قالدۇقىنى ئىشلىتىپ تۆلەش،ھېسابات قالدۇقى :
+					<span class="green F18">{wc:$Money}</span>سوم
 				</div>
 				<p style="" class="pay_Value" id="pBalanceTip">
-				<span>◆</span><em>◆</em>账户余额支付更快捷，
-				<a class="blue" target="_blank" href="{WEB_PATH}/member/home/userrecharge">立即充值</a></p>
-				<p class="payment_List_Rc">余额支付：<span id="pay_money" class="orange F20">0.00</span> 元</p>
+				<span>◆</span><em>◆</em>ھېسابات قالدۇقىنى ئىشلىتىپ تۆلىسىڭىز تېخىمۇ قۇلايلىق
+				<a class="blue" target="_blank" href="{WEB_PATH}/member/home/userrecharge">پۇل قاچىلاش</a></p>
 			</li>
             <!-- 余额支付 end-->
 
 			<li id="liPayByOther" class="point_in point_bank" style="display:list-item;">
-				<div class="item J_addBuy selected payment_List_Lc gary01 Fb">您的账户余额不足，请选择以下方式完成支付<span style="float:right;width: 250px;padding-left: 250px;">网银支付：<span id="pay_bankmoney" class="F20">0.00</span> 元</span></div>
+				<div class="item J_addBuy selected payment_List_Lc gary01 Fb">سىزنىڭ ھېساباتىڭىزدىكى سومما يەتمەيدىكەن، تۆۋەندىكى ئۇسۇللار ئارقىلىق ھېسابات قىلىڭ<span style="float:right;width: 250px;padding-left: 250px;">: تور بانكىسى بىلەن پۇل تۆلەش<span id="pay_bankmoney" class="F20">0.00</span> سوم</span></div>
 			</li>
 			</ul>
                             </div>
@@ -129,7 +130,7 @@
 		{wc:php:end}
         {wc:if $bank1['value'] == 'tenpay'}
 		<dl class="clearfix payment-box">
-		<dt><strong>银行网银</strong><p>支持以下各银行借记卡及信用卡</p></dt>
+		<dt><strong>تور بانكىسى</strong><p>تۆۋەندىكى بانكىلارنى قوللايدۇ</p></dt>
 		<dd>
             <ul class="bank_logo click_img">
             	<input type="hidden" name="pay_bank" value="tenpay"  />
@@ -155,7 +156,7 @@
             {wc:if:end}
             {wc:if $bank1['value'] == 'yeepay'}
         <dl class="clearfix payment-box">
-		<dt><strong>银行网银</strong><p>支持以下各银行借记卡及信用卡</p></dt>
+		<dt><strong>تور بانكىسى</strong><p>تۆۋەندىكى بانكىلارنى قوللايدۇ</p></dt>
 		<dd>
             <ul class="bank_logo yeepay_bank click_img">
             <input type="hidden" name="pay_bank" value="yeepay"  />
@@ -165,8 +166,6 @@
          	<li><input type="radio" value="CMBCHINA-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/CMBCHINA.png"></li>
             <li><input type="radio" value="BOC-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/BOC.png"></li>
             <li><input type="radio" value="BOCO-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/JIAOTONG.png"></li>
-
-
             <li><input type="radio" value="CEB-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/CEB.png"></li>
             <li><input type="radio" value="GDB-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/GDB.png"></li>
             <li><input type="radio" value="POST-NET-B2C" name="account" /><img src="{G_TEMPLATES_STYLE}/images/bank/PSBC.png"></li>
@@ -180,7 +179,6 @@
 				}
 			{wc:php:end}
 		<dl class="clearfix payment-box">
-		<dt><strong>支付平台</strong><p>集成了国内最顶级的网络支付技术</p></dt>
 		<dd>
 		<ul class="payment-list clearfix">
         	{wc:loop $paylist  $pay}
@@ -193,7 +191,7 @@
 		</dd>
 	</div>
                             <div class="checkout-price">
-                                <p class="checkout-total">应付总额：<span><strong>{wc:$MoenyCount}</strong>元</span></p>
+                                <p class="checkout-total" style="direction:rtl;">تۆلەشكە تېگىشلىك ئۇمۇمىي سومما :<span><strong>{wc:$MoenyCount}</strong>سوم</span></p>
                             </div>
                         </div>
                     </div>
@@ -204,9 +202,9 @@
                 <input type="hidden" id="couponValue" name="Checkout[couponsValue]">
                 <div class="checkout-confirm">
                     <div id="submitAddress"></div>
-						<a href="{WEB_PATH}/member/cart/cartlist" class="btn btn-lineDakeLight btn-back-cart">返回购物车修改订单</a>
+						<a href="{WEB_PATH}/member/cart/cartlist" class="btn btn-lineDakeLight btn-back-cart">زاكاسنى ئۆزگەرتىش</a>
 						<input type="hidden" name="submitcode" value="{wc:$submitcode}">
-						<input id="submit_ok" class="btn btn-primary" type="submit" name="submit" value="立即下单">
+						<input id="submit_ok" class="btn btn-primary" type="submit" name="submit" value="زاكاسنى تاپشۇرۇش">
                     </div>
 				</div>
 				</form>

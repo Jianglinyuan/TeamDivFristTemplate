@@ -2,7 +2,7 @@
 <div class="container breadcrumbs"><a href="{WEB_PATH}">باش بەت</a><span class="sep">/</span><a href="{WEB_PATH}/go/shaidan/">بەھرلەر</a><span class="sep">/</span>تەپسىلاتى</div>
 <div class="container">
         <div class="xm-line-box filter-box">
-        <div class="box-hd"><h3 class="title">{wc:$shaidan['sd_title']} <span id="spTotalCount" style="font-size: 12px;color: #8c8c8c;">بەھىرلىگەن ۋاقىت：<em class="orange">{wc:fun:date("Y-m-d H:i",$shaidan['sd_time'])}</em></span></h3></div>
+        <div class="box-hd"><h3 class="title">{wc:$shaidan['sd_title']} <span id="spTotalCount" style="font-size: 12px;color: #8c8c8c;"><em class="orange">{wc:fun:date("Y-m-d H:i",$shaidan['sd_time'])}</em> : بەھىرلىگەن ۋاقىت</span></h3></div>
         <div class="box-bd">
 <div id="content">
 <div class="coin-layout">
@@ -55,12 +55,12 @@
 			<!-- 分享按钮 -->
 			<div class="mood">
 				<div class="moodwm">
-					<div class="moodm hidden" style="display: block; direction:rtl; margin-left:50px;">
+					<div class="moodm hidden" style="display: block; direction:rtl; margin-left:30px;">
 						 <span class="smile" id="emHits"><i></i><b>ياقتۇرۇش(<em>{wc:$shaidan['sd_zhan']}</em>)</b></span>
 						 <span class="much"> <i></i>باھا(<em id="emReplyCount">{wc:$shaidan['sd_ping']}</em>)</span>
 					</div>
 					<div class="share">
-						<span class="fen">分享到：</span>
+						<span class="fen">：كۆرسىتىش</span>
 						<!-- Baidu Button BEGIN -->
 						<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
 						<a class="bds_qzone"></a>
@@ -93,13 +93,13 @@
 					<div class="Comment_textbox">
 					{wc:if !$member}
 						<div id="notLogin" name="replyLogin" class="Comment_login">
-							请您<a href="{WEB_PATH}/member/user/login" class="blue" name="replyLoginBtn">登录</a>
-							或<a href="{WEB_PATH}/member/user/register" class="blue">注册</a>后再回复评论
+							<a href="{WEB_PATH}/member/user/login" class="blue" name="replyLoginBtn">كىرىپ</a>
+							ياكى<a href="{WEB_PATH}/member/user/register" class="blue">تىزىملىتىپ</a>ئاندىن باھا بېرىڭ
 						</div>
 					{wc:else}
 						<form action="" method="post">
 						<textarea name="sdhf_content" class="Comment-txt"></textarea>
-						<input type="submit" name="submit" value="发表评论" class="reply_unbotton">
+						<input type="submit" name="submit" value="باھا بېرىش" class="reply_unbotton" style="margin-right:70px;">
 						</form>
 					{wc:if:end}
 					</div>
@@ -156,10 +156,10 @@
 			</li>
 		</ul> -->
 		<div class="Comment_share">
-			<h4>最新晒单</h4>
+			<h4>ئەڭ يېڭى بەھرلەر</h4>
 			{wc:loop $shaidannew $sd}
 			<div class="New-single">
-				<p class="New-single-time"><a class="blue" href="{WEB_PATH}/uname/{wc:fun:idjia($sd['sd_userid'])}" target="_blank">{wc:fun:userid($sd['sd_userid'],'username')}</a>{wc:fun:date("Y年m月d日 H:i",$sd['sd_time'])}</p>
+				<p class="New-single-time"><a class="blue" href="{WEB_PATH}/uname/{wc:fun:idjia($sd['sd_userid'])}" target="_blank">{wc:fun:userid($sd['sd_userid'],'username')}</a>{wc:fun:date("Y-m-d H:i",$sd['sd_time'])}</p>
 				<p class="New-single-C"><a href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" target="_blank">{wc:fun:_strcut($sd['sd_content'],100)}</a></p>
 				<div class="New-singleImg"><div class="arrow arrow_Rleft"><em>◆</em></div>
 					<a href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" target="_blank">

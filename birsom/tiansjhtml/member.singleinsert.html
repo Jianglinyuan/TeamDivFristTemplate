@@ -1,6 +1,6 @@
 {wc:templates "index","pagehead"}
 <link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/indexcss/user-center.min.css" />
-<div class="container breadcrumbs"><a href="/">首页</a><span class="sep">/</span><span>获得的商品</span></div>
+<div class="container breadcrumbs"><span>كۆرسەتكەنلىرىم</span><span class="sep">/</span><a href="/">باش بەت</a></div>
 <div class="container">
     <div class="uc-full-box">
         <div class="row">
@@ -60,7 +60,7 @@ function SetImgContent(data){
 		sLi += '<li>';
 		sLi += '<img src="{G_UPLOAD_PATH}/' + data + '" width="100" height="100" />';
 		sLi += '<input type="hidden" name="fileurl_tmp[]" value="' + data + '">';
-		sLi += '<a href="javascript:;">删除</a>';
+		sLi += '<a href="javascript:;">ئۆچۈرۈش</a>';
 		sLi += '</li>';
 	return sLi;
 }
@@ -107,19 +107,19 @@ float: left;
 
 </style>
 <div class="R-content">
-	<div class="subMenux" style="height:50px;line-height:50px;">
-		<span>添加晒单</span>
-		<a style="float:right;" href="{WEB_PATH}/member/home/singlelist" class="blue">返回晒单</a>
+	<div class="subMenux" style="height:50px;line-height:50px; margin-right:20px;font-size:15px;">
+		<span>مۇكاپاتنى كۆرسىتىش</span>
+		<a style="float:left;" href="{WEB_PATH}/member/home/singlelist" class="blue">قايتىش</a>
 	</div>
 	<form  action="#" method="post">
 		<input type="hidden" name="shopid" value="{wc:$shopid}"/>
-		<div class="sd_lilie">
-			<span class="sd_span">标题：</span>
+		<div class="sd_lilie" style="float:right">
+			<span class="sd_span" style="direction:rtl;float:right;">تېمىسى ：</span>
 			<input id="sd_text" type="text" name="title" />
 		</div>
-		<div class="sd_lilie">
-			<span class="sd_span">内容：</span>
-			<div style="float: left;">
+		<div class="sd_lilie" style="float:right">
+			<span class="sd_span" style="direction:rtl;float:right;">مەزمۇنى：</span>
+			<div style="float: right;">
 				<script name="content" id="myeditor" type="text/plain"></script>
             	<style>
 				.content_attr {
@@ -133,7 +133,7 @@ float: left;
 				<script type="text/javascript">
 				//实例化编辑器
 				UEDITOR_CONFIG.toolbars = [["source","fontfamily","fontsize","bold","italic","underline","backcolor","link","unlink","justifyleft","justifycenter","justifyright","justifyjustify","insertunorderedlist","insertorderedlist",]];
-				UEDITOR_CONFIG.initialFrameWidth = 600;
+				UEDITOR_CONFIG.initialFrameWidth = 500;
 				UEDITOR_CONFIG.initialFrameHeight = 400;
 				var ue = UE.getEditor('myeditor');
 				ue.addListener('ready',function(){
@@ -143,17 +143,17 @@ float: left;
 			</div>
 		</div>
 		<div class="sd_lilie">
-			<span class="sd_span">晒图：</span>
+			<span class="sd_span" style="direction:rtl">مۇكاپات رەسىمىنى چىقىرىش：</span>
 			<div style="float:left; width:400px;">
 				<input id="sd_file" type="file" name="upimg"/>
 				<div style="width:400px; float:left;"></div>
 				<input type="hidden" name="imglist" id="id_file" />
-				<input type="button"  class="button" onClick="sdUpload()" value="确定上传" />
+				<input type="button"  class="button" onClick="sdUpload()" value="چىقىرىشنى جەزىملەش" />
 				<div class="fileWarp"><div id="fileQueue"></div><ul></ul></div>
 			</div>
 		</div>
 		<div class="sd_lilie" style="width:580px;">
-		<input id="sd_submit" name="submit" type="submit" value="确认添加" />
+		<input id="sd_submit" name="submit" type="submit" value="كۆرسىتشنى جەزىملەش" />
 		</div>
 	</form>
 </div>
