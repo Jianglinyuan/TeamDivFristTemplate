@@ -145,7 +145,7 @@ function UpdataMoney(shopid,number,zindex){
 function delcart(id){
 	info['MoenyCount'] = info['MoenyCount']-info[id]['money']*info[id]['num'];
 	$("#shoplist"+id).hide();
-	$("#moenyCount").text(info['MoenyCount']+".00");
+	$("#moenyCount").text(info['MoenyCount']+".0ss0");
 	delete info[id];
 	//$.cookie('Cartlist','',{path:'/'});
 	$.cookie('Cartlist',$.toJSON(info),{expires:30,path:'/'});

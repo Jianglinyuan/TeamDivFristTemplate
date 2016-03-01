@@ -128,7 +128,7 @@
 	top:0;
 }
 .share-getinfo {
-	margin-left:106px;
+	margin-left:136px;
 	color:#999;
 	padding-top:10px;
 }
@@ -216,12 +216,15 @@
 .share_content p {
 	margin:10px auto 0;
 	text-indent:0;
+	text-align: right;
+	margin-left: 200px;
 }
 .share_content p img{
 	text-align:center;
+	margin-top: 30px;
 }
 .share_content p.content-pad {
-	text-align:left;
+	text-align:right;
 	margin:20px 0 70px 0;
 	text-indent:2em;
 }

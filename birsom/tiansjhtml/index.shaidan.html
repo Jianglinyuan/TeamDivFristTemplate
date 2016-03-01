@@ -4,7 +4,7 @@
 b{font-weight:normal}
 strong{font-weight:normal}
 </style>
-<div class="container breadcrumbs"><a href="{WEB_PATH}"> باش بەت</a><span class="sep">/</span>بەھرلەش</div>
+<div class="container breadcrumbs"><a href="{WEB_PATH}">باش بەت</a><span class="sep">/</span>بەھرلەش</div>
 <div id="content">
 <div class="coin-layout">
     <div class="coin-bg J_ModLayout"></div>
@@ -39,15 +39,6 @@ strong{font-weight:normal}
 								<span class="smile gray03"><i></i><b>(<em num="1282">{wc:$sd['sd_zhan']}</em>)ياقتۇرۇش</b></span>
 								<span class="much"><a target="_blank" href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" class="gray03"><i></i><em>({wc:$sd['sd_ping']})</em>باھا</a></span>
 							</dd>
-
-							{wc:if $hf_one=hueisd_id($sd['sd_id'])}
-								<dd class="text_message gray02 hidden" style="display: block;">
-								<a href="{WEB_PATH}/uname/{wc:fun:idjia($hf_one['sdhf_userid'])}" target="_blank" class="name-img">
-									<img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:$hf_one['sdhf_img']}" width="50" height="50" border="0"/>
-								</a>
-								<p><a href="#" class="blue">{wc:$hf_one['sdhf_username']}</a>:&nbsp;<span>{wc:fun:_strcut($hf_one['sdhf_content'],50)}</span></p>
-								</dd>
-							{wc:if:end}
 						</dl>
 						<p class="text-h10"></p>
 					</div>
@@ -75,14 +66,6 @@ strong{font-weight:normal}
 								<span class="much"><a target="_blank" href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" class="gray03"><i></i><em>({wc:$sd['sd_ping']})</em>باھا</a></span>
 							</dd>
 
-							{wc:if $hf_two=hueisd_id($sd['sd_id'])}
-								<dd class="text_message gray02 hidden" style="display: block;">
-								<a href="{WEB_PATH}/uname/{wc:fun:idjia($hf_two['sdhf_userid'])}" target="_blank" class="name-img">
-									<img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:$hf_two['sdhf_img']}" width="50" height="50" border="0"/>
-								</a>
-								<p><a href="#" class="blue">{wc:$hf_two['sdhf_username']}</a>:&nbsp;<span>{wc:fun:_strcut($hf_two['sdhf_content'],50)}</span></p>
-								</dd>
-							{wc:if:end}
 						</dl>
 						<p class="text-h10"></p>
 					</div>
@@ -109,14 +92,6 @@ strong{font-weight:normal}
 								<span class="smile gray03"><i></i><b>(<em num="1282">{wc:$sd['sd_zhan']}</em>)ياقتۇرۇش</b></span>
 								<span class="much"><a target="_blank" href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" class="gray03"><i></i><em>({wc:$sd['sd_ping']})</em>باھا</a></span>
 							</dd>
-							{wc:if $hf_tree=hueisd_id($sd['sd_id'])}
-								<dd class="text_message gray02 hidden" style="display: block;">
-								<a href="{WEB_PATH}/uname/{wc:fun:idjia($hf_tree['sdhf_userid'])}" target="_blank" class="name-img">
-									<img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:$hf_tree['sdhf_img']}" width="50" height="50" border="0"/>
-								</a>
-								<p><a href="#" class="blue">{wc:$hf_tree['sdhf_username']}</a>:&nbsp;<span>{wc:fun:_strcut($hf_tree['sdhf_content'],50)}</span></p>
-								</dd>
-							{wc:if:end}
 						</dl>
 						<p class="text-h10"></p>
 					</div>
@@ -143,14 +118,6 @@ strong{font-weight:normal}
 								<span class="smile gray03"><i></i><b>(<em num="1282">{wc:$sd['sd_zhan']}</em>)ياقتۇرۇش</b></span>
 								<span class="much"><a target="_blank" href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" class="gray03"><i></i><em>({wc:$sd['sd_ping']})</em>باھا</a></span>
 							</dd>
-							{wc:if $hf_tree=hueisd_id($sd['sd_id'])}
-								<dd class="text_message gray02 hidden" style="display: block;">
-								<a href="{WEB_PATH}/uname/{wc:fun:idjia($hf_tree['sdhf_userid'])}" target="_blank" class="name-img">
-									<img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:$hf_tree['sdhf_img']}" width="50" height="50" border="0"/>
-								</a>
-								<p><a href="#" class="blue">{wc:$hf_tree['sdhf_username']}</a>:&nbsp;<span>{wc:fun:_strcut($hf_tree['sdhf_content'],50)}</span></p>
-								</dd>
-							{wc:if:end}
 						</dl>
 						<p class="text-h10"></p>
 					</div>
