@@ -58,7 +58,7 @@ function lxfEndtime(objlist,len,thistimes){
                 var CHour= hours % 24;
                 var CMinute= minutes % 60;
                 var CSecond= Math.floor(seconds%60);//"%"是取余运算，可以理解为60进一后取余数，然后只要余数。
-			    objlist[i]['obj'].html("<span></span>剩余<em>"+CHour+"</em>时<em>"+CMinute+"</em>分<em>"+CSecond+"</em>秒");				
+			    objlist[i]['obj'].html("剩余<em>"+CHour+"</em>:<em>"+CMinute+"</em>:<em>"+CSecond+"</em>");				
 				delete youtime,seconds,minutes,hours,days,CDay,CHour, CMinute, CSecond;
 				if( endtime <= nowtime ){
 					delete endtime, nowtime;			
@@ -136,13 +136,24 @@ $(function(){
 					</div>
 					<p class="name"><a href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank">(第{wc:$shop['qishu']}期){wc:$shop['title']}</a></p>
 					<p class="money">价值：<span class="rmb">{wc:$shop['money']}</span></p>
-					<div class="Progress-bar">
-						<p><span style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"></span></p>
-						<ul class="Pro-bar-li">
+					<div class="w-progressBar">
+						<p class="w-progressBar-wrap"><span class="w-progressBar-bar flipx" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"></span></p>
+						<!-- <ul class="Pro-bar-li">
 							<li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>已参与人次</li>
 							<li class="P-bar02"><em id="Em1">{wc:$shop['zongrenshu']}</em>总需人次</li>
 							<li class="P-bar03"><em id="Em2">{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>剩余人次</li>
+						</ul> -->
+						<ul class="w-progressBar-txt f-clear">
+						  <li class="w-progressBar-txt-r">
+						    <p><b>{wc:$shop['canyurenshu']}</b></p>
+						    <p>قاتناشقىنى</p>
+						  </li>
+						  <li class="w-progressBar-txt-l">
+						    <p><b>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</b></p>
+						    <p>قالغىنى</p>
+						  </li>
 						</ul>
+
 					</div>					
 				</div>
           	
@@ -167,18 +178,28 @@ $(function(){
 						<a href="{WEB_PATH}/goods/{wc:$shop['id']}"  target="_blank">(第{wc:$shop['qishu']}期){wc:$shop['title']}</a></p>
 					<p class="money">
 						价值：<span class="rmb">{wc:$shop['money']}</span></p>
-					<div class="Progress-bar">
-						<p><span style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"></span></p>
-						<ul class="Pro-bar-li">					
+					<div class="w-progressBar">
+						<p class="w-progressBar-wrap"><span class="w-progressBar-bar flipx" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"></span></p>
+						<!-- <ul class="Pro-bar-li">					
                             <li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>已参与人次</li>
 							<li class="P-bar02"><em id="Em1">{wc:$shop['zongrenshu']}</em>总需人次</li>
 							<li class="P-bar03"><em id="Em2">{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>剩余人次</li>
+						</ul> -->
+						<ul class="w-progressBar-txt f-clear">
+						  <li class="w-progressBar-txt-r">
+						    <p><b>{wc:$shop['canyurenshu']}</b></p>
+						    <p>قاتناشقىنى</p>
+						  </li>
+						  <li class="w-progressBar-txt-l">
+						    <p><b>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</b></p>
+						    <p>قالغىنى</p>
+						  </li>
 						</ul>
 					</div>
                     {wc:if $shop['zongrenshu']==$shop['canyurenshu']}
                     <div class="ashowM"> <a class="nowBtnEnd">已结束</a> </div>
                     {wc:else}
-					<div class="ashowM"><a class="nowBtn" href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank">立即参与</a></div>
+					<div class="ashowM"><a class="w-button w-button-main w-button-l" href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank">立即参与</a></div>
                     {wc:if:end}
 				</div>				
 			</li>		         
@@ -202,15 +223,25 @@ $(function(){
 						<a href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank">(第{wc:$shop['qishu']}期){wc:$shop['title']}</a></p>
 					<p class="money">
 						价值：<span class="rmb">{wc:$shop['money']}</span></p>
-					<div class="Progress-bar">
-						<p><span style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"></span></p>
-						<ul class="Pro-bar-li">
+					<div class="w-progressBar">
+						<p class="w-progressBar-wrap"><span class="w-progressBar-bar flipx" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"></span></p>
+						<!-- <ul class="Pro-bar-li">
 						 <li class="P-bar01"><em>{wc:$shop['canyurenshu']}</em>已参与人次</li>
 							<li class="P-bar02"><em id="Em1">{wc:$shop['zongrenshu']}</em>总需人次</li>
 							<li class="P-bar03"><em id="Em2">{wc:$shop['zongrenshu']-$shop['canyurenshu']}</em>剩余人次</li>
+						</ul> -->
+						<ul class="w-progressBar-txt f-clear">
+						  <li class="w-progressBar-txt-r">
+						    <p><b>{wc:$shop['canyurenshu']}</b></p>
+						    <p>قاتناشقىنى</p>
+						  </li>
+						  <li class="w-progressBar-txt-l">
+						    <p><b>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</b></p>
+						    <p>قالغىنى</p>
+						  </li>
 						</ul>
 					</div>
-					<div class="ashowM"><a class="nowBtn"  href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank">立即参与</a></div>
+					<div class="ashowM"><a class="w-button w-button-main w-button-l"  href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank">立即参与</a></div>
 				</div>
 			</li>
 		{wc:loop:end}
@@ -235,12 +266,22 @@ $(function(){
 							</dd>
 							<i></i></li>
 						<li class="pro-barw">
-						<div class="Progress-bar">
-							<p><span style="width:100%;"></span></p>
-                            <ul class="Pro-bar-li">
+						<div class="w-progressBar">
+							<p class="w-progressBar-wrap"><span class="w-progressBar-bar flipx" style="width:100%;"></span></p>
+                            <!-- <ul class="Pro-bar-li">
                              <li class="P-bar01"><em>{wc:$eshop['canyurenshu']}</em>قاتناشقىنى</li>
                              <li class="P-bar03"><em id="Em2">{wc:$eshop['zongrenshu']-$eshop['canyurenshu']}</em>قالغىنى</li>
-                            </ul>
+                            </ul> -->
+                        <ul class="w-progressBar-txt f-clear">
+						  <li class="w-progressBar-txt-r">
+						    <p><b>{wc:$shop['canyurenshu']}</b></p>
+						    <p>قاتناشقىنى</p>
+						  </li>
+						  <li class="w-progressBar-txt-l">
+						    <p><b>{wc:$shop['zongrenshu']-$shop['canyurenshu']}</b></p>
+						    <p>قالغىنى</p>
+						  </li>
+						</ul>
 						</div>
 						</li>
 						<li class="uInfo">

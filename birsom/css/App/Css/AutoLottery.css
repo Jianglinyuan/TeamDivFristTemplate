@@ -3,17 +3,20 @@
 body {
 	background: #FAFAFA;
 }
+
 .limit-banner {
 	background: #FFF4D4;
 	text-align: center;
 	width: 1190px;
 	margin: auto;
 }
+
 .limit-banner p {
 	width: 980px;
 	margin: 0 auto;
 	position: relative;
 }
+
 .limit-banner p .ExplainA {
 	width: 163px;
 	height: 33px;
@@ -22,6 +25,7 @@ body {
 	right: 66px;
 	position: absolute;
 }
+
 .auto-nav {
 	height: 67px;
 	background: #f78e94;
@@ -29,11 +33,13 @@ body {
 	width: 1190px;
 	margin: auto;
 }
+
 .auto-nav ul {
 	width: 980px;
 	height: 67px;
 	margin: 0 auto 0 auto;
 }
+
 .auto-nav ul li {
 	background: #EBE1CD;
 	color: #CDA85D;
@@ -47,46 +53,53 @@ body {
 	cursor: pointer;
 	border-radius: 5px 5px 0 0;
 }
+
 .auto-nav ul li.autoCur {
 	background: #db3652;
 	color: #fff;
 }
+
 .auto-nav ul li em {
 	color: #D0B887;
 	font-size: 24px;
 }
+
 .auto-nav ul li.autoCur em {
 	color: #FFD1BF;
 	font-size: 24px;
 }
+
 .autoCon {
 	width: 1190px;
 	margin: 20px auto 0;
 	font-family: "alkatip";
 	text-align: right;
 }
+
 .showCon {
-	width: 980px;
+	width: 100%;
 	margin-bottom: 15px;
 	background: #FAFAFA;
 }
+
 .showCon:after {
 	content: "\0020";
 	display: block;
 	height: 0;
 	clear: both;
 }
+
 .showCon .autolist {
-	width: 294px;
+	width: 250px;
 	padding: 0 3px 3px 3px;
-	float: left;
-	background: #FFE59F;
-	margin-right: 40px;
+	float: right;
+	background: #e7e7e7;
 	position: relative;
 	margin-top: 10px;
+	margin-left: 15px;
 }
 .showCon .autolistCur {
-	background: #FF4B04;
+	background: #db3652;
 }
 .showCon .autolistEnd {
 	background: #DDD;
@@ -119,11 +132,11 @@ body {
 	height: 37px;
 	padding-top: 6px;
 	line-height: 31px;
-	padding-left: 86px;
 	font-size: 16px;
 	font-family: "alkatip";
-	color: #FF4B04;
+	color: #db3652;
 	position: relative;
+	width: 240px;
 }
 .showCon .autolist .syTime span {
 	width: 20px;
@@ -143,9 +156,10 @@ body {
 	font-size: 20px;
 	font-family: "alkatip";
 	display: inline-block;
-	color: #FF4B04;
-	background: #fff;
+	color: #fff;
+	background: #db3652;
 	margin: 0 4px;
+	border-radius: 3px;
 }
 .showCon .autolist .AnnTime10 span {
 	background: url(http://skin.1yyg.com/images/auto_06.gif?v=130228) 0 2px no-repeat;
@@ -180,7 +194,7 @@ body {
 	padding: 9px 8px;
 }
 .showCon .name {
-	text-align: left;
+	text-align: right;
 	font-size: 12px;
 	padding: 0;
 }
@@ -198,7 +212,7 @@ body {
 .showCon .money {
 	padding: 0 0 9px 0;
 	font-family: "alkatip";
-	text-align: left;
+	text-align: right;
 	color: #999;
 }
 .showCon .money span {
@@ -297,13 +311,13 @@ body {
 .Progress-bar {
 	height: 57px;
 }
-.Progress-bar p {
+/*.Progress-bar p {
 	height: 4px;
 	background: #E7E7E7;
 	border: 1px solid #DBDBDB;
 	position: relative;
 	border-radius: 3px;
-}
+}*/
 .Progress-bar p span {
 	height: 4px;
 	border: 1px solid #F55700;
@@ -534,4 +548,13 @@ body {
 	font-size: 16px;
 	font-family: "alkatip";
 	line-height: 35px;
+}
+.w-progressBar {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.showCon .autolistCur .syTime em {
+    background: #fff;
+    color: #db3652;
 }

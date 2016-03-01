@@ -1158,6 +1158,7 @@ img {
   float: left;
   width: 50%;
   line-height: 18px;
+  text-align: left;
 }
 
 .w-progressBar-txt .w-progressBar-txt-r {
