@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 body {
+
 	/*background: #f7f7f7;*/
 }
 .Newpublish {
@@ -77,8 +78,7 @@ body {
 	zoom: 1;
 }
 .publishC-Member {
-	width: 199px;
-	/*margin-left: 155px;*/
+	width: 199px;	/*margin-left: 155px;*/
 	height: 55px;
 	margin-top: 10px;
 	overflow: hidden;
@@ -92,8 +92,7 @@ body {
 }
 .publishC-Member p {
 	width: 135px;
-	overflow: hidden;
-	/*margin-left: 55px;*/
+	overflow: hidden;	/*margin-left: 55px;*/
 	_margin-left: 52px;
 	white-space: nowrap;
 	font-family: "alkatip";
@@ -113,6 +112,7 @@ body {
 	height: 36px;
 	overflow: hidden;
 	direction: rtl;
+	padding-left: 5px
 }
 .publishC-tit h3 a {
 	text-decoration: none;
@@ -695,4 +695,73 @@ body {
 	background: #F4F4F4;
 	border: 1px solid #E4E4E4;
 	color: #CCC;
+}
+
+
+.w-revealList {
+	width: 100%;
+	margin-top: 10px;
+	text-align: right;
+}
+.w-revealList li {
+	display: inline;
+}
+.w-revealList-item {
+	height: auto;
+	width: 280px;
+	float: right;
+	margin-left: 10px;
+	margin-right: 0;
+}
+.w-revealList .w-countdown-title {
+	margin-bottom: 15px;
+	font-size: 18px;
+	color: #808080;
+	font-family: "Microsoft Yahei";
+}
+.w-revealList .w-countdown-nums {
+	margin-bottom: 16px;
+	color: #db3652;
+	font-size: 30px;
+	text-align: center;
+}
+.w-revealList .w-countdown-nums b {
+	display: inline-block;
+	margin-right: 2px;
+	border-radius: 4px;
+	width: 28px;
+	font-size: 25px;
+	background: #db3652;
+	line-height: 37px;
+	text-align: center;
+	color: #fff;
+}
+.w-revealList .w-countdown-why {
+	font-size: 12px;
+}
+.w-revealList .w-button {
+	margin-top: 5px;
+}
+.w-revealList .w-goods-err {
+	padding: 40px 20px 0 0;
+	font-size: 15px;
+	line-height: 25px;
+	font-family: "Microsoft Yahei";
+	color: #808080;
+}
+.w-goods .w-goods-pic img {
+	display: block;
+}
+.w-goods-pic img {
+	height: 200px;
+}
+.username {
+    width: 70px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+ul#Page_Ul li {
+    display: inline-block;
+    margin-right: 8px;
 }

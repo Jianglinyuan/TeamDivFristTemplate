@@ -8,6 +8,37 @@
 <div class="main-wrap">
 	<div class="topicitem-mod common-layout">
 <div class="container">
+			{wc:if ($countingdown)}
+        <div class="xm-line-box filter-box">
+        <div class="box-hd"><h3 class="title"><span id="spTotalCount" style="color: #8c8c8c;">正在揭晓</span></div>
+
+				<ul class="w-revealList f-clear" id="pro-view-14">
+				{wc:loop $countingdown $cd}
+					{wc:php:start}
+						$itemid = "goods".$cd['id'];
+					{wc:php:end}
+				  <li class="w-revealList-item" id="{wc:$itemid}">
+				    <div class="w-goods w-goods-reveal">
+				      <div class="w-goods-info">
+				        <div class="w-goods-pic">
+				          <a href="{WEB_PATH}/dataserver/{wc:$cd['id']}" target="_blank"><img width="200" height="200" src="{G_UPLOAD_PATH}/{wc:$cd['thumb']}" class=""></a>
+				        </div>
+				        <p class="w-goods-title f-txtabb"><a href="{WEB_PATH}/dataserver/{wc:$cd['id']}" target="_blank">{wc:$cd['title']}</a></p>
+				        <p class="w-goods-price">总需：{wc:$cd['zongrenshu']}人次</p>
+				        <p class="w-goods-period">期号：{wc:$cd['qishu']}</p>
+				      </div>
+				      <div class="w-countdown">
+				        <p class="w-countdown-title"><i class="ico ico-countdown ico-countdown-gray"></i>揭晓倒计时</p>
+				        <p class="w-countdown-nums" pro="countdown"><b class="m0">9</b><b class="m1">9</b>:<b class="s0">9</b><b class="s1">9</b>:<b class="ms0">9</b><b class="ms1">9</b></p>
+				      </div>
+				    </div>
+				  </li>
+				{wc:loop:end}
+				</ul>
+				</div>
+			{wc:if:end}
+
+
         <div class="xm-line-box filter-box">
         <div class="box-hd"><h3 class="title"><span id="spTotalCount" style="color: #8c8c8c;">يېڭى جاكارلار <em class="orange"> ھازىرغا قەدەر جاكارلانغان تاۋارلار {wc:$total}</em></span></div>
         <div class="box-bd">
@@ -27,13 +58,13 @@
 							<img id="imgUserPhoto" src="{G_UPLOAD_PATH}/{wc:$qishu['q_user']['img']}" width="50" height="50" border="0"/>
 
 							</a>
-							<p><a class="blue Fb" href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" target="_blank">{wc:fun:get_user_name($qishu['q_user'])}</a>:ئېرىشكۈچى</p>
-							<p>قاتناشقان :<em class="orange Fb">{wc:fun:get_user_goods_num($qishu['q_uid'],$qishu['id'])}</em>ئادەم قېتىم</p>
+							<p><a class="blue Fb username" href="{WEB_PATH}/uname/{wc:fun:idjia($qishu['q_uid'])}" target="_blank">{wc:fun:get_user_name($qishu['q_user'])}</a>:ئېرىشكۈچى</p>
+							<p>قاتناشقان :<em class="orange Fb">{wc:fun:get_user_goods_num($qishu['q_uid'],$qishu['id'])}</em>قېتىم</p>
 						</div>
 						<div class="publishC-tit">
-							<h3><a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" target="_blank" class="gray01">({wc:$qishu['qishu']}چى سان){wc:$qishu['title']}</a></h3>
-							<p class="money">جەمئىي ئېھتىياج :<span class="rmb">{wc:$qishu['zongrenshu']}</span>ئادەم قېتىم</p>
-							<p class="Announced-time gray02">{wc:fun:date("Y-m-d h:i:s",$qishu['q_end_time'])} :جاكارلانغان ۋاقىت</p>
+							<h3><a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" target="_blank" class="gray01 goodsdesc">({wc:$qishu['qishu']}چى سان){wc:$qishu['title']}</a></h3>
+							<p class="money">تاۋار قىممىتى :<span class="rmb">{wc:$qishu['money']}</span>يۈەن</p>
+							<p class="Announced-time gray02">{wc:fun:date("Y-m-d",$qishu['q_end_time'])} :جاكارلانغان ۋاقىت</p>
 						</div>
 						<div class="details">
 							<p class="fl details-Code"><em class="orange Fb">{wc:$qishu['q_user_code']}</em> :تەلەيلىك نومۇر</p>
@@ -49,17 +80,9 @@
 			{wc:if:end}
 		</div>
 	</div>
-	<script>
-		$(".clo").hover(
-	　　function () {
-	　　$(this).addClass("hover");
-	　　},
-	　　function () {
-	　　$(this).removeClass("hover");
-	　　}
-	　　);
-	</script>
+
 	<div class="clear"></div>
+
 </div>
 </div>
 </div>
@@ -67,4 +90,107 @@
 </div>
 </div>
 </div>
+
+<script>
+$(function() {
+	$(".clo").hover(
+　　function () {
+　　$(this).addClass("hover");
+　　},
+　　function () {
+　　$(this).removeClass("hover");
+　　}
+　);
+});
+
+// function show_date_time_location(){
+// 	window.setTimeout(function(){   
+//     $.post("{WEB_PATH}/api/getshop/lottery_shop_set/",{"lottery_sub":"true","gid":{wc:$cd['id']}},null);
+    
+//     window.setTimeout(function(){window.location.href="{WEB_PATH}/dataserver/{wc:$cd['id']}";},5000);
+//   },1000);
+// }
+function show_date_time(endTime,obj){   
+	// var endTime = endTime_in, 
+	// 		obj = obj_in;
+
+	// return function inner() {
+	  // if(!this.endTime){endTime=endTime_in;obj=obj_in;}   
+	  rTimeout = window.setTimeout(function() {
+	  	return show_date_time(endTime, obj);
+	  	// return show_date_time(endTime, obj)();
+	  },30);    
+	  // timeold = this.endTime-(new Date().getTime());
+	  timeold = endTime-(new Date().getTime());
+	  if(timeold <= 0){       
+	      // $(".count-m0").attr("class","count-m0 w-num w-num-0");
+	      // $(".count-m1").attr("class","count-m1 w-num w-num-0");
+	      // $(".count-s0").attr("class","count-s0 w-num w-num-0");
+	      // $(".count-s1").attr("class","count-s1 w-num w-num-0");
+	      // $(".count-ms0").attr("class","count-ms0 w-num w-num-0");
+	      // $(".count-ms1").attr("class","count-ms1 w-num w-num-0");
+	      // $("#last").attr("class","Code_0");   
+	      rTimeout && clearTimeout(rTimeout); 
+	      // show_date_time_location();  
+	      return;
+	  }   
+	  sectimeold=timeold/1000;
+	  secondsold=Math.floor(sectimeold); 
+	  msPerDay=24*60*60*1000;
+	  e_daysold=timeold/msPerDay;
+	  daysold=Math.floor(e_daysold);              //天 
+	  e_hrsold=(e_daysold-daysold)*24; 
+	  hrsold=Math.floor(e_hrsold);                //时
+	  e_minsold=(e_hrsold-hrsold)*60; 
+	  //分
+	  minsold=Math.floor((e_hrsold-hrsold)*60);
+	  minsold = (minsold<10?'0'+minsold:minsold);
+	  minsold = new String(minsold);
+	  minsold_1 = minsold.substr(0,1);
+	  minsold_2 = minsold.substr(1,1);    
+
+	  //秒
+	  e_seconds = (e_minsold-minsold)*60; 
+	  seconds=Math.floor((e_minsold-minsold)*60);
+	  seconds = (seconds<10?'0'+seconds:seconds);
+	  seconds = new String(seconds);
+	  seconds_1 = seconds.substr(0,1);
+	  seconds_2 = seconds.substr(1,1);    
+	  //毫秒    
+	  ms = e_seconds-seconds;
+	  ms = new String(ms);
+	  ms_1 = ms.substr(2,1);
+	  ms_2 = ms.substr(3,1);
+	  
+	  // $(".count-m0").attr("class","count-m0 w-num w-num-"+minsold_1);
+	  // $(".count-m1").attr("class","count-m1 w-num w-num-"+minsold_2);
+	  // $(".count-s0").attr("class","count-s0 w-num w-num-"+seconds_1);
+	  // $(".count-s1").attr("class","count-s1 w-num w-num-"+seconds_2);
+	  // $(".count-ms0").attr("class","count-ms0 w-num w-num-"+ms_1);
+	  // $(".count-ms1").attr("class","count-ms1 w-num w-num-"+ms_2);
+	  //this.obj.innerHTML=daysold+"天"+(hrsold<10?'0'+hrsold:hrsold)+"小时"+(minsold<10?'0'+minsold:minsold)+"分"+(seconds<10?'0'+seconds:seconds)+"秒."+ms;
+
+	  obj.find(".m0").text(minsold_1);
+	  obj.find(".m1").text(minsold_2);
+	  obj.find(".s0").text(seconds_1);
+	  obj.find(".s1").text(seconds_2);
+	  obj.find(".ms0").text(ms_1);
+	  obj.find(".ms1").text(ms_2);
+	// };
+}
+
+$(function(){
+  // $.ajaxSetup({async:true});
+
+	{wc:loop $countingdown $cd}
+		(function(id) {
+			$.post("{WEB_PATH}/api/getshop/lottery_shop_get",{"lottery_shop_get":true,"gid":id,"times":Math.random()},function(sdata){    
+			  if(sdata!='no'){
+			  	show_date_time((new Date().getTime())+(parseInt(sdata))*1000, $("#goods"+id));
+			  }
+			});
+		})({wc:$cd['id']});
+	{wc:loop:end}
+});
+</script>
 {wc:templates "index","foot"}
