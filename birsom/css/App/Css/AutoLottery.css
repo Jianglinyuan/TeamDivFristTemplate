@@ -3,17 +3,23 @@
 body {
 	background: #FAFAFA;
 }
+
+
 .limit-banner {
 	background: #FFF4D4;
 	text-align: center;
 	width: 1190px;
 	margin: auto;
 }
+
+
 .limit-banner p {
 	width: 980px;
 	margin: 0 auto;
 	position: relative;
 }
+
+
 .limit-banner p .ExplainA {
 	width: 163px;
 	height: 33px;
@@ -22,6 +28,8 @@ body {
 	right: 66px;
 	position: absolute;
 }
+
+
 .auto-nav {
 	height: 67px;
 	background: #f78e94;
@@ -29,11 +37,15 @@ body {
 	width: 1190px;
 	margin: auto;
 }
+
+
 .auto-nav ul {
 	width: 980px;
 	height: 67px;
 	margin: 0 auto 0 auto;
 }
+
+
 .auto-nav ul li {
 	background: #EBE1CD;
 	color: #CDA85D;
@@ -47,58 +59,83 @@ body {
 	cursor: pointer;
 	border-radius: 5px 5px 0 0;
 }
+
+
 .auto-nav ul li.autoCur {
 	background: #db3652;
 	color: #fff;
 }
+
+
 .auto-nav ul li em {
 	color: #D0B887;
 	font-size: 24px;
 }
+
+
 .auto-nav ul li.autoCur em {
 	color: #FFD1BF;
 	font-size: 24px;
 }
+
+
 .autoCon {
 	width: 1190px;
 	margin: 20px auto 0;
 	font-family: "alkatip";
 	text-align: right;
 }
+
+
 .showCon {
-	width: 980px;
+	width: 100%;
 	margin-bottom: 15px;
 	background: #FAFAFA;
 }
+
+
 .showCon:after {
 	content: "\0020";
 	display: block;
 	height: 0;
 	clear: both;
 }
+
+
 .showCon .autolist {
-	width: 294px;
+	width: 250px;
 	padding: 0 3px 3px 3px;
-	float: left;
-	background: #FFE59F;
-	margin-right: 40px;
+	float: right;
+	background: #e7e7e7;
 	position: relative;
 	margin-top: 10px;
+	margin-left: 15px;
+	height: 448px;
 }
+
+
 .showCon .autolistCur {
-	background: #FF4B04;
+	background: #db3652;
 }
+
+
 .showCon .autolistEnd {
 	background: #DDD;
 }
+
+
 .showCon .autolist-R {
 	float: right;
 	margin-right: 0;
 }
+
+
 .showCon .autolist .autolistC {
 	background: #FFF;
 	padding: 0 19px;
 }
+
+
 .showCon .autolist .jxTime {
 	font-family: "alkatip";
 	font-size: 16px;
@@ -115,16 +152,20 @@ body {
 	_background: none;
 	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://skin.1yyg.com/images/auto_02.png?v=13022");
 }
+
+
 .showCon .autolist .syTime {
 	height: 37px;
 	padding-top: 6px;
 	line-height: 31px;
-	padding-left: 86px;
 	font-size: 16px;
 	font-family: "alkatip";
-	color: #FF4B04;
+	color: #db3652;
 	position: relative;
+	width: 240px;
 }
+
+
 .showCon .autolist .syTime span {
 	width: 20px;
 	height: 20px;
@@ -135,6 +176,8 @@ body {
 	_top: 12px;
 	left: 60px;
 }
+
+
 .showCon .autolist .syTime em {
 	width: 28px;
 	height: 31px;
@@ -143,19 +186,28 @@ body {
 	font-size: 20px;
 	font-family: "alkatip";
 	display: inline-block;
-	color: #FF4B04;
-	background: #fff;
+	color: #fff;
+	background: #db3652;
 	margin: 0 4px;
+	border-radius: 3px;
 }
+
+
 .showCon .autolist .AnnTime10 span {
 	background: url(http://skin.1yyg.com/images/auto_06.gif?v=130228) 0 2px no-repeat;
 }
+
+
 .showCon .autolistCur .AnnTime10 span {
 	background: url(http://skin.1yyg.com/images/auto_05.gif?v=130228) 0 2px no-repeat;
 }
+
+
 .showCon .autolistCur .syTime {
 	color: #fff;
 }
+
+
 .showCon .autolistEnd .syTimeEnd {
 	height: 37px;
 	padding-top: 6px;
@@ -165,25 +217,35 @@ body {
 	line-height: 31px;
 	text-align: center;
 }
+
+
 .showCon .autolistEnd .Progress-bar p span {
 	background: #B8B8B8;
 	border: 1px solid #B8B8B8;
 }
+
+
 .showCon .pic a img {
 	width: 185px;
 	height: 185px;
 }
+
+
 .showCon .pic {
 	width: 185px;
 	height: 185px;
 	overflow: hidden;
 	padding: 9px 8px;
 }
+
+
 .showCon .name {
-	text-align: left;
+	text-align: right;
 	font-size: 12px;
 	padding: 0;
 }
+
+
 .showCon .name a {
 	height: 24px;
 	line-height: 24px;
@@ -191,29 +253,41 @@ body {
 	display: block;
 	overflow: hidden;
 }
+
+
 .showCon .name a:hover {
 	text-decoration: underline;
 	color: #db3652;
 }
+
+
 .showCon .money {
 	padding: 0 0 9px 0;
 	font-family: "alkatip";
-	text-align: left;
+	text-align: right;
 	color: #999;
 }
+
+
 .showCon .money span {
 	font-family: "alkatip";
 	color: #666;
 }
+
+
 .showCon .ashowM {
 	height: 63px;
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 32px;
 }
+
+
 .showCon .ashowM a {
 	text-align: center;
 	border-radius: 3px;
 }
+
+
 .showCon .ashowM a.nowBtn {
 	background: #fc5a00;
 	width: 166px;
@@ -223,6 +297,8 @@ body {
 	font-size: 24px;
 	display: inline-block;
 }
+
+
 .showCon .ashowM a.nowBtnEnd {
 	background: #F7F7F7;
 	width: 166px;
@@ -233,13 +309,16 @@ body {
 	font-size: 24px;
 	display: inline-block;
 }
+
+
+
 .listEndInfo .uInfo {
 	font-family: "alkatip";
-	height: 53px;
+	height: 100%;;;
 	border-top: 1px solid #FFC683;
 	background: #fffae6;
 	font-size: 12px;
-	padding: 11px 0 8px 11px;
+	padding: 11px 0 6px 11px;
 }
 .listEndInfo .uInfo a {
 	color: #0f91ff;
@@ -254,7 +333,7 @@ body {
 .listEndInfo .uInfo p {
 	color: #666;
 	margin-top: -3px;
-	margin-left: 67px;
+	margin-right: 67px;
 }
 .listEndInfo .uInfo span {
 	font-family: "alkatip";
@@ -297,13 +376,13 @@ body {
 .Progress-bar {
 	height: 57px;
 }
-.Progress-bar p {
+/*.Progress-bar p {
 	height: 4px;
 	background: #E7E7E7;
 	border: 1px solid #DBDBDB;
 	position: relative;
 	border-radius: 3px;
-}
+}*/
 .Progress-bar p span {
 	height: 4px;
 	border: 1px solid #F55700;
@@ -403,7 +482,7 @@ body {
 }
 .autoOld ul.autoOldlist {
 	float: right;
-	margin: 22px 0 0 21px;
+	margin: 22px 21px 0 0;
 	display: inline;
 	width: 214px;
 	background: #fff;
@@ -411,7 +490,7 @@ body {
 .autoOld li.pro-barw {
 	padding: 0 7px 0 7px;
 	display: inline-block;
-	border: #e4e4e4 1px solid;
+	border: #e4e4e4 3px solid;
 	border-top: none;
 	border-bottom: #ffc683 1px solid;
 	width: 198px;
@@ -419,7 +498,7 @@ body {
 .autoOld li.pInfo {
 	padding: 7px 7px 4px 7px;
 	display: inline-block;
-	border: 1px solid #e4e4e4;
+	border: 3px solid #e4e4e4;
 	border-bottom: none;
 	position: relative;
 	width: 198px;
@@ -486,12 +565,13 @@ body {
 	float: left;
 }
 .autoOld li.uInfo {
-	width: 214px;
+	width: 212px;
 	height: 53px;
-	border-bottom: #db3652 2px solid;
 	background: #fffae6;
 	font-size: 12px;
 	padding: 10px 0 8px 0;
+	border: #e4e4e4 3px solid;
+	border-top: none;
 }
 .autoOld li.uInfo a {
 	color: #0f91ff;
@@ -534,4 +614,13 @@ body {
 	font-size: 16px;
 	font-family: "alkatip";
 	line-height: 35px;
+}
+.w-progressBar {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.showCon .autolistCur .syTime em {
+    background: #fff;
+    color: #db3652;
 }

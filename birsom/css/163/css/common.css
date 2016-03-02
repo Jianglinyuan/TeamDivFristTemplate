@@ -129,8 +129,7 @@ ol {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  margin-left: 20px;
-  
+  margin-right: 20px;
 }
 
 th,
@@ -1159,6 +1158,7 @@ img {
   float: left;
   width: 50%;
   line-height: 18px;
+  text-align: left;
 }
 
 .w-progressBar-txt .w-progressBar-txt-r {

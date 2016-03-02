@@ -310,6 +310,8 @@ span.tishi {
 .detailAddress ul.liBg {
 	display:block;
 	background:#fff7da;
+	margin:10px;
+	direction: rtl;
 }
 .detailAddress ul li.pad {
 	width:300px;
@@ -334,7 +336,6 @@ span.tishi {
 	display:inline;
 }
 .add input {
-	margin-top:10px;
 }
 .addAddress {
 	clear:both;
@@ -342,7 +343,6 @@ span.tishi {
 	background:#f9f9f9;
 	border:#ddd 1px solid;
 	padding-bottom:32px;
-	height: 250px;
 }
 .addAddress dl {
 	padding:16px 15px 0 0;
@@ -360,7 +360,7 @@ span.tishi {
 	padding:2px 0;
 	text-align: right;
 	direction: rtl;
-	width:70%;
+	width:100%;
 }
 
 .addAddress table tr td:first-child {
@@ -381,10 +381,11 @@ span.tishi {
 	line-height:24px;
 }
 .addAddress td select {
-	width:30%;
+	width:91%;
 	margin-right:2px;
 	float:right;
 	color:#333;
+	margin-bottom: 10px;
 }
 .addAddress td select.szxq {
 	width:115px;
@@ -401,7 +402,6 @@ span.tishi {
 	color:#333;
 }
 .addAddress input.orangebut,.addAddress input.cancelBtn {
-	margin-top:10px;
 }
 .addAddress table td em {
 	position:relative;

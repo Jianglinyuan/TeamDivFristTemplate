@@ -1,8 +1,8 @@
 {wc:templates "index","pagehead"}
-<div class="container breadcrumbs"><a href="{WEB_PATH}">首页</a><span class="sep">/</span><a href="{WEB_PATH}/go/shaidan/">晒单分享</a><span class="sep">/</span>晒单详请</div>
+<div class="container breadcrumbs"><a href="{WEB_PATH}">باش بەت</a><span class="sep">/</span><a href="{WEB_PATH}/go/shaidan/">بەھرلەر</a><span class="sep">/</span>تەپسىلاتى</div>
 <div class="container">
         <div class="xm-line-box filter-box">
-        <div class="box-hd"><h3 class="title">{wc:$shaidan['sd_title']} <span id="spTotalCount" style="font-size: 12px;color: #8c8c8c;">晒单时间：<em class="orange">{wc:fun:date("Y-m-d H:i",$shaidan['sd_time'])}</em></span></h3></div>
+        <div class="box-hd"><h3 class="title">{wc:$shaidan['sd_title']} <span id="spTotalCount" style="font-size: 12px;color: #8c8c8c;"><em class="orange">{wc:fun:date("Y-m-d H:i",$shaidan['sd_time'])}</em> : بەھىرلىگەن ۋاقىت</span></h3></div>
         <div class="box-bd">
 <div id="content">
 <div class="coin-layout">
@@ -18,14 +18,14 @@
 				<div class="share-get">
 					<a class="fl-img" href="{WEB_PATH}/uname/{wc:fun:idjia($shaidan['sd_userid'])}" target="_blank"><img src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($shaidan['sd_userid'],'img','8080')}"></a>
 					<div class="share-getinfo">
-						<p class="getinfo-name">幸运获得者：<a class="blue Fb" href="{WEB_PATH}/uname/{wc:fun:idjia($shaidan['sd_userid'])}" target="_blank">{wc:fun:userid($shaidan['sd_userid'],'username')}</a></p>
-						<p>总共{wc:fun:_cfg('web_name_two')}：<b class="orange">{wc:fun:get_user_goods_num($shaidan['sd_userid'],$shaidan['sd_shopid'])}</b>人次</p>
+						<p class="getinfo-name" style="direction:rtl;">تەلەيلىك ئېرىشكۈچى：<a class="blue Fb" href="{WEB_PATH}/uname/{wc:fun:idjia($shaidan['sd_userid'])}" target="_blank">{wc:fun:userid($shaidan['sd_userid'],'username')}</a></p>
+						<p>قاتناشقان ئادەم قېتىم ：<b class="orange">{wc:fun:get_user_goods_num($shaidan['sd_userid'],$shaidan['sd_shopid'])}</b></p>
 						{wc:php:start}
 						$jikxiao = get_shop_if_jiexiao($shaidan['sd_shopid']);
 						{wc:php:end}
 						{wc:if $jikxiao['q_uid']}
-						<p>幸运{wc:fun:_cfg('web_name_two')}码：{wc:$jikxiao['q_user_code']}	</p>
-						<p>揭晓时间：{wc:fun:microt($jikxiao['q_end_time'])}</p>
+						<p>تەلەيلىك نومۇر：{wc:$jikxiao['q_user_code']}	</p>
+						<p>جاكارلانغان ۋاقتى：{wc:fun:microt($jikxiao['q_end_time'])}</p>
 						{wc:if:end}
 					</div>
 				</div>
@@ -34,34 +34,33 @@
 					<a class="fl-img" href="{WEB_PATH}/dataserver/{wc:$shaidan['sd_shopid']}" target="_blank">
 					<img src="{G_UPLOAD_PATH}/{wc:$goods['thumb']}" border="0"></a>
 					<div class="share-getinfo">
-						<p class="getinfo-title"><a class="gray01" href="{WEB_PATH}/goods/{wc:$goods['id']}" target="_blank">({wc:$goods['qishu']} - سان){wc:$goods['title']}</a></p>
-						<p>价值：￥{wc:$goods['money']}</p>
-						<p id="GoToBuy"><a class="getbut-a" href="{WEB_PATH}/goods/{wc:$goods['id']}" target="_blank">
+						<p class="getinfo-title" style="direction:rtl;"><a class="gray01" href="{WEB_PATH}/goods/{wc:$goods['id']}" target="_blank">({wc:$goods['qishu']} - سان){wc:$goods['title']}</a></p>
+						<p>جەمئىي ئېھتىياجلىق ئادەم قېتىم：{wc:$goods['money']}</p>
+						<p id="GoToBuy"><a class="getbut-a" href="{WEB_PATH}/goods/{wc:$goods['id']}" target="_blank" style="direction:rtl;">
 						{wc:if !empty($goods['q_uid'])}
-						已揭晓
 						{wc:else}
 						{wc:$goods['qishu']} - سان ئېلىپ بېرىلىۋاتىدۇ
 						{wc:if:end}
-						</span></a></p>
+						</a></p>
 					</div>
 				</div>
 			</div>
 			<div class="share_content">
 				<p class="content-pad">{wc:$shaidan['sd_content']}</p>
 				{wc:loop $sd_photolist $sdimg}
-				<p><img src="{G_UPLOAD_PATH}/{wc:$sdimg}" border="0"></p>
+				<p ><img src="{G_UPLOAD_PATH}/{wc:$sdimg}" border="0"></p>
 				{wc:loop:end}
 			</div>
 			<!--用户晒单部分结束-->
 			<!-- 分享按钮 -->
 			<div class="mood">
 				<div class="moodwm">
-					<div class="moodm hidden" style="display: block;">
-						 <span class="smile" id="emHits"><i></i><b>羡慕嫉妒恨(<em>{wc:$shaidan['sd_zhan']}</em>)</b></span>
-						 <span class="much"> <i></i>评论(<em id="emReplyCount">{wc:$shaidan['sd_ping']}</em>)</span>
+					<div class="moodm hidden" style="display: block; direction:rtl; margin-left:30px;">
+						 <span class="smile" id="emHits"><i></i><b>ياقتۇرۇش(<em>{wc:$shaidan['sd_zhan']}</em>)</b></span>
+						 <span class="much"> <i></i>باھا(<em id="emReplyCount">{wc:$shaidan['sd_ping']}</em>)</span>
 					</div>
 					<div class="share">
-						<span class="fen">分享到：</span>
+						<span class="fen">：كۆرسىتىش</span>
 						<!-- Baidu Button BEGIN -->
 						<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
 						<a class="bds_qzone"></a>
@@ -94,13 +93,13 @@
 					<div class="Comment_textbox">
 					{wc:if !$member}
 						<div id="notLogin" name="replyLogin" class="Comment_login">
-							请您<a href="{WEB_PATH}/member/user/login" class="blue" name="replyLoginBtn">登录</a>
-							或<a href="{WEB_PATH}/member/user/register" class="blue">注册</a>后再回复评论
+							<a href="{WEB_PATH}/member/user/login" class="blue" name="replyLoginBtn">كىرىپ</a>
+							ياكى<a href="{WEB_PATH}/member/user/register" class="blue">تىزىملىتىپ</a>ئاندىن باھا بېرىڭ
 						</div>
 					{wc:else}
 						<form action="" method="post">
 						<textarea name="sdhf_content" class="Comment-txt"></textarea>
-						<input type="submit" name="submit" value="发表评论" class="reply_unbotton">
+						<input type="submit" name="submit" value="باھا بېرىش" class="reply_unbotton" style="margin-right:70px;">
 						</form>
 					{wc:if:end}
 					</div>
@@ -157,10 +156,10 @@
 			</li>
 		</ul> -->
 		<div class="Comment_share">
-			<h4>最新晒单</h4>
+			<h4>ئەڭ يېڭى بەھرلەر</h4>
 			{wc:loop $shaidannew $sd}
 			<div class="New-single">
-				<p class="New-single-time"><a class="blue" href="{WEB_PATH}/uname/{wc:fun:idjia($sd['sd_userid'])}" target="_blank">{wc:fun:userid($sd['sd_userid'],'username')}</a>{wc:fun:date("Y年m月d日 H:i",$sd['sd_time'])}</p>
+				<p class="New-single-time"><a class="blue" href="{WEB_PATH}/uname/{wc:fun:idjia($sd['sd_userid'])}" target="_blank">{wc:fun:userid($sd['sd_userid'],'username')}</a>{wc:fun:date("Y-m-d H:i",$sd['sd_time'])}</p>
 				<p class="New-single-C"><a href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" target="_blank">{wc:fun:_strcut($sd['sd_content'],100)}</a></p>
 				<div class="New-singleImg"><div class="arrow arrow_Rleft"><em>◆</em></div>
 					<a href="{WEB_PATH}/go/shaidan/detail/{wc:$sd['sd_id']}" target="_blank">
