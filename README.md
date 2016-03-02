@@ -1,5 +1,37 @@
 @(Divteam)[Teamplate|Bug修复]
 
+
+##最新揭晓页面添加正在倒计时的商品
+
+`controller\go\index.action.php` 中的 `lottery` 函数替换为：
+```php
+	//最新揭晓
+	public function lottery(){
+		//最新揭晓
+		$page=System::load_sys_class('page');
+		$total=$this->db->GetCount("select id from `@#_shoplist` where `q_uid` is not null and `q_showtime` = 'N'");
+
+		if(isset($_GET['p'])){
+			$pagenum=$_GET['p'];
+		}else{
+			$pagenum=1;
+		}
+		$num=21;
+		$page->config($total,$num,$pagenum,"0");
+		$shopqishu=$this->db->GetPage("select * from `@#_shoplist` where `q_uid` is not null and `q_showtime` = 'N' ORDER BY `q_end_time` DESC",array("num"=>$num,"page"=>$pagenum,"type"=>1,"cache"=>0));
+
+		$countingdown=$this->db->GetList("select * from `@#_shoplist` where `q_showtime` = 'Y'  ORDER BY `q_end_time`");
+
+		$shoplist=$this->db->GetList("select * from `@#_shoplist` where `q_uid` is null  ORDER BY `canyurenshu` DESC LIMIT 4");
+		$member_record=$this->db->GetList("select * from `@#_member_go_record` order by id DESC limit 6");
+		include templates("index","lottery");
+	}
+```
+(编辑于 2016-3-1 16:57)
+
+
+---
+
 (2016-1-9 21:27 begin)
 #### `index.action.php`->`function dataserver`:
 在最后的`include`语句之前加入：
