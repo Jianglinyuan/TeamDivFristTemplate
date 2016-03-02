@@ -1,5 +1,5 @@
 $(function() {
-    var a = function() {	 
+    var a = function() {
         var h = $("#divPost");
         var n = $("#divUnPost");
         var l = h.children("ul");
@@ -26,65 +26,65 @@ $(function() {
             var u = function() {
                 return "/" + t.FIdx + "/" + t.EIdx + "/" + t.isCount
             };
-			
-            var w = function() {			 
+
+            var w = function() {
                 e.show();
                 //GetJPData("http://m.yygcms.com", "getUserPostList", u(),
-				GetJPData(Gobal.Webpath, "shopajax", "getUserPostList"+u(),
-                function(D) {			
-                    if (D.code == 0) {					
-                        if (t.isCount == 1) {
-                            v = D.postCount;							 
-                            t.isCount = 0;
-                            m.html("已晒单(" + v + ")");
-                            if (D.unPostCount > 0) {
-                                i.html("未晒单(" + D.unPostCount + ")")
-                            }
-                        }
-                        var C = D.listItems;
-                        var B = C.length;
-                        var A = "";
-                        for (var y = 0; y < B; y++) {
-                            var z = 2;//C[y].postState;
-                            var x = z == 2 ? Gobal.Webpath+"/mobile/mobile/item/" + C[y].id + "": Gobal.Webpath+"/mobile/home/PostSingleEdit/" + C[y].id + "";
-                            A += '<li class="' + (y + 1 == B ? "bornone": "") + '" onclick="location.href=\'' + x + '\'"><a class="fl z-Limg" href="' + x + '"><img src="' + Gobal.LoadPic + '" src2="'+Gobal.imgpath+'/uploads/' + C[y].thumb + '" border=0 alt="" width=40></a><div class="u-sgl-r"><p class="z-sgl-tt"><a href="' + x + '" class="gray6">' + C[y].sd_title + '</a></p><p class="z-sgl-info gray9">' + C[y].sd_content + "</p><p>晒单时间：" + C[y].sd_time + "</p>";
-                            /*if (z == 0) {
-                                A += '<p>状态：<span class="">正在审核</span></p>'
-                            } else {
-                                if (z == 1) {
-                                    A += '<p>状态：<span class="red">审核未通过</span> ' + C[y].postFailReason + '</p><p><a href="PostSingleEdit-' + C[y].postID + '.html" class="z-sgl-btn">修改</a></p>'
-                                } else {
-                                    if (z == 2) {
-                                        A += '<p>状态：<span class="green">审核通过，奖励微钱</span></p>'
-                                    }
+                GetJPData(Gobal.Webpath, "shopajax", "getUserPostList" + u(),
+                    function(D) {
+                        if (D.code == 0) {
+                            if (t.isCount == 1) {
+                                v = D.postCount;
+                                t.isCount = 0;
+                                m.html("已晒单(" + v + ")");
+                                if (D.unPostCount > 0) {
+                                    i.html("未晒单(" + D.unPostCount + ")")
                                 }
-                            }*/
-                            A += '</div><b class="z-arrow"></b></li>'
-                        }
-                        if (t.FIdx > 0) {
-                            l.children("li").last().removeClass("bornone")
-                        }
-                        l.append(A);						
-                        if (t.EIdx < v) {
-                            d.show()
+                            }
+                            var C = D.listItems;
+                            var B = C.length;
+                            var A = "";
+                            for (var y = 0; y < B; y++) {
+                                var z = 2; //C[y].postState;
+                                var x = z == 2 ? Gobal.Webpath + "/mobile/mobile/item/" + C[y].id + "" : Gobal.Webpath + "/mobile/home/PostSingleEdit/" + C[y].id + "";
+                                A += '<li class="'asd + (y + 1 == B ? "bornone" : "") + '" onclick="location.href=\'' + x + '\'"><a class="fl z-Limg" href="' + x + '"><img src="' + Gobal.LoadPic + '" src2="' + Gobal.imgpath + '/uploads/' + C[y].thumb + '" border=0 alt="" width=40></a><div class="u-sgl-r"><p class="z-sgl-tt"><a href="' + x + '" class="gray6">' + C[y].sd_title + '</a></p><p class="z-sgl-info gray9">' + C[y].sd_content + "</p><p>晒单时间：" + C[y].sd_time + "</p>";
+                                /*if (z == 0) {
+                                    A += '<p>状态：<span class="">正在审核</span></p>'
+                                } else {
+                                    if (z == 1) {
+                                        A += '<p>状态：<span class="red">审核未通过</span> ' + C[y].postFailReason + '</p><p><a href="PostSingleEdit-' + C[y].postID + '.html" class="z-sgl-btn">修改</a></p>'
+                                    } else {
+                                        if (z == 2) {
+                                            A += '<p>状态：<span class="green">审核通过，奖励微钱</span></p>'
+                                        }
+                                    }
+                                }*/
+                                A += '</div><b class="z-arrow"></b></li>'
+                            }
+                            if (t.FIdx > 0) {
+                                l.children("li").last().removeClass("bornone")
+                            }
+                            l.append(A);
+                            if (t.EIdx < v) {
+                                d.show()
+                            } else {
+                                c = true;
+                                d.hide()
+                            }
+                            loadImgFun()
                         } else {
-                            c = true;
-                            d.hide()
-                        }
-                        loadImgFun()
-                    } else {
-                        if (D.code == 10) {
-                            location.reload()
-                        } else {
-                            if (t.FIdx == 0) {
-                                l.append(Gobal.NoneHtml);
-                                c = true
+                            if (D.code == 10) {
+                                location.reload()
+                            } else {
+                                if (t.FIdx == 0) {
+                                    l.append(Gobal.NoneHtml);
+                                    c = true
+                                }
                             }
                         }
-                    }
-                    e.hide();
-                    o = false
-                })
+                        e.hide();
+                        o = false
+                    })
             };
             this.initPage = function() {
                 w()
@@ -106,51 +106,51 @@ $(function() {
                 return "/" + t.FIdx + "/" + t.EIdx + "/" + t.isCount
             };
             var w = function() {
-                e.show();	 			
+                e.show();
                 //GetJPData("http://m.yygcms.com", "getUserUnPostList", u(),
-				GetJPData(Gobal.Webpath, "shopajax", "getUserUnPostList"+u(),
-                function(B) {
-                    if (B.code == 0) {
-                        if (t.isCount == 1) {
-                            v = B.unPostCount							 
-                        }
-                        var A = B.listItems;
-                        var z = A.length;
-                        if (t.EIdx > 1) {
-                            s.children("li").last().removeClass("bornone")
-                        }
-                        for (var x = 0; x < z; x++) {
-                            var C = '<li class="' + (x + 1 == z ? "bornone": "") + '" id="' + A[x].id + '"><a class="fl z-Limg" href="'+Gobal.Webpath+'/mobile/mobile/item/' + A[x].id + '"><img src="' + Gobal.LoadPic + '" src2="'+Gobal.imgpath+'/uploads/' + A[x].thumb + '" border=0 alt=""></a><div class="u-sgl-r gray9"><p class="z-sgl-tt"><a href="'+Gobal.Webpath+'/mobile/mobile/item/' + A[x].id + '" class="gray6">' + A[x].title + "</a></p><p>幸运微购码：" + A[x].q_user_code + "</p><p>揭晓时间：" + A[x].q_end_time + '</p><p><a href="#" class="z-sgl-btn"></a></p></div><b class="z-arrow"></b></li>';
-                            var y = $(C);
-                            y.click(function() {
-                                //location.href = Gobal.Webpath+"/mobile/home/postsingle/" + y.attr("id") 
-                                location.href = Gobal.Webpath+"/mobile/mobile/item/" + y.attr("id") 
-                            });
-                            s.append(y)
-                        }		
-			
-                        if (t.EIdx < v) {
-                            d.show()
-                        } else {
-                            f = true;
-                            d.hide()
-                        }
-                        loadImgFun(0)
-                    } else {
-                        if (B.code == 10) {
-                            location.reload()
-                        } else {
-                            if (t.FIdx == 0) {
-                                s.append(Gobal.NoneHtml);
+                GetJPData(Gobal.Webpath, "shopajax", "getUserUnPostList" + u(),
+                    function(B) {
+                        if (B.code == 0) {
+                            if (t.isCount == 1) {
+                                v = B.unPostCount
+                            }
+                            var A = B.listItems;
+                            var z = A.length;
+                            if (t.EIdx > 1) {
+                                s.children("li").last().removeClass("bornone")
+                            }
+                            for (var x = 0; x < z; x++) {
+                                var C = '<li class="' + (x + 1 == z ? "bornone" : "") + '" id="' + A[x].id + '"><a class="fl z-Limg" href="' + Gobal.Webpath + '/mobile/mobile/item/' + A[x].id + '"><img src="' + Gobal.LoadPic + '" src2="' + Gobal.imgpath + '/uploads/' + A[x].thumb + '" border=0 alt=""></a><div class="u-sgl-r gray9"><p class="z-sgl-tt"><a href="' + Gobal.Webpath + '/mobile/mobile/item/' + A[x].id + '" class="gray6">' + A[x].title + "</a></p><p>幸运微购码：" + A[x].q_user_code + "</p><p>揭晓时间：" + A[x].q_end_time + '</p><p><a href="#" class="z-sgl-btn"></a></p></div><b class="z-arrow"></b></li>';
+                                var y = $(C);
+                                y.click(function() {
+                                    //location.href = Gobal.Webpath+"/mobile/home/postsingle/" + y.attr("id") 
+                                    location.href = Gobal.Webpath + "/mobile/mobile/item/" + y.attr("id")
+                                });
+                                s.append(y)
+                            }
+
+                            if (t.EIdx < v) {
+                                d.show()
+                            } else {
                                 f = true;
                                 d.hide()
                             }
+                            loadImgFun(0)
+                        } else {
+                            if (B.code == 10) {
+                                location.reload()
+                            } else {
+                                if (t.FIdx == 0) {
+                                    s.append(Gobal.NoneHtml);
+                                    f = true;
+                                    d.hide()
+                                }
+                            }
                         }
-                    }
-                    e.hide();
-                    q = true;
-                    o = false
-                })
+                        e.hide();
+                        q = true;
+                        o = false
+                    })
             };
             this.initPage = function() {
                 w()
