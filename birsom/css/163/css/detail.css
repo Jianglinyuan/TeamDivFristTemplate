@@ -3286,7 +3286,7 @@ td.m-detail-main-codes-list {
     color: #fff;
     font-size: 16px;
     font-weight: bold;
-    font-family: "Microsoft Yahei";
+    font-family: "alkatip";
 }
 
 .m-detail-mainTab-calcRule h4 .ico {
@@ -3307,6 +3307,7 @@ td.m-detail-main-codes-list {
     padding: 5px 0;
     line-height: 16px;
     color: #3c3c3c;
+    direction: rtl;
 }
 
 .m-detail-mainTab-calcRule li.txt-red {

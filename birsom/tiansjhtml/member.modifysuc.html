@@ -1,0 +1,246 @@
+{wc:templates "index","pagehead"}
+<div class="main-content clearfix">
+<link href="{G_TEMPLATES_STYLE}/css/layout-Frame.css" rel="stylesheet" type="text/css" />
+
+<style>
+
+.tel_verification .text_tel,.tel_verification .verification_code,.email_verification .text_email {
+	width:600px;
+	padding:30px 0 0 104px;
+	float:left;
+}
+.tel_verification .text_tel span,.tel_verification .verification_code span.text,.email_verification .text_email span {
+	width:150px;
+	text-align:right;
+	height:27px;
+	line-height:27px;
+	display:block;
+	float:left;
+	color:#666;
+	font-size:14px;
+}
+.tel_verification .verification_code span.text {
+	width:100px;
+	text-align:left;
+}
+.tel_verification .text_tel input.tel,.tel_verification .verification_code .text_verification_code input.tel,.email_verification .text_email input.email {
+	width:180px;
+	height:25px;
+	line-height:25px;
+	display:block;
+	border:none;
+	border-left:1px solid #c2c2c2;
+	border-top:1px solid #c2c2c2;
+	border-bottom:1px solid #e7e7e7;
+	border-right:1px solid #e7e7e7;
+	float:left;
+	padding-left:3px;
+}
+.text_email {
+	color:#666;
+}
+.text_tel input.orangebut,.text_email input.orangebut {
+	margin-left:10px;
+}
+.text_verification_code div.wrong {
+	background:url(../images/arrow_button.png) no-repeat -165px -75px;
+	padding:0 0 0 20px;
+	line-height:25px;
+	width:200px;
+	color:#db3652;
+	float:left;
+}
+.tel_verification .text_tel input.tel_value,.email_verification .text_email input.email_value {
+	width:117px;
+	height:27px;
+	line-height:27px;
+	text-align:center;
+	color:#fff;
+	font-weight:bold;
+	cursor:pointer;
+	display:block;
+	border:none;
+	float:left;
+	background:#fffae0 url(../images/arrow_button.png) no-repeat 0 -584px;
+	margin-left:5px;
+}
+.tel_verification .text_tel div,.email_verification .text_email div {
+	width:450px;
+	height:30px;
+	line-height:30px;
+	float:left;
+	margin:0 0 0 150px;
+	*margin:0 0 0 150px;
+	_margin:0 0 0 75px;
+}
+.tel_verification .text_tel div.ok,.email_verification .text_email div.ok {
+	background:url(../images/arrow_button.png) no-repeat -170px -115px;
+	text-indent:-9999px;
+}
+.tel_verification .verification_code h4 {
+	background:url(../images/arrow_button.png) no-repeat -170px -119px;
+	padding:0 0 0 20px;
+	width:480px;
+	color:#666;
+	height:30px;
+}
+.tel_verification .verification_code h4 a,.tel_verification_ok ul li a,.email_verification_ok ul li a {
+	color:#0d78bc;
+}
+.tel_verification .verification_code h4 a:hover,.tel_verification_ok ul li a:hover,.email_verification_ok ul li a:hover {
+	color:#db3652;
+}
+.tel_verification .verification_code .text_verification_code {
+	width:600px;
+	float:left;
+}
+.tel_verification .verification_code .text_verification_code .back {
+	width:418px;
+	height:29px;
+	border:1px solid #eee;
+	background:#fafafa;
+	float:left;
+	margin:10px 0;
+	color:#999;
+	padding:8px 0;
+}
+.tel_verification .verification_code .text_verification_code .back p {
+	float:left;
+	line-height:29px;
+	padding:0 9px;
+}
+.tel_verification .verification_code .text_verification_code .back input {
+	width:93px;
+	height:29px;
+	line-height:29px;
+	text-align:center;
+	display:block;
+	float:left;
+	border:none;
+	background:url(../images/arrow_button.png) no-repeat 0 -80px;
+	cursor:pointer;
+}
+.tel_verification .verification_code .text_verification_code .back span {
+	width:93px;
+	height:29px;
+	line-height:29px;
+	text-align:center;
+	display:block;
+	float:left;
+	background:url(../images/arrow_button.png) no-repeat 0 -500px;
+}
+.tel_verification .verification_code .text_verification_code div.value {
+	width:200px;
+	padding:0 84px;
+	float:left;
+}
+.tel_verification .verification_code .text_verification_code div.value div.ing {
+	width:83px;
+	height:29px;
+	line-height:29px;
+	margin:0 0 0 10px;
+	background:url(../images/arrow_button.png) 0 -500px;
+	float:left;
+	padding:0 0 0 10px;
+}
+.tel_verification .verification_code .text_verification_code div.value div.ing p {
+	text-indent:18px;
+	color:#666;
+	font-weight:bold;
+	background:url(../images/loading.gif) no-repeat left center;
+}
+.tel_verification .verification_code .text_verification_code div.value input.save {
+	width:82px;
+	height:27px;
+	line-height:27px;
+	text-align:center;
+	color:#fff;
+	font-weight:bold;
+	font-size:14px;
+	display:block;
+	border:none;
+	background:url(../images/arrow_button.png) 0 -470px;
+	cursor:pointer;
+	float:left;
+}
+.text_tel .wrong,.text_email .wrong {
+	color:#f40;
+}
+.text_tel .wrong s,.text_email .wrong s {
+	position:relative;
+	top:8px;
+	margin-right:2px;
+}
+.tel_verification_ok,.email_verification_ok {
+	width:750px;
+	margin:26px 150px;
+	*margin:26px 26px;
+	_margin:26px 13px;
+	float:left;
+	border:1px solid #ffdeb8;
+	background:#fffae0;
+	padding:20px 0;
+}
+.tel_verification_ok h4,.email_verification_ok h4 {
+	width:98px;
+	height:126px;
+	float:left;
+	background:url(../images/newtips_1.png) no-repeat;
+	margin:0 0 0 20px;
+	*margin:0 0 0 20px;
+	_margin:0 0 0 45px;
+	text-indent:-9999px;
+}
+.tel_verification_ok ul,.email_verification_ok ul {
+	width:610px;
+	float:right;
+}
+.tel_verification_ok ul li,.email_verification_ok ul li {
+	width:570px;
+	float:left;
+	line-height:27px;
+	color:#898989;
+}
+.tel_verification_ok ul li span,.email_verification_ok ul li span {
+	color:#db3652;
+	font-weight:bold;
+	font-size:14px;
+}
+.tel_verification_ok ul li a,.email_verification_ok ul li a {
+	font-weight:bold;
+}
+.email_verification_ok p {
+	width:610px;
+	float:right;
+	line-height:27px;
+	color:#999;
+}
+.email_verification_ok p.not {
+	font-weight:bold;
+	color:#666;
+}
+.email_verification_ok p input {
+	width:117px;
+	height:27px;
+	line-height:27px;
+	text-align:center;
+	color:#fff;
+	font-weight:bold;
+	border:none;
+	cursor:pointer;
+}
+
+
+</style>
+<div class="R-content">
+	<div class="member-t"><h2>邮箱验证</h2></div>
+	<div class="email_verification_ok">
+		<h4>验证成功</h4>
+		<ul>
+			<li><span>验证成功！</span></li>
+		</ul>
+	</div>
+</div>
+		
+</div>
+{wc:templates "index","foot"}
