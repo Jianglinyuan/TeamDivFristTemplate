@@ -47,7 +47,7 @@ $(function() {
                             for (var y = 0; y < B; y++) {
                                 var z = 2; //C[y].postState;
                                 var x = z == 2 ? Gobal.Webpath + "/mobile/mobile/item/" + C[y].id + "" : Gobal.Webpath + "/mobile/home/PostSingleEdit/" + C[y].id + "";
-                                A += '<li class="'asd + (y + 1 == B ? "bornone" : "") + '" onclick="location.href=\'' + x + '\'"><a class="fl z-Limg" href="' + x + '"><img src="' + Gobal.LoadPic + '" src2="' + Gobal.imgpath + '/uploads/' + C[y].thumb + '" border=0 alt="" width=40></a><div class="u-sgl-r"><p class="z-sgl-tt"><a href="' + x + '" class="gray6">' + C[y].sd_title + '</a></p><p class="z-sgl-info gray9">' + C[y].sd_content + "</p><p>晒单时间：" + C[y].sd_time + "</p>";
+                                A += '<li class="'+ (y + 1 == B ? "bornone" : "") + '" onclick="location.href=\'' + x + '\'"><a class="fl z-Limg" href="' + x + '"><img src="' + Gobal.LoadPic + '" src2="' + Gobal.imgpath + '/uploads/' + C[y].thumb + '" border=0 alt="" width=40></a><div class="u-sgl-r"><p class="z-sgl-tt"><a href="' + x + '" class="gray6">' + C[y].sd_title + '</a></p><p class="z-sgl-info gray9">' + C[y].sd_content + "</p><p>晒单时间：" + C[y].sd_time + "</p>";
                                 /*if (z == 0) {
                                     A += '<p>状态：<span class="">正在审核</span></p>'
                                 } else {
@@ -60,6 +60,7 @@ $(function() {
                                     }
                                 }*/
                                 A += '</div><b class="z-arrow"></b></li>'
+
                             }
                             if (t.FIdx > 0) {
                                 l.children("li").last().removeClass("bornone")
@@ -115,18 +116,25 @@ $(function() {
                                 v = B.unPostCount
                             }
                             var A = B.listItems;
+                            console.log(B);
                             var z = A.length;
                             if (t.EIdx > 1) {
                                 s.children("li").last().removeClass("bornone")
                             }
                             for (var x = 0; x < z; x++) {
-                                var C = '<li class="' + (x + 1 == z ? "bornone" : "") + '" id="' + A[x].id + '"><a class="fl z-Limg" href="' + Gobal.Webpath + '/mobile/mobile/item/' + A[x].id + '"><img src="' + Gobal.LoadPic + '" src2="' + Gobal.imgpath + '/uploads/' + A[x].thumb + '" border=0 alt=""></a><div class="u-sgl-r gray9"><p class="z-sgl-tt"><a href="' + Gobal.Webpath + '/mobile/mobile/item/' + A[x].id + '" class="gray6">' + A[x].title + "</a></p><p>幸运微购码：" + A[x].q_user_code + "</p><p>揭晓时间：" + A[x].q_end_time + '</p><p><a href="#" class="z-sgl-btn"></a></p></div><b class="z-arrow"></b></li>';
-                                var y = $(C);
-                                y.click(function() {
-                                    //location.href = Gobal.Webpath+"/mobile/home/postsingle/" + y.attr("id") 
-                                    location.href = Gobal.Webpath + "/mobile/mobile/item/" + y.attr("id")
-                                });
-                                s.append(y)
+                                
+                                (function(x){
+                                    var C = '<li class="' + (x + 1 == z ? "bornone" : "") + '" id="' + A[x].rid + '"><a class="fl z-Limg" href="' + Gobal.Webpath + '/mobile/mobile/item/' + A[x].id + '"><img src="' + Gobal.LoadPic + '" src2="' + Gobal.imgpath + '/uploads/' + A[x].thumb + '" border=0 alt=""></a><div class="u-sgl-r gray9"><p class="z-sgl-tt"><a href="' + Gobal.Webpath + '/mobile/mobile/item/' + A[x].id + '" class="gray6">' + A[x].title + "</a></p><p>幸运微购码：" + A[x].q_user_code + "</p><p>揭晓时间：" + A[x].q_end_time + '</p><p><a href="#" class="z-sgl-btn"></a></p></div><b class="z-arrow"></b></li>';
+                                    var y = $(C);
+                                     y.click(function() {
+                                    
+                                        location.href = Gobal.Webpath+"/mobile/home/postsingle/" + y.attr("id"); 
+                                    
+                                        //location.href = Gobal.Webpath + "/mobile/mobile/item/" + y.attr("id")
+                                    });
+                                    s.append(y)
+                                })(x) ;
+                               
                             }
 
                             if (t.EIdx < v) {
