@@ -70,6 +70,7 @@
 	margin-bottom: -1px;
 }
 .show_Period .Period_list li {
+	direction: rtl;
 	float:right;
 	width:107px;
 	height:31px;
@@ -105,15 +106,15 @@
 	height:16px;
 	display:inline-block;
 	background:url(/templates/birsom/images/Announced_8.gif) no-repeat;
-	vertical-align:-3px;
+	vertical-align:-6px;
 	_vertical-align:-2px;
-	margin-left:3px;
+	margin-left:-10px;
 	cursor:pointer;
 }
 .show_Period li .period_ArrowCur {
 	width:108px;
 	font-family: "alkatip";
-	font-size:16px;
+	font-size:12px;
 	line-height:32px;
 	height:32px;
 	background:#db3652;
@@ -606,7 +607,6 @@ div.jqZoomBigPic img {
 	font-size:14px;
 	color:#999;
 	font-family: "alkatip";
-	text-align:right;
 	height:auto;
 	/*text-indent:2em;*/
 }

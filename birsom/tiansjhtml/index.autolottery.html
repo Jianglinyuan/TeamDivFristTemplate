@@ -58,33 +58,33 @@ function lxfEndtime(objlist,len,thistimes){
                 var CHour= hours % 24;
                 var CMinute= minutes % 60;
                 var CSecond= Math.floor(seconds%60);//"%"是取余运算，可以理解为60进一后取余数，然后只要余数。
-			    objlist[i]['obj'].html("剩余<em>"+CHour+"</em>:<em>"+CMinute+"</em>:<em>"+CSecond+"</em>");				
+			    objlist[i]['obj'].html("<em>"+CHour+"</em>:<em>"+CMinute+"</em>:<em>"+CSecond+"</em>");				
 				delete youtime,seconds,minutes,hours,days,CDay,CHour, CMinute, CSecond;
 				if( endtime <= nowtime ){
 					delete endtime, nowtime;			
-                    objlist[i]['obj'].html("<b>限时揭晓</b>&nbsp;&nbsp;正在计算中....");//如果结束日期小于当前日期就提示过期啦					
+                    objlist[i]['obj'].html("<b>مۇددەتلىك جاكار</b>&nbsp;&nbsp;جاكارلىنىۋاتىدۇ....");//如果结束日期小于当前日期就提示过期啦					
 					$.post("{WEB_PATH}/go/autolottery/autolottery_ret_install",{"shopid":objlist[i]['shopid']},function(data){																														
 						if(data == '-1'){
-							 objlist[i]['obj'].html("&nbsp;没有这个商品!");						
+							 objlist[i]['obj'].html("&nbsp;بۇنداق مەھسۇلات يوق");						
 						}
 						if(data == '-2'){
-							objlist[i]['obj'].html("&nbsp;商品揭晓失败!");					
+							objlist[i]['obj'].html("&nbsp;جاكارلىنىش مەغلۇپ بولدى");					
 						}
 						if(data == '-3'){							
-							 objlist[i]['obj'].html("&nbsp;参与人数为0,不予揭晓!");						
+							 objlist[i]['obj'].html("&nbsp;قاتناشقان ئادەم قېتىم سانى 0 ، پائالىيەت ئەمەلدىن قالدۇرۇلدى");						
 						}
 						if(data == '-4'){
-							 objlist[i]['obj'].html("&nbsp;商品还未到揭晓时间!");					
+							 objlist[i]['obj'].html("&nbsp;جاكارلىنىش ۋاقتى توشمىدى");					
 						}
 						if(data == '-5'){
-							 objlist[i]['obj'].html("&nbsp;商品揭晓时间已过期!");						
+							 objlist[i]['obj'].html("&nbsp;جاكارلىنىش ۋاقتى ئىناۋەتسىز");						
 						}
 						if(data == '-6'){			
 							
-							 objlist[i]['obj'].html("&nbsp;商品正在揭晓中!");						
+							 objlist[i]['obj'].html("&nbsp;مەھسۇلات جاكارلىنىۋاتىدۇ");						
 						}
 						if(data.length > 2){							
-							 objlist[i]['obj'].html("&nbsp;幸运码1是:"+data);						
+							 objlist[i]['obj'].html("&nbsp;تەلەيلىك نۇمۇر:"+data);						
 						}						
 						delete objlist[i];
 						return;
@@ -128,14 +128,14 @@ $(function(){
             {wc:php:end}         
             {wc:if $shop['q_user_code'] && $shop['q_showtime'] == 'N'} 	
 			<li class="autolist autolistEnd jinrishop">         
-				<div class="syTimeEnd">已揭晓</div>
-				<div class="jxTime">{wc:$shop['time_H']}点揭晓</div>
+				<div class="syTimeEnd">جاكارلىنىپ بولدى</div>
+				<div class="jxTime">سائەت{wc:$shop['time_H']}دە جاكارلىنىدۇ</div>
 				<div class="autolistC">
 					<div class="pic">
 						<a href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank"><img src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}"></a>
 					</div>
-					<p class="name"><a href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank">(第{wc:$shop['qishu']}期){wc:$shop['title']}</a></p>
-					<p class="money">价值：<span class="rmb">{wc:$shop['money']}</span></p>
+					<p class="name"><a href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank">({wc:$shop['qishu']}- سان){wc:$shop['title']}</a></p>
+					<p class="money">جەمئىي ئېھتىياجلىق ئادەم قېتىم：<span class="rmb">{wc:$shop['zongrenshu']}</span></p>
 					<div class="w-progressBar">
 						<p class="w-progressBar-wrap"><span class="w-progressBar-bar flipx" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"></span></p>
 						<!-- <ul class="Pro-bar-li">
@@ -169,15 +169,15 @@ $(function(){
             {wc:else}
             <li name="normalItem" class="autolist jinrishop">
 				<div name="timerItem"  class="AnnTime10 syTime timeall" shopid="{wc:$shop['id']}" endtimeto="{wc:$shop['xsjx_time']}000" lxfday="no"></div>
-				<div class="jxTime">{wc:$shop['time_H']}点揭晓</div>
+				<div class="jxTime">سائەت{wc:$shop['time_H']}دە جاكارلىنىدۇ</div>
 				<div class="autolistC">
 					<div class="pic">
 						<a rel="nofollow" href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank">
                         <img src="{G_UPLOAD_PATH}/{wc:$shop['thumb']}"></a></div>
 					<p class="name">
-						<a href="{WEB_PATH}/goods/{wc:$shop['id']}"  target="_blank">(第{wc:$shop['qishu']}期){wc:$shop['title']}</a></p>
+						<a href="{WEB_PATH}/goods/{wc:$shop['id']}"  target="_blank">({wc:$shop['qishu']}- سان){wc:$shop['title']}</a></p>
 					<p class="money">
-						价值：<span class="rmb">{wc:$shop['money']}</span></p>
+						>جەمئىي ئېھتىياجلىق ئادەم قېتىم：<span class="rmb">{wc:$shop['zongrenshu']}</span></p>
 					<div class="w-progressBar">
 						<p class="w-progressBar-wrap"><span class="w-progressBar-bar flipx" style="width:{wc:fun:width($shop['canyurenshu'],$shop['zongrenshu'],100)}%;"></span></p>
 						<!-- <ul class="Pro-bar-li">					
@@ -197,9 +197,9 @@ $(function(){
 						</ul>
 					</div>
                     {wc:if $shop['zongrenshu']==$shop['canyurenshu']}
-                    <div class="ashowM"> <a class="nowBtnEnd">已结束</a> </div>
+                    <div class="ashowM"> <a class="nowBtnEnd">پائالىيەت ئاخىرلاشتى</a> </div>
                     {wc:else}
-					<div class="ashowM"><a class="w-button w-button-main w-button-l" href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank">立即参与</a></div>
+					<div class="ashowM"><a class="w-button w-button-main w-button-l" href="{WEB_PATH}/goods/{wc:$shop['id']}" target="_blank">دەرھال قاتنىشىش</a></div>
                     {wc:if:end}
 				</div>				
 			</li>		         
@@ -289,7 +289,7 @@ $(function(){
 								<img border="0" src="{G_UPLOAD_PATH}/{wc:fun:get_user_key($eshop['q_uid'],'img')}"></a></dt>
 							<dt class="uget">نى تەبرىكلەيمىز<a href="{WEB_PATH}/uname/{wc:fun:idjia($eshop['q_uid'])}" target="_blank">{wc:fun:get_user_name($eshop['q_uid'])}</a><br>
 								تەلەيلىك نومۇر：<span class="orange">{wc:$eshop['q_user_code']}</span><br>
-								<span>{wc:fun:date("Y-m-d",$eshop['q_end_time'])}: جاكار ۋاقتى</span></dt>
+								<span>{wc:fun:date("Y-m-d h:i",$eshop['q_end_time'])}: جاكار ۋاقتى</span></dt>
 						</li>
 					</ul>			
 					{wc:loop:end}

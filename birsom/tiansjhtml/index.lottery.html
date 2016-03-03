@@ -10,7 +10,7 @@
 <div class="container">
 			{wc:if ($countingdown)}
         <div class="xm-line-box filter-box">
-        <div class="box-hd"><h3 class="title"><span id="spTotalCount" style="color: #8c8c8c;">正在揭晓</span></div>
+        <div class="box-hd"><h3 class="title"><span id="spTotalCount" style="color: #8c8c8c;font-size:15px;">نەتىجىسى ئېلان قىلىنىۋاتىدۇ</span></div>
 
 				<ul class="w-revealList f-clear" id="pro-view-14">
 				{wc:loop $countingdown $cd}
@@ -24,11 +24,11 @@
 				          <a href="{WEB_PATH}/dataserver/{wc:$cd['id']}" target="_blank"><img width="200" height="200" src="{G_UPLOAD_PATH}/{wc:$cd['thumb']}" class=""></a>
 				        </div>
 				        <p class="w-goods-title f-txtabb"><a href="{WEB_PATH}/dataserver/{wc:$cd['id']}" target="_blank">{wc:$cd['title']}</a></p>
-				        <p class="w-goods-price">总需：{wc:$cd['zongrenshu']}人次</p>
-				        <p class="w-goods-period">期号：{wc:$cd['qishu']}</p>
+				        <p class="w-goods-price">جەمئىي ئېھتىياجلىق ئادەم قېتىم：{wc:$cd['zongrenshu']}</p>
+				        <p class="w-goods-period">ئۆتكىزىلىۋاتقان سان：{wc:$cd['qishu']}</p>
 				      </div>
 				      <div class="w-countdown">
-				        <p class="w-countdown-title"><i class="ico ico-countdown ico-countdown-gray"></i>揭晓倒计时</p>
+				        <p class="w-countdown-title" style="font-family:alkatip;text-align:center;">تەتۈر ساناق<i class="ico ico-countdown ico-countdown-gray"></i></p>
 				        <p class="w-countdown-nums" pro="countdown"><b class="m0">9</b><b class="m1">9</b>:<b class="s0">9</b><b class="s1">9</b>:<b class="ms0">9</b><b class="ms1">9</b></p>
 				      </div>
 				    </div>
@@ -63,8 +63,8 @@
 						</div>
 						<div class="publishC-tit">
 							<h3><a href="{WEB_PATH}/dataserver/{wc:$qishu['id']}" target="_blank" class="gray01 goodsdesc">({wc:$qishu['qishu']}چى سان){wc:$qishu['title']}</a></h3>
-							<p class="money">تاۋار قىممىتى :<span class="rmb">{wc:$qishu['money']}</span>يۈەن</p>
-							<p class="Announced-time gray02">{wc:fun:date("Y-m-d",$qishu['q_end_time'])} :جاكارلانغان ۋاقىت</p>
+							<p class="money">جەمئىي ئېھتىياجلىق ئادەم قېتىم :<span class="rmb">{wc:$qishu['zongrenshu']}</span></p>
+							<p class="Announced-time gray02">{wc:fun:date("Y-m-d h:i:s",$qishu['q_end_time'])} :جاكارلانغان ۋاقىت</p>
 						</div>
 						<div class="details">
 							<p class="fl details-Code"><em class="orange Fb">{wc:$qishu['q_user_code']}</em> :تەلەيلىك نومۇر</p>

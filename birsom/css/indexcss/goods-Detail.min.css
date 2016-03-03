@@ -161,7 +161,8 @@ dl.goods-info-box .goods-info-head dl dt {
 	font-size: 16px;
 	color: #333;
 	font-weight: bold;
-	line-height: 22px
+	line-height: 22px;
+	direction: rtl;
 }
 dl.goods-info-box .goods-info-head dl .goods-info-head-userfaq {
 	margin-top: 10px;

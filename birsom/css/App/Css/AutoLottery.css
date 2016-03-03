@@ -138,19 +138,19 @@ body {
 
 .showCon .autolist .jxTime {
 	font-family: "alkatip";
-	font-size: 16px;
+	font-size: 14px;
 	color: #fff;
-	text-align: center;
 	line-height: 20px;
-	padding-top: 2px;
 	width: 49px;
-	height: 55px;
 	position: absolute;
 	top: 0;
-	left: 7px;
 	background: url(http://skin.1yyg.com/images/auto_02.png?v=130228) no-repeat;
 	_background: none;
 	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://skin.1yyg.com/images/auto_02.png?v=13022");
+	padding-top: 2px;
+	text-align: center;
+	height: 55px;
+	left: 7px;;;
 }
 
 
@@ -158,7 +158,7 @@ body {
 	height: 37px;
 	padding-top: 6px;
 	line-height: 31px;
-	font-size: 16px;
+	font-size: 14px;
 	font-family: "alkatip";
 	color: #db3652;
 	position: relative;
@@ -252,6 +252,7 @@ body {
 	color: #414141;
 	display: block;
 	overflow: hidden;
+	direction: rtl;
 }
 
 

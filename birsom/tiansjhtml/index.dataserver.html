@@ -146,14 +146,13 @@
                                 <td colspan="2"><p style="margin-bottom:5px;color:#3c3c3c;text-align: right;">تاۋارغا ئېرىشكۈچى مەزكۇر ساندا جەمئىي قاتناشقان قېتىم سانى<b class="txt-red">{wc:$user_shop_number}</b></p></td>
                             </tr>
                             <tr>
-                                <th>Ta的号码</th>
                                 <td class="m-detail-main-codes-list">
                                     {wc:fun:yunma($user_shop_codes,"span")}
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div id="divOpen" class="MaOff" style=""><a href="javascript:void(0)">&lt;&lt;TA的所有号码</a></div>
+                    <div id="divOpen" class="MaOff" style=""><a href="javascript:void(0)">بارلىق تەلەي نومۇرلىرى&lt;&lt;</a></div>
                 </div>
             </div>
             {wc:if:end}
@@ -165,17 +164,17 @@
                 {wc:if $userid_cur}
                     <!-- 购买次数大于0 -->
                     {wc:if $gonum_cur>0}
-                    <span class="total">我参与了: <b class="txt-red">{wc:$gonum_cur}</b>人次</span>
+                    <span class="total">قاتناشقىنىم: <b class="txt-red">{wc:$gonum_cur}</b>قېتىم سان</span>
                     <var>|</var>
-                    <span class="detail fold-codes">夺宝号码: {wc:$goucode_cur}</span>
-                    <span id="show-all-codes"><a href="javascript:void(0)">所有号码</a></span>
+                    <span class="detail fold-codes">مۇكاپاتقا ئېرىشكەن نومۇر: {wc:$goucode_cur}</span>
+                    <span id="show-all-codes"><a href="javascript:void(0)">بارلىق نومۇر</a></span>
                     <!-- 购买次数为0 -->
                     {wc:else}
-                    <p style="text-align:center">您没有参与本次夺宝。</p>
+                    <p style="text-align:center">سىز بۇ قېتىملىق پائالىيەتكە قاتناشماپسىز</p>
                     {wc:if:end}
                 <!-- 未登录 -->
                 {wc:else}
-                    <p style="text-align:center"><a class="btn-login" href="{WEB_PATH}/member/user/login"><b>请登录</b></a>，查看你的夺宝号码！</p>
+                    <p style="text-align:center"><a class="btn-login" href="{WEB_PATH}/member/user/login"><b>تىزىملىتىپ كىرىپ</b></a> ئاندىن كۆرۈڭ</p>
                     <!-- TODO: 登录显示自己的夺宝号码 -->
                 {wc:if:end}
             </div>
@@ -191,14 +190,14 @@
                     </li>
                     <!-- 计算公式 -->
                     <li>
-                        <span class="title">计算公式</span>
+                        <span class="title">تەلەيلىك نومۇرنى ھېسابلاش قائىدىسى</span>
                         <div class="formula">
-                            <div class="box red-box"><b class="txt-red">本期幸运号码</b></div><div class="operator">=(</div><div class="box gray-box"><b class="txt-red">5006121137</b><br>50个时间求和
+                            <div class="box red-box"><b class="txt-red">بۇ ساندىكى تەلەيلىك نومۇر</b></div><div class="operator">=(</div><div class="box gray-box"><b class="txt-red">5006121137</b><br>مەزكۇر 50 قېتىملىق قاتنىشىش ۋاقتىنىڭ يېغىندىسى
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box">商品的最后一个号码分配完毕，公示该分配时间点前本站全部商品的<span class="txt-red">最后50个参与时间</span>，并求和。</div>
                                 </div>
-                            </div><div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">?</b><br>“老时时彩”开奖号码
+                            </div><div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">?</b><br>جۇڭگو پاراۋانلىق لاتارىيە نومۇرى
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box">
@@ -206,7 +205,7 @@
                                         
                                     </div>
                                 </div>
-                            </div><div class="operator" title="取余">)%</div><div class="box"><b class="txt-red">35</b><br>该商品总需人次</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>原始数</div>
+                            </div><div class="operator" title="取余">)%</div><div class="box"><b class="txt-red">35</b><br>جەمئىي ئېھتىياجلىق ئادەم</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>ئەسلى نومۇر</div>
                         </div>
                     </li>
                 </ul>
@@ -214,23 +213,24 @@
                 {wc:else}
                 <ul class="txt">
                     <li>
-                        <span class="title">计算公式</span>
+                        <span class="title">تەلەيلىك نومۇرنى ھېسابلاش قائىدىسى</span>
                         <div class="f-clear formula">
                             <div class="box red-box">
-                                <b class="txt-red">{wc:$item['q_user_code']}</b><br><b class="txt-red" style="font-size:12px">本期幸运号码</b>
-                                </div><div class="operator">=(</div><div class="box gray-box"><b class="txt-red">{wc:$user_shop_time_add}</b><br>50个时间求和
+                                <b class="txt-red">{wc:$item['q_user_code']}</b><br><b class="txt-red" style="font-size:12px">بۇ ساندىكى تەلەيلىك نومۇر</b>
+                                </div><div class="operator">=(</div>
+                                <div class="box gray-box"><b class="txt-red">{wc:$user_shop_time_add}</b><br>مەزكۇر 50 قېتىملىق قاتنىشىش ۋاقتىنىڭ يېغىندىسى
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box">商品的最后一个号码分配完毕，公示该分配时间点前本站全部商品的<span class="txt-red">最后50个参与时间</span>，并求和。</div>
                                 </div>
-                            </div><div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">???</b><br>“老时时彩”开奖号码
+                            </div><div class="operator" title="相加">+</div><div class="box gray-box"><b class="txt-red">???</b><br>جۇڭگو پاراۋانلىق لاتارىيە نومۇرى
                                 <div class="more-box">
                                     <i class="ico ico-arrow ico-arrow-yellow"></i>
                                     <div class="yellow-box f-breakword">
                                             取最近一期“老时时彩” (第<span class="txt-red">???</span>期) 开奖结果。 <a href="http://caipiao.163.com/award/ssc/20160107.html" target="_blank">开奖查询</a>
                                     </div>
                                 </div>
-                            </div><div class="operator" title="取余">)%</div><div class="box"><b class="txt-red">{wc:$item['canyurenshu']}</b><br>该商品总需人次</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>原始数</div>
+                            </div><div class="operator" title="取余">)%</div><div class="box"><b class="txt-red">{wc:$item['canyurenshu']}</b><br>جەمئىي ئېھتىياجلىق ئادەم</div><div class="operator" title="相加">+</div><div class="box"><b class="txt-red">10000001</b><br>ئەسلى نومۇر</div>
                         </div>
                     </li>
                 </ul>
@@ -339,18 +339,18 @@
     </div>
     <div id="divCalResult" class="Product_Content">
         <div class="ygRecord" name="div_tab">
-            <div class="m-detail-mainTab-calcRule" style="height: auto;">
-                <h4 style="height: 178px;">
-                        <i class="ico ico-text"></i><br>幸运号码<br>计算规则
+            <div class="m-detail-mainTab-calcRule" style="height:auto;">
+                <h4 style="height: 232px;">
+                        <i class="ico ico-text"></i><br>تەلەيلىك نومۇرنى<br>ھېسابلاش قائىدىسى
                 </h4>
-                <div class="ruleWrap" style="height: auto;">
+                <div class="ruleWrap" style="height: auto;font-size:15px;">
                 <!-- 计算规则 -->
                     <ol class="ruleList">
-                            <li><span class="index">1</span>商品的最后一个号码分配完毕后，将公示该分配时间点前本站全部商品的最后50个参与时间；</li>
-                            <li><span class="index">2</span>将这50个时间的数值进行求和（得出数值A）（每个时间按时、分、秒、毫秒的顺序组合，如20:15:25.362则为201525362）；</li>
-                            <li><span class="index">3</span>为保证公平公正公开，系统还会等待一小段时间，取最近下一期中国福利彩票“老时时彩”的开奖结果（一个五位数值B）；</li>
-                            <li><span class="index">4</span>（数值A+数值B）除以该商品总需人次得到的余数<i style="margin-top:-3px;" data-func="remainder" class="ico ico-questionMark" title="余数：指整数除法中，被除数未被除尽部分。“例如27除以6，商为4，余数为3”"></i> + 原始数&nbsp;10000001，得到最终幸运号码，拥有该幸运号码者，直接获得该商品。</li>
-                            <li class="txt-red">注：如遇福彩中心通讯故障，无法获取上述期数的中国福利彩票“老时时彩”开奖结果，且24小时内该期“老时时彩”开奖结果仍未公布，则默认“老时时彩”开奖结果为00000。</li>
+                            <li><span class="index">1</span>تاۋارنىڭ ئەڭ ئاخىرقى بىر نومۇرى تارقىتىلىپ بولغاندىن كېيىن،مەزكۇر تور بېكەتتىكى مۇشۇ تارقىتىلىش ۋاقتىدىن بۇرۇنقى بارلىق تاۋارلارنىڭ ئەڭ ئاخىرقى 50قېتىملىق قاتنىشىش ۋاقتى ئېلان قىلىنىدۇ؛</li>
+                            <li><span class="index">2</span>مەزكۇر 50 قېتىملىق قاتنىشىش ۋاقتىنىڭ سانلىق قىممىتىنى قوشۇپ سانلىق قىممەت ئاغا  ئېرىشىلىدۇ(ھەربىر ۋاقىت سائەت،مىنۇت،سىكۇنت،دەقىقە بويىچە گۇررۇپپىلىنىدۇ ،مەسىلەن 20:15:25.362 دېگەن ۋاقىت 201525362 قىلىپ ئېلىنىدۇ</li>
+                            <li><span class="index">3</span>ھېسابلاش نەتىجىسىنىڭ ئادىل،باراۋەر،ئاشكارە بولۇشىغا كاپالەتلىك قىلىش ئۈچۈن،سېستىما بىر ئاز ساقلايدۇ ۋە ئەڭ يېقىنقى بىر قېتىملىق جۇڭگو پاراۋانلىق لاتارىيە بېلىتىنىڭ مۇكاپات چىقىش نومۇرىغا ئېرىشىدۇ(بىر دانە بەش خانىلىق ساننى
+                            (سانلىق قىممەتA+سانلىق قىممەتB ) مەزكۇر تاۋارنىڭ ئۇمۇمىي ئېھتىياجلىق ئادەم قېتىم سانىغا بۆلگەندىن كېيىن كېلىپ چىققان قالدۇق سانغادەسلەپكى سان10000001نى قوشۇپ تەلەيلىك نومۇرغا ئېرىشىلىدۇ،مەزكۇر تەلەيلىك نومۇرغا ئىگە بولغۇچى بىۋاستە مۇشۇ تاۋارغا ئېرىشىدۇ</li>
+                            <li class="txt-red">ئىزاھات:ناۋادا كاشىلا سەۋەبىدىن پاراۋانلىق لاتارىيە مەركىزى بىلەن بولغان ئالاقە توسالغۇغا ئۇچراپ، ئالدىدا دېيىلگەن قېتىمقى جۇڭگو پاراۋانلىق لاتارىيە بېلىتىنىڭ مۇكاپات چىقىش نومۇرىغا ئېرىشىش ئامالى بولمىسا ھەمدە 24 سائەت ئىچىدە مەزكۇر قېتىملىق پاراۋانلىق لاتارىيە مۇكاپاتلىق نومۇرى يەنىلا ئېلان قىلىنمىسا، لاتارىيە بېلىتىنىڭ مۇكاپات چىقىش نومۇرى 00000دەپ ئېلىنىدۇ</li>
                     </ol>
                 </div>
             </div>
@@ -359,17 +359,17 @@
             <table class="m-detail-mainTab-resultList" cellpadding="0" cellspacing="0">
                 <thead>
                     <tr>
-                        <th class="time" colspan="2">{wc:fun:_cfg('web_name_two')}时间</th>
-                        <th>会员帐号</th>
-                        <th>商品名称</th>
-                        <th width="70">商品期号</th>
-                        <th width="70">参与人次</th>
+                        <th class="time" colspan="2">قاتناشقان ۋاقىت</th>
+                        <th>ئەزالىق نومۇرى</th>
+                        <th>تاۋار نامى</th>
+                        <th width="70">پائالىيەت سانى</th>
+                        <th width="70">قاتناشقان قېتىم سانى</th>
                     </tr>
                 </thead>
                 <tbody>
                         <tr class="startRow">
                             <td colspan="6">
-                                截止该商品最后{wc:fun:_cfg('web_name_two')}时间【{wc:fun:microt($user_shop_time)}】最后50条全站参与记录
+                                پائالىيەت ئاخىرلاشقان ۋاقىتقىچە بولغان【{wc:fun:microt($user_shop_time)}】 تور بەتتىكى ئاخىرقى 50 قېتىملىق سېتىۋېلىش خاتىرىسى
                             </td>
                         </tr>
 

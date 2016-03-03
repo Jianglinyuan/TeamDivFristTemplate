@@ -2130,7 +2130,7 @@ img {
 
 .w-goods-newReveal .w-goods-pic {
   float: left;
-  margin: 5px 0 0 10px;
+  margin: 5px 0 0 0;
 }
 
 .w-goods-newReveal .w-goods-price {
